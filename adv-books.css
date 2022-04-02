@@ -1,0 +1,68 @@
+#didcy-books:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.modal-books .modal-books-inner-box .counter p, 
+.modal-progress-connect-bar .modal-content-progress-connect-bar .connect-counter 
+p.connect-count-down {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+  margin-bottom: 0;
+  padding: 0;
+  color: black;
+}
+
+.modal-ads-books{overflow-y: scroll;}
+
+.adv-Progress, .modal-progress-connect-bar .modal-content-progress-connect-bar .connect-counter 
+.connect-adv-Progress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#adv-Bar, .modal-progress-connect-bar .modal-content-progress-connect-bar .connect-counter 
+.connect-adv-Progress #connect-adv-Bar {
+  width: 10%;
+  height: 30px;
+  background-color: #04AA6D;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.adv-Progress, .connect-adv-Progress{display : none;}
+
+.modal-books-inner-box, .modal-content-progress-connect-bar{padding: 0;}
+.counter, .connect-counter{margin: 0;padding: 0;}
+
+.card-22 p.product-info{color: black;}
+
+@media screen and (min-height: 1366px){
+#adv-Bar, #connect-adv-Bar {
+  height: 60px;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 14px;
+}
+}
+
+#adv-modal-ads-books{
+   background: white;
+   position: relative;
+}

@@ -1,0 +1,23 @@
+.animated-image{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 500px){
+	.hide-animation{
+		display: none;
+	}
+/* 	.didcy-privacy-policy{
+		content: "PRIVACY POLICY";
+	} */
+}
+
+@media screen and (min-width: 500px){
+/* 	.didcy-privacy-policy{
+		content: "DIDCY PRIVACY POLICY";
+	} */
+}

@@ -1,0 +1,310 @@
+.overlay-22 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(1,0,1, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-21 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(1,0,1, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content-2 {
+  position: relative;
+  top: 5%;/*25*/
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.curtain-mother, .curtain-mother-animate{overflow-y: scroll;background: red;width: 100%;height: 100%;}
+.curtain{  background-color: rgb(0,0,0);
+  background-color: rgba(1,0,1, 0.9);overflow-y: hidden;}
+  
+.curtain-animate{  background-color: rgb(0,0,0);
+  background-color: rgba(1,0,1, 0.9);}
+
+/* .curtain h1.left1{
+	float: right;
+	color: white;
+	padding-right: 4px;
+}
+
+.curtain h1.right1{
+	float: left;
+	color: white;
+	padding-left: 4px;
+} */
+
+.left2 h1.left1{text-align: right;padding-right: 2px;}
+
+.right2 h1.right1{text-align: left;padding-left: 2px;}
+
+.left2, .left2-animate{border: none;float: right;color: white;text-align: center;
+padding-right: 4px;font-size: 20px;font-family: sans-serif, arial, verdana;}
+
+.right2, .right2-animate{border: none;float: left;color: white;text-align: left;
+padding-left: 2px;font-size: 20px;font-family: sans-serif, arial, verdana;}
+
+.right2-animate{text-align: center;}
+
+.left2-animate{text-align: center;float: left;padding-right: 0;}
+.right2-animate{text-align: center;}
+
+.left2-animate h1.left1-animate{text-align: center;}
+.right2-animate h1.right1-animate{text-align: center;}
+
+.left2-animate img{
+   width: 100%;
+   height: 100%;
+   float: left;
+   margin: 0;
+   position: relative;
+   right: 0;
+}
+
+.right2-animate video{
+   width: 100%;
+   height: 100%;
+   margin: 0;
+}
+
+.jhal{
+  position: relative;
+  /* background-color: #04AA6D; */
+  background-color: rgba(10, 13, 20, 1);
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.jhal:after {
+  content: "";
+  /* background: #90EE90; */
+  background-color: rgba(10, 13, 20, 1);/*#f44336;*/
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.jhal:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+/* .bl{text-align: right;padding-right: 0;border: none;}
+.br{text-align: left;padding-left: 0;border: none;}
+
+.cursor{cursor: pointer;} */
+
+
+@media screen and (max-height: 599px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 14px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 14px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 15px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 30px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 30px;}
+.close-curtain-animate{
+  top: 5px;
+  right: 10px;	
+  font-size: 25px;
+}
+}
+
+@media screen and (min-height: 600px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 20px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 20px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 20px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 30px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 30px;}
+.close-curtain-animate{
+  top: -10px;
+  right: 0;
+  font-size: 25px;
+}
+}
+
+@media screen and (min-height: 625px){
+.close-curtain-animate{
+/*   top: 15px;
+  right: 35px;
+  font-size: 40px; */
+  top: -10px;
+  right: 0;
+  font-size: 30px;
+}	
+}
+@media screen and (min-height: 640px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 15px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 15px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 15px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 26px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 26px;}
+}
+
+@media screen and (min-height: 667px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 17px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 17px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 15px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 26px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 26px;}
+}
+
+@media screen and (min-height: 672px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 20px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 20px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 20px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 26px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 26px;}
+}
+
+@media screen and (min-height: 720px){
+	.jhal{font-size: 20px;}
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 20px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 20px;font-family: sans-serif, arial, verdana;}
+}
+
+@media screen and (min-height: 731px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 18px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 18px;font-family: sans-serif, arial, verdana;}
+}
+
+@media screen and (min-height: 800px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 25px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 25px;font-family: sans-serif, arial, verdana;}
+}
+
+@media screen and (min-height: 812px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 18px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 18px;font-family: sans-serif, arial, verdana;}
+}
+
+@media screen and (min-height: 1000px){
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 30px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 30px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 28px;}
+	.left2 h1{font-size: 45px;}
+	.right2 h1.right1{text-align: left;font-size: 45px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 45px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 45px;}
+}
+
+@media screen and (min-height: 1366px){
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 35px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 35px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 40px;}
+	.left2 h1{font-size: 55px;}
+	.right2 h1.right1{text-align: left;font-size: 55px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 55px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 55px;}
+}
+
+@media screen and (max-width: 599px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 17px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 17px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 15px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 23px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 23px;}
+.close-curtain-animate{
+  top: -10px;
+  right: 1px;	
+  font-size: 25px;
+}
+}
+
+@media screen and (max-width: 400px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 14px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 14px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 14px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 23px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 23px;}
+}
+
+@media screen and (max-width: 360px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 14px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 14px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 14px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 20px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 20px;}
+}
+
+@media screen and (max-width: 290px){
+	.right2 h1.right1{text-align: left;}
+	.left2, .left2-animate{float: right;color: white;text-align: center;
+	padding-right: 4px;font-size: 13px;font-family: sans-serif, arial, verdana;}
+	.right2, .right2-animate{float: left;color: white;text-align: center;
+	padding-left: 2px;font-size: 13px;font-family: sans-serif, arial, verdana;}
+    .jhal{font-size: 13px;}
+.left2-animate h1.left1-animate{text-align: center;font-size: 18px;}
+.right2-animate h1.right1-animate{text-align: center;font-size: 18px;}
+}

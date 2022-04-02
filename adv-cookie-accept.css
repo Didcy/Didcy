@@ -1,0 +1,213 @@
+.cookie-accept {
+  width: 100%;
+  left: 0%;
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+  background: black;
+  
+  z-index: 15;
+  height: 80px;
+  opacity: 0.6;
+  filter: alpha(opacity=40%);
+}
+
+div.cookie-accept-use {
+  color: white;
+  padding-left: 50px;
+  display: inline;
+  text-align: left;
+  width: 70%;
+  position: fixed;
+  left: 60px;
+  margin-top: 15px;
+}
+
+.cookie-accept-btn{
+  background: rgba(10, 255, 20, 1);
+  opacity: 0.6;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: inline;
+  cursor: pointer;
+  float: right;
+  margin-right: 100px;
+  margin-top: 15px;
+}
+
+a.cookie-full-mode-link, li.cookie-full-mode-link{
+  font-size: 20px;
+  color: white;
+}
+
+button.didcy-cookie-full-mode{
+  font-family: sans-serif, arial, verdana;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(245, 250, 255, 1);
+  border: none;
+}
+
+@media screen and (min-width: 1024px){
+ 
+.cookie-accept-btn{
+ 
+  
+}
+}
+
+@media screen and (max-width: 1003px){
+div.cookie-accept-use {
+  left: 10px;
+  width: 80%;
+ 
+}
+.cookie-accept-btn{
+  margin-right: 10px;
+
+}	
+}
+
+@media screen and (max-width: 805px){
+div.cookie-accept-use {
+  left: 0px;
+  width: 70%;
+  margin-top: 5px;
+}
+.cookie-accept-btn{
+  margin-right: 5px;
+
+}
+.cookie-accept {
+  height: 100px;
+}	
+}
+
+@media screen and (max-width: 633px){
+div.cookie-accept-use {
+  left: 0px;
+  width: 70%;
+  margin-top: 10px;
+}
+.cookie-accept-btn{
+  margin-top: 10px;
+  margin-right: 5px;
+
+}
+.cookie-accept {
+  height: 130px;
+}	
+}
+
+@media screen and (max-width: 535px){
+div.cookie-accept-use {
+  left: 0px;
+  width: 70%;
+  margin-top: 10px;
+  left: 1px;
+  font-size: 13px;
+  padding-left: 3px;
+}
+.cookie-accept-btn{
+  margin-top: 50px;
+  margin-right: 2px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.cookie-accept {
+  height: 120px;
+}	
+}
+
+@media screen and (max-width: 400px){
+.cookie-accept {
+  height: 160px;
+}		
+}
+
+@media screen and (max-width: 360px){
+div.cookie-accept-use {
+  left: 0px;
+  width: 70%;
+  margin-top: 15px;
+  left: 1px;
+  font-size: 13px;
+  padding-left: 3px;
+}
+.cookie-accept-btn{
+  margin-top: 50px;
+  margin-right: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 13px;
+}
+.cookie-accept {
+  height: 150px;
+}	
+}
+
+@media screen and (max-width: 300px){
+div.cookie-accept-use {
+  left: 0px;
+  width: 70%;
+  margin-top: 15px;
+  left: 1px;
+  font-size: 13px;
+  padding-left: 3px;
+}
+.cookie-accept-btn{
+  margin-top: 50px;
+  margin-right: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 13px;
+}
+.cookie-accept {
+  height: 150px;
+}	
+}
+
+@media screen and (max-width: 295px){
+div.cookie-accept-use {
+  left: 0px;
+  width: 70%;
+  margin-top: 15px;
+  left: 1px;
+  font-size: 13px;
+  padding-left: 3px;
+}
+.cookie-accept-btn{
+  margin-top: 50px;
+  margin-right: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 13px;
+}
+.cookie-accept {
+  height: 190px;
+}	
+}
+
+@media screen and (max-width: 250px){
+div.cookie-accept-use {
+  left: 0px;
+  width: 70%;
+  margin-top: 15px;
+  left: 1px;
+  font-size: 13px;
+  padding-left: 3px;
+}
+.cookie-accept-btn{
+  margin-top: 50px;
+  margin-right: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 13px;
+}
+.cookie-accept {
+  height: 210px;
+}	
+}

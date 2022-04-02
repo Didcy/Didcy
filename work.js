@@ -1,0 +1,808 @@
+ "use strict";
+ 
+ var facialCaptureResetID = null;
+ var blob = null, videoID = 0, blobID = 0, fileOpenID = 0;
+ var streamCloseID = 0, videoBtnID = 0, fillyLength = 0, prev_name = "";
+ var current_name = "", checkedPR = 0, checkedPU = 0, checkedPV = 0, applicantBlob = null;
+ 
+ 
+"use strict";
+
+var connect_seconds_count = 5;
+var connect_initial = 0;
+var connect_elem = document.getElementById("connect-adv-Bar");
+var connect_elemWidth = 0;
+var connect_id = null;
+var connect_esta = null;
+var connect_freezeMode = null;
+
+var openProgressConnect = () => {
+	document.getElementById('modal-progress-connect-bar').style.display='block';
+	document.getElementById('connect-count-down').style.display='block';
+	document.getElementById("connect-adv-Progress").style.display = "none";
+	document.getElementById('connect-count-down').innerHTML = "";
+	
+
+// Set the date we're counting down to
+var connect_countDownDate = new Date("Dec 31, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+connect_esta = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = connect_countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an connect_element with id="demo"
+  /*document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";*/
+  
+  // Output the result in an connect_element with id="demo"
+  //document.getElementById("demo").innerHTML = seconds;
+  
+  if(connect_seconds_count == -1){
+	 //document.getElementById("demo").innerHTML = connect_seconds_count; 
+	 connect_seconds_count = 5;
+	 clearInterval(connect_esta);
+	 connect_esta = null;
+	 document.getElementById("connect-count-down").style.display = "none";
+	 document.getElementById("connect-adv-Progress").style.display = "block";
+	 document.getElementById("connect-count-down").innerHTML = "";
+	 return connect_move();
+  }else{
+	 document.getElementById("connect-count-down").innerHTML = connect_seconds_count;
+  }
+  
+  connect_seconds_count--;
+  
+  // If the count down is over, write some teconnect_estat 
+  if (distance < 0) {
+    clearInterval(connect_esta);
+    document.getElementById("connect-count-down").innerHTML = "EXPIRED";
+  }	
+ }, 1000);
+	
+}
+
+function connect_move() {
+  if (connect_initial == 0) {
+    connect_initial = 1;
+    connect_elem = document.getElementById("connect-adv-Bar");
+    connect_elemWidth = 1;
+    connect_id = setInterval(frame, 100);
+    function frame() {
+      if (connect_elemWidth >= 100) {
+        clearInterval(connect_id);
+        connect_initial = 0;
+		connect_id = null;
+		if(connect_esta != null){
+		   clearInterval(connect_esta);
+		   connect_esta = null;
+		}
+		connect_freezeMode = setTimeout(() => {
+		 connect_id = null;
+		 if(connect_esta != null){
+		   clearInterval(connect_esta);
+		   connect_esta = null;
+		 }
+         connect_elem.style.width = 0 + "%";
+		 connect_elem.innerHTML = 0  + "%";
+		 document.getElementById("modal-progress-connect-bar").style.display = "none";
+		 document.getElementsByClassName("modal-connections")[0].style.height = "100%";
+		 document.getElementsByClassName("modal-connections")[0].style.zIndex = "12";
+		 connect_freezeMode = null;
+		}, 2000);
+      } else {
+        connect_elemWidth++;
+        connect_elem.style.width = connect_elemWidth + "%";
+		 connect_elem.innerHTML = connect_elemWidth  + "%";
+      }
+    }
+  }
+}
+
+var spanConnections = document.getElementsByClassName("close-connections")[0];
+/*var spanAdsBooks = document.getElementsByClassName("close-modal-ads-books")[0];
+
+spanAdsBooks.onclick = function(){
+  document.getElementsByClassName("modal-ads-books")[0].style.height = "0%";	
+}*/
+
+spanConnections.onclick = function(){
+	document.getElementsByClassName("modal-connections")[0].style.height = "0%";
+}
+/*spanConnections.onclick = function(){
+  if(connect_esta != null){
+	  connect_seconds_count = 5;
+	  clearInterval(connect_esta);
+	  document.getElementById("connect-count-down").style.display = "none";
+	  document.getElementById("connect-adv-Progress").style.display = "none";
+	  document.getElementById("connect-count-down").innerHTML = "";
+	  connect_esta = null;
+  }
+  if(connect_id != null){
+	  if(connect_esta != null){
+		  connect_seconds_count = 5;
+		  clearInterval(connect_esta);
+		  document.getElementById("connect-count-down").style.display = "none";
+		  document.getElementById("connect-adv-Progress").style.display = "none";
+		  document.getElementById("connect-count-down").innerHTML = "";
+		  connect_esta = null;		  
+	  }
+	  connect_seconds_count = 5;
+	  document.getElementById("connect-count-down").style.display = "none";
+	  document.getElementById("connect-adv-Progress").style.display = "none";
+	  document.getElementById("connect-count-down").innerHTML = "";
+	  connect_elem.style.width = 0 + "%";
+	  connect_elem.innerHTML = 0  + "%";
+	  clearInterval(id);
+	  connect_initial = 0;
+	  connect_elemWidth = 0;
+	  connect_id = null;
+      if(connect_freezeMode != null){
+		  if(connect_esta != null){
+			  connect_seconds_count = 5;
+			  clearInterval(connect_esta);
+			  document.getElementById("connect-count-down").style.display = "none";
+			  document.getElementById("connect-adv-Progress").style.display = "none";
+			  document.getElementById("connect-count-down").innerHTML = "";
+			  connect_esta = null;		  
+		  }
+		  connect_seconds_count = 5;
+		  document.getElementById("connect-count-down").style.display = "none";
+		  document.getElementById("connect-adv-Progress").style.display = "none";
+		  document.getElementById("connect-count-down").innerHTML = "";
+		  connect_elem.style.width = 0 + "%";
+		  connect_elem.innerHTML = 0  + "%";
+		  if(connect_id != null){
+		     clearInterval(id);
+			 connect_id = null;
+		  }
+		  connect_initial = 0;
+		  connect_elemWidth = 0;
+		  connect_esta = null;
+		  connect_id = null;
+		  clearTimeout(connect_freezeMode);
+		  connect_freezeMode = null;
+		  document.getElementsByClassName("modal-ads-books")[0].style.height = "0%";
+		  document.getElementsByClassName("modal-ads-books")[0].style.zIndex = "12";
+	  }  
+  }
+  if(connect_freezeMode != null){
+	  if(connect_esta != null){
+		 connect_seconds_count = 5;
+		 clearInterval(connect_esta);
+		 document.getElementById("connect-count-down").style.display = "none";
+		 document.getElementById("connect-adv-Progress").style.display = "none";
+		 document.getElementById("connect-count-down").innerHTML = "";
+		 connect_esta = null;		  
+	  }
+	  connect_seconds_count = 5;
+	  document.getElementById("connect-count-down").style.display = "none";
+	  document.getElementById("connect-adv-Progress").style.display = "none";
+	  document.getElementById("connect-count-down").innerHTML = "";
+	  connect_elem.style.width = 0 + "%";
+	  connect_elem.innerHTML = 0  + "%";
+	  if(connect_id = null){
+	     clearInterval(connect_id);
+	     connect_id = null;
+	  }
+	  connect_initial = 0;
+	  connect_elemWidth = 0;
+	  connect_esta = null;
+	  connect_id = null;
+	  clearTimeout(connect_freezeMode);
+	  connect_freezeMode = null;
+      document.getElementsByClassName("modal-connections")[0].style.height = "0%";
+	  document.getElementsByClassName("modal-connections")[0].style.zIndex = "27";
+  } 
+  document.getElementsByClassName("modal-progress-connect-bar")[0].style.display = "none";	
+}*/
+ 
+ var videoSys = {
+     video : document.getElementById("video-work-apply"),
+	 canvas : document.getElementById("canvas"),
+	 imageContainer : document.getElementById("image-work-apply"),
+	 videoAttr : {audio: false, video: {width: 1022, ideal: 1200, height: 500, min: 1110, max: 1022, facingMode: "user"}}
+ };
+ 
+ var applicant = {
+	firstname: document.getElementById("applicant-firstname"),
+	lastname: document.getElementById("applicant-lastname"),
+	country: document.getElementById("applicant-country"),
+	telephoneNo: document.getElementById("applicant-tel"),
+	selectIdCard: document.getElementById("applicant-id-card"),
+	bankACNo: document.getElementById("applicant-bankACNo"),
+	mobileMoneyNo: document.getElementById("applicant-mobileMoneyNo"),
+	primarySkills: document.getElementById("applicant-primarySkills"),
+	secondarySkills: document.getElementById("applicant-secondarySkills"),
+	programsDailyRevenue: document.getElementById("applicant-programsDailyRevenue"),
+	notNowPR: document.getElementById("applicant-not-now-pr"),
+	programsDailyUsers: document.getElementById("applicant-programsDailyUsers"),
+	notNowPU: document.getElementById("applicant-not-now-pu"),
+	programsValues: document.getElementById("applicant-programsValues"),
+	notNowValues: document.getElementById("applicant-not-now-pv"),
+	profile: document.getElementById("applicant-profile"),
+	email: document.getElementById("didcy-email"),
+	password: document.getElementById("didcy-password"),
+	githubName: document.getElementById("didcy-git"),
+	profilePhoto: document.getElementById("applicant-take-a-photo"),
+	GetApplicantInfo: function(){
+	   if(this.firstname.value.toString().trim() == ""){
+		   return alertBox("First name field is Empty");
+	   }
+	   if(this.lastname.value.toString().trim() == ""){
+		   return alertBox("Last name field is Empty");
+	   }
+	   if(this.country.value.toString().trim() == "No Country"){
+		   return alertBox("Country field is Empty");
+	   }
+	   if(this.telephoneNo.value.toString().trim() == ""){
+		   return alertBox("Telephone No. field is Empty");
+	   }
+	   if(this.selectIdCard.files.length == 0){
+		   return alertBox("Please select an ID card");
+	   }
+	   if(this.bankACNo.value.toString().trim() == "" && this.mobileMoneyNo.value.toString().trim() == ""){
+		   return alertBox("Bank Account & Mobile Money fields are Empty");
+	   }else if(this.bankACNo.value.toString().trim() != "" && this.mobileMoneyNo.value.toString().trim() == ""){
+		   //this.mobileMoneyNo.value = "0";
+	   }else if(this.bankACNo.value.toString().trim() == "" && this.mobileMoneyNo.value.toString().trim() != ""){
+		   //this.bankACNo.value = "0";
+	   }else{
+		   
+	   }
+	   
+	   if(this.primarySkills.value.toString().trim() == "" || this.primarySkills.value.toString().trim() == "No Skills"){
+		   return alertBox("Select your Primary Skill(s)");
+	   }
+	   /*if(this.secondarySkills.value.toString().trim() == this.primarySkills.value.toString().trim() == "" || this.primarySkills.value.toString().trim() == "No Skills"){
+		   
+	   }*/
+	   if(this.notNowPR.checked == true){
+			if(this.programsDailyRevenue.value.toString().trim() != ""){
+			   //this.programsDailyRevenue.value = "0";
+		   }		   
+	   }else{
+			if(this.programsDailyRevenue.value.toString().trim() == ""){
+			   return alertBox("Please provide an amount");
+		   }
+	   }
+	   
+	   if(this.notNowPU.checked == true){
+		   if(this.programsDailyUsers.value.toString().trim() != ""){
+			  //this.programsDailyUsers.value = "0"; 
+		   }		   
+	   }else{
+		   if(this.programsDailyUsers.value.toString().trim() == ""){
+			   return alertBox("Please let us know the number of daily users for your app");
+		   }
+	   }
+
+	   if(this.notNowValues.checked == true){
+		   if(this.programsValues.value.toString().trim() != ""){
+			   //this.programsValues.value = "Not Now";
+		   }		   
+	   }else{
+		   if(this.programsValues.value.toString().trim() == ""){
+			   return alertBox("Please let your users know why they need your program(s)");
+		   }		   
+	   }
+	   
+	   if(this.profile.value.toString().trim() == ""){
+		   return alertBox("Please say something....");
+	   }
+
+	   if(this.githubName.value.toString().trim() == ""){
+		   return alertBox("Github Name field is Empty");
+	   }
+
+	   if(this.email.value.toString().trim() == ""){
+		   return alertBox("Email field is Empty");
+	   }	   
+	   
+	   if(this.password.value.toString().trim() == ""){
+		   return alertBox("Password field is Empty");
+	   }	   
+	   
+	   if(applicantBlob == null){
+		   return alertBox("Please take a Photo");
+	   }
+	   
+	   var applicantContainer = [
+	      this.firstname.value.toString().trim(),
+	      this.lastname.value.toString().trim(),
+	      this.country.value.toString().trim(),
+	      this.telephoneNo.value.toString().trim(),
+	      this.bankACNo.value.toString().trim(),
+	      this.mobileMoneyNo.value.toString().trim(),
+	      this.primarySkills.value.toString().trim(),
+	      this.secondarySkills.value.toString().trim(),
+	      this.programsDailyRevenue.value.toString().trim(),
+	      this.programsDailyUsers.value.toString().trim(),
+	      this.programsValues.value.toString().trim(),
+	      this.profile.value.toString().trim(),
+		  this.email.value.toString().trim(),
+		  this.githubName.value.toString().trim(),
+		  this.password.value.toString().trim()
+	   ];
+	   
+				 var formData = new FormData();
+				 formData.append("partner-set", JSON.stringify(applicantContainer));
+				 formData.append('partner', applicantBlob, "partner-image");
+				 formData.append('partner-id', this.selectIdCard.files[0]);
+				 formData.append('file-id', didcx_random_number_generator(0, 337474732626281).toString());
+				 $.ajax({
+					type: 'POST', 
+					url: 'work.php',
+					data: formData,
+					cache: false,
+					contentType: false,
+					processData: false,
+					success: function(result){
+						 //window.console.log(result);
+						 //return;
+                         var data_returned = JSON.parse(result);
+                         if(data_returned.state == 200){
+							 
+							applicant.firstname.value = "";
+							applicant.lastname.value = "";
+							applicant.country.selectedIndex = 0;
+							applicant.telephoneNo.value = "";
+							applicant.selectIdCard.value = "";
+							applicant.bankACNo.value = "";
+							applicant.mobileMoneyNo.value = "";
+							applicant.primarySkills.selectedIndex = 0;
+							applicant.secondarySkills.selectedIndex = 0;
+							applicant.programsDailyRevenue.value = "";
+							applicant.programsDailyUsers.value = "";
+							applicant.programsValues.value = "";
+							applicant.profile.value = "";
+							applicant.email.value = "";
+							applicant.password.value = "";
+							applicant.githubName.value = "";
+							applicantBlob = "";
+							
+							applicant.notNowPR.checked = false;
+							applicant.notNowPU.checked = false;
+							applicant.notNowValues.checked = false;
+							
+							applicant.programsDailyRevenue.disabled = false;
+							applicant.programsDailyUsers.disabled = false;
+							applicant.programsValues.disabled = false;
+							
+							alertBox("Applicant was successfully integrated");
+							setTimeout(() => {
+								Proceed2ConnectionData()
+							}, 2000);
+						 }
+					},
+					error: function(){
+
+					}					
+				 });	 
+	 
+	}
+ };
+ 
+function Proceed2ConnectionData(){
+	openProgressConnect();
+}
+ 
+  applicant.notNowPR.addEventListener("input", function(){
+	 if(applicant.notNowPR.checked == true){
+		 applicant.programsDailyRevenue.disabled = true;
+		 checkedPR = 1;
+	 }else{
+		applicant.notNowPR.checked = false;
+		applicant.programsDailyRevenue.disabled = false;
+		checkedPR = 0;
+	}
+ });
+ 
+  applicant.notNowPU.addEventListener("input", function(){
+	 if(applicant.notNowPU.checked == true){
+		 applicant.programsDailyUsers.disabled = true;
+		 checkedPU = 1;
+	 }else{
+		 applicant.programsDailyUsers.disabled = false;
+		 applicant.notNowPU.checked = false;
+		 checkedPU = 0;
+	 }
+ });
+ 
+ applicant.notNowValues.addEventListener("input", function(){
+	 if(applicant.notNowValues.checked == true){
+		 applicant.programsValues.disabled = true;
+		 checkedPV = 1;
+	 }else{
+		 applicant.programsValues.disabled = false;
+		 applicant.notNowValues.checked = false;
+		 checkedPV = 0;
+	 }
+ });
+ 
+ async function startStream(media){
+     await window.navigator.mediaDevices.getUserMedia(media).then(function(media){
+	    videoSys.video.srcObject = handleStream(media);
+		videoID = 1;
+	 });
+ }
+ 
+ function handleStream(media){
+    return media;
+ }
+ 
+ document.getElementById("close-work-apply").addEventListener("click", () => {
+	if(facialCaptureResetID != null){
+		facialCaptureResetID = null;
+		videoID = 0;
+		videoBtnID = 0;
+		streamCloseID = 0;
+	}
+	if(videoID == 2){
+		if(videoBtnID == 1){
+			if(streamCloseID == 2){
+				videoSys.video.pause();
+				stopStreamedVideo(videoSys.video);
+				streamCloseID = 0;
+			}	
+            videoBtnID = 0;			
+		}else if(videoBtnID == 2){
+			if(streamCloseID == 2){
+				//videoSys.video.pause();
+				stopStreamedVideo(videoSys.video);
+				streamCloseID = 0;
+			}
+			videoBtnID = 0;				
+		} 
+		blob = null;
+		if(fileOpenID == 1){
+			if(fillyLength != 0){
+			  document.forms["adv-fx"]["uploadsWorkApply"].files[0].value = "";
+			  fileOpenID = 0;
+			}else{
+		     fileOpenID = 0;
+			}
+		}
+		fileOpenID = 0;
+		document.getElementsByClassName("adv-f")[0].style.display = "none";
+		document.getElementById('work-apply-container').style.display="none";
+		videoID = 0;
+		blob = 0;
+	}else{
+		blob = null;
+/* 		if(streamCloseID == 1){
+			videoSys.video.pause();
+			stopStreamedVideo(videoSys.video);
+			streamCloseID = 0;
+		} */
+		streamCloseID = 0;
+		if(fileOpenID == 1){
+			if(fillyLength != 0){
+			  document.forms["adv-fx"]["uploadsWorkApply"].files[0].value = "";
+			  fileOpenID = 0;
+			  fillyLength = 0;
+			}else{
+		     fileOpenID = 0;
+			}
+		}
+		fileOpenID = 0;
+		//document.getElementsByClassName("adv-f")[0].style.display = "none";
+		document.getElementById('work-apply-container').style.display="none";
+		videoID = 0;
+		blob = 0;			
+	}
+	current_name = "";
+ });
+ 
+ applicant.profilePhoto.addEventListener("click", () => {
+    document.getElementById('modal-work-applicant-camera-board').style.display="block";
+	startStream(videoSys.videoAttr);
+ });
+ 
+ document.getElementById("close-work-applicant-camera-board").addEventListener("click", () => {
+	 if(streamCloseID != 1){
+	   stopStreamedVideo(videoSys.video);
+	 }
+	 document.getElementById('modal-work-applicant-camera-board').style.display="none";
+	 streamCloseID = 0;
+ });
+ 
+ document.getElementById("gaga-apply").addEventListener("click", () => {
+	 /*ITrack("Mini", "Didcy", "2022-25-03", "08:57:04", "14050", "20034", "Advert", 
+	 "info@didcy.com");*/
+	/* onclick="ServicesNotAvailable('Didcy Work Application', 
+	'Didcy Work Application report is at the back side. Please tab/put the mouse on this box to view the report.', -3)" */
+	 document.getElementById('work-apply-container').style.display="block";
+	 //startStream(videoSys.videoAttr);
+ });
+ 
+ function doScreenShotxx(media = null){
+	if(media != null){
+		//videoSys.canvas.width = videoSys.video.videoWidth;//+20;
+		//videoSys.canvas.height = videoSys.video.videoHeight;//+20; -145
+		let canvs = videoSys.canvas.getContext("2d");
+		videoSys.canvas.getContext("2d").drawImage(videoSys.video, 0, 0);//35, 35);		
+		setTimeout(() => doScreenShotxx(media), 0);	
+		videoID = 2;
+		streamCloseID = 2;
+		videoBtnID = 2;
+	}		 
+ }
+ 
+ function StartCaptureMeterx(doScreenType = null){
+		return facialCaptureResetID = setTimeout(doScreenShotxx, 0);
+ } 
+
+		function convertURIToImageData(dataURI) {
+		// convert base64/URLEncoded data component to raw binary data held in a string
+		  var byteString;
+		  if (dataURI.split(',')[0].indexOf('base64') >= 0)
+			byteString = atob(dataURI.split(',')[1]);
+		  else
+			byteString = unescape(dataURI.split(',')[1]);
+
+		// separate out the mime component
+		  var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+
+		// write the bytes of the string to a typed array
+		  var ia = new Uint8Array(byteString.length);
+		  for (var i = 0; i < byteString.length; i++) {
+			ia[i] = byteString.charCodeAt(i);
+		  }
+
+		  return new Blob([ia], {type:mimeString});
+		 }
+
+		 var stopStreamedVideo = (video = n) => {
+		    const stream = video.srcObject;
+			const tracks = stream.getTracks();
+			tracks.forEach(function(track){
+			   track.stop();
+			});
+
+            video.srcObject = null;					
+		 }	
+
+ function doScreenShotxx(){
+            let canvs = videoSys.canvas.getContext("2d");
+		    videoSys.imageContainer.src = videoSys.canvas.toDataURL("image/png");
+			applicantBlob = convertURIToImageData(videoSys.canvas.toDataURL("image/png"));
+		    videoSys.imageContainer.style.position = "absolute";
+		    videoSys.imageContainer.style.top = "60px";
+		    videoSys.imageContainer.style.left = "0px";
+			videoSys.imageContainer.style.display = "none";
+			videoBtnID = 0;
+			if(videoID == 1){
+				videoSys.video.pause();
+				stopStreamedVideo(videoSys.video);
+				streamCloseID = 1;
+				//videoSys.canvas.style.display = "block";
+				alertBox("Capture was successful.");// Please proceed to uploading your ID card.");
+				videoID = 0;
+				blobID = 1;
+			}else if(videoID == 2){
+				videoSys.video.pause();
+				stopStreamedVideo(videoSys.video);
+				streamCloseID = 1;
+				//videoSys.canvas.style.display = "block";
+				alertBox("Capture was successful.");//  Please proceed to uploading your ID card.");
+				videoID = 0;
+				blobID = 1;				
+			}
+			setTimeout(() => {
+			 document.getElementById('modal-work-applicant-camera-board').style.display="none";
+			}, 2000);
+			return 1;		
+ }
+
+ function doScreenShotx(){
+            let canvs = videoSys.canvas.getContext("2d");
+		    videoSys.imageContainer.src = videoSys.canvas.toDataURL("image/png");
+		    videoSys.imageContainer.style.position = "absolute";
+		    videoSys.imageContainer.style.top = "60px";
+		    videoSys.imageContainer.style.left = "0px";
+			videoSys.imageContainer.style.display = "none";
+			videoBtnID = 0;
+			if(videoID == 1){
+				videoSys.video.pause();
+				stopStreamedVideo(videoSys.video);
+				streamCloseID = 1;
+				//videoSys.canvas.style.display = "block";
+				alertBox("Capture was successful. Please proceed to uploading your ID card.");
+				document.getElementsByClassName("adv-f")[0].style.display = "block";
+				setTimeout(function(){	
+					document.getElementById("uploadWorkApply").addEventListener("change", () => {
+                            current_name = document.forms["adv-fx"]["uploadsWorkApply"].files[0].name;					
+                            if(current_name == prev_name){
+								fillyLength = 1;
+							}		
+							if(document.forms["adv-fx"]["uploadsWorkApply"].files.length != 0){ 
+							  fileOpenID = 1;
+							  fillyLength = 1;
+							  prev_name = document.forms["adv-fx"]["uploadsWorkApply"].files[0].name;
+							}
+					});
+				}, 1000);
+				videoID = 0;
+				blobID = 1;
+			}else if(videoID == 2){
+				videoSys.video.pause();
+				stopStreamedVideo(videoSys.video);
+				streamCloseID = 1;
+				//videoSys.canvas.style.display = "block";
+				alertBox("Capture was successful. Please proceed to uploading your ID card.");
+				document.getElementsByClassName("adv-f")[0].style.display = "block";
+				setTimeout(function(){	
+					document.getElementById("uploads-4").addEventListener("change", () => {
+						    if(document.forms["adv-fx"]["uploadsWorkApply"].files.length == 0){
+								current_name = "";
+								return;
+							}
+                            current_name = document.forms["adv-fx"]["uploadsWorkApply"].files[0].name;						
+                            if(document.forms["adv-fx"]["uploadsWorkApply"].files[0].name == prev_name){
+								fillyLength = 1;
+							}		
+							if(document.forms["adv-fx"]["uploadsWorkApply"].files.length != 0){ 
+							  fileOpenID = 1;
+							  fillyLength = 1;
+							  prev_name = document.forms["adv-fx"]["uploadsWorkApply"].files[0].name;
+							}
+					});
+				}, 1000);
+				videoID = 0;
+				blobID = 1;				
+			}
+			return 1;		
+ }
+
+ function uploadWorkApply(){
+			{
+
+				if(blobID == 0){
+				  return alertBox("Please take a photo!!!");
+				}
+				
+				const dataURL = videoSys.canvas.toDataURL("image/png");
+				 
+			    blob = convertURIToImageData(dataURL);
+				
+				if(blob != null){
+				 if(document.forms["adv-fx"]["uploadsWorkApply"].files.length != 0){
+				  if(document.forms["adv-fx"]["uploadsWorkApply"].files.length != 1){
+				    return alertBox("Multiple ID files not allowed");
+				  }
+				 }else{
+				   return alertBox("Please select an ID file #1");
+				 }
+				 
+				 if(fillyLength != 0){
+				  if(document.forms["adv-fx"]["uploadsWorkApply"].files.length != 1){
+				    return alertBox("Multiple ID files not allowed");
+				  }					 
+				 }
+				if(current_name == ""){
+					   return alertBox("Please select an ID file or select a different file and after reselect the file you want to select again. Thank You.");
+				}
+				 
+				 var formData = new FormData();
+				 formData.append('partner', blob, "partner-image");
+				 formData.append('partner-id', document.forms["adv-fx"]["uploadsWorkApply"].files[0]);
+				 formData.append('file-id', didcx_random_number_generator(0, 337474732626281).toString());
+				 $.ajax({
+					type: 'POST', 
+					url: 'work.php',
+					data: formData,
+					cache: false,
+					contentType: false,
+					processData: false,
+					success: function(result){
+                         var data_returned = JSON.parse(result);
+                         if(data_returned.state == 200){
+						    alertBox("Files upload was successful. Please wait for about one minute"+
+							" while we process your application. Thank you");
+							blob = null;
+							blobID = 0;
+							fileOpenID = 0;
+							fillyLength = 0;
+							//videoID = 0;
+							document.forms["adv-fx"]["uploadsWorkApply"].files[0].value = "";
+							prev_name = "";
+							current_name = "";
+						 }
+					},
+					error: function(){
+
+					}					
+				 });	
+                } 	  
+            }		 
+ } 
+ 
+ document.getElementById("didcy-work-form").addEventListener("submit", 
+ (event) => event.preventDefault());
+ 
+ document.getElementById("didcy-work-form-submit").addEventListener("click", 
+ function(){
+	//submission code here.....
+	
+	applicant.GetApplicantInfo();
+	
+ }); 
+ 
+ //videoSys.video.addEventListener("play", () => doScreenShotxx(videoSys));
+ 
+ document.getElementById("video-btn").addEventListener("click", () => {
+	videoBtnID = 1;
+    StartCaptureMeterx(videoSys);
+ });
+ 
+ /*document.getElementById("upload-3").addEventListener("click", () => {
+   uploadWorkApply();
+ });*/
+ 
+ /*document.getElementById("adv-fx").addEventListener("submit", (event) => {
+   event.preventDefault();
+ });*/
+ 
+ 		var inputWork = document.querySelector(".didcy-tel");
+		var data = window.intlTelInput(inputWork, {
+		  // allowDropdown: false,
+		  // autoHideDialCode: false,
+		  // autoPlaceholder: "off",
+		  // dropdownContainer: document.body,
+		  // excludeCountries: ["us"],
+		  // formatOnDisplay: false,
+		  // geoIpLookup: function(callback) {
+		  //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+		  //     var countryCode = (resp && resp.country) ? resp.country : "";
+		  //     callback(countryCode);
+		  //   });
+		  // },
+		  // hiddenInput: "full_number",
+		  // initialCountry: "auto",
+		  // localizedCountries: { 'de': 'Deutschland' },
+		  // nationalMode: false,
+		  // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+		  // placeholderNumberType: "MOBILE",
+		  // preferredCountries: ['cn', 'jp'],
+		  // separateDialCode: true,
+		  utilsScript: "build/js/utils.js",
+		});
+
+        //window.console.log(data);		
+
+ 		inputWork = document.querySelector(".mmn");
+		data = window.intlTelInput(inputWork, {
+		  // allowDropdown: false,
+		  // autoHideDialCode: false,
+		  // autoPlaceholder: "off",
+		  // dropdownContainer: document.body,
+		  // excludeCountries: ["us"],
+		  // formatOnDisplay: false,
+		  // geoIpLookup: function(callback) {
+		  //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+		  //     var countryCode = (resp && resp.country) ? resp.country : "";
+		  //     callback(countryCode);
+		  //   });
+		  // },
+		  // hiddenInput: "full_number",
+		  // initialCountry: "auto",
+		  // localizedCountries: { 'de': 'Deutschland' },
+		  // nationalMode: false,
+		  // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+		  // placeholderNumberType: "MOBILE",
+		  // preferredCountries: ['cn', 'jp'],
+		  // separateDialCode: true,
+		  utilsScript: "build/js/utils.js",
+		});	
+		

@@ -1,0 +1,5 @@
+@media screen and (max-width: 400px){
+	.modal-content-ceo h1{font-size: 20px;}
+	.modal-content-authors h1{font-size: 20px;}
+	.modal-content-mentors h1{font-size: 20px;}
+}

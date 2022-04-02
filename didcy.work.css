@@ -1,0 +1,155 @@
+  div.welcome-didcy-work-container{
+	background: rgba(20, 120, 201, 0.9);
+	width: 100%;
+	padding: 5px;
+  }
+  div.welcome-didcy-work-container h1.welcome-didcy-work{
+    text-align: center;
+	font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  }
+  div.welcome-didcy-work-container p.work-as-a-puzzle{
+	text-align: center;
+	font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  }
+/* Style inputs, select elements and textareas */
+input.didcy-text, select.didcy-select, textarea.tarea, input.didcy-tel, input.didcy-number, 
+input.didcy-email{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  background-image: url("");
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+}
+
+.iti{
+  position: relative;
+  margin-left: 0;
+  left: -10%;
+  display: block;
+  
+}
+
+select.didcy-select{cursor: pointer;}
+
+input.didcy-text{
+  margin-left: 0px;
+  left: 0px;
+}
+
+input[type=number], input.didcy-email{
+  background-image: url("");
+}
+
+input.didcy-number, span.or-n{
+  width: 33.33%;
+}
+
+#not-now{color: white;}
+
+/* Style the label to display next to the inputs */
+label.didcy-lab {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input.didcy-work-form-submit, button.take-photo {
+  background-color: #000;/*#04AA6D*/
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  box-shadow: 1px 1px 11px 4px rgba(100, 110, 101, 1); /*125, 120, 130*/
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+}
+
+button.take-photo{
+  background-color: #000;
+}
+
+.custom-file-input-0::before{
+  background: white;
+  color: black;
+  font-weight: 10;
+  font-size: 15px;
+}
+
+/* Style the container */
+.container-didcy-work {
+  border-radius: 5px;
+  border: none;
+  /*background-color: rgba(70, 110, 80, 0.9);*/
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  .arrow-down{
+	display: none;
+  }
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1106px) {
+	.modal-content-work-apply{margin-top: -6%;top: 0%;}
+}
+@media screen and (max-width: 944px){
+	.modal-content-work-apply{margin-top: -7%;top: 0%;}
+}
+@media screen and (max-width: 705px){
+	.modal-content-work-apply{margin-top: -9%;top: 0%;}
+}
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input.didcy-work-form-submit, button.take-photo, input.didcy-number {
+    width: 100%;
+    margin-top: 0;
+  }
+  .arrow-right{
+	display: none;
+  }
+  .arrow-down{
+	display: block;
+  }
+    .modal-content-work-apply{margin-top: -9%;top: 0%;}
+}
+
+@media screen and (max-width: 550px){
+	.modal-content-work-apply{margin-top: -10%;top: 0%;}
+}
+
+@media screen and (max-width: 470px){
+	.modal-content-work-apply{margin-top: -13%;top: 0%;}
+}
+
+@media screen and (max-width: 400px){
+	.modal-content-work-apply{margin-top: -15%;top: 0%;}
+}
+
+@media screen and (max-width: 350px){
+	.modal-content-work-apply{margin-top: -16%;top: 0%;}
+}
+
+@media screen and (max-width: 300px){
+	.modal-content-work-apply{margin-top: -18%;top: 0%;}
+}

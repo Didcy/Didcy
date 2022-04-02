@@ -1,0 +1,185 @@
+.modal-work-apply{display: none;overflow-x: hidden;
+box-shadow: 1px 1px 11px 4px rgba(100, 110, 101, 1); 
+/*125, 120, 130*/}
+  .video-work-apply{
+    width: 100%;
+	height: 500px;
+  }
+  .modal-content-work-apply{overflow-x: hidden;background: black;
+  margin-bottom: 1.5%;margin-top: -4%;top: 0%;}
+  .modal-content-work-applicant-camera-board
+  {background: black;margin-bottom: 1.5%;}
+  .video-btn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  padding: 5px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background: black;
+  border-left: none;
+  border-right: none;
+  color: white;
+  cursor: pointer;
+  outline-color: gray;
+  }
+  /*.adv-files-1{
+    margin-top: -8%;
+	display: none;
+  }
+  .custom-file-input:before{background: black;right: 270px;content: 'Select an ID Card'}
+  input[type=submit]{background: black;right: 133px;}
+  .upload-id-copy{
+       
+  }
+  @media screen and (max-width: 280px){
+    .custom-file-input:before{background: black;right: 280px;}
+  }*/
+
+.id-copy {
+  color: transparent;
+}
+.id-copy::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.id-copy::before{
+  content: 'Select an ID Card';
+  /* color: black; */
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  background: blue; 
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  /* text-shadow: 1px 1px #fff; */
+  font-weight: 700;
+  font-size: 20px;/*10pt*/
+  cursor: pointer;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  
+ color: white;
+}
+.id-copy-container{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.uploader{
+	font-size: 20px;
+	background: blue; /*DodgerBlue*/
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 20px;/*10pt*/
+  color: transparent;
+  width: 130px;
+}
+.video-work-apply{display: block;}
+.canvas{display: none;}
+.image-work-apply{display: none;}
+
+.uploadWorkApply{display: block;right: 0;
+ position: relative;
+ width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+}
+.adv-f{
+  position: relative;  
+}
+
+
+value.custom-file-input-0 {
+  color: transparent;
+}
+.custom-file-input-0::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input-0{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  padding: 5px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  
+  border-left: none;
+  border-right: none;
+  color: white;
+  cursor: pointer;
+  outline-color: gray;
+  width: 200px;
+  
+}
+.custom-file-input-0::before{
+  content: 'Select an ID Card';
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  background: black; 
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  /* text-shadow: 1px 1px #fff; */
+  font-weight: 700;
+  font-size: 20px;/*10pt*/
+  cursor: pointer;
+ color: white;
+}
+.custom-file-input-0:hover::before {
+  border-color: black;
+}
+.custom-file-input-0:active {
+  outline: 0;
+}
+.upload-3{
+	font-size: 20px;
+	background: #000; /*DodgerBlue*/
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 20px;/*10pt*/
+  color: transparent;
+  width: 130px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.adv-f{display: none;}
+
+@media screen and (max-width: 615px){
+.close-work-apply, .close-work-applicant-camera-board
+ {
+  top: 3px;
+  right: 25px;
+}
+}
+
+@media screen and (max-width: 513px){
+ .video-btn{
+	width: 35%;
+	font-size: 18px;
+ }
+ .custom-file-input-0, .upload-3{font-size: 18px;}
+ 
+}
