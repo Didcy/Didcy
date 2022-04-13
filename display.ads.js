@@ -842,6 +842,10 @@ engineId = 0) => {
 	}
 
     //return window.alert($company);
+	
+	if(drim != window.location.href.slice(39)){
+		drim = window.location.href.slice(39);
+	}
     
 	var form = new FormData();
 	form.append("drim", drim);
@@ -956,6 +960,7 @@ engineId = 0) => {
 	 contentType: false,
 	 success:  function(result){
 		 //window.console.log(result);
+		 //return;
 		if(contactNamer == 1){
 			var contactNamerRm = document.getElementById("contactName");
 			document.getElementById("column-5").removeChild(contactNamerRm);
@@ -1216,7 +1221,7 @@ engineId = 0) => {
 				  columElem.setAttribute("id", "column col-embed");
 				  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
 				  elem.setAttribute("src", system_dirArr[i]);
-				  elem.setAttribute("autoplay", "false");
+				  //elem.setAttribute("autoplay", "false");
 				  elem.setAttribute("loop", "1");
 				  elem.setAttribute("muted", "true");
 				  elem.setAttribute("controls", "false");
@@ -1886,7 +1891,7 @@ engineId = 0) => {
 			  columElem.setAttribute("id", "column");
 			  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
 			  elem.setAttribute("src", system_dirArr[i]);
-			  elem.setAttribute("autoplay", "false");
+			  //elem.setAttribute("autoplay", "false");
 			  elem.setAttribute("loop", "1");
 			  elem.setAttribute("muted", "true");
 			  elem.setAttribute("controls", "false");
@@ -1906,6 +1911,39 @@ engineId = 0) => {
 			  for(var columnCount = 0;columnCount < column.length;columnCount++){
 				  column[columnCount].append(elem);
 			  }
+
+                 elem.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+
+                 var video_elem = document.createElement("video");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("id", "img01-20");
+				 video_elem.setAttribute("controls", "true");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
 			  
 			  document.getElementById("uploads").value = "";
 			  storeAllCreatedIds[i] = classID;
@@ -1972,7 +2010,7 @@ engineId = 0) => {
 				  columElem.setAttribute("id", "column col-embed");
 				  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
 				  elem.setAttribute("src", system_dirArr[i]);
-				  elem.setAttribute("autoplay", "false");
+				  //elem.setAttribute("autoplay", "false");
 				  elem.setAttribute("loop", "1");
 				  elem.setAttribute("muted", "true");
 				  elem.setAttribute("controls", "false");
@@ -2009,6 +2047,38 @@ engineId = 0) => {
 
 				  }				  
 
+                 elem.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+
+                 var video_elem = document.createElement("video");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("id", "img01-20");
+				 video_elem.setAttribute("controls", "true");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
 
                  company_name.onclick = function(){
 			     var modal = document.getElementById("myModal-1");
@@ -2664,7 +2734,7 @@ engineId = 0) => {
 			     elem.setAttribute("controls", "false");				  
 			  }else{
 				 elem = document.createElement("video");
-			     elem.setAttribute("autoplay", "false");
+			     //elem.setAttribute("autoplay", "false");
 			     elem.setAttribute("loop", "1");
 			     elem.setAttribute("muted", "true");
 			     elem.setAttribute("controls", "false");
@@ -2763,6 +2833,38 @@ engineId = 0) => {
 			   }
 			  }else{
                  company_name.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+
+                 var video_elem = document.createElement("video");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("id", "img01-20");
+				 video_elem.setAttribute("controls", "true");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
+                 elem.onclick = function(){
 			     var modal = document.getElementById("myModal-1");
 
 			     // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -3442,7 +3544,7 @@ engineId = 0) => {
                  //columElem.setAttribute("z-index", "9");	//-image		 
 			  }else{
 				 elem = document.createElement("video");
-			     elem.setAttribute("autoplay", "false");
+			     //elem.setAttribute("autoplay", "false");
 			     elem.setAttribute("loop", "1");
 			     elem.setAttribute("muted", "true");
 			     elem.setAttribute("controls", "false");
@@ -3546,7 +3648,9 @@ engineId = 0) => {
                  video_elem.setAttribute("src", system_dirArr[i]);
                  video_elem.setAttribute("class", "modal-content-20");
                  video_elem.setAttribute("id", "img01-20");
+                 video_elem.setAttribute("controls", "true");
 
+			     modal.style.paddingTop = "2px";
 			     modal.style.display = "block";
 
 				 modal.insertBefore(video_elem, modalImg);
@@ -6494,7 +6598,7 @@ engineId = 0) => {
 				  columElem.setAttribute("id", "column col-embed");
 				  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
 				  elem.setAttribute("src", system_dirArr[i]);
-				  elem.setAttribute("autoplay", "false");
+				  //elem.setAttribute("autoplay", "false");
 				  elem.setAttribute("loop", "1");
 				  elem.setAttribute("muted", "true");
 				  elem.setAttribute("controls", "false");
@@ -6532,6 +6636,39 @@ engineId = 0) => {
 				  }				  
 
 
+                 elem.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+
+                 var video_elem = document.createElement("video");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("id", "img01-20");
+				 video_elem.setAttribute("controls", "true");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
+			   
                  company_name.onclick = function(){
 			     var modal = document.getElementById("myModal-1");
 

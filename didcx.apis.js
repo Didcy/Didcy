@@ -99,9 +99,9 @@ var $_deviceSelect = 0, captureFingerprintFreshVal = 0, $_facialCaptureReset = 0
        
 	 if(modelLoadedChecker == 0){
 	   Promise.all([
-		  faceapi.nets.faceRecognitionNet.loadFromUri('http://www.didcytest.ueuo.com/models'),
-		  faceapi.nets.faceLandmark68Net.loadFromUri('http://www.didcytest.ueuo.com/models'),
-		  faceapi.nets.ssdMobilenetv1.loadFromUri('http://www.didcytest.ueuo.com/models')
+		  faceapi.nets.faceRecognitionNet.loadFromUri('http://www.localhost/models'),
+		  faceapi.nets.faceLandmark68Net.loadFromUri('http://www.localhost/models'),
+		  faceapi.nets.ssdMobilenetv1.loadFromUri('http://www.localhost/models')
 		]).then(startx);
 	  }
 	  else{
@@ -303,7 +303,7 @@ var $_deviceSelect = 0, captureFingerprintFreshVal = 0, $_facialCaptureReset = 0
 		return Promise.all(
 		  labels.map(async label => { 
 			  const descriptions = [];
-			  for(let i = 1; i <= 1; i++){//'http://www.didcytest.ueuo.com/labeled_images/', '.jpg'
+			  for(let i = 1; i <= 1; i++){//'http://www.localhost/labeled_images/', '.jpg'
 				  const img = await faceapi.fetchImage(image_link +label.toString()+'/'+i.toString()+fileType); 
 				  const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor();
 				  descriptions.push(detections.descriptor);
