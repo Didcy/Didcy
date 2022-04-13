@@ -1158,6 +1158,11 @@ function selectAds(selectorId = 0){
 			  return alertBox("Please select a valid Country");
 		 }  */
 	   }
+	  
+	  if(adsDescriptionContainer.length != document.getElementById("uploads").files.length){
+		 return uploads($_files, drim, fetchID);
+	  }
+	  
       form.append("PS", JSON.stringify([adsDescriptionContainer, adsDescriptionContainer.length]));
 	  form.append("fetch", fetchID);
 	  form.append("drim", drim);
