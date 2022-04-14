@@ -1,0 +1,103 @@
+.form-newsletter {
+  border: 3px solid #f1f1f1;
+  font-family: Arial;
+  color: white;
+  
+}
+
+.form-newsletter .container-newsletter {
+  padding: 20px;
+  background-color: #000;
+}
+.modal-11 h2{color: white;}
+
+.form-newsletter .container-newsletter h2, p{color: white;}
+/* .form-newsletter .container-newsletter h2{
+  font-weight: bold;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+} */
+
+.glow {
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.glower{
+  color: #fff;
+  text-align: center;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.form-newsletter input[type=text], .form-newsletter input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-image: url("");
+}
+
+.form-newsletter input[type=checkbox] {
+  margin-top: 16px;
+}
+
+.form-newsletter input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form-newsletter input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.notification {
+  border-radius: 2px;
+  background-color: #555;
+}
+
+.notification:hover {
+  background: red;
+}
+
+.notification .badge {
+  position: absolute;
+  top: 0px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+@media screen and (min-height: 1366px){
+.form-newsletter .container-newsletter h2, p{font-size: 30px;}
+.form-newsletter .container-newsletter .glow{font-size: 30px;}
+.form-newsletter .container-newsletter .glower{font-size: 30px;}
+
+.form-newsletter input[type=text], .form-newsletter input[type=submit] {
+  padding: 32px;
+  font-size: 30px;
+}
+
+.form-newsletter input[type=submit] {
+  padding: 22px;
+  font-size: 30px;
+}
+}

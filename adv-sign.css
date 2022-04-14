@@ -1,0 +1,288 @@
+/* Full-width input fields */
+label, .terms-conditions, .please-fill {color: white;}
+.signup-header{
+       -moz-animation-name: didcx-welcome;
+	   -webkit-animation-name: didcx-welcome;
+	   animation-name: signup-header;
+	   animation-iteration-count: infinite;
+	   animation-timing-function: ease-in-out;
+	   animation-delay: 2s;
+	   animation-duration: 2s;
+	   background-color: #000;	
+	   font-family: Arial, Helvetica, sans-serif;
+}
+   @keyframes signup-header{
+      from{color: red;}
+	  to{color: yellow;}
+   }
+.gaga-relate{
+       -moz-animation-name: didcx-welcome;
+	   -webkit-animation-name: didcx-welcome;
+	   animation-name: gaga-relate;
+	   animation-iteration-count: infinite;
+	   animation-timing-function: ease-in-out;
+	   animation-delay: 2s;
+	   animation-duration: 2s;
+	   background-color: #000;	
+	   font-family: Arial, Helvetica, sans-serif;
+}
+   @keyframes gaga-relate{
+      from{color: red;}
+	  to{color: yellow;}
+   }
+.gaga-relate-2 {
+  width: 200px;
+  
+  background-color: black;
+  position: relative;
+  animation-name: gaga-relate-2;
+  animation-duration: 4s;
+  animation-direction: reverse; 
+  animation-iteration-count: infinite; 
+  /* padding: 35px; */
+  font-family: Arial, Helvetica, sans-serif;
+  animation-timing-function: ease-in-out;
+  font-size: 17px;
+}
+.gaga-relate-3 {
+  width: 200px;
+  
+  background-color: black;
+  position: relative;
+  animation-name: gaga-relate-3;
+  animation-duration: 4s;
+  animation-direction: reverse; 
+  animation-iteration-count: infinite; 
+  /* padding: 35px; */
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  animation-timing-function: ease-in-out;
+  font-size: 17px;
+}
+
+@keyframes gaga-relate-2 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:70%; top:0px;}
+  50%  {background-color:blue; left:70%; top:70px;}
+  75%  {background-color:green; left:0px; top: 70px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+@keyframes gaga-relate-3 {
+  0%   {background-color:red; left:5%; top:0px;}
+  25%  {background-color:yellow; left:81%; top:0px;}
+  50%  {background-color:blue; left:81%; top:0px;}
+  75%  {background-color:green; left:5%; top: 0px;}
+  100% {background-color:red; left:5%; top:0px;}
+}
+/* @keyframes gaga-relate-3 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:81%; top:0px;}
+  50%  {background-color:blue; left:81%; top:0px;}
+  75%  {background-color:green; left:0px; top: 0px;}
+  100% {background-color:red; left:0px; top:0px;}
+} */
+@media screen and (max-width: 540px){
+.gaga-relate-2 {
+  width: 180px;
+  font-size: 15px;
+}
+
+@keyframes gaga-relate-2 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:60%; top:0px;}
+  50%  {background-color:blue; left:60%; top:70px;}
+  75%  {background-color:green; left:0px; top: 70px;}
+  100% {background-color:red; left:0px; top:0px;}
+}	
+}
+@media screen and (max-width: 450px){
+.gaga-relate-2 {
+  width: 170px;
+  font-size: 15px;
+}
+
+@keyframes gaga-relate-2 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:50%; top:0px;}
+  50%  {background-color:blue; left:50%; top:70px;}
+  75%  {background-color:green; left:0px; top: 70px;}
+  100% {background-color:red; left:0px; top:0px;}
+}	
+}
+@media screen and (max-width: 363px){
+.gaga-relate-2 {
+  width: 140px;
+  font-size: 12px;
+}
+
+@keyframes gaga-relate-2 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:30%; top:0px;}
+  50%  {background-color:blue; left:30%; top:70px;}
+  75%  {background-color:green; left:0px; top: 70px;}
+  100% {background-color:red; left:0px; top:0px;}
+}	
+}
+input.input-signup-txt-name, input.input-signup-txt, input.input-pwd-signup, input.input-pwd-signup-2, select.industry-type, input.input-signin-txt, 
+input.input-pwd-signin, input.inputs1, input.input-pwd-signin-2, input.fee, 
+input.subscription-person-fname, input.subscription-person-lname {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input.input-signup-txt-name:focus, input.input-signup-txt:focus, input.input-pwd-signup:focus, input.input-pwd-signup-2:focus, 
+select.industry-type:focus, input.input-signin-txt:focus, input.input-pwd-signin:focus, input.inputs1:focus,
+input.input-pwd-signin-2:focus, input.fee:focus, 
+input.subscription-person-fname:focus, input.subscription-person-lname:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+select.industry-type{
+  cursor: pointer;
+}
+
+/* Set a style for all buttons */
+button.cancelbtn, button.signupbtn ,button.signinbtn, button.inputs1{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button.cancelbtn:hover, button.signupbtn:hover ,button.signinbtn:hover
+, button.inputs1:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+button.cancelbtn {
+  padding: 14px 20px;
+  background-color: rgba(10, 13, 20, 1);/*#f44336;*/
+}
+
+button.signinbtn, button.signupbtn{
+	background-color: rgba(10, 13, 20, 1);
+}
+
+/* Float cancel and signup buttons and add an equal width */
+button.cancelbtn, button.signupbtn ,button.signinbtn{
+  float: left;
+  width: 50%;
+}
+
+button.inputs1, button.inputs1:focus {
+  width: 100%;
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+/* Add padding to container elements */
+.container-signup, .container-signin, .container-subscribe-3, 
+.container-payment-services {
+  padding: 16px;
+  background: black;
+}
+
+/* The Modal (background) */
+.modal-signup, .modal-signin, .modal-subscribe-3 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content-signup, .modal-content-signin, .modal-content-subscribe-3 {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content-signup, .modal-content-signin {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+.modal-content-subscribe-3{
+  z-index: 28;	
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close-signup, .close-signin {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close-signup:hover, .close-signin:hover,
+.close-signup:focus, .close-signup:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container-signup input, .container-signin input{font-size: 20px;height: 40px;}
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 360px) {
+	button.inputs1, button.inputs1:focus {
+	  font-size: 13px;
+	}
+
+}
+@media screen and (max-width: 300px) {
+  button.cancelbtn, button.signupbtn ,button.signinbtn, button.inputs1:focus {
+     width: 100%;
+  }
+}
+
+@media screen and (min-height: 1366px){
+.gaga-relate-3, .gaga-relate-2 {
+  font-size: 35px;
+  width: 300px;
+}
+	.signup-header{font-size: 80px;}
+	.contact-media p{font-size: 30px;}
+	.container-signup label, .container-signin label{font-size: 30px;}
+	.container-signup label.container-checkbox,
+	.container-signin label.container-checkbox{font-size: 20px;}
+	/* .container-signup label.remember-box{font-size: 10px;} */
+	.container-signup input, .container-signin input{font-size: 30px;height: 70px;}
+	.container-signup button, .container-signin button{font-size: 30px;height: 70px;}
+}
+

@@ -1,0 +1,1525 @@
+"use strict";
+var $footerCheck = 0;
+var columElemContainer = [];
+var fileTypeIDLength = 0, videoElem = 0, videoEl = null, elemContainer = [];
+var start = 0;
+var clearT = null;
+var pageLoadCheckTimer = 0;
+var $fetchIDTemp = 0;
+//var modal_015, img_015, close15, caption15, modal_15_value = 0, res;
+
+ var exhibitEventsFromLiveSearch = function($fetchID = null, drim = null, searchResults = null, clearContainerId = null, company_name_text = null, 
+ fileTypeID = null){
+  
+  $fetchIDTemp = $fetchID;
+  
+  var didcxWelcome = document.getElementById("didcx-welcome");
+  var selectDisplayTypes = document.getElementById("select-display-type-modal");
+          
+		  system_dirArr = searchResults;
+		  fileTypeIDLength = fileTypeID.length;
+		  
+		  if(system_dirArr != null){
+			 if($fetchID == 2){
+			   if(drim != null){
+				 for(let i = 0;i < system_dirArr.length;i++){
+				  var rand = didcx_random_number_generator(0, 228828281919191);
+				  const classID1 = "eventVid-"+rand.toString()+" vid-3939302";
+				  const classID = "eventVid-"+rand.toString();
+				  //var elem = document.createElement("video");
+				  //window.alert(system_dirArr);
+				  var columElem = document.createElement("div");
+				  var elem = null;
+				  
+                  if(fileTypeIDLength > 0){
+					  if(fileTypeID[i] == 1){
+						  elem = document.createElement("embed");
+						  columElem.setAttribute("class", "column");
+						  /* columElem.setAttribute("style", "background-color:blue"); */
+						  columElem.setAttribute("id", "col-embed");
+						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
+						  elem.setAttribute("src", system_dirArr[i]);
+						  elem.setAttribute("autoplay", "true");
+						  elem.setAttribute("loop", "1");
+						  elem.setAttribute("muted", "true");
+						  elem.setAttribute("controls", "true");
+						  elem.setAttribute("class", classID1);
+						  elem.setAttribute("id", classID);
+					  }else if(fileTypeID[i] == 2){
+						  elem = document.createElement("audio");
+						  columElem.setAttribute("class", "column");
+						  /* columElem.setAttribute("style", "background-color:blue"); */
+						  columElem.setAttribute("id", "col-embed");
+						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
+						  elem.setAttribute("src", system_dirArr[i]);
+						  //elem.setAttribute("autoplay", "true");
+						  elem.setAttribute("loop", "1");
+						  elem.setAttribute("muted", "true");
+						  elem.setAttribute("controls", "true");
+						  elem.setAttribute("class", classID1);
+						  elem.setAttribute("id", classID);
+					  }else{
+						  elem = document.createElement("img");
+						  columElem.setAttribute("class", "column");
+						  /* columElem.setAttribute("style", "background-color:blue"); */
+						  columElem.setAttribute("id", "col-embed");
+						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
+						  elem.setAttribute("src", system_dirArr[i]);
+						  elem.setAttribute("class", classID1);
+						  elem.setAttribute("id", classID);
+					  }
+				 }  
+                  fileTypeIDLength--;
+				  //elem.setAttribute("style", "width:100%");
+				  document.getElementById("adv-files-showcase").append(columElem);
+				  //document.getElementById("adv-files-showcase").style.backgroundColor = "white";
+				  height += 300;
+				  //document.getElementById("adv-files-showcase").value = height.toString();
+				  //document.getElementById("column").append(elem);
+                  
+				  var company_name = document.createElement("h3");
+				  const company_nameText = document.createTextNode(company_name_text[i]);//+" Company");
+				  company_name.append(company_nameText);
+				  company_name.setAttribute("style", "color: green;font-family: sans-serif, arial;font-size: 25px;");
+				  
+				  let gaga_share = document.createElement("button");
+				  const gaga_shareText = document.createTextNode("Act");
+				  gaga_share.setAttribute("class", "button-1 gaga-share button1");
+				  gaga_share.setAttribute("id", "button-1");
+				  
+				  let column = document.getElementsByClassName("column");
+				  for(var columnCount = 0;columnCount < column.length;columnCount++){
+					  column[columnCount].append(elem);
+					  column[columnCount].append(company_name);
+					  column[columnCount].append(gaga_share);
+					  columElemContainer[columnCount] = column[columnCount];
+				  }
+
+
+               if(fileTypeID[i] == 0){
+                elem.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 if(videoElem == 1){
+					modal.removeChild(videoEl);
+                    videoEl = null;
+				 }
+			     modal.style.display = "block";
+
+			     modalImg.src = system_dirArr[i];
+
+			     captionText.innerHTML = "Didcy Act";
+
+				 modalImg.value = "19";				  
+			   }
+			  }else if(fileTypeID[i] == 2){
+                 company_name.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+           
+                 var video_elem = document.createElement("audio");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20 modal-content-20-audio");
+                 video_elem.setAttribute("id", "img01-20");
+                 video_elem.setAttribute("controls", "true");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
+			  }else{
+                 company_name.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+
+                 var video_elem = document.createElement("embed");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("id", "img01-20");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
+			  }
+
+				  
+				  document.getElementById("uploads").value = "";
+				  storeAllCreatedIds[i] = classID;
+
+				  // Get the modal
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+	
+				 modalImg.value = height.toString();
+				  //window.console.log(columElem);
+				  //window.console.log(document.getElementById("adv-files-showcase"));
+
+				  gaga_share.append(gaga_shareText);
+				  //window.console.log(gaga_share);
+				  
+				  //let gagaShare = document.getElementsByClassName("gaga-share")[gagaCounter];
+				  gaga_share.onclick = function(){
+/*                      window.console.log("kdkdkde--");
+					 if(videoEl != null){
+						modal.removeChild(videoEl);
+					 }	 */				  
+					  const GaGaShare = ["Share with Facebook", "Share with Twitter", "Share with Instagram", 
+					  "Share with Youtube", "Share with GaGa", "Share with Pinterest"];
+					  const GaGaShareBG = ["#3B5998", "#55ACEE", "#f993ea", "gray", "rgb(33, 54, 123)", "#3affe3"];
+					  const GaGaShareID = ["gaga-share-fb fa fa-facebook fa-fw", "gaga-share-tw fa fa-twitter fa-fw", "gaga-share-ins fa fa-facebook fa-fw", 
+					  "gaga-share-ybe fa fa-twitter fa-fw", "gaga-share-gaga fa fa-twitter fa-fw", "gaga-share-pinterest fa fa-facebook fa-fw"];
+
+					  const GaGaShare2 = ["Didcy Share", "Didcy Decide", "Definition", 
+					  "Approved by", "Date & Time", "Jurisdiction"];
+					  const GaGaShareBG2 = ["blue", "rgba(125, 25, 225, 1)", "#f993ea", "gray", "rgb(33, 54, 123)", "#3affe3"];
+					  const GaGaShareID2 = ["gaga-share", "gaga-decide", "gaga-definition", 
+					  "gaga-approved-by", "gaga-date-time", "jurisdiction"];
+
+					  for(var gagaCount = 0;gagaCount < GaGaShare2.length;gagaCount++){
+						  var gagaShareWithDoc = document.createElement("button");
+						  var gagaShareWithDocText = document.createTextNode(GaGaShare2[gagaCount]);
+						  const classID = "button-1 " + GaGaShareID2[gagaCount];
+						  const GaGaBG2 = "cursor: pointer;padding: 5px;font-size: 17px;display:  block;margin-bottom: 2%;width: 50%;position: relative;left: 25%;background-color: " + GaGaShareBG[gagaCount];
+						  gagaShareWithDoc.setAttribute("class", GaGaShareID2);
+						  gagaShareWithDoc.setAttribute("id", "button-1");
+						  gagaShareWithDoc.setAttribute("style", GaGaBG2);
+						  gagaShareWithDoc.append(gagaShareWithDocText);
+						  modal.insertBefore(gagaShareWithDoc, captionText);
+						  var gagaShareClicks = gagaShareWithDoc; //document.getElementsByClassName(GaGaShareID[gagaCount])[0];
+						  if(gagaCount == 0){
+							  //var img_015x = document.getElementById("img01-15");
+							  //modalImg.value = "15";
+							  gagaShareClicks.onclick = function(){
+							  //var elem = system_dirArr[i];
+							  //return window.alert(elem);
+							      //window.console.log("dkdkd-fr");
+                                   
+	                              if(modal_15_value == 1){
+									modal_015 = document.createElement("div");
+									close15 = document.createElement("span");
+									img_015 = document.createElement("img");
+									caption15 = document.createElement("div");
+
+									const caption15Text = document.createTextNode("GaGa Share");
+									//const close15Text = document.createTextNode("x");
+
+									modal_015.setAttribute("class", "modal-15 w3-modal-content w3-animate-bottom");	
+									modal_015.setAttribute("id", "myModal-15");
+									modal_015.setAttribute("style", "display: none");
+									
+									close15.setAttribute("class", "close-15");	
+									close15.setAttribute("id", "close-15");	
+									
+									img_015.setAttribute("class", "modal-content-15");	
+									img_015.setAttribute("id", "img01-15");	
+									
+									caption15.setAttribute("class", "caption-15");	
+									caption15.setAttribute("id", "caption-15");
+									
+									caption15.append(caption15Text);
+									//close15x.append(close15Text);	
+									close15.innerHTML = "&times;";									  
+                                    
+									modal_015.append(close15);
+									modal_015.append(img_015);
+									modal_015.append(caption15);
+									
+									res = document.getElementById("container-c31");
+									res.append(modal_015);
+									
+									//window.console.log(modal_015);
+									//window.console.log(res);
+									
+									modal_15_value = 0;
+									  close15.onclick = function() {
+										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
+										"gaga-share-gaga", "gaga-share-pinterest"];
+										const shareLength = GaGaShareID.length;
+										//var button1 = document.getElementsByClassName("button-12");
+
+										//for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
+											//var button1 = document.getElementsByClassName("button-12");
+											//modal_015 = document.getElementById("myModal-15");
+											modal_015 = document.getElementsByClassName("modal-15")[0];
+											res = document.getElementById("container-c31");
+											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
+										    modal_15_value = 1;
+										//}										
+								       }	
+
+								  }
+								  modal_015 = document.getElementById("myModal-15");
+								  img_015 = document.getElementById("img01-15");
+							 	  caption15 = document.getElementById("caption-15");
+								  close15 = document.getElementById("close-15");
+								  
+								  for(var gagaCount = 0;gagaCount < GaGaShare.length;gagaCount++){
+									  var gagaShareWithDoc = document.createElement("button");
+									  var gagaShareWithDocText = document.createTextNode(GaGaShare[gagaCount]);
+									  const classID = "button-12 " + GaGaShareID[gagaCount];
+									  const GaGaBG = "cursor: pointer;padding: 5px;font-size: 17px;display:  block;margin-bottom: 2%;width: 50%;position: relative;left: 25%;background-color: " + GaGaShareBG[gagaCount];
+									  gagaShareWithDoc.setAttribute("class", GaGaShareID);
+									  gagaShareWithDoc.setAttribute("id", "button-1");
+									  gagaShareWithDoc.setAttribute("style", GaGaBG);
+									  gagaShareWithDoc.append(gagaShareWithDocText);					  							  
+									  modal_015.insertBefore(gagaShareWithDoc, caption15);
+									  var gagaShareClicks = gagaShareWithDoc; //document.getElementsByClassName(GaGaShareID[gagaCount])[0];
+									  empty[gagaCount] = gagaShareClicks;
+/* 									  gagaShareClicks.onclick = function(){
+										  var elem = system_dirArr[i];
+										  return window.alert(elem);										  
+									  } */		
+									  close15.onclick = function() {
+										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
+										"gaga-share-gaga", "gaga-share-pinterest"];
+										const shareLength = GaGaShareID.length;
+										//var button1 = document.getElementsByClassName("button-12");
+
+										///for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
+											//var button1 = document.getElementsByClassName("button-12");
+											//modal_015 = document.getElementById("myModal-15");
+											modal_015 = document.getElementById("myModal-15");
+											res = document.getElementById("container-c31");
+											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
+										    modal_15_value = 1;
+										//}										
+								       }									  
+								  }
+
+								  modal_015.style.display = "block";
+								  img_015.style.display = "none";
+								  caption15.innerHTML = "GaGa Share";											  						  
+
+
+								  modalImg.value = '10';
+								  if(modalImg.value == '10'){
+									  modal12.style.zIndex = "9";
+									  empty[0].onclick = function(){
+										  //modal_015.style.display = "none";
+										  //modal_015.value = "15";
+										  showMediaAccount(0, 2);
+									  }
+									  empty[1].onclick = function(){
+										  showMediaAccount(1);
+									  }
+									  empty[2].onclick = function(){
+										  showMediaAccount(2);
+									  }
+									  empty[3].onclick = function(){
+										  showMediaAccount(3);
+									  }
+									  empty[4].onclick = function(){
+										  showMediaAccount(4);
+									  }
+									  empty[5].onclick = function(){
+										  showMediaAccount(5);
+									  }
+								  }	
+							  
+/* 							  modal_015.style.display = "block";
+							  img_015.style.display = "none";
+							  img_015.value = "15";
+							  caption15.innerHTML = "GaGa Share"; */
+						   }
+						 }
+						  else if(gagaCount == 1){
+							  gagaShareClicks.style.display = "none";
+							  gagaShareClicks.onclick = function(){
+							   ServicesNotAvailable('Decide Services', 
+	   'Decide Service report is at the back side. Please tab/put the mouse on this box to view the report.')
+							 ;}
+						  }
+						  else if(gagaCount == 2){
+							  gagaShareClicks.onclick = function(){
+								  //return window.alert(system_dirArr[i]);
+								  describeProductService(drim, company_name_text[i], 1, system_dirArr[i]);
+								 setTimeout(() => {
+	                              if(modal_15_value == 1){
+									modal_015 = document.createElement("div");
+									close15 = document.createElement("span");
+									img_015 = document.createElement("img");
+									caption15 = document.createElement("div");
+
+									const caption15Text = document.createTextNode("GaGa Share");
+									//const close15Text = document.createTextNode("x");
+
+									modal_015.setAttribute("class", "modal-15 w3-modal-content w3-animate-bottom");	
+									modal_015.setAttribute("id", "myModal-15");
+									modal_015.setAttribute("style", "display: none");
+									
+									close15.setAttribute("class", "close-15");	
+									close15.setAttribute("id", "close-15");	
+									
+									img_015.setAttribute("class", "modal-content-15");	
+									img_015.setAttribute("id", "img01-15");	
+									
+									caption15.setAttribute("class", "caption-15");	
+									caption15.setAttribute("id", "caption-15");
+									
+									caption15.append(caption15Text);
+									//close15x.append(close15Text);	
+									close15.innerHTML = "&times;";									  
+                                    
+									modal_015.append(close15);
+									modal_015.append(img_015);
+									modal_015.append(caption15);
+									
+									res = document.getElementById("container-c31");
+									res.append(modal_015);
+									
+									//window.console.log(modal_015);
+									//window.console.log(res);
+									
+									modal_15_value = 0;
+									  close15.onclick = function() {
+										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
+										"gaga-share-gaga", "gaga-share-pinterest"];
+										const shareLength = GaGaShareID.length;
+										//var button1 = document.getElementsByClassName("button-12");
+
+										//for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
+											//var button1 = document.getElementsByClassName("button-12");
+											//modal_015 = document.getElementById("myModal-15");
+											modal_015 = document.getElementsByClassName("modal-15")[0];
+											res = document.getElementById("container-c31");
+											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
+										    modal_15_value = 1;
+										//}										
+								       }	
+								  }
+								  modal_015 = document.getElementById("myModal-15");
+								  img_015 = document.getElementById("img01-15");
+							 	  caption15 = document.getElementById("caption-15");
+								  close15 = document.getElementById("close-15");
+								  //window.console.log(describeText);
+								  var describe = document.createElement("div");
+								  const describeTxt = document.createTextNode(describeText);
+								  describe.setAttribute("class", "describe modal-content-15");
+								  describe.setAttribute("id", "describe");
+								  describe.setAttribute("style", "font-family: sans-serif, arial; font-size: 19px;color: white;text-align: center");
+								  describe.append(describeTxt);
+								  modal_015.insertBefore(describe, caption15);
+								  caption15.innerHTML = "Didcy Express";
+								  
+								  modal_015.style.display = "block";
+								  
+										  close15.onclick = function() {
+											modal_015 = document.getElementById("myModal-15");
+											res = document.getElementById("container-c31");
+											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
+										    modal_15_value = 1;
+										//}										
+								       }							  
+							  }, 2000);
+						    }
+						  }
+						  else if(gagaCount == 3){
+							  gagaShareClicks.onclick = function(){
+								  describeProductService(drim, company_name_text[i], 3, system_dirArr[i]);
+								 setTimeout(() => {
+	                              if(modal_15_value == 1){
+									modal_015 = document.createElement("div");
+									close15 = document.createElement("span");
+									img_015 = document.createElement("img");
+									caption15 = document.createElement("div");
+
+									const caption15Text = document.createTextNode("GaGa Share");
+									//const close15Text = document.createTextNode("x");
+
+									modal_015.setAttribute("class", "modal-15 w3-modal-content w3-animate-bottom");	
+									modal_015.setAttribute("id", "myModal-15");
+									modal_015.setAttribute("style", "display: none");
+									
+									close15.setAttribute("class", "close-15");	
+									close15.setAttribute("id", "close-15");	
+									
+									img_015.setAttribute("class", "modal-content-15");	
+									img_015.setAttribute("id", "img01-15");	
+									
+									caption15.setAttribute("class", "caption-15");	
+									caption15.setAttribute("id", "caption-15");
+									
+									caption15.append(caption15Text);
+									//close15x.append(close15Text);	
+									close15.innerHTML = "&times;";									  
+                                    
+									modal_015.append(close15);
+									modal_015.append(img_015);
+									modal_015.append(caption15);
+									
+									res = document.getElementById("container-c31");
+									res.append(modal_015);
+									
+									//window.console.log(modal_015);
+									//window.console.log(res);
+									
+									modal_15_value = 0;
+									  close15.onclick = function() {
+										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
+										"gaga-share-gaga", "gaga-share-pinterest"];
+										const shareLength = GaGaShareID.length;
+										//var button1 = document.getElementsByClassName("button-12");
+
+										//for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
+											//var button1 = document.getElementsByClassName("button-12");
+											//modal_015 = document.getElementById("myModal-15");
+											modal_015 = document.getElementsByClassName("modal-15")[0];
+											res = document.getElementById("container-c31");
+											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
+										    modal_15_value = 1;
+										//}										
+								       }	
+								  }
+								  modal_015 = document.getElementById("myModal-15");
+								  img_015 = document.getElementById("img01-15");
+							 	  caption15 = document.getElementById("caption-15");
+								  close15 = document.getElementById("close-15");
+								  //window.console.log(describeText);
+								  var describe = document.createElement("div");
+								  const describeTxt = document.createTextNode(approvedByText);
+								  describe.setAttribute("class", "describe modal-content-15");
+								  describe.setAttribute("id", "describe");
+								  describe.setAttribute("style", "font-family: sans-serif, arial; font-size: 30px;color: white;text-align: center");
+								  describe.append(describeTxt);
+								  modal_015.insertBefore(describe, caption15);
+								  caption15.innerHTML = "GaGa Express";
+								  
+								  modal_015.style.display = "block";
+								  
+										  close15.onclick = function() {
+											modal_015 = document.getElementById("myModal-15");
+											res = document.getElementById("container-c31");
+											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
+										    modal_15_value = 1;
+										//}										
+								       }							  
+							  }, 2000);
+						    }
+						  }
+						  else if(gagaCount == 4){
+							  gagaShareClicks.onclick = function(){
+								  //window.alert("yyyy");
+								  describeProductService(drim, company_name_text[i], 4, system_dirArr[i]);
+								 setTimeout(() => {
+	                              if(modal_15_value == 1){
+									modal_015 = document.createElement("div");
+									close15 = document.createElement("span");
+									img_015 = document.createElement("img");
+									caption15 = document.createElement("div");
+
+									const caption15Text = document.createTextNode("GaGa Share");
+									//const close15Text = document.createTextNode("x");
+
+									modal_015.setAttribute("class", "modal-15 w3-modal-content w3-animate-bottom");	
+									modal_015.setAttribute("id", "myModal-15");
+									modal_015.setAttribute("style", "display: none");
+									
+									close15.setAttribute("class", "close-15");	
+									close15.setAttribute("id", "close-15");	
+									
+									img_015.setAttribute("class", "modal-content-15");	
+									img_015.setAttribute("id", "img01-15");	
+									
+									caption15.setAttribute("class", "caption-15");	
+									caption15.setAttribute("id", "caption-15");
+									
+									caption15.append(caption15Text);
+									//close15x.append(close15Text);	
+									close15.innerHTML = "&times;";									  
+                                    
+									modal_015.append(close15);
+									modal_015.append(img_015);
+									modal_015.append(caption15);
+									
+									res = document.getElementById("container-c31");
+									res.append(modal_015);
+									
+									//window.console.log(modal_015);
+									//window.console.log(res);
+									
+									modal_15_value = 0;
+									  close15.onclick = function() {
+										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
+										"gaga-share-gaga", "gaga-share-pinterest"];
+										const shareLength = GaGaShareID.length;
+										//var button1 = document.getElementsByClassName("button-12");
+
+										//for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
+											//var button1 = document.getElementsByClassName("button-12");
+											//modal_015 = document.getElementById("myModal-15");
+											modal_015 = document.getElementsByClassName("modal-15")[0];
+											res = document.getElementById("container-c31");
+											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
+										    modal_15_value = 1;
+										//}										
+								       }	
+								  }
+								  modal_015 = document.getElementById("myModal-15");
+								  img_015 = document.getElementById("img01-15");
+							 	  caption15 = document.getElementById("caption-15");
+								  close15 = document.getElementById("close-15");
+								  //window.console.log(describeText);
+								  var period = 
+								  "Product/Service Commencement Date : " +periodText[0]+"<br>"+
+								  "Product/Service Elapsing Date : " +periodText[1]+"<br>"+
+								  "Product/Service Commencement Time : " +periodText[2]+"<br>"+
+								  "Product/Service Elapsing Time : " +periodText[3]+"<br>"+
+								  "Product/Service Shipmet Date : " +periodText[4]+"<br>"+
+								  "Product/Service Shipmet Time : " +periodText[5];
+								  var describe = document.createElement("div");
+								  const describeTxt = document.createTextNode(period);
+								  describe.setAttribute("class", "describe modal-content-15");
+								  describe.setAttribute("id", "describe");
+								  describe.setAttribute("style", "font-family: sans-serif, arial; font-size: 20px;color: white;text-align: center");
+								  describe.append(describeTxt);
+								  describe.innerHTML = period;
+								  modal_015.insertBefore(describe, caption15);
+								  caption15.innerHTML = "GaGa Express";
+								  
+								  modal_015.style.display = "block";
+								  
+										  close15.onclick = function() {
+											modal_015 = document.getElementById("myModal-15");
+											res = document.getElementById("container-c31");
+											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
+										    modal_15_value = 1;
+										//}										
+								       }							  
+							  }, 2000);
+						    }
+						  }
+						  else if(gagaCount == 5){
+							  gagaShareClicks.onclick = function(){
+								  //window.alert("yyyy");
+								  describeProductService(drim, company_name_text[i], 5, system_dirArr[i]);
+								 setTimeout(() => {
+	                              if(modal_15_value == 1){
+									modal_015 = document.createElement("div");
+									close15 = document.createElement("span");
+									img_015 = document.createElement("img");
+									caption15 = document.createElement("div");
+
+									const caption15Text = document.createTextNode("GaGa Share");
+									//const close15Text = document.createTextNode("x");
+
+									modal_015.setAttribute("class", "modal-15 w3-modal-content w3-animate-bottom");	
+									modal_015.setAttribute("id", "myModal-15");
+									modal_015.setAttribute("style", "display: none");
+									
+									close15.setAttribute("class", "close-15");	
+									close15.setAttribute("id", "close-15");	
+									
+									img_015.setAttribute("class", "modal-content-15");	
+									img_015.setAttribute("id", "img01-15");	
+									
+									caption15.setAttribute("class", "caption-15");	
+									caption15.setAttribute("id", "caption-15");
+									
+									caption15.append(caption15Text);
+									//close15x.append(close15Text);	
+									close15.innerHTML = "&times;";									  
+                                    
+									modal_015.append(close15);
+									modal_015.append(img_015);
+									modal_015.append(caption15);
+									
+									res = document.getElementById("container-c31");
+									res.append(modal_015);
+									
+									//window.console.log(modal_015);
+									//window.console.log(res);
+									
+									modal_15_value = 0;
+									  close15.onclick = function() {
+										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
+										"gaga-share-gaga", "gaga-share-pinterest"];
+										const shareLength = GaGaShareID.length;
+										//var button1 = document.getElementsByClassName("button-12");
+
+										//for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
+											//var button1 = document.getElementsByClassName("button-12");
+											//modal_015 = document.getElementById("myModal-15");
+											modal_015 = document.getElementsByClassName("modal-15")[0];
+											res = document.getElementById("container-c31");
+											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
+										    modal_15_value = 1;
+										//}										
+								       }	
+								  }
+								  modal_015 = document.getElementById("myModal-15");
+								  img_015 = document.getElementById("img01-15");
+							 	  caption15 = document.getElementById("caption-15");
+								  close15 = document.getElementById("close-15");
+								  //window.console.log(describeText);
+								  
+								  var describe = document.createElement("div");
+								  const describeTxt = document.createTextNode(jurisdictionText);
+								  describe.setAttribute("class", "describe modal-content-15");
+								  describe.setAttribute("id", "describe");
+								  describe.setAttribute("style", "font-family: sans-serif, arial; font-size: 30px;color: white;text-align: center");
+								  describe.append(describeTxt);
+								  //describe.innerHTML = period;
+								  modal_015.insertBefore(describe, caption15);
+								  caption15.innerHTML = "GaGa Express";
+								  
+								  modal_015.style.display = "block";
+								  
+										  close15.onclick = function() {
+											modal_015 = document.getElementById("myModal-15");
+											res = document.getElementById("container-c31");
+											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
+										    modal_15_value = 1;
+										//}										
+								       }							  
+							  }, 2000);
+						    }
+						  }
+					  }
+
+
+					  
+					  modal.style.display = "block";
+					  
+					  modalImg.style.display = "none";
+					  captionText.innerHTML = "Didcy Action";	
+					  modalImg.value = '10';	
+					  gagaCounter++;
+				 }	
+				}
+				  if(clearContainerId == 'upload.multiple'){
+/* 					device = window.matchMedia('(max-height: 1366px)');
+					checkDeviceHeight(device, 1366);	
+					device = window.matchMedia('(max-height: 1076px)');
+					checkDeviceHeight(device, 1076);
+					device = window.matchMedia('(max-height: 625px)');
+					checkDeviceHeight(device, 625); */	  
+				  }else{					
+/* 					device = window.matchMedia('(max-height: 1366px)');
+					checkDeviceHeight(device, 1366);	
+					device = window.matchMedia('(max-height: 1076px)');
+					checkDeviceHeight(device, 1076);
+					device = window.matchMedia('(max-height: 625px)');
+					checkDeviceHeight(device, 625);	 */
+				  }
+			}else{
+		    //if(gagaSiteContentFromMore == 1){
+				//if(clearContainerId == 'av'){
+				  var advFilesContainer = document.getElementById("adv-files-showcase");
+				  document.getElementById("container-c31").removeChild(advFilesContainer);
+				  var advFileContainer = document.createElement("div");
+				  advFileContainer.setAttribute("class", "row");
+				  advFileContainer.setAttribute("id", "adv-files-showcase");
+				  document.getElementById("container-c31").append(advFileContainer);
+				  
+				//}else{
+				
+				//}
+				var myModal_1 = document.getElementById("myModal-1");
+				//document.getElementsByClassName("select-display-type-modal")[0].style.display = "none";
+				myModal_1.style.display = "none";
+				document.getElementsByClassName("modal")[0].style.display = "none";				
+			//}else{
+				if(document.getElementById("img01-1").value == '5'){
+					  var gagaRContainer2 = document.getElementById("gaga-react-container");
+					  myModal_1.removeChild(gagaRContainer2);
+					  //caption1.classList.remove("gaga-relate-2");
+				}	
+			   selectDisplayTypes.style.display = "none";
+			   didcxWelcome.innerHTML = "DIDCY - WHAT DO YOU THINK";
+			   document.getElementById("img01-1").value = '0';
+			//}
+		     for(let i = 0;i < system_dirArr.length;i++){
+			  var rand = didcx_random_number_generator(0, 228828281919191);
+			  const classID1 = "eventVid-"+rand.toString()+" vid-3939302";
+			  const classID = "eventVid-"+rand.toString();
+			  //var elem = document.createElement("video");
+			  //window.alert(system_dirArr);
+				  var columElem = document.createElement("div");
+				  var elem = null;
+				  
+                  if(fileTypeIDLength > 0){
+					  if(fileTypeID[i] == 1){
+						  elem = document.createElement("embed");
+						  columElem.setAttribute("class", "column");
+						  /* columElem.setAttribute("style", "background-color:blue"); */
+						  columElem.setAttribute("id", "col-embed");
+						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
+						  elem.setAttribute("src", system_dirArr[i]);
+						  elem.setAttribute("autoplay", "true");
+						  elem.setAttribute("loop", "1");
+						  elem.setAttribute("muted", "true");
+						  elem.setAttribute("controls", "false");
+						  elem.setAttribute("class", classID1);
+						  elem.setAttribute("id", classID);
+					  }else if(fileTypeID[i] == 2){
+						  elem = document.createElement("audio");
+						  columElem.setAttribute("class", "column");
+						  /* columElem.setAttribute("style", "background-color:blue"); */
+						  columElem.setAttribute("id", "col-embed");
+						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
+						  elem.setAttribute("src", system_dirArr[i]);
+						  //elem.setAttribute("autoplay", "true");
+						  elem.setAttribute("loop", "1");
+						  elem.setAttribute("muted", "true");
+						  elem.setAttribute("controls", "true");
+						  elem.setAttribute("class", classID1);
+						  elem.setAttribute("id", classID);
+					  }else{
+						  elem = document.createElement("img");
+						  columElem.setAttribute("class", "column");
+						  /* columElem.setAttribute("style", "background-color:blue"); */
+						  columElem.setAttribute("id", "col-embed");
+						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
+						  elem.setAttribute("src", system_dirArr[i]);
+						  elem.setAttribute("class", classID1);
+						  elem.setAttribute("id", classID);
+					  }
+				 }  
+                  fileTypeIDLength--;
+			  //elem.setAttribute("style", "width:100%");
+			  document.getElementById("adv-files-showcase").append(columElem);
+			  ////document.getElementById("adv-files-showcase").style.backgroundColor = "white";
+			  //document.getElementById("column").append(elem);
+			  //columElem.style.backgroundColor = "white";			  
+			  height += 300;
+			  //document.getElementById("adv-files-showcase").value = height.toString();			  
+			  
+			  //document.getElementById("column").append(elem);
+			  
+			  let column = document.getElementsByClassName("column");
+              
+			  var company_name = document.createElement("h3");
+			  const company_nameText = document.createTextNode(company_name_text[i]);//+" Company");
+			  company_name.append(company_nameText);
+			  company_name.setAttribute("style", "color: green;font-family: sans-serif, arial;font-size: 25px;");
+             
+              
+			  for(var columnCount = 0;columnCount < column.length;columnCount++){
+				  column[columnCount].append(elem);
+				  column[columnCount].append(company_name);
+			  } 
+             
+ 
+/*  company_name.onmousedown = function(){
+    start = Date.now();
+	clearT = setTimeout(() => {}, 1000);
+    
+    while(pageLoadCheckTimer < 2000){
+     pageLoadCheckTimer = (Date.now() - window.start);
+     if(pageLoadCheckTimer == 2000){ //120000 
+         var correctMark = document.createElement("img");
+         correctMark.setAttribute("class", "correct-mark-image ");
+         correctMark.setAttribute("id", "correct-mark-image ");
+         correctMark.setAttribute("src", "download.jpg");
+         document.getElementById("adv-files-showcase").append(correctMark);
+         break;
+     }else if(pageLoadCheckTimer == 1000){
+             if(fileTypeID[i] == 0){
+                elem.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 if(videoElem == 1){
+					modal.removeChild(videoEl);
+                    videoEl = null;
+				 }
+			     modal.style.display = "block";
+
+			     modalImg.src = system_dirArr[i];
+
+			     captionText.innerHTML = "Didcy Act";
+
+				 modalImg.value = "19";				  
+			   }
+			  }else{
+                 company_name.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+
+                 var video_elem = document.createElement("embed");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("id", "img01-20");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
+			  }		
+		    }
+   }
+
+ }
+
+company_name.onmouseout = function(){
+    start = 0;
+	clearTimeout(clearT);
+    pageLoadCheckTimer = 0;
+ } */
+ 
+              if(fileTypeID[i] == 0){
+                elem.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 if(videoElem == 1){
+					modal.removeChild(videoEl);
+                    videoEl = null;
+				 }
+			     modal.style.display = "block";
+
+			     modalImg.src = system_dirArr[i];
+
+			     captionText.innerHTML = "Didcy Act";
+
+				 modalImg.value = "19";				  
+			   }
+			  }else if(fileTypeID[i] == 2){
+                 company_name.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+				 
+                 var video_elem = document.createElement("audio");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20 modal-content-20-audio");
+                 video_elem.setAttribute("id", "img01-20");
+                 video_elem.setAttribute("controls", "true");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
+			  }else{
+                 company_name.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+
+                 var video_elem = document.createElement("embed");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("id", "img01-20");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
+			  }		
+		    
+ 
+ 
+/*               elemContainer[i] = column[i];
+              checkSize(elemContainer);
+
+function checkSize(elem){
+  if(elem.length <= 0){
+     return;
+  }
+  else{
+   for(var i = 0;i < elem.length;i++){
+	elem[i].addEventListener("keypress", keypressed, false);
+	elem[i].addEventListener("keyup", keyup, false);
+	elem[i].onmousedown = function(){}
+	elem[i].onclick = function(){}
+  }
+ }
+}
+
+ function keypressed(event){
+     window.console.log("event");
+     var elem = column[i];
+     if(event.keyCode == 99){
+        elem.onmousedown = function(){
+            elem.pause();
+            videoMarked = null;
+            marked = 0;
+            videoMarked = document.createElement("div");
+            var vidMarked = "event-"+didcx_random_number_generator(0, 337474732626281).toString();
+			var vidMarkedId = "event";
+            videoMarked.setAttribute("class", vidMarked);
+            videoMarked.setAttribute("id", vidMarkedId);
+            videoMarked.setAttribute("style", "z-index:9;position:absolute;top:1.6%;width:300px;height:200px;background:blue;");
+            
+            document.getElementById("adv-files-showcase").append(videoMarked);
+            
+            marked = 1;
+       if(marked == 1){
+			videoMarked.onclick = function(){
+				var vis = document.getElementById("event");
+			document.getElementById("adv-files-showcase").removeChild(videoMarked);
+            videoMarked = null;
+            marked = 0;
+		    elem.onmousedown = function(){}
+		    elem.onclick = function(){}
+        }    
+        }
+       }
+    }
+ } */
+ 
+/*   function keyup(event){
+   var elem = column[i];
+   elem.onmousedown = function(){elem.pause();}
+   elem.onclick = function(){elem.pause();}
+ } */
+			  
+			  document.getElementById("uploads").value = "";
+			  storeAllCreatedIds[i] = classID;
+			  //window.console.log(columElem);
+			  //window.console.log(document.getElementById("adv-files-showcase"));
+			 }	
+
+				  // Get the modal
+			     //var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 
+				  //var modalImg = document.getElementById("img01-1");
+				 //var captionText = document.getElementById("caption-1");
+				 
+				 //modalImg.value = height.toString();
+
+
+/* 				  storeAllCreatedIds = [];
+				  convert_to_object = null;
+				  system_dirArr = [];
+				  array_js_init = 0, array_js = [], linkArr = null;	 */
+
+			}
+		   }else if($fetchID == 3){
+				  var advFilesContainer = document.getElementById("adv-files-showcase");
+				  document.getElementById("container-c31").removeChild(advFilesContainer);
+				  var advFileContainer = document.createElement("div");
+				  advFileContainer.setAttribute("class", "row");
+				  advFileContainer.setAttribute("id", "adv-files-showcase");
+				  document.getElementById("container-c31").append(advFileContainer);
+				//}else{
+				
+				//}
+				var myModal_1 = document.getElementById("myModal-1");
+				//document.getElementsByClassName("select-display-type-modal")[0].style.display = "none";
+				myModal_1.style.display = "none";
+				document.getElementsByClassName("modal")[0].style.display = "none";				
+			//}else{
+				if(document.getElementById("img01-1").value == '5'){
+					  var gagaRContainer2 = document.getElementById("gaga-react-container");
+					  myModal_1.removeChild(gagaRContainer2);
+					  //caption1.classList.remove("gaga-relate-2");
+				}	
+			   selectDisplayTypes.style.display = "none";
+			   didcxWelcome.innerHTML = "DIDCY - WHAT DO YOU THINK";
+			   document.getElementById("img01-1").value = '0';
+               
+			   //selectDisplayTypes.style.display = "none";
+/* 			   var advFilesContainer = document.getElementById("adv-files-showcase");
+			   advFilesContainer.style.display = "block"; */
+
+			 var gagaCounter = 0;
+		     for(let i = 0;i < system_dirArr.length;i++){
+			  var rand = didcx_random_number_generator(0, 228828281919191);
+			  const classID1 = "eventVid-"+rand.toString()+" vid-3939302";
+			  const classID = "eventVid-"+rand.toString();
+			  //var elem = document.createElement("video");
+			  //window.alert(system_dirArr);
+			  var columElem = document.createElement("div");
+			  var elem = document.createElement("embed");
+			  columElem.setAttribute("class", "column");
+			  /* columElem.setAttribute("style", "background-color:blue"); */
+			  columElem.setAttribute("id", "column");
+			  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
+			  elem.setAttribute("src", system_dirArr[i]);
+			  //elem.setAttribute("autoplay", "true");
+			  elem.setAttribute("loop", "1");
+			  elem.setAttribute("muted", "true");
+			  elem.setAttribute("controls", "false");
+			  elem.setAttribute("class", classID1);
+			  elem.setAttribute("id", classID);
+			  //elem.setAttribute("style", "width:100%");
+			  document.getElementById("adv-files-showcase").append(columElem);
+			  //document.getElementById("column").append(elem);
+
+			  height += 300;
+			  //document.getElementById("adv-files-showcase").value = height.toString();
+			  
+			  let gaga_share = document.createElement("button");
+			  const gaga_shareText = document.createTextNode("Share");
+	          gaga_share.setAttribute("class", "button-1 gaga-share");
+	          gaga_share.setAttribute("id", "button-1");
+	          //gaga_share.setAttribute("style", "margin-top: 20px");
+			  
+			  let column = document.getElementsByClassName("column");
+
+/* 				  var modal = document.getElementById("myModal-1");
+
+				  // Get the image and insert it inside the modal - use its "alt" text as a caption
+				  //var img = document.getElementById("");
+			  var modalImg = document.getElementById("img01-1");
+			  var captionText = document.getElementById("caption-1"); */
+			  
+			  for(var columnCount = 0;columnCount < column.length;columnCount++){
+				  column[columnCount].append(elem);
+				  column[columnCount].append(gaga_share);			 
+			  }
+			  
+			  document.getElementById("uploads").value = "";
+			  storeAllCreatedIds[i] = classID;
+
+				  // Get the modal
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+				 
+				 modalImg.value = height.toString();
+
+			  gaga_share.append(gaga_shareText);
+			  //window.console.log(gaga_share);
+			  
+			  //let gagaShare = document.getElementsByClassName("gaga-share")[gagaCounter];
+			  gaga_share.onclick = function(){
+                  
+				  const GaGaShare = ["Share with Facebook", "Share with Twitter", "Share with Instagram", 
+				  "Share with Youtube", "Share with GaGa", "Share with Pinterest"];
+				  const GaGaShareBG = ["#3B5998", "#55ACEE", "#f993ea", "gray", "rgb(33, 54, 123)", "#3affe3"];
+				  const GaGaShareID = ["gaga-share-fb fa fa-facebook fa-fw", "gaga-share-tw fa fa-twitter fa-fw", "gaga-share-ins fa fa-facebook fa-fw", 
+				  "gaga-share-ybe fa fa-twitter fa-fw", "gaga-share-gaga fa fa-twitter fa-fw", "gaga-share-pinterest fa fa-facebook fa-fw"];
+
+				  for(var gagaCount = 0;gagaCount < GaGaShare.length;gagaCount++){
+					  var gagaShareWithDoc = document.createElement("button");
+					  var gagaShareWithDocText = document.createTextNode(GaGaShare[gagaCount]);
+					  const classID = "button-1 " + GaGaShareID[gagaCount];
+					  const GaGaBG = "cursor: pointer;padding: 5px;font-size: 17px;display:  block;margin-bottom: 2%;width: 50%;position: relative;left: 25%;background-color: " + GaGaShareBG[gagaCount];
+					  gagaShareWithDoc.setAttribute("class", GaGaShareID);
+					  gagaShareWithDoc.setAttribute("id", "button-1");
+					  gagaShareWithDoc.setAttribute("style", GaGaBG);
+					  gagaShareWithDoc.append(gagaShareWithDocText);
+                      modal.insertBefore(gagaShareWithDoc, captionText);
+					  var gagaShareClicks = gagaShareWithDoc; //document.getElementsByClassName(GaGaShareID[gagaCount])[0];
+					  gagaShareClicks.onclick = function(){
+						  var elem = system_dirArr[i];
+						  return window.alert(elem);
+					  }
+				  }
+				  //window.console.log(modal);
+				  
+/* 				  let gaga_share_fb = document.createElement("button");
+				  const gaga_shareText2 = document.createTextNode(GaGaShare[0]);
+				  const classID = GaGaShareID[
+				  gaga_share_fb.setAttribute("class", "button-1 gaga-share-fb");
+				  gaga_share_fb.setAttribute("id", "button-1");
+				  gaga_share_fb.setAttribute("style", "width: 50%;position: relative;left: 25%;top:");
+				  //gaga_share_fb.setAttribute("style", "margin: auto");
+				  gaga_share_fb.append(gaga_shareText2); */
+				  
+				  //modal.insertBefore(gaga_share_fb, captionText);
+				  
+			      modal.style.display = "block";
+                  
+				  modalImg.style.display = "none";
+			      captionText.innerHTML = "GaGa Share";	
+                  modalImg.value = '10';	
+				  gagaCounter++;
+			  }			  
+			  
+			  //window.console.log(columElem);
+			  //window.console.log(document.getElementById("adv-files-showcase"));
+		    }	
+/* 				 var footer = document.createElement("div");
+				 const footerText = document.createTextNode("Footer");
+				 footer.setAttribute("class", "footer-x");
+				 footer.setAttribute("id", "footer-x");
+				 footer.setAttribute("style", "height: 200px;text-align: center;color: white;background-color: black;width: 100%;left: 0;right: 0;bottom: 0;position: relative;");
+				 footer.append(footerText);
+				 document.body.append(footer); */			
+/* 					device = window.matchMedia('(max-height: 1366px)');
+					checkDeviceHeight(device, 1366);	
+				    device = window.matchMedia('(max-height: 1076px)');
+					checkDeviceHeight(device, 1076);
+					device = window.matchMedia('(max-height: 625px)');
+					checkDeviceHeight(device, 625);	 */
+				    //selectDisplayTypes.style.display = "none";					
+		   }else{
+		    //if(gagaSiteContentFromMore == 1){
+				  var advFilesContainer = document.getElementById("adv-files-showcase");
+				  document.getElementById("container-c31").removeChild(advFilesContainer);
+				  var advFileContainer = document.createElement("div");
+				  advFileContainer.setAttribute("class", "row");
+				  advFileContainer.setAttribute("id", "adv-files-showcase");
+				  document.getElementById("container-c31").append(advFileContainer);			  
+				
+				var myModal_1 = document.getElementById("myModal-1");
+				//document.getElementsByClassName("select-display-type-modal")[0].style.display = "none";
+				myModal_1.style.display = "none";
+				document.getElementsByClassName("modal")[0].style.display = "none";
+				if(document.getElementById("img01-1").value == '5'){
+					  var gagaRContainer2 = document.getElementById("gaga-react-container");
+					  myModal_1.removeChild(gagaRContainer2);
+					  //caption1.classList.remove("gaga-relate-2");
+				}				
+			//}else{
+			 selectDisplayTypes.style.display = "none";
+			 didcxWelcome.innerHTML = "DIDCY - YOU DO THE MATH";
+			 document.getElementById("img01-1").value = '0';
+			//}
+			 var imageIdContainer = [];
+		     for(let i = 0;i < system_dirArr.length;i++){
+			  var rand = didcx_random_number_generator(0, 228828281919191);
+			  var imageID = "eventProf-"+rand.toString();
+			  const classID1 = imageID+" profile-3939302";
+			  const classID = imageID;
+			  imageIdContainer[i] = imageID;
+			  //var elem = document.createElement("video");
+			  
+			  var columElem = document.createElement("div");
+			  var cardElem = document.createElement("div");
+			  var containerElem = document.createElement("div");
+			  
+			  var elem = document.createElement("img");
+			  
+			  //----------------------------------------
+			  var h2 = document.createElement("h2");
+			  var p1 = document.createElement("p");
+			  var p2 = document.createElement("p");
+			  var p3 = document.createElement("p");
+			  var p4 = document.createElement("p");
+			  var button1 = document.createElement("button");
+			  var readMoreBtn = document.createElement("button");
+			  //----------------------------------------
+
+			  //----------------------------------------
+			  
+			  var actor_groupInfo = {
+				  name : "",
+				  profession : "CEO & Founder",
+				  description : "Some text that describes me lorem ipsum ipsum lorem.",
+				  email : "example@example.",
+				  contact : "Contact",
+				  readMore : "Read More"
+			  };
+			  actor_groupInfo.name = system_dirArr2[i];
+			  //window.console.log(system_dirArr2[i]);
+			  var h2Text = document.createTextNode(actor_groupInfo.name);
+			  var p1Text = document.createTextNode(actor_groupInfo.profession);
+			  var p2Text = document.createTextNode(actor_groupInfo.description);
+			  var p3Text = document.createTextNode(actor_groupInfo.email);
+			  var button1Text = document.createTextNode(actor_groupInfo.contact);
+			  var readMoreBtnText = document.createTextNode(actor_groupInfo.readMore);
+			  //----------------------------------------
+			  
+			  //---------------------------------------
+			   h2.append(h2Text);
+			   p1.append(p1Text);
+			   p2.append(p2Text);
+			   p3.append(p3Text);
+			   button1.append(button1Text);
+			   readMoreBtn.append(readMoreBtnText);
+			  
+			  //---------------------------------------
+			  
+			  //---------------------------------------
+			  h2.setAttribute("class", "name");
+			  h2.setAttribute("id", "name");
+			  h2.setAttribute("style", "color: white");
+
+			  p1.setAttribute("id", "title");
+			  p1.setAttribute("class", "title");
+			  p1.setAttribute("style", "color:white");
+
+			  p2.setAttribute("id", "description");
+			  p2.setAttribute("class", "description");
+			  p2.setAttribute("style", "color:white");
+
+			  p3.setAttribute("id", "email");
+			  p3.setAttribute("class", "email");
+			  p3.setAttribute("style", "color:white");
+
+			  p4.setAttribute("id", "contact");
+			  p4.setAttribute("class", "contact");
+			  p4.setAttribute("style", "color:white");
+
+			  button1.setAttribute("id", "button-1");
+			  button1.setAttribute("class", "button-1");		
+			  
+			  readMoreBtn.setAttribute("class", "button-2");		  
+			  readMoreBtn.setAttribute("id", "button-2");		  
+			  //---------------------------------------
+			  
+			  columElem.setAttribute("class", "column-2");
+			  columElem.setAttribute("id", "column-2");
+			  
+			  cardElem.setAttribute("class", "card");
+			  cardElem.setAttribute("id", "card");			  
+
+			  containerElem.setAttribute("class", "container-1");
+			  containerElem.setAttribute("id", "container-1");				  
+			  
+			  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
+			  elem.setAttribute("src", system_dirArr[i]);
+			  elem.setAttribute("alt", "");
+			  elem.setAttribute("width", "100%");
+			  elem.setAttribute("height", "300px");
+			  elem.setAttribute("class", classID1);
+			  elem.setAttribute("id", classID);
+			  elem.setAttribute("style", "cursor: pointer");
+			  //elem.setAttribute("style", "width:100%");
+			  document.getElementById("adv-files-showcase").append(columElem);
+			  //document.getElementById("adv-files-showcase").style.backgroundColor = "white";
+			  height += 300;
+			  //document.getElementById("column").append(elem);
+			  cardElem.style.backgroundColor = "black";
+			  let column = document.getElementsByClassName("column-2");
+			  let card = document.getElementsByClassName("card");
+			  let container = document.getElementsByClassName("container-1");
+			  
+			  let h2Name = document.getElementsByClassName("name");
+			  //let h2Name2 = document.getElementById("name");
+			  let p1Title = document.getElementsByClassName("title");
+			  let p2Description = document.getElementsByClassName("description");
+			  let p3Email = document.getElementsByClassName("email");
+			  let p4Contact = document.getElementsByClassName("contact");
+			  let button1Contact = document.getElementsByClassName("button-1");
+			  let readMoreBtnData = document.getElementsByClassName("button-2");
+
+			  // Get the modal
+			  var modal = document.getElementById("myModal-1");
+
+			  // Get the image and insert it inside the modal - use its "alt" text as a caption
+			  var img = document.getElementById(classID);
+			  var modalImg = document.getElementById("img01-1");
+			  var captionText = document.getElementById("caption-1");
+			  
+			  
+			  // Get the modal
+			  var modal2 = document.getElementById("myModal-2");
+
+			  // Get the image and insert it inside the modal - use its "alt" text as a caption
+			  var img2 = document.getElementById(classID);
+			  var modalImg2 = document.getElementById("img01-2");
+			  var captionText2 = document.getElementById("caption-2");			  
+
+			  var slideShow = (className) => {
+				 w3.slideshow(className, 3000);
+			  }	
+			  
+			  elem.onclick = function(){
+			     modal.style.display = "block";
+			 
+			     modalImg.src = system_dirArr[i];
+			     captionText.innerHTML = "GaGa Act";
+				 /* magnify2("img01-1", 3); */
+			   }
+			  			  
+			  //var readMoreText = document.getElementById("read-more-text");
+			  
+              //name = getImageName4ReadMore(system_dirArr[i], "", readMoreText, 0, 'n');
+			  //h2.innerHTML = name;
+
+
+				 var contactName = document.createElement("h4");
+				 const contactNameText = document.createTextNode(actor_groupInfo.name);
+				 contactName.append(contactNameText);
+
+				 contactName.setAttribute("class", "contactName");
+				 contactName.setAttribute("id", "contactName");
+				 contactName.setAttribute("style", "color: white");
+			  
+			  readMoreBtn.onclick = function(){
+			     modal2.style.display = "block";
+			 
+			     modalImg2.src = system_dirArr[i];
+				 //modalImg2.style.position = "relative";
+				 //modalImg2.style.width = "100%";
+				 let column5 = document.getElementById("column-5");
+				 var readMoreText = document.getElementById("read-more-text");
+				 //var h2 = document.getElementsByClassName("name")[i];
+				 column5.insertBefore(contactName, readMoreText);
+				 getImageName4ReadMore(system_dirArr[i], contactName, readMoreText, 0, i);				
+				 //readMoreText.style.position = "relative";
+				 //readMoreText.style.width = "100%";
+				 captionText2.innerHTML = "GaGa Act";
+				 //column5.insertBefore(contactName, readMoreText);
+				 column5.setAttribute("style", "background-color: black");
+				 profileNameCreateId = 1;
+			  }
+				 
+
+			  button1.onclick = function(){
+			     modal2.style.display = "block";
+			 
+			     modalImg2.src = system_dirArr[i];
+				 
+				 
+				 let column5 = document.getElementById("column-5");
+				 var readMoreText = document.getElementById("read-more-text");
+				 
+				 getImageName4ReadMore(system_dirArr[i], contactName, readMoreText, 1, i);				 
+				 column5.insertBefore(contactName, readMoreText);
+				 
+			     captionText2.innerHTML = "GaGa Act";
+			   }
+			  
+			  var elems = document.getElementsByClassName(classID1);
+			  for(var columnCount = 0;columnCount < column.length;columnCount++){
+				  column[columnCount].append(cardElem);
+				  card[columnCount].append(elem);
+				  card[columnCount].append(containerElem);
+				  container[columnCount].append(h2);
+				  container[columnCount].append(p1);
+				  container[columnCount].append(p2);
+				  container[columnCount].append(p3);
+				  p3.append(readMoreBtn);
+				  container[columnCount].append(p4);
+				  p4Contact[columnCount].append(button1);
+
+				  elems.onmouseover = function(){
+					  elems.src = "adv.actors.profiles/people3.jpg";
+				  }
+
+				  elems.onmouseout = function(){
+					  elems.src = system_dirArr[columnCount];
+				  }
+			  }
+			  
+			  document.getElementById("uploads").value = "";
+			  storeAllCreatedIds[i] = classID;
+			  modalImg.style.display = "block";
+			  //window.console.log(columElem);
+		    }	
+/* 				  storeAllCreatedIds = [];
+				  convert_to_object = null;
+				  system_dirArr = [];
+				  array_js_init = 0, array_js = [], linkArr = null;	 */
+		   }     
+/* 		        if($footerCheck != 1){
+				 var footer = document.createElement("div");
+				 const footerText = document.createTextNode("No more ads");
+				 footer.setAttribute("class", "footer-x signup-header");
+				 footer.setAttribute("id", "footer-x");
+				 footer.setAttribute("style", "font-size:  30px;text-align: center;color: white;background-color: black;width: 100%;left: 0;right: 0;bottom: 0;position: relative;");
+				 
+				 
+				 
+				 footer.append(footerText);
+				 document.body.append(footer);	
+ 				 device = window.matchMedia('(max-height: 1366px)');
+				 checkDeviceHeight(device, 1366);	
+				 device = window.matchMedia('(max-height: 1076px)');
+				 checkDeviceHeight(device, 1076);
+				 device = window.matchMedia('(max-height: 625px)');
+				 checkDeviceHeight(device, 625);	
+
+                 $footerCheck = 1;
+                 $footerCheck2 = 1;
+               } */				 
+				
+		  }else{
+		      system_dirArr = null;
+		  }
+ };

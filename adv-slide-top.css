@@ -1,0 +1,109 @@
+.overlay, .mediaBigViewContainer, .mini-web-serve, .mini-audio-ads {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(1,0,1, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+.mediaBigViewContainer, .mini-web-serve{z-index: 20;}
+/* .overlay{
+  position: fixed; 
+  z-index: 1;
+   
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 0%;
+  overflow-y: hidden; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9); 
+  transition: 0.5s;
+} */
+
+.overlay-content {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* .overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+} */
+
+.overlay .closebtn, .closeMediaBigViewContainer, .close-mini-web-serve {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+   cursor: pointer;
+} 
+
+.close-notification.closebtn, .close-refund-request.closebtn, 
+.close-s-records.closebtn, .close-payments.closebtn, 
+.close-reach.closebtn, .close-mini-web-serve.closebtn{
+  top: 5px;
+  right: 12px;
+}
+
+/* .close-notification.closebtn:hover, .close-refund-request.closebtn:hover, 
+.close-s-records.closebtn:hover, .close-payments.closebtn:hover, 
+.close-reach.closebtn:hover{
+   color: black;
+}
+
+
+.close-notification.closebtn:focus, .close-refund-request.closebtn:focus, 
+.close-s-records.closebtn:focus, .close-payments.closebtn:focus, 
+.close-reach.closebtn:focus{
+   color: black;
+}
+ */
+.overlay .closebtn, .closeMediaBigViewContainer {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px;}
+  .overlay .closebtn {font-size: 40px;}
+/*   .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  } */
+}
+
+@media screen and (max-width: 340px){
+.close-notification.closebtn, .close-refund-request.closebtn, 
+.close-s-records.closebtn, .close-payments.closebtn, 
+.close-reach.closebtn{
+  top: -15px;
+  right: 0px;
+}
+}

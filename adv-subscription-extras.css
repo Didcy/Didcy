@@ -1,0 +1,55 @@
+.modal-notification, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+  top: 0%;
+  left: 20%;
+  right: 20%;
+  width: 60%;
+  z-index: 19;
+} 
+
+@media screen and (max-width: 1200px) {
+.modal-notification, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+  left: 10%;
+  right: 10%;
+  width: 80%;
+} 
+}
+
+@media screen and (max-width: 1000px) {
+.modal-notification, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+  left: 5%;
+  right: 5%;
+  width: 80%;
+} 
+}
+
+@media screen and (max-width: 975px) {
+.modal-notification, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+  left: 0%;
+  right: 0%;
+  width: 100%;
+} 
+}
+
+@media screen and (max-width: 875px) {
+.modal-notification, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+  left: 0%;
+  right: 0%;
+  width: 100%;
+} 
+}
+
+@media screen and (max-width: 775px) {
+.modal-notification, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+  left: 3%;
+  right: 3%;
+  width: 94%;
+} 
+}
+
+@media screen and (max-width: 700px) {
+.modal-notification, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+  left: 0%;
+  right: 0%;
+  width: 100%;
+} 
+}

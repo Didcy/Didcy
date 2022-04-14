@@ -1,0 +1,210 @@
+.row-6, .modal-6-padding {
+  font-family: Arial;
+  margin: 0 auto;  
+  max-width: 800px; 
+  padding: 15px;
+}
+
+.modal-6 p{color: white;}
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+  color: white;
+}
+
+span.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+  color: white;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  /* text-align: right; */
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* .rater {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 200px;
+  position: relative;
+  
+  box-shadow: 1px 1px 11px 4px rgba(100, 110, 101, 1); 
+  background-color: white;
+  z-index: 15;
+} */
+
+.modal-rater{
+	display: none;
+	z-index: 15;
+}
+
+.rater{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%; /*60%*/
+  height: 400px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;  
+  /* box-shadow: 1px 1px 11px 4px rgba(100, 110, 101, 1);  */
+  background-color: black;	
+}
+
+.rater h5{
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: sans-serif, arial, verdana;
+  text-align: center;
+  padding-top: 10px;
+  color: white;
+}
+
+.rater h1, h3.didcy-rate-n-a{
+  font-size: 40px;
+  color: white;
+  font-weight: bolder;
+  font-family: sans-serif, arial, verdana;
+  text-align: center;
+}
+
+h3.didcy-rate-n-a{
+	text-align: center;
+}
+
+.emoji {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+ /*  border-radius: 30%; */
+ cursor: pointer;
+}
+
+/* .fix{border-radius: 70%;} */
+
+
+
+.emoji-1{
+	margin-left: 10%;
+}
+
+.radio{
+   position: absolute;
+   top: 60px;
+   float: left;
+   left: 17px;
+}
+
+.emo-img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+@media (max-width: 914px) {
+.row-6, .modal-6-padding {
+  width: 100%;  
+  padding: 0px;
+}
+}
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 1200px) {
+  .side, .middle {
+    width: 70%;
+  }
+.side {
+  width: 15%;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+/*   .right {
+    display: none;
+  } */
+.row-6{padding: 0;}
+
+.rater h5{
+  font-size: 20px;
+}
+.rater h1{
+  font-size: 25px;
+}
+h3.didcy-rate-n-a{
+	font-size: 20px;
+}
+.rater{
+  width: 100%;
+  height: 400px;
+}
+
+.rad-1{top: 20px;}
+.rad-2{top: 20px;}
+.rad-3{top: 110px;margin-left: -10px;display: inline-block;}
+.rad-4{top: 110px;margin-left: 60px;display: inline-block;}
+.rad-5{top: 150px;margin-left: 100px;display: inline-block;}
+.emo-img{
+  width: 80px;
+  height: 80px;
+}
+}
+
+@media (max-width: 279px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+  .row-6{padding: 15px;}
+}
+
+
+@media screen and (min-height: 1366px){
+	.heading{font-size: 30px;}
+	.average-reviews{font-size: 25px;}
+	.side div, .middle div{font-size: 25px;}
+	.emo-img{
+	  width: 130px;
+	  height: 130px;
+	}
+}

@@ -1,0 +1,11 @@
+.gaga-text-tutorials-2{
+	font-size: 20px;
+}
+
+@media screen and (min-height: 1366px){
+	.gaga-text-tutorials-2{
+		font-size: 50px;
+	}
+    #text-tutorial{width: 90%;max-width: 900px;}	
+    #gaga-text-header-2 {font-size: 50px;}	
+}

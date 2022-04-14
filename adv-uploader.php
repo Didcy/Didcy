@@ -2,7 +2,7 @@
  
  declare(strict_types=1);
  
- include_once(" 
+ include_once("connect_server.php"); 
 
  function GetAdvFile4Uploader($server_proto = array("GET", "POST", "PUT", "HEAD", "TARGET", "OPTION", "DELETE", "ENV", "FILES")) : void{
 	switch($_POST["fetch"]){
