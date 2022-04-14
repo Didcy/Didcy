@@ -1,0 +1,869 @@
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal, .modal-1, .modal-2, .modal-howToGaGa, .modal-7, .modal-10, 
+.modal-stand, .modal-11, .modal-12, .modal-13, .modal-special, 
+.modal-relief,
+.select-display-type-modal, .site-content, .modal-15, .modal-16, 
+.history-container, .modal-rater, .modal-animated-image,
+.modal-upcoming-updates, .modal-subscribe, 
+.modal-subscribe-2, .modal-profile-insight, .modal-notificator-link, .modal-chat, .modal-chat-board, 
+.modal-add-members, .industrial-ad-area, .modal-ad-tasks, .didcy-mini-contacts, 
+.didcy-mini-big-logo, .mini-web-buy-app, .mini-text-tutorials, .modal-payment-providers, 
+.modal-caller, .modal-work-applicant-camera-board {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);  /* Black w/ opacity rgba(0,0,0,0.9);*/
+}
+
+.didcy-mini-big-logo{
+  padding-top: 10px;
+}
+
+/* .modal-show{
+  height: 0%;
+}
+ */
+.button-pricing{
+   cursor: pointer;
+}
+
+.didcy-mini-big-logo{
+   z-index: 13;
+}
+
+.modal-animated-image, .modal-notificator-link{
+	z-index: 18;
+	height: 0%;
+	width: 100%;
+}
+
+.modal-notificator-link{height: 100%;}
+
+.modal-payment-services{
+	z-index: 15;	
+}
+
+.modal-subscribe, .modal-notificator-link{
+	z-index: 19;
+}
+
+.modal-ad-tasks{
+   z-index: 9;
+   width: 80%;
+   left: 10%;
+   right: 10%;
+   height: 30%;
+   top: 30%;
+   padding: 0;
+   padding: 4px;
+   padding-top: 35px;
+   box-shadow: 1px 1px 11px 4px rgba(100, 110, 101, 1); /*125, 120, 130*/
+}
+
+.modal-chat{
+    z-index: 15;
+}
+
+.modal-chat-board{
+   z-index: 16;
+}
+
+.modal-add-members{
+   z-index: 18;
+}
+
+.modal-notificator-link{z-index: 30;}
+.mini-web-buy-app, .modal-work-applicant-camera-board{z-index: 25;}
+.modal-payment-providers, .modal-caller{z-index: 26;}
+
+.modal-upcoming-updates{
+	z-index: 17;
+}
+
+.industrial-ad-area{
+    z-index: 12;
+}
+
+.modal-2{z-index: 17;}
+.modal-13{z-index: 17;}
+
+.modal-15, .modal-16, .history-container {right: 0%;}
+.history-container{z-index: 7;width: 0%;right: 2%;}
+
+.history-container-action{width: 70%;z-index: 9;}
+
+.modal-backg{
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */	
+}
+
+.select-display-type-modal{display: block;z-index: 12;}
+
+/* Modal Content (image) */
+.modal-content, .modal-content-1, .modal-content-subscribe, .modal-plugins-board,
+.modal-content-2, .modal-content-howToGaGa, .modal-content-7, .modal-didcy-fixes,
+.modal-content-12, .modal-content-animated-image, 
+.modal-content-dispute-policy,
+.modal-content-select-display-type-modal, .modal-content-industrial-ad-area,
+.modal-content-adv-exhibition-platform-table, .modal-content-15, 
+.modal-content-20, .modal-content-pricing-table, .modal-content-Terms, 
+.modal-content-cookie, .modal-content-security, .modal-content-ceo, 
+.modal-content-limit-policy, 
+.modal-content-authors, .modal-content-mentors, .modal-content-cookie-full-mode, 
+.modal-content-upcoming-updates, .modal-content-subscribe-2, 
+.modal-content-payment-services, .modal-content-subscribe-web-policy,
+.modal-content-subscribe-stand-policy, .modal-content-investors, 
+.modal-content-team, .modal-content-know-team, 
+.modal-content-know-developers, .modal-content-host-policy, 
+.modal-content-sitemap, .modal-content-advertisement-channels, 
+.modal-content-seo-advertisement, .modal-content-content-integration, .modal-content-profile-insight,
+.modal-content-companies-only, .modal-content-actors-groups-only, .modal-content-work
+, .modal-content-notificator-link, .modal-content-didcy-mini-contacts, .modal-content-didcy-mini-big-logo, 
+.modal-content-mini-web-buy-app, .modal-content-mini-text-tutorials, .modal-content-payment-providers, 
+.modal-content-caller, .modal-content-work-applicant-camera-board, 
+.modal-content-connections, .modal-content-didcy-fixes{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  color: white;
+}
+
+.modal-ad-tasks{
+  
+}
+.modal-content-ad-tasks, .modal-content-didcy-mini-big-logo, .modal-content-mini-web-buy-app, 
+.modal-content-mini-text-tutorials, .modal-content-payment-providers, .modal-content-caller,
+.modal-content-work-applicant-camera-board, .modal-content-connections, .modal-plugins-board, .modal-content-didcy-fixes{
+  position: relative;
+  top: 15%;
+  text-align: center;
+   color: white;
+   font-size: 20px;
+}
+
+.modal-content-20-audio, .modal-content-ad-tasks, .modal-content-work-applicant-camera-board{
+  width: 100%;
+}
+
+.modal-content-know-developers, .modal-content-know-team, 
+.modal-content-sitemap, .modal-content-advertisement-channels,
+.modal-content-seo-advertisement, .modal-content-content-integration, 
+.modal-content-companies-only, .modal-content-ad-tasks, .modal-content-work-applicant-camera-board{
+  width: 100%;
+  max-width: 100%;
+}
+
+.modal-content-notification, .modal-content-s-records, .modal-content-payments, 
+.modal-content-subscribe-2, .modal-content-refund-request, 
+.modal-content-payment-services, .modal-content-subscribe-web-policy, 
+.modal-content-team, .modal-content-know-team, .modal-content-sitemap
+, .modal-content-reach, .modal-content-notificator {
+  z-index: 22;
+}
+
+.modal-profile-insight, .mini-text-tutorials, .modal-content-connections, 
+.modal-content-didcy-fixes{z-index: 30;}
+
+.modal-content-20{height: 100%;}
+
+.modal-content-20-audio{height: 50%;}
+
+
+.modal-content-adv-exhibition-platform-table, .modal-content-pricing-table, 
+.modal-content-advertisement-channels, .modal-content-didcy-mini-contacts
+, .modal-content-connections{
+	position: relative;
+	top: 10%;	
+}
+
+
+.modal-content-Terms, .modal-content-cookie, .modal-content-security, 
+.modal-content-companies-only, 
+.modal-content-profiles, .modal-content-ceo, .modal-content-limit-policy, 
+.modal-content-animated-image,
+.modal-content-authors, .modal-content-mentors, .modal-content-cookie-full-mode, 
+.modal-content-upcoming-updates, .modal-content-subscribe-policy,
+.modal-content-subscribe-web-policy, .modal-content-Terms,
+.modal-content-subscribe-stand-policy, .modal-content-investors, .modal-content-team, 
+.modal-content-know-team, .modal-content-know-developers, .modal-content-host-policy, 
+.modal-content-advertisement-channels, .modal-content-seo-advertisement, 
+.modal-content-content-integration, .modal-content-actors-groups-only, 
+.modal-content-notificator-link{
+	position: relative;
+	top: 20%;
+}
+
+.modal-content-notificator-link{top: 5%;}
+
+.modal-content-subscribe-web-policy, 
+.modal-content-dispute-policy, .modal-content-host-policy, 
+.modal-content-sitemap{
+	top: 8%;
+}
+.modal-content-work, .modal-content-upcoming-updates, .modal-plugins-board, .modal-didcy-fixes{
+   top: 10%;	
+}
+
+.modal-content-subscribe-policy, .modal-content-connections{
+	top: 30%;
+}
+
+.modal-content-ceo, .modal-content-limit-policy,
+.modal-content-subscribe-stand-policy, .modal-content-know-developers, .modal-content-security {
+	top: 10%;
+}
+
+.modal-content-know-developers, .modal-content-know-team, 
+.modal-content-seo-advertisement, .modal-content-content-integration, 
+.modal-content-companies-only, .modal-content-actors-groups-only, .modal-content-mini-text-tutorials{
+	top: 8%;
+}
+
+.modal-content-didcy-mini-contacts, .modal-content-didcy-mini-big-logo, .modal-content-mini-web-buy-app, 
+.modal-content-payment-providers, .modal-content-caller, .modal-content-work-applicant-camera-board{
+   top: 0%;
+}
+
+.modal-content-connections, .modal-content-didcy-fixes{top: 1.5%;}
+
+/* .modal-content-know-team{top: 10%;} */
+
+.modal-content-animated-image{
+	
+}
+
+.modal-content-upcoming-updates, .modal-content-notification, 
+.modal-content-s-records, .modal-content-notificator,
+.modal-content-reach, .modal-content-payments, .modal-content-refund-request,
+.modal-content-notificator-link, .modal-content-ad-tasks {
+	top: 0%;
+}
+
+#gaga-subscription-container{background-color: #000;}
+/* Caption of Modal Image */
+#caption, #caption-1, #caption-2, #caption-howToGaGa, #caption-7a, #caption-10, #caption-12,  #caption-subscribe-2,
+#caption-select-display-type-modal, #caption-12, #caption-adv-exhibition-platform,
+.caption-adv-exhibition-platform-offer, .caption-pricing-table, 
+.caption-stand, .caption-13, .caption-modal-ads-books, .caption-rate
+.cation-payment-services, .caption-special, .caption-relief, .caption-notificator-link {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+/* .modal-content{margin-top: -7%;} */
+.modal-content, #caption, .modal-content-1, .modal-content-subscribe-2, #caption-1, .modal-content-2, #caption-2, .modal-content-howToGaGa,  #caption-subscribe-2, .caption-special,
+.modal-content-subscribe, #caption-howToGaGa,
+.modal-content-7, #caption-7, #caption-10, .modal-content-12, #caption-12, 
+.modal-content-select-display-type-modal, #caption-select-display-type-modal
+, .modal-content-industrial-ad-area, #caption-industrial-ad-area,
+.modal-content-15 #caption-12, #caption-adv-exhibition-platform, 
+.caption-adv-exhibition-platform-offer, .modal-content-20, 
+.caption-pricing-table, .caption-stand, .caption-13, .caption-modal-ads-books,
+.caption-rater, .caption-relief, 
+.caption-payment-services, .caption-notificator-link {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.7s;
+  animation-name: zoom;
+  animation-duration: 0.7s;
+}
+#tv-list-container{width: 50%;}
+/* .tv-list-a{
+	display: block;
+	width: 100%;
+	background-color: black;
+	color:white;
+	text-align: center;
+}
+.tv-list-a:hover:not(.active){
+    background: gray;
+} */
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close, .close-didcy-fixes, .close-caller, .close-plugins-board, .close-companies-only, .close-actors-groups-only, .close-1, .close-subscribe, .close-2, .close-howToGaGa, .close-7, .close-10, .close-11, .close-12, .close-investors, 
+.close-select-display-type-modal, .close-15, .close-history-container,
+.close-adv-exhibition-platform-table, .close-adv-exhibition-platform-offer, 
+.close-links-container, .close-ad-policy-add-of-offerer-container,
+.close-alert-box, .close-business-tel-of-offerer-container, .close-security,
+.close-business-whatsapp-tel-of-offerer-container, .close-stand,
+.close-pricing-table, .close-curtain, .close-13, .close-curtain-animate,
+.close-modal-ads-books, .close-rater, .close-ads-books-countdown, 
+.close-profiles, .close-ceo, .close-authors, .close-mentors, 
+.close-cookie-full-mode, .close-animated-image, .close-profile-insight,
+.close-upcoming-updates, .close-subscribe-2, .close-special, .close-relief,
+.close-payment-services, .close-subscribe-3, .close-subscribe-policy,
+.close-subscribe-web-policy, .close-subscribe-stand-policy, .close-team,
+.close-know-team, .close-know-developers, .close-dispute-policy, 
+.close-limit-policy, .close-host-policy, .close-sitemap, 
+.close-advertisement-channels, .close-seo-advertisement, 
+.close-content-integration, .close-notification, .close-refund-request
+, .close-s-records, .close-work, .close-work-apply, 
+.close-work-applicant-camera-board, .close-notificator, .close-notificator-link, 
+.close-chat, .close-chat-board, .close-add-members, .close-industrial-ad-area
+, .close-ad-tasks, .close-mini-web-serve, .close-mini-audio-ads, .close-didcy-mini-contacts, 
+.close-didcy-mini-big-logo, .close-mini-web-buy-app, .close-mini-text-tutorials, 
+.close-modal-payment-providers, .close-connections
+ {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+   cursor: pointer;
+}
+
+ .close-ad-tasks{
+  top: -10px;
+  right: 5px;
+ }
+
+.close-notification a, .close-refund-request a, .close-sitemap a, 
+.close-advertisement-channels a, 
+.close-seo-advertisement a, .close-content-integration a, .close-work a
+, .close-notificator-link a, .close-mini-web-serve a, .close-mini-audio-ads a
+, .close-connections a, .close-plugins-board a , .close-didcy-fixesa{
+   text-decoration: none;
+}
+
+.close:hover, .close-didcy-fixes:hover, .close-plugins-board:hover, .close-connections:hover, .close-work-applicant-camera-board:hover, .close-caller:hover, .close-modal-payment-providers:hover, .close-1:hover, .close-mini-text-tutorials:hover, .close-didcy-min-contacts:hover, .close-s-records:hover, .close-mini-audio-ads:hover, .close-notificator:hover, .close-profile-insight:hover, .close-refund-request:hover, .close-notification:hover, .close-companies-only:hover, .close-actors-groups-only:hover, .close-sitemap:hover,
+ .close-host-policy:hover, .close-limit-policy:hover, .close-subscribe:hover, .close-2:hover, .close-howToGaGa:hover, .close-7:hover, .close-10:hover, .close-11:hover, .close-12:hover, .close-subscribe-3:hover, .close-subscribe-policy:hover,
+.close-upcoming-updates:hover, .close-subscribe-2:hover, .close-investors:hover, .close-know-team:hover, .close-know-developers:hover, .close-advertisement-channels:hover, .close-seo-advertisement:hover, .close-content-integration:hover,
+ .close-subscribe-stand-policy:hover, .close-special:hover, .close-work:hover, .close-notificator-link:hover,
+.close-select-display-type-modal:hover, .close-15:hover, .close-alert-box:hover,
+.close-subscribe-web-policy:hover, .close-payment-services:hover, .close-didcy-mini-big-logo:hover, .close-work-apply:hover, .close-chat:hover
+, .close-ad-policy-add-of-offerer-container:hover, .close-stand:hover,
+, .close-business-whatsapp-tel-of-offerer-container:hover, .close-mini-web-serve:hover, .close-dispute-policy:hover, .close-rater:hover, 
+.close-modal-ads-books:hover, .close-ads-books-countdown:hover, .close-chat-board:hover, 
+.close-adv-exhibition-platform-offer:hover, .close-links-container:hover, .close-add-members:hover,
+.close-business-tel-of-offerer-container:hover, .close-pricing-table:hover, .close-industrial-ad-area:hover,
+.close-curtain:hover, .close-curtain-animate:hover, .close-13:hover,
+.close-history-container:hover, .close-adv-exhibition-platform-table:hover, .close-mini-web-buy-app:hover,
+.close-Terms:hover, .close-security:hover, .close-profiles:hover, 
+.close-cookie-full-mode:hover, .close-animated-image:hover, .close-relief:hover
+, .close-ceo:hover, .close-authors:hover, .close-ad-tasks:hover, .close-mentors:hover, .close-team:hover, .close-know-team:focus, .close-know-developers:focus, .close-advertisement-channels:hover, .close-seo-advertisement:hover, .close-content-integration:hover,
+.close:focus, .close-plugins-board:focus, .close-connections:focus, .close-work-applicant-camera-board:focus, .close-caller:focus, .close-modal-payment-providers:focus, .close-1:focus, .close-s-records:focus, .close-sitemap:focus, .close-mini-web-serve:focus, .close-refund-request:focus, .close-authors:focus, .close-2:focus, .close-howToGaGa:focus, .close-7:focus, .close-10:focus, .close-11:focus, .close-12:focus, .close-upcoming-updates:focus, .close-limit-policy:focus, .close-subscribe:focus , .close-host-policy:focus,
+.close-select-display-type-modal:focus, .close-didcy-mini-contacts:focus, .close-profile-insight:focus, .close-mini-audio-ads:focus, .close-15:focus, .close-chat:focus, .close-profiles:focus,
+.close-ads-books-countdown:focus, .close-Terms:focus, .close-didcy-mini-big-logo:focus, .close-notificator:focus, .close-security:focus, .close-payment-services:focus, .close-subscribe-3:focus, .close-companies-only:focus, .close-actors-groups-only:focus,
+.close-pricing-table:focus, .close-stand:focus, .close-13:focus, .close-mini-text-tutorials:focus, .close-special:focus, .close-investors:focus, .close-dispute-policy:focus, .close-team:focus
+, .close-mentors:focus, .close-notification:focus, .close-cookie-full-mode:focus, .close-mini-web-buy-app:focus, .close-subscribe-2:focus
+, .close-ad-policy-add-of-offerer-container:focus, .close-alert-box:focus, .close-work:focus, .close-add-members:focus
+.close-history-container:focus, .close-adv-exhibition-platform-table:focus, .close-work-apply:focus,
+.close-business-tel-of-offerer-container:focus, .close-curtain:focus, .close-notificator-link:focus,
+.close-business-whatsapp-tel-of-offerer-container:focus, .close-ceo:focus, 
+.close-industrial-ad-area:focus, .close-ad-tasks:focus,
+.close-curtain-animate:focus, .close-modal-ads-books:focus, .close-relief:focus, .close-chat-board:focus,
+.close-adv-exhibition-platform-offer:focus, .close-links-container:focus
+, .close-rater:focus, .close-didcy-fixes:focus, .close-animated-image:focus, .close-subscribe-policy:focus, .close-subscribe-web-policy:focus, .close-subscribe-stand-policy:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-curtain-animate:hover{
+	opacity: 0.1;
+}
+
+
+/* Create two equal columns that floats next to each other */
+.column-3, .column-4, .column-5, .img01-2, .column-31, .column-sitemap{
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+  
+}
+.column-sitemap{height: 500px;}
+.column-3{height: 250px;} /*200/300px*/
+.column-31{
+   width: 33.33%;
+   overflow-y: auto;
+   
+}
+.column-31 p, .column-31 h3{
+	color: white;
+}
+.img01-2 {
+  width: 100%;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+.column-5, .tv-list-container{
+  height: 500px; /* Should be removed. Only for demonstration */
+  overflow-y: auto;
+}
+.contactName{color: white;}
+p.gaga-text-tutorials, p.didcy-how-to-subscribe-text-tutorials,
+p.gaga-text-tutorials-21{font-family: sans-serif, arial, Helvetica, verdana;font-size: 20px;}
+/* 100% Image Width on Smaller Screens */
+button#button-1, button#button1{
+	padding: 5px;
+	font-size: 17px;
+	color: white;
+	cursor: pointer;
+	display:  block;
+	margin-bottom: 2%;
+	width: 100%;
+	position: relative;
+	left: 25%;
+}
+button.button-1, button#button-1{width: 100%;left: 0;}
+	button#button1{
+ 		padding: 5px;
+	    font-size: 17px;
+		margin-bottom: 5%;
+		width: 100%;
+		position: relative;
+		left: 0%;	
+		height: 40px;
+    }
+	.column-5{background-color: black;}
+h3.how-to-didcy-2{font-size: 20px;text-decoration: underline;}
+.contact-media p{font-size: 25px;}
+
+.initiator{
+	color: white;
+	background: dodgerblue;
+	width: 32.6%;
+	margin-top: 25px;
+	margin-left: 2px;
+}
+
+@media screen and (max-width:1124px){
+ .column-sitemap{width: 100%;}
+}
+@media screen and (max-width:1024px){
+	.id012-ft p{font-size: 25px;}
+	.contact-media p{font-size: 25px;}
+	.contact-media h2{font-size: 35px;}
+}
+
+@media only screen and (max-width: 1090px){
+	.history-container-action{width: 100%;left: 0;right: 0;margin: 0;}
+}
+@media only screen and (max-width: 995px){
+	.id012-inner-box{
+		width: 90%;
+	}	
+}
+@media only screen and (max-width: 800px){
+	.id012-ft p{font-size: 15px;}
+	.contact-media p{font-size: 25px;}
+	.contact-media h2{font-size: 30px;}	
+}
+@media only screen and (max-width: 768px){
+	.id012-inner-box{
+		
+	}
+	.id012-ft p{font-size: 15px;}
+	.contact-media p{font-size: 25px;}
+	.contact-media h2{font-size: 30px;}
+}
+@media only screen and (max-width: 700px){
+  .modal-content, .modal-content-1, .modal-content-2, .modal-content-howToGaGa,
+  .modal-content-subscribe,  .modal-content-7, .modal-content-12, 
+.modal-content-select-display-type-modal, .modal-content-profile-insight
+, .modal-content-industrial-ad-area {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px){
+  .modal-content, .modal-content-1, .modal-content-2, .modal-content-howToGaGa, .modal-content-7, .modal-content-12, 
+.modal-content-select-display-type-modal, .modal-content-industrial-ad-area, 
+.modal-content-subscribe, .modal-content-profile-insight {
+    width: 100%;
+  }
+  .column-3, .column-31, .column-seitmap{width: 100%;display: block;}
+  .column-3{width: 50%;left: 25%;right: 25%;}
+  .modal-content{
+	  position: relative;
+	  top: -2%;
+  }
+  .column-3{
+	  height: 240px; /*for pending services*/
+  }
+    .column-3{
+	  height: 160px;
+  }
+  .button{padding: 9px;font-size: 15px;}
+  .caption-1, .caption-howToGaGa, .caption-7, #caption-10 {
+	  
+  }
+  #img01-1{
+	  width: 100%;
+	  max-width: 100%;
+  }
+  #video-tutorial{
+	  width: 100%;
+	  max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 460px){
+	.contact-media p{font-size: 25px;}
+	.contact-media h2{font-size: 25px;}
+}
+
+@media screen and (max-width: 450px){
+  .column-4{
+	  width: 100%;
+	  margin: 0;
+	  padding: 0;
+	  height: 230px;
+  }
+  .img01-2{
+	  width: 100%;
+	  padding: 0;
+	  margin: 0;
+	  height: 230px;
+  }
+  .column-5{
+	  position: relative;
+	  width: 100%;
+	  margin-top: 15px;
+	  height: 230px;
+	  
+  }
+	.contact-media p{font-size: 20px;}
+	.contact-media h2{font-size: 25px;}	
+	.id012-ft p{font-size: 15px;}
+}
+
+@media screen and (max-width: 375px){
+	.contact-media p{font-size: 20px;}
+	.contact-media h2{font-size: 23px;}		
+}
+
+@media screen and (max-width: 360px){
+	.initiator{width: 100%;}
+}
+@media screen and (max-width: 350px){
+	.contact-media p{font-size: 17px;}
+	.contact-media h2{font-size: 20px;}	
+}
+@media screen and (max-width: 320px){
+  .column-3{width: 100%;left: 0%;right: 0%;}
+}
+
+@media screen and (max-width: 320px){
+	.contact-media p{font-size: 15px;}
+	.contact-media h2{font-size: 18px;}		
+}
+@media screen and (max-width: 215px){
+  .modal-content, .modal-content-1, .modal-content-2, .modal-content-howToGaGa, .modal-content-12, 
+.modal-content-select-display-type-modal, .modal-content-industrial-ad-area, .modal-content-subscribe, .modal-content-profile-insight {
+    width: 100%;
+  }
+  .column-3, .column-31{width: 100%;display: block;}
+  .button{padding: 10px;font-size: 13px;}
+ 
+}
+@media screen and (max-width: 210px){
+  .modal-content, .modal-content-1, .modal-content-2, .modal-content-howToGaGa, .modal-content-12, 
+.modal-content-select-display-type-modal, .modal-content-industrial-ad-area, .modal-content-subscribe, .modal-content-profile-insight {
+    width: 100%;
+  }
+  .column-3, .column-31{width: 100%;display: block;}
+  .button{padding: 10px;font-size: 12.5px;}
+ 
+}
+@media screen and (max-width: 195px){
+  .modal-content, .modal-content-1, .modal-content-2, .modal-content-howToGaGa, .modal-content-12, 
+.modal-content-select-display-type-modal, .modal-content-industrial-ad-area, .modal-content-subscribe, .modal-content-profile-insight {
+    width: 100%;
+  }
+  .column-3, .column-31{width: 100%;display: block;}
+  .button{padding: 9px;font-size: 11px;}
+ 
+}
+
+@media screen and (min-width: 1280px){
+  #img01-1{
+	  width: 80%;
+	  max-width: 80%;
+  }
+  #video-tutorial{
+	  width: 100%;
+	  max-width: 100%;
+  }
+}
+@media screen and (min-height: 640px){
+/*   #img01-1{
+    height: 300px;
+  }
+  #video-tutorial{
+	height: 300px;
+  } */
+}
+@media screen and (min-height: 1366px){
+	.modal-content, .modal-content-profile-insight{
+		max-width: 1000px;
+		width: 100%;
+	}
+	.modal-content-1{
+		max-width: 1000px;
+		width: 100%;
+		height: 900px;
+	}	
+	#caption-1{
+	    position: relative;
+	}	
+	#tv-list-container{height: 600px;}
+	#gaga-subscription-container{height: 600px;}
+	#gaga-extras-container{height: 0px;}
+	#gaga-rate-container{height: 0px;}
+	.modal-content-select-display-type-modal, .modal-content-industrial-ad-area{
+		width: 90%;
+		max-width: 1400px;
+	}
+	/* #gaga-subscription-container{background-color: black;} */
+	.column, .column-3, .column-4, .column-5, .img01-2, .column-3, .column-31{height: 900px;}
+	.column-31{height: 1000px;}
+	
+	h3.gaga-text-header, h3.how-to-didcy, h3.image-tutorial-header,
+	h3.video-tutorial-header, h3.how-to-didcy-2, .insiders{font-size: 50px;}
+	
+	h3.how-to-didcy-2{text-decoration: underline;}
+	
+    p.gaga-text-tutorials, p.didcy-how-to-subscribe-text-tutorials, p.gaga-text-tutorials-21{font-size: 35px;}
+	
+	.column-3 button, .column- button{font-size: 30px;}
+	
+	.select-display-type-modal h2{font-size: 50px;}
+	
+	#gaga-react-container{height: 620px;}
+	#gaga-react-container .button, #tv-list-container .button, 
+	#tv-list-container-12 .button, 
+	#gaga-subscription-container .button{font-size: 30px;}
+	
+	#caption, #caption-1, #caption-2, #caption-howToGaGa, #caption-7a, #caption-10, #caption-12, 
+	#caption-select-display-type-modal, #caption-12, #caption-adv-exhibition-platform,
+	.caption-adv-exhibition-platform-offer  {
+       font-size: 30px;
+	}
+	button#button-1{
+		font-size: 40px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		margin-bottom: 5%;
+		width: 90%;
+		position: relative;
+		left: 5%;		
+		height: 13%;
+    }
+	button#button1{
+		font-size: 30px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		margin-bottom: 5%;
+		width: 100%;
+		position: relative;
+		left: 0%;	
+		height: 13%;
+    }
+	#gaga-extras-container a.button, 
+	#gaga-rate-container a.button{font-size: 30px;}
+	.contactName{font-size: 35px;}
+}
+
+@media screen and (min-height: 1366px){
+  .modal-content, .modal-content-profile-insight{margin-top: 10%;} /**/
+  .column-3{height: 400px;} /**/
+}
+
+ button#button-12{
+    width: 80%;
+	padding: 5px;
+	font-size: 17px;
+	color: white;
+	cursor: pointer;
+	display:  block;
+	margin-bottom: 2%;
+	position: relative;
+	left: 10%;	
+	right: 10%;	
+ }
+ 
+ @media screen and (max-width: 600px){
+	 button#button-12{
+		width: 90%;
+		left: 5%;	
+		right: 5%;	
+	 } 
+ }
+ 
+ @media screen and (max-width: 400px){
+	 button#button-12{
+		width: 100%;
+		left: 0%;	
+		right: 0%;		
+	 } 
+ } 
+ 
+  @media screen and (max-width: 1000px){
+.modal-ad-tasks{
+   z-index: 9;
+   width: 96%;
+   left: 2%;
+   right: 2%;
+   height: 35%;
+   top: 30%;
+   
+}
+.modal-content-ad-tasks{
+  font-size: 20px;
+}
+ }
+ 
+ @media screen and (max-width: 770px){
+.modal-ad-tasks{
+   z-index: 9;
+   width: 96%;
+   left: 2%;
+   right: 2%;
+   height: 35%;
+   top: 30%;
+   
+}
+.modal-content-ad-tasks{
+  font-size: 20px;
+}
+ }
+
+ @media screen and (max-width: 650px){
+.modal-ad-tasks{
+   z-index: 9;
+   width: 96%;
+   left: 2%;
+   right: 2%;
+   height: 42%;
+   top: 30%;
+   
+}
+.modal-content-ad-tasks{
+  font-size: 20px;
+}
+ }
+ 
+
+ @media screen and (max-width: 500px){
+.modal-ad-tasks{
+   z-index: 9;
+   width: 96%;
+   left: 2%;
+   right: 2%;
+   height: 40%;
+   top: 30%;
+}
+.modal-content-ad-tasks{
+   font-size: 17px;
+}
+ }
+ @media screen and (max-width: 367px){
+.modal-ad-tasks{
+   z-index: 9;
+   width: 96%;
+   left: 2%;
+   right: 2%;
+   height: 45%;
+   top: 30%;
+}
+.modal-content-ad-tasks{
+   font-size: 17px;
+}
+ }
+  @media screen and (max-width: 300px){
+.modal-ad-tasks{
+   z-index: 9;
+   width: 96%;
+   left: 2%;
+   right: 2%;
+   height: 40%;
+   top: 30%;
+}
+.modal-content-ad-tasks{
+   font-size: 15px;
+}
+ }
+ @media screen and (max-width: 280px){
+.modal-ad-tasks{
+   z-index: 9;
+   width: 96%;
+   left: 2%;
+   right: 2%;
+   height: 40%;
+   top: 30%;
+}
+.modal-content-ad-tasks{
+   font-size: 13px;
+}
+ }
+ @media screen and (max-width: 874px){
+	.notification .badge {
+	  top: 62%;
+	}    
+ }
+ @media screen and (min-height: 720px){
+	 button.gaga-share-meta-facebook{
+        margin-top: 15%;
+	 }  
+	 button#button-12{
+        margin-bottom: 3%;
+	 }  
+ }
+ @media screen and (min-height: 730px){
+	 button.gaga-share-meta-facebook{
+        margin-top: 20%;
+	 }  
+	 button#button-12{
+        margin-bottom: 5%;
+	 }  
+ }
+ @media screen and (min-height: 800px){
+	 button.gaga-share-meta-facebook{
+        margin-top: 5%;
+	 }  
+	 button#button-12{
+        margin-bottom: 2%;
+	 }  
+ }
+ @media screen and (min-height: 810px){
+	 button.gaga-share-meta-facebook{
+        margin-top: 20%;
+	 }  
+	 button#button-12{
+        margin-bottom: 5%;
+	 }  
+ }

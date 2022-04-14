@@ -1,0 +1,136 @@
+<?php
+ 
+ declare(strict_types=1);
+ 
+ function SignUpMediaAccounts4Share() : void{
+		  $connect = ConnectServer(0);
+
+			 if($connect["state"] != 500006){
+				echo json_encode($connect);
+				return;
+			 }
+			 
+			 $connect = $connect["connect"];
+
+	 
+	 $server_target_db = "create table if not exists mediaAccount(
+	                 id bigint(50) primary key,
+					 avfemail varchar(30) null unique,
+					 avfpassword varchar(30) null,
+				     svfemail varchar(30) null unique,
+					 svfpassword varchar(30) null,
+					 avtwemail varchar(30) null unique,
+					 avtwpassword varchar(30) null,
+				     svtwemail varchar(30) null unique,
+					 svtwpassword varchar(30) null,
+					 avinemail varchar(30) null unique,
+					 avinpassword varchar(30) null,
+				     svinemail varchar(30) null unique,
+					 svinpassword varchar(30) null,
+					 avyuemail varchar(30) null unique,
+					 avyupassword varchar(30) null,
+				     svyuemail varchar(30) null unique,
+					 svyupassword varchar(30) null,
+					 avgaemail varchar(30) null unique,
+					 avgapassword varchar(30) null,
+				     svgaemail varchar(30) null unique,
+					 svgapassword varchar(30) null,
+					 avpiemail varchar(30) null unique,
+					 avpipassword varchar(30) null,
+				     svpiemail varchar(30) null unique,
+					 svpipassword varchar(30) null
+	 );";
+	 $connect_result = $connect->query($server_target_db);
+	 if($connect_result === False){
+		 echo json_encode(array("state"=>2));
+		 return;
+	 }	 
+	 
+	 switch($_SERVER["REQUEST_METHOD"]){
+	   case "POST":
+	   case "Post":
+	   case "post":
+	   {
+		   switch($_POST["GREED"]){
+			   case "A-V-FB":
+			   {
+				   if($_POST["email"] != ""){
+					 if($_POST["password"] != ""){
+						 $email = $_POST["email"];
+						 $password = $_POST["password"];
+						 $id = $_POST["drim"];
+						 $filename = "http://www.localhost/advert.llc/".$_POST["mediaTransport"];
+						 
+						 $server_target_db = "select id, avfemail, avfpassword from mediaAccount where 
+						 avfemail='".$email."' and password'".md5(trim($password)).
+						 "' and id='".$id."';";
+						 $connect_result = $connect->query($server_target_db);
+						 if($connect_result === True){
+							 echo json_encode(array("state"=>3));
+							 return;
+						 }			
+
+						 $server_target_db = "select * from gaga where id='".$id."';";
+						 $connect_result = $connect->query($server_target_db);
+						 if($connect_result === False){
+							 echo json_encode(array("state"=>4));
+							 return;
+						 }	
+
+						 $server_target_db = "insert into mediaAccount(id, avfemail, avfpassword)
+						 values('".$id."', '".$email."', '".$password."');";
+						 $connect_result = $connect->query($server_target_db);
+						 if($connect_result === False){
+							 echo json_encode(array("state"=>5));
+							 return;
+						 }
+						 else{
+							 echo json_encode(array("MEDIA_CONNECTED_SHARED"=>"SHARE_POST", 
+							 "TRANSPORT"=>$filename));
+						 }
+					 }
+				   }
+			   }			     
+			   break;
+			   case "A-V-TW":
+			   
+			   break;
+			   case "A-V-INS":
+			   
+			   break;
+			   case "A-V-GA":
+			   {
+				   
+			   }			   
+			   break;
+			   case "A-V-PIN":
+			   {
+				   
+			   }			   
+			   break;
+			   case "A-V-YOU":
+			   {
+				   
+			   }
+			   break;
+			   default:  
+			    return;
+		   }
+	   }
+	   break;
+	   case "GET":
+	   case "Get":
+	   case "get":
+	   {
+		   
+	   }
+	   break;
+	   default: 
+	    return;
+	 }
+	 $connect->close();
+	 return;
+ }
+ 
+ SignUpMediaAccounts4Share();
+?>

@@ -1,0 +1,19 @@
+.offline-service{
+	margin: 0;
+	z-index: 1;
+	width: 50%;
+	height: 300px;
+	background: black;
+    position: fixed; 
+	left: 20%;
+	top: 25%;
+	box-shadow: 1px 1px 11px 4px rgba(100, 110, 101, 1); /*125, 120, 130*/
+	display: none;
+}
+.offline-service p{
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+	padding: 80px;
+	font-size: 25px;	
+}
+.audio_radio, .24-7-contacts{cursor: pointer;}

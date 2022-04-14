@@ -1,0 +1,70 @@
+.column-developers {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+img.know-developers-img{height: 300px;}
+
+@media screen and (max-width: 911px) {
+  .column-developers {
+    width: 50%;
+  }	
+}
+@media screen and (max-width: 650px) {
+  .column-developers {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 570px){
+  .know-team-header{font-size: 25px;}
+  .know-developers-header{font-size: 25px;}
+}
+
+@media screen and (max-width: 400px){
+  .know-team-header{font-size: 20px;}
+  .know-developers-header{font-size: 20px;}
+}
+
+@media screen and (min-height: 1366px) {
+  .know-team-header{font-size: 55px;}
+  .know-developers-header{font-size: 55px;}
+   img.know-developers-img{height: 500px;}
+}
+
+.card-developers {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-developers {
+  padding: 0 16px;
+}
+
+.container-developers::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title-developers {
+  color: grey;
+}
+
+.button-developers {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button-developers:hover {
+  background-color: #555;
+}

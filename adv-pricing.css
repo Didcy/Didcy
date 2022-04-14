@@ -1,0 +1,110 @@
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+  display: none;
+}
+
+.columns-special{
+  
+}
+
+.columns-relief{
+  
+}
+
+
+.price {
+  list-style-type: none;
+  border: 1px solid #000;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  box-shadow: 1px 1px 11px 4px rgba(20, 15, 21, 1); /*125, 120, 130*/
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+  color: black;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.button-pricing {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: rgba(10, 13, 20, 1);
+}
+
+.button-pricing-pro{
+  background-color: rgba(55, 43, 50, 1);	
+}
+
+@media only screen and (max-width: 1041px) {
+	.price li {
+       font-size: 14px;
+	}	
+}
+
+@media only screen and (max-width: 1024px) {
+	.price li {
+       font-size: 14px;
+	}		
+}
+@media only screen and (max-width: 903px) {
+	.price li {
+       font-size: 14px;
+	}	
+}
+
+@media only screen and (max-width: 875px) {
+  .columns {
+    width: 50%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+
+@media screen and (min-height: 1366px){
+
+  .columns .price li{
+    font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+  }
+  
+	.button-pricing {
+	  padding: 15px 35px;
+	  font-size: 30px;
+	}
+}
