@@ -2,15 +2,12 @@
 	background: rgba(20, 120, 201, 0.9);
 	width: 100%;
 	padding: 5px;
-	box-shadow: 0px 0px 0px 0px rgba(200, 200, 200, 1); /*125, 120, 130*/
   }
   div.welcome-didcy-work-container h1.welcome-didcy-work{
     text-align: center;
-	font-family: "proxima-nova", "Source Sans Pro", sans-serif;
   }
   div.welcome-didcy-work-container p.work-as-a-puzzle{
 	text-align: center;
-	font-family: "proxima-nova", "Source Sans Pro", sans-serif;
   }
 /* Style inputs, select elements and textareas */
 input.didcy-text, select.didcy-select, textarea.tarea, input.didcy-tel, input.didcy-number, 
@@ -22,15 +19,6 @@ input.didcy-email{
   box-sizing: border-box;
   resize: vertical;
   background-image: url("");
-  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
-}
-
-.iti{
-  position: relative;
-  margin-left: 0;
-  left: -10%;
-  display: block;
-  
 }
 
 select.didcy-select{cursor: pointer;}
@@ -50,15 +38,6 @@ input.didcy-number, span.or-n{
 
 #not-now{color: white;}
 
-#applicant-id-card{
-  width: 140px;
-}
-
-.custom-file-input-0:before{
-  width: 100%;
-}
-
-
 /* Style the label to display next to the inputs */
 label.didcy-lab {
   padding: 12px 12px 12px 0;
@@ -75,7 +54,6 @@ input.didcy-work-form-submit, button.take-photo {
   cursor: pointer;
   float: right;
   box-shadow: 1px 1px 11px 4px rgba(100, 110, 101, 1); /*125, 120, 130*/
-  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
 }
 
 button.take-photo{
