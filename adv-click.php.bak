@@ -1,7 +1,5 @@
 <?php
  
-  include("connect_server.php");
- 
   function badgeClick(){
 	switch($_POST["click-state"]){
 	 case 0:

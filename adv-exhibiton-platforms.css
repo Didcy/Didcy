@@ -1,0 +1,411 @@
+.modalAdvExhibitionPlatform, .modal-adv-exhibition-platform-table,
+.modal-adv-exhibition-platform-offer, .modal-pricing-table, .modal-ads-books,
+.modal-connections,
+.modal-Terms, .modal-cookie, .modal-security, .modal-seo-advertisement, .modal-content-integration, 
+.modal-profiles, .modal-authors, .modal-mentors, .modal-ceo, 
+.modal-cookie-full-mode, .modal-know-team, .modal-notification,
+.modal-reach, .modal-payments, .modal-notificator,
+.modal-payment-services, .modal-subscribe-web-policy, 
+.modal-subscribe-stand-policy, .modal-know-developers, 
+.modal-investors, .modal-team, .modal-dispute-policy, 
+.modal-limit-policy, .modal-host-policy, .modal-sitemap, 
+.modal-advertisement-channels, .modal-companies-only, 
+.modal-actors-groups-only, .modal-work, .modal-plugins-board, .modal-didcy-fixes{
+  font-family: Arial;
+  margin: auto;  
+  width: 100%; 
+  height: 0%;
+  z-index: 12;
+}
+
+.modal-adv-exhibition-platform-table, .modal-adv-exhibition-platform-offer,
+.myModal-pricing-table, .modal-Terms, .modal-cookie, .modal-know-team, 
+.modal-profiles, .modal-authors, .modal-mentors,  .modal-ceo, .modal-limit-policy, .modal-host-policy, .modal-seo-advertisement, 
+.modal-cookie-full-mode, .modal-subscribe-stand-policy, .modal-know-developers,
+.modal-payment-services, .modal-reach, .modal-payments, .modal-notificator, 
+.modal-notification, .modal-subscribe-policy, 
+.modal-investors, .modal-team, .modal-sitemap, .modal-content-integration,
+.modal-advertisement-channels, .modal-actors-groups-only, 
+.modal-dispute-policy, .modal-work, .modal-plugins-board, .modal-didcy-fixes {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 11;
+  top: 0%;
+  right: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(1,0,1, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+ 
+}
+
+.modal-payment-services, .modal-notification, .modal-payments, 
+.modal-reach, .modal-dispute-policy, .modal-notificator,
+.modal-subscribe-policy, .modal-team, .modal-host-policy, .modal-sitemap, .modal-work,
+.modal-plugins-board, .modal-didcy-fixes, .modal-didcy-fixes {
+    height: 0%;
+	width: 100%;
+	z-index: 15;
+}
+
+.modal-dispute-policy, .modal-work, .modal-plugins-board{
+	z-index: 19;
+}
+
+.modal-subscribe-policy {
+	z-index: 18;
+}
+
+.modal-subscribe-web-policy, .modal-sitemap, .modal-content-integration, 
+.modal-advertisement-channels, .modal-seo-advertisement {
+   z-index: 19;
+}
+.modal-subscribe-stand-policy, .modal-know-developers, .modal-host-policy {
+   z-index: 22;
+}
+
+.modal-didcy-fixes{
+  z-index: 31;	
+}
+
+.modal-cookie-full-mode{width: 100%;height: 0%;}
+
+.modal-ceo, .modal-subscribe-stand-policy, .modal-know-developers, 
+.modal-advertisement-channels {
+	width: 0%;
+	height: 0%;	
+
+}
+.modal-security, .modal-subscribe-web-policy, .modal-know-team, 
+.modal-seo-advertisement, .modal-companies-only {
+	width: 0%;
+	height: 0%;	
+}
+
+.modal-authors, .modal-investors, .modal-actors-groups-only{
+   display: none;
+}
+
+.modal-mentors{
+/*     width: 100%;
+	height: 100%; */
+}
+
+.modal-Terms {
+	width: 100%;
+	height: 0%;
+}
+.adv-exhibition-platform-header, .adv-exhibition-platform-header-1, 
+.adv-exhibition-platform-header-2, .adv-modal-ads-books-header{
+	color:  white;
+	font-size: 30px;
+	font-family: sans-serif, arial, verdana;
+	font-weight: bolder;
+	padding-left: 30px;
+	padding-top: 40px;
+	padding-bottom: 10px;
+    text-align: center;	
+}
+
+.adv-exhibition-platform-header-1, .adv-modal-ads-books-header{
+	padding-left: 30px;
+	padding-top: 40px;
+	padding-bottom: 0px;	
+}
+
+.adv-exhibition-platform-header-2{
+   padding-top: 20px;
+}
+
+.adv-exhibition-platform-request{
+	color:  white;
+	font-size: 20px;
+	font-family: sans-serif, arial, verdana;
+	font-weight: bolder;
+	padding-left: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+    text-align: center;		
+}
+
+#adv-exhibition-platform, #adv-company-ads-deal-container{
+   position: relative;	
+   top: 5%;
+   width: 100%;
+   height: 100%;
+   overflow-y: auto;
+   margin-bottom: 100px;
+   background: black;
+}
+
+.column-plat{
+   position: relative;
+   top: 30%;
+}
+
+.form-inline-in{
+	width: 100%;
+}
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline .form-inline-col-1 input.email-offer, 
+.form-inline .form-inline-col-1 input.name-offer, 
+.form-inline .form-inline-col-1 input.target-display-offer, 
+.form-inline .form-inline-col-1 select,
+.form-inline .form-inline-col-1 input.deal-expiration-date-offer,  
+.form-inline .form-inline-col-1 input.deal-offer, 
+.form-inline .form-inline-col-1 input.links-add-of-offerer,
+.form-inline .form-inline-col-1 input.ad-policy-add-of-offerer,
+.form-inline .form-inline-col-1 input.add-business-tel-of-offerer,
+.form-inline .form-inline-col-1 input.add-business-whatsapp-tel-of-offerer,
+.form-inline .form-inline-col-1 textarea.description-of-offerer{
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  /* width: 33.333%; */
+  background-image: url("");
+  width: 48%;
+}
+
+.new{width: 100%;}
+
+.form-inline .form-inline-col-1 textarea.description-of-offerer{
+  width: 97.5%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;	
+}
+.form-inline .form-inline-col-1 span.upload-ads-add-of-offerer{
+	font-size: 20px;
+	font-family: sans-serif, arial, verdana;
+	font-weight: bolder;
+	color: white;
+	text-align: center;
+	padding-left: 48%; 
+	padding-right: 48%;
+}
+
+.form-inline .form-inline-col-1 input.links-add-of-offerer,
+.form-inline .form-inline-col-1 input.ad-policy-add-of-offerer, 
+.form-inline .form-inline-col-1  input.add-business-tel-of-offerer,
+.form-inline .form-inline-col-1  input.add-business-whatsapp-tel-of-offerer{
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer; 
+}
+.form-inline .form-inline-col-1 input.name-offer, 
+.form-inline .form-inline-col-1 input.target-display-offer, 
+.form-inline .form-inline-col-1 input.deal-offer{
+	padding: 20px;
+}
+.form-inline .form-inline-col-1 select,
+.form-inline .form-inline-col-1 input.deal-expiration-date-offer,
+.form-inline .form-inline-col-1 input.links-add-of-offerer,
+.form-inline .form-inline-col-1 input.offer-fee,
+.form-inline .form-inline-col-1 input.url-of-offerer,
+.form-inline .form-inline-col-1 input.min-negotiable-of-offerer,
+.form-inline .form-inline-col-1 input.ideal-negotiable-of-offerer,
+.form-inline .form-inline-col-1 input.uploads-ads-of-offerer,
+.form-inline .form-inline-col-1 input.ad-policy-add-of-offerer,
+.form-inline .form-inline-col-1 input.add-business-tel-of-offerer,
+.form-inline .form-inline-col-1 input.add-business-whatsapp-tel-of-offerer,
+.form-inline .form-inline-col-1 input.business-tel-of-offerer,
+.form-inline .form-inline-col-1 input.business-whatsapp-tel-of-offerer,
+.form-inline .form-inline-col-1 input.business-email-of-offerer{
+   padding: 10px;
+}
+
+.cursor{
+	cursor: pointer;
+}
+.form-inline .form-inline-col-1 input.uploads-ads-of-offerer {
+   background: DodgerBlue; 
+   right: 0;
+   
+}
+.custom-file-input-offer {
+  color: white;
+  background: DodgerBlue; 
+  white-space: nowrap;
+  -webkit-user-select: none;
+  font-size: 20px;/*10pt*/
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  right: 0;
+}
+.custom-file-input-offer::before {
+  content: 'Upload your tradeable ads here';
+  margin: 0;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  right: 0;
+}
+
+/* .form-inline-col-1{
+	width: 33.3%;
+} */
+
+/* .form-inline input[type=email], .form-inline input.name-offer, 
+.form-inline input.target-display-offer{
+   width: 10%;
+}
+ */
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+.submit-offer{width: 93%;font-size: 20px;font-family: sans-serif, arial, verdana;}
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+.links-container, .ad-policy-add-of-offerer-container, 
+.business-tel-of-offerer-container, .business-whatsapp-tel-of-offerer-container{
+  position: fixed;
+  box-shadow: 1px 1px 11px 4px rgba(100, 110, 101, 1); 
+  width: 80%;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  z-index: 13;
+  overflow-y: scroll;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+}
+
+.contentButton{
+	margin-top: 5%;
+	width: 30%;
+    margin-left: 20%;
+	margin-bottom: 10%;
+}
+
+.contentButton2{
+  width: 30%;
+  margin-left: 3%;
+}
+
+.contentLinksID, .submitter{
+	width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;	
+	margin-top: 3px;
+	height: 40px;
+}
+
+.submitter{cursor: pointer;font-size: 20px;}
+
+@media (max-width: 1125px) {
+	.submit-offer{width: 97%;}
+	.custom-file-input-offer{width: 100%;}
+	.custom-file-input-offer::before {width: 100%;}
+}
+@media (max-width: 800px) {
+/* .form-inline input[type=email], .form-inline input.name-offer, 
+.form-inline input.target-display-offer{
+   width: 100%;
+} */
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding-left: 0px;
+}
+.form-inline .form-inline-col-1 input.email-offer, .form-inline .form-inline-col-1 input.name-offer, 
+.form-inline .form-inline-col-1 input.target-display-offer, .form-inline .form-inline-col-1 select,
+.form-inline .form-inline-col-1 input.deal-expiration-date-offer,  
+.form-inline .form-inline-col-1 input.deal-offer, 
+.form-inline .form-inline-col-1 input.links-add-of-offerer,
+.form-inline .form-inline-col-1 input.ad-policy-add-of-offerer,
+.form-inline .form-inline-col-1 input.add-business-tel-of-offerer,
+.form-inline .form-inline-col-1 textarea.description-of-offerer{
+  width: 100%;
+}
+.form-inline .form-inline-col-1 textarea.description-of-offerer{
+  width: 100%;
+}
+.form-inline .form-inline-col-1 span.upload-ads-add-of-offerer{
+	padding-right: 50%;
+}
+.submit-offer{width: 100%;}
+.adv-exhibition-platform-header, .adv-exhibition-platform-header-1, .wel-didcy-uup{
+   font-size: 25px;
+}
+
+.adv-exhibition-platform-header-2, .historic-header{
+   font-size: 20px;
+}
+}
+@media (max-width: 500px) {
+.adv-exhibition-platform-header, .adv-exhibition-platform-header-1, 
+.adv-modal-ads-books-header, .wel-didcy-uup{
+   font-size: 20px;
+}
+
+.adv-exhibition-platform-header-2, .historic-header{
+   font-size: 15px;
+}	
+.adv-exhibition-platform-request{
+   font-size: 15px;
+}	
+}
+@media (min-width: 1125px) {
+	.submit-offer{width: 97%;}
+	.custom-file-input-offer{width: 100%;}
+	.custom-file-input-offer::before {width: 100%;}
+}
+
+@media screen and (min-height: 1366px){
+.adv-exhibition-platform-header, .adv-exhibition-platform-header-1,
+.adv-modal-ads-books-header, .wel-didcy-uup{
+   font-size: 35px;
+}
+
+.adv-exhibition-platform-header-2, .historic-header{
+   font-size: 35px;
+}	
+.adv-exhibition-platform-request{
+   font-size: 35px;
+}	
+.custom-file-input-offer::before {
+	font-size: 20px;/*10pt*/
+}
+.upload-ads-add-of-offerer{
+	font-size: 20px;/*10pt*/
+}	
+/* input{font-size: 35px;} */
+}
