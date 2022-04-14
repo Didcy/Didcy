@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-us" default-lang="english" def_country="usa">
+<head class="" id="">
+<title class="" id="">Didcy - Policy Error</title>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="3600000000000000">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="unavailable">
+<meta name="keyword" content="unavailable">
+<meta name="author" content="unavailable">
+<link rel="stylesheet" href="w3.css" min="0em" max="0vw" media="" media-type="">
+<link rel="stylesheet" href="font-awesome.min.css" min="0em" max="0vw" media="" media-type="">
+<link rel="stylesheet" href="policies.css" min="0em" max="0vw" media="" media-type="">
+<link rel="stylesheet" href="enquiries.css" min="0em" max="0vw" media="" media-type="">
+<link rel="icon" href="didcy.png" min="0em" max="0vw" media="" media-type="">
+<link rel="icon" href="didcy.png" min="0em" max="0vw" media="" media-type="">
+<style type="text/css">
+ *{
+    box-sizing: border-box;
+ }
+ 
+ body{
+   margin: 0;
+   font-family: sans-serif, arial;
+   padding: 0;
+ }
+ 
+ .welcome-2-policy-error{
+   text-align: center;
+   width: 100%;
+   background-color: brown;
+   position: relative;
+   margin: 0;
+   top: 0;
+ }
+ 
+ .welcome-2-policy-error-h{
+   text-align: center;
+ }
+ 
+ .policy-response{
+   position: relative;
+   
+ }
+</style>
+</head>
+
+<body>
+
+ <main class="" id="">
+ 
+  <div class="welcome-2-policy-error" id="welcome-2-policy-error">
+   <h1 class="welcome-2-policy-error-h" id="welcome-2-policy-error-h">Welcome to Policy Error</h1>
+  </div>
+  
+  <div class="policy-response" id="policy-response">
+   <p class="" id="">Please all Didcy Policy are only allowed to viewed by it's clients or users except
+   Didcy Terms, that is, the <b>TERM &amp; CONDITIONS POLICY</b> which is allowed to be viewed by every interested
+   individual. Please you can only access the rest of Didcy Policies as soon as you're signed into the platform.
+   So kindly SIGN UP or IN into Didcy before access is granted. Thank you and have a nice Didcy Visit. 
+  </div>
+  
+ </main>
+ 
+ <footer class="" id="">
+ 
+ 
+ </footer>
+
+
+</body>
+
+</html>
