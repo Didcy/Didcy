@@ -8,8 +8,8 @@ function FetchLoggedChat($chatTable){
   "avatar"=>array());
   $userLtImage = "";
   $numberOfUsers = 0;
-  $chatBoard .= '<div class="container" id="container-chat-in" style="margin-top: -5%">';		
-	$chatBoard .= '<h1 style="text-align: center;color: white">Didcy Chat</h1>';	 	
+  $chatBoard .= '<div class="container" id="container-chat-in">';		
+	$chatBoard .= '<!--<h1 style="text-align: center;color: white">Didcy Chat</h1>-->';	 
 		$chatBoard .= '<div class="chat" style="background: black">';	
 			$chatBoard .= '<div id="frame">';		
 				$chatBoard .= '<div id="sidepanel" class="sidepanel">';

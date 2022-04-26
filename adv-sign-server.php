@@ -218,7 +218,9 @@
 					   status nvarchar(255), 
 					   date nchar(255),
 					   filename text,
-					   fileId text);";
+					   fileId text,
+					   audioAdImage text null,
+					   videoAdImage text null);";
 	 
 	 $connect_result = $connect->query($sql);
 
@@ -236,7 +238,9 @@
 					   status nvarchar(255), 
 					   date nchar(255),
 					   filename text,
-					   fileId text);";
+					   fileId text,
+					   audioAdImage text null,
+					   videoAdImage text null);";
 	 
 	 $connect_result = $connect->query($sql);
 
@@ -485,7 +489,7 @@
 						}
 						
 					    echo json_encode(array("cookie_id"=>$id, "companiesOnly"=>$companiesOnly,
-						"state"=>4));
+						"state"=>4, "adInterest"=>$selectedAdIndustry));
 						$connect->close();
 						//$connect->close();
 						return;

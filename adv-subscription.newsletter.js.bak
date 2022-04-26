@@ -1,6 +1,6 @@
 "use strict";
 
-function FormNewLetters(formNewsletterID = 0){
+function FormNewLetters(formNewsletterID){
 	var name = null;
 	var mail = null;
 	var Checkbox = null;

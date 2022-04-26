@@ -25,6 +25,7 @@ label, .terms-conditions, .please-fill {color: white;}
 	   animation-duration: 2s;
 	   background-color: #000;	
 	   font-family: Arial, Helvetica, sans-serif;
+	   color: red;
 }
    @keyframes gaga-relate{
       from{color: white;}

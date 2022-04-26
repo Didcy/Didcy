@@ -55,6 +55,7 @@
 			 $productServiceCompany = array();
 			 $productServiceIndex = 0;
              $productServiceFileTypeID = array();
+             $productServiceAudioAdImage = array();
 			 
 			 if($connect_result === FALSE){
 				 echo json_encode(array("state"=>25, "search_input_error"=>$liveSearch));
@@ -82,7 +83,8 @@
 			foreach($dirIdContainer as $dir_id){
 			 //if($pi != count($productServiceName)-1){
 			 $product_service_info = "product_service_info_".$dir_id;
-			 $server_target_db = "select productServiceCompany from ".$product_service_info.
+			 $server_target_db = "select productServiceCompany, 
+			 productServiceAudioAdImage from ".$product_service_info.
 			 " where productServiceName='".$productServiceName[$pi]."';";// and id='".$id."';";
  
 			 $connect_result = $connect->query($server_target_db);
@@ -91,6 +93,7 @@
 				// output data of each row
 				 while($row = $connect_result->fetch_assoc()) {
 					 $productServiceCompany[$indexer] = $row["productServiceCompany"];
+					 $productServiceAudioAdImage[$indexer] = $row["productServiceAudioAdImage"];
 					 $indexer += 1;
 				}
 			 }else{
@@ -116,7 +119,7 @@
 			 //}
            }
 			 
-			 $server_target_db = "select productServiceName from ".$product_service_names.
+			 $server_target_db = "select productServiceName, productServiceAudioAdImage from ".$product_service_names.
 			 " where productServiceName like '".$liveSearch."%';";// and id='".$id."';";
 			 
 			 $connect_result = $connect->query($server_target_db);	
@@ -138,6 +141,7 @@
 						$productServiceFileTypeID[$productServiceIndex] = 0;
 				     }else if(strtolower(pathinfo($row["productServiceName"], PATHINFO_EXTENSION)) == "mp3"){
 						$productServiceFileTypeID[$productServiceIndex] = 2;
+						$productServiceAudioAdImage[$productServiceIndex] = $row["productServiceAudioAdImage"];
 				     }else{
 					    $productServiceFileTypeID[$productServiceIndex] = 1;
 				     }
@@ -150,12 +154,12 @@
 			 }
 
            	 if($productServiceIndex != 0){
-				echo json_encode(array($productServiceName, $productServiceCompany, "state"=>33, 
+				echo json_encode(array($productServiceName, $productServiceCompany, $productServiceAudioAdImage, "state"=>33, 
 				"fileTypeID"=>$productServiceFileTypeID, "page_type"=>0, "search_input"=>$liveSearch));
                 return;				
 			 }		  
 			 else{
-				echo json_encode(array($productServiceName, $productServiceCompany, "state"=>4, 
+				echo json_encode(array($productServiceName, $productServiceCompany, $productServiceAudioAdImage, "state"=>4, 
 				"fileTypeID"=>$productServiceFileTypeID, "page_type"=>0, "search_input"=>$liveSearch));
                 return;				    
 			 }	
@@ -178,6 +182,7 @@
 			 $connect_result = $connect->query($server_target_db);		 
 			 $productServiceName = array();
 			 $productServiceCompany = array();
+			 $productServiceAudioAdImage = array();
 			 
 			 if($connect_result === FALSE){
 				 $connect->close();
@@ -200,7 +205,8 @@
 			 
              $product_service_info = "product_service_info_".$dirId;
 			 
-			 $server_target_db = "select productServiceCompany, productServiceName from ".$product_service_info.
+			 $server_target_db = "select productServiceCompany, productServiceName, 
+			 productServiceAudioAdImage from ".$product_service_info.
 			 " where productServiceName like '".$liveSearch."%';";// and id='".$id."';";
 			 
 			 $connect_result = $connect->query($server_target_db);		 
@@ -221,6 +227,7 @@
 						$productServiceFileTypeID[$productServiceIndex] = 0;
 				     }else if(strtolower(pathinfo($row["productServiceName"], PATHINFO_EXTENSION)) == "mp3"){
 						$productServiceFileTypeID[$productServiceIndex] = 2;
+						$productServiceAudioAdImage[$productServiceIndex] = $row["productServiceAudioAdImage"];
 				     }else{
 					    $productServiceFileTypeID[$productServiceIndex] = 1;
 				     }
@@ -236,13 +243,15 @@
 
            	 if($productServiceIndex != 0){
 				$connect->close();
-				echo json_encode(array($productServiceName, $productServiceCompany, "state"=>32, 
+				echo json_encode(array($productServiceName, $productServiceCompany, $productServiceAudioAdImage
+				, "state"=>32, 
 				"fileTypeID"=>$productServiceFileTypeID, "page_type"=>1, "search_input"=>$liveSearch));
                 return;				
 			 }		  
 			 else{
 				$connect->close();
-				echo json_encode(array($productServiceName, $productServiceCompany, "state"=>4, 
+				echo json_encode(array($productServiceName, $productServiceCompany, $productServiceAudioAdImage, 
+				"state"=>4, 
 				"fileTypeID"=>$productServiceFileTypeID, "page_type"=>1, "search_input"=>$liveSearch));
                 return;				    
 			 }

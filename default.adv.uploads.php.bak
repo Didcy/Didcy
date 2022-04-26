@@ -65,7 +65,7 @@
 				   $VideoAdImageName = $advVideosDirImageSla.$advVideoImageFiles2[$retrieveVideoAdImagesUsingCount].".png";
 				   $bodyVideoImage = file_get_contents($advVideoImageFiles[$retrieveVideoAdImagesUsingCount]);
 				   //move_uploaded_file($_FILES[$AudioAdImageNameID]["tmp_name"], $AudioAdImageName);
-				   file_put_contents($VideoAdImageName, $bodyVideoImage);
+				   //file_put_contents($VideoAdImageName, $bodyVideoImage);
 				   $retrieveVideoAdImagesUsingCount++;
 
 				   $advVideoFileName = $advDir.$advs->AD_FN[$index];

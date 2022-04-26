@@ -146,7 +146,7 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 	
 	if(signID == 0){
 		if(user_name == ""){
-			return alertBox("Username field is empty!!!", 0);
+			return alertBox("User Name field is empty!!!", 0);
 		}	
 		if(email == ""){
 			return alertBox("Email field is empty!!!");

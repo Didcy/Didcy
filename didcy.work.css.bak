@@ -73,7 +73,7 @@ input.didcy-number, span.or-n{
   width: 140px;
 }
 
-.custom-file-input-0:before, .custom-file-input-developer:before, .custom-file-input-developer-css:before{
+.custom-file-input-0:before, .custom-file-input-developer:before, .custom-file-input-developer-css::before{
   width: 100%;
 }
 

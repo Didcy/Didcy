@@ -5,7 +5,7 @@
   var linkArr = null;
   var system_dirArr = [], storeAllCreatedIds = [], system_dirArr2 = [];
   var describeText = "", company_name_text = "", 
-  productServiceAudioAdImage = "", productServiceVideoAdImage = "", approvedByText = "", periodText = "", jurisdictionText = "";
+  productServiceAudioAdImage = "", approvedByText = "", periodText = "", jurisdictionText = "";
   var height = 0, $audioAdImage = "";
   var device = null, advFileShowCaseNoAdsFound = 0, countValue = 0;
   var name = "", profileNameCreateId = 0, $footerCheck2 = 0, footer_content_id = 0;
@@ -1073,11 +1073,10 @@ engineId = 0) => {
 		//}
 		$fetchIDTemp = $fetchID;
 		var fileType = null;
-	    window.console.log(result);
+	    //window.console.log(result);
  		storeAllCreatedIds = [];
 		convert_to_object = null;
 		system_dirArr = [];
-		//system_dirArr_videos_images = [];
 		array_js_init = 0, array_js = [], linkArr = null;		
 	    let data_returned = JSON.parse(result);
 		var actor_group = null;
@@ -1086,8 +1085,6 @@ engineId = 0) => {
 		}else{
 		    company_name_text = data_returned.productServiceCompany;
 		    productServiceAudioAdImage = data_returned.productServiceAudioAdImage;
-		    productServiceVideoAdImage = data_returned.productServiceVideoAdImage;
-			
 		}
 		hidden = document.getElementById("hidden");
         if(hidden.value.toString().trim() == "1"){
@@ -1890,18 +1887,16 @@ engineId = 0) => {
 			  //var elem = document.createElement("video");
 			  //window.alert(system_dirArr);
 			  var columElem = document.createElement("div");
-			  //var elem = document.createElement("video");
-			  var elem = document.createElement("img");
+			  var elem = document.createElement("video");
 			  columElem.setAttribute("class", "column");
 			  /* columElem.setAttribute("style", "background-color:blue"); */
 			  columElem.setAttribute("id", "column");
 			  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
-			  //elem.setAttribute("src", system_dirArr[i]);
-			  elem.setAttribute("src", productServiceVideoAdImage[i]);
+			  elem.setAttribute("src", system_dirArr[i]);
 			  //elem.setAttribute("autoplay", "false");
-			  /*elem.setAttribute("loop", "1");
+			  elem.setAttribute("loop", "1");
 			  elem.setAttribute("muted", "true");
-			  elem.setAttribute("controls", "false");*/
+			  elem.setAttribute("controls", "false");
 			  elem.setAttribute("class", classID1);
 			  elem.setAttribute("id", classID);
 			  //elem.setAttribute("style", "width:100%");
@@ -1933,78 +1928,15 @@ engineId = 0) => {
 
                  var video_elem = document.createElement("video");
                  video_elem.setAttribute("src", system_dirArr[i]);
-                 //video_elem.setAttribute("class", "modal-content-20");
-                 //video_elem.setAttribute("id", "img01-20");
+                 video_elem.setAttribute("class", "modal-content-20");
                  video_elem.setAttribute("id", "img01-20");
-				 //video_elem.setAttribute("controls", "true");
-				 
-				 //----------------------------------------------
-				 
-				 /*var source = document.createElement("source");
-				 source.setAttribute('', '');*/
-				 
-				 //-------------------custom controls------------
-				 
-				 var videoControls = document.createElement("div");
-				 videoControls.setAttribute("class", "modal-content-20 video-container");
-				 videoControls.setAttribute("id", "video-container");	
-				 
-				 var videoControlsContainer = document.createElement("div");
-				 videoControlsContainer.setAttribute("class", "video-controls");
-				 videoControlsContainer.setAttribute("id", "video-controls");
-				 
-				 
-				 var playPause = document.createElement("button");
-				 const playPauseText = document.createTextNode("Play");
-				 playPause.setAttribute("class", "play");
-				 playPause.setAttribute("id", "play-pause");
-				 playPause.setAttribute("type", "button");
-				 playPause.append(playPauseText);
-				 
-				 var range = document.createElement("input");
-				 range.setAttribute("value", "0");
-				 range.setAttribute("type", "range");
-				 range.setAttribute("id", "seek-bar");
-				 			 
-				 var mute = document.createElement("button");
-				 const muteText = document.createTextNode("Mute");
-				 mute.setAttribute("class", "mute");
-				 mute.setAttribute("id", "mute");
-				 mute.setAttribute("type", "button");
-				 mute.append(muteText);				 
-
-				 var volume_range = document.createElement("input");
-				 volume_range.setAttribute("value", "1");
-				 volume_range.setAttribute("type", "range");
-				 volume_range.setAttribute("id", "volume-bar");
-				 volume_range.setAttribute("min", "0");
-				 volume_range.setAttribute("max", "1");
-				 volume_range.setAttribute("step", "0.1");
-				 
-				 var fullscreen = document.createElement("button");
-				 const fullscreenText = document.createTextNode("Full-Screen");
-				 fullscreen.setAttribute("class", "full-screen");
-				 fullscreen.setAttribute("id", "full-screen");
-				 fullscreen.setAttribute("type", "button");
-				 fullscreen.append(fullscreenText);		
-
-                 videoControlsContainer.append(playPause);				 
-                 videoControlsContainer.append(range);				 
-                 videoControlsContainer.append(mute);				 
-                 videoControlsContainer.append(volume_range);				 
-                 videoControlsContainer.append(fullscreen);		
-
-				 videoControls.append(video_elem);
-				 videoControls.append(videoControlsContainer);
-				 
-				 //----------------------------------------------
+				 video_elem.setAttribute("controls", "true");
 
 			     modal.style.display = "block";
 
-				 //modal.insertBefore(video_elem, modalImg);
-				 modal.insertBefore(videoControls, modalImg);
+				 modal.insertBefore(video_elem, modalImg);
 
-                 videoEl = videoControls;//video_elem;
+                 videoEl = video_elem;
 
                  modalImg.src = "";
                  modalImg.style.display = "none";
@@ -2012,9 +1944,7 @@ engineId = 0) => {
 					
 			     videoElem = 1;
 
-				 modalImg.value = "20";			
-
-				 loadVideoControls();
+				 modalImg.value = "20";				  
 			   }
 			  
 			  document.getElementById("uploads").value = "";
@@ -2076,17 +2006,16 @@ engineId = 0) => {
 				  //var elem = document.createElement("video");
 				  //window.alert(system_dirArr);
 				  var columElem = document.createElement("div");
-				  var elem = document.createElement("img");
+				  var elem = document.createElement("video");
 				  columElem.setAttribute("class", "column");
 				  /* columElem.setAttribute("style", "background-color:blue"); */
 				  columElem.setAttribute("id", "column col-embed");
 				  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
-				  //elem.setAttribute("src", system_dirArr[i]);
-				  elem.setAttribute("src", productServiceVideoAdImage[i]);
+				  elem.setAttribute("src", system_dirArr[i]);
 				  //elem.setAttribute("autoplay", "false");
-				  /*elem.setAttribute("loop", "1");
+				  elem.setAttribute("loop", "1");
 				  elem.setAttribute("muted", "true");
-				  elem.setAttribute("controls", "false");*/
+				  elem.setAttribute("controls", "false");
 				  elem.setAttribute("class", classID1);
 				  elem.setAttribute("id", classID);
 					  

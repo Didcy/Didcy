@@ -2,7 +2,7 @@
  
  declare(strict_types=1);
  
- include_once(" 
+ include_once("connect_server.php"); 
 
  function GetAdvFile4Uploader($server_proto = array("GET", "POST", "PUT", "HEAD", "TARGET", "OPTION", "DELETE", "ENV", "FILES")) : void{
 	switch($_POST["fetch"]){
@@ -29,7 +29,7 @@
 				echo json_encode($connect);
 				return;
 			 }
-			 
+
 			 $connect = $connect["connect"];
 
 			 $id = $_POST["drim"];
@@ -70,6 +70,31 @@
 			 $productIndex = 0;
              
 			 $ps = json_decode($_POST["PS"]);
+			 
+			 $genCons = "NO_VID";
+			 $genContainer = json_decode($_POST["gen-container"]);
+			 $realArrangementContainer = json_decode($_POST["real-arrangement-container"]);
+			 
+			 $fgenContainer = $genContainer;
+			 $tmp_gen_container = array();
+			 
+			 $gen_indexxer = 0;
+			 
+			 for($main = 0;$main < count($genContainer);$main++){
+				 for($check = 0;$check < count($genContainer);$check++){
+					if($_FILES["uploads"]["name"][$main] == $realArrangementContainer[$check]){
+						$tmp_gen_container[$gen_indexxer] = $genContainer[$check];
+						$gen_indexxer++;
+					}
+				 }
+			 }
+			 
+			 $genContainer = $tmp_gen_container;
+			 
+			 /*echo json_encode(array("fgen"=>$fgenContainer, "sgen"=>$genContainer, 
+			 "real"=>$realArrangementContainer));
+			 return;*/
+			 
 			 $ps_index = 0;
 			 //$ps[0][$ps_index]->location
 			 $ps_error = 0;
@@ -341,6 +366,17 @@
 			 $CHECK = 0;
 			 $uploadOk = 0;
 			 $fileReport = null;
+			 $retrieveAudioAdImagesUsingCount = 0;
+			 $AudioAdImageName = "";
+			 $AudioAdImageNameID = "";
+			 $AudioAdImageNameContainer = array();
+			 $AudioAdImageNameContainer2 = array();
+			 $dir = "";
+
+			 $VideoAdImageName = ""; 
+			 $VideoAdImageNameContainer = array();
+			 $VideoAdImageNameContainer2 = array();
+			 $retrieveVideoAdImagesUsingCount = 0;
 			 
 			 if($dirId2 == null || $dirId2 == "null" || $dirId2 == ''){
 				 $server_target_db = "update gaga set dirId='".$dirId."' where id='".$id."';";
@@ -356,7 +392,9 @@
 				      dirId varchar(30) null,
 					  productServiceId bigint primary key auto_increment, 
 					  productServiceName text not null,
-					  productServiceAudioAdImage text null
+					  productServiceCompany char(50) not null,
+					  productServiceAudioAdImage text null,
+					  productServiceVideoAdImage text not null
 				 );";
 				 $connect_result = $connect->query($server_target_db);		 
 				 if($connect_result === FALSE){
@@ -385,9 +423,10 @@
 					   gagaShipmentTime varchar(10) not null,
 					   productServiceCountry char(20) not null,
                        productServiceCompany char(50) not null,
-					   productServiceAudioAdImage text null
+					   productServiceAudioAdImage text null, 
+					   productServiceVideoAdImage text not null
                        );";
-                                         $connect_result = $connect->query($server_target_db);
+                     $connect_result = $connect->query($server_target_db);
 					if($connect_result === FALSE){
 						 $connect->close();	
 						 echo json_encode(array("state"=>4));
@@ -420,9 +459,24 @@
                      
 					 if($videoFileType == "mp4"){
 						$fileTypes[$ps_index] = 1;
+					    $genCons = $genContainer[$ps_index];
+					    $dir = basename($_FILES[$genCons]["name"]).".png";
+
+						if($retrieveVideoAdImagesUsingCount < $_POST["video-image-container-length"]){							
+							$VideoAdImageName = $_FILES[$genCons]["name"]; 
+							
+							$VideoAdImageNameContainer[$retrieveVideoAdImagesUsingCount] = 
+							$_FILES[$genCons]["tmp_name"];
+							
+							$VideoAdImageNameContainer2[$retrieveVideoAdImagesUsingCount] = 
+							$VideoAdImageName;
+							
+							$retrieveVideoAdImagesUsingCount++;
+						}
+
 					 }else if($videoFileType == "mp3"){
 						$fileTypes[$ps_index] = 0; 
- 						if($ps[0][$ps_index]->audioAdImage == "undefined"){
+ 						/*if($ps[0][$ps_index]->audioAdImage == "undefined"){
 						  $ps[0][$ps_index]->audioAdImage = "NULL";
 						}else{
 						  $audioAdImage = file_get_contents($ps[0][$ps_index]->audioInfos[0]);
@@ -431,6 +485,38 @@
 							"audioAdImageName"=>$audioAdImage));
 							return;
 						  }
+						}*/
+						if($_POST["audio-image-container-length"] > 0){
+							if($_POST["audio-in"] == 1){
+							  if($_POST["audio-type-count"] > 0){
+							   if($_POST["audio-count"] > 0){
+								$audioImageContainer = json_decode($_POST["audio-image-container"]);
+                                
+/* 								echo json_encode(array(
+								"audioImC"=> $audioImageContainer, "audioImCL"=> $_POST["audio-image-container-length"], 
+								"audio-in"=> $_POST["audio-in"], "audio-type-c"=>$_POST["audio-type-count"], 
+								"audio-count"=>$_POST["audio-count"], 
+								"f0"=>$_FILES["audio-image-file-0"], 
+								"f1"=>$_FILES["audio-image-file-1"],
+								"f2"=>$_FILES["audio-image-file-2"]));
+								
+								return; */
+								
+								if($retrieveAudioAdImagesUsingCount < $_POST["audio-image-container-length"]){
+								   $AudioAdImageNameID = "audio-image-file-".number_format($retrieveAudioAdImagesUsingCount); 
+								   $AudioAdImageName = $_FILES[$AudioAdImageNameID]["name"]; 
+								   $AudioAdImageNameContainer[$retrieveAudioAdImagesUsingCount] = 
+								   $_FILES[$AudioAdImageNameID]["tmp_name"];
+								   $AudioAdImageNameContainer2[$retrieveAudioAdImagesUsingCount] = 
+								   $AudioAdImageName;
+								   $retrieveAudioAdImagesUsingCount++;
+								}
+								
+							   }
+							  }
+							}
+						}else{
+							$AudioAdImageName = "AUDIO_IMAGE_NOT_FOUND";
 						}
 					 }
 					 //echo json_encode(array("state"=>400));
@@ -448,13 +534,14 @@
 					 
 					 $ps[0][$ps_index]->psid = $ps[0][$ps_index]->psid+$ps_index;
 
-						 $pattern = "/'/i";
+					 $pattern = "/'/i";
 						 
-						 $ps[0][$ps_index]->description = preg_replace($pattern, "\'", $ps[0][$ps_index]->description);
-						 
-					  
+					 $ps[0][$ps_index]->description = preg_replace($pattern, "\'", $ps[0][$ps_index]->description);
+					 					  
 					 $server_target_db = "insert into productServiceNames values('".
-					 $dirId."', '".$ps[0][$ps_index]->psid."', '".$advEachFile."');";
+					 $dirId."', '".$ps[0][$ps_index]->psid."', '".$advEachFile."'
+					 , '".$ps[0][$ps_index]->company."', '".$AudioAdImageName."', 
+					 '".$dir."');";
 					 $connect_result = $connect->query($server_target_db);		 
 					 if($connect_result === FALSE){
 						 //$connect->close();	
@@ -462,7 +549,9 @@
 						 "close"=>$connect->close()));
 						 return;
 					 }
-
+					 
+					//$dir = "imager/".basename($_FILES["image"]["name"]).".png";
+		 
 					 $server_target_db = "insert into ".$product_service_info.
 					 "()"."values('".$ps[0][$ps_index]->psid."', '".$ps[0][$ps_index]->email."', '".$ps[0][$ps_index]->telephone
 					 ."', '".$ps[0][$ps_index]->location."', '".$ps[0][$ps_index]->approvedBy
@@ -471,7 +560,8 @@
 					 ."', '".$ps[0][$ps_index]->elapsingTime."', '".$dirId
 					 ."', '".$advEachFile."', '".$ps[0][$ps_index]->shipmentDate
 					 ."', '".$ps[0][$ps_index]->shipmentTime."', '".$ps[0][$ps_index]->country."
-					 ', '".$ps[0][$ps_index]->company."', 'AUDIO_IMAGE_NOT_FOUND');"; 
+					 ', '".$ps[0][$ps_index]->company."', '".$AudioAdImageName."', 
+					 '".$dir."');"; //, 'AUDIO_IMAGE_NOT_FOUND
               
 					 $connect_result = $connect->query($server_target_db);		
 					 $CHECK = 1;
@@ -525,9 +615,23 @@
 
 					 if($videoFileType == "mp4"){
 						$fileTypes[$ps_index] = 1;
+					    $genCons = $genContainer[$ps_index];
+					    $dir = basename($_FILES[$genCons]["name"]).".png";
+
+						if($retrieveVideoAdImagesUsingCount < $_POST["video-image-container-length"]){							
+							$VideoAdImageName = $_FILES[$genCons]["name"]; 
+							
+							$VideoAdImageNameContainer[$retrieveVideoAdImagesUsingCount] = 
+							$_FILES[$genCons]["tmp_name"];
+							
+							$VideoAdImageNameContainer2[$retrieveVideoAdImagesUsingCount] = 
+							$VideoAdImageName;
+							
+							$retrieveVideoAdImagesUsingCount++;
+						}
 					 }else if($videoFileType == "mp3"){
 						$fileTypes[$ps_index] = 0; 
- 						if($ps[0][$ps_index]->audioAdImage == "undefined"){
+ 						/*if($ps[0][$ps_index]->audioAdImage == "undefined"){
 						  $ps[0][$ps_index]->audioAdImage = "NULL";
 						}else{
 						  //$audioAdImage = file_get_contents($ps[0][$ps_index]->audioInfos[0]);//"./bs/".$ps[0][$ps_index]->audioInfos[0]);
@@ -537,6 +641,36 @@
 							"audioAdImageName"=>$audioAdImage));
 							return;
 						  }
+						}*/
+						if($_POST["audio-image-container-length"] > 0){
+							if($_POST["audio-in"] == 1){
+							  if($_POST["audio-type-count"] > 0){
+							   if($_POST["audio-count"] > 0){
+								$audioImageContainer = json_decode($_POST["audio-image-container"]);
+                                
+								/*echo json_encode(array(
+								"audioImC"=> $audioImageContainer, "audioImCL"=> $_POST["audio-image-container-length"], 
+								"audio-in"=> $_POST["audio-in"], "audio-type-c"=>$_POST["audio-type-count"], 
+								"audio-count"=>$_POST["audio-count"]));
+								/*"f0"=>$_FILES["audio-image-file-0"], 
+								"f1"=>$_FILES["audio-image-file-1"],
+								"f2"=>$_FILES["audio-image-file-2"]));*/
+								
+								if($retrieveAudioAdImagesUsingCount < $_POST["audio-image-container-length"]){
+								   $AudioAdImageNameID = "audio-image-file-".number_format($retrieveAudioAdImagesUsingCount); 
+								   $AudioAdImageName = $_FILES[$AudioAdImageNameID]["name"]; 
+								   $AudioAdImageNameContainer[$retrieveAudioAdImagesUsingCount] = 
+								   $_FILES[$AudioAdImageNameID]["tmp_name"];
+								   $AudioAdImageNameContainer2[$retrieveAudioAdImagesUsingCount] = 
+								   $AudioAdImageName;								   
+								   $retrieveAudioAdImagesUsingCount++;
+								}
+								
+							   }
+							  }
+							}
+						}else{
+							$AudioAdImageName = "AUDIO_IMAGE_NOT_FOUND";
 						}
 					 }
 					 //echo json_encode(array("state"=>400));
@@ -574,9 +708,11 @@
 						 $pattern = "/'/i";
 						 
 						 $ps[0][$ps_index]->description = preg_replace($pattern, "\'", $ps[0][$ps_index]->description);
-						 
+							 
 						 $server_target_db = "insert into productServiceNames values('".
-						 $dirId2."', '".$ps[0][$ps_index]->psid."', '".$advEachFile."');";
+						 $dirId2."', '".$ps[0][$ps_index]->psid."', '".$advEachFile."'
+						 , '".$ps[0][$ps_index]->company."', '".$AudioAdImageName."', 
+						 '".$dir."');";
 						 
 						 $connect_result = $connect->query($server_target_db);
 						  //echo 23;
@@ -589,14 +725,15 @@
 						 
 						 
 					 $server_target_db = "insert into ".$product_service_info.
-					 " values('".$ps[0][$ps_index]->psid."', '".$ps[0][$ps_index]->email."', '".$ps[0][$ps_index]->telephone
+					 "()"."values('".$ps[0][$ps_index]->psid."', '".$ps[0][$ps_index]->email."', '".$ps[0][$ps_index]->telephone
 					 ."', '".$ps[0][$ps_index]->location."', '".$ps[0][$ps_index]->approvedBy
 					 ."', '".$ps[0][$ps_index]->description."', '".$ps[0][$ps_index]->commencementDate
 					 ."', '".$ps[0][$ps_index]->elapsingDate."', '".$ps[0][$ps_index]->commencementTime
 					 ."', '".$ps[0][$ps_index]->elapsingTime."', '".$dirId
 					 ."', '".$advEachFile."', '".$ps[0][$ps_index]->shipmentDate
 					 ."', '".$ps[0][$ps_index]->shipmentTime."', '".$ps[0][$ps_index]->country."
-					 ', '".$ps[0][$ps_index]->company."', 'AUDIO_IMAGE_NOT_FOUND');"; 
+					 ', '".$ps[0][$ps_index]->company."', '".$AudioAdImageName."', 
+					 '".$dir."');"; //, 'AUDIO_IMAGE_NOT_FOUND
                      
 					 $connect_result = $connect->query($server_target_db);
 					 
@@ -610,12 +747,16 @@
   				        
 					}					
 				}				 
-			 }           
+			 }          
+
+            //echo json_encode($AudioAdImageNameContainer);
+			//return;			
 			
 			if($fileReport != null){
 				echo json_encode($fileReport);
 				return;
 			} 
+			
  
 			if(!is_dir("adv-accounts/".$dirId2)){
 			    mkdir("adv-accounts/".$dirId2, 0777, true);
@@ -628,10 +769,19 @@
 			 $advDirAccount = "adv-accounts";
 			 $advDir = $advDirAccount."\\".$dirId2;
 			 $advDirAudios = $advDirAccount."\\".$dirId2.".audios";
+			 $advDirAudiosAdImage = $advDirAccount."\\".$dirId2.".audios.img";
 			 $advDir2 = $advDir."\\";
 			 $advDir2Audios = $advDirAudios."\\";
 		     $index = 0;
 			 $advFileIndexContainer = array();
+			 
+			 $advFileDir4DB = "adv-accounts/".$dirId2.".audios/";
+			 $advFileDir5DB = "adv-accounts/".$dirId2.".audios.img/";
+			 $advFileDir4DB2 = "adv-accounts/".$dirId2."/";
+			 $advFile4DB = "";
+			 
+			 $advDir4VideoAds = $advDirAccount."/".$dirId2.".video.img";
+			 $advDir4VideoAds2 = $advDirAccount."/".$dirId2.".video.img/";
 
 			 foreach($advFile["name"] as $advEachFile){
 			   $advFileIndexContainer[$index] = $advEachFile;
@@ -639,6 +789,7 @@
 			 }
 			
 				$curl = curl_init();
+                
 				
 
 				curl_setopt_array($curl, array(
@@ -650,7 +801,12 @@
 					CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 					CURLOPT_CUSTOMREQUEST => "POST",
 					CURLOPT_POSTFIELDS => json_encode(array("ADVERTS"=> $_FILES["uploads"]["tmp_name"], "AD_FN"=>$advFileIndexContainer, 
-					"SERVICE_TYPE_ID"=>"0", "DIR_1"=>$advDir, "DIR_2"=>$advDir2, "fileLength"=>$ps[1])),
+					"SERVICE_TYPE_ID"=>"0", "DIR_1"=>$advDir, "DIR_2"=>$advDir2, "fileLength"=>$ps[1], 
+					"AudioAdImageNameContainer"=>$AudioAdImageNameContainer, 
+					"AudioAdImageNameContainer2"=>$AudioAdImageNameContainer2,
+					"VideoAdImageNameContainer"=>$VideoAdImageNameContainer,
+					"VideoAdImageNameContainer2"=>$VideoAdImageNameContainer2
+					)),
 					CURLOPT_HTTPHEADER => array(
 						"cache-control: no-cache",
 						"content-type: false",
@@ -681,18 +837,40 @@
 			 $ps_pi = $ps;
 
              $advFiler = "";
+             $advFile4VAdsImages = "";
+			 $retrieveAudioAdImagesUsingCount = 0;
+			 $gen_indx = 0;
  			 
 			 foreach($advFile["name"] as $advEachFile){
 			   if(strtolower(pathinfo($advEachFile, PATHINFO_EXTENSION)) == "mp3"){
 				 if(!is_dir($advDirAudios)){
 					 mkdir($advDirAudios, 0777, true);
 				 }
+				 if(!is_dir($advDirAudiosAdImage)){
+					 mkdir($advDirAudiosAdImage, 0777, true);
+				 }
 			      $advFiler = $advDir2Audios.basename($advEachFile);
+				  $advFile4DB = $advFileDir4DB.basename($advEachFile);
+				  $AudioAdImageNameID = "audio-image-file-".number_format($retrieveAudioAdImagesUsingCount); 
+				  $AudioAdImageName = $advFileDir5DB.basename($_FILES[$AudioAdImageNameID]["name"]);
+				  move_uploaded_file($_FILES[$AudioAdImageNameID]["tmp_name"], $AudioAdImageName); 
+				  $retrieveAudioAdImagesUsingCount++;
+				  $genCons = "NO_VID";
 			   }else{
 				 if(!is_dir($advDir)){
 					 mkdir($advDir, 0777, true);
 				 }
+				 if(!is_dir($advDir4VideoAds)){
+					mkdir($advDir4VideoAds, 0777, true);
+				 }
 				  $advFiler = $advDir2.basename($advEachFile);
+				  $advFile4DB = $advFileDir4DB2.basename($advEachFile);
+				  //-----video ads images -----
+				  $genCons = $genContainer[$gen_indx];
+				  $advFile4VAdsImages = $advDir4VideoAds2.basename($_FILES[$genCons]["name"]).".png";
+				  	
+				  move_uploaded_file($_FILES[$genCons]["tmp_name"], $advFile4VAdsImages);
+				  $gen_indx++;
 			   }
 			   move_uploaded_file($_FILES["uploads"]["tmp_name"][$index], $advFiler); 
 			   $index_name = "advFile-".number_format($index);
@@ -711,6 +889,8 @@
 			 }
 			 $index_id = 0;//didcx_random_number_generator(1, 23930399);
 			 $pindex_id = 0;
+			 $retrieveAudioAdImagesUsingCount = 0;
+			 $gen_indx = 0;
 			 
 			 if($advFileIndexContainer["state"] == 100){
 				  $id = didcx_random_number_generator(1, 23930399);
@@ -722,19 +902,37 @@
 							 mkdir($advDirAudios, 0777, true);
 						 }
 						  $advFiler = $advDir2Audios.basename($advEachFile);
+						  $advFile4DB = $advFileDir4DB.basename($advEachFile);
+						  $AudioAdImageNameID = "audio-image-file-".number_format($retrieveAudioAdImagesUsingCount); 
+						  $AudioAdImageName = $advFileDir5DB.basename($_FILES[$AudioAdImageNameID]["name"]);
+						  move_uploaded_file($_FILES[$AudioAdImageNameID]["tmp_name"], $AudioAdImageName); 
+						  $retrieveAudioAdImagesUsingCount++;
+						  $genCons = "NO_VID";
 					   }else{
 						 if(!is_dir($advDir)){
 							 mkdir($advDir, 0777, true);
 						 }
+						 if(!is_dir($advDir4VideoAds)){
+							mkdir($advDir4VideoAds, 0777, true);
+						 }
 						  $advFiler = $advDir2.basename($advEachFile);
+						  $advFile4DB = $advFileDir4DB2.basename($advEachFile);
+						  $AudioAdImageName = "AUDIO_IMAGE_NOT_FOUND";
+						  //-----video ads images -----
+						  $genCons = $genContainer[$gen_indx];
+						  $advFile4VAdsImages = $advDir4VideoAds2.basename($_FILES[$genCons]["name"]).".png";
+							
+						  //move_uploaded_file($_FILES[$genCons]["tmp_name"], $advFile4VAdsImages);
+						  $gen_indx++;
 					   }
 					   
 					   $ps[0][$index_id]->psid = $ps[0][$index_id]->psid+$index_id;
 					   
 					   $server_target_db ="INSERT INTO notifications_".$_POST["drim"]."(id, sendername, name, type, message, 
-					   status, date, filename, fileId) 
+					   status, date, filename, fileId, audioAdImage, videoAdImage) 
 					   VALUES ('".$ps[0][$index_id]->psid."', '".$sender_name."', '', 'comment', '$message', 'read', 
-					   CURRENT_TIMESTAMP, '".$advFiler."', '".$advEachFile."')";                   
+					   CURRENT_TIMESTAMP, '".$advFile4DB."', '".$advEachFile."', '".$AudioAdImageName."', 
+					   '".$genCons."')";                   
                        
 					   //$id += 1;
 					   
@@ -749,9 +947,10 @@
 					   $ps_pi[0][$pindex_id]->psid = $ps_pi[0][$pindex_id]->psid+$pindex_id;
 					   $server_target_db ="INSERT INTO notifications (
 					   senderId, sendername, id, name, type, message, 
-					   status, date, filename, fileId) 
+					   status, date, filename, fileId, audioAdImage, videoAdImage) 
 					   VALUES ('".$_POST["drim"]."', '".$sender_name."', '".$ps_pi[0][$pindex_id]->psid."', '', 'comment', '$message', 'unread', 
-					   CURRENT_TIMESTAMP, '".$advFiler."', '".$advEachFile."');";                   
+					   CURRENT_TIMESTAMP, '".$advFile4DB."', '".$advEachFile."', '".$AudioAdImageName."', 
+					   '".$genCons."');";                   
                        
 					   //$id += 1;
 					   
@@ -775,6 +974,8 @@
 					"close"=>$connect->close()));
 					return;						
 				  } 
+				  
+				  $retrieveAudioAdImagesUsingCount = 0;
  
 				  if ($connect_result->num_rows > 0) {
                      while($row = $connect_result->fetch_assoc()){
@@ -786,19 +987,38 @@
 							 mkdir($advDirAudios, 0777, true);
 						 }
 						  $advFiler = $advDir2Audios.basename($advEachFile);
+						  $advFile4DB = $advFileDir4DB.basename($advEachFile);
+						  $AudioAdImageNameID = "audio-image-file-".number_format($retrieveAudioAdImagesUsingCount); 
+						  $AudioAdImageName = $advFileDir5DB.basename($_FILES[$AudioAdImageNameID]["name"]);
+						  move_uploaded_file($_FILES[$AudioAdImageNameID]["tmp_name"], $AudioAdImageName); 
+						  $retrieveAudioAdImagesUsingCount++;
+						  $genCons = "NO_VID";
 					   }else{
 						 if(!is_dir($advDir)){
 							 mkdir($advDir, 0777, true);
 						 }
+						 if(!is_dir($advDir4VideoAds)){
+							mkdir($advDir4VideoAds, 0777, true);
+						 }
+
 						  $advFiler = $advDir2.basename($advEachFile);
+						  $advFile4DB = $advFileDir4DB2.basename($advEachFile);
+
+						  //-----video ads images -----
+						  $genCons = $genContainer[$gen_indx];
+						  $advFile4VAdsImages = $advDir4VideoAds2.basename($_FILES[$genCons]["name"]).".png";
+						  
+						  //move_uploaded_file($_FILES[$genCons]["tmp_name"], $advFile4VAdsImages);
+						  $gen_indx++;						  
 					   }
 					   
 					   $ps_new[0][$index_id2]->psid = $ps_new[0][$index_id2]->psid+$index_id2;
 					   
 					   $server_target_db ="INSERT INTO notifications_".$row["id"]."(id, sendername, name, type, message, 
-					   status, date, filename, fileId) 
+					   status, date, filename, fileId, audioAdImage, videoAdImage) 
 					   VALUES ('".$ps_new[0][$index_id2]->psid."', '".$sender_name."', '', 'comment', '$message', 'unread', 
-					   CURRENT_TIMESTAMP, '".$advFiler."', '".$advEachFile."')";  
+					   CURRENT_TIMESTAMP, '".$advFile4DB."', '".$advEachFile."', '".$AudioAdImageName."', 
+					   '".$genCons."')";  
 					   
 					  $connect_result2 = $connect->query($server_target_db);
 
@@ -875,39 +1095,46 @@
 				  echo json_encode(array("stata"=>550));
 				  return;
 			  }
-			  $file_dir_handle = opendir($gagaUserAccountVideos); //opendir("./didcx.facial.biometrics");
+			  //$file_dir_handle = opendir($gagaUserAccountVideos); //opendir("./didcx.facial.biometrics");
 		}
 /* 		}else{
 			 $file_dir_handle = opendir("./adv.videos"); //opendir("./didcx.facial.biometrics");
 		} */
 
              $productServiceCompany = array();
+             $productServiceVideoAdImage = array();
              $product_service_info = "product_service_info_".$dirId2;
 			 
-			 $server_target_db = "select productServiceCompany from ".$product_service_info.";";// and id='".$id."';";
+			 $server_target_db = "select productServiceCompany, productServiceName, 
+			 productServiceVideoAdImage from ".$product_service_info.";";// and id='".$id."';";
 			 $connect_result = $connect->query($server_target_db);		 
 			 
 			 if($connect_result === FALSE){
 				 echo json_encode(array("state"=>2));
 				 return;
 			 }
-			 
 	
 			 $dir_index = 0;
+			 
+			 $_array_4_files = array();
 			 
 			 if ($connect_result->num_rows > 0) {
 				// output data of each row
 				 while($row = $connect_result->fetch_assoc()) {
 					 //$id = $row["id"];						   
-					 $productServiceCompany[$dir_index] = $row["productServiceCompany"];			
+					 if(strtolower(pathinfo($row["productServiceName"], PATHINFO_EXTENSION)) != "mp3"){
+					 $productServiceCompany[$dir_index] = $row["productServiceCompany"];
+					 $productServiceVideoAdImage[$dir_index] = "adv.videos.img/".$row["productServiceVideoAdImage"];
+					 $_array_4_files[$dir_index] = "adv.videos/".$row["productServiceName"];
 					 $dir_index += 1;
+					}
 				}
 			 }else{
 				 echo json_encode(array("state"=>3));
 				 return;
 			 }
 		
-		  $dir_index = 0;
+		  /*$dir_index = 0;
 		  
 		  $dir_contents[$dir_index] = readdir($file_dir_handle);
 		  $dir_index += 1;
@@ -958,11 +1185,13 @@
 				 //echo $_advEvent_links; //."\n";//;//."<br>";
 				 $dir_index += 1;
 			  }
-		  }
+		  }*/
 /* 		  $dir_index_str = number_format($dir_index);
 		  echo '"'.$dir_index_str. '" : "'. '.'.'"';//."\n"; //"<br>";
 		  echo "}"; */
-		  echo json_encode(array("files"=>$_array_4_files, "externalInfos"=>"", "productServiceCompany"=>$productServiceCompany, 
+		  echo json_encode(array("files"=>$_array_4_files, "externalInfos"=>"", 
+		  "productServiceCompany"=>$productServiceCompany, "productServiceVideoAdImage"=>
+		  $productServiceVideoAdImage, "productServiceAudioAdImage"=>array(),
 		  "state"=>601, "fileType"=> ""));
 		  return;
 		}else{
@@ -1002,12 +1231,51 @@
 		  $dir_index_str = "";
 		  
 		  $_array_4_json = array();
+
+          $connect = ConnectServer(0);
+
+		  if($connect["state"] != 500006){
+			echo json_encode($connect);
+			return;
+		  }
+			 
+		  $connect = $connect["connect"];
+		  
+          $productServiceVideoAdImage = array();
+          $productservicenames = "productservicenames";
+			 
+		  $server_target_db = "select productServiceCompany, productServiceName, 
+		  productServiceVideoAdImage from productservicenames;";// and id='".$id."';";
+		  $connect_result = $connect->query($server_target_db);		 
+			 
+		  if($connect_result === FALSE){
+			echo json_encode(array("state"=>2));
+			return;
+		  }
+
+			 if ($connect_result->num_rows > 0) {
+				// output data of each row
+				 while($row = $connect_result->fetch_assoc()) {
+					 //$id = $row["id"];						   
+					 if(strtolower(pathinfo($row["productServiceName"], PATHINFO_EXTENSION)) != "mp3"){
+					 $productServiceCompany[$dir_index] = $row["productServiceCompany"];
+					 $productServiceVideoAdImage[$dir_index] = "adv.videos.img/".$row["productServiceVideoAdImage"];
+					 $_array_4_files[$dir_index] = "adv.videos/".$row["productServiceName"];
+					 $dir_index += 1;
+					}
+				}
+			 }else{
+				 echo json_encode(array("state"=>3));
+				 return;
+			 }
 		  
 		  //echo '{';
 		  //echo "<br>";
 		  //echo "\n";
 		  
-		  foreach($dir_contents as $_server_response_index){
+		  $dir_index = 0;
+		  
+		  /*foreach($dir_contents as $_server_response_index){
 			  if($_server_response_index == ""){
 				  //echo "0";
 				  //return;
@@ -1017,16 +1285,18 @@
 				 //echo $_server_response_index."<br/>";
 				 //$_user_facial_links = '"'.$dir_index_str. '" : "'. "http://www.localhost/didcx.facial.biometrics/". $_array_4_json[$dir_index_str].'",';
 				 //$_advEvent_links = '"'.$dir_index_str. '" : "'. "http://www.localhost/advert.llc/adv.videos/".$_array_4_json[$dir_index_str].'",';
+				 //$_array_4_files[number_format($dir_index)] = "adv.videos.img/".$_array_4_json[$dir_index_str];//.'",';
 				 $_array_4_files[number_format($dir_index)] = "adv.videos/".$_array_4_json[$dir_index_str];//.'",';
 				 //echo $_advEvent_links; //."\n";//;//."<br>";
 				 $dir_index += 1;
 			  }
-		  }
+		  }*/
 /* 		  $dir_index_str = number_format($dir_index);
 		  echo '"'.$dir_index_str. '" : "'. '.'.'"';//."\n"; //"<br>";
 		  echo "}"; */
 		  echo json_encode(array("files"=>$_array_4_files, "externalInfos"=>"", 
-		  "productServiceCompany"=>$productServiceCompany, "state"=>601, "fileType"=> ""));
+		  "productServiceCompany"=>$productServiceCompany,
+		  "productServiceVideoAdImage"=>$productServiceVideoAdImage, "state"=>601, "fileType"=> ""));
 		  return;
 		}
 	   }
@@ -2121,6 +2391,8 @@
 			 
 			 $CHECK = 0;
 			 $fileReport = null;
+			 $productServiceAudioAdImage = array();
+			 $AudioAdImageName = "AUDIO_IMAGE_NOT_FOUND";
 			 
 			 if($dirId2 == null || $dirId2 == "null" || $dirId2 == ''){
 				 $server_target_db = "update gaga set dirId='".$dirId."' where id='".$id."';";
@@ -2135,6 +2407,7 @@
 				      dirId varchar(30) null,
 					  productServiceId bigint primary key auto_increment, 
 					  productServiceName text not null,
+					  productServiceCompany char(50) not null,
 					   productServiceAudioAdImage text null
 				 );";
 				 
@@ -2210,7 +2483,8 @@
 						 
 					 
 					 $server_target_db = "insert into productServiceNames values('".
-					 $dirId."', '".$ps[0][$ps_index]->psid."', '".$advEachFile."');";
+					 $dirId."', '".$ps[0][$ps_index]->psid."', '".$advEachFile."'
+					 , '".$ps[0][$ps_index]->company."', '".$AudioAdImageName."');";
 					 
 					 $connect_result = $connect->query($server_target_db);
 					 
@@ -2313,7 +2587,8 @@
 						 
 						 
 						 $server_target_db = "insert into productServiceNames
-						 values('".$dirId2."', '".$ps[0][$ps_index]->psid."', '".$advEachFile."');";
+						 values('".$dirId2."', '".$ps[0][$ps_index]->psid."', 
+						 '".$advEachFile."', '".$ps[0][$ps_index]->company."', '".$AudioAdImageName."');";
 						 
 						 $connect_result = $connect->query($server_target_db);
 						  //echo 23;
@@ -2374,6 +2649,10 @@
 			 $advDir2 = $advDir."\\";
 		     $index = 0;
 			 $advFileIndexContainer = array();
+			 
+			 $advFileDir4DB = "adv-accounts/".$dirId2."-img-rcs/";
+			 $advFileDir4DB2 = "adv-accounts/".$dirId2."/";
+			 $advFile4DB = "";			 
 
 			 foreach($advFile["name"] as $advEachFile){
 			   $advFileIndexContainer[$index] = $advEachFile;
@@ -2427,7 +2706,8 @@
 			 $ps_pi = $ps;
 
              $advFiler = "";
-
+ 
+			 $AudioAdImageName = "AUDIO_IMAGE_NOT_FOUND";
 			 
 			 foreach($advFile["name"] as $advEachFile){
 			   $advFiler = $advDir2.basename($advEachFile);
@@ -2458,13 +2738,14 @@
 				  foreach($advFile["name"] as $advEachFile){
  
 					   $advFiler = $advDir2.basename($advEachFile);
+					   $advFile4DB = $advFileDir4DB.basename($advEachFile);
 					   
 					   $ps[0][$index_id]->psid = $ps[0][$index_id]->psid+$index_id;
 					   
 					   $server_target_db ="INSERT INTO notifications_".$_POST["drim"]."(id, sendername, name, type, message, 
-					   status, date, filename, fileId) 
+					   status, date, filename, fileId, audioAdImage) 
 					   VALUES ('".$ps[0][$index_id]->psid."', '".$sender_name."', '', 'comment', '$message', 'read', 
-					   CURRENT_TIMESTAMP, '".$advFiler."', '".$advEachFile."')";                   
+					   CURRENT_TIMESTAMP, '".$advFile4DB."', '".$advEachFile."', '".$AudioAdImageName."')";                   
                        
 					   //$id += 1;
 					   
@@ -2479,9 +2760,9 @@
 					   $ps_pi[0][$pindex_id]->psid = $ps_pi[0][$pindex_id]->psid+$pindex_id;
 					   $server_target_db ="INSERT INTO notifications (
 					   senderId, sendername, id, name, type, message, 
-					   status, date, filename, fileId) 
+					   status, date, filename, fileId, audioAdImage) 
 					   VALUES ('".$_POST["drim"]."', '".$sender_name."', '".$ps_pi[0][$pindex_id]->psid."', '', 'comment', '$message', 'unread', 
-					   CURRENT_TIMESTAMP, '".$advFiler."', '".$advEachFile."');";                   
+					   CURRENT_TIMESTAMP, '".$advFile4DB."', '".$advEachFile."', '".$AudioAdImageName."');";                   
                        
 					   //$id += 1;
 					   
@@ -2505,6 +2786,8 @@
 					"close"=>$connect->close()));
 					return;						
 				  } 
+				  
+				  $AudioAdImageName = "AUDIO_IMAGE_NOT_FOUND";
  
 				  if ($connect_result->num_rows > 0) {
                      while($row = $connect_result->fetch_assoc()){
@@ -2513,13 +2796,15 @@
 					  foreach($advFile["name"] as $advEachFile){
   
 					   $advFiler = $advDir2.basename($advEachFile);
+					   $advFile4DB = $advFileDir4DB.basename($advEachFile);
 					   
 					   $ps_new[0][$index_id2]->psid = $ps_new[0][$index_id2]->psid+$index_id2;
 					   
 					   $server_target_db ="INSERT INTO notifications_".$row["id"]."(id, sendername, name, type, message, 
-					   status, date, filename, fileId) 
+					   status, date, filename, fileId, audioAdImage) 
 					   VALUES ('".$ps_new[0][$index_id2]->psid."', '".$sender_name."', '', 'comment', '$message', 'unread', 
-					   CURRENT_TIMESTAMP, '".$advFiler."', '".$advEachFile."')";  
+					   CURRENT_TIMESTAMP, '".$advFile4DB."', '".$advEachFile."', 
+					    '".$AudioAdImageName."')";  
 					   
 					  $connect_result2 = $connect->query($server_target_db);
 
@@ -3719,7 +4004,7 @@
 	  case "+fetch":
 	  case "+FETCH":
 	  {
-	      if($_POST["drim"] != ""){
+	    if($_POST["drim"] != ""){
 			 
 		     $connect = ConnectServer(0);
 
@@ -3741,28 +4026,28 @@
 				 echo json_encode(array("state"=>2));
 				 return;
 			 }
-			 
+			        $server_target_db =  "";
 						if($_POST["ad-type-id"] == 0){
-						  $server_target_db = "select dirId from gaga where adInterest='Tech';";
+						  $server_target_db = "select dirId from gaga where adInterest='Tech' and id='".$_POST["drim"]."';";
                         }else if($_POST["ad-type-id"] == 1){
-						  $server_target_db = "select dirId from gaga where adInterest='Electronic';";
+						  $server_target_db = "select dirId from gaga where adInterest='Electronic' and id='".$_POST["drim"]."';";
                         }else if($_POST["ad-type-id"] == 2){
-						  $server_target_db = "select dirId from gaga where adInterest='Mechanic';";
+						  $server_target_db = "select dirId from gaga where adInterest='Mechanic' and id='".$_POST["drim"]."';";
                         }else if($_POST["ad-type-id"] == 3){
-						  $server_target_db = "select dirId from gaga where adInterest='Health';";
+						  $server_target_db = "select dirId from gaga where adInterest='Health' and id='".$_POST["drim"]."';";
                         }else if($_POST["ad-type-id"] == 4){
 						  //$server_target_db = "select dirId from gaga where adInterest='Agriculture';";
-						  $server_target_db = "select dirId from gaga where adInterest='Food';";
+						  $server_target_db = "select dirId from gaga where adInterest='Food' and id='".$_POST["drim"]."';";
                         }else if($_POST["ad-type-id"] == 5){
-						  $server_target_db = "select dirId from gaga where adInterest='All';";
+						  $server_target_db = "select dirId from gaga where adInterest='All' and id='".$_POST["drim"]."';";
                         }else if($_POST["ad-type-id"] == 6){
-						  $server_target_db = "select dirId from gaga where adInterest='Entertainment';";
+						  $server_target_db = "select dirId from gaga where adInterest='Entertainment' and id='".$_POST["drim"]."';";
 						}else if($_POST["ad-type-id"] == 7){
-						  $server_target_db = "select dirId from gaga where adInterest='Education';";
+						  $server_target_db = "select dirId from gaga where adInterest='Education' and id='".$_POST["drim"]."';";
 						}else if($_POST["ad-type-id"] == 8){
-						  $server_target_db = "select dirId from gaga where adInterest='Resort';";
+						  $server_target_db = "select dirId from gaga where adInterest='Resort' and id='".$_POST["drim"]."';";
 						}else if($_POST["ad-type-id"] == 9){
-						  $server_target_db = "select dirId from gaga where adInterest='RealEstates';";
+						  $server_target_db = "select dirId from gaga where adInterest='RealEstates' and id='".$_POST["drim"]."';";
 						}
 						
 						$connect_result = $connect->query($server_target_db);
@@ -3777,6 +4062,7 @@
 						$fileType = array();
 						
 						$productServiceCompany = array();
+						$productServiceAudioAdImage = array();
 				
                 if($connect_result->num_rows > 0){				
 					//if($connect_result->fetch_assoc()["dirId"] != ""){				
@@ -3805,7 +4091,8 @@
 						
 						if(count($industrialIDs) == 0){
 						  echo json_encode(array("files"=>$_array_4_files, "externalInfos"=>"", 
-						  "productServiceCompany"=>$productServiceCompany, "state"=>601, "fileType"=>$fileType,
+						  "productServiceCompany"=>$productServiceCompany, 
+						  "productServiceAudioAdImage"=>$productServiceAudioAdImage, "state"=>601, "fileType"=>$fileType,
 						  "adID"=>$_POST["ad-type-id"]));	
 						  return;
 						}
@@ -3814,7 +4101,8 @@
 						if($industrialIDs[$indx] != ""){
 							if(count($industrialIDs) > 0){					
 								for($getIds = 0;$getIds < count($industrialIDs);$getIds++){
-									$server_target_db = "select productServiceName, productServiceCompany from product_service_info_".
+									$server_target_db = "select productServiceName, productServiceCompany, 
+									productServiceAudioAdImage from product_service_info_".
 									$industrialIDs[$getIds].";";
 									
 									$connect_nresult = $connect->query($server_target_db);
@@ -3833,6 +4121,7 @@
 											  if($file_type == "mp3"){
 												$_array_4_files[$indx] = "adv.audios/".$rown["productServiceName"];
 												$productServiceCompany[$indx] = $rown["productServiceCompany"];
+												$productServiceAudioAdImage[$indx] = $rown["productServiceAudioAdImage"];
 												$fileType[$indx] = 2;
 												$indx++;
 											  }
@@ -3854,12 +4143,19 @@
 						}
 		 
 		            //}
+				}else{
+					echo json_encode(array("files"=>$_array_4_files, "externalInfos"=>"", 
+					"productServiceCompany"=>$productServiceCompany, "productServiceAudioAdImage"=>$productServiceAudioAdImage, 
+					"state"=>4, "fileType"=>$fileType,
+					"adID"=>$_POST["ad-type-id"], "ids"=>$industrialIDs, "uid"=>$id));
+					return;
 				}
 					
 		  //$_array_4_files = $industrialIDs
 	  
 		  echo json_encode(array("files"=>$_array_4_files, "externalInfos"=>"", 
-		  "productServiceCompany"=>$productServiceCompany, "state"=>601, "fileType"=>$fileType,
+		  "productServiceCompany"=>$productServiceCompany
+		  , "productServiceAudioAdImage"=>$productServiceAudioAdImage, "state"=>601, "fileType"=>$fileType,
 		  "adID"=>$_POST["ad-type-id"], "ids"=>$industrialIDs, "uid"=>$id));
 		  return;
 		}else{
@@ -3908,6 +4204,7 @@
 						$fileType = array();
 						
 						$productServiceCompany = array();
+						$productServiceAudioAdImage = array();
 				
                 if($connect_result->num_rows > 0){				
 					//if($connect_result->fetch_assoc()["dirId"] != ""){				
@@ -3936,7 +4233,8 @@
 						
 						if(count($industrialIDs) == 0){
 						  echo json_encode(array("files"=>$_array_4_files, "externalInfos"=>"", 
-						  "productServiceCompany"=>$productServiceCompany, "state"=>601, "fileType"=>$fileType,
+						  "productServiceCompany"=>$productServiceCompany, "productServiceAudioAdImage"=>
+						  $productServiceAudioAdImage, "state"=>601, "fileType"=>$fileType,
 						  "adID"=>$_POST["ad-type-id"]));	
 						  return;
 						}
@@ -3945,7 +4243,7 @@
 						if($industrialIDs[$indx] != ""){
 							if(count($industrialIDs) > 0){					
 								for($getIds = 0;$getIds < count($industrialIDs);$getIds++){
-									$server_target_db = "select productServiceName from product_service_info_".
+									$server_target_db = "select productServiceName, productServiceAudioAdImage from product_service_info_".
 									$industrialIDs[$getIds].";";
 									
 									$connect_nresult = $connect->query($server_target_db);
@@ -3962,6 +4260,7 @@
 										  }else if($_POST["ad-display-type-id"] == 2){
 											  if($file_type == "mp3"){
 												$_array_4_files[$indx] = "adv.audios/".$rown["productServiceName"];
+												$productServiceAudioAdImage[$indx] = $rown["productServiceAudioAdImage"];//"adv.audios.img/".
 												$fileType[$indx] = 2;
 												$indx++;
 											  }
@@ -3988,7 +4287,8 @@
 		  //$_array_4_files = $industrialIDs
 	  
 		  echo json_encode(array("files"=>$_array_4_files, "externalInfos"=>"", 
-		  "productServiceCompany"=>$productServiceCompany, "state"=>601, "fileType"=>$fileType,
+		  "productServiceCompany"=>$productServiceCompany, 
+		  "productServiceAudioAdImage"=>$productServiceAudioAdImage, "state"=>601, "fileType"=>$fileType,
 		  "adID"=>$_POST["ad-type-id"], "ids"=>$industrialIDs));
 		  return;
 		}		  
@@ -4047,16 +4347,18 @@
 				 echo json_encode(array("state"=>551));
 				 return;
 			  }
-			  $file_dir_handle = opendir($gagaUserAccountVideos); //opendir("./didcx.facial.biometrics");
+			  //$file_dir_handle = opendir($gagaUserAccountVideos); //opendir("./didcx.facial.biometrics");
 		}
 /* 		}else{
 			 $file_dir_handle = opendir("./adv.videos"); //opendir("./didcx.facial.biometrics");
 		} */
 
              $productServiceCompany = array();
+             $productServiceAudioAdImage = array();
              $product_service_info = "product_service_info_".$dirId2;
 			 
-			 $server_target_db = "select productServiceCompany from ".$product_service_info.";";// and id='".$id."';";
+			 $server_target_db = "select productServiceCompany, productServiceName, 
+			 productServiceAudioAdImage from ".$product_service_info.";";// and id='".$id."';";
 			 $connect_result = $connect->query($server_target_db);		 
 			 
 			 if($connect_result === FALSE){
@@ -4067,18 +4369,25 @@
 	
 			 $dir_index = 0;
 			 
+			 $_array_4_files = array();
+			 
 			 if ($connect_result->num_rows > 0) {
 				// output data of each row
 				 while($row = $connect_result->fetch_assoc()) {
 					 //$id = $row["id"];						   
+					if(strtolower(pathinfo($row["productServiceName"], PATHINFO_EXTENSION)) != "mp4"){
+					 $_array_4_files[$dir_index] = "adv.audios/".$row["productServiceName"];			
+					 $productServiceAudioAdImage[$dir_index] = $row["productServiceAudioAdImage"];			
 					 $productServiceCompany[$dir_index] = $row["productServiceCompany"];			
 					 $dir_index += 1;
+					}
 				}
 			 }else{
 				 echo json_encode(array("state"=>3));
 				 return;
 			 }
-		
+		 
+		 /*
 		  $dir_index = 0;
 		  
 		  $dir_contents[$dir_index] = readdir($file_dir_handle);
@@ -4130,12 +4439,12 @@
 				 //echo $_advEvent_links; //."\n";//;//."<br>";
 				 $dir_index += 1;
 			  }
-		  }
+		  }*/
 /* 		  $dir_index_str = number_format($dir_index);
 		  echo '"'.$dir_index_str. '" : "'. '.'.'"';//."\n"; //"<br>";
 		  echo "}"; */
 		  echo json_encode(array("files"=>$_array_4_files, "externalInfos"=>"", "productServiceCompany"=>$productServiceCompany, 
-		  "state"=>601, "fileType"=> ""));
+		  "productServiceAudioAdImage"=>$productServiceAudioAdImage, "state"=>601, "fileType"=> ""));
 		  return;
 		}else{
 		   
@@ -4184,6 +4493,20 @@
 		  //echo "<br>";
 		  //echo "\n";
 		  
+		     $productServiceCompany = array();
+		     $productServiceAudioAdImage = array();
+
+		     $connect = ConnectServer(0);
+
+			 if($connect["state"] != 500006){
+				echo json_encode($connect);
+				return;
+			 }
+			 
+			 $connect = $connect["connect"];
+			 
+			 $dir_index22 = 0;
+		  
 		  foreach($dir_contents as $_server_response_index){
 			  if($_server_response_index == ""){
 				  //echo "0";
@@ -4195,6 +4518,31 @@
 				 //$_user_facial_links = '"'.$dir_index_str. '" : "'. "http://www.localhost/didcx.facial.biometrics/". $_array_4_json[$dir_index_str].'",';
 				 //$_advEvent_links = '"'.$dir_index_str. '" : "'. "http://www.localhost/advert.llc/adv.videos/".$_array_4_json[$dir_index_str].'",';
 				 $_array_4_files[number_format($dir_index)] = "adv.audios/".$_array_4_json[$dir_index_str];//.'",';
+				 
+				 $server_target_db = "select productServiceAudioAdImage, 
+				 productServiceCompany from productServiceNames where productServiceName='".$_array_4_json[$dir_index_str]."';";
+				 
+				 $connect_result = $connect->query($server_target_db);		 
+				 
+				 if($connect_result === FALSE){
+					 echo json_encode(array("state"=>2));
+					 return;
+				 }
+				 
+				 if ($connect_result->num_rows > 0) {
+					// output data of each row
+					 while($row = $connect_result->fetch_assoc()) {			   
+						if(strtolower(pathinfo($_array_4_json[$dir_index_str], PATHINFO_EXTENSION)) != "mp4"){			
+						 $productServiceAudioAdImage[$dir_index22] = $row["productServiceAudioAdImage"];
+						 $productServiceCompany[$dir_index22] = $row["productServiceCompany"];
+						 $dir_index22++;
+						}
+					}
+				 }else{
+					 echo json_encode(array("state"=>3));
+					 return;
+				 }
+				 
 				 //echo $_advEvent_links; //."\n";//;//."<br>";
 				 $dir_index += 1;
 			  }
@@ -4203,7 +4551,8 @@
 		  echo '"'.$dir_index_str. '" : "'. '.'.'"';//."\n"; //"<br>";
 		  echo "}"; */
 		  echo json_encode(array("files"=>$_array_4_files, "externalInfos"=>"", 
-		  "productServiceCompany"=>$productServiceCompany, "state"=>601, "fileType"=> ""));
+		  "productServiceCompany"=>$productServiceCompany, 
+		  "productServiceAudioAdImage"=>$productServiceAudioAdImage, "state"=>601, "fileType"=> ""));
 		  return;
 		}
 	   }

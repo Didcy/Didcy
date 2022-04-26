@@ -85,10 +85,10 @@ $(document).ready(function(){
 }); 
 function updateUserList() {
 	var drim = "";
-	if(window.location.href.slice(44) == ""){
+	if(window.location.href.slice(39) == ""){
 		drim = "";
 	}else{
-		drim = window.location.href.slice(44);
+		drim = window.location.href.slice(39);
 	}
 	var form = new FormData();
 	form.append("action", "update_user_list");

@@ -8,7 +8,8 @@ var pageLoadCheckTimer = 0;
 var $fetchIDTemp = 0;
 //var modal_015, img_015, close15, caption15, modal_15_value = 0, res;
 
- var exhibitEventsFromLiveSearch = function($fetchID = null, drim = null, searchResults = null, clearContainerId = null, company_name_text = null, 
+ var exhibitEventsFromLiveSearch = function($fetchID = null, drim = null, searchResults = null, 
+ searchResultsAudioAdImage = null, clearContainerId = null, company_name_text = null, 
  fileTypeID = null){
   
   $fetchIDTemp = $fetchID;
@@ -20,6 +21,7 @@ var $fetchIDTemp = 0;
 		  fileTypeIDLength = fileTypeID.length;
 		  
 		  if(system_dirArr != null){
+			 document.getElementById("logo").src = "didcy2.png";
 			 if($fetchID == 2){
 			   if(drim != null){
 				 for(let i = 0;i < system_dirArr.length;i++){
@@ -33,13 +35,13 @@ var $fetchIDTemp = 0;
 				  
                   if(fileTypeIDLength > 0){
 					  if(fileTypeID[i] == 1){
-						  elem = document.createElement("embed");
+						  elem = document.createElement("video");
 						  columElem.setAttribute("class", "column");
 						  /* columElem.setAttribute("style", "background-color:blue"); */
 						  columElem.setAttribute("id", "col-embed");
 						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
 						  elem.setAttribute("src", system_dirArr[i]);
-						  elem.setAttribute("autoplay", "true");
+						  //elem.setAttribute("autoplay", "false");
 						  elem.setAttribute("loop", "1");
 						  elem.setAttribute("muted", "true");
 						  elem.setAttribute("controls", "true");
@@ -58,6 +60,7 @@ var $fetchIDTemp = 0;
 						  elem.setAttribute("controls", "true");
 						  elem.setAttribute("class", classID1);
 						  elem.setAttribute("id", classID);
+						  elem.setAttribute("style", "background-image: url('"+"adv.audios.img/"+productServiceAudioAdImage[i]+"')");
 					  }else{
 						  elem = document.createElement("img");
 						  columElem.setAttribute("class", "column");
@@ -85,7 +88,7 @@ var $fetchIDTemp = 0;
 				  let gaga_share = document.createElement("button");
 				  const gaga_shareText = document.createTextNode("Act");
 				  gaga_share.setAttribute("class", "button-1 gaga-share button1");
-				  gaga_share.setAttribute("id", "button-1");
+				  gaga_share.setAttribute("id", "button-15");
 				  
 				  let column = document.getElementsByClassName("column");
 				  for(var columnCount = 0;columnCount < column.length;columnCount++){
@@ -134,6 +137,7 @@ var $fetchIDTemp = 0;
                  video_elem.setAttribute("class", "modal-content-20 modal-content-20-audio");
                  video_elem.setAttribute("id", "img01-20");
                  video_elem.setAttribute("controls", "true");
+                 video_elem.setAttribute("style", "background-image: url('"+"adv.audios.img/"+productServiceAudioAdImage[i]+"')");
 
 			     modal.style.display = "block";
 
@@ -162,10 +166,43 @@ var $fetchIDTemp = 0;
                     modal.removeChild(videoEl);
 				 }
 
-                 var video_elem = document.createElement("embed");
+                 var video_elem = document.createElement("video");
                  video_elem.setAttribute("src", system_dirArr[i]);
                  video_elem.setAttribute("class", "modal-content-20");
                  video_elem.setAttribute("id", "img01-20");
+                 video_elem.setAttribute("controls", "true");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
+                 elem.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+
+                 var video_elem = document.createElement("video");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("id", "img01-20");
+                 video_elem.setAttribute("controls", "true");
 
 			     modal.style.display = "block";
 
@@ -223,8 +260,8 @@ var $fetchIDTemp = 0;
 					  for(var gagaCount = 0;gagaCount < GaGaShare2.length;gagaCount++){
 						  var gagaShareWithDoc = document.createElement("button");
 						  var gagaShareWithDocText = document.createTextNode(GaGaShare2[gagaCount]);
-						  const classID = "button-1 " + GaGaShareID2[gagaCount];
-						  const GaGaBG2 = "cursor: pointer;padding: 5px;font-size: 17px;display:  block;margin-bottom: 2%;width: 50%;position: relative;left: 25%;background-color: " + GaGaShareBG[gagaCount];
+						  const classID = "button-1 button-33 " + GaGaShareID2[gagaCount];
+						  const GaGaBG2 = "background-color: " + GaGaShareBG[gagaCount];
 						  gagaShareWithDoc.setAttribute("class", GaGaShareID2);
 						  gagaShareWithDoc.setAttribute("id", "button-1");
 						  gagaShareWithDoc.setAttribute("style", GaGaBG2);
@@ -527,7 +564,7 @@ var $fetchIDTemp = 0;
 								  describe.setAttribute("style", "font-family: sans-serif, arial; font-size: 30px;color: white;text-align: center");
 								  describe.append(describeTxt);
 								  modal_015.insertBefore(describe, caption15);
-								  caption15.innerHTML = "GaGa Express";
+								  //caption15.innerHTML = "GaGa Express";
 								  
 								  modal_015.style.display = "block";
 								  
@@ -619,7 +656,7 @@ var $fetchIDTemp = 0;
 								  describe.append(describeTxt);
 								  describe.innerHTML = period;
 								  modal_015.insertBefore(describe, caption15);
-								  caption15.innerHTML = "GaGa Express";
+								  //caption15.innerHTML = "GaGa Express";
 								  
 								  modal_015.style.display = "block";
 								  
@@ -705,7 +742,7 @@ var $fetchIDTemp = 0;
 								  describe.append(describeTxt);
 								  //describe.innerHTML = period;
 								  modal_015.insertBefore(describe, caption15);
-								  caption15.innerHTML = "GaGa Express";
+								  //caption15.innerHTML = "GaGa Express";
 								  
 								  modal_015.style.display = "block";
 								  
@@ -784,13 +821,13 @@ var $fetchIDTemp = 0;
 				  
                   if(fileTypeIDLength > 0){
 					  if(fileTypeID[i] == 1){
-						  elem = document.createElement("embed");
+						  elem = document.createElement("video");
 						  columElem.setAttribute("class", "column");
 						  /* columElem.setAttribute("style", "background-color:blue"); */
 						  columElem.setAttribute("id", "col-embed");
 						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
 						  elem.setAttribute("src", system_dirArr[i]);
-						  elem.setAttribute("autoplay", "true");
+						  //elem.setAttribute("autoplay", "false");
 						  elem.setAttribute("loop", "1");
 						  elem.setAttribute("muted", "true");
 						  elem.setAttribute("controls", "false");
@@ -809,6 +846,7 @@ var $fetchIDTemp = 0;
 						  elem.setAttribute("controls", "true");
 						  elem.setAttribute("class", classID1);
 						  elem.setAttribute("id", classID);
+						  elem.setAttribute("style", "background-image: url('"+"adv.audios.img/"+productServiceAudioAdImage[i]+"')");
 					  }else{
 						  elem = document.createElement("img");
 						  columElem.setAttribute("class", "column");
@@ -892,7 +930,7 @@ var $fetchIDTemp = 0;
                     modal.removeChild(videoEl);
 				 }
 
-                 var video_elem = document.createElement("embed");
+                 var video_elem = document.createElement("video");
                  video_elem.setAttribute("src", system_dirArr[i]);
                  video_elem.setAttribute("class", "modal-content-20");
                  video_elem.setAttribute("id", "img01-20");
@@ -961,6 +999,7 @@ company_name.onmouseout = function(){
                  video_elem.setAttribute("class", "modal-content-20 modal-content-20-audio");
                  video_elem.setAttribute("id", "img01-20");
                  video_elem.setAttribute("controls", "true");
+                 video_elem.setAttribute("style", "background-image: url('"+"adv.audios.img/"+productServiceAudioAdImage[i]+"')");
 
 			     modal.style.display = "block";
 
@@ -989,10 +1028,43 @@ company_name.onmouseout = function(){
                     modal.removeChild(videoEl);
 				 }
 
-                 var video_elem = document.createElement("embed");
+                 var video_elem = document.createElement("video");
                  video_elem.setAttribute("src", system_dirArr[i]);
                  video_elem.setAttribute("class", "modal-content-20");
                  video_elem.setAttribute("id", "img01-20");
+				 video_elem.setAttribute("controls", "true");
+
+			     modal.style.display = "block";
+
+				 modal.insertBefore(video_elem, modalImg);
+
+                 videoEl = video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";				  
+			   }
+                 elem.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+
+                 var video_elem = document.createElement("video");
+                 video_elem.setAttribute("src", system_dirArr[i]);
+                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("id", "img01-20");
+				 video_elem.setAttribute("controls", "true");
 
 			     modal.style.display = "block";
 
@@ -1127,7 +1199,7 @@ function checkSize(elem){
 			  //var elem = document.createElement("video");
 			  //window.alert(system_dirArr);
 			  var columElem = document.createElement("div");
-			  var elem = document.createElement("embed");
+			  var elem = document.createElement("video");
 			  columElem.setAttribute("class", "column");
 			  /* columElem.setAttribute("style", "background-color:blue"); */
 			  columElem.setAttribute("id", "column");

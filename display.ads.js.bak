@@ -1077,7 +1077,7 @@ engineId = 0) => {
  		storeAllCreatedIds = [];
 		convert_to_object = null;
 		system_dirArr = [];
-		//system_dirArr_videos_images = [];
+		system_dirArr_videos_images = [];
 		array_js_init = 0, array_js = [], linkArr = null;		
 	    let data_returned = JSON.parse(result);
 		var actor_group = null;

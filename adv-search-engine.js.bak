@@ -59,7 +59,7 @@ if (event.keyCode == 13) {
 	$searchEngine == "clear didcy keys" || $searchEngine == "Clear Didcy keys" || 
 	$searchEngine == "clear didcy Keys" || $searchEngine == "clear keys" ||  
 	$searchEngine == "Clear Keys" || $searchEngine == "CLEAR KEYS" ||  
-	$searchEngine == "clear Keys" || $searchEngine == "Clear keys"){ 
+	$searchEngine == "clear Keys" || $searchEngine == "CLEAR KEYS"){ 
 		document.getElementById("didcy-keys-btn").style.display = "none";
 		return;
 	}

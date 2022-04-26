@@ -1,0 +1,17 @@
+.didcy-keys-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 50%;
+  z-index: 1;
+  width: 100px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  background-color: rgba(100, 100, 100, 1);
+  border-radius: 5%;
+  display: none;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.didcy-keys-btn:focus {
+  width: 5%;
+}

@@ -1,5 +1,5 @@
 <?php
- include("functions.php");
+ include("../functions.php");
  include("chat.log.retrieval.php");
 
  if(!empty($_POST['member-name']) && !empty($_POST['member-id'])){
