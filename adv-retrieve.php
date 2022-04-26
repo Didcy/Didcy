@@ -21,8 +21,8 @@ function ValidateDrim($rc_id = null, $data_id = null, $drim = null) : int{
 					     $connect = ConnectServer(0);
 
 						 if($connect["state"] != 500006){
-							echo json_encode($connect);
-							return;
+							//echo json_encode($connect);
+							return $connect["state"];
 						 }
 						 
 						 $connect = $connect["connect"];
@@ -88,7 +88,7 @@ function ValidateDidcyLinks(){
       session_destroy();
 	  echo "Cookie not enabled";
   }else{ 
-      if(empty($_COOKIE) != TRUE && count($_COOKIE) > 2){
+      if(empty($_COOKIE) != TRUE && count($_COOKIE) > 3){
 		  if(empty($_COOKIE["GAGA_RESPONSE"]) != true || $_COOKIE["GAGA_RESPONSE"] != ""){
 	         $cookie_id = $_COOKIE["GAGA_RESPONSE"];
 	         $link = "adv-main.php?drim=".$cookie_id;
@@ -217,7 +217,7 @@ function ValidateDidcyLinks(){
 								document.write('<h2>Please user not exist. Please check your drim in the URL. Thank you</h2>.'); 			   
 							  </script>";					  
 				  }else{
-					  require("adv-policies/privacy-policy-link.htm");					  
+					  require("adv-policies/privacy-policy-link.htm");	
 				  }	
 			 }else if($_GET["rc_id"] == "629910827171826" && $_GET["data_id"] == "6" && $_GET["drim"] != "" && $_GET["drim"] != "19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011"){
 				 $validId = ValidateDrim($_GET["rc_id"], $_GET["data_id"], $_GET["drim"]);
@@ -439,6 +439,7 @@ function ValidateDidcyLinks(){
 		  session_start();
 		  //setcookie("GAGA_RELATIONS", "r99303922022");
 		  //include("index.htm");
+		  include_once("adv-policies/policy-error.htm");
       }
   }
 }

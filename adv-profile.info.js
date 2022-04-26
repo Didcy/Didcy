@@ -1,8 +1,8 @@
 "use strict";
 
-  var urls = ["chat/"+"chat_action.php", "chat/"+"retrieve.new.status.php", 
-  "chat/"+"retrieve.chat.php", "chat/"+"updateConversation.php",
-  "chat/"+"chat.log.php", "chat/"+"chat.add.php"];
+  var urls = [""+"chat_action.php", ""+"retrieve.new.status.php", 
+  ""+"retrieve.chat.php", ""+"updateConversation.php",
+  ""+"chat.log.php", ""+"chat.add.php"];
 
 var openButton2 = null;
 function openForm_2() {

@@ -224,7 +224,6 @@ function CloseMain2(closeId = 0){
   if(closeId == 0){
 	if(adsFilesLength > 1){
 		adsDescriptionContainer[ads_count] = GetProductServiceDescription(psd_global);
-		type = document.getElementById("uploads").files[ads_count].type.slice(0, 5);
         if(type == "audio"){
 		  audioIn = 1;
 		  audioImageContainer[audioTypeCount] = type;

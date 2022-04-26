@@ -12,12 +12,17 @@ function DescribeProductService() : void{
 			 }
 			 
 			 $connect = $connect["connect"];
+			 
+			 $company = $_POST["company"];
 
              $id = $_POST["drim"];
 			 $server_target_db = "select dirId from gaga where id='".$id."';";
 			 $connect_result = $connect->query($server_target_db);
+			 
 			 if($connect_result === False){
-				 echo json_encode(array("state"=>11));
+				 echo json_encode(array("state"=>11, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id));
 				 return;
 			 }
              
@@ -28,7 +33,9 @@ function DescribeProductService() : void{
 					 $dirId = $row["dirId"];				 
 				}
 			 }else{
-				 echo json_encode(array("state"=>3));
+				 echo json_encode(array("state"=>3, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id));
 				 return;
 			 }
              
@@ -43,7 +50,10 @@ function DescribeProductService() : void{
 				 $connect_result = $connect->query($server_target_db);
 				 
 				 if($connect_result === False){
-					 echo json_encode(array("state"=>11));
+					 echo json_encode(array("state"=>11, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 					 return;
 				 }
 
@@ -53,10 +63,16 @@ function DescribeProductService() : void{
 						 $describe = $row["productServiceDescription"];				 
 					}
 				 }else{
-					 echo json_encode(array("state"=>3));
+					 echo json_encode(array("state"=>3, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 					 return;
 				 }
-				 echo json_encode(array("describe"=>$describe, "state"=>4));
+				 echo json_encode(array("describe"=>$describe, "state"=>4, 
+				 "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 			 }
 			 else if($_POST["describe"] == 3){
 				 $server_target_db = "select productServiceApprovedBy from ".$productServiceInfoID."
@@ -66,7 +82,10 @@ function DescribeProductService() : void{
 				 $connect_result = $connect->query($server_target_db);
 				 
 				 if($connect_result === False){
-					 echo json_encode(array("state"=>11));
+					 echo json_encode(array("state"=>11, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 					 return;
 				 }
 
@@ -76,10 +95,16 @@ function DescribeProductService() : void{
 						 $approvedBy = $row["productServiceApprovedBy"];				 
 					}
 				 }else{
-					 echo json_encode(array("state"=>3));
+					 echo json_encode(array("state"=>3, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 					 return;
 				 }
-				 echo json_encode(array("productServiceApprovedBy"=>$approvedBy, "state"=>5));
+				 echo json_encode(array("productServiceApprovedBy"=>$approvedBy, "state"=>5, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 			 }
 			 else if($_POST["describe"] == 4){
 				 $server_target_db = "select productServiceCommencementDate, 
@@ -91,7 +116,10 @@ function DescribeProductService() : void{
 				 $connect_result = $connect->query($server_target_db);
 				 
 				 if($connect_result === False){
-					 echo json_encode(array("state"=>11));
+					 echo json_encode(array("state"=>11, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 					 return;
 				 }
 
@@ -106,14 +134,20 @@ function DescribeProductService() : void{
 						 $gagaShipmentTime = $row["gagaShipmentTime"];				 
 					}
 				 }else{
-					 echo json_encode(array("state"=>3));
+					 echo json_encode(array("state"=>3, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 					 return;
 				 }
 				 
 				 echo json_encode(array("productServicePeriod"=>
 				 array($productServiceCommencementDate, $productServiceElapsingDate,
 				 $productServiceCommencementTime, $productServiceElapsingTime,
-				 $gagaShipmentDate, $gagaShipmentTime), "state"=>6));
+				 $gagaShipmentDate, $gagaShipmentTime), "state"=>6, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 			 }
 			 else if($_POST["describe"] == 5){
 				 $server_target_db = "select productServiceCountry from ".$productServiceInfoID."
@@ -123,7 +157,10 @@ function DescribeProductService() : void{
 				 $connect_result = $connect->query($server_target_db);
 				 
 				 if($connect_result === False){
-					 echo json_encode(array("state"=>11));
+					 echo json_encode(array("state"=>11, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 					 return;
 				 }
 
@@ -133,10 +170,16 @@ function DescribeProductService() : void{
 						 $productServiceCountry = $row["productServiceCountry"];				 
 					}
 				 }else{
-					 echo json_encode(array("state"=>3));
+					 echo json_encode(array("state"=>3, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 					 return;
 				 }
-				 echo json_encode(array("productServiceCountry"=>$productServiceCountry, "state"=>7));
+				 echo json_encode(array("productServiceCountry"=>$productServiceCountry, "state"=>7, "error"=>$connect->error, 
+				 "close"=>$connect->close(), "description_id"=>$_POST["describe"], 
+				 "company"=>$company, "drim"=>$id, "prid"=>$productServiceInfoID, 
+				 "dirId"=>$dirId, "prname"=>$_POST["productServiceName"]));
 			 }
 			 else{
 				 

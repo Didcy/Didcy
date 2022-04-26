@@ -524,7 +524,7 @@ input[type=text]{
 }
 
 /* Style the images inside the grid */
-.column embed, .column img, .column audio {
+.column embed, .column img, .column audio, .column video {
   opacity: 1; /*opacity: 0.8; */
   cursor: pointer; 
   width: 100%;
@@ -545,7 +545,7 @@ video.column, img.column, audio.column {
   width: 100%;
 }
 
-.column embed:hover, .column img:hover, .column audio:hover {
+.column embed:hover, .column img:hover, .column audio:hover, .column video:hover {
   opacity: 1;
 }
 

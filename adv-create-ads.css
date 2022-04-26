@@ -243,6 +243,30 @@
    /*position: fixed; */
 }
 
+.mobile-device-access-ads{
+	display: none;
+	font-size: 30px;
+	text-align: center;
+	position: relative; 
+	top: 20%;
+}
+
+.drop-down-ads{
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+	.modal-9{
+	  
+	}
+.mobile-device-access-ads{
+	display: block;
+}
+.ads-nav{
+	display: none;
+}
+}
+
 @media screen and (max-height: 625px){		
 	.low-level-nav{
 	   display: none;	  
@@ -250,4 +274,10 @@
 	.bottom-level-nav{
 	   display: block;
 	}
+.mobile-device-access-ads{
+	display: block;
+}
+.ads-nav{
+	display: none;
+}
 }

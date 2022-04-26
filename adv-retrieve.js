@@ -1,31 +1,31 @@
 "use strict";
 
-/*[[https://www.didcy.ueuo.com], [$1_secure_my_domains, $1_secure_my_domains, 
+/*[[https://www.localhost], [$1_secure_my_domains, $1_secure_my_domains, 
 term_of_use, term_of_use, term_of_sanction, term_of_sanction, https://policymaker.io/non_disclosure_agreement, https://policymaker.io/privacy_policy, authors/know_more, investors/know_more, team/know_more, didcy_design_updates_centre, mentors/know_more]];
 */
-//http://www.didcy.ueuo.com http://www.didcy.ueuo.com/advert.llc
+//http://www.localhost http://www.localhost/advert.llc
 
-//http://www.didcy.ueuo.com
+//http://www.localhost
 
-//http://www.didcy.ueuo.com
+//http://www.localhost
 
 var didcyLinks = {
-	didcy: {"id": "didcy", "link": "http://www.didcy.ueuo.com/adv-main.html?drim="},
-	home: {"id": "home", "link": "http://www.didcy.ueuo.com/adv-main.html?drim="},
-	secure_my_domains: {"id": "secure-my-domains", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=029910827171820&policy-id=0&&data_id=0&service=0&&drim="},
-	dispute: {"id": "dispute", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=12299108271718212&policy-id=0&&data_id=12&service=0&&drim="},
-	domian_term_of_use: {"id": "domian-term-of-use", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=129910827171821&policy-id=0&&data_id=1&service=0&&drim="},
-	limit: {"id": "limit", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim="},
-	term_of_sanction: {"id": "term-of-sanction", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=229910827171822&policy-id=0&&data_id=2&service=0&&drim="},
-	term_of_sanction2: {"id": "term-of-sanction-2", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=229910827171822&policy-id=0&&data_id=2&service=0&&drim="},
-	non_disclosure_agreement: {"id": "non-disclosure-agreement", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=329910827171823&policy-id=0&&data_id=3&service=0&&drim="},
+	didcy: {"id": "didcy", "link": "http://www.localhost/adv-main.html?drim="},
+	home: {"id": "home", "link": "http://www.localhost/adv-main.html?drim="},
+	secure_my_domains: {"id": "secure-my-domains", "link": "http://www.localhost/adv-retrieve.php?rc_id=029910827171820&policy-id=0&&data_id=0&service=0&&drim="},
+	dispute: {"id": "dispute", "link": "http://www.localhost/adv-retrieve.php?rc_id=12299108271718212&policy-id=0&&data_id=12&service=0&&drim="},
+	domian_term_of_use: {"id": "domian-term-of-use", "link": "http://www.localhost/adv-retrieve.php?rc_id=129910827171821&policy-id=0&&data_id=1&service=0&&drim="},
+	limit: {"id": "limit", "link": "http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim="},
+	term_of_sanction: {"id": "term-of-sanction", "link": "http://www.localhost/adv-retrieve.php?rc_id=229910827171822&policy-id=0&&data_id=2&service=0&&drim="},
+	term_of_sanction2: {"id": "term-of-sanction-2", "link": "http://www.localhost/adv-retrieve.php?rc_id=229910827171822&policy-id=0&&data_id=2&service=0&&drim="},
+	non_disclosure_agreement: {"id": "non-disclosure-agreement", "link": "http://www.localhost/adv-retrieve.php?rc_id=329910827171823&policy-id=0&&data_id=3&service=0&&drim="},
 	privacy_policy : {"id": "privacy-policy", "link": "adv-retrieve.php?rc_id=429910827171824&policy-id=0&&data_id=4&service=0&&drim="},
-	privacy_policy_link: {"id": "privacy-policy-link", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=529910827171825&policy-id=0&&data_id=5&service=0&&drim="},
-	authors_know_more : {"id": "authors-know-more", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=629910827171826&policy-id=0&&data_id=6&service=0&&drim="},
-	investors_know_more: {"id": "investors-know-more", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=729910827171827&policy-id=0&&data_id=7&service=0&&drim="},
-	team_know_more: {"id": "team-know-more", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=829910827171828&policy-id=0&&data_id=8&service=0&&drim="},
-	design_update_centre: {"id": "design-update-centre", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=929910827171829&policy-id=0&&data_id=9&service=0&&drim="},
-	mentors_know_more: {"id": "mentors-know-more", "link": "http://www.didcy.ueuo.com/adv-retrieve.php?rc_id=10299108271718210&policy-id=0&&data_id=10&service=0&&drim="}	
+	privacy_policy_link: {"id": "privacy-policy-link", "link": "http://www.localhost/adv-retrieve.php?rc_id=529910827171825&policy-id=0&&data_id=5&service=0&&drim="},
+	authors_know_more : {"id": "authors-know-more", "link": "http://www.localhost/adv-retrieve.php?rc_id=629910827171826&policy-id=0&&data_id=6&service=0&&drim="},
+	investors_know_more: {"id": "investors-know-more", "link": "http://www.localhost/adv-retrieve.php?rc_id=729910827171827&policy-id=0&&data_id=7&service=0&&drim="},
+	team_know_more: {"id": "team-know-more", "link": "http://www.localhost/adv-retrieve.php?rc_id=829910827171828&policy-id=0&&data_id=8&service=0&&drim="},
+	design_update_centre: {"id": "design-update-centre", "link": "http://www.localhost/adv-retrieve.php?rc_id=929910827171829&policy-id=0&&data_id=9&service=0&&drim="},
+	mentors_know_more: {"id": "mentors-know-more", "link": "http://www.localhost/adv-retrieve.php?rc_id=10299108271718210&policy-id=0&&data_id=10&service=0&&drim="}	
 };
 
 function SetDidcyLinks(){

@@ -21,7 +21,8 @@
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  box-shadow: 1px 1px 11px 4px rgba(20, 15, 21, 1); /*125, 120, 130*/
+  /*box-shadow: 1px 1px 11px 4px rgba(20, 15, 21, 1); 125, 120, 130*/
+  border: none;
 }
 
 .price:hover {

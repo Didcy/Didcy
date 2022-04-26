@@ -1,0 +1,70 @@
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+var playCall = 0;
+
+function OpenCourserySidePlay() {
+ if(playCall == 0){
+  document.getElementById("coursery-playground-tool-kits").style.width = "250px";
+  document.getElementById("coursery-playground-header").style.marginLeft = "250px";
+  document.getElementById("modal-content-coursery-playground").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  playCall = 1;
+ }else{
+  CloseCourserySidePlay();
+  playCall = 0;
+ }
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function CloseCourserySidePlay() {
+  document.getElementById("coursery-playground-tool-kits").style.width = "0";
+  document.getElementById("coursery-playground-header").style.marginLeft = "0";
+  document.getElementById("modal-content-coursery-playground").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+  playCall = 0;
+}
+
+var playLines = document.getElementsByClassName("front-line");
+
+function PlayLines(){
+  const playLength = playLines.length;
+  for(let playCount = 0;playCount < playLength;playCount++){
+	 playLines[playCount].addEventListener("click", (event) => event.preventDefault());
+  }
+}
+
+//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var coursery_playground_dropdown = document.getElementsByClassName("courses-frontline");
+var coursery_playground_i;
+
+for (coursery_playground_i = 0; coursery_playground_i < coursery_playground_dropdown.length; coursery_playground_i++) {
+  coursery_playground_dropdown[coursery_playground_i].addEventListener("click", function() {
+    this.classList.toggle("active-drops");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+   //ServicesNotAvailable('Didcy Course', 
+	  // 'Didcy Course report is at the back side. Please tab/put the mouse on this box to view the report.', -4)
+ function Open(){
+    //return ServicesNotAvailable('Didcy Course', 
+	//'Didcy Course report is at the back side. Please tab/put the mouse on this box to view the report.', -4)
+	document.getElementById('modal-coursery-container').style.display='block';
+	//document.getElementById('coursery-service-btn').style.display='none';
+}
+
+
+document.getElementsByClassName("didcy-term-policy-sign")[0].addEventListener("click", 
+(event) => event.preventDefault());
+
+document.getElementsByClassName("didcy-term-policy-sign-2")[0].addEventListener("click", 
+(event) => event.preventDefault());
+
+document.getElementById("didcy-work-policy-from-form").addEventListener("click", 
+(event) => event.preventDefault());
+
+PlayLines();
