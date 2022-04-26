@@ -4,6 +4,7 @@ var modalChat = document.getElementById("myModal-chat");
 var modalChatBoard = document.getElementsByClassName("modal-chat-board")[0];
 var closeChat = document.getElementsByClassName("close-chat")[0];
 var closeChatBoard = document.getElementsByClassName("close-chat-board")[0];
+var closeChatBoard2 = document.getElementsByClassName("close-chat-board-2")[0];
 
 function ChatBoard(){
    modalChat.style.display = "block";
@@ -22,6 +23,7 @@ function ChatBoarder(){
 }
 
 closeChatBoard.addEventListener("click", closeChatBoarder);
+closeChatBoard2.addEventListener("click", closeChatBoarder);
 
 function closeChatBoarder(){
 	 var form = new FormData();

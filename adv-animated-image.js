@@ -40,7 +40,7 @@ function SwitchImages(imageId = null, imageFile = "") {
 	    document.getElementById("animated-image").src = image;		  
 	  break;
 	  case "-upcoming-updates":
-	    image = "adv.tutorials/images/Capture291.PNG";
+	    image = "adv.tutorials/images/Capture10.PNG";
 	    document.getElementById("animated-image").src = image;			
 	    document.getElementById("animated-image").style.height = "90%";			
 	    document.getElementById("animated-image").style.width = "100%";			

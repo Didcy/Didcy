@@ -127,6 +127,10 @@ padding-left: 2px;font-size: 20px;font-family: sans-serif, arial, verdana;}
 
 .cursor{cursor: pointer;} */
 
+.right2-animate{
+  padding-top: 12px;
+}
+
 
 @media screen and (max-height: 599px){
 	.right2 h1.right1{text-align: left;}
@@ -307,4 +311,126 @@ padding-left: 2px;font-size: 20px;font-family: sans-serif, arial, verdana;}
     .jhal{font-size: 13px;}
 .left2-animate h1.left1-animate{text-align: center;font-size: 18px;}
 .right2-animate h1.right1-animate{text-align: center;font-size: 18px;}
+}
+
+@media screen and (min-width: 800px){
+  .left2-animate{
+	 padding-top: 100px;
+  }
+  .right2-animate{
+	 padding-top: 100px;
+  }
+.close-curtain-animate{
+  top: 15px;
+  right: 30px;	
+  font-size: 40px;
+}
+}
+
+@media screen and (min-height: 625px){
+  .left2-animate{
+	 padding-top: 100px;
+  }
+  .right2-animate{
+	 padding-top: 100px;
+  }
+.close-curtain-animate{
+  top: 15px;
+  right: 30px;	
+  font-size: 40px;
+}
+}
+
+@media screen and (min-height: 653px){
+  .left2-animate{
+	 padding-top: 30px;
+  }
+  .right2-animate{
+	 padding-top: 30px;
+  }
+.close-curtain-animate{
+  top: 0;
+  right: 5px;	
+  font-size: 25px;
+}
+}
+
+@media screen and (min-height: 657px){
+  .left2-animate{
+	 padding-top: 60px;
+  }
+  .right2-animate{
+	 padding-top: 60px;
+  }
+.close-curtain-animate{
+  top: 15px;
+  right: 30px;	
+  font-size: 40px;
+}
+}
+
+@media screen and (min-height: 660px){
+  .left2-animate{
+	 padding-top: 50px;
+  }
+  .right2-animate{
+	 padding-top: 50px;
+  }
+.close-curtain-animate{
+  top: 2px;
+  right: 5px;	
+  font-size: 40px;
+}
+}
+
+
+@media screen and (min-height: 700px){
+  .left2-animate{
+	 padding-top: 60px;
+  }
+  .right2-animate{
+	 padding-top: 60px;
+  }
+}
+
+@media screen and (min-height: 800px){
+  .left2-animate{
+	 padding-top: 100px;
+  }
+  .right2-animate{
+	 padding-top: 100px;
+  }
+.close-curtain-animate{
+  top: 15px;
+  right: 30px;	
+  font-size: 40px;
+}
+}
+
+@media screen and (min-height: 844px){
+  .left2-animate{
+	 padding-top: 100px;
+  }
+  .right2-animate{
+	 padding-top: 100px;
+  }
+.close-curtain-animate{
+  top: 15px;
+  right: 30px;	
+  font-size: 40px;
+}
+}
+
+@media screen and (min-height: 1000px){
+  .left2-animate{
+	 padding-top: 80px;
+  }
+  .right2-animate{
+	 padding-top: 80px;
+  }
+.close-curtain-animate{
+  top: 15px;
+  right: 30px;	
+  font-size: 40px;
+}
 }
