@@ -1,0 +1,599 @@
+<?php
+
+  include("functions.php");
+
+  function CreateUsrDirs($upd){
+	$plugDir = "plugins";
+	$usr_plugins_dir = $plugDir."/".$upd;
+	$usr_plugins_dir_program = $plugDir."/".$upd."/program";
+	$usr_plugins_dir_css = $plugDir."/".$upd."/css";
+	$usr_plugins_dir_server = $plugDir."/".$upd."/server";
+	$usr_plugins_dir_media = $plugDir."/".$upd."/media";
+	$usr_plugins_dir_media_mp3 = $plugDir."/".$upd."/media/"."mp3";
+	$usr_plugins_dir_media_mp4 = $plugDir."/".$upd."/media/"."mp4";
+	
+	if(!is_dir($plugDir)){
+	   mkdir($plugDir);
+	}
+	
+	if(!is_dir($usr_plugins_dir)){
+	   mkdir($usr_plugins_dir);
+	}
+    
+	//-----------------------------
+	
+	if(!is_dir($usr_plugins_dir_program)){
+	   mkdir($usr_plugins_dir_program);
+	}
+	
+	if(!is_dir($usr_plugins_dir_css)){
+	   mkdir($usr_plugins_dir_css);
+	}
+	
+	if(!is_dir($usr_plugins_dir_server)){
+	   mkdir($usr_plugins_dir_server);
+	}
+	
+	if(!is_dir($usr_plugins_dir_media)){
+	   mkdir($usr_plugins_dir_media);
+	}
+
+	if(!is_dir($usr_plugins_dir_media_mp3)){
+	   mkdir($usr_plugins_dir_media_mp3);
+	}
+	
+	if(!is_dir($usr_plugins_dir_media_mp4)){
+	   mkdir($usr_plugins_dir_media_mp4);
+	}
+	
+	return array(
+		"plugins"=>$plugDir,
+		"plugins_dir", $usr_plugins_dir,
+		"plugins_dir_program"=>$usr_plugins_dir_program,
+		"plugins_dir_css"=>$usr_plugins_dir_css,
+		"plugins_dir_server"=>$usr_plugins_dir_server,
+		"plugins_dir_media"=>$usr_plugins_dir_media,
+		"plugins_dir_media_mp3" => $usr_plugins_dir_media_mp3,
+	    "plugins_dir_media_mp4" => $usr_plugins_dir_media_mp4
+	);
+  }
+ 
+  function Plug($plugID){
+	$upd = "";
+	
+	if($_POST["upd"] != ""){
+	  $upd = CreateUsrDirs($_POST["upd"]);
+	}
+	
+	switch($plugID){
+	 case 0:
+	    /*if(!file_exists("plugins.update")){
+		   $file_handle = fopen("plugins.update", "w");
+		   fclose($file_handle);
+		}*/
+	 
+		$dirHandle = opendir($plugDir);   
+		
+		$dir_index = 0;
+		
+		$pluginsContainer = array();
+		
+		$pluginsContainer[$dir_index] = readdir($dirHandle);
+		
+		$dir_index += 1;
+		
+		$pluginsContainer[$dir_index] = readdir($dirHandle);
+		
+		$dir_index += 1;
+		
+		$dir_index = 0;
+		
+		$pluginsContainer = array();
+		
+		$pluginsContainer[$dir_index] = readdir($dirHandle);
+		
+		while($pluginsContainer[$dir_index] != false){
+		   if($pluginsContainer[$dir_index] == false){
+			  $pluginsContainer[$dir_index] = "";
+			  break;
+		   }
+		   $dir_index += 1;
+		   $pluginsContainer[$dir_index] = readdir($dirHandle);
+		   //$dir_index += 1;
+		}
+		
+		closedir($dirHandle);
+		
+		$plugs = array();
+		
+		for($plug = 0;$plug < count($pluginsContainer);$plug++){
+		   if($pluginsContainer[$plug] == false){
+			  break;
+		   }
+		   $plugs[$plug] = $pluginsContainer[$plug];
+		}
+		
+		$stream_plugs = array();
+		
+		/*if(count($plugs) <= 0){
+		   echo json_encode(array("pluginsContainer"=>$stream_plugs, "state"=>100));
+		   return;
+		}*/
+		
+		$get_name = 0;
+		$modal_error = 0;
+		
+		for($plug0 = 0;$plug0 < count($plugs);$plug0++){
+		  for($plug1 = 0;$plug1 < 3;$plug1++){
+			 $stream_plugs[$plug0][$plug1] = $plugs[$get_name];
+			 $plug1 += 1;
+			 
+			if(file_exists("plugins/".$plugs[$get_name]) == TRUE){
+				
+			 $plugins_update = fopen("plugins.update", "a");
+			 fwrite($plugins_update, $plugs[$get_name]."\n\r", strlen($plugs[$get_name]));
+			 fclose($plugins_update);
+			 
+			 if(filesize("plugins/".$plugs[$get_name]) > 0){
+			   $file_handle = @fopen("plugins/".$plugs[$get_name], "r");
+			   $stream_plugs[$plug0][$plug1] = fread($file_handle, filesize("plugins/".$plugs[$get_name]));
+			   fclose($file_handle);	 
+			 }else{
+				$stream_plugs[$plug0][$plug1] = "'use strict'; 
+				function plugin_error(){
+					alertBox('Please can\'t find any content in ".$plugs[$get_name]." or there is an program execution error.');
+				}
+				document.getElementById('".$plugs[$get_name]."').addEventListener('click', plugin_error);
+				";			 
+			 }
+			}else{
+				$stream_plugs[$plug0][$plug1] = "'use strict'; 
+				function plugin_error(){
+					alertBox('Please can\'t find any content in ".$plugs[$get_name]." or there is an program execution error.');
+				}
+				document.getElementById('logis').addEventListener('click', plugin_error);
+				";			 
+			}
+			
+			 $plug1 += 1;
+			
+			if(file_exists($plugs[$get_name].".css") == TRUE){
+				
+			 $plugins_update = fopen("plugins.update.css", "a");
+			 fwrite($plugins_update, $plugs[$get_name].".css\n\r", strlen($plugs[$get_name]));
+			 fclose($plugins_update);
+			 
+			 if(filesize($plugs[$get_name].".css") > 0){
+				$file_handle = @fopen($plugs[$get_name].".css", "r");
+				$stream_plugs[$plug0][$plug1] = fread($file_handle, filesize($plugs[$get_name].".css"));
+				fclose($file_handle);
+			 }else{
+				$stream_plugs[$plug0][$plug1] = ".modal-".$plugs[$get_name]."-error-".$modal_error."{}";
+				$modal_error += 1;
+			 }
+			}else{
+				$stream_plugs[$plug0][$plug1] = ".modal-".$plugs[$get_name]."-error-".$modal_error."{}";
+				$modal_error += 1;
+			}
+		  }	
+		  $get_name += 1; 
+		}	
+		
+		echo json_encode(array("pluginsContainer"=>$stream_plugs, "state"=>200));
+		return;
+   break;
+   case 1:
+   {
+	  $pluginsOnFileTypes = array();
+	  $fileErrors = array();
+	  $file_count = 0;
+	  $classLop = 0;
+	  $_files_uploaded_if_type = 0;
+	  $_files_uploaded_if_no_type = 0;
+	  $_files_uploaded_if_not_css_type = 0;	
+	  
+	  if($_POST["class-id"] == 0){
+		foreach($_FILES["program-files"]["name"] as $devProgramFiles){
+		  $pluginTarget = $upd["plugins_dir_program"]."/".basename($devProgramFiles);
+		  $imgType = strtolower(pathinfo($pluginTarget, PATHINFO_EXTENSION));
+		  if($imgType != ""){
+			$pluginsOnFileTypes[$classLop] = basename($devProgramFiles);
+			$_files_uploaded_if_type++;
+		  }else{
+			if(file_exists($pluginTarget) == TRUE){
+			   unlink($pluginTarget);
+			}
+			if(move_uploaded_file($_FILES["program-files"]["tmp_name"][$classLop], $pluginTarget) == TRUE){
+			  $file_count++;
+			}else{
+			  $fileErrors[$classLop] = $devProgramFiles;
+			  $file_count++;
+			}
+		  }
+		  $classLop++;
+		}
+	  }
+	  else if($_POST["class-id"] == 1){
+		foreach($_FILES["css-files"]["name"] as $devProgramFiles){
+		  $pluginTarget = $upd["plugins_dir_css"]."/".basename($devProgramFiles);
+		  $imgType = strtolower(pathinfo($pluginTarget, PATHINFO_EXTENSION));
+		  if($imgType == ""){
+			$pluginsOnFileTypes[$classLop] = basename($devProgramFiles);
+			$_files_uploaded_if_no_type++;
+		  }else{
+			if($imgType == "css"){
+				if(file_exists($pluginTarget) == TRUE){
+				   unlink($pluginTarget);
+				}
+				if(move_uploaded_file($_FILES["css-files"]["tmp_name"][$classLop], $pluginTarget) == TRUE){
+				  $file_count++;
+				}else{
+				  $fileErrors[$classLop] = $devProgramFiles;
+				  $file_count++;
+				}
+			}else{
+				$pluginsOnFileTypes[$classLop] = basename($devProgramFiles);
+				$_files_uploaded_if_no_type++;
+				$_files_uploaded_if_not_css_type++;				
+			}
+		  }
+		  $classLop++;
+		}		  
+	  }
+	  else if($_POST["class-id"] == 2){
+		foreach($_FILES["program-files"]["name"] as $devProgramFiles){
+		  $pluginTarget = $upd["plugins_dir_program"]."/".basename($devProgramFiles);
+		  $imgType = strtolower(pathinfo($pluginTarget, PATHINFO_EXTENSION));
+		  if($imgType != ""){
+			$pluginsOnFileTypes[$classLop] = basename($devProgramFiles);
+			$_files_uploaded_if_type++;
+		  }else{
+			if(file_exists($pluginTarget) == TRUE){
+			   unlink($pluginTarget);
+			}
+			if(move_uploaded_file($_FILES["program-files"]["tmp_name"][$classLop], $pluginTarget) == TRUE){
+			  $file_count++;
+			}else{
+			  $fileErrors[$classLop] = $devProgramFiles;
+			  $file_count++;
+			}
+		  }
+		  $classLop++;
+		}
+		$classLop = 0;
+		foreach($_FILES["css-files"]["name"] as $devProgramFiles){
+		  $pluginTarget = $upd["plugins_dir_css"]."/".basename($devProgramFiles);
+		  $imgType = strtolower(pathinfo($pluginTarget, PATHINFO_EXTENSION));
+		  if($imgType == ""){
+			$pluginsOnFileTypes[$classLop] = basename($devProgramFiles);
+			$_files_uploaded_if_no_type++;
+		  }else{
+			if($imgType == "css"){
+				if(file_exists($pluginTarget) == TRUE){
+				   unlink($pluginTarget);
+				}
+				if(move_uploaded_file($_FILES["css-files"]["tmp_name"][$classLop], $pluginTarget) == TRUE){
+				  $file_count++;
+				}else{
+				  $fileErrors[$classLop] = $devProgramFiles;
+				  $file_count++;
+				}
+			}else{
+				$pluginsOnFileTypes[$classLop] = basename($devProgramFiles);
+				$_files_uploaded_if_not_css_type++;	
+				$_files_uploaded_if_no_type++;
+			}
+		  }
+		  $classLop++;
+		}			
+	  }
+	  echo json_encode(array("pluginsOnFileTypes"=>$pluginsOnFileTypes, 
+	  "fileErrors"=>$fileErrors, "class-id"=>$_POST["class-id"], 
+	  "files_uploaded_if_type"=>$_files_uploaded_if_type, 
+	  "files_uploaded_if_no_type"=>$_files_uploaded_if_no_type, 
+	  "files_uploaded_if_not_css_type"=>$_files_uploaded_if_not_css_type, "state"=>200));
+	  return;
+   }
+   break;
+   case 2:
+   {
+	  $pluginsOnFileTypes = array();
+	  $pluginsOnFiles = array();
+	  $fileErrors = array();
+	  $file_count = 0;
+	  $classLop = 0;
+	  $fileOnFiles = 0;
+	  $_files_uploaded_if_type = 0;
+	  $_files_uploaded_if_no_type = 0;
+	  $_files_uploaded_if_not_css_type = 0;	
+	  $_files_uploaded_if_type_not_php = 0;	
+	  
+	  $plugDir = "plugins.srv";
+	  
+	  if(!is_dir($plugDir)){
+		 mkdir($plugDir); 
+	  }
+	  
+	  if($_POST["class-id"] == 3){
+		foreach($_FILES["server-files"]["name"] as $devProgramServerFiles){
+		  $pluginTarget = $upd["plugins_dir_server"]."/".basename($devProgramServerFiles);
+		  $imgType = strtolower(pathinfo($pluginTarget, PATHINFO_EXTENSION));
+		  if($imgType == ""){
+			$pluginsOnFileTypes[$classLop] = basename($devProgramServerFiles);
+			$_files_uploaded_if_no_type++;
+		  }else{
+			if($imgType != "php"){
+			  $pluginsOnFileTypes[$classLop] = basename($devProgramServerFiles);
+			  $_files_uploaded_if_type_not_php++;
+			  $_files_uploaded_if_no_type++;
+			}else{
+				if(file_exists($pluginTarget) == TRUE){
+				   unlink($pluginTarget);
+				}
+				if(move_uploaded_file($_FILES["server-files"]["tmp_name"][$classLop], $pluginTarget) == TRUE){
+				  $file_count++;
+				  $pluginsOnFiles[$fileOnFiles] = basename($devProgramServerFiles);
+				  $fileOnFiles++;
+				}else{
+				  $fileErrors[$classLop] = $devProgramServerFiles;
+				  $file_count++;
+				}
+			}
+		  }
+		  $classLop++;
+		}
+	  }	 
+	  echo json_encode(array("pluginsOnFileTypes"=>$pluginsOnFileTypes, 
+	  "fileErrors"=>$fileErrors, "class-id"=>$_POST["class-id"], 
+	  "files_uploaded_if_type"=>$_files_uploaded_if_type, 
+	  "files_uploaded_if_no_type"=>$_files_uploaded_if_no_type, 
+	  "files_uploaded_if_not_css_type"=>$_files_uploaded_if_not_css_type, 
+	  "files_uploaded_if_type_not_php"=>$_files_uploaded_if_type_not_php,
+	  "file_count"=>$file_count, "pluginsOnFiles"=>$pluginsOnFiles,
+	  "state"=>200));
+	  return;	  
+   }
+   break;
+   case 3:
+        $query = "select dirId from didcywork;";
+        
+		$dirs = fetchAll($query);
+		
+        if(count(fetchAll($query)) > 0){		
+		
+		$pldir = "plugins";
+		
+		$innerDirs = $dirs; //["pl1", "pol", "pr", "prt"];
+		
+		$go = 0;
+		
+		$plugs = array();
+		$plugsDir = array();
+		$plugsCSSDir = array();
+		$plugsServerDir = array();
+		$plugsMediaDir = array();
+		
+		$stream_plugs = array();
+		
+		if(!is_dir($pldir)){
+		  echo json_encode(array("pluginsContainer"=>$stream_plugs, "state"=>200));	
+		  return;
+		}
+		
+	   foreach($innerDirs as $dir){
+		$plugDir = $pldir."/".$dir[0];
+		if(is_dir($plugDir)){
+		$dirHandle = opendir($plugDir."/program");   
+		
+		$dir_index = 0;
+		
+		$pluginsContainer = array();
+		
+		$pluginsContainer[$dir_index] = readdir($dirHandle);
+		
+		$dir_index += 1;
+		
+		$pluginsContainer[$dir_index] = readdir($dirHandle);
+		
+		$dir_index += 1;
+		
+		$dir_index = 0;
+		
+		$pluginsContainer = array();
+		
+		$pluginsContainer[$dir_index] = readdir($dirHandle);
+		
+		while($pluginsContainer[$dir_index] != false){
+		   if($pluginsContainer[$dir_index] == false){
+			  $pluginsContainer[$dir_index] = "";
+			  break;
+		   }
+		   $dir_index += 1;
+		   $pluginsContainer[$dir_index] = readdir($dirHandle);
+		   //$dir_index += 1;
+		}
+		
+		closedir($dirHandle);
+		
+	
+		//$plugs = array();
+		
+		for($plug = 0;$plug < count($pluginsContainer);$plug++){
+		   if($pluginsContainer[$plug] == false){
+			  break;
+		   }
+		   $plugs[$go] = $pluginsContainer[$plug];
+		   $plugsDir[$go] = $plugDir."/program/".$pluginsContainer[$plug];
+		   $plugsCSSDir[$go] = $plugDir."/css/".$pluginsContainer[$plug];
+		   $go++;
+		}
+		}
+		
+	   }
+
+		//echo json_encode(array("plugs"=>$plugs, "plugsDir"=>$plugsDir));
+		
+		$stream_plugs = array();
+		
+		$get_name = 0;
+		$modal_error = 0;
+		
+		for($plug0 = 0;$plug0 < count($plugs);$plug0++){
+		  for($plug1 = 0;$plug1 < 3;$plug1++){
+			 $stream_plugs[$plug0][$plug1] = $plugs[$get_name];
+			 $plug1 += 1;
+			 
+			if(file_exists($plugsDir[$get_name]) == TRUE){
+				
+			 $plugins_update = fopen("plugins.update", "a");
+			 fwrite($plugins_update, $plugs[$get_name]."\n\r", strlen($plugsDir[$get_name]));
+			 fclose($plugins_update);
+			 
+			 if(filesize($plugsDir[$get_name]) > 0){
+			   $file_handle = @fopen($plugsDir[$get_name], "r");
+			   $stream_plugs[$plug0][$plug1] = fread($file_handle, filesize($plugsDir[$get_name]));
+			   fclose($file_handle);	 
+			 }else{
+				$stream_plugs[$plug0][$plug1] = "'use strict'; 
+				function plugin_error(){
+					alertBox('Please can\'t find any content in ".$plugs[$get_name]." or there is an program execution error.');
+				}
+				document.getElementById('".$plugs[$get_name]."').addEventListener('click', plugin_error);
+				";			 
+			 }
+			}else{
+				$stream_plugs[$plug0][$plug1] = "'use strict'; 
+				function plugin_error(){
+					alertBox('Please can\'t find any content in ".$plugs[$get_name]." or there is an program execution error.');
+				}
+				document.getElementById('logis').addEventListener('click', plugin_error);
+				";			 
+			}
+			
+			 $plug1 += 1;
+			
+			if(file_exists($plugsCSSDir[$get_name].".css") == TRUE){
+		
+			 $plugins_update = fopen("plugins.update.css", "a");
+			 fwrite($plugins_update, $plugsCSSDir[$get_name].".css\n\r", strlen($plugsCSSDir[$get_name].".css"));
+			 fclose($plugins_update);
+			 
+			 if(filesize($plugsCSSDir[$get_name].".css") > 0){
+				$file_handle = @fopen($plugsCSSDir[$get_name].".css", "r");
+				$stream_plugs[$plug0][$plug1] = fread($file_handle, filesize($plugsCSSDir[$get_name].".css"));
+				fclose($file_handle);
+			 }else{
+				$stream_plugs[$plug0][$plug1] = ".modal-".$plugs[$get_name]."-error-".$modal_error."{}";
+				$modal_error += 1;
+			 }
+			}else{
+				$stream_plugs[$plug0][$plug1] = ".modal-".$plugs[$get_name]."-error-".$modal_error."{}";
+				$modal_error += 1;
+			}
+		  }	
+		  $get_name += 1; 
+		}	
+		
+		echo json_encode(array("pluginsContainer"=>$stream_plugs, "state"=>200));		
+		
+	  }
+		
+   break;
+   case 4:
+   {
+	  $pluginsOnFileTypes = array();
+	  $pluginsOnFiles = array();
+	  $fileErrors = array();
+	  $file_count = 0;
+	  $file_count_success = 0;
+	  $file_count_error = 0;
+	  $classLop = 0;
+	  $_files_uploaded_if_type = 0;
+	  $_files_uploaded_if_no_type = 0;
+	  $_files_uploaded_if_not_css_type = 0;
+	  $_files_uploaded_if_type_not_php = 0;
+	  $_files_uploaded_if_not_required_type = 0;	
+	  
+	  $fileTypes = array("css"=>0, "php"=>0, "program"=>0, "mp3"=>0, "mp4"=>0, 
+	  "no_req"=>0);
+	 
+		foreach($_FILES["program-files"]["name"] as $devFiles){
+			
+		  $file_extension = basename($devFiles);
+		  $imgType = strtolower(pathinfo($file_extension, PATHINFO_EXTENSION));
+		  
+		  $required_type = 0;
+		  
+		  if($imgType == "css"){
+			$pluginsOnFileTypes[$classLop] = basename($devFiles);
+			$_files_uploaded_if_type++;
+			$fileTypes["css"]++;
+			$required_type = 1;
+			$pluginTarget = $upd["plugins_dir_css"]."/".basename($devFiles);
+		  }
+		  else if($imgType == "php"){
+			$pluginsOnFileTypes[$classLop] = basename($devFiles);
+			$_files_uploaded_if_type++;
+			$fileTypes["php"]++;
+			$required_type = 1;
+			$pluginTarget = $upd["plugins_dir_server"]."/".basename($devFiles);
+		  }	
+		  else if($imgType == ""){
+			$pluginsOnFileTypes[$classLop] = basename($devFiles);
+			$_files_uploaded_if_type++;
+			$fileTypes["program"]++;
+			$required_type = 1;
+			$pluginTarget = $upd["plugins_dir_program"]."/".basename($devFiles);
+		  }	
+		  else if($imgType == "mp3"){
+			$pluginsOnFileTypes[$classLop] = basename($devFiles);
+			$_files_uploaded_if_type++;
+			$fileTypes["mp3"]++;
+			$required_type = 1;
+		    $pluginTarget = $upd["plugins_dir_media_mp3"]."/".basename($devFiles);
+		  }
+		  else if($imgType == "mp4"){
+			$pluginsOnFileTypes[$classLop] = basename($devFiles);
+			$_files_uploaded_if_type++;
+			$fileTypes["mp4"]++;
+			$required_type = 1;
+			$pluginTarget = $upd["plugins_dir_media_mp4"]."/".basename($devFiles);
+		  }		  
+		  else{
+            $fileTypes["no_req"]++;
+			$required_type = 0;
+		  }
+		  if($required_type == 1){
+			if(file_exists($pluginTarget) == TRUE){
+			   unlink($pluginTarget);
+			}
+			if(move_uploaded_file($_FILES["program-files"]["tmp_name"][$classLop], $pluginTarget) == TRUE){
+			  $file_count_success++;
+			}else{
+			  $fileErrors[$classLop] = $devFiles;
+			  $file_count_error++;
+			}			  
+			$required_type = 0;
+		  }
+		  $classLop++;
+		}
+		
+		  echo json_encode(array(
+		  "file_types"=>$fileTypes, "pluginsOnFileTypes"=>$pluginsOnFileTypes, 
+		  "fileErrors"=>$fileErrors, "class-id"=>$_POST["class-id"], 
+		  "files_uploaded_if_type"=>$_files_uploaded_if_type, 
+		  "files_uploaded_if_no_type"=>$_files_uploaded_if_no_type, 
+		  "files_uploaded_if_not_css_type"=>$_files_uploaded_if_not_css_type, 
+		  "files_uploaded_if_type_not_php"=>$_files_uploaded_if_type_not_php,
+		  "file_count_success"=>$file_count_success, 
+		  "file_count_error"=>$file_count_error, "pluginsOnFiles"=>$pluginsOnFiles,
+		  "state"=>200));
+   }
+   break;
+   default: 
+     return;
+  }
+}
+
+ Plug($_POST["plug-id"]);
+?>

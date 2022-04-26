@@ -45,12 +45,12 @@ textTutorials.onclick = function(){
 			textTutorialContainer.append(textTutorialHeader3);
 			textTutorialContainer.append(textTutorialP);
 			
-			textTutorialP.innerHTML = "Welcome to Didcy.com, the place  where all actors(that is, ad actors or actors involved in ad acting.), groups, companies and ads are closely monitored and "+
-		 "provided with the best of all our essential product and services. Didcy makes it much easier to do business"+
-		 " efficiently for the first time in the last decades."+ 
+			textTutorialP.innerHTML = "Welcome to Didcy.com, the place  where all educators, traders, creative developers &amp; designers, advertizers and marketers, companies and ads are closely monitored and "+
+		 "provided with the best of all our essential products and services. Didcy makes it much easier to learn and do business"+
+		 " efficiently for the first time in the last few decades."+ 
 		 "<br> Didcy has provided it's members with a much more simpler way of navigating through it's intiutive, unmatched"+ 
 		 " and comprehensive ad platform. Didcy is basically an <q>ad platform with the core mission of servicing"+ 
-		 " any entity related to ads most especially connectivity between the ad actor & related business. </q>"+ 
+		 " any entity related to ads<!-- most especially connectivity between the ad actor & related business-->. But also provides other non-advertising services like education and others.</q>"+ 
 		 "With Didcy, a member needs only a laptop, internet access and a web browser with the appropriate directions/URL to our platform."+ 
 		 " <q>Didcy is a web-based advert connectivity platform.</q> <br/>Alert!!! Please always check the URL in your web browser to confirm if the URL matches"+ 
 		 " https://www.didcy.com. Thank you."+ 
@@ -61,15 +61,14 @@ textTutorials.onclick = function(){
 		 "<br><br><strong><u class='insiders'>Step 2:</u></strong> Didcy will kindly ask you to <q>Please select a page content</q>. This feature was introduce to make our user decide"+ 
 		 "on whether or not to show any content on the page at all and also make the user choose what content on our platform he/she"+  
 		 "would want to be shown."+ 
-		 "<br/><br/><strong><u class='insiders'>Step 3:</u></strong> Explore the platform to see what suits your needs either as an actor(eg. ad), group(s) or company."+ 
+		 "<br/><br/><strong><u class='insiders'>Step 3:</u></strong> Explore the platform to see what suits your needs either as an educator, creative developer or designer, advertizer or marketer,  actor(ie. an ad actor) or a company."+ 
 		 "<br><br><strong><u class='insiders'>Step 4:</u></strong> <br><mark style='font-family: sans-serif, arial, verdana' class='insiders'>"+ 
 		 "Exploration Agenda</mark><br><b style='font-family: sans-serif, arial, verdana' class='insiders'>Under Top Navigation Area(The long horizontal rectangular box with a black background"+
 		 " in  the middle and red colors at the tips)</b>"+ 
 		 "<br><br><b><i style='font-family: sans-serif, arial, verdana' class='insiders'>Industry <img  class='iconic' src='adv.icons/3256216.png'/>:</i></b><br>"+ 
 		 "Didcy Industry categorizes all ad related products & services, actors & companies into distinct types of industries"+ 
 		" so that navigation becomes much easier and specific. Didcy Industry is a long roll of table-like containers containing industrial names "+ 
-		"for user preferred selections. Egs: Mechanics, Electronics, All(this tells Didcy to present all industries to the user "+ 
-		"in one piece(NB:// <em>[NO SPECIFIC SELECTIONS]</em>))."+ 
+		"for user preferred selections. Egs: Mechanics, Electronics, All, etc."+ 
 		"<br><br/><b><i style='font-family: sans-serif, arial, verdana' class='insiders'>Services <img src='adv.icons/3631153.png' width='40px'/>: </i></b><br>"+ 
 		"We all love services especially if there are always more to be served by just one platform."+ 
 		"<br>Here, Didcy makes it work like magic giving it's members the needed services of their daily hustle or dreams."+ 
@@ -128,6 +127,9 @@ textTutorials.onclick = function(){
 		  " Didcy Include on it own does not make up the payment platform but"+" rather it is a carrier of those payment markups."+
 		   " Didcy Include features includes"+
 		   "<ol type='1'>"+
+		    "<li style='color: white'>Shyly</li>"+
+		    "<li style='color: white'>Reset Background</li>"+
+		    "<li style='color: white'>Blur Background</li>"+
 		    "<li style='color: white'>Pricing</li>"+
 		    "<li style='color: white'>Newletters</li>"+
 		    "<li style='color: white'>Notification</li>"+
@@ -180,7 +182,7 @@ textTutorials.onclick = function(){
 			" These programs also charges a fee right on the onset. That is, you pay as you upload your ads being it audio "+
 			" or whatever to that platform like AudioGo. Chargeable fee on those platforms depends on so many things."+
 			" Eg. like the number of ads you want to upload and even file type being it mp3 or others.			"+
-			" Exhibit does not really automate or go running your ads on certain likehood places and not certainly "+
+			" Exhibit does not really automate or go running your ads on certain likehood places (even though we're still looking into that as an added feature to our platform in the future) and not certainly "+
 			" perform specific task or run specific or accept specific ads as well. But instead it is a place where "+
 			" business advertising deals are exhibited or showcased to the public or masses for any advertizers "+
 			" to value and accept if interested. It is a <q><b>STOCK MARKET FOR ADS</b></q> similar to the <q><b>STOCK MARKET FOR COMPANIES</b></q>. <em><b><q>IT IS : OFFER | FIND | NEGOTIATE | ACCEPT | TRANSACT | ADVERTISE (OFNATA)</q>.</b></em> "+
@@ -215,7 +217,7 @@ textTutorials.onclick = function(){
 			" worth your money. "+
 			" NB:// Worth does not depend on the course, it depends on your application of the course or knowledge.	"+	
 			" Knowledge without application is the same as <b>NO KNOWLEDGE</b> at all.	"+
-			" <b>LEARN MORE, GROW MORE</b>. 		"+
+			" <b>LEARN MORE, GROW MORE, DO MORE</b>. 		"+
 			" <br>"+
 			" <br>"+
 			" <b>Didcy Find</b> : Find helps all Didcy users learn and know more about the Platform. It's divided into "+
@@ -228,6 +230,17 @@ textTutorials.onclick = function(){
 			" As you can see, Didcy Find is a tutorial playground aimed to guide all Didcers take absolute  "+
 			" control of the platform.		"+
 			" <b><i>LEARN WITH FIND, BECAUSE WHAT IS BETTER THAN FIND. IF NOT FIND.</i></b>"+
+			"<br>"+
+			"<br>	"+		
+			"<b>Didcy Apply</b> : Apply is a piece of developer form designed to help all developers around the world build for and make money on our platform."+
+			"With this in motion, it has automatically make Didcy now an open-source platform where all(developers) can build or develop and make money on the "+
+			"open-source platform. It's not necessarily vital to have Didcy Apply but take this into consideration <q><b>HOW WOULD A DEVELOPER MAKE MONEY AFTER CREATION OR DEVELOPMENT "+
+			" AND INTEGRATION INTO THE PLATFORM</b></q>. So as a company, we decided to design Didcy Apply which will make it much easier to get developers <b>Bank account numbers, "+
+			 "Card numbers and Wallet numbers(esp. Mobile Money Wallet) where they can receive any income they make from their products/services and not limited to only receiving payments"+
+			 "but also usage or tracking and subscription data(if integrated) which will make the developer fully aware of how his/her product(s) or service(s) is/are being utilize.</q></b>"+
+			" We know developers are much more concerned with their security infos before anything else. So we as a company or platform, urges all developers to trust our 99.99% security protocol."+
+			" We'll and we're doing anything necessary in our undying power to safeguard your personal data, so rest assure <b>DIDCY FAMILY</b>. At Didcy we're one BIG FAMILY, and all what a <b><q>GOOD</q></b>"+
+			" family does is to protect each other. So we pledge to protect your all as one BIG FAMILY (</q>DIDCY FAMILY</q>).			"+
 			" <br>"+
 			" <br>"+
 			" <b>Didcy React</b> : React is powerful. Why? Because we all need something to react to."+ 
@@ -240,7 +253,7 @@ textTutorials.onclick = function(){
 			" transparent policies designed to help our users find what they need."+
 			" <br>"+
 			" <br>"+
-			" <b>Didcy Us</b> : Why us? Because we care. Didcy Us is great news. Why? Because it's tells you something or where something is right? Yes, of course."+
+			" <b>Didcy Us</b> : Why us? Because we care. Didcy Us is great news. Why? Because it tells you something or where something is right? Yes, of course."+
 			" <b>US</b> makes it possible for our users to make a quick call or reach out to our customer service providers. "+
 			" Our users can also use <b style='color: dodgerblue'>Shyly</b> to Chat Shyly, our chat-based customer service provider."+		
 			" <b>Use Shyly, Know Shyly, Help Shyly, Love Shyly</b>."+
@@ -250,7 +263,7 @@ textTutorials.onclick = function(){
 		  " contact informations at either <q>Contacts</q><img class='iconic' src='adv.icons/870175.png'/> in the top"+
 		  " navigation bar of the front page or at <q>Didcy Find</q>"+
 		  " under <q>More Services</q><img class='iconic' src='adv.icons/2377884.png'/>. We will be availabile 24/7"+
-		  " just to listen to only and only you."+
+		  " just to listen to only and only you. Have a nice Didcy visit."+
 		  " <br><br>Thank you."+
 		 "</li>"+
 		 "<!-- <li style='color: white'></li> -->"+
@@ -264,6 +277,7 @@ textTutorials.onclick = function(){
 			myModal.insertBefore(textTutorialContainer, imgChild);
 			imgChild.style.display = "none";
 			myModal.style.display = "block";
+			myModal.style.paddingTop = "2px";
 			imgChild.value = "1";
 			document.getElementById("caption-1").innerHTML = "Didcy Text Tutorials";
 

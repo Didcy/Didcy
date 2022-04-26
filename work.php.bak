@@ -114,8 +114,7 @@
 	'".$partnerSet[4]."', '".$partnerSet[5]."', '".$partnerSet[6]."', '".
 	 $partnerSet[7]."', '".$partnerSet[8]."', '".$partnerSet[9]."', 
 	 '".$programValues."', '".$profile."', '".$partnerSet[12]."', '".$partnerSet[13]."', 
-	  '".md5(trim($partnerSet[14]))."', '".$partnerSet[15]."'
-	  , '".$_POST["file-id"]."', '".$_POST["file-id"]."', '".$_POST["file-id"]."');";
+	  '".md5(trim($partnerSet[14]))."', '".$partnerSet[15]."', '".$_POST["file-id"]."', '".$_POST["file-id"]."');";
 	 
 	$performQueryerProfile = performQueryer($query);
 	if($performQueryerProfile["state"] != true){

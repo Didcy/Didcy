@@ -1558,7 +1558,6 @@ function selectAds(selectorId = 0){
 		    containUpVid = [];
 			genContainer = [];
 			framePS = 0;
-			framePSx = 0;
 			ins = 0;
 			upvid = null;
 			window.console.log(result);

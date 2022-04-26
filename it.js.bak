@@ -42,8 +42,8 @@ program_value = "", developer_email = ""){
 	   contentType: false, 
 	   cache: false,
 	   success: function(result){
-		   //window.console.log(result);
-		   //return;
+		   window.console.log(result);
+		   return;
 		   var data_returned = JSON.parse(result);
 		   if(data_returned.state == 200){
 			   

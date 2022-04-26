@@ -376,7 +376,7 @@ spanConnections.onclick = function(){
 							applicant.password.value = "";
 							applicant.githubName.value = "";
 							applicant.username.value = "";
-							applicantBlob = null;
+							applicantBlob = "";
 							
 							applicant.notNowPR.checked = false;
 							applicant.notNowPU.checked = false;

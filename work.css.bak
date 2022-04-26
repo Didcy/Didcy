@@ -155,7 +155,7 @@ value.custom-file-input-developer-css, value.custom-file-input-developer-server 
 }
 
 .custom-file-input-developer-server::before, #server-files:before{
-  content: 'Select your server files';
+  content: 'Select your server files here';
 }
 
 .custom-file-input-0:hover::before, .custom-file-input-developer:hover::before 
