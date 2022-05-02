@@ -1,7 +1,12 @@
-function loadVideoControls() {
+function loadVideoControls(loadFrom = 0) {
 
 	// Video
-	var video = document.getElementById("img01-20");
+	var video = null;
+	if(loadFrom == 0){
+	  video = document.getElementById("img01-20");
+	}else{  
+	  video = document.getElementById("notice-link");
+	}
 
 	// Buttons
 	var playButton = document.getElementById("play-pause");
@@ -39,12 +44,14 @@ function loadVideoControls() {
 
 			// Update the button text
 			muteButton.innerHTML = "Unmute";
+			muteButton.title = "Unmute";
 		} else {
 			// Unmute the video
 			video.muted = false;
 
 			// Update the button text
 			muteButton.innerHTML = "Mute";
+			muteButton.title = "Mute";
 		}
 	});
 
@@ -96,3 +103,4 @@ function loadVideoControls() {
 		video.volume = volumeBar.value;
 	});
 }
+

@@ -50,9 +50,10 @@ for (coursery_playground_i = 0; coursery_playground_i < coursery_playground_drop
 
    //ServicesNotAvailable('Didcy Course', 
 	  // 'Didcy Course report is at the back side. Please tab/put the mouse on this box to view the report.', -4)
- function Open(){
-    return ServicesNotAvailable('Didcy Course', 
-	'Didcy Course report is at the back side. Please tab/put the mouse on this box to view the report.', -4)
+ function Open($serviceType = ""){
+	var $frontReport = $serviceType+' report is at the back side. Please tab/put the mouse on this box to view the report.';
+    return ServicesNotAvailable($serviceType, 
+	$frontReport, -4)
 	//document.getElementById('modal-coursery-container').style.display='block';
 	//document.getElementById('coursery-service-btn').style.display='none';
 }

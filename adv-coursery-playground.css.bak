@@ -201,8 +201,13 @@
 .modal-content-security{
   top: 2%;
 }
-
-
+h2.notification-guide{
+  font-size: 15px;
+}
+/*.developer-files-container{
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+}*/
 
 /* On smaller screens, where height is less than 450px, change the style of the coursery-playground-tool-kits-side (less padding and a smaller font size) */
 @media screen and (max-width: 1115px) {
@@ -221,6 +226,9 @@
    #container-chat-in{
 	 margin-top: -10%;
    }	
+.modal-content-didcy-work-keys p{
+  font-size: 16px;
+}
 }
 @media screen and (max-width: 800px) {
   .logo-pos{
@@ -293,6 +301,18 @@
    #container-chat-in{
 	 margin-top: -22%;
    }
+.modal-content-didcy-work-keys h3{
+  font-size: 20px;
+}
+.modal-content-didcy-work-keys h4{
+  font-size: 18px;
+}
+.modal-content-didcy-work-keys p{
+  font-size: 11px;
+}
+.contact-media p{
+  font-size: 18px;
+}
 }
 @media screen and (max-width: 400px) {
   .logo-pos{
@@ -307,12 +327,36 @@
    .didcy-newsletters-h{
 	 font-size: 20px;
    }
+.modal-content-didcy-work-keys h3{
+  font-size: 15px;
+}
+.modal-content-didcy-work-keys h4{
+  font-size: 15px;
+}
+.modal-content-didcy-work-keys p{
+  font-size: 10px;
+}
+.contact-media p{
+  font-size: 16px;
+}
+h2.notification-guide{
+  font-size: 20px;
+}
+
 }
 @media screen and (max-width: 300px) {
+.modal-content-didcy-work-keys h3{
+  font-size: 20px;
+}
+.modal-content-didcy-work-keys h4{
+  font-size: 20px;
+}
 .coursery-open-side-play{
   width: 35%;
 }
-
+h2.notification-guide{
+  font-size: 15px;
+}
    #container-chat-in{
 	 margin-top: -30%;
    }
@@ -327,6 +371,26 @@
 h1#didcy-work-policy, h2#welcome-2-didcy-work-policy{
 	 font-size: 10px;
    }
+ .modal-content-other-e-services header h2{
+	font-size: 18px;
+ }
+ .contact-media p{
+    font-size: 13px;
+ }
+}
+@media screen and (max-width: 280px) {
+.modal-content-didcy-work-keys h3{
+  font-size: 14px;
+}
+.modal-content-didcy-work-keys h4{
+  font-size: 14px;
+}
+.modal-content-didcy-work-keys p{
+  font-size: 9px;
+}
+.coursery-open-side-play{
+  width: 35%;
+}
 }
 @media screen and (max-height: 450px) {
   .coursery-playground-tool-kits-side {padding-top: 15px;}
