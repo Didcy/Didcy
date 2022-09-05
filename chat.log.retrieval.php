@@ -26,7 +26,7 @@ function FetchLoggedChat($chatTable){
 						$typingUser = $user['userid'];
 						$user_fid = $user['userid'];
 						$userLtImage = $user['avatar']; 
-						$chatBoard .= '<img id="profile-img" src="chat/userpics/'.$user['avatar'].'" class="online" alt="" />';
+						$chatBoard .= '<img id="profile-img" src="userpics/'.$user['avatar'].'" class="online" alt="" />';
 						  $chatBoard .= '<p>'.$user['username'].'</p>';
 							 $chatBoard .= '<i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>';
 							 $chatBoard .= '<div id="status-options">';
@@ -80,7 +80,7 @@ function FetchLoggedChat($chatTable){
 						 $chatBoard .= '<li id="'.$user['userid'].'" class="contact '.$activeUser.'" data-touserid="'.$user['userid'].'" data-tousername="'.$user['username'].'">';
 						 $chatBoard .= '<div class="wrap">';
 						 $chatBoard .= '<span id="status_'.$user['userid'].'" class="contact-status '.$status.'"></span>';
-						 $chatBoard .= '<img src="chat/userpics/'.$user['avatar'].'" alt="" />';
+						 $chatBoard .= '<img src="userpics/'.$user['avatar'].'" alt="" />';
 						 $chatBoard .= '<div class="meta">';
 						 $chatBoard .= '<p class="name">'.$user['username'].'<span id="unread_'.$user['userid'].'" class="unread">'.$chat->getUnreadMessageCount($user['userid'], $_SESSION['userid']).'</span></p>';
 						 $chatBoard .= '<p class="preview"><span id="isTyping_'.$user['userid'].'" class="isTyping"></span></p>';
@@ -110,7 +110,7 @@ function FetchLoggedChat($chatTable){
 					$chatBoard .= '<div class="contact-profile" id="userSection">';
 					$userDetails = $chat->getUserDetails($currentSession);
 					foreach ($userDetails as $user) {										
-						 $chatBoard .= '<img id="right-avatar" src="chat/userpics/'.$user['avatar'].'" alt="" />';
+						 $chatBoard .= '<img id="right-avatar" src="userpics/'.$user['avatar'].'" alt="" />';
 							 $chatBoard .= '<p style="color: black" id="usr-name">'.$user['username'].'</p>';
 							 $chatBoard .= '<div class="social-media">';
 								$chatBoard .=  '<i class="fa fa-facebook" aria-hidden="true"></i>';

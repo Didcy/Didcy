@@ -1,4 +1,5 @@
 "use strict";
+//company_name.setAttribute("style", "color: green;font-family: sans-serif, arial;font-size: 25px;");
 var $footerCheck = 0;
 var columElemContainer = [];
 var fileTypeIDLength = 0, videoElem = 0, videoEl = null, elemContainer = [];
@@ -9,9 +10,8 @@ var $fetchIDTemp = 0;
 //var modal_015, img_015, close15, caption15, modal_15_value = 0, res;
 
  var exhibitEventsFromLiveSearch = function($fetchID = null, drim = null, searchResults = null, 
- productServiceAudioAdImage = null, clearContainerId = null, company_name_text = null, 
+ productServiceAudioAdImage = null, productServiceVideoAdImage = null, clearContainerId = null, company_name_text = null, 
  fileTypeID = null){
-  
   $fetchIDTemp = $fetchID;
   
   var didcxWelcome = document.getElementById("didcx-welcome");
@@ -19,87 +19,180 @@ var $fetchIDTemp = 0;
           
 		  system_dirArr = searchResults;
 		  fileTypeIDLength = fileTypeID.length;
-		  
+		  document.getElementById("id012-in-dbox").style.display = "block";
 		  if(system_dirArr != null){
-			 document.getElementById("logo").src = "didcy2.png";
+			 //document.getElementById("logo").src = "didcy2.png";
 			 if($fetchID == 2){
 			   if(drim != null){
 				 for(let i = 0;i < system_dirArr.length;i++){
 				  var rand = didcx_random_number_generator(0, 228828281919191);
-				  const classID1 = "eventVid-"+rand.toString()+" vid-3939302";
-				  const classID = "eventVid-"+rand.toString();
+				  var imageID = "eventProf-"+rand.toString();
+				  var classID1 = "eventVid-"+rand.toString()+" vid-3939302";
+				  var classID = "eventVid-"+rand.toString();
 				  //var elem = document.createElement("video");
 				  //window.alert(system_dirArr);
 				  var columElem = document.createElement("div");
-				  var elem = null;
+				  var cardElem = null;
+				  var containerElem = null;			  
+				  var elem = null, centerPlayPause = null, audioSource = null,
+				  playPauseBTN = null;
+
+				  let column = null;
+				  let card = null;
+				  let container = null;
+
+			      var company_name = null;
+				  var audioService = 0;
+				  
+				  //window.console.log(searchResults);
 				  
                   if(fileTypeIDLength > 0){
 					  if(fileTypeID[i] == 1){
-						  elem = document.createElement("video");
-						  columElem.setAttribute("class", "column");
-						  /* columElem.setAttribute("style", "background-color:blue"); */
-						  columElem.setAttribute("id", "col-embed");
-						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
-						  elem.setAttribute("src", system_dirArr[i]);
-						  //elem.setAttribute("autoplay", "false");
-						  elem.setAttribute("loop", "1");
-						  elem.setAttribute("muted", "true");
-						  elem.setAttribute("controls", "true");
-						  elem.setAttribute("class", classID1);
-						  elem.setAttribute("id", classID);
+					
+						 elem = document.createElement("img");
+						 columElem.setAttribute("class", "column see-creatives");
+					 
+						 columElem.setAttribute("id", "column");
+						 //elem.setAttribute("autoplay", "false");
+						 /*elem.setAttribute("loop", "1");
+						 elem.setAttribute("muted", "true");
+						 elem.setAttribute("controls", "false");*/
+						 column = document.getElementsByClassName("see-creatives");
+						 elem.setAttribute("src", productServiceVideoAdImage[i]);
+						 elem.setAttribute("class", classID1);
+						 elem.setAttribute("id", classID);
 					  }else if(fileTypeID[i] == 2){
-						  elem = document.createElement("audio");
-						  columElem.setAttribute("class", "column");
-						  /* columElem.setAttribute("style", "background-color:blue"); */
-						  columElem.setAttribute("id", "col-embed");
-						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
-						  elem.setAttribute("src", system_dirArr[i]);
-						  //elem.setAttribute("autoplay", "true");
-						  elem.setAttribute("loop", "1");
-						  elem.setAttribute("muted", "true");
-						  elem.setAttribute("controls", "true");
-						  elem.setAttribute("class", classID1);
-						  elem.setAttribute("id", classID);
-						  elem.setAttribute("style", "background-image: url('"+"adv.audios.img/"+productServiceAudioAdImage[i]+"')");
+			     classID1 = imageID+" profile-3939302";
+			     classID = "audio";//imageID;
+
+			     columElem = document.createElement("div");
+			     cardElem = document.createElement("div");
+			     containerElem = document.createElement("div");
+
+				  columElem.setAttribute("class", "column-2");
+				  columElem.setAttribute("id", "column-2");
+				  
+				  cardElem.setAttribute("class", "card");
+				  cardElem.setAttribute("id", "card");
+				  
+
+				  containerElem.setAttribute("class", "container-1");
+				  containerElem.setAttribute("id", "container-1");		
+				  containerElem.setAttribute("width", "100%");		
+				  containerElem.setAttribute("height", "1000px");		
+
+				  //var columElem = document.createElement("div");
+				  //var container_elem = document.createElement("div");
+				  elem = document.createElement("audio");
+				  
+				  var audioSource = document.createElement("source");
+				  audioSource.setAttribute("type", "audio/mp3");
+				  
+				  playPauseBTN = document.createElement("button");
+				  playPauseBTN.setAttribute("class", "playPauseBTN");
+				  playPauseBTN.setAttribute("id", "playPauseBTN");
+				  
+				  centerPlayPause = document.createElement("div");
+				  centerPlayPause.setAttribute("class", "center-audio");
+
+
+			  audioSource.setAttribute("src", system_dirArr[i]);
+
+			  elem.setAttribute("controls", "");
+
+			  elem.setAttribute("id", "audio");
+			  $audioAdImage = "adv.audios.img/"+productServiceAudioAdImage[i];
+
+			  containerElem.setAttribute("style", "width:100%;height:300px;background-image: url('"+$audioAdImage+"')");
+			  elem.setAttribute("class", classID1);
+			  elem.setAttribute("id", classID);
+			  
+			  elem.append(audioSource);
+
+			  column = document.getElementsByClassName("column-2");
+			  card = document.getElementsByClassName("card");
+			  container = document.getElementsByClassName("container-1");
+
+			  /*company_name = document.createElement("h3");
+			  const company_nameText = document.createTextNode(company_name_text[i]);//+" Company");
+			  company_name.append(company_nameText);
+			  company_name.setAttribute("style", "color: rgba(50, 50, 50, 1);font-family: sans-serif, arial;font-size: 25px;");
+			  */
+			  
+			  centerPlayPause.append(playPauseBTN);
+			  audioService = 1;
+				 /*elem = document.createElement("audio");
+			     //elem.setAttribute("autoplay", "false");
+			     elem.setAttribute("loop", "1");
+			     elem.setAttribute("muted", "true");
+			     elem.setAttribute("controls", "false");	
+				 $audioAdImage = "adv.audios.img/"+productServiceAudioAdImage[i];
+                 elem.setAttribute("style", "background-image: url('"+$audioAdImage+"')");*/
 					  }else{
-						  elem = document.createElement("img");
+						 elem = document.createElement("img");
 						  columElem.setAttribute("class", "column");
 						  /* columElem.setAttribute("style", "background-color:blue"); */
-						  columElem.setAttribute("id", "col-embed");
+						  columElem.setAttribute("id", "column col-embed");
 						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
-						  elem.setAttribute("src", system_dirArr[i]);
+						  elem.setAttribute("src", searchResults[i]);
 						  elem.setAttribute("class", classID1);
 						  elem.setAttribute("id", classID);
+						  column = document.getElementsByClassName("see-creatives");
 					  }
 				 }  
+				  //window.console.log(productServiceVideoAdImage[i]);
                   fileTypeIDLength--;
 				  //elem.setAttribute("style", "width:100%");
-				  document.getElementById("adv-files-showcase").append(columElem);
-				  //document.getElementById("adv-files-showcase").style.backgroundColor = "white";
+				  document.getElementById("contact-media-in-dbox").append(columElem);
+				  //columElem.setAttribute("style", "display:block");
+				  //document.getElementById("contact-media-in-dbox").style.backgroundColor = "white";
 				  height += 300;
-				  //document.getElementById("adv-files-showcase").value = height.toString();
+				  //document.getElementById("contact-media-in-dbox").value = height.toString();
+				  //document.getElementById("contact-media-in-dbox").style.backgroundColor = "blue";
+				  //document.getElementById("contact-media-in-dbox").style.display = "block";
 				  //document.getElementById("column").append(elem);
                   
 				  var company_name = document.createElement("h3");
 				  const company_nameText = document.createTextNode(company_name_text[i]);//+" Company");
 				  company_name.append(company_nameText);
-				  company_name.setAttribute("style", "color: green;font-family: sans-serif, arial;font-size: 25px;");
+				  
 				  
 				  let gaga_share = document.createElement("button");
 				  const gaga_shareText = document.createTextNode("Act");
-				  gaga_share.setAttribute("class", "button-1 gaga-share button1");
+				  gaga_share.setAttribute("class", "button-1 gaga-share");
 				  gaga_share.setAttribute("id", "button-15");
 				  
-				  let column = document.getElementsByClassName("column");
+				  
+				  //let column = document.getElementsByClassName("see-creatives");
 				  for(var columnCount = 0;columnCount < column.length;columnCount++){
-					  column[columnCount].append(elem);
+					  if(audioService == 1){
+						  column[columnCount].append(cardElem);
+						  //card[columnCount].append(elem);
+						  card[columnCount].append(containerElem);
+						  container[columnCount].append(centerPlayPause);						  
+						  container[columnCount].append(elem);						  
+					  }else{
+					      column[columnCount].append(elem);
+					  }
 					  column[columnCount].append(company_name);
 					  column[columnCount].append(gaga_share);
 					  columElemContainer[columnCount] = column[columnCount];
 				  }
 
+				  if(audioService == 1){
+					function PlayPauseAPI(audio, playPauseBTN){
+					 playPauseBTN.innerHTML = "&#9658;";
+					 playPauseBTN.onclick = function(){
+						 playPause(audio, playPauseBTN);
+						
+						 //stop(audio);
+					 }
+					}
+					
+					PlayPauseAPI(elem, playPauseBTN);					  
+				  }
 
-               if(fileTypeID[i] == 0){
+              if(fileTypeID[i] == 0){
                 elem.onclick = function(){
 			     var modal = document.getElementById("myModal-1");
 
@@ -112,6 +205,7 @@ var $fetchIDTemp = 0;
                     videoEl = null;
 				 }
 			     modal.style.display = "block";
+				 modal.style.zIndex = "75";
 
 			     modalImg.src = system_dirArr[i];
 
@@ -131,15 +225,16 @@ var $fetchIDTemp = 0;
                  if(videoEl != null){
                     modal.removeChild(videoEl);
 				 }
-           
+
                  var video_elem = document.createElement("audio");
                  video_elem.setAttribute("src", system_dirArr[i]);
-                 video_elem.setAttribute("class", "modal-content-20 modal-content-20-audio");
+                 video_elem.setAttribute("class", "audiplay modal-content-20 modal-content-20-audio");
                  video_elem.setAttribute("id", "img01-20");
                  video_elem.setAttribute("controls", "true");
                  video_elem.setAttribute("style", "background-image: url('"+"adv.audios.img/"+productServiceAudioAdImage[i]+"')");
 
 			     modal.style.display = "block";
+				 modal.style.zIndex = "75";
 
 				 modal.insertBefore(video_elem, modalImg);
 
@@ -151,10 +246,11 @@ var $fetchIDTemp = 0;
 					
 			     videoElem = 1;
 
-				 modalImg.value = "20";				  
+				 modalImg.value = "200";				
+				 AudiPlay();
 			   }
-			  }else{
-                 company_name.onclick = function(){
+
+                elem.onclick = function(){
 			     var modal = document.getElementById("myModal-1");
 
 			     // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -166,13 +262,15 @@ var $fetchIDTemp = 0;
                     modal.removeChild(videoEl);
 				 }
 
-                 var video_elem = document.createElement("video");
+                 var video_elem = document.createElement("audio");
                  video_elem.setAttribute("src", system_dirArr[i]);
-                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("class", "modal-content-20 modal-content-20-audio");
                  video_elem.setAttribute("id", "img01-20");
                  video_elem.setAttribute("controls", "true");
+                 video_elem.setAttribute("style", "background-image: url('"+"adv.audios.img/"+productServiceAudioAdImage[i]+"')");
 
 			     modal.style.display = "block";
+				 modal.style.zIndex = "75";
 
 				 modal.insertBefore(video_elem, modalImg);
 
@@ -184,8 +282,10 @@ var $fetchIDTemp = 0;
 					
 			     videoElem = 1;
 
-				 modalImg.value = "20";				  
+				 modalImg.value = "200";				 
+				 AudiPlay();
 			   }
+			  }else{
                  elem.onclick = function(){
 			     var modal = document.getElementById("myModal-1");
 
@@ -197,18 +297,20 @@ var $fetchIDTemp = 0;
                  if(videoEl != null){
                     modal.removeChild(videoEl);
 				 }
-
-                 var video_elem = document.createElement("video");
-                 video_elem.setAttribute("src", system_dirArr[i]);
-                 video_elem.setAttribute("class", "modal-content-20");
-                 video_elem.setAttribute("id", "img01-20");
-                 video_elem.setAttribute("controls", "true");
+				 
+				 //-------------------custom controls------------
+				 
+				 var videoControls = document.createElement("div");
+				 VideoControls4PageContent(videoControls, null, system_dirArr[i]);
+				 //----------------------------------------------
 
 			     modal.style.display = "block";
+				 modal.style.zIndex = "75";
 
-				 modal.insertBefore(video_elem, modalImg);
+				 //modal.insertBefore(video_elem, modalImg);
+				 modal.insertBefore(videoControls, modalImg);
 
-                 videoEl = video_elem;
+                 videoEl = videoControls;//video_elem;
 
                  modalImg.src = "";
                  modalImg.style.display = "none";
@@ -216,9 +318,48 @@ var $fetchIDTemp = 0;
 					
 			     videoElem = 1;
 
-				 modalImg.value = "20";				  
+				 modalImg.value = "20";			
+
+				 loadVideoControls();
 			   }
-			  }
+
+                company_name.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+				 
+				 //-------------------custom controls------------
+				 
+				 var videoControls = document.createElement("div");
+				 VideoControls4PageContent(videoControls, null, system_dirArr[i]);
+				 //----------------------------------------------
+
+			     modal.style.display = "block";
+				 modal.style.zIndex = "75";
+
+				 //modal.insertBefore(video_elem, modalImg);
+				 modal.insertBefore(videoControls, modalImg);
+
+                 videoEl = videoControls;//video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";			
+
+				 loadVideoControls();
+			   }
+			  }		
 
 				  
 				  document.getElementById("uploads").value = "";
@@ -234,531 +375,16 @@ var $fetchIDTemp = 0;
 	
 				 modalImg.value = height.toString();
 				  //window.console.log(columElem);
-				  //window.console.log(document.getElementById("adv-files-showcase"));
+				  //window.console.log(document.getElementById("contact-media-in-dbox"));
 
 				  gaga_share.append(gaga_shareText);
 				  //window.console.log(gaga_share);
 				  
 				  //let gagaShare = document.getElementsByClassName("gaga-share")[gagaCounter];
 				  gaga_share.onclick = function(){
-/*                      window.console.log("kdkdkde--");
-					 if(videoEl != null){
-						modal.removeChild(videoEl);
-					 }	 */				  
-					  const GaGaShare = ["Share with Facebook", "Share with Twitter", "Share with Instagram", 
-					  "Share with Youtube", "Share with GaGa", "Share with Pinterest"];
-					  const GaGaShareBG = ["#3B5998", "#55ACEE", "#f993ea", "gray", "rgb(33, 54, 123)", "#3affe3"];
-					  const GaGaShareID = ["gaga-share-fb fa fa-facebook fa-fw", "gaga-share-tw fa fa-twitter fa-fw", "gaga-share-ins fa fa-facebook fa-fw", 
-					  "gaga-share-ybe fa fa-twitter fa-fw", "gaga-share-gaga fa fa-twitter fa-fw", "gaga-share-pinterest fa fa-facebook fa-fw"];
-
-					  const GaGaShare2 = ["Didcy Share", "Didcy Decide", "Definition", 
-					  "Approved by", "Date & Time", "Jurisdiction"];
-					  const GaGaShareBG2 = ["blue", "rgba(125, 25, 225, 1)", "#f993ea", "gray", "rgb(33, 54, 123)", "#3affe3"];
-					  const GaGaShareID2 = ["gaga-share", "gaga-decide", "gaga-definition", 
-					  "gaga-approved-by", "gaga-date-time", "jurisdiction"];
-
-					  for(var gagaCount = 0;gagaCount < GaGaShare2.length;gagaCount++){
-						  var gagaShareWithDoc = document.createElement("button");
-						  var gagaShareWithDocText = document.createTextNode(GaGaShare2[gagaCount]);
-						  const classID = "button-1 button-33 " + GaGaShareID2[gagaCount];
-						  const GaGaBG2 = "background-color: " + GaGaShareBG[gagaCount];
-						  gagaShareWithDoc.setAttribute("class", GaGaShareID2);
-						  gagaShareWithDoc.setAttribute("id", "button-1");
-						  gagaShareWithDoc.setAttribute("style", GaGaBG2);
-						  gagaShareWithDoc.append(gagaShareWithDocText);
-						  modal.insertBefore(gagaShareWithDoc, captionText);
-						  var gagaShareClicks = gagaShareWithDoc; //document.getElementsByClassName(GaGaShareID[gagaCount])[0];
-						  if(gagaCount == 0){
-							  //var img_015x = document.getElementById("img01-15");
-							  //modalImg.value = "15";
-							  gagaShareClicks.onclick = function(){
-							  //var elem = system_dirArr[i];
-							  //return window.alert(elem);
-							      //window.console.log("dkdkd-fr");
-                                   
-	                              if(modal_15_value == 1){
-									modal_015 = document.createElement("div");
-									close15 = document.createElement("span");
-									img_015 = document.createElement("img");
-									caption15 = document.createElement("div");
-
-									const caption15Text = document.createTextNode("GaGa Share");
-									//const close15Text = document.createTextNode("x");
-
-									modal_015.setAttribute("class", "modal-15 w3-modal-content w3-animate-bottom");	
-									modal_015.setAttribute("id", "myModal-15");
-									modal_015.setAttribute("style", "display: none");
-									
-									close15.setAttribute("class", "close-15");	
-									close15.setAttribute("id", "close-15");	
-									
-									img_015.setAttribute("class", "modal-content-15");	
-									img_015.setAttribute("id", "img01-15");	
-									
-									caption15.setAttribute("class", "caption-15");	
-									caption15.setAttribute("id", "caption-15");
-									
-									caption15.append(caption15Text);
-									//close15x.append(close15Text);	
-									close15.innerHTML = "&times;";									  
-                                    
-									modal_015.append(close15);
-									modal_015.append(img_015);
-									modal_015.append(caption15);
-									
-									res = document.getElementById("container-c31");
-									res.append(modal_015);
-									
-									//window.console.log(modal_015);
-									//window.console.log(res);
-									
-									modal_15_value = 0;
-									  close15.onclick = function() {
-										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
-										"gaga-share-gaga", "gaga-share-pinterest"];
-										const shareLength = GaGaShareID.length;
-										//var button1 = document.getElementsByClassName("button-12");
-
-										//for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
-											//var button1 = document.getElementsByClassName("button-12");
-											//modal_015 = document.getElementById("myModal-15");
-											modal_015 = document.getElementsByClassName("modal-15")[0];
-											res = document.getElementById("container-c31");
-											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
-										    modal_15_value = 1;
-										//}										
-								       }	
-
-								  }
-								  modal_015 = document.getElementById("myModal-15");
-								  img_015 = document.getElementById("img01-15");
-							 	  caption15 = document.getElementById("caption-15");
-								  close15 = document.getElementById("close-15");
-								  
-								  for(var gagaCount = 0;gagaCount < GaGaShare.length;gagaCount++){
-									  var gagaShareWithDoc = document.createElement("button");
-									  var gagaShareWithDocText = document.createTextNode(GaGaShare[gagaCount]);
-									  const classID = "button-12 " + GaGaShareID[gagaCount];
-									  const GaGaBG = "cursor: pointer;padding: 5px;font-size: 17px;display:  block;margin-bottom: 2%;width: 50%;position: relative;left: 25%;background-color: " + GaGaShareBG[gagaCount];
-									  gagaShareWithDoc.setAttribute("class", GaGaShareID);
-									  gagaShareWithDoc.setAttribute("id", "button-1");
-									  gagaShareWithDoc.setAttribute("style", GaGaBG);
-									  gagaShareWithDoc.append(gagaShareWithDocText);					  							  
-									  modal_015.insertBefore(gagaShareWithDoc, caption15);
-									  var gagaShareClicks = gagaShareWithDoc; //document.getElementsByClassName(GaGaShareID[gagaCount])[0];
-									  empty[gagaCount] = gagaShareClicks;
-/* 									  gagaShareClicks.onclick = function(){
-										  var elem = system_dirArr[i];
-										  return window.alert(elem);										  
-									  } */		
-									  close15.onclick = function() {
-										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
-										"gaga-share-gaga", "gaga-share-pinterest"];
-										const shareLength = GaGaShareID.length;
-										//var button1 = document.getElementsByClassName("button-12");
-
-										///for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
-											//var button1 = document.getElementsByClassName("button-12");
-											//modal_015 = document.getElementById("myModal-15");
-											modal_015 = document.getElementById("myModal-15");
-											res = document.getElementById("container-c31");
-											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
-										    modal_15_value = 1;
-										//}										
-								       }									  
-								  }
-
-								  modal_015.style.display = "block";
-								  img_015.style.display = "none";
-								  caption15.innerHTML = "GaGa Share";											  						  
-
-
-								  modalImg.value = '10';
-								  if(modalImg.value == '10'){
-									  modal12.style.zIndex = "9";
-									  empty[0].onclick = function(){
-										  //modal_015.style.display = "none";
-										  //modal_015.value = "15";
-										  showMediaAccount(0, 2);
-									  }
-									  empty[1].onclick = function(){
-										  showMediaAccount(1);
-									  }
-									  empty[2].onclick = function(){
-										  showMediaAccount(2);
-									  }
-									  empty[3].onclick = function(){
-										  showMediaAccount(3);
-									  }
-									  empty[4].onclick = function(){
-										  showMediaAccount(4);
-									  }
-									  empty[5].onclick = function(){
-										  showMediaAccount(5);
-									  }
-								  }	
-							  
-/* 							  modal_015.style.display = "block";
-							  img_015.style.display = "none";
-							  img_015.value = "15";
-							  caption15.innerHTML = "GaGa Share"; */
-						   }
-						 }
-						  else if(gagaCount == 1){
-							  gagaShareClicks.style.display = "none";
-							  gagaShareClicks.onclick = function(){
-							   ServicesNotAvailable('Decide Services', 
-	   'Decide Service report is at the back side. Please tab/put the mouse on this box to view the report.')
-							 ;}
-						  }
-						  else if(gagaCount == 2){
-							  gagaShareClicks.onclick = function(){
-								  //return window.alert(system_dirArr[i]);
-								  describeProductService(drim, company_name_text[i], 1, system_dirArr[i]);
-								 setTimeout(() => {
-	                              if(modal_15_value == 1){
-									modal_015 = document.createElement("div");
-									close15 = document.createElement("span");
-									img_015 = document.createElement("img");
-									caption15 = document.createElement("div");
-
-									const caption15Text = document.createTextNode("GaGa Share");
-									//const close15Text = document.createTextNode("x");
-
-									modal_015.setAttribute("class", "modal-15 w3-modal-content w3-animate-bottom");	
-									modal_015.setAttribute("id", "myModal-15");
-									modal_015.setAttribute("style", "display: none");
-									
-									close15.setAttribute("class", "close-15");	
-									close15.setAttribute("id", "close-15");	
-									
-									img_015.setAttribute("class", "modal-content-15");	
-									img_015.setAttribute("id", "img01-15");	
-									
-									caption15.setAttribute("class", "caption-15");	
-									caption15.setAttribute("id", "caption-15");
-									
-									caption15.append(caption15Text);
-									//close15x.append(close15Text);	
-									close15.innerHTML = "&times;";									  
-                                    
-									modal_015.append(close15);
-									modal_015.append(img_015);
-									modal_015.append(caption15);
-									
-									res = document.getElementById("container-c31");
-									res.append(modal_015);
-									
-									//window.console.log(modal_015);
-									//window.console.log(res);
-									
-									modal_15_value = 0;
-									  close15.onclick = function() {
-										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
-										"gaga-share-gaga", "gaga-share-pinterest"];
-										const shareLength = GaGaShareID.length;
-										//var button1 = document.getElementsByClassName("button-12");
-
-										//for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
-											//var button1 = document.getElementsByClassName("button-12");
-											//modal_015 = document.getElementById("myModal-15");
-											modal_015 = document.getElementsByClassName("modal-15")[0];
-											res = document.getElementById("container-c31");
-											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
-										    modal_15_value = 1;
-										//}										
-								       }	
-								  }
-								  modal_015 = document.getElementById("myModal-15");
-								  img_015 = document.getElementById("img01-15");
-							 	  caption15 = document.getElementById("caption-15");
-								  close15 = document.getElementById("close-15");
-								  //window.console.log(describeText);
-								  var describe = document.createElement("div");
-								  const describeTxt = document.createTextNode(describeText);
-								  describe.setAttribute("class", "describe modal-content-15");
-								  describe.setAttribute("id", "describe");
-								  describe.setAttribute("style", "font-family: sans-serif, arial; font-size: 19px;color: white;text-align: center");
-								  describe.append(describeTxt);
-								  modal_015.insertBefore(describe, caption15);
-								  caption15.innerHTML = "Didcy Express";
-								  
-								  modal_015.style.display = "block";
-								  
-										  close15.onclick = function() {
-											modal_015 = document.getElementById("myModal-15");
-											res = document.getElementById("container-c31");
-											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
-										    modal_15_value = 1;
-										//}										
-								       }							  
-							  }, 2000);
-						    }
-						  }
-						  else if(gagaCount == 3){
-							  gagaShareClicks.onclick = function(){
-								  describeProductService(drim, company_name_text[i], 3, system_dirArr[i]);
-								 setTimeout(() => {
-	                              if(modal_15_value == 1){
-									modal_015 = document.createElement("div");
-									close15 = document.createElement("span");
-									img_015 = document.createElement("img");
-									caption15 = document.createElement("div");
-
-									const caption15Text = document.createTextNode("GaGa Share");
-									//const close15Text = document.createTextNode("x");
-
-									modal_015.setAttribute("class", "modal-15 w3-modal-content w3-animate-bottom");	
-									modal_015.setAttribute("id", "myModal-15");
-									modal_015.setAttribute("style", "display: none");
-									
-									close15.setAttribute("class", "close-15");	
-									close15.setAttribute("id", "close-15");	
-									
-									img_015.setAttribute("class", "modal-content-15");	
-									img_015.setAttribute("id", "img01-15");	
-									
-									caption15.setAttribute("class", "caption-15");	
-									caption15.setAttribute("id", "caption-15");
-									
-									caption15.append(caption15Text);
-									//close15x.append(close15Text);	
-									close15.innerHTML = "&times;";									  
-                                    
-									modal_015.append(close15);
-									modal_015.append(img_015);
-									modal_015.append(caption15);
-									
-									res = document.getElementById("container-c31");
-									res.append(modal_015);
-									
-									//window.console.log(modal_015);
-									//window.console.log(res);
-									
-									modal_15_value = 0;
-									  close15.onclick = function() {
-										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
-										"gaga-share-gaga", "gaga-share-pinterest"];
-										const shareLength = GaGaShareID.length;
-										//var button1 = document.getElementsByClassName("button-12");
-
-										//for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
-											//var button1 = document.getElementsByClassName("button-12");
-											//modal_015 = document.getElementById("myModal-15");
-											modal_015 = document.getElementsByClassName("modal-15")[0];
-											res = document.getElementById("container-c31");
-											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
-										    modal_15_value = 1;
-										//}										
-								       }	
-								  }
-								  modal_015 = document.getElementById("myModal-15");
-								  img_015 = document.getElementById("img01-15");
-							 	  caption15 = document.getElementById("caption-15");
-								  close15 = document.getElementById("close-15");
-								  //window.console.log(describeText);
-								  var describe = document.createElement("div");
-								  const describeTxt = document.createTextNode(approvedByText);
-								  describe.setAttribute("class", "describe modal-content-15");
-								  describe.setAttribute("id", "describe");
-								  describe.setAttribute("style", "font-family: sans-serif, arial; font-size: 30px;color: white;text-align: center");
-								  describe.append(describeTxt);
-								  modal_015.insertBefore(describe, caption15);
-								  //caption15.innerHTML = "GaGa Express";
-								  
-								  modal_015.style.display = "block";
-								  
-										  close15.onclick = function() {
-											modal_015 = document.getElementById("myModal-15");
-											res = document.getElementById("container-c31");
-											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
-										    modal_15_value = 1;
-										//}										
-								       }							  
-							  }, 2000);
-						    }
-						  }
-						  else if(gagaCount == 4){
-							  gagaShareClicks.onclick = function(){
-								  //window.alert("yyyy");
-								  describeProductService(drim, company_name_text[i], 4, system_dirArr[i]);
-								 setTimeout(() => {
-	                              if(modal_15_value == 1){
-									modal_015 = document.createElement("div");
-									close15 = document.createElement("span");
-									img_015 = document.createElement("img");
-									caption15 = document.createElement("div");
-
-									const caption15Text = document.createTextNode("GaGa Share");
-									//const close15Text = document.createTextNode("x");
-
-									modal_015.setAttribute("class", "modal-15 w3-modal-content w3-animate-bottom");	
-									modal_015.setAttribute("id", "myModal-15");
-									modal_015.setAttribute("style", "display: none");
-									
-									close15.setAttribute("class", "close-15");	
-									close15.setAttribute("id", "close-15");	
-									
-									img_015.setAttribute("class", "modal-content-15");	
-									img_015.setAttribute("id", "img01-15");	
-									
-									caption15.setAttribute("class", "caption-15");	
-									caption15.setAttribute("id", "caption-15");
-									
-									caption15.append(caption15Text);
-									//close15x.append(close15Text);	
-									close15.innerHTML = "&times;";									  
-                                    
-									modal_015.append(close15);
-									modal_015.append(img_015);
-									modal_015.append(caption15);
-									
-									res = document.getElementById("container-c31");
-									res.append(modal_015);
-									
-									//window.console.log(modal_015);
-									//window.console.log(res);
-									
-									modal_15_value = 0;
-									  close15.onclick = function() {
-										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
-										"gaga-share-gaga", "gaga-share-pinterest"];
-										const shareLength = GaGaShareID.length;
-										//var button1 = document.getElementsByClassName("button-12");
-
-										//for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
-											//var button1 = document.getElementsByClassName("button-12");
-											//modal_015 = document.getElementById("myModal-15");
-											modal_015 = document.getElementsByClassName("modal-15")[0];
-											res = document.getElementById("container-c31");
-											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
-										    modal_15_value = 1;
-										//}										
-								       }	
-								  }
-								  modal_015 = document.getElementById("myModal-15");
-								  img_015 = document.getElementById("img01-15");
-							 	  caption15 = document.getElementById("caption-15");
-								  close15 = document.getElementById("close-15");
-								  //window.console.log(describeText);
-								  var period = 
-								  "Product/Service Commencement Date : " +periodText[0]+"<br>"+
-								  "Product/Service Elapsing Date : " +periodText[1]+"<br>"+
-								  "Product/Service Commencement Time : " +periodText[2]+"<br>"+
-								  "Product/Service Elapsing Time : " +periodText[3]+"<br>"+
-								  "Product/Service Shipmet Date : " +periodText[4]+"<br>"+
-								  "Product/Service Shipmet Time : " +periodText[5];
-								  var describe = document.createElement("div");
-								  const describeTxt = document.createTextNode(period);
-								  describe.setAttribute("class", "describe modal-content-15");
-								  describe.setAttribute("id", "describe");
-								  describe.setAttribute("style", "font-family: sans-serif, arial; font-size: 20px;color: white;text-align: center");
-								  describe.append(describeTxt);
-								  describe.innerHTML = period;
-								  modal_015.insertBefore(describe, caption15);
-								  //caption15.innerHTML = "GaGa Express";
-								  
-								  modal_015.style.display = "block";
-								  
-										  close15.onclick = function() {
-											modal_015 = document.getElementById("myModal-15");
-											res = document.getElementById("container-c31");
-											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
-										    modal_15_value = 1;
-										//}										
-								       }							  
-							  }, 2000);
-						    }
-						  }
-						  else if(gagaCount == 5){
-							  gagaShareClicks.onclick = function(){
-								  //window.alert("yyyy");
-								  describeProductService(drim, company_name_text[i], 5, system_dirArr[i]);
-								 setTimeout(() => {
-	                              if(modal_15_value == 1){
-									modal_015 = document.createElement("div");
-									close15 = document.createElement("span");
-									img_015 = document.createElement("img");
-									caption15 = document.createElement("div");
-
-									const caption15Text = document.createTextNode("GaGa Share");
-									//const close15Text = document.createTextNode("x");
-
-									modal_015.setAttribute("class", "modal-15 w3-modal-content w3-animate-bottom");	
-									modal_015.setAttribute("id", "myModal-15");
-									modal_015.setAttribute("style", "display: none");
-									
-									close15.setAttribute("class", "close-15");	
-									close15.setAttribute("id", "close-15");	
-									
-									img_015.setAttribute("class", "modal-content-15");	
-									img_015.setAttribute("id", "img01-15");	
-									
-									caption15.setAttribute("class", "caption-15");	
-									caption15.setAttribute("id", "caption-15");
-									
-									caption15.append(caption15Text);
-									//close15x.append(close15Text);	
-									close15.innerHTML = "&times;";									  
-                                    
-									modal_015.append(close15);
-									modal_015.append(img_015);
-									modal_015.append(caption15);
-									
-									res = document.getElementById("container-c31");
-									res.append(modal_015);
-									
-									//window.console.log(modal_015);
-									//window.console.log(res);
-									
-									modal_15_value = 0;
-									  close15.onclick = function() {
-										const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", 
-										"gaga-share-gaga", "gaga-share-pinterest"];
-										const shareLength = GaGaShareID.length;
-										//var button1 = document.getElementsByClassName("button-12");
-
-										//for(var gagaCount = 0;gagaCount < shareLength;gagaCount++){
-											//var button1 = document.getElementsByClassName("button-12");
-											//modal_015 = document.getElementById("myModal-15");
-											modal_015 = document.getElementsByClassName("modal-15")[0];
-											res = document.getElementById("container-c31");
-											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
-										    modal_15_value = 1;
-										//}										
-								       }	
-								  }
-								  modal_015 = document.getElementById("myModal-15");
-								  img_015 = document.getElementById("img01-15");
-							 	  caption15 = document.getElementById("caption-15");
-								  close15 = document.getElementById("close-15");
-								  //window.console.log(describeText);
-								  
-								  var describe = document.createElement("div");
-								  const describeTxt = document.createTextNode(jurisdictionText);
-								  describe.setAttribute("class", "describe modal-content-15");
-								  describe.setAttribute("id", "describe");
-								  describe.setAttribute("style", "font-family: sans-serif, arial; font-size: 30px;color: white;text-align: center");
-								  describe.append(describeTxt);
-								  //describe.innerHTML = period;
-								  modal_015.insertBefore(describe, caption15);
-								  //caption15.innerHTML = "GaGa Express";
-								  
-								  modal_015.style.display = "block";
-								  
-										  close15.onclick = function() {
-											modal_015 = document.getElementById("myModal-15");
-											res = document.getElementById("container-c31");
-											res.removeChild(modal_015);//.removeChild(gagaShareWithDoc);
-										    modal_15_value = 1;
-										//}										
-								       }							  
-							  }, 2000);
-						    }
-						  }
-					  }
-
-
+					 
+					Share(modal, captionText, modalImg, empty, system_dirArr[i], 
+					elem, company_name_text[i], drim);					 
 					  
 					  modal.style.display = "block";
 					  
@@ -786,12 +412,12 @@ var $fetchIDTemp = 0;
 			}else{
 		    //if(gagaSiteContentFromMore == 1){
 				//if(clearContainerId == 'av'){
-				  var advFilesContainer = document.getElementById("adv-files-showcase");
-				  document.getElementById("container-c31").removeChild(advFilesContainer);
+				  var advFilesContainer = document.getElementById("contact-media-in-dbox");
+				  document.getElementById("contact-media-container-in-box").removeChild(advFilesContainer);
 				  var advFileContainer = document.createElement("div");
-				  advFileContainer.setAttribute("class", "row");
-				  advFileContainer.setAttribute("id", "adv-files-showcase");
-				  document.getElementById("container-c31").append(advFileContainer);
+				  advFileContainer.setAttribute("class", "w3-container contact-media row");
+				  advFileContainer.setAttribute("id", "contact-media-in-dbox");
+				  document.getElementById("contact-media-container-in-box").append(advFileContainer);
 				  
 				//}else{
 				
@@ -812,155 +438,167 @@ var $fetchIDTemp = 0;
 			//}
 		     for(let i = 0;i < system_dirArr.length;i++){
 			  var rand = didcx_random_number_generator(0, 228828281919191);
-			  const classID1 = "eventVid-"+rand.toString()+" vid-3939302";
-			  const classID = "eventVid-"+rand.toString();
-			  //var elem = document.createElement("video");
-			  //window.alert(system_dirArr);
+				  var imageID = "eventProf-"+rand.toString();
+				  var classID1 = "eventVid-"+rand.toString()+" vid-3939302";
+				  var classID = "eventVid-"+rand.toString();
+				  //var elem = document.createElement("video");
+				  //window.alert(system_dirArr);
 				  var columElem = document.createElement("div");
-				  var elem = null;
+				  var cardElem = null;
+				  var containerElem = null;			  
+				  var elem = null, centerPlayPause = null, audioSource = null,
+				  playPauseBTN = null;
+
+				  let column = null;
+				  let card = null;
+				  let container = null;
+
+			      var company_name = null;
+				  var audioService = 0;
 				  
                   if(fileTypeIDLength > 0){
 					  if(fileTypeID[i] == 1){
-						  elem = document.createElement("video");
-						  columElem.setAttribute("class", "column");
-						  /* columElem.setAttribute("style", "background-color:blue"); */
-						  columElem.setAttribute("id", "col-embed");
-						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
-						  elem.setAttribute("src", system_dirArr[i]);
-						  //elem.setAttribute("autoplay", "false");
-						  elem.setAttribute("loop", "1");
-						  elem.setAttribute("muted", "true");
-						  elem.setAttribute("controls", "false");
-						  elem.setAttribute("class", classID1);
-						  elem.setAttribute("id", classID);
+						 columElem = document.createElement("div");
+					
+						 elem = document.createElement("img");
+						 columElem.setAttribute("class", "column see-creatives");
+					 
+						 columElem.setAttribute("id", "column");
+						 //elem.setAttribute("autoplay", "false");
+						 /*elem.setAttribute("loop", "1");
+						 elem.setAttribute("muted", "true");
+						 elem.setAttribute("controls", "false");*/
+						 //window.console.log(productServiceVideoAdImage[i]);
+						 elem.setAttribute("src", productServiceVideoAdImage[i]);
+						 elem.setAttribute("class", classID1);
+						 elem.setAttribute("id", classID);
+						 column = document.getElementsByClassName("see-creatives");
 					  }else if(fileTypeID[i] == 2){
-						  elem = document.createElement("audio");
-						  columElem.setAttribute("class", "column");
-						  /* columElem.setAttribute("style", "background-color:blue"); */
-						  columElem.setAttribute("id", "col-embed");
-						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
-						  elem.setAttribute("src", system_dirArr[i]);
-						  //elem.setAttribute("autoplay", "true");
-						  elem.setAttribute("loop", "1");
-						  elem.setAttribute("muted", "true");
-						  elem.setAttribute("controls", "true");
-						  elem.setAttribute("class", classID1);
-						  elem.setAttribute("id", classID);
-						  elem.setAttribute("style", "background-image: url('"+"adv.audios.img/"+productServiceAudioAdImage[i]+"')");
+			     classID1 = imageID+" profile-3939302";
+			     classID = "audio";//imageID;
+
+			     columElem = document.createElement("div");
+			     cardElem = document.createElement("div");
+			     containerElem = document.createElement("div");
+
+				  columElem.setAttribute("class", "column-2");
+				  columElem.setAttribute("id", "column-2");
+				  
+				  cardElem.setAttribute("class", "card");
+				  cardElem.setAttribute("id", "card");
+				  
+
+				  containerElem.setAttribute("class", "container-1");
+				  containerElem.setAttribute("id", "container-1");		
+				  containerElem.setAttribute("width", "100%");		
+				  containerElem.setAttribute("height", "1000px");		
+
+				  //var columElem = document.createElement("div");
+				  //var container_elem = document.createElement("div");
+				  elem = document.createElement("audio");
+				  
+				  var audioSource = document.createElement("source");
+				  audioSource.setAttribute("type", "audio/mp3");
+				  
+				  playPauseBTN = document.createElement("button");
+				  playPauseBTN.setAttribute("class", "playPauseBTN");
+				  playPauseBTN.setAttribute("id", "playPauseBTN");
+				  
+				  centerPlayPause = document.createElement("div");
+				  centerPlayPause.setAttribute("class", "center-audio");
+
+			  audioSource.setAttribute("src", system_dirArr[i]);
+
+			  elem.setAttribute("controls", "");
+
+			  elem.setAttribute("id", "audio");
+			  $audioAdImage = "adv.audios.img/"+productServiceAudioAdImage[i];
+
+			  containerElem.setAttribute("style", "width:100%;height:300px;background-image: url('"+$audioAdImage+"')");
+			  elem.setAttribute("class", classID1);
+			  elem.setAttribute("id", classID);
+			  
+			  elem.append(audioSource);
+
+			  column = document.getElementsByClassName("column-2");
+			  card = document.getElementsByClassName("card");
+			  container = document.getElementsByClassName("container-1");
+
+			  /*company_name = document.createElement("h3");
+			  const company_nameText = document.createTextNode(company_name_text[i]);//+" Company");
+			  company_name.append(company_nameText);
+			  company_name.setAttribute("style", "color: rgba(50, 50, 50, 1);font-family: sans-serif, arial;font-size: 25px;");
+			  */
+			  
+			  centerPlayPause.append(playPauseBTN);
+			  audioService = 1;
+				 /*elem = document.createElement("audio");
+			     //elem.setAttribute("autoplay", "false");
+			     elem.setAttribute("loop", "1");
+			     elem.setAttribute("muted", "true");
+			     elem.setAttribute("controls", "false");	
+				 $audioAdImage = "adv.audios.img/"+productServiceAudioAdImage[i];
+                 elem.setAttribute("style", "background-image: url('"+$audioAdImage+"')");*/
 					  }else{
-						  elem = document.createElement("img");
-						  columElem.setAttribute("class", "column");
+						 elem = document.createElement("img");
+						  columElem.setAttribute("class", "column see-creatives");
 						  /* columElem.setAttribute("style", "background-color:blue"); */
-						  columElem.setAttribute("id", "col-embed");
+						  columElem.setAttribute("id", "column col-embed");
 						  //columElem.setAttribute("style", "float:left;padding:10px;width:25%;");
-						  elem.setAttribute("src", system_dirArr[i]);
+						  elem.setAttribute("src", searchResults[i]);
 						  elem.setAttribute("class", classID1);
 						  elem.setAttribute("id", classID);
+						  column = document.getElementsByClassName("see-creatives");
 					  }
 				 }  
                   fileTypeIDLength--;
 			  //elem.setAttribute("style", "width:100%");
-			  document.getElementById("adv-files-showcase").append(columElem);
-			  ////document.getElementById("adv-files-showcase").style.backgroundColor = "white";
+			  document.getElementById("contact-media-in-dbox").append(columElem);
+			  //document.getElementById("contact-media-in-dbox").style.backgroundColor = "blue";
+			  //columElem.style.backgroundColor = "red";
+			  //elem.style.zIndex = "21";
 			  //document.getElementById("column").append(elem);
 			  //columElem.style.backgroundColor = "white";			  
 			  height += 300;
-			  //document.getElementById("adv-files-showcase").value = height.toString();			  
-			  
+			  //document.getElementById("contact-media-in-dbox").value = height.toString();			  
+			  window.console.log(productServiceVideoAdImage[i]);
 			  //document.getElementById("column").append(elem);
 			  
-			  let column = document.getElementsByClassName("column");
+			  //let column = document.getElementsByClassName("see-creatives");
               
 			  var company_name = document.createElement("h3");
 			  const company_nameText = document.createTextNode(company_name_text[i]);//+" Company");
 			  company_name.append(company_nameText);
-			  company_name.setAttribute("style", "color: green;font-family: sans-serif, arial;font-size: 25px;");
+			  
              
               
-			  for(var columnCount = 0;columnCount < column.length;columnCount++){
-				  column[columnCount].append(elem);
-				  column[columnCount].append(company_name);
-			  } 
-             
- 
-/*  company_name.onmousedown = function(){
-    start = Date.now();
-	clearT = setTimeout(() => {}, 1000);
-    
-    while(pageLoadCheckTimer < 2000){
-     pageLoadCheckTimer = (Date.now() - window.start);
-     if(pageLoadCheckTimer == 2000){ //120000 
-         var correctMark = document.createElement("img");
-         correctMark.setAttribute("class", "correct-mark-image ");
-         correctMark.setAttribute("id", "correct-mark-image ");
-         correctMark.setAttribute("src", "download.jpg");
-         document.getElementById("adv-files-showcase").append(correctMark);
-         break;
-     }else if(pageLoadCheckTimer == 1000){
-             if(fileTypeID[i] == 0){
-                elem.onclick = function(){
-			     var modal = document.getElementById("myModal-1");
+				  for(var columnCount = 0;columnCount < column.length;columnCount++){
+					  if(audioService == 1){
+						  column[columnCount].append(cardElem);
+						  //card[columnCount].append(elem);
+						  card[columnCount].append(containerElem);
+						  container[columnCount].append(centerPlayPause);						  
+						  container[columnCount].append(elem);						  
+					  }else{
+					      column[columnCount].append(elem);
+					  }
+					  column[columnCount].append(company_name);
+					  window.console.log(document.getElementById("contact-media-in-dbox"));
+				  }
 
-			     // Get the image and insert it inside the modal - use its "alt" text as a caption
-					  //var img = document.getElementById("");
-				 var modalImg = document.getElementById("img01-1");
-				 var captionText = document.getElementById("caption-1");
-                 if(videoElem == 1){
-					modal.removeChild(videoEl);
-                    videoEl = null;
-				 }
-			     modal.style.display = "block";
-
-			     modalImg.src = system_dirArr[i];
-
-			     captionText.innerHTML = "Didcy Act";
-
-				 modalImg.value = "19";				  
-			   }
-			  }else{
-                 company_name.onclick = function(){
-			     var modal = document.getElementById("myModal-1");
-
-			     // Get the image and insert it inside the modal - use its "alt" text as a caption
-					  //var img = document.getElementById("");
-				 var modalImg = document.getElementById("img01-1");
-				 var captionText = document.getElementById("caption-1");
-                 
-                 if(videoEl != null){
-                    modal.removeChild(videoEl);
-				 }
-
-                 var video_elem = document.createElement("video");
-                 video_elem.setAttribute("src", system_dirArr[i]);
-                 video_elem.setAttribute("class", "modal-content-20");
-                 video_elem.setAttribute("id", "img01-20");
-
-			     modal.style.display = "block";
-
-				 modal.insertBefore(video_elem, modalImg);
-
-                 videoEl = video_elem;
-
-                 modalImg.src = "";
-                 modalImg.style.display = "none";
-			     captionText.innerHTML = "Didcy Act";
+				  if(audioService == 1){
+					function PlayPauseAPI(audio, playPauseBTN){
+					 playPauseBTN.innerHTML = "&#9658;";
+					 playPauseBTN.onclick = function(){
+						 playPause(audio, playPauseBTN);
+						
+						 //stop(audio);
+					 }
+					}
 					
-			     videoElem = 1;
+					PlayPauseAPI(elem, playPauseBTN);					  
+				  }
 
-				 modalImg.value = "20";				  
-			   }
-			  }		
-		    }
-   }
-
- }
-
-company_name.onmouseout = function(){
-    start = 0;
-	clearTimeout(clearT);
-    pageLoadCheckTimer = 0;
- } */
- 
               if(fileTypeID[i] == 0){
                 elem.onclick = function(){
 			     var modal = document.getElementById("myModal-1");
@@ -974,6 +612,7 @@ company_name.onmouseout = function(){
                     videoEl = null;
 				 }
 			     modal.style.display = "block";
+				 modal.style.zIndex = "75";
 
 			     modalImg.src = system_dirArr[i];
 
@@ -993,15 +632,16 @@ company_name.onmouseout = function(){
                  if(videoEl != null){
                     modal.removeChild(videoEl);
 				 }
-				 
+
                  var video_elem = document.createElement("audio");
                  video_elem.setAttribute("src", system_dirArr[i]);
-                 video_elem.setAttribute("class", "modal-content-20 modal-content-20-audio");
+                 video_elem.setAttribute("class", "audiplay modal-content-20 modal-content-20-audio");
                  video_elem.setAttribute("id", "img01-20");
                  video_elem.setAttribute("controls", "true");
                  video_elem.setAttribute("style", "background-image: url('"+"adv.audios.img/"+productServiceAudioAdImage[i]+"')");
 
 			     modal.style.display = "block";
+				 modal.style.zIndex = "75";
 
 				 modal.insertBefore(video_elem, modalImg);
 
@@ -1013,10 +653,11 @@ company_name.onmouseout = function(){
 					
 			     videoElem = 1;
 
-				 modalImg.value = "20";				  
+				 modalImg.value = "200";				
+				 AudiPlay();
 			   }
-			  }else{
-                 company_name.onclick = function(){
+
+                elem.onclick = function(){
 			     var modal = document.getElementById("myModal-1");
 
 			     // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -1028,13 +669,15 @@ company_name.onmouseout = function(){
                     modal.removeChild(videoEl);
 				 }
 
-                 var video_elem = document.createElement("video");
+                 var video_elem = document.createElement("audio");
                  video_elem.setAttribute("src", system_dirArr[i]);
-                 video_elem.setAttribute("class", "modal-content-20");
+                 video_elem.setAttribute("class", "modal-content-20 modal-content-20-audio");
                  video_elem.setAttribute("id", "img01-20");
-				 video_elem.setAttribute("controls", "true");
+                 video_elem.setAttribute("controls", "true");
+                 video_elem.setAttribute("style", "background-image: url('"+"adv.audios.img/"+productServiceAudioAdImage[i]+"')");
 
 			     modal.style.display = "block";
+				 modal.style.zIndex = "75";
 
 				 modal.insertBefore(video_elem, modalImg);
 
@@ -1046,8 +689,10 @@ company_name.onmouseout = function(){
 					
 			     videoElem = 1;
 
-				 modalImg.value = "20";				  
+				 modalImg.value = "200";				 
+				 AudiPlay();
 			   }
+			  }else{
                  elem.onclick = function(){
 			     var modal = document.getElementById("myModal-1");
 
@@ -1059,18 +704,20 @@ company_name.onmouseout = function(){
                  if(videoEl != null){
                     modal.removeChild(videoEl);
 				 }
-
-                 var video_elem = document.createElement("video");
-                 video_elem.setAttribute("src", system_dirArr[i]);
-                 video_elem.setAttribute("class", "modal-content-20");
-                 video_elem.setAttribute("id", "img01-20");
-				 video_elem.setAttribute("controls", "true");
+				 
+				 //-------------------custom controls------------
+				 
+				 var videoControls = document.createElement("div");
+				 VideoControls4PageContent(videoControls, null, system_dirArr[i]);
+				 //----------------------------------------------
 
 			     modal.style.display = "block";
+				 modal.style.zIndex = "75";
 
-				 modal.insertBefore(video_elem, modalImg);
+				 //modal.insertBefore(video_elem, modalImg);
+				 modal.insertBefore(videoControls, modalImg);
 
-                 videoEl = video_elem;
+                 videoEl = videoControls;//video_elem;
 
                  modalImg.src = "";
                  modalImg.style.display = "none";
@@ -1078,7 +725,46 @@ company_name.onmouseout = function(){
 					
 			     videoElem = 1;
 
-				 modalImg.value = "20";				  
+				 modalImg.value = "20";			
+
+				 loadVideoControls();
+			   }
+
+                company_name.onclick = function(){
+			     var modal = document.getElementById("myModal-1");
+
+			     // Get the image and insert it inside the modal - use its "alt" text as a caption
+					  //var img = document.getElementById("");
+				 var modalImg = document.getElementById("img01-1");
+				 var captionText = document.getElementById("caption-1");
+                 
+                 if(videoEl != null){
+                    modal.removeChild(videoEl);
+				 }
+				 
+				 //-------------------custom controls------------
+				 
+				 var videoControls = document.createElement("div");
+				 VideoControls4PageContent(videoControls, null, system_dirArr[i]);
+				 //----------------------------------------------
+
+			     modal.style.display = "block";
+				 modal.style.zIndex = "75";
+
+				 //modal.insertBefore(video_elem, modalImg);
+				 modal.insertBefore(videoControls, modalImg);
+
+                 videoEl = videoControls;//video_elem;
+
+                 modalImg.src = "";
+                 modalImg.style.display = "none";
+			     captionText.innerHTML = "Didcy Act";
+					
+			     videoElem = 1;
+
+				 modalImg.value = "20";			
+
+				 loadVideoControls();
 			   }
 			  }		
 		    
@@ -1116,13 +802,13 @@ function checkSize(elem){
             videoMarked.setAttribute("id", vidMarkedId);
             videoMarked.setAttribute("style", "z-index:9;position:absolute;top:1.6%;width:300px;height:200px;background:blue;");
             
-            document.getElementById("adv-files-showcase").append(videoMarked);
+            document.getElementById("contact-media-in-dbox").append(videoMarked);
             
             marked = 1;
        if(marked == 1){
 			videoMarked.onclick = function(){
 				var vis = document.getElementById("event");
-			document.getElementById("adv-files-showcase").removeChild(videoMarked);
+			document.getElementById("contact-media-in-dbox").removeChild(videoMarked);
             videoMarked = null;
             marked = 0;
 		    elem.onmousedown = function(){}
@@ -1142,7 +828,7 @@ function checkSize(elem){
 			  document.getElementById("uploads").value = "";
 			  storeAllCreatedIds[i] = classID;
 			  //window.console.log(columElem);
-			  //window.console.log(document.getElementById("adv-files-showcase"));
+			  //window.console.log(document.getElementById("contact-media-in-dbox"));
 			 }	
 
 				  // Get the modal
@@ -1164,12 +850,12 @@ function checkSize(elem){
 
 			}
 		   }else if($fetchID == 3){
-				  var advFilesContainer = document.getElementById("adv-files-showcase");
-				  document.getElementById("container-c31").removeChild(advFilesContainer);
+				  var advFilesContainer = document.getElementById("contact-media-in-dbox");
+				  document.getElementById("contact-media-container-in-box").removeChild(advFilesContainer);
 				  var advFileContainer = document.createElement("div");
-				  advFileContainer.setAttribute("class", "row");
-				  advFileContainer.setAttribute("id", "adv-files-showcase");
-				  document.getElementById("container-c31").append(advFileContainer);
+				  advFileContainer.setAttribute("class", "w3-container contact-media row");
+				  advFileContainer.setAttribute("id", "contact-media-in-dbox");
+				  document.getElementById("contact-media-container-in-box").append(advFileContainer);
 				//}else{
 				
 				//}
@@ -1188,7 +874,7 @@ function checkSize(elem){
 			   document.getElementById("img01-1").value = '0';
                
 			   //selectDisplayTypes.style.display = "none";
-/* 			   var advFilesContainer = document.getElementById("adv-files-showcase");
+/* 			   var advFilesContainer = document.getElementById("contact-media-in-dbox");
 			   advFilesContainer.style.display = "block"; */
 
 			 var gagaCounter = 0;
@@ -1212,11 +898,11 @@ function checkSize(elem){
 			  elem.setAttribute("class", classID1);
 			  elem.setAttribute("id", classID);
 			  //elem.setAttribute("style", "width:100%");
-			  document.getElementById("adv-files-showcase").append(columElem);
+			  document.getElementById("contact-media-in-dbox").append(columElem);
 			  //document.getElementById("column").append(elem);
 
 			  height += 300;
-			  //document.getElementById("adv-files-showcase").value = height.toString();
+			  //document.getElementById("contact-media-in-dbox").value = height.toString();
 			  
 			  let gaga_share = document.createElement("button");
 			  const gaga_shareText = document.createTextNode("Share");
@@ -1224,7 +910,7 @@ function checkSize(elem){
 	          gaga_share.setAttribute("id", "button-1");
 	          //gaga_share.setAttribute("style", "margin-top: 20px");
 			  
-			  let column = document.getElementsByClassName("column");
+			  let column = document.getElementsByClassName("see-creatives");
 
 /* 				  var modal = document.getElementById("myModal-1");
 
@@ -1268,6 +954,7 @@ function checkSize(elem){
 					  var gagaShareWithDocText = document.createTextNode(GaGaShare[gagaCount]);
 					  const classID = "button-1 " + GaGaShareID[gagaCount];
 					  const GaGaBG = "cursor: pointer;padding: 5px;font-size: 17px;display:  block;margin-bottom: 2%;width: 50%;position: relative;left: 25%;background-color: " + GaGaShareBG[gagaCount];
+					  GaGaBG = "background-color: " + GaGaShareBG[gagaCount];
 					  gagaShareWithDoc.setAttribute("class", GaGaShareID);
 					  gagaShareWithDoc.setAttribute("id", "button-1");
 					  gagaShareWithDoc.setAttribute("style", GaGaBG);
@@ -1301,7 +988,7 @@ function checkSize(elem){
 			  }			  
 			  
 			  //window.console.log(columElem);
-			  //window.console.log(document.getElementById("adv-files-showcase"));
+			  //window.console.log(document.getElementById("contact-media-in-dbox"));
 		    }	
 /* 				 var footer = document.createElement("div");
 				 const footerText = document.createTextNode("Footer");
@@ -1319,12 +1006,12 @@ function checkSize(elem){
 				    //selectDisplayTypes.style.display = "none";					
 		   }else{
 		    //if(gagaSiteContentFromMore == 1){
-				  var advFilesContainer = document.getElementById("adv-files-showcase");
-				  document.getElementById("container-c31").removeChild(advFilesContainer);
+				  var advFilesContainer = document.getElementById("contact-media-in-dbox");
+				  document.getElementById("contact-media-container-in-box").removeChild(advFilesContainer);
 				  var advFileContainer = document.createElement("div");
-				  advFileContainer.setAttribute("class", "row");
-				  advFileContainer.setAttribute("id", "adv-files-showcase");
-				  document.getElementById("container-c31").append(advFileContainer);			  
+				  advFileContainer.setAttribute("class", "w3-container contact-media row");
+				  advFileContainer.setAttribute("id", "contact-media-in-dbox");
+				  document.getElementById("contact-media-container-in-box").append(advFileContainer);			  
 				
 				var myModal_1 = document.getElementById("myModal-1");
 				//document.getElementsByClassName("select-display-type-modal")[0].style.display = "none";
@@ -1441,8 +1128,8 @@ function checkSize(elem){
 			  elem.setAttribute("id", classID);
 			  elem.setAttribute("style", "cursor: pointer");
 			  //elem.setAttribute("style", "width:100%");
-			  document.getElementById("adv-files-showcase").append(columElem);
-			  //document.getElementById("adv-files-showcase").style.backgroundColor = "white";
+			  document.getElementById("contact-media-in-dbox").append(columElem);
+			  //document.getElementById("contact-media-in-dbox").style.backgroundColor = "white";
 			  height += 300;
 			  //document.getElementById("column").append(elem);
 			  cardElem.style.backgroundColor = "black";

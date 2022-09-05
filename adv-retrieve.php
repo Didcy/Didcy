@@ -18,7 +18,7 @@ function ValidateDrim($rc_id = null, $data_id = null, $drim = null) : int{
 						
 						$dataId = array("data_id"=>array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"));
 						
-					     $connect = ConnectServer(0);
+					     $connect = connectserver(1);
 
 						 if($connect["state"] != 500006){
 							//echo json_encode($connect);
@@ -88,8 +88,8 @@ function ValidateDidcyLinks(){
       session_destroy();
 	  echo "Cookie not enabled";
   }else{ 
-      if(empty($_COOKIE) != TRUE && count($_COOKIE) > 3){
-		  if(empty($_COOKIE["GAGA_RESPONSE"]) != true || $_COOKIE["GAGA_RESPONSE"] != ""){
+      if(empty($_COOKIE) != TRUE && count($_COOKIE) > 1){
+		  /*if(empty($_COOKIE["GAGA_RESPONSE"]) != true || $_COOKIE["GAGA_RESPONSE"] != ""){*/
 	         $cookie_id = $_COOKIE["GAGA_RESPONSE"];
 	         $link = "adv-main.php?drim=".$cookie_id;
 			 /*echo "<script type='text/javascript'>
@@ -420,21 +420,25 @@ function ValidateDidcyLinks(){
 					  
 				  }		 
 			 }else{
-				 
+			  if(empty($_COOKIE["GAGA_RESPONSE"]) != true || $_COOKIE["GAGA_RESPONSE"] != ""){
 				echo "<script type='text/javascript'>
 						'use strict';
 						document.write('<h2>Please check your rc_id, data_id & drim and provide the right values for each in the URL. Thank you.</h2>');			   
 					 </script>";
 				return;		 
+			  }else{
+				    session_start();
+					include_once("adv-policies/policy-error.htm");
+          }
 			 }
-			 return;
-		  }else{
+			 //return;
+		  /*}else{
 				echo "<script type='text/javascript'>
 						'use strict';
 						document.write('An error occured while connecting to https://www.didcy.com');			   
 					 </script>";
 				return;
-          }
+          }*/
       }else{
 		  session_start();
 		  //setcookie("GAGA_RELATIONS", "r99303922022");

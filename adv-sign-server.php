@@ -6,6 +6,7 @@
   define("UID_HASH", "adv-uid.php", false);
   
   require_once("connect_server.php");
+  require_once("functions.php");
   require_once(UID_HASH);
   
   function InitializeChat($username, $password, $connect, $id){
@@ -220,7 +221,8 @@
 					   filename text,
 					   fileId text,
 					   audioAdImage text null,
-					   videoAdImage text null);";
+					   videoAdImage text null, 
+					   privacy text null);";
 	 
 	 $connect_result = $connect->query($sql);
 
@@ -240,7 +242,8 @@
 					   filename text,
 					   fileId text,
 					   audioAdImage text null,
-					   videoAdImage text null);";
+					   videoAdImage text null, 
+					   privacy text null);";
 	 
 	 $connect_result = $connect->query($sql);
 
@@ -268,7 +271,7 @@
 							echo json_encode(array("state"=>7));
 							return;
 						}
-						$encodedData = UID(0, json_decode($_POST["uid"]), json_decode($_POST["psk"]), 0);
+/* 						$encodedData = UID(0, json_decode($_POST["uid"]), json_decode($_POST["psk"]), 0);
 						
 						$decodedData = $encodedData;
 						
@@ -282,7 +285,7 @@
 								echo json_encode(array("state"=>12));
 								return;
 							}
-							
+						 */	
 							if($_POST["password"] == ""){
 								echo json_encode(array("state"=>21));
 								return;
@@ -291,7 +294,7 @@
 								echo json_encode(array("state"=>22));
 								return;							
 							}
-						}
+						//}
 						if($_POST["selectedAdIndustry"] == ""){
 							echo json_encode(array("state"=>23));
 							return;							
@@ -314,7 +317,7 @@
 				 return;
 			 } */
 
-			   	     $connect = ConnectServer(0);
+			   	     $connect = connectserver(0);
 
 					 if($connect["state"] != 500006){
 						echo json_encode($connect);
@@ -510,12 +513,18 @@
 					return;
 				}
 				case 1:
+				 $table = "gaga";
+				 $query = "SHOW TABLES LIKE '".$table."'";
+				 if(count(fetchAll($query)) == 0){
+					echo json_encode(array("state"=>11));
+					return;     
+				 }  
 			    if(count($_COOKIE) > 0){
 				 if(!empty($_COOKIE["GAGA_RELATIONS"])){
 				  if(isset($_POST["signinbtn"])){
 				    if($_POST["email"] != ""){
 				
-						$encodedData = UID(0, json_decode($_POST["uid"]), json_decode($_POST["psk"]), 1);
+/* 						$encodedData = UID(0, json_decode($_POST["uid"]), json_decode($_POST["psk"]), 1);
 						
 						$decodedData = $encodedData;
 						
@@ -527,7 +536,7 @@
 							return;
 						}
  
-						
+						 */
 						if($_POST["password"] == ""){
 							echo json_encode(array("state"=>21));
 							return;
@@ -553,7 +562,7 @@
 				 echo json_encode(array("state"=>1));
 				 return;
 			 } */
-					     $connect = ConnectServer(0);
+					     $connect = connectserver(0);
 
 						 if($connect["state"] != 500006){
 							echo json_encode($connect);
@@ -634,7 +643,7 @@
 				 return;
 			 } */
 
-					     $connect = ConnectServer(0);
+					     $connect = connectserver(0);
 
 						 if($connect["state"] != 500006){
 							echo json_encode($connect);

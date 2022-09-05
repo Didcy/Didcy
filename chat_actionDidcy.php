@@ -1,6 +1,20 @@
 <?php
 session_start();
 include ('ChatDidcy.php');
+include ('functions.php');
+
+function ChatServer(){
+$table = "chat_users";
+$query = "SHOW TABLES LIKE '".$table."'";
+$chatUsers = "";
+if(count(fetchAll($query)) == 0){
+	$data = array(
+		"profileHTML" => $chatUsers
+	);
+	echo json_encode($data);
+    return;	
+} 
+
 $chat = new Chat();
 if($_POST['action'] == 'update_user_list') {
 	$_SESSION['userid'] = $_POST["userid"];
@@ -42,4 +56,6 @@ if($_POST['action'] == 'show_typing_status') {
 	);
 	echo json_encode($data);
 }
+}
+ChatServer();
 ?>

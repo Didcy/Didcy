@@ -9,6 +9,21 @@ function ValidateLogs(){
  $_SESSION['userid'] = "";
  $chatTable = "";
  $index = 0;
+ $state = CheckTablesExistence("gaga");
+ if($state["state"] == false){
+    $loginError = "Invalid username or password!";
+	$chatBoarder = "";
+	echo json_encode(array("session"=>$loginError, "state"=>506, "chatBoard"=>$chatBoarder));
+    return;	
+ }
+ $state = CheckTablesExistence("chat_users");
+ if($state["state"] == false){
+    $loginError = "Invalid username or password!";
+	$chatBoarder = "";
+	echo json_encode(array("session"=>$loginError, "state"=>506, "chatBoard"=>$chatBoarder));
+    return;	
+ }
+ 
  if($_POST["drim"] == ""){
    $query = "select * from chat_users where username='".$_POST['username']."' and password='".$_POST['pwd']."';";
    if(count(fetchAll($query)) != 0){

@@ -1,0 +1,6 @@
+<?
+$localhost = "localhost";
+$dbuser = "1145003";
+$dbpass = "didcycompany2022";
+$dbname = "1145003";
+?>

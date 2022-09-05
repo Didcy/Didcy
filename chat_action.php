@@ -2,6 +2,19 @@
 session_start();
 include ('functions.php');
 include ('Chat4.php');
+
+function ChatServer(){
+$table = "chat_users";
+$query = "SHOW TABLES LIKE '".$table."'";
+$chatUsers = "";
+if(count(fetchAll($query)) == 0){
+	$data = array(
+		"profileHTML" => $chatUsers
+	);
+	echo json_encode($data);
+    return;	
+}  
+
 $_SESSION["userid"] = $_POST["from_user_id"];
 $chatTable = "";
 $chatTable = "";
@@ -48,4 +61,6 @@ if($_POST['action'] == 'show_typing_status') {
 	);
 	echo json_encode($data);
 }
+}
+ChatServer();
 ?>

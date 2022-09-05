@@ -111,11 +111,11 @@ class Chat{
 			$user_name = '';
 			if($chat["sender_userid"] == $from_user_id) {
 				$conversation .= "<li class='sent'>";
-				$conversation .= "<img width='22px' height='22px' src='chat/userpics/".$fromUserAvatar."' alt='' />";
+				$conversation .= "<img width='22px' height='22px' src='userpics/".$fromUserAvatar."' alt='' />";
 			    $conversation .= "<p style='color: white'>".$chat["message"]."</p>";
 			} else {
 				$conversation .= "<li class='replies'>";
-				$conversation .= "<img width='22px' height='22px' src='chat/userpics/".$toUserAvatar."' alt='' />";
+				$conversation .= "<img width='22px' height='22px' src='userpics/".$toUserAvatar."' alt='' />";
 			    $conversation .= "<p style='color: black'>".$chat["message"]."</p>";
 			}			
 			//$conversation .= "<p style='color: black'>".$chat["message"]."</p>";			
@@ -132,7 +132,7 @@ class Chat{
 		$toUserAvatar = '';
 		foreach ($userDetails as $user) {
 			$toUserAvatar = $user['avatar'];
-			$userSection = '<img src="chat/userpics/'.$user['avatar'].'" alt="" />
+			$userSection = '<img src="userpics/'.$user['avatar'].'" alt="" />
 				<p>'.$user['username'].'</p>
 				<div class="social-media">
 					<i class="fa fa-facebook" aria-hidden="true"></i>

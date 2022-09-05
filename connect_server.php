@@ -31,16 +31,16 @@
  }
  
  function ConnectDidcyWebServer(){
- 			$localhost = "localhost";
-			$dbuser = "367644";
-			$dbpass = "davidansong12345";
-			$dbname = "367644";
+ 			$localhost = "sql108.epizy.com";
+			$dbuser = "epiz_32024228";
+			$dbpass = "VSn6pezY1Cvhzrs";
+			$dbname = "epiz_32024228_XXX";
 			
 			 $connect = new mysqli($localhost, $dbuser, $dbpass, $dbname);
 			 if($connect->connect_error){
 				 return array("state"=>0);
 			 }
-			 $server_target_db = "use `367644`;";
+			 $server_target_db = "use `1145003`;";
 			 $connect_result = $connect->query($server_target_db);
 			 if($connect_result === False){
 				 return array("state"=>1, "close"=>$connect->close());

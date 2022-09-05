@@ -1,0 +1,52 @@
+<?php
+
+ function didcx_random_number_generator($mini, $maxi){
+	 return floor(rand(1, 299388211) * ($maxi - $mini)) + $mini;
+ }
+ 
+ function ConnectServer($server_environment = null){
+	    $connect = null;
+	    if($server_environment == 0){
+			$server_name = "localhost";
+			$server_ip = "127.0.0.1";
+			$server_username = "root";
+			$server_password = "";
+			$server_dbname = "GAGA";
+			$server_port = 3306;
+						
+			$connect = new mysqli($server_name, $server_username, $server_password, $server_dbname, $server_port);
+			if($connect->connect_error){
+				return array("state"=>0);
+			}
+			
+			$server_target_db = "use gaga;";
+		    $connect_result = $connect->query($server_target_db);
+			if($connect_result === False){
+				return array("state"=>1, "close"=>$connect->close());
+			}				
+        }else{
+			$connect = ConnectDidcyWebServer();
+		}						 
+	 return array("connect"=>$connect, "state"=>500006);
+ }
+ 
+ function ConnectDidcyWebServer(){
+ 			$localhost = "localhost";
+			$dbuser = "1145003";
+			$dbpass = "didcycompany2022";
+			$dbname = "1145003";
+			
+			 $connect = new mysqli($localhost, $dbuser, $dbpass, $dbname);
+			 if($connect->connect_error){
+				 return array("state"=>0);
+			 }
+			 $server_target_db = "use `367644`;";
+			 $connect_result = $connect->query($server_target_db);
+			 if($connect_result === False){
+				 return array("state"=>1, "close"=>$connect->close());
+			 }	 
+	return $connect;
+ }
+ 
+
+?>

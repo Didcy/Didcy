@@ -26,7 +26,7 @@ function clear(){
 }
 
 formSubmitId2.addEventListener("click", function(){
-	var $email = document.getElementById("input-signin-txt").value.toString().trim();
+/* 	var $email = document.getElementById("input-signin-txt").value.toString().trim();
 	
 	var $password = document.getElementById("input-pwd-signin").value.toString().trim();
 	
@@ -35,14 +35,14 @@ formSubmitId2.addEventListener("click", function(){
 	var fn = RK($email, $password, $repeatPassword);
 	
 	if(fn == -1){
-		return alertBox("Email field is empty!!!");
+		return AlertBoxInModal("Email field is empty!!!");
 	}
 	if(fn == -2){
-		return alertBox("Password field is empty!!!");
+		return AlertBoxInModal("Password field is empty!!!");
 	}
 	if(fn == -3){
-		return alertBox("Confirmation Password field is empty!!!");
-	}
+		return AlertBoxInModal("Confirmation Password field is empty!!!");
+	} */
 	
     //window.console.log(fn);
 	
@@ -59,7 +59,7 @@ formSubmitId2.addEventListener("click", function(){
 					signinID : 1
 		},
 		gagaSignAPI : function(){
-			 //alertBox("dkdkd93393");
+			 //AlertBoxInModal("dkdkd93393");
 			 GagaResponseFormApi(null, this.gagaSignIn.email.value.toString().trim(), 
 			 this.gagaSignIn.password.value.toString().trim(), 
 			 this.gagaSignIn.repeatPassword.value.toString().trim(), "", "", "", "",
@@ -73,7 +73,7 @@ formSubmitId2.addEventListener("click", function(){
 formSubmitId.addEventListener("click", function(){
   
 	
-	var $email = document.getElementById("input-signup-txt").value.toString().trim();
+/* 	var $email = document.getElementById("input-signup-txt").value.toString().trim();
 	
 	var $password = document.getElementById("input-pwd-signup").value.toString().trim();
 	
@@ -82,15 +82,15 @@ formSubmitId.addEventListener("click", function(){
  	var fn = RK($email, $password, $repeatPassword);
 	
 	if(fn == -1){
-		return alertBox("Email field is empty!!!");
+		return AlertBoxInModal("Email field is empty!!!");
 	}
 	if(fn == -2){
-		return alertBox("Password field is empty!!!");
+		return AlertBoxInModal("Password field is empty!!!");
 	}
 	if(fn == -3){
-		return alertBox("Confirmation Password field is empty!!!");
+		return AlertBoxInModal("Confirmation Password field is empty!!!");
 	} 
-	
+	 */
 	var gagaForm = {
 		gagaSignUp : {
 			        user_name : document.getElementById("input-signup-txt-name"),
@@ -126,7 +126,7 @@ function getImageFileName(image, imageID){
    return GagaResponseFormApi("", "", "", "", "", "", "", "", "", 2, image, imageID);
 }
 
-function alertBox(alertErrorData = "", alertID = 0){
+function AlertBoxInModal(alertErrorData = "", alertID = 0){
 	document.getElementById("info-error").innerHTML = alertErrorData;
 	document.getElementById("alert-box").style.display = "block";
 	setTimeout(() => {
@@ -139,29 +139,29 @@ function GagaResponseFormApi(user_name, email, password, repeatPassword,
 selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, remember, signID, image = null, imageId = ""){
 	var form = new FormData();
 	form.append("email", email);
-/* 	form.append("password", password);
-	form.append("repeatPassword", repeatPassword);  */
+	form.append("password", password);
+	form.append("repeatPassword", repeatPassword); 
 	form.append("remember", remember);
 	form.append("signID", signID);
 	
 	if(signID == 0){
 		if(user_name == ""){
-			return alertBox("Username field is empty!!!", 0);
+			return AlertBoxInModal("Username field is empty!!!", 0);
 		}	
 		if(email == ""){
-			return alertBox("Email field is empty!!!");
+			return AlertBoxInModal("Email field is empty!!!");
 		}
 		if(password == ""){
-			return alertBox("Password field is empty!!!");
+			return AlertBoxInModal("Password field is empty!!!");
 		}else{
 			
 		}
 		if(repeatPassword == ""){
-			return alertBox("Confirmation Password field is empty!!!");
+			return AlertBoxInModal("Confirmation Password field is empty!!!");
 		}
 
 		if(password != repeatPassword){
-			return alertBox("Please passwords mismatched !!!");
+			return AlertBoxInModal("Please passwords mismatched !!!");
 		}        
         
 		RK(password, repeatPassword);
@@ -180,23 +180,23 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 			if(selectedAdIndustry != "Select Your Industry:"){
 			  form.append("selectedAdIndustry", selectedAdIndustry);
 			}else{
-			  return alertBox("Please select your ad industry or select 'All'");
+			  return AlertBoxInModal("Please select your ad industry or select 'All'");
 			}
 /* 			if(selectedCompanyCountryRegistration == "Country of Registration"){
-				return alertBox("Please select your country.");
+				return AlertBoxInModal("Please select your country.");
 			} */
 			adFee = "$0.00";
 			if(adFee == ""){
-				return alertBox("Please provide your chargeable fee");
+				return AlertBoxInModal("Please provide your chargeable fee");
 			}
 		}else{
 			if(selectedAdIndustry != "Select Your Industry:"){
 			  form.append("selectedAdIndustry", selectedAdIndustry);
 			}else{
-			  return alertBox("Please select your ad industry or select 'All'");
+			  return AlertBoxInModal("Please select your ad industry or select 'All'");
 			}
 /* 			if(selectedCompanyCountryRegistration != "Country of Registration"){
-				return alertBox("Please only companies are allowed to select a country.");
+				return AlertBoxInModal("Please only companies are allowed to select a country.");
 			} */
 			companiesOnly = "0";
 		}		
@@ -205,16 +205,17 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 		//return window.console.log(companiesOnly);
 		//form.append("CountryRegistration", selectedCompanyCountryRegistration);
 		if(document.getElementById("advertizersOnly").checked == true){
+		  adFee = "$0.00";
 		  if(companiesOnly == "0"){
 			 companiesOnly = "2";
 			 if(adFee == ""){
-				return alertBox("Please provide your chargeable fee");
+				return AlertBoxInModal("Please provide your chargeable fee");
 			 }
 		  }
 		}else{
 		  if(companiesOnly == "0"){
 			if(adFee == ""){
-				return alertBox("Please provide your chargeable fee");
+				return AlertBoxInModal("Please provide your chargeable fee");
 			}
 		  }
 		}
@@ -225,19 +226,20 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 	    form.append("signupbtn", "on");
 	}else if(signID == 1){
 		if(email == ""){
-			return alertBox("Email field is empty!!!");
+			return AlertBoxInModal("Email field is empty!!!");
 		}
+		
 		if(password == ""){
-			return alertBox("Password field is empty!!!");
+			return AlertBoxInModal("Password field is empty!!!");
 		}else{
 			
 		}
 		if(repeatPassword == ""){
-			return alertBox("Confirmation Password field is empty!!!");
+			return AlertBoxInModal("Confirmation Password field is empty!!!");
 		}
 
 		if(password != repeatPassword){
-			return alertBox("Please passwords mismatched !!!");
+			return AlertBoxInModal("Please passwords mismatched !!!");
 		}    
 
 		//RK(password, repeatPassword);
@@ -257,11 +259,18 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 	}else{
 		//window.console.log(imageId);
 	    if(getCookieValue("GAGA_RESPONSE") != imageId){
-			alertBox("Invalid Request Method");
-			return window.location.replace("http://www.localhost");
+			AlertBoxInModal("Invalid Request Method");
+			//return window.location.replace("https://www.didcy.com");
+			return window.location.replace("https://www.didcy.com");
 		}
 		//form.append("GAGA_CMPO", getCookieValue("GAGA_CMPO").toString().trim());
 		form.append("imageId", imageId);
+	}
+	
+	if(signID == 0 || signID == 1){
+		if($__4958484_1929_cookie_terms_policy_accept == 0){
+		  return AlertBoxInModal("Cookie not accepted &darr;");
+		}		
 	}
 /* 		window.__sleep = 0;
 		sleeper = 0; */
@@ -278,16 +287,16 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 			//return;
 			var data_returned = JSON.parse(result);
 			if(data_returned.state == 0){
-				return alertBox("Connection to Server Error!!!.");
+				return AlertBoxInModal("Connection to Server Error!!!.");
 			}
 			else if(data_returned.state == 1){
-				return alertBox("Connection to Database Error!!!.");
+				return AlertBoxInModal("Connection to Database Error!!!.");
 			}
 			else if(data_returned.state == 2){
-				return alertBox("User already exists!!!.");
+				return AlertBoxInModal("User already exists!!!.");
 			}
 			else if(data_returned.state == 3){
-				return alertBox("Data insertion Error!!!");
+				return AlertBoxInModal("Data insertion Error!!!");
 			}
 			else if(data_returned.state == 4){
 				document.cookie = "GAGA_RESPONSE="+data_returned.cookie_id+";path=/";
@@ -297,14 +306,14 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 				 "";
 			}
 			else if(data_returned.state == 5){
-				//return alertBox("Cookie not enabled!!!");
-				return window.location.replace("http://www.localhost");
+				//return AlertBoxInModal("Cookie not enabled!!!");
+				return window.location.replace("https://www.didcy.com");
 			}
 			else if(data_returned.state == 6){
-				return alertBox("Please click on the Sign Up!!!");
+				return AlertBoxInModal("Please click on the Sign Up!!!");
 			}
 			else if(data_returned.state == 7){
-				return alertBox("Email Input Field Empty!!!");
+				return AlertBoxInModal("Email Input Field Empty!!!");
 			}
 			else if(data_returned.state == 8){
 				//if(getCookieValue("GAGA_RELATIONS") != ""){
@@ -316,7 +325,7 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
                  window.location.href = "adv-main.php?drim="+data_returned.cookie_id+
 				 "";//"&companiesOnly="+data_returned.companiesOnly+"&&_rid=39393938228282"+"&39300293939000";
 	            //}
-				//return alertBox("Signin was successful.");
+				//return AlertBoxInModal("Signin was successful.");
 			}
 			else if(data_returned.state == 9){
 			    if(getCookieValue("GAGA_CMPO") == 0){
@@ -349,31 +358,31 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 				return window.console.log("Image Loading Failed!");
 			}
 			else if(data_returned.state == 11){
-				return alertBox("User not exists!!!");
+				return AlertBoxInModal("User not exists!!!");
 			}
 			else if(data_returned.state == 12){
-				return alertBox("User not exists!!!");
+				return AlertBoxInModal("User not exists!!!");
 			}
 			else if(data_returned.state == 20){
-				return alertBox("User Name Input Field Empty !!!");
+				return AlertBoxInModal("User Name Input Field Empty !!!");
 			}
 			else if(data_returned.state == 21){
-				return alertBox("Password Input Field Empty!!!");
+				return AlertBoxInModal("Password Input Field Empty!!!");
 			}
 			else if(data_returned.state == 22){
-				return alertBox("Repeat Password Input Field Empty!!!");
+				return AlertBoxInModal("Repeat Password Input Field Empty!!!");
 			}
 			else if(data_returned.state == 23){
-				return alertBox("Please your ad industry or select 'All' !!!");
+				return AlertBoxInModal("Please your ad industry or select 'All' !!!");
 			}
 			else if(data_returned.state == 210){
 				return  document.write("Invalid Request Method");
 			}
 			else if(data_returned.state == 303334){
-				return  alertBox("Chat Error!!!");
+				return  AlertBoxInModal("Chat Error!!!");
 			}
 			else{
-				//return alertBox("dkdkkddk");
+				//return AlertBoxInModal("dkdkkddk");
 			}
 			
 		},
@@ -393,8 +402,8 @@ document.getElementById("companiesOnly").addEventListener("click", () => {
 	    document.getElementById("advertizers").style.display = "block";
 	    document.getElementById("advertizersOnly").style.display = "block";
 	    document.getElementById("advOnly").style.display = "block";
-	    document.getElementById("fee-label").style.display = "block";
-	    document.getElementById("fee").style.display = "block";
+	    document.getElementById("fee-label").style.display = "none";
+	    document.getElementById("fee").style.display = "none";
 	}
 });
 

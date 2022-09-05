@@ -5,6 +5,11 @@ function ServicesNotAvailable(serviceTitle = null, serviceInfo = null, service_I
 	document.getElementById("services-not-available").innerHTML = serviceInfo;
 	document.getElementById('id02').style.display='block';
 	var backSide = document.getElementById("back-side-service-report");
+/* 	if(serviceTitle == 'Didcy Books'){
+		document.getElementById("didcy-cms").alt="Find out more about Didcy Books";
+	}else if(serviceTitle == 'Didcy Course'){
+		document.getElementById("didcy-cms").alt="Find out more about Didcy Course";
+	} */
 	if(service_Id == -1){
 		backSide.className = "back-side-service-report";
 		document.getElementsByClassName("back-side-service-report")[0].innerHTML = "Please can't access MyStory service on the Home Page.";

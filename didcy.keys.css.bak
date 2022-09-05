@@ -9,6 +9,7 @@
   background-color: rgba(100, 100, 100, 1);
   border-radius: 5%;
   display: none;
+  color: white;
 }
 
 /* When the input field gets focus, change its width to 100% */

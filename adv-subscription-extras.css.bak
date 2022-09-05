@@ -1,5 +1,7 @@
 .modal-notification, .modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, 
-.modal-payments, .modal-payments, .modal-refund-request, .modal-s-records, .modal-chat-4-didcy-works{
+.modal-payments, .modal-payments, .modal-refund-request, .modal-s-records, .modal-chat-4-didcy-works, .modal-log-books, .modal-create-books,
+.modal-didcy-benefits, .modal-didcy-guide, .modal-didcy-keywords
+,.modal-didcy-competitive-advantage, .modal-upload-system{
   top: 0%;
   left: 20%;
   right: 20%;
@@ -7,21 +9,48 @@
   z-index: 19;
 } 
 
-.modal-chat-4-didcy-works{
+.modal-chat-4-didcy-works, .modal-log-books, .modal-create-books, .modal-didcy-guide, .modal-didcy-keywords, 
+.modal-didcy-benefits,.modal-didcy-competitive-advantage, .modal-upload-system{
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.modal-didcy-benefits, .modal-didcy-guide, .modal-didcy-keywords
+,.modal-didcy-competitive-advantage{
+ background-color: rgba(10, 10, 10, 1);
+}
+
+.modal-create-books{
+  z-index: 5;
+}
+
+.modal-upload-system{
+  z-index: 50;
+  background-color: rgba(50,50,50, 0.9);
 }
 
 @media screen and (max-width: 1200px) {
-.modal-notification, .modal-chat-4-didcy-works, .modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+.modal-notification, .modal-didcy-guide, .modal-didcy-keywords, .modal-chat-4-didcy-works, .modal-log-books, .modal-create-books, .modal-ripa-board, 
+.modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, 
+.modal-payments, .modal-refund-request, .modal-s-records, .modal-didcy-benefits
+,.modal-didcy-competitive-advantage, .modal-upload-system{
   left: 10%;
   right: 10%;
   width: 80%;
 } 
 }
 
+@media screen and (max-width: 1090px) {
+.modal-plugins-board, .modal-didcy-fixes{
+  width: 90%;
+  max-width: 90%;
+} 	
+}
 @media screen and (max-width: 1000px) {
-.modal-notification, .modal-chat-4-didcy-works, .modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+.modal-notification, .modal-didcy-guide, .modal-didcy-keywords, .modal-chat-4-didcy-works, .modal-log-books, .modal-create-books, .modal-didcy-benefits, 
+.modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, 
+.modal-payments, .modal-payments, .modal-refund-request, .modal-s-records
+,.modal-didcy-competitive-advantage, .modal-upload-system{
   left: 5%;
   right: 5%;
   width: 80%;
@@ -29,15 +58,25 @@
 }
 
 @media screen and (max-width: 975px) {
-.modal-notification, .modal-chat-4-didcy-works, .modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+.modal-notification, .modal-didcy-guide, .modal-didcy-keywords, 
+
+.modal-chat-4-didcy-works, .modal-log-books, .modal-create-books, .modal-didcy-benefits, .modal-ripa-board, 
+.modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, 
+.modal-payments, .modal-refund-request, .modal-s-records
+,.modal-didcy-competitive-advantage, .modal-upload-system{
   left: 0%;
   right: 0%;
   width: 100%;
 } 
+.modal-plugins-board, .modal-didcy-fixes{
+  width: 100%;
+  max-width: 100%;
+} 	
 }
 
 @media screen and (max-width: 875px) {
-.modal-notification, .modal-chat-4-didcy-works, .modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+.modal-notification,.modal-didcy-competitive-advantage, .modal-upload-system, .modal-didcy-guide, .modal-didcy-keywords, 
+.modal-chat-4-didcy-works, .modal-log-books, .modal-create-books, .modal-didcy-benefits, .modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
   left: 0%;
   right: 0%;
   width: 100%;
@@ -45,7 +84,7 @@
 }
 
 @media screen and (max-width: 775px) {
-.modal-notification, .modal-chat-4-didcy-works, .modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+.modal-notification, .modal-didcy-competitive-advantage, .modal-didcy-guide, .modal-didcy-keywords, .modal-chat-4-didcy-works, .modal-log-books, .modal-create-books, .modal-didcy-benefits, .modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
   left: 3%;
   right: 3%;
   width: 94%;
@@ -53,7 +92,7 @@
 }
 
 @media screen and (max-width: 700px) {
-.modal-notification, .modal-chat-4-didcy-works, .modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
+.modal-notification, .modal-didcy-competitive-advantage, .modal-didcy-guide, .modal-didcy-keywords, .modal-chat-4-didcy-works, .modal-log-books, .modal-create-books, .modal-didcy-benefits, .modal-ripa-board, .modal-didcy-ripa-bank, .modal-notificator, .modal-reach, .modal-payments, .modal-payments, .modal-refund-request, .modal-s-records{
   left: 0%;
   right: 0%;
   width: 100%;

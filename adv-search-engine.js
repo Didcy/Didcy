@@ -19,18 +19,19 @@ var $randomize = randomizChars();
 //window.console.log($randomize);
 
 /*
-	if(drim_2 == "http://www.localhost/" || drim_2 == "http://www.localhost" 
-	|| drim_2 == "localhost" || drim_2 == "www.localhost" || 
-	drim_2 == "localhost/" || drim_2 == "www.localhost/"
-    || drim_2 == "http://www.localhost/?id=1" 
-	|| drim_2 == "localhost/?id=1" 
-	|| drim_2 == "localhost?id=1" 
-	|| drim_2 == "www.localhost/?id=1"){
+	if(drim_2 == "http://localhost/" || drim_2 == "http://localhost" 
+	|| drim_2 == "www.localhost" || drim_2 == "localhost" || 
+	drim_2 == "www.localhost/" || drim_2 == "localhost/"
+    || drim_2 == "http://localhost/?id=1" 
+	|| drim_2 == "www.localhost/?id=1" 
+	|| drim_2 == "www.localhost?id=1" 
+	|| drim_2 == "localhost/?id=1"){
 
 */
 
 var input = document.getElementsByClassName("search-engine");
-var searchResults = [], searchResultsCompany = [], searchResultsAudioAdImage = [];
+var searchResults = [], searchResultsCompany = [], searchResultsAudioAdImage = [], 
+searchResultsVideoAdImage = [];
 var drim_2 = window.location.href, drim_21, searchCallID = 0;
 
 input[0].addEventListener("keyup", function(event) {
@@ -38,7 +39,7 @@ input[0].addEventListener("keyup", function(event) {
 if (event.keyCode == 13) {
     var $searchEngine = document.getElementsByClassName("search-engine")[0].value.toString().trim();
 	if($searchEngine == ""){ 
-		return alertBox("Type in anything to search....");
+		return AlertBoxInModal("Type in anything to search....");
 	}	
 	
 	if($searchEngine == $randomize || $searchEngine == "#ADC9C03-E9E9-W09E00TR-R998W122-303949KDD-49404838-390"){ 
@@ -50,7 +51,8 @@ if (event.keyCode == 13) {
 	$searchEngine == "didcy keys" || $searchEngine == "Didcy keys" || 
 	$searchEngine == "didcy Keys" || $searchEngine == "keys"
 	 || $searchEngine == "Keys" || $searchEngine == "Didcykeys"
-	  || $searchEngine == "DidcyKeys" || $searchEngine == "KEYS"){ 
+	  || $searchEngine == "DidcyKeys" || $searchEngine == "KEYS" 
+	  || $searchEngine == "dkeys" || $searchEngine == "dkys"){ 
 		document.getElementById("didcy-keys-btn").style.display = "block";
 		return;
 	}
@@ -59,19 +61,94 @@ if (event.keyCode == 13) {
 	$searchEngine == "clear didcy keys" || $searchEngine == "Clear Didcy keys" || 
 	$searchEngine == "clear didcy Keys" || $searchEngine == "clear keys" ||  
 	$searchEngine == "Clear Keys" || $searchEngine == "CLEAR KEYS" ||  
+	$searchEngine == "clk" || $searchEngine == "CLK" || $searchEngine == "clks" || 
+     $searchEngine == "CLKS" ||	
 	$searchEngine == "clear Keys" || $searchEngine == "Clear keys"){ 
 		document.getElementById("didcy-keys-btn").style.display = "none";
 		return;
 	}
+
+	if($searchEngine == "@@#--left-left-position-display-none"){
+		document.getElementById("side-nav-container").style.display="none";
+		return;
+	}
+
+	if($searchEngine == "@@#--left-left-position-display-block"){
+		document.getElementById("side-nav-container").style.display="block";
+		return;
+	}
+
+	if($searchEngine == "$#-didcy-benefits-@@$" || $searchEngine == "--didcy--ben--"){ 
+		document.getElementById("modal-didcy-benefits").style.height = "100%";
+		return;
+	}
+	
+	if($searchEngine == "$#-didcy-keywords-@@$" || $searchEngine == "--didcy--keywords--"){ 
+		document.getElementById("modal-didcy-keywords").style.height = "100%";
+		return;
+	}
+	
+	if($searchEngine == "$#-didcy-guide-@@$" || $searchEngine == "--didcy--guide--"){ 
+		document.getElementById("modal-didcy-guide").style.height = "100%";
+		return;
+	}
+
+	if($searchEngine == "$#-didcy-cmp-adv-@@$" || $searchEngine == "--didcy--cmp--adv--"){ 
+		document.getElementById("modal-didcy-competitive-advantage").style.height = "100%";
+		return;
+	}	
+	
+	if($searchEngine == "$%%--about-us--%%$" || 
+	$searchEngine == "--didcy--about--us--" || $searchEngine == "about--us" ||  
+	$searchEngine == "--didcy--about-us--" || $searchEngine == "--about-us--" || 
+	$searchEngine == "--didcy--abt-us--" || $searchEngine == "abt--us" || 
+	$searchEngine == "--about--us--" || $searchEngine == "--abt--us--" || 
+	$searchEngine == "--didcy--abtus--" || $searchEngine == "--didcy--aboutus--" || 
+	$searchEngine == "about us"){ 
+		document.getElementById("abt-us").style.display = "block";
+		return;
+	}
+	
+	if($searchEngine == "didcy-platforms-offer" || $searchEngine == "$@@--didcy-platforms-offer--@@$"){
+	   document.getElementById("didcy-platforms-offer").style.display = "block";
+	   return;
+	}	
+	
+	if($searchEngine == "didcy-ad-creators" || $searchEngine == "didcy ad creators"
+	 || $searchEngine == "#@-%didcy-ad-creators-000-sc"){
+	   document.getElementById("didcy-ad-creators").style.display = "block";
+	   return;
+	}
+
+	if($searchEngine == "companies-profiles" || $searchEngine == "--companies--profiles--"){ 
+		if(drim_2.slice(39) == ""){
+		  exhibitEvents(8, null, 'agp');
+		}
+		return;
+	}	
+	
+	if($searchEngine == "logout" || $searchEngine == "--log--out--"){ 
+       if(drim_2.slice(39) != ""){	
+		 return logMeOut();
+	   }else{
+		 return AlertBoxInModal("Logout Command not allowed here");
+	   }
+	}
+
+	if($searchEngine == "didcy write" || $searchEngine == "--welcome-to-didcy--" || $searchEngine == "welcome to didcy"){ 
+       return document.getElementById("write").style.display = "block";
+	}
 	
 	var form = new FormData();
-	if(drim_2 == "http://www.localhost/" || drim_2 == "http://www.localhost" 
-	|| drim_2 == "localhost" || drim_2 == "www.localhost" || 
-	drim_2 == "localhost/" || drim_2 == "www.localhost/"
-    || drim_2 == "http://www.localhost/?id=1" 
-	|| drim_2 == "localhost/?id=1" 
-	|| drim_2 == "localhost?id=1" 
-	|| drim_2 == "www.localhost/?id=1"){
+	if(drim_2 == "https://localhost/" || drim_2 == "https://localhost" 
+	|| drim_2 == "http://localhost/" || drim_2 == "http://www.localhost" 
+	|| drim_2 == "www.localhost" || drim_2 == "localhost" || 
+	drim_2 == "www.localhost/" || drim_2 == "localhost/"
+    || drim_2 == "https://localhost/?id=1" 
+    || drim_2 == "http://localhost/?id=1" 
+	|| drim_2 == "www.localhost/?id=1"   || drim_2 == "http://www.localhost/?id=1"
+	|| drim_2 == "www.localhost?id=1"  || drim_2 == "http://www.localhost/" 
+	|| drim_2 == "localhost/?id=1"){
 		//form.append("drim", drim_2.slice(51));
 		form.append("live",  0);
 		//window.alert(drim_2 + ' [');
@@ -92,71 +169,99 @@ if (event.keyCode == 13) {
 	  success: function(result){
 		  //window.console.log(result);
 		  if(local == 1){
-			  var advFiles = document.getElementById("adv-files-showcase-video-ads");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox-video-ads");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 
-			  var advFiles = document.getElementById("adv-files-showcase-static-ads");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox-static-ads");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 
-			  var advFiles = document.getElementById("adv-files-showcase-companies-profiles");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox-companies-profiles");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 			  
-			  var advFiles = document.getElementById("adv-files-showcase-actors-n-groups-profiles");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox-actors-n-groups-profiles");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 			  
 			  
 			  var advFilesShowcase = document.createElement("div");
 			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase-video-ads");
-			  document.getElementById("container-c31").append(advFilesShowcase);		
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox-video-ads");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);		
 
 			  var advFilesShowcase = document.createElement("div");
 			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase-static-ads");
-			  document.getElementById("container-c31").append(advFilesShowcase);	
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox-static-ads");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);	
 			  
 			  var advFilesShowcase = document.createElement("div");
 			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase-companies-profiles");
-			  document.getElementById("container-c31").append(advFilesShowcase);	
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox-companies-profiles");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);	
 			  
 			  var advFilesShowcase = document.createElement("div");
 			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase-actors-n-groups-profiles");
-			  document.getElementById("container-c31").append(advFilesShowcase);	
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox-actors-n-groups-profiles");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);	
 			  			  
 			  local = 0;
 		  }
 		  if($fetchIDTemp != 0){
-			  var advFiles = document.getElementById("adv-files-showcase");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 			  var advFilesShowcase = document.createElement("div");
-			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase");
-			  document.getElementById("container-c31").append(advFilesShowcase);			  
+			  advFilesShowcase.setAttribute("class", "w3-container contact-media row");
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);			  
 			  local = 0;		
               $fetchIDTemp = 0;			  
 		  }	
 		  if(fetchSearch != 0){
-			  var advFiles = document.getElementById("adv-files-showcase");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 			  var advFilesShowcase = document.createElement("div");
-			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase");
-			  document.getElementById("container-c31").append(advFilesShowcase);			  
+			  advFilesShowcase.setAttribute("class", "w3-container contact-media row");
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);			  
 			  local = 0;		
               fetchSearch = 0;	
 			  $fetchIDTemp = 0;					  
 		  }	
 		  //window.console.log(result);
 	      var data_returned = JSON.parse(result);
+		  if(data_returned.audioFetch == 1 && data_returned.videoFetch == 1 &&
+		   data_returned.staticFetch == 1){
+			document.getElementById("select-display-type-modal").style.display = "block";
+	        popupAdTaskBeforeLoad = 1;
+			return;
+			//document.getElementById("industrial-ad-area").style.backgroundColor = "rgba(0, 0, 0, 1)";
+		  }
+	      else if(data_returned.audioFetch == 1 && data_returned.videoFetch == 1 &&
+		   data_returned.staticFetch == 0){
+			document.getElementById("select-display-type-modal").style.display = "block";
+			popupAdTaskBeforeLoad = 1;
+			return;
+			//document.getElementById("industrial-ad-area").style.backgroundColor = "rgba(0, 0, 0, 1)";
+		  }
+	      else if(data_returned.audioFetch == 1 && data_returned.videoFetch == 0 &&
+		   data_returned.staticFetch == 1){
+			document.getElementById("select-display-type-modal").style.display = "block";
+			popupAdTaskBeforeLoad = 1;
+			return;
+			//document.getElementById("industrial-ad-area").style.backgroundColor = "rgba(0, 0, 0, 1)";
+		  }
+	      else if(data_returned.audioFetch == 0 && data_returned.videoFetch == 1 &&
+		   data_returned.staticFetch == 1){
+			document.getElementById("select-display-type-modal").style.display = "block";
+			popupAdTaskBeforeLoad = 1;
+			return;
+			//document.getElementById("industrial-ad-area").style.backgroundColor = "rgba(0, 0, 0, 1)";
+		  }
 	      //window.console.log(data_returned.fileTypeID);
 	      //window.console.log(data_returned);
 	      //window.console.log(data_returned[1]);
 		  if(data_returned.state == 32){
-		    LiveSearch(data_returned[0], $searchEngine, data_returned[1], data_returned[2], data_returned.fileTypeID, data_returned.page_type);
+		    LiveSearch(data_returned[0], $searchEngine, data_returned[1], data_returned[2], data_returned[3], data_returned.fileTypeID, data_returned.page_type);
 		  }else if(data_returned.state == 33){
-			LiveSearch(data_returned[0], $searchEngine, data_returned[1], data_returned[2], data_returned.fileTypeID, data_returned.page_type);  
+			LiveSearch(data_returned[0], $searchEngine, data_returned[1], data_returned[2], data_returned[3], data_returned.fileTypeID, data_returned.page_type);  
 		  }else{
 			TransformText(0);
 		  }
@@ -175,22 +280,117 @@ input[1].addEventListener("keyup", function(event) {
 if (event.keyCode == 13) {
     var $searchEngine = document.getElementsByClassName("search-engine")[1].value.toString().trim();
 	if($searchEngine == ""){ 
-		return alertBox("Type in anything to search....");
+		return AlertBoxInModal("Type in anything to search....");
 	}
 	
 	if($searchEngine == $randomize || $searchEngine == "#ADC9C03-E9E9-W09E00TR-R998W122-303949KDD-49404838-390"){ 
 		document.getElementById("modal-chat-4-didcy-works").style.height = "100%";
 		return;
+	}	
+	
+	if($searchEngine == "$#-didcy-benefits-@@$" || $searchEngine == "--didcy--ben--"){ 
+		document.getElementById("modal-didcy-benefits").style.height = "100%";
+		return;
+	}
+
+	if($searchEngine == "DIDCY KEYS" || $searchEngine == "Didcy Keys" ||
+	$searchEngine == "didcy keys" || $searchEngine == "Didcy keys" || 
+	$searchEngine == "didcy Keys" || $searchEngine == "keys"
+	 || $searchEngine == "Keys" || $searchEngine == "Didcykeys"
+	  || $searchEngine == "DidcyKeys" || $searchEngine == "KEYS" 
+	  || $searchEngine == "dkeys" || $searchEngine == "dkys"){ 
+		document.getElementById("didcy-keys-btn").style.display = "block";
+		return;
+	}
+	
+	if($searchEngine == "CLEAR DIDCY KEYS" || $searchEngine == "Clear Didcy Keys" ||
+	$searchEngine == "clear didcy keys" || $searchEngine == "Clear Didcy keys" || 
+	$searchEngine == "clear didcy Keys" || $searchEngine == "clear keys" ||  
+	$searchEngine == "Clear Keys" || $searchEngine == "CLEAR KEYS" ||  
+	$searchEngine == "clk" || $searchEngine == "CLK" || $searchEngine == "clks" || 
+     $searchEngine == "CLKS" ||	
+	$searchEngine == "clear Keys" || $searchEngine == "Clear keys"){ 
+		document.getElementById("didcy-keys-btn").style.display = "none";
+		return;
+	}
+	
+	if($searchEngine == "@@#--left-left-position-display-none"){
+		document.getElementById("side-nav-container").style.display="none";
+		return;
+	}
+
+	if($searchEngine == "@@#--left-left-position-display-block"){
+		document.getElementById("side-nav-container").style.display="block";
+		return;
+	}
+
+	if($searchEngine == "$#-didcy-benefits-@@$" || $searchEngine == "--didcy--ben--"){ 
+		document.getElementById("modal-didcy-benefits").style.height = "100%";
+		return;
+	}
+	
+	if($searchEngine == "$#-didcy-keywords-@@$" || $searchEngine == "--didcy--keywords--"){ 
+		document.getElementById("modal-didcy-keywords").style.height = "100%";
+		return;
+	}
+	
+	if($searchEngine == "$#-didcy-guide-@@$" || $searchEngine == "--didcy--guide--"){ 
+		document.getElementById("modal-didcy-guide").style.height = "100%";
+		return;
+	}	
+	
+	if($searchEngine == "companies-profiles" || $searchEngine == "--companies--profiles--"){ 
+		if(drim_2.slice(39) == ""){
+		  exhibitEvents(8, null, 'agp');
+		}
+		return;
+	}
+
+	if($searchEngine == "$#-didcy-cmp-adv-@@$" || $searchEngine == "--didcy--cmp--adv--"){ 
+		document.getElementById("modal-didcy-competitive-advantage").style.height = "100%";
+		return;
+	}
+	
+	if($searchEngine == "didcy-platforms-offer" || $searchEngine == "$@@--didcy-platforms-offer--@@$"){
+	   document.getElementById("didcy-platforms-offer").style.display = "block";
+	   return;
+	}	
+	
+	if($searchEngine == "didcy-ad-creators" || $searchEngine == "didcy ad creators"
+	 || $searchEngine == "#@-%didcy-ad-creators-000-sc"){
+	   document.getElementById("didcy-ad-creators").style.display = "block";
+	   return;
+	}
+
+	if($searchEngine == "companies-profiles" || $searchEngine == "--companies--profiles--"){ 
+		if(drim_2.slice(39) == ""){
+		  exhibitEvents(8, null, 'agp');
+		}
+		return;
+	}		
+	
+	if($searchEngine == "didcy write" || $searchEngine == "--welcome-to-didcy--" || $searchEngine == "welcome to didcy"){ 
+       return document.getElementById("write").style.display = "block";
+	}
+	
+	if($searchEngine == "logout" || $searchEngine == "--log--out--"){ 
+       if(drim_2.slice(39) != ""){	
+		 return logMeOut();
+	   }else{
+		 return AlertBoxInModal("Logout Command not allowed here");
+	   }
 	}
 	
 	var form = new FormData();
-	if(drim_2 == "http://www.localhost/" || drim_2 == "http://www.localhost" 
-	|| drim_2 == "localhost" || drim_2 == "www.localhost" || 
-	drim_2 == "localhost/" || drim_2 == "www.localhost/"
-    || drim_2 == "http://www.localhost/?id=1" 
-	|| drim_2 == "localhost/?id=1" 
-	|| drim_2 == "localhost?id=1" 
-	|| drim_2 == "www.localhost/?id=1"){
+	if(drim_2 == "https://localhost/" || drim_2 == "https://localhost" 
+	|| drim_2 ==  "http://localhost/" || drim_2 == "http://www.localhost" 
+	|| drim_2 == "www.localhost" || drim_2 == "localhost" || 
+	drim_2 == "www.localhost/" || drim_2 == "localhost/"
+    || drim_2 == "https://localhost/?id=1" 
+    || drim_2 == "http://localhost/?id=1" 
+	|| drim_2 == "www.localhost/?id=1"   || drim_2 == "http://www.localhost/?id=1"
+	|| drim_2 == "www.localhost?id=1"  || drim_2 == "http://www.localhost/" 
+	|| drim_2 == "localhost/?id=1"){
 		//form.append("drim", drim_2.slice(51));
 		form.append("live",  0);
 		//window.alert(drim_2 + ' [');
@@ -210,71 +410,99 @@ if (event.keyCode == 13) {
 	  processData: false,
 	  success: function(result){
 		  if(local == 1){
-			  var advFiles = document.getElementById("adv-files-showcase-video-ads");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox-video-ads");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 
-			  var advFiles = document.getElementById("adv-files-showcase-static-ads");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox-static-ads");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 
-			  var advFiles = document.getElementById("adv-files-showcase-companies-profiles");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox-companies-profiles");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 			  
-			  var advFiles = document.getElementById("adv-files-showcase-actors-n-groups-profiles");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox-actors-n-groups-profiles");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 			  
 			  
 			  var advFilesShowcase = document.createElement("div");
 			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase-video-ads");
-			  document.getElementById("container-c31").append(advFilesShowcase);		
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox-video-ads");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);		
 
 			  var advFilesShowcase = document.createElement("div");
 			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase-static-ads");
-			  document.getElementById("container-c31").append(advFilesShowcase);	
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox-static-ads");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);	
 			  
 			  var advFilesShowcase = document.createElement("div");
 			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase-companies-profiles");
-			  document.getElementById("container-c31").append(advFilesShowcase);	
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox-companies-profiles");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);	
 			  
 			  var advFilesShowcase = document.createElement("div");
 			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase-actors-n-groups-profiles");
-			  document.getElementById("container-c31").append(advFilesShowcase);	
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox-actors-n-groups-profiles");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);	
 			  			  
 			  local = 0;
 		  }
 		  if($fetchIDTemp != 0){
-			  var advFiles = document.getElementById("adv-files-showcase");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 			  var advFilesShowcase = document.createElement("div");
-			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase");
-			  document.getElementById("container-c31").append(advFilesShowcase);			  
+			  advFilesShowcase.setAttribute("class", "w3-container contact-media row");
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);			  
 			  local = 0;		
               $fetchIDTemp = 0;			  
 		  }	
 		  if(fetchSearch != 0){
-			  var advFiles = document.getElementById("adv-files-showcase");
-			  document.getElementById("container-c31").removeChild(advFiles);
+			  var advFiles = document.getElementById("contact-media-in-dbox");
+			  document.getElementById("contact-media-container-in-box").removeChild(advFiles);
 			  var advFilesShowcase = document.createElement("div");
-			  advFilesShowcase.setAttribute("class", "row");
-			  advFilesShowcase.setAttribute("id", "adv-files-showcase");
-			  document.getElementById("container-c31").append(advFilesShowcase);			  
+			  advFilesShowcase.setAttribute("class", "w3-container contact-media row");
+			  advFilesShowcase.setAttribute("id", "contact-media-in-dbox");
+			  document.getElementById("contact-media-container-in-box").append(advFilesShowcase);			  
 			  local = 0;		
               fetchSearch = 0;	
 			  $fetchIDTemp = 0;					  
 		  }	
 		  //window.console.log(result);
 	      var data_returned = JSON.parse(result);
+		  if(data_returned.audioFetch == 1 && data_returned.videoFetch == 1 &&
+		   data_returned.staticFetch == 1){
+			document.getElementById("select-display-type-modal").style.display = "block";
+	        popupAdTaskBeforeLoad = 1;
+			return;
+			//document.getElementById("industrial-ad-area").style.backgroundColor = "rgba(0, 0, 0, 1)";
+		  }
+	      else if(data_returned.audioFetch == 1 && data_returned.videoFetch == 1 &&
+		   data_returned.staticFetch == 0){
+			document.getElementById("select-display-type-modal").style.display = "block";
+			popupAdTaskBeforeLoad = 1;
+			return;
+			//document.getElementById("industrial-ad-area").style.backgroundColor = "rgba(0, 0, 0, 1)";
+		  }
+	      else if(data_returned.audioFetch == 1 && data_returned.videoFetch == 0 &&
+		   data_returned.staticFetch == 1){
+			document.getElementById("select-display-type-modal").style.display = "block";
+			popupAdTaskBeforeLoad = 1;
+			return;
+			//document.getElementById("industrial-ad-area").style.backgroundColor = "rgba(0, 0, 0, 1)";
+		  }
+	      else if(data_returned.audioFetch == 0 && data_returned.videoFetch == 1 &&
+		   data_returned.staticFetch == 1){
+			document.getElementById("select-display-type-modal").style.display = "block";
+			popupAdTaskBeforeLoad = 1;
+			return;
+			//document.getElementById("industrial-ad-area").style.backgroundColor = "rgba(0, 0, 0, 1)";
+		  }
 	      //window.console.log(data_returned.fileTypeID);
 	      //window.console.log(data_returned);
 	      //window.console.log(data_returned[1]);
 		  if(data_returned.state == 32){
-		    LiveSearch(data_returned[0], $searchEngine, data_returned[1], data_returned[2], data_returned.fileTypeID, data_returned.page_type);
+		    LiveSearch(data_returned[0], $searchEngine, data_returned[1], data_returned[2], data_returned[3], data_returned.fileTypeID, data_returned.page_type);
 		  }else if(data_returned.state == 33){
-			LiveSearch(data_returned[0], $searchEngine, data_returned[1], data_returned[2], data_returned.fileTypeID, data_returned.page_type);  
+			LiveSearch(data_returned[0], $searchEngine, data_returned[1], data_returned[2], data_returned[3], data_returned.fileTypeID, data_returned.page_type);  
 		  }else{
 			TransformText(0);
 		  }
@@ -291,7 +519,7 @@ if (event.keyCode == 13) {
 
 
 function LiveSearch(searchList = [], searchData = null, company_name_text = null, 
-audioAdImages = null, fileTypeID = null, page_type = null) {
+audioAdImages = null, videoAdImages = null, fileTypeID = null, page_type = null) {
 
   var input, filter, ul, li, a, i, li2, li3;
   input = searchData;
@@ -300,7 +528,16 @@ audioAdImages = null, fileTypeID = null, page_type = null) {
   //li = ul.getElementsByTagName("li");
   li = searchList;
   li2 = company_name_text;
-  li3 = audioAdImages;
+  i = 0;
+  
+  /*window.console.log(fileTypeID);
+  if(fileTypeID[i] == 1){
+    li3 = videoAdImages;
+	window.console.log(videoAdImages);
+	window.console.log(li3);
+  }else{
+	li3 = audioAdImages;
+  }*/
   
   var $liveIndex = 0;
   
@@ -310,14 +547,18 @@ audioAdImages = null, fileTypeID = null, page_type = null) {
       //window.console.log(li[i]);//.style.display = "";
 	    if(fileTypeID[i] == 1){
 		  searchResults[$liveIndex] = "adv.videos/"+li[i];
+		  li3 = videoAdImages;
+		  searchResultsVideoAdImage[$liveIndex] = "adv.videos.img/"+li3[i];
         }else if(fileTypeID[i] == 2){
 		  searchResults[$liveIndex] = "adv.audios/"+li[i];
+		  li3 = audioAdImages;
+		  searchResultsAudioAdImage[$liveIndex] = li3[i];
         }else{
 		  searchResults[$liveIndex] = "adv.images/"+li[i];
 		}
         //if(page_type == 1){
 		    searchResultsCompany[$liveIndex] = li2[i];
-		    searchResultsAudioAdImage[$liveIndex] = li3[i];
+		    
 	    //}
         $liveIndex += 1;
     } else {
@@ -326,7 +567,7 @@ audioAdImages = null, fileTypeID = null, page_type = null) {
     }
   }
     if(searchResults.length != 0){
-      var advFilesContainer = document.getElementById("adv-files-showcase");
+      var advFilesContainer = document.getElementById("contact-media-in-dbox");
       if(searchCallID == 1){
 		//var colEmbed = document.getElementById("col-embed");var columElem
         for(var i = 0;i < columElemContainer.length;i++){
@@ -335,18 +576,19 @@ audioAdImages = null, fileTypeID = null, page_type = null) {
 		searchCallID = 0;
       }
        if(fetchSearch == 1){
-		document.getElementById("container-c31").removeChild(advFilesContainer);
+		document.getElementById("contact-media-container-in-box").removeChild(advFilesContainer);
 		var advFileContainer = document.createElement("div");
-		advFileContainer.setAttribute("class", "row");
-		advFileContainer.setAttribute("id", "adv-files-showcase");
-		document.getElementById("container-c31").append(advFileContainer);//clearContainerId
+		advFileContainer.setAttribute("class", "w3-container contact-media row");
+		advFileContainer.setAttribute("id", "contact-media-in-dbox");
+		document.getElementById("contact-media-container-in-box").append(advFileContainer);//clearContainerId
 		//window.console.log(searchResults);
 		//window.console.log(fileTypeID);
 		searchCallID = 1;
 	   }
 	    fetchSearch = 1;
-
-		exhibitEventsFromLiveSearch(2, drim_21, searchResults, searchResultsAudioAdImage,  null, searchResultsCompany, fileTypeID);
+        
+		exhibitEventsFromLiveSearch(2, drim_21, searchResults, searchResultsAudioAdImage, 
+		searchResultsVideoAdImage,  null, searchResultsCompany, fileTypeID);
 		searchResults = [];
 		searchResultsAudioAdImage = [];
         columElemContainer = [];

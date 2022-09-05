@@ -26,7 +26,7 @@ function clear(){
 }
 
 formSubmitId2.addEventListener("click", function(){
-	var $email = document.getElementById("input-signin-txt").value.toString().trim();
+/* 	var $email = document.getElementById("input-signin-txt").value.toString().trim();
 	
 	var $password = document.getElementById("input-pwd-signin").value.toString().trim();
 	
@@ -42,7 +42,7 @@ formSubmitId2.addEventListener("click", function(){
 	}
 	if(fn == -3){
 		return alertBox("Confirmation Password field is empty!!!");
-	}
+	} */
 	
     //window.console.log(fn);
 	
@@ -146,7 +146,7 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 	
 	if(signID == 0){
 		if(user_name == ""){
-			return alertBox("User Name field is empty!!!", 0);
+			return alertBox("Username field is empty!!!", 0);
 		}	
 		if(email == ""){
 			return alertBox("Email field is empty!!!");
@@ -205,6 +205,7 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 		//return window.console.log(companiesOnly);
 		//form.append("CountryRegistration", selectedCompanyCountryRegistration);
 		if(document.getElementById("advertizersOnly").checked == true){
+		  adFee = "$0.00";
 		  if(companiesOnly == "0"){
 			 companiesOnly = "2";
 			 if(adFee == ""){
@@ -227,6 +228,7 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 		if(email == ""){
 			return alertBox("Email field is empty!!!");
 		}
+		
 		if(password == ""){
 			return alertBox("Password field is empty!!!");
 		}else{
@@ -262,6 +264,12 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 		}
 		//form.append("GAGA_CMPO", getCookieValue("GAGA_CMPO").toString().trim());
 		form.append("imageId", imageId);
+	}
+	
+	if(signID == 0 || signID == 1){
+		if($__4958484_1929_cookie_terms_policy_accept == 0){
+		  return alertBox("Cookie not accepted &darr;");
+		}		
 	}
 /* 		window.__sleep = 0;
 		sleeper = 0; */
@@ -393,8 +401,8 @@ document.getElementById("companiesOnly").addEventListener("click", () => {
 	    document.getElementById("advertizers").style.display = "block";
 	    document.getElementById("advertizersOnly").style.display = "block";
 	    document.getElementById("advOnly").style.display = "block";
-	    document.getElementById("fee-label").style.display = "block";
-	    document.getElementById("fee").style.display = "block";
+	    document.getElementById("fee-label").style.display = "none";
+	    document.getElementById("fee").style.display = "none";
 	}
 });
 

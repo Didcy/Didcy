@@ -16,11 +16,11 @@ function FormNewLetters(formNewsletterID = 0){
 	}
 	
 	if(name.value.toString().trim() == ""){
-		return alertBox("Please insert your name");
+		return AlertBoxInModal("Please insert your name");
 	}
 	
 	if(mail.value.toString().trim() == ""){
-		return alertBox("Please insert your email");
+		return AlertBoxInModal("Please insert your email");
 	}
 	
 	var form = new FormData();
@@ -28,25 +28,32 @@ function FormNewLetters(formNewsletterID = 0){
 	form.append("email", mail.value.toString().trim());
 	$.ajax({
 	   type: "POST",
-	   url: "mailer.2.php",
+	   url: "mail.php",
 	   data: form,
 	   cache: false,
 	   contentType: false,
 	   processData: false,
 	   success: function(result){
-		   window.console.log(result);
+		   //AlertBoxInModal(result);
 		   var data_returned = JSON.parse(result);
 		   if(data_returned.state == 0){
-			  window.console.log("Connect Error!!!");
+			  AlertBoxInModal("Connect Error!!!");
 		   }
 		   else if(data_returned.state == 1){
-			  window.console.log(data_returned.message_data);
+			  //AlertBoxInModal(data_returned.message_data);
+			  AlertBoxInModal("Thanks for subscribing to Didcy Newsletters.");
+			  document.getElementById("modal-newsletters").style.display = "none";
+              if(newsletterDifference == 1){			  
+			     PopUpRandomizer();
+			     clearFirstNewsletter = 1;
+			  }
+			  newsletterDifference = 2;
 		   }
 		   else if(data_returned.state == 2){
-			  window.console.log(data_returned.message_data);
+			  AlertBoxInModal(data_returned.message_data);
 		   }
 		   else{
-			  window.console.log("Connect Error!!!#222");   
+			  AlertBoxInModal("Connect Error!!!#222");   
 		   }
 	   },
 	   error: function(){}
