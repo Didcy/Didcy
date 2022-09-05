@@ -252,6 +252,9 @@ spanConnections.onclick = function(){
 	   if(this.selectIdCard.files.length == 0){
 		   return alertBox("Please select an ID card");
 	   }
+       if(this.selectIdCard.files[0].type.slice(0, 5) != "image"){
+		  return alertBox("Please select an ID card");
+	   }
 	   if(this.bankACNo.value.toString().trim() == "" && this.mobileMoneyNo.value.toString().trim() == ""){
 		   return alertBox("Bank Account & Mobile Money fields are Empty");
 	   }else if(this.bankACNo.value.toString().trim() != "" && this.mobileMoneyNo.value.toString().trim() == ""){
@@ -354,7 +357,7 @@ spanConnections.onclick = function(){
 					contentType: false,
 					processData: false,
 					success: function(result){
-						 //window.console.log(result);
+						 window.console.log(result);
 						 //return;
                          var data_returned = JSON.parse(result);
                          if(data_returned.state == 200){
@@ -376,7 +379,7 @@ spanConnections.onclick = function(){
 							applicant.password.value = "";
 							applicant.githubName.value = "";
 							applicant.username.value = "";
-							applicantBlob = "";
+							applicantBlob = null;
 							
 							applicant.notNowPR.checked = false;
 							applicant.notNowPU.checked = false;

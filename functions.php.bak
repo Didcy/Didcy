@@ -1,8 +1,8 @@
 <?php
 
-    define('DBINFO', 'mysql:host=localhost;dbname=gaga');
-    define('DBUSER','root');
-    define('DBPASS','');
+    define('DBINFO', 'mysql:host=localhost;dbname=1145003');
+    define('DBUSER','1145003');
+    define('DBPASS','didcycompany2022');
 
     function fetchAll($query){
         $con = new PDO(DBINFO, DBUSER, DBPASS);
@@ -37,15 +37,4 @@
 		return json_decode($data);
 	}
 
-
-  function CheckTablesExistence($table){
-	 $query = "SHOW TABLES LIKE '".$table."'";
-	 if(count(fetchAll($query)) == 0){
-		$searchError = "No ads Found";
- 		return array("state"=>false, "searchError"=>$searchError);     
-	 }else{
-		$searchError = "Ads Found";
-		return array("state"=>true, "searchError"=>$searchError);
-	 }	  
-  }
 ?>

@@ -347,7 +347,7 @@
 				  username char(100) not null,
 				  email char(100) not null,
 				  sms_id varchar(20),
-				  callID char(20),
+				  call char(20),
 				  incoming_id smallint not null);";
 					
 					if ($conn->query($sql_qeury) == false) {

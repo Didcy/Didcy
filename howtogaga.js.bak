@@ -56,11 +56,11 @@ textTutorials.onclick = function(){
 		 "<br/>Let's jump right into it. "+ 
 		 "<br><br><strong><u class='insiders'>Step 1:</u></strong> Get your computer(laptop, desktop, tablet or a mobile device), connect it to the internet, open your web browser (eg. Google Chrome) and enter inside the URL : "+ 
 		 "<em><a href='https://www.didcy.com' alt='' title='Didcy Home' target='_blank' ping=''>https://www.didcy.com.</a></em>"+ 
-		 "<!--<br><br><strong><u class='insiders'>Step 2:</u></strong> Didcy will kindly ask you to <q>Please select a page content</q>. This feature was introduce to make our user decide "+ 
+		 "<br><br><strong><u class='insiders'>Step 2:</u></strong> Didcy will kindly ask you to <q>Please select a page content</q>. This feature was introduce to make our user decide "+ 
 		 "on whether or not to show any content on the page at all and also make the user choose what content on our platform he/she "+  
-		 "would want to be shown.-->"+ 
-		 "<br/><br/><strong><u class='insiders'>Step 2:</u></strong> Explore the platform to see what suits your needs either as an educator, creative developer or designer, advertizer or marketer,  actor(ie. an ad actor) or a company."+ 
-		 "<br><br><strong><u class='insiders'>Step 3:</u></strong> <br><b style='font-family: sans-serif, arial, verdana' class='insiders'>"+ 
+		 "would want to be shown."+ 
+		 "<br/><br/><strong><u class='insiders'>Step 3:</u></strong> Explore the platform to see what suits your needs either as an educator, creative developer or designer, advertizer or marketer,  actor(ie. an ad actor) or a company."+ 
+		 "<br><br><strong><u class='insiders'>Step 4:</u></strong> <br><b style='font-family: sans-serif, arial, verdana' class='insiders'>"+ 
 		 "Exploration Agenda</b><br><b style='font-family: sans-serif, arial, verdana' class='insiders'>Under Top Navigation Area(The long horizontal rectangular box with a black background"+
 		 " in  the middle and red colors at the tips)</b>"+ 
 		 "<br><br><b><i style='font-family: sans-serif, arial, verdana' class='insiders'>Industry <img  class='iconic' src='adv.icons/3256216.png'/>:</i></b><br>"+ 
@@ -72,19 +72,19 @@ textTutorials.onclick = function(){
 		"<br>Here, Didcy makes it work like magic giving it's members the needed services of their daily hustle or dreams."+ 
 		"<br>Under Didcy Services navigation dropdown button, you can see two dropdowns,"+ 
 		"<br>1. Audio/Radio Services <img width='40px' src='adv.icons/3167693.png'/>& "+ 
-		"<br>2. More Services or The Core. <img width='40px' src='adv.icons/2377884.png'/>"+ 
-		"<br>These two buttons are at the heart of the platform esp. the <q>More Services or The Core</q>."+ 
+		"<br>2. More Services. <img width='40px' src='adv.icons/2377884.png'/>"+ 
+		"<br>These two buttons are at the heart of the platform esp. the <q>More Services</q>."+ 
 		"<br>Among the two buttons, one(Audio/Radio) is currently not available for functioning."+ 
 		"<br>Hence nothing much can be said about it untill it's functionality is successfully available."+ 
-		"<br><b>More Services or The Core</b> on the otherhand, as the name goes, provides more services to its "+ 
+		"<br><b>More Services</b> on the otherhand, as the name goes, provides more services to its "+ 
 		"users. It's a well constructed worth of packed tools for making our users' industry more vibrant."+
         "<br/><b>Services: </b><img src='adv.icons/3631153.png' width='40px'/> <br><b>a: Audio/Radio</b><img src='adv.icons/3167693.png' width='40px'/>: [N/A].<br/> <b> b: More</b><img src='adv.icons/2377884.png' width='40px'/>: The 'More services' helps organize all Didcy "+
-        "most essential tools. Under the 'More Services or The Core', you can find tools like Didcy React, Didcy Business and more."+
+        "most essential tools. Under the 'More Services', you can find tools like Didcy React, Didcy Business and more."+
          "<br>Our Terms & Conditions can also be found under the 'More services' together with 'How to Didcy'."+
          "<br>Normally, you'll find the Terms & Conditions at the bottom of a page with the exception of fewer platforms like"+
          " social media platforms, here at Didcy, we use the same approach but instead it's located under "+
-		 "'More Services or The Core'."+
-		 "<br/>Tools provided under the 'More Services or The Core' agenda : "+
+		 "'More Services'."+
+		 "<br/>Tools provided under the 'More Services' agenda : "+
 		 "<ol>"+
          "<li style='color: white'>Didcy Loans</li>"+
          "<li style='color: white'>Didcy Include</li>"+
@@ -111,9 +111,9 @@ textTutorials.onclick = function(){
          "<li style='color: white'>Didcy Apply</li>"+
          "<li style='color: white'>Didcy Transparent</li>"+
 		 "</ol>"+
-		 "		<b><i>Hence, the <q>More Services or The Core</q> is a toolkit or set or "+"collection of Didcy defined tools for solving 99.99% of all "+
-		 "space problems.</i></b>"+ 
-		"<h2 style='color: white'><b>The following data gives a detailed insight "+ "of each feature presented under the <q>More Services or The Core</q> toolset or "+"collections.</b></h2>"+
+		 "		<b><i>Hence, the <q>More Services</q> is a toolkit or set or "+"collection of Didcy defined tools for solving 99.99% of all "+
+		 "advertising problems.</i></b>"+ 
+		"<h2 style='color: white'><b>The following data gives a detailed insight "+ "of each feature presented under the <q>More Services</q> toolset or "+"collections.</b></h2>"+
 		"<h3>Features as follows: </h3>"+		
 		"<ol type='a'>"+
 		 "<li style='color: white'>"+
@@ -138,7 +138,7 @@ textTutorials.onclick = function(){
 		    "<li style='color: white'>How to Subscribe</li>"+
 		   "</ol>"+
 		   "This and future upcoming tools make up the Didcy Include toolset."+
-		   "		   <br><br>Please note, most of the above services(features) are still in developmental stage or are"+ 
+		   "		   <br>Please note, most of the above services(features) are still in developmental stage or are"+ 
 		   " currently being developed for your own great experience on our platform, so that's why what "+
 		   " you see displayed here are all not exposed under the <b>MENU</b> toolkit.    "+
 		   " Some are ready for shippment or deployment but we think you deserve more than our current builds."+
@@ -260,7 +260,7 @@ textTutorials.onclick = function(){
 		  " <br><br>For more enquiries, kindly contact us by looking up our"+
 		  " contact informations at either <q>Contacts</q><img class='iconic' src='adv.icons/870175.png'/> in the top"+
 		  " navigation bar of the front page or at <q>Didcy Find</q>"+
-		  " under <q>More Services or The Core</q><img class='iconic' src='adv.icons/2377884.png'/>. We will be availabile 24/7"+
+		  " under <q>More Services</q><img class='iconic' src='adv.icons/2377884.png'/>. We will be availabile 24/7"+
 		  " just to listen to only and only you. Have a nice Didcy visit."+
 		  " <br><br>Thank you."+
 		 "</li>"+
@@ -283,8 +283,6 @@ textTutorials.onclick = function(){
 			//magnify("gaga-text-header-2", 3);
 }
 
-document.getElementById("img-tutorial-0").addEventListener("click", () => {howToGaGa2("img-tutorial-0");});
-document.getElementById("img-tutorial-0a").addEventListener("click", () => {howToGaGa2("img-tutorial-0a");});
 document.getElementById("img-tutorial-1").addEventListener("click", () => {howToGaGa2("img-tutorial-1");});
 document.getElementById("img-tutorial-2").addEventListener("click", () => {howToGaGa2("img-tutorial-2");});
 document.getElementById("img-tutorial-3").addEventListener("click", () => {howToGaGa2("img-tutorial-3");});

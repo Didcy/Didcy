@@ -1,7 +1,7 @@
 "use strict";
 
 var stream = document.getElementById("didcy-fixes-row");
-var createPlugins = 0, updateCoin = 0, updateClick = 0;
+var createPlugins = 0, updateCoin = 0, updateClick = 0, devResponse = 0;
 
 /*document.getElementById("upload-developer-files").addEventListener("click", 
 UploadDeveloperFiles);
@@ -23,7 +23,7 @@ function UploadDeveloperServerFiles(){
    var form = new FormData(files);
    
    if(serverFiles.files.length <= 0){
-      return alertBox("Please select at least one server file");
+      return AlertBoxInModal("Please select at least one server file");
    }
    
    form.append("class-id", 3);
@@ -66,7 +66,7 @@ function UploadDeveloperServerFiles(){
 				   numberOfServerFiles += " Server file uploaded successfully.";
 				}
 			  }
-		      alertBox(numberOfServerFiles);
+		      AlertBoxInModal(numberOfServerFiles);
 		   }else{
 			  numberOfServerFiles = (serverFiles.files.length-data_returned.files_uploaded_if_no_type);
 			  if(numberOfServerFiles == 1){
@@ -78,7 +78,7 @@ function UploadDeveloperServerFiles(){
 					numberOfServerFiles += " Server files uploaded successfully. [ONLY_EXTENSIONS_ALLOWED]";
 			    }
 			  }
-			  alertBox(numberOfServerFiles);
+			  AlertBoxInModal(numberOfServerFiles);
 		   }
 		   serverFiles.value = "";
 		}
@@ -96,7 +96,7 @@ function UploadDevFiles(){
     var form = new FormData(files);
 
     if(devFiles.files.length <= 0){
-      return alertBox("Please select at least a file");
+      return AlertBoxInModal("Please select at least a file");
     }
 
 	form.append("devFilesLength", devFiles.files.length);
@@ -120,10 +120,10 @@ function UploadDevFiles(){
 		  if(data_returned.file_types.no_req > 0){	
 			if(data_returned.file_types.no_req == 1){
 			 reporter = "("+data_returned.file_types.no_req+")"+" file not allowed to be uploaded";
-			 alertBox(reporter);				
+			 AlertBoxInModal(reporter);				
 			}else{
 			 reporter = "("+data_returned.file_types.no_req+")"+" files not allowed to be uploaded";
-			 alertBox(reporter);
+			 AlertBoxInModal(reporter);
 			}
 		  }else{
 			if(data_returned.file_count_success == 0){
@@ -133,10 +133,95 @@ function UploadDevFiles(){
 			}else{
 			 reporter = "("+data_returned.file_count_success+") files uploaded successfully";
 			}
-			 alertBox(reporter);
+			 AlertBoxInModal(reporter);
 		  }
 		  devFiles.value = "";
+		  if(devResponse == 1){
+			var devAddons = document.getElementsByClassName("response-i2");
+			const devAddonsLen = devAddons.length;
+			
+			for(var removeAddOns = 0;removeAddOns < devAddonsLen;removeAddOns++){
+				document.getElementById("developer-response").removeChild(
+				devAddons[removeAddOns]);
+			}
+			devResponse = 0;
+		  }
+		  document.getElementsByClassName("response-i")[0].innerHTML = 
+		  "No. of Program(.js) files uploaded - "+
+		  data_returned.file_types.program;
+		  
+		  document.getElementsByClassName("response-i")[1].innerHTML = 
+		  "No. of CSS(.css) files uploaded - "+
+		  data_returned.file_types.css;
+		  
+		  document.getElementsByClassName("response-i")[2].innerHTML = 
+		  "No. of PHP(.php) files uploaded - "+
+		  data_returned.file_types.php;			  
+		  
+		  document.getElementsByClassName("response-i")[3].innerHTML = 
+		  "No. of HTML(.html/htm/xhtm) files uploaded - "+
+		  data_returned.file_types.html;		  
+		  
+		  document.getElementsByClassName("response-i")[4].innerHTML = 
+		  "No. of MP4(.mp4) files uploaded - "+
+		  data_returned.file_types.mp4;		  
+		  
+		  document.getElementsByClassName("response-i")[5].innerHTML = 
+		  "No. of MP3(.mp3) files uploaded - "+
+		  data_returned.file_types.mp3;		  
+		  
+		  document.getElementsByClassName("response-i")[6].innerHTML = 
+		  "No. of Media(like .ogg, .wav, etc) files uploaded - "+
+		  data_returned.file_types.data;
+
+		  document.getElementsByClassName("response-i")[6].style.display = "none";
+		  
+		  document.getElementsByClassName("response-i")[7].innerHTML = 
+		  "No. of NOT_ALLOWED files uploaded - "+
+		  data_returned.file_types.no_req;	
+		  
+		  document.getElementsByClassName("response-i")[8].innerHTML = 
+		  "Transmission State - "+
+		  data_returned.state + " (OK)";	
+		  
+		  document.getElementsByClassName("response-i")[9].innerHTML = 
+		  "No. of upload errors/unsuccessful - "+
+		  data_returned.fileErrors.length;	
+		  
+		  document.getElementsByClassName("response-i")[10].innerHTML = 
+		  "Transmission Class ID  - "+
+		  data_returned["class-id"];	
+		  
+		  document.getElementsByClassName("response-i")[11].innerHTML = 
+		  "No. of files successful - "+
+		  data_returned.file_count_success;
+		  
+		  document.getElementsByClassName("response-i")[12].innerHTML = 
+		  "No. of files unsuccessful - "+
+		  data_returned.file_count_error;
+		  
+		  if(data_returned.pluginsOnFileTypes.length > 0){
+			var devFileResponse = document.getElementById("developer-response");
+			for(var loopPlugins = 0;loopPlugins < data_returned.pluginsOnFileTypes.length;loopPlugins++){
+				var uploadedFiles = document.createElement("p");
+				let filename = null;
+				filename = "("+(loopPlugins+1).toString()+") Filename - "+
+				data_returned.pluginsOnFileTypes[loopPlugins];					
+				const uploadedFileNames = document.createTextNode(
+				filename);
+				//var breaks = document.createElement("br");
+				uploadedFiles.append(uploadedFileNames);
+				uploadedFiles.setAttribute("style", "color:white");
+				uploadedFiles.setAttribute("class", "response-i2");
+				
+				devFileResponse.append(uploadedFiles);
+				//devFileResponse.append(breaks);
+				devResponse = 1;
+			}
+		  }
+		  
 		  return;
+
 		}
 		
 	 },
@@ -189,7 +274,7 @@ function UploadDeveloperFiles(){
 	  form.append("devCssFilesLength", devCssFiles.files.length);
 	  form.append("class-id", 2);
    }else if(fileInPosition == 3){
-	  return alertBox("Please select at least a file for any of the file inputs");
+	  return AlertBoxInModal("Please select at least a file for any of the file inputs");
    }
    
    form.append("plug-id", 1);
@@ -219,7 +304,7 @@ function UploadDeveloperFiles(){
 			  }else{
 				numberOfPrgFiles += " Program file uploaded successfully. [NO_EXTENSIONS_ALLOWED].";
 			  }
-		      alertBox(numberOfPrgFiles);
+		      AlertBoxInModal(numberOfPrgFiles);
 		   }else{ 
 			  numberOfPrgFiles = (devProgramFiles.files.length-data_returned.files_uploaded_if_type);
 			  if(numberOfPrgFiles == 1){
@@ -227,7 +312,7 @@ function UploadDeveloperFiles(){
 			  }else{
 				numberOfPrgFiles += " Program files uploaded successfully. [NO_EXTENSIONS_ALLOWED]";
 			  }
-			  alertBox(numberOfPrgFiles);
+			  AlertBoxInModal(numberOfPrgFiles);
 		   }
 		  }else if(fileInPosition == 1){
 		   if(devCssFiles.files.length > 1){
@@ -253,7 +338,7 @@ function UploadDeveloperFiles(){
 				   numberOfCssFiles += " Stylesheet file uploaded successfully.";
 				}
 			  }
-		      alertBox(numberOfCssFiles);
+		      AlertBoxInModal(numberOfCssFiles);
 		   }else{
 			  numberOfCssFiles = (devCssFiles.files.length-data_returned.files_uploaded_if_no_type);
 			  if(numberOfCssFiles == 1){
@@ -265,7 +350,7 @@ function UploadDeveloperFiles(){
 					numberOfCssFiles += " Stylesheet files uploaded successfully. [ONLY_EXTENSIONS_ALLOWED]";
 			    }
 			  }
-			  alertBox(numberOfCssFiles);
+			  AlertBoxInModal(numberOfCssFiles);
 		   }
 		  }else if(fileInPosition == 2){
 		   var reporter = "";
@@ -322,7 +407,7 @@ function UploadDeveloperFiles(){
 		   
 		   reporter = numberOfPrgFiles+numberOfCssFiles;
 		   
-		   alertBox(reporter);
+		   AlertBoxInModal(reporter);
 		   
 		  }
 		  devProgramFiles.value = "";
@@ -366,6 +451,43 @@ function UpdateSomePlugins(){
   }
 }
 
+var ReCreateAllDefaultUpdatesElements = () => {
+	var inner_css = document.createElement("style");
+	var inner_div = document.createElement("div");
+	var adv_ft = document.getElementById("adv-ft");
+	
+	inner_css.setAttribute("type", "text/css");
+	inner_css.setAttribute("id", "in-css");
+	document.getElementById("didcy-A1").append(inner_css);
+	
+	inner_div.setAttribute("id", "in-div");
+	inner_div.setAttribute("class", "in-div");
+	document.body.insertBefore(inner_div, adv_ft);
+}
+
+function DeleteAllUpdates(){
+	var headTag = document.getElementById("didcy-A1");
+	
+	{
+		let inner_css = document.getElementById("in-css");
+		let inner_div = document.getElementById("in-div");
+		let inner_scripts = document.getElementsByClassName("plugs-script");
+		//let inner_buttons = document.getElementsByClassName("inner-button");
+		//let inner_button_containers = document.getElementsByClassName("inner-button-container");
+		{
+		   headTag.removeChild(inner_css);
+		   document.body.removeChild(inner_div);
+		   for(var bodyCount = 0;bodyCount < inner_scripts.length;bodyCount++){
+			   document.body.removeChild(inner_scripts[bodyCount]);
+		   }
+/* 		   for(var buttonCount = 0;buttonCount < inner_button_containers.length;buttonCount++){
+			   stream.removeChild(inner_button_containers[buttonCount];
+		   } */
+		}
+	}
+	ReCreateAllDefaultUpdatesElements();
+}
+
 function UpdateDidcyFixes(){
 	UpdateSomePlugins();
 	Plug();
@@ -393,20 +515,20 @@ function Update(){
    }
 }
 
-function StreamPlugs(stream_response_data){
+function StreamPlugs(stream_response_data, htmlCat){
    for(var stream_i = 0;stream_i < stream_response_data.length;stream_i++){
-    for(var stream_i2 = 0;stream_i2 < 3;stream_i2++){
+    for(var stream_i2 = 0;stream_i2 < 4;stream_i2++){
 	  let buttonContainer = document.createElement("div");
 	  let button = document.createElement("button");
 	  let script = document.createElement("script");
 	  let css = document.createElement("link");
 	  
-	  buttonContainer.setAttribute("class", "column col-fixes");
+	  buttonContainer.setAttribute("class", "column col-fixes inner-button-container");
 	  
 	  var buttonName = document.createTextNode(stream_response_data[stream_i][stream_i2]);	  
 	  button.append(buttonName);
 	  
-	  button.setAttribute("class", "button");
+	  button.setAttribute("class", "button inner-button");
 	  button.setAttribute("id", stream_response_data[stream_i][stream_i2]);
 	  
 	  const link = stream_response_data[stream_i][stream_i2]+".css";
@@ -426,6 +548,37 @@ function StreamPlugs(stream_response_data){
 	  stream_i2++;
 	  
 	  var in_css_text = document.createTextNode(stream_response_data[stream_i][stream_i2]);
+	  
+	  stream_i2++;
+	  
+	  //const htmlText = stream_response_data[stream_i][stream_i2];
+	  const htmlText = htmlCat;
+	  document.getElementById("in-div").innerHTML = htmlText;
+	  
+	  /*var in_div = document.querySelector(".in-div");
+	  //window.console.log(stream_response_data[stream_i][stream_i2]);
+	  
+	  //in_div.insertAdjacentElement( 'Beforebegin' , htmlText);
+	  //in_div.insertAdjacentElement( 'afterend' , htmlText);
+	  let no_html_file_found = "", html_file_found = "";
+	  
+	  if(stream_response_data[stream_i][stream_i2] == "NO_HTML_FILE_FOUND"){
+	     //no_html_file_found = "<div class='no-html-file-found' id='no-html-file-found'>htm</div>";
+		 document.querySelector(".in-div").insertAdjacentHTML("afterbegin", 
+		 "<div class='no-html-file-found' id='no-html-file-found'>"+stream_response_data[stream_i][stream_i2]+"</div>");
+	  }	  
+	  else if(stream_response_data[stream_i][stream_i2] == "_NO_HTML_FILE_FOUND_"){
+	     //no_html_file_found = "<div class='no-html-file-found' id='no-html-file-found'>htm</div>";
+		 document.querySelector(".in-div").insertAdjacentHTML("afterbegin", 
+		 "<div class='no-html-file-found' id='no-html-file-found'>"+stream_response_data[stream_i][stream_i2]+"</div>");
+	  }else{
+	     //html_file_found = "<div class='html-file-found' id='html-file-found'>"+stream_response_data[stream_i][stream_i2]+"</div>";
+		 const htmlText = stream_response_data[stream_i][stream_i2];
+		 window.console.log(htmlText);
+		 in_div.insertAdjacentElement( 'afterbegin' , 
+		 htmlText);	
+         //"<div class='html-file-found' id='html-file-found'>"+		 
+	  }*/
 	  
 	  var scriptID = program_name+'-0';
 	  script.setAttribute("class", "plugs-script");
@@ -473,7 +626,8 @@ function Plug(){
 		 return;
 	  }
 	  else if(data_returned.state == 200){
-		StreamPlugs(data_returned.pluginsContainer);
+		DeleteAllUpdates();
+		StreamPlugs(data_returned.pluginsContainer, data_returned.htmlCat);
 	  }else{
 		  
 	  }

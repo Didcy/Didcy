@@ -238,22 +238,25 @@ spanConnections.onclick = function(){
 	profilePhoto: document.getElementById("applicant-take-a-photo"),
 	GetApplicantInfo: function(){
 	   if(this.firstname.value.toString().trim() == ""){
-		   return alertBox("First name field is Empty");
+		   return AlertBoxInModal("First name field is Empty");
 	   }
 	   if(this.lastname.value.toString().trim() == ""){
-		   return alertBox("Last name field is Empty");
+		   return AlertBoxInModal("Last name field is Empty");
 	   }
 	   if(this.country.value.toString().trim() == "No Country"){
-		   return alertBox("Country field is Empty");
+		   return AlertBoxInModal("Country field is Empty");
 	   }
 	   if(this.telephoneNo.value.toString().trim() == ""){
-		   return alertBox("Telephone No. field is Empty");
+		   return AlertBoxInModal("Telephone No. field is Empty");
 	   }
 	   if(this.selectIdCard.files.length == 0){
-		   return alertBox("Please select an ID card");
+		   return AlertBoxInModal("Please select an ID card");
+	   }
+       if(this.selectIdCard.files[0].type.slice(0, 5) != "image"){
+		  return AlertBoxInModal("Please file not an image");
 	   }
 	   if(this.bankACNo.value.toString().trim() == "" && this.mobileMoneyNo.value.toString().trim() == ""){
-		   return alertBox("Bank Account & Mobile Money fields are Empty");
+		   return AlertBoxInModal("Bank Account & Mobile Money fields are Empty");
 	   }else if(this.bankACNo.value.toString().trim() != "" && this.mobileMoneyNo.value.toString().trim() == ""){
 		   //this.mobileMoneyNo.value = "0";
 	   }else if(this.bankACNo.value.toString().trim() == "" && this.mobileMoneyNo.value.toString().trim() != ""){
@@ -263,7 +266,7 @@ spanConnections.onclick = function(){
 	   }
 	   
 	   if(this.primarySkills.value.toString().trim() == "" || this.primarySkills.value.toString().trim() == "No Skills"){
-		   return alertBox("Select your Primary Skill(s)");
+		   return AlertBoxInModal("Select your Primary Skill(s)");
 	   }
 	   /*if(this.secondarySkills.value.toString().trim() == this.primarySkills.value.toString().trim() == "" || this.primarySkills.value.toString().trim() == "No Skills"){
 		   
@@ -274,7 +277,7 @@ spanConnections.onclick = function(){
 		   }		   
 	   }else{
 			if(this.programsDailyRevenue.value.toString().trim() == ""){
-			   return alertBox("Please provide an amount");
+			   return AlertBoxInModal("Please provide an amount");
 		   }
 	   }
 	   
@@ -284,7 +287,7 @@ spanConnections.onclick = function(){
 		   }		   
 	   }else{
 		   if(this.programsDailyUsers.value.toString().trim() == ""){
-			   return alertBox("Please let us know the number of daily users for your app");
+			   return AlertBoxInModal("Please let us know the number of daily users for your app");
 		   }
 	   }
 
@@ -294,32 +297,32 @@ spanConnections.onclick = function(){
 		   }		   
 	   }else{
 		   if(this.programsValues.value.toString().trim() == ""){
-			   return alertBox("Please let your users know why they need your program(s)");
+			   return AlertBoxInModal("Please let your users know why they need your program(s)");
 		   }		   
 	   }
 	   
 	   if(this.profile.value.toString().trim() == ""){
-		   return alertBox("Please say something....");
+		   return AlertBoxInModal("Please say something....");
 	   }
 
 	   if(this.githubName.value.toString().trim() == ""){
-		   return alertBox("Github Name field is Empty");
+		   return AlertBoxInModal("Github Name field is Empty");
 	   }
 
 	   if(this.email.value.toString().trim() == ""){
-		   return alertBox("Email field is Empty");
+		   return AlertBoxInModal("Email field is Empty");
 	   }	   
 	   
 	   if(this.password.value.toString().trim() == ""){
-		   return alertBox("Password field is Empty");
+		   return AlertBoxInModal("Password field is Empty");
 	   }
 
 	   if(this.username.value.toString().trim() == ""){
-		   return alertBox("Username field is Empty");
+		   return AlertBoxInModal("Username field is Empty");
 	   }	   
 	   
 	   if(applicantBlob == null){
-		   return alertBox("Please take a Photo");
+		   return AlertBoxInModal("Please take a Photo");
 	   }
 	   
 	   var applicantContainer = [
@@ -354,7 +357,7 @@ spanConnections.onclick = function(){
 					contentType: false,
 					processData: false,
 					success: function(result){
-						 //window.console.log(result);
+						 window.console.log(result);
 						 //return;
                          var data_returned = JSON.parse(result);
                          if(data_returned.state == 200){
@@ -386,7 +389,7 @@ spanConnections.onclick = function(){
 							applicant.programsDailyUsers.disabled = false;
 							applicant.programsValues.disabled = false;
 							
-							alertBox("Applicant was successfully integrated");
+							AlertBoxInModal("Applicant was successfully integrated");
 							setTimeout(() => {
 								Proceed2ConnectionData()
 							}, 2000);
@@ -594,7 +597,7 @@ function Proceed2ConnectionData(){
 				stopStreamedVideo(videoSys.video);
 				streamCloseID = 1;
 				//videoSys.canvas.style.display = "block";
-				alertBox("Capture was successful.");// Please proceed to uploading your ID card.");
+				AlertBoxInModal("Capture was successful.");// Please proceed to uploading your ID card.");
 				videoID = 0;
 				blobID = 1;
 			}else if(videoID == 2){
@@ -602,7 +605,7 @@ function Proceed2ConnectionData(){
 				stopStreamedVideo(videoSys.video);
 				streamCloseID = 1;
 				//videoSys.canvas.style.display = "block";
-				alertBox("Capture was successful.");//  Please proceed to uploading your ID card.");
+				AlertBoxInModal("Capture was successful.");//  Please proceed to uploading your ID card.");
 				videoID = 0;
 				blobID = 1;				
 			}
@@ -625,7 +628,7 @@ function Proceed2ConnectionData(){
 				stopStreamedVideo(videoSys.video);
 				streamCloseID = 1;
 				//videoSys.canvas.style.display = "block";
-				alertBox("Capture was successful. Please proceed to uploading your ID card.");
+				AlertBoxInModal("Capture was successful. Please proceed to uploading your ID card.");
 				document.getElementsByClassName("adv-f")[0].style.display = "block";
 				setTimeout(function(){	
 					document.getElementById("uploadWorkApply").addEventListener("change", () => {
@@ -647,7 +650,7 @@ function Proceed2ConnectionData(){
 				stopStreamedVideo(videoSys.video);
 				streamCloseID = 1;
 				//videoSys.canvas.style.display = "block";
-				alertBox("Capture was successful. Please proceed to uploading your ID card.");
+				AlertBoxInModal("Capture was successful. Please proceed to uploading your ID card.");
 				document.getElementsByClassName("adv-f")[0].style.display = "block";
 				setTimeout(function(){	
 					document.getElementById("uploads-4").addEventListener("change", () => {
@@ -676,7 +679,7 @@ function Proceed2ConnectionData(){
 			{
 
 				if(blobID == 0){
-				  return alertBox("Please take a photo!!!");
+				  return AlertBoxInModal("Please take a photo!!!");
 				}
 				
 				const dataURL = videoSys.canvas.toDataURL("image/png");
@@ -686,19 +689,19 @@ function Proceed2ConnectionData(){
 				if(blob != null){
 				 if(document.forms["adv-fx"]["uploadsWorkApply"].files.length != 0){
 				  if(document.forms["adv-fx"]["uploadsWorkApply"].files.length != 1){
-				    return alertBox("Multiple ID files not allowed");
+				    return AlertBoxInModal("Multiple ID files not allowed");
 				  }
 				 }else{
-				   return alertBox("Please select an ID file #1");
+				   return AlertBoxInModal("Please select an ID file #1");
 				 }
 				 
 				 if(fillyLength != 0){
 				  if(document.forms["adv-fx"]["uploadsWorkApply"].files.length != 1){
-				    return alertBox("Multiple ID files not allowed");
+				    return AlertBoxInModal("Multiple ID files not allowed");
 				  }					 
 				 }
 				if(current_name == ""){
-					   return alertBox("Please select an ID file or select a different file and after reselect the file you want to select again. Thank You.");
+					   return AlertBoxInModal("Please select an ID file or select a different file and after reselect the file you want to select again. Thank You.");
 				}
 				 
 				 var formData = new FormData();
@@ -715,7 +718,7 @@ function Proceed2ConnectionData(){
 					success: function(result){
                          var data_returned = JSON.parse(result);
                          if(data_returned.state == 200){
-						    alertBox("Files upload was successful. Please wait for about one minute"+
+						    AlertBoxInModal("Files upload was successful. Please wait for about one minute"+
 							" while we process your application. Thank you");
 							blob = null;
 							blobID = 0;

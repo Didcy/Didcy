@@ -7,6 +7,7 @@
   
   function CreateApplicant(){
 	
+	//$query = "use `1125815`";
 	$query = "use gaga";
 	$performQueryerProfile = performQueryer($query);
 	if($performQueryerProfile["state"] != true){
@@ -33,9 +34,9 @@
 
 	$query  = "CREATE TABLE if not exists `DidcyWorkState` (
 		  `id` int(11) PRIMARY KEY AUTO_INCREMENT,
-		  `username` varchar(255) NOT NULL,
-		  `password` varchar(255) NOT NULL,
-		  `avatar` varchar(255) NOT NULL,
+		  `username` varchar(100) NOT NULL,
+		  `password` varchar(50) NOT NULL,
+		  `avatar` varchar(10) NOT NULL,
 		  `current_session` int(11) NOT NULL,
 		  `online` int(11) NOT NULL
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
@@ -58,27 +59,27 @@
 	
 	$query = "Create table if not exists DidcyWork(
 	          id bigint primary key auto_increment,
-			  firstname varchar(255) character set utf8 collate utf8_bin not null,
-			  lastname nvarchar(255) not null,
-			  country nchar(255) not null,
-			  telephoneNo char(255) not null,
+			  firstname varchar(100) character set utf8 collate utf8_bin not null,
+			  lastname nvarchar(100) not null,
+			  country nchar(100) not null,
+			  telephoneNo char(100) not null,
 			  cardName text not null,
 			  cardID bigint not null unique,
-			  bankACNo char(255) null default '',
-			  mobileMoneyNumber char(255) null default '',
-			  primarySkills varchar(255) not null,
-			  secondarySkills nvarchar(255) null default '',
-			  programRevenue nchar(255) null default '',
-			  programTraction char(255) null default '',
-			  programValues char(255) null default '',
+			  bankACNo char(100) null default '',
+			  mobileMoneyNumber char(100) null default '',
+			  primarySkills varchar(100) not null,
+			  secondarySkills nvarchar(100) null default '',
+			  programRevenue nchar(100) null default '',
+			  programTraction char(100) null default '',
+			  programValues char(100) null default '',
 			  profile text not null,
 			  email text not null,
-			  githubName varchar(255) not null,
+			  githubName varchar(100) not null,
 			  password text not null,
-			  username varchar(255) not null,
+			  username varchar(100) not null,
 			  dirId bigint(50) not null,
-			  livePhotoName char(255) not null,
-			  livePhotoID varchar(255) not null,
+			  livePhotoName char(100) not null,
+			  livePhotoID varchar(100) not null,
 			  utime time default CURRENT_TIME,
 			  udate date default CURRENT_DATE,
 			  utimestamp timestamp default CURRENT_TIMESTAMP
@@ -99,7 +100,7 @@
 
 	//return array("state"=>106, "error"=>$partnerSet[5]);
 	
-	$query = "select * from didcyWork where email='".$partnerSet[13]."';";
+	$query = "select * from didcyWork where email='".$partnerSet[12]."';";
 	
 	$performQueryerProfile = fetchAll($query);
 	if(count($performQueryerProfile) > 0){
@@ -109,7 +110,8 @@
 	$query = "insert into didcyWork(firstname, lastname, country, telephoneNo,
 	cardName, cardID, bankACNo, mobileMoneyNumber, primarySkills, 
 	secondarySkills, programRevenue, programTraction, programValues,
-	profile, email, githubName, password, username,  dirId, livePhotoName, livePhotoID) values('".$partnerSet[0]."', '".$partnerSet[1]."', 
+	profile, email, githubName, password, username,  dirId, livePhotoName, 
+	livePhotoID) values('".$partnerSet[0]."', '".$partnerSet[1]."', 
 	'".$partnerSet[2]."', '".$partnerSet[3]."', '".$_POST["file-id"]."', '".$_POST["file-id"]."', 
 	'".$partnerSet[4]."', '".$partnerSet[5]."', '".$partnerSet[6]."', '".
 	 $partnerSet[7]."', '".$partnerSet[8]."', '".$partnerSet[9]."', 
@@ -126,15 +128,25 @@
   }
   
   function GetPartnerImage(){
+	$root = $_SERVER["DOCUMENT_ROOT"];
 	$dir = "./work-application.live/";
 	$dir2 = "./work-application.idc/";
 	
-	if(!is_dir("./work-application.live")){
-	  mkdir("work-application.live");
+	$dir_l = $root."/work-application.live";
+	$dir_i = $root."/work-application.idc";
+	
+	$oldumask = umask(0);
+	
+	if(!is_dir($dir_l)){
+	  mkdir($dir_l, 0777, true);
+	  chmod($dir_l, 0777);
 	}
-	if(!is_dir("./work-application.idc")){
-	  mkdir("work-application.idc");
+	if(!is_dir($dir_i)){
+	  mkdir($dir_i, 0777, true);
+	  chmod($dir_i, 0777);
 	}
+	
+	umask($oldumask);
 	
 	$applicant = CreateApplicant();
 	

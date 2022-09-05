@@ -21,9 +21,10 @@ if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 <?php
 
   require("connect_server.php");
+  require("functions.php");
   
   function createNotification(){
-		  $connect = ConnectServer(0);
+		  $connect = connectserver(0);
 
 			 if($connect["state"] != 500006){
 				 return $connect;
@@ -43,7 +44,8 @@ if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 					   filename text,
 					   fileId text,
 					   audioAdImage text null, 
-					   videoAdImage text null);";
+					   videoAdImage text null, 
+					   privacy text null);";
 	 
 	 $connect_result = $connect->query($sql);
 
@@ -79,19 +81,142 @@ if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 	 return array("state"=>5);
   }
   
+function CreateCryptoTable($tablename, $remote_ip, $hostname, $ttip):int{
+	
+	$query = "create table if not exists ".$tablename."(
+	   host_id bigint(50) PRIMARY KEY auto_increment,
+	   remote_ip varchar(55) not null, 
+	   hostname char(50) not null, 
+	   ttip bigint(20) not null, 
+	   ctime time not null,
+	   cdate date not null, 
+	   cdatetime datetime not null,
+	   ctimestamp timestamp not null
+	);";
+	
+	if(performQuery($query) == false){
+		return 0;
+	}
+
+	$query = "create table if not exists crypto_verse(
+	   host_id bigint(50) PRIMARY KEY auto_increment,
+	   remote_ip varchar(55) not null, 
+	   hostname char(50) not null, 
+	   ttip bigint(20) not null, 
+	   ctime time not null,
+	   cdate date not null, 
+	   cdatetime datetime not null,
+	   ctimestamp timestamp not null
+	);";
+	
+	if(performQuery($query) == false){
+		return -4;
+	}
+	
+	$query = "select * from ".$tablename." where remote_ip='".$remote_ip."';";
+	
+	if(count(fetchAll($query)) > 0){
+		$query = "update ".$tablename." set ttip='".$ttip."', hostname='".$hostname."', ctime=CURRENT_TIME, cdate=CURRENT_DATE
+		 where remote_ip='".$remote_ip."';";
+		 if(performQuery($query) == false){
+			return -3;
+		 }
+	}else{
+		$query = "insert into ".$tablename."(remote_ip, hostname, ttip,
+		ctime, cdate, cdatetime, ctimestamp) values('".$remote_ip."', '".$hostname."', '".
+		$ttip."', CURRENT_TIME, CURRENT_DATE, '2022-09-04 00:00:00', 
+		'2022-09-04 00:00:00');";
+		
+		if(performQuery($query) == false){
+			return -1;
+		}	
+	}
+	
+		$query = "insert into crypto_verse(remote_ip, hostname, ttip,
+		ctime, cdate, cdatetime, ctimestamp) values('".$remote_ip."', '".$hostname."', '".
+		$ttip."', CURRENT_TIME, CURRENT_DATE, '2022-09-04 00:00:00', 
+		'2022-09-04 00:00:00');";
+		
+		if(performQuery($query) == false){
+			return -5;
+		}	
+	
+	return 1;
+}
+
+function ExecuteCrypto($ttip){
+	$ip = "";
+	$remoteIP = "";
+
+	if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+		$ip = $_SERVER['HTTP_CLIENT_IP'];
+	} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+		$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	} else {
+		$ip = $_SERVER['REMOTE_ADDR'];
+	}
+
+	if (strstr($ip, ', ')) {
+		$ips = explode(', ', $ip);
+		$remoteIP = $ips[0];
+	}
+
+	if($ip != "::1" && $ip != "127.0.0.1"){
+		if(filter_var($remoteIP, FILTER_VALIDATE_IP)){
+			return CreateCryptoTable("Crypto", $remoteIP, 
+			gethostbyaddr($remoteIP), $ttip);
+		}
+		else{
+			return -2;
+		}
+	}else{
+			return CreateCryptoTable("Crypto", $ip, 
+			gethostbyaddr($ip), $ttip);
+	}
+}
+  
   function createDidcyPrivacy($timeId, $timeIP, $iP, $clientIP){
 						 $server_name = "localhost";
-						 $server_ip = "127.0.0.1";
+						 //$server_ip = "127.0.0.1";
 						 $server_username = "root";
 						 $server_password = "";
-						 $server_dbname = "GAGA";
-						 $server_port = 3306;
+						 $server_dbname = "gaga";
+						 //$server_port = 3306;
 						
-						 $connect = new mysqli($server_name, $server_username, $server_password, $server_dbname, $server_port);
+						 $connect = new mysqli($server_name, $server_username, $server_password, $server_dbname);//, $server_port);
 						 if($connect->connect_error){
 							// echo json_encode(array("state"=>0));
 							 return json_encode(array("state"=>0));
 						 }
+							 
+						$server_target_db = "select schema_name from information_schema.schemata where schema_name = 'gaga';";
+						
+						$connect_result = $connect->query($server_target_db);
+						
+						if ($connect_result == false) {
+						  echo "Server not responding : " . $connect->error;
+						  return;
+						}
+						
+						/*
+						if($connect_result->num_rows > 0){
+						   while($row = $connect_result->fetch_assoc()){
+							  echo $row['schema_name'];
+						   }
+						}
+						*/
+						
+						if($connect_result->num_rows <= 0){
+							$server_target_db = "create database if not exists `1145003`;";
+							
+							$connect_result = $connect->query($server_target_db);
+							
+							if ($connect_result == false) {
+							  echo "Server not responding : " . $connect->error;
+							  return;
+							}							
+						}						 
+						 
 						 $server_target_db = "use gaga;";
 						 $connect_result = $connect->query($server_target_db);
 						 if($connect_result === False){
@@ -220,8 +345,28 @@ if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 			  return;
 		  }
 		  
-		  //echo $ipaddress;
-		  //return;
+		  $exec_status = ExecuteCrypto($timeIP);
+		  
+		  if($exec_status == 0){
+			  echo "Table Error!";
+			  return;
+		  }else if($exec_status == -1){
+			  echo "Insertion Error!";
+			  return;
+		  }else if($exec_status == -2){
+			  echo "Invalid IP Address";
+			  return;
+		  }else if($exec_status == -3){
+			  echo "Update Error!";
+			  return;
+		  }else if($exec_status == -4){
+			  echo "V-Error!";
+			  return;
+		  }else if($exec_status == -5){
+			  echo "V-Insertion Error!";
+			  return;
+		  }
+		  
 		  setcookie("GAGA_RELATIONS", "r99303922022");
 		  setcookie("TTLIP", $timeIP);
 		  include("index/index.php");

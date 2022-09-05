@@ -1,0 +1,21 @@
+.network-detection{
+  position: fixed;
+  left: 1%;
+  width: 200px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  font-size: 30px;
+  background-color: rgba(10, 10, 20, 1);
+  color: white;
+  border-radius: 5%; 
+  bottom: 3%;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  box-shadow: 1px 1px 11px 4px rgba(100, 110, 101, 1); /*125, 120, 130*/
+  opacity: 1;
+  filter: alpha(opacity=100%);
+  z-index: 1.5;
+  display: none;
+}
+

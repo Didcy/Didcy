@@ -1,7 +1,7 @@
 "use strict";
 
 var stream = document.getElementById("didcy-fixes-row");
-var createPlugins = 0, updateCoin = 0, updateClick = 0;
+var createPlugins = 0, updateCoin = 0, updateClick = 0, devResponse = 0;
 
 /*document.getElementById("upload-developer-files").addEventListener("click", 
 UploadDeveloperFiles);
@@ -112,7 +112,7 @@ function UploadDevFiles(){
 	 cache: false,
 	 contentType: false,
 	 success: function(result){
-		window.console.log(result);
+		//window.console.log(result);
 		var data_returned = JSON.parse(result);
 		var reporter = null;
 		
@@ -136,7 +136,88 @@ function UploadDevFiles(){
 			 alertBox(reporter);
 		  }
 		  devFiles.value = "";
+		  if(devResponse == 1){
+			var devAddons = document.getElementsByClassName("response-i2");
+			const devAddonsLen = devAddons.length;
+			
+			for(var removeAddOns = 0;removeAddOns < devAddonsLen;removeAddOns++){
+				document.getElementById("developer-response").removeChild(
+				devAddons[removeAddOns]);
+			}
+			devResponse = 0;
+		  }
+		  document.getElementsByClassName("response-i")[0].innerHTML = 
+		  "No. of Program(.js) files uploaded - "+
+		  data_returned.file_types.program;
+		  
+		  document.getElementsByClassName("response-i")[1].innerHTML = 
+		  "No. of CSS(.css) files uploaded - "+
+		  data_returned.file_types.css;
+		  
+		  document.getElementsByClassName("response-i")[2].innerHTML = 
+		  "No. of PHP(.php) files uploaded - "+
+		  data_returned.file_types.php;		  
+		  
+		  document.getElementsByClassName("response-i")[3].innerHTML = 
+		  "No. of MP4(.mp4) files uploaded - "+
+		  data_returned.file_types.mp4;		  
+		  
+		  document.getElementsByClassName("response-i")[4].innerHTML = 
+		  "No. of MP3(.mp3) files uploaded - "+
+		  data_returned.file_types.mp3;		  
+		  
+		  document.getElementsByClassName("response-i")[5].innerHTML = 
+		  "No. of Media(like .ogg, .wav, etc) files uploaded - "+
+		  data_returned.file_types.data;
+
+		  document.getElementsByClassName("response-i")[5].style.display = "none";
+		  
+		  document.getElementsByClassName("response-i")[6].innerHTML = 
+		  "No. of NOT_ALLOWED files uploaded - "+
+		  data_returned.file_types.no_req;	
+		  
+		  document.getElementsByClassName("response-i")[7].innerHTML = 
+		  "Transmittion State - "+
+		  data_returned.state + " (OK)";	
+		  
+		  document.getElementsByClassName("response-i")[8].innerHTML = 
+		  "No. of upload errors/unsuccessful - "+
+		  data_returned.fileErrors.length;	
+		  
+		  document.getElementsByClassName("response-i")[9].innerHTML = 
+		  "Transmission Class ID  - "+
+		  data_returned["class-id"];	
+		  
+		  document.getElementsByClassName("response-i")[10].innerHTML = 
+		  "No. of files successful - "+
+		  data_returned.file_count_success;
+		  
+		  document.getElementsByClassName("response-i")[11].innerHTML = 
+		  "No. of files unsuccessful - "+
+		  data_returned.file_count_error;
+		  
+		  if(data_returned.pluginsOnFileTypes.length > 0){
+			var devFileResponse = document.getElementById("developer-response");
+			for(var loopPlugins = 0;loopPlugins < data_returned.pluginsOnFileTypes.length;loopPlugins++){
+				var uploadedFiles = document.createElement("p");
+				let filename = null;
+				filename = "("+(loopPlugins+1).toString()+") Filename - "+
+				data_returned.pluginsOnFileTypes[loopPlugins];					
+				const uploadedFileNames = document.createTextNode(
+				filename);
+				//var breaks = document.createElement("br");
+				uploadedFiles.append(uploadedFileNames);
+				uploadedFiles.setAttribute("style", "color:white");
+				uploadedFiles.setAttribute("class", "response-i2");
+				
+				devFileResponse.append(uploadedFiles);
+				//devFileResponse.append(breaks);
+				devResponse = 1;
+			}
+		  }
+		  
 		  return;
+
 		}
 		
 	 },
