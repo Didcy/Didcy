@@ -1,96 +1,124 @@
 <!--comment: HTML5, CSS3, JS6(ECMASCRIPT/ES6), PHP8, SASS, AJAX, XML, JSON, ASP, NODEJS -->
+<!--Didcy is a space provision platform where users can cloud, sell, build, host and do more digital activities. 
+ It was created on the 1st August, 2021 by its Founder and CEO, David Ansong. It's headerquaters can be found in Ghana.
+ Didcy was created to provide spaces in the form of individual integrated platforms where each platform performs different or simlar digital task.
+ Didcy provide spaces(platforms) such as trading(selling and buying) space, WebSpace, BookSpace and more. 
+ Didcy has 6 team members and 4 employees. Languages written in: HTML, CSS, JS, PHP, AJAX, MYSQL.-->
+<?php header("Access-Control-Allow-Origin: *"); ?>
 <!doctype html>
 <html lang="en-us" default-lang="english" def_country="usa">
-<head class="" id="">
- <title class="" id="">Didcy - Adverts made simple</title>
+<head class="" id="didcy-A1">
+ <title class="" id="">Didcy - It all begins with a space</title>
+ <link rel="canonical" href="http://www.localhost" />
+ <meta name="robots" content="index,follow">
  <meta charset="utf-8">
- <meta http-equiv="refresh" content="36000000000000000">
+ <meta http-equiv="refresh" content="3600000000000000000">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="keyword" content="di,d,dc,dd,didcx,dicx,dcx,dx,ddx,ddc,ddcx,ddxc,dcd,dxd,dcxd,dxcd,did,dic,dici,dicy,dc,dy,dyc,didc,didcy,didci,dici,dci,dci,digi,digital,dig,diw,diq,dip,dil,del,didcx">
- <meta name="description" content="Ad-based web platform with level grade services">
- <meta name="author" content="david ansong,alex akoto,bismark,joshua brown,david quartey,godbless,christian opare">
+ <meta name="keywords" content="spaces, didcy spaces, didcy, how to use didcy, cloudmyads, bookspace, didcyhost, developers, who is a didcer, the core, what is the core, what is didcy find">
+ <meta name="description" content="We offer free digital spaces that meets your business or personal goals. Check out Didcy Now and start saving more. Just try it out yourself.">
+ <meta name="author" content="David Ansong">
  <meta name="country" content="Ghana">
- <meta name="domain" content="https://www.didcy.com">
- <link rel="stylesheet" href="build/css/intlTelInput.css">
+ <meta name="domain" content="http://www.localhost">
+ <link rel="stylesheet" href="http://www.localhost/build/css/intlTelInput.css">
  <!--<link rel="stylesheet" href="bootstrap.min.css">
  <link rel="stylesheet" href="bootstrap-theme.min.css">-->
-<link href="style.css" rel="stylesheet" id="bootstrap-css">
-<script type="text/javascript" src="jquery.js"></script>
+<link href="http://www.localhost/style.css" rel="stylesheet" id="bootstrap-css">
+<script type="text/javascript" src="http://www.localhost/jquery.js"></script>
 <?php //include_once("chat2.php"); ?>
 <!--<link rel="stylesheet" href="chat.css">-->
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="font-awesome.min.css">
-<link rel="stylesheet" href="didcx.width.main.poisitioner.css">
- <link rel="stylesheet" href="adv-headerx.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-more.container.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-sign.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-custom.checkbox.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-custom.select.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-howtogaga.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-magnifier.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-tree-view.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-slide-top.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-slide-side.css" type="text/css" media="" media-type="" min="0em" max="0vw">
-<link rel="stylesheet" href="adv-custom.radio.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-ratings.css" type="text/css" media="" media-type="" min="0em" max="0vw"> <link rel="stylesheet" href="adv-ads.create.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-pricing.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-alert-boxes.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+<link rel="stylesheet" href="http://www.localhost/w3.css">
+<link rel="stylesheet" href="http://www.localhost/font-awesome.min.css">
+<link rel="stylesheet" href="http://www.localhost/didcx.width.main.poisitioner.css">
+ <link rel="stylesheet" href="http://www.localhost/adv-headerx.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-more.container.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-sign.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-custom.checkbox.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-custom.select.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-howtogaga.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-magnifier.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-tree-view.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-slide-top.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-slide-side.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+<link rel="stylesheet" href="http://www.localhost/adv-custom.radio.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-ratings.css" type="text/css" media="" media-type="" min="0em" max="0vw"> <link rel="stylesheet" href="adv-ads.create.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-pricing.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-alert-boxes.css" type="text/css" media="" media-type="" min="0em" max="0vw">
 <!--  <link rel="stylesheet" href="adv-ads.create.css" type="text/css" media="" media-type="" min="0em" max="0vw">
  --> 
  <!--<link rel="stylesheet" href="adv-scale-split-create-ads.css" type="text/css" media="" media-type="" min="0em" max="0vw">-->
- <link rel="stylesheet" href="adv-subscription.newsletter.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-subscription.newsletter.css" type="text/css" media="" media-type="" min="0em" max="0vw">
  <!--<link rel="stylesheet" href="adv-scale-split-create-ads-real.css" type="text/css" media="" media-type="" min="0em" max="0vw">-->
- <link rel="stylesheet" href="adv-social-media-accounts.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-open.select.ads.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-profile.info.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-custom.scrollbar.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-social-media.contacts.links.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-offline-services.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-flip-box.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-exhibiton-platforms.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-terms-conditions.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-about.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-books.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-product-card.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-cookie-accept.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-author.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-animated-image.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-know-team-developers.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-subscription-extras.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-reach-show.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-loaders.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-rater.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="work.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-notification.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="chat-login.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="didcy.work.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-create-ads.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="coursery.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="adv-coursery-playground.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-social-media-accounts.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-open.select.ads.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-profile.info.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-custom.scrollbar.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-social-media.contacts.links.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-offline-services.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-flip-box.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-exhibiton-platforms.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-terms-conditions.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-about.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-books.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-product-card.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-cookie-accept.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-author.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-animated-image.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-know-team-developers.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-subscription-extras.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-reach-show.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-loaders.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-rater.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/work.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-notification.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/didcy.work.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-create-ads.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/coursery.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-coursery-playground.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/didcy.keys.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-custom-video-controls.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/audio.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/tooltip.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv.logo.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-@footer.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/network.detection.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-collapsible.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-dog-access.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-testimonials.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-page-videos.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/chat-login.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-youtube.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-features.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-tooltips.css" type="text/css" media="" media-type="" min="0em" max="0vw">
 <!--  <link rel="stylesheet" href="adv-side-menu.css" type="text/css" media="" media-type="" min="0em" max="0vw"> -->
 
-<!--   <link rel="stylesheet" href="intl-tel-input-master/build/intlTelInput.css">
-  <link rel="stylesheet" href="intl-tel-input-master/build/demo.css"> -->
-  <!-- <link rel="stylesheet" href="intl-tel-input-master/build/intlTelInput.css"> -->
- <link rel="icon" href="didcy.png" type="image/ico">
- <script type="text/javascript" src="adv-global.js"></script>
+<!--   <link rel="stylesheet" href="http://www.localhost/intl-tel-input-master/build/intlTelInput.css">
+  <link rel="stylesheet" href="http://www.localhost/intl-tel-input-master/build/demo.css"> -->
+  <!-- <link rel="stylesheet" href="http://www.localhost/intl-tel-input-master/build/intlTelInput.css"> -->
+ <link class="icon" id="icon" rel="icon" href="http://www.localhost/didcy.png" type="image/png">
+ <script type="text/javascript" src="http://www.localhost/adv-global.js"></script>
  <!--<script type="text/javascript" src="jquery.js"></script>-->
- <script type="text/javascript" src="w3.js"></script>
- <script type="text/javascript" src="adv-magnifier.js"></script>
+ <script type="text/javascript" src="http://www.localhost/w3.js"></script>
+ <script type="text/javascript" src="http://www.localhost/adv-magnifier.js"></script>
 <!--  <script type="text/javascript" src="adv-social-media.contacts.links.js"></script>
- --> <script type="text/javascript" src="display.ads.js"></script>
- <script type="text/javascript" src="adv-open.select.ads.js"></script>
- <script type="text/javascript" src="adv-company-profile.js"></script>
- <script type="text/javascript" src="adv-profile.info.js"></script>
- <script type="text/javascript" src="adv-datetime.js"></script>
- <script type="text/javascript" src="upload.multiple.ads.js"></script>
- <script type="text/javascript" src="adv-search-display.js"></script>
-  <script type="text/javascript" src="CloudABIS-ScanR.js"></script>
- <script type="text/javascript" src="CloudABIS-Helper.js"></script>
+ --> <script type="text/javascript" src="http://www.localhost/display.ads.js"></script>
+ <script type="text/javascript" src="http://www.localhost/adv-open.select.ads.js"></script>
+ <script type="text/javascript" src="http://www.localhost/adv-company-profile.js"></script>
+ <script type="text/javascript" src="http://www.localhost/adv-profile.info.js"></script>
+ <script type="text/javascript" src="http://www.localhost/adv-datetime.js"></script>
+ <script type="text/javascript" src="http://www.localhost/adv-sleep.js"></script>
+ <script type="text/javascript" src="http://www.localhost/upload.multiple.ads.js"></script>
+ <script type="text/javascript" src="http://www.localhost/adv-search-display.js"></script>
+  <script type="text/javascript" src="http://www.localhost/CloudABIS-ScanR.js"></script>
+ <script type="text/javascript" src="http://www.localhost/CloudABIS-Helper.js"></script>
  <!--<script type="text/javascript" src="adv-scale-split-create-ads-real.js"></script>-->
-  <script type="text/javascript" src="adv-services-not-available.js"></script>
-  <script type="text/javascript" src="adv-sleep.js"></script>
-  <script type="text/javascript" src="it.js"></script>
+  <script type="text/javascript" src="http://www.localhost/adv-services-not-available.js"></script>
+  <script type="text/javascript" src="http://www.localhost/it.js"></script>
+  <script type="text/javascript" src="http://www.localhost/adv-cookie-accept.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <!--   <script type="text/javascript" src="adv-sleep.js"></script>
   <script type="text/javascript" src="adv-hash-sleep.js"></script> -->
  <!--  <script type="text/javascript" src="adv-page-section-smooth-scroll.js"></script> -->
@@ -108,31 +136,31 @@
   function reloadFromLogout(){
       //window.console.log(window.location.href.length);
        var reloaderID = window.location.href;
-		/*if(reloaderID == "localhost/?id=1"){
+/* 		if(reloaderID == "localhost/?id=1"){
 		   reloaderID = reloaderID.slice(14);
 		}
-		if(reloaderID == "www.localhost/?id=1"){
+		if(reloaderID == "www.didcy.com/?id=1"){
 		   reloaderID = reloaderID.slice(18);
 		}
 		if(reloaderID == "?id=1"){
 	        reloaderID = reloaderID.slice(25);
-	    }*/
+	    } */
 
 
-		if(reloaderID == "dbacarcollections.ueuo.com/?id=1"){
-		   reloaderID = reloaderID.slice(31);
+		if(reloaderID == "didcy.com/?id=1"){
+		   reloaderID = reloaderID.slice(14);
 		}
-		if(reloaderID == "www.dbacarcollections.ueuo.com/?id=1"){
-		   reloaderID = reloaderID.slice(35);
+		if(reloaderID == "www.didcy.com/?id=1"){
+		   reloaderID = reloaderID.slice(18);
 		}
-		if(reloaderID == "http://www.dbacarcollections.ueuo.com/?id=1"){
-	        reloaderID = reloaderID.slice(42);
+		if(reloaderID == "http://www.didcy.com/?id=1"){
+	        reloaderID = reloaderID.slice(25);
 	    }
 
-		if(reloaderID == "https://www.dbacarcollections.ueuo.com/?id=1"){
-	        reloaderID = reloaderID.slice(43);
+		if(reloaderID == "http://www.localhost/?id=1"){
+	        reloaderID = reloaderID.slice(26);
 	    }
-
+	  
 	  if(reloaderID != "" && reloaderID == 1){
 		/*document.cookie="GAGA_RELATIONS=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/advert.llc";	      
 		document.cookie="GAGA_RESPONSE=;expires=Thu, 01 Jan 1970 00:00:00 UTC;GAGA_CMPO=;path=/advert.llc";	      
@@ -159,7 +187,9 @@ html {
    font-family: "proxima-nova", "Source Sans Pro", Helvetica, sans-serif;
    background: white;
  }
- 
+body {
+  font-family: "Sofia", sans-serif;
+} 
  .logo{
 	  position: fixed;
 	  right: 0;
@@ -345,7 +375,7 @@ input.inputs1, button.inputs1{
   display: none;
 }
 .audio-ad-image, .audio-ad-image-21{
-  display: none;
+  display: block;
   width: 100%;
 }
 .modal-content-adv-exhibition-platform-table{
@@ -433,15 +463,9 @@ a.linker-left-side{
   width: 25px;
 }
 
-
-@media screen and (max-width: 283px){
-  .didcy-mini-big-logo-title{
-	font-size: 15px;
-  }
-}
-
-img.logo-big{
-  width: 100%;
+.close-didcy-benefits, .close-didcy-guide
+, .close-didcy-keywords, .close-didcy-competitive-advantage{
+  z-index: 3;
 }
 
 .side-nav-container{
@@ -450,9 +474,10 @@ img.logo-big{
   left: 0%;
   z-index: 1;
   cursor: pointer;
-  background: rgba(40, 40, 40, 1);
+  background: rgba(0, 0, 0, 1);/*rgba(40, 40, 40, 1);*/
   height: 200px;
   width: 40px;  
+  border-radius: 8%;
 }
 
 @media screen and (max-width: 283px){
@@ -651,7 +676,6 @@ img.logo-big{
   height: 390px;
 }
 }
-
 @media only screen and (max-height: 600px){
   .modal-content-didcy-mini-big-logo img.logo-big{
 	 height: 490px;
@@ -723,7 +747,10 @@ a.linker-left-side{
 	 font-size: 20px;
    }
 #close-work, #close-cookie-full-mode, #close-cookie, #close-upcoming-updates, #close-signup, 
-#close-ripa-board, #close-ripa-bank, #close-plugins-board, #close-split, #close-quak{
+#close-ripa-board, #close-ripa-bank, #close-plugins-board, #close-split, #close-quak, 
+#close-work-apply, #close-work-board-4, #close-connections, .close-plugins-4-devs
+, .close-didcy-benefits, .close-didcy-guide
+, .close-didcy-keywords, .close-didcy-competitive-advantage{
   top: 5px;
   right: 10px;
 }
@@ -741,19 +768,39 @@ a.linker-left-side{
 	#design-update-centre{
 	  font-size: 15px;
 	}
-.welcome-header{
+.welcome-header, .welcome-didcy-developer-portal{
   font-size: 20px;
 }
+
 .sub-header{
   font-size: 15px;
+}
+}
+@media screen and (max-width: 500px){
+ .welcome-didcy-benefits, .welcome-didcy-keywords
+ , .welcome-didcy-guide, .welcome-didcy-cmp-adv{
+  font-size: 25px;
+}
+.using-didcy{
+  font-size: 20px;
 }
 }
 @media screen and (max-width: 300px){
    h2#welcome-2-didcy-work-policy{
 	 font-size: 18px;
    }
+ .welcome-didcy-benefits, .welcome-didcy-keywords
+ , .welcome-didcy-guide, .welcome-didcy-cmp-adv{
+  font-size: 15px;
+}
+.using-didcy{
+  font-size: 15px;
+}
 #close-work, #close-cookie-full-mode, #close-cookie, #close-upcoming-updates, #close-signup, 
-#close-ripa-board, #close-ripa-bank, #close-plugins-board, #close-split, #close-quak{
+#close-ripa-board, #close-ripa-bank, #close-plugins-board, #close-split, #close-quak, 
+#close-work-apply, #close-work-board-4, #close-connections, .close-plugins-4-devs, 
+.close-didcy-benefits, .close-didcy-guide
+, .close-didcy-keywords, .close-didcy-competitive-advantage{
   top: 0;
   right: 0px;
 }
@@ -762,7 +809,8 @@ a.linker-left-side{
   font-size: 20px;
 }
 
-#privacy-policy-link, #design-update-centre{
+#privacy-policy-link, #design-update-centre, .welcome-didcy-developer-portal
+{
   font-size: 15px;
 }
 .welcome-header{
@@ -772,10 +820,669 @@ a.linker-left-side{
   font-size: 15px;
 }
 }
-.modal-upcoming-updates{
+#close-cookie{
+  z-index: 3;
+}
+.modal-upcoming-updates, #id012, .modal-work-board-4
+, .modal-seller-dash-board, .modal-buyer-dash-board{
   padding: 2px;
 }
+.modal-content-1, .modal-content-subscribe, .modal-plugins-board,
+.modal-didcy-ripa-board,
+.modal-content-2, .modal-content-howToGaGa, .modal-content-7, .modal-didcy-fixes,
+.modal-content-12, .modal-content-animated-image, 
+.modal-content-dispute-policy, .modal-content-industrial-ad-area,
+.modal-content-adv-exhibition-platform-table, .modal-content-15, 
+.modal-content-20, .modal-content-pricing-table, .modal-content-Terms, 
+.modal-content-cookie, .modal-content-security, .modal-content-ceo, 
+.modal-content-limit-policy, 
+.modal-content-authors, .modal-content-mentors, .modal-content-cookie-full-mode, 
+.modal-content-upcoming-updates, .modal-content-subscribe-2, 
+.modal-content-payment-services, .modal-content-subscribe-web-policy,
+.modal-content-subscribe-stand-policy, .modal-content-investors, 
+.modal-content-team, .modal-content-know-team, 
+.modal-content-know-developers, .modal-content-host-policy, 
+.modal-content-sitemap, .modal-content-advertisement-channels, 
+.modal-content-seo-advertisement, .modal-content-content-integration, .modal-content-profile-insight,
+.modal-content-companies-only, .modal-content-actors-groups-only, .modal-content-work
+, .modal-content-notificator-link, .modal-content-didcy-mini-contacts, .modal-content-didcy-mini-big-logo, 
+.modal-content-mini-web-buy-app, .modal-content-mini-text-tutorials, .modal-content-payment-providers, 
+.modal-content-caller, .modal-content-work-applicant-camera-board, 
+.modal-content-connections, .modal-content-didcy-fixes, .modal-content-didcy-ripa-bank{
+	background-color: rgba(0, 0, 0, 1);
+}
 
+.button{
+   background: black;
+}
+.impact-list-a{
+  background-color: rgba(5, 5, 10, 1);
+  border-radius: 2%;
+}
+
+@media screen  and (max-width: 1000px){
+.impact-list-a{
+  width: 90%;
+  margin-left: 5%;
+}	
+}
+
+.w3-modal-content{
+  border-radius: 2%;
+}
+.modal-cookie, .modal-cookie-full-mode
+{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-work{
+   background-color: rgba(5, 5, 10, 0.98);
+}
+.modal-cookie-full-mode{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.modal-content-dispute-policy, 
+.modal-content-cookie, .modal-content-security, .modal-content-ceo, 
+.modal-content-limit-policy,
+.modal-content-payment-services, .modal-content-subscribe-web-policy,
+.modal-content-subscribe-stand-policy, .modal-content-host-policy, 
+#text-tutorial, .modal-content-work, .modal-content-cookie-full-mode, 
+.modal-content-upcoming-updates{
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-bottom: 50px;
+   background-color: rgba(5, 5, 10, 1);
+}
+.container-chat{
+   
+}
+.modal-content-connections{
+   padding-left: 50px;
+   padding-right: 50px;	
+}
+.container-signup, .container-signin{
+   padding-right: 50px;
+   padding-left: 50px;
+   border-radius: 2%;
+   border: 1px solid black;
+}
+.modal-content-signin, .modal-content-signup{
+   border-radius: 2%;
+   border: 1px solid black;
+}
+/*.ap_container {position:fixed;width:50%;bottom:0px ;left:25%;}*/
+.ap_container{
+  width: 50%;
+  position: relative;
+  left: 25%;
+}
+@media screen and (max-width: 700px) {
+.modal-content-security, .modal-content-cookie, .modal-content-cookie-full-mode, #text-tutorial, 
+.modal-content-upcoming-updates, .container-signup, .container-signin, 
+.modal-content-work, .modal-content-connections{
+  top: 0%;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.modal-content-cookie-full-mode{
+  top: -1.5%;
+}
+}
+button#button-1{
+  cursor: pointer;
+  padding: 5px;
+  font-size: 17px;
+  display:  block;
+  margin-bottom: 2%;
+  width: 50%;
+  left: 25%;
+}
+@media screen and (max-width: 500px) {
+.button-33, #button-1{
+  left: 2%;
+}
+.modal-content-signin, .modal-content-signup{
+  width: 90%;
+}
+/*.ap_container {position:fixed;width:50%;bottom:0px ;left:25%;}*/
+.ap_container{
+  width: 80%;
+  left: 10%;
+}
+}
+@media screen and (max-width: 300px){
+/*.ap_container {position:fixed;width:50%;bottom:0px ;left:25%;}*/
+.ap_container{
+  width: 90%;
+  left: 5%;
+}
+}
+.rater{
+  background-color: rgba(5, 5, 10, 1);
+}
+.modal-content-work-board-4{
+  background-color: rgba(200, 200, 200, 1);
+}
+.modal-cookie, .modal-cookie-full-mode, .modal-know-team, .modal-know-developers, 
+.column-developers, .card-developers, .modal-content-know-team, 
+.modal-content-know-developers, .modal-content-profile-insight, 
+#column-51{
+	background-color: rgba(20, 20, 20, 1);
+	text-align: justify
+}
+.modal-content-work{
+	text-align: justify;
+}
+.close-connections{z-index:60;}
+
+@media screen and (min-width: 1083px){
+  #resx{
+	margin-top: 1%;
+  }
+}
+.gaga-share, .gaga-decide{
+  display: none;
+}
+.close-didcy-benefits, .close-didcy-guide
+, .close-didcy-keywords, .close-didcy-competitive-advantage{
+	top: -2%;
+	right: 1px
+}
+   .logo-media{
+     width: 50px;
+	 display: inline;
+	 margin-top: 4px;
+   }
+p, h1, h2, h3, h4, h5, h6, a, li{
+   font-family: sans-serif, arial;
+}
+ol{
+  list-style-type: circle;
+  font-weight: normal;
+  font-size: 15px;
+}
+ol li{
+  font-weight: normal;
+  font-size: 15px;
+}
+li, p, p#gaga-text-tutorials, p#gaga-text-tutorials-21{
+  font-weight: normal;
+  font-size: 15px;
+}
+.coming-soon{
+  height:50vh;
+}
+p{color:white;}
+@media screen and (max-width: 800px){
+ #adv-files-showcase{
+  margin-top: -3%;
+}
+}
+@media screen and (max-width: 600px){
+ #adv-files-showcase{
+  margin-top: -7%;
+}
+}
+@media screen and (min-width: 800px){
+ #adv-files-showcase{
+  margin-top: -3%;
+}
+}
+@media screen and (min-width: 1024px){
+ #adv-files-showcase{
+  margin-top: -3%;
+}
+}
+
+/*
+.modal-1{
+  z-index: 70;
+}
+.industrial-ad-area, .modal-11{
+  z-index: 71;	
+}
+.modal-chat, .modal-chat-board{
+  z-index: 72;
+} 
+.modal-chat-board{
+  z-index: 73;
+}
+*/
+.modal-1{
+  z-index: 1;
+}
+h1, h2, h3, h4, h5, h6, li, ul, ol, ol li, ul li, p, div, span, a {
+  font-family: "Roboto", sans-serif;
+} 
+.modal-chat, .modal-11{
+  z-index: 19;	
+}
+.modal-chat-board{
+  z-index: 21;
+}
+.our-mission-col{
+	margin-top:13%;
+	float:right;
+}
+.didcy-def-goal{
+	font-size: 40px;
+}
+h3.create-a-space{
+	font-size: 30px;
+}
+h5.create-a-space{
+	font-size: 15px;
+}
+.shape-it-yw{
+	float:right;
+}
+.col-box{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	width: 30%;
+	margin-left: 2.5%;
+}
+.list-spaces-below{
+   padding-bottom:3%;
+}
+.col-box-top{
+	margin-top: 5%;
+}
+.col-box p.create-a-space{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.col-box{
+	margin-top: 8%;
+}
+.open-write-text{
+    font-size: 100px;
+}
+.space-is-all-yours, .no-1{
+    font-size: 20px;
+}
+p.ad-creator-txt{
+    font-size: 17px;
+}
+.ad-img-reg{
+	width:100%;
+}
+.others-testimonials{
+	font-size:30px;
+}
+p.e-services-dbox{
+	font-size: 20px;
+}
+.def-way{
+	font-size: 30px;
+}
+p.def-way-p{
+	font-size: 20px;
+}
+p.def-way-p{
+	font-size: 20px;
+}
+#didcy-just-waiting{
+	font-size: 30px;
+}
+.let-get-ys-2{
+	font-size: 20px;
+}
+#gaga-text-tutorials-2{
+	font-size: 15px;
+}
+.tos{
+	font-size: 20px;
+}
+.space-updates{
+	position: relative;
+	font-size: 30px;
+	padding: 20px;
+	text-align: center;
+	color: red;
+	font-style: italic;
+}
+@media screen and (max-width: 1115px){
+.col-box{
+	width: 48%;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 8%;
+}
+.col-ft1, .col-st1{
+	margin-top: 0%;
+}
+.col-box-t1-50-marg{
+	margin-top: 8%;
+}
+}
+@media screen and (max-width: 992px){
+   .write-content{
+	 height: 200px;
+   }
+.open-write-text{
+    font-size: 50px;
+	
+}
+}
+@media screen and (max-width: 800px){
+  .our-mission-col{
+	  margin-top:13%;
+	  float:left;
+  }
+.didcy-def-goal{
+	font-size: 25px;
+}
+h3.create-a-space{
+	font-size: 20px;
+}
+h5.create-a-space{
+	font-size: 15px;
+}
+.col-box{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 8%;
+}
+.col-box-top{
+	margin-top: 8%;
+}
+.col-ft1{
+	margin-top: 0%;
+}
+   .write-content{
+	 height: 200px;
+   }
+.open-write-text{
+    font-size: 50px;
+	
+}
+p.space-is-all-yours, p.no-1{
+    font-size: 15px;
+}
+}
+@media screen and (max-width: 600px){
+.space-is-all-yours, .no-1{
+    font-size: 15px;
+}
+   .write-content{
+	 height: 200px;
+   }
+.open-write-text{
+    font-size: 50px;
+	
+}
+.list-spaces-below{
+   padding-bottom:1%;
+}
+.col-box{
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	margin-top: 8%;
+}
+.col-box-top{
+	margin-top: 8%;
+}
+  .our-mission-col, .shape-it-yw{
+	  margin-top:0%;
+	  float:left;
+  }
+.didcy-def-goal{
+	font-size: 25px;
+}
+h3.create-a-space{
+	font-size: 20px;
+}
+h5.create-a-space{
+	font-size: 15px;
+}
+.col-ft1{
+	margin-top: 0%;
+}
+.list-spaces-below{
+	font-size: 26px;
+}
+.everything-begins{
+	font-size: 20px;
+}
+.didcy-value-proposition, .didcy-value-proposition-2, 
+.didcy-value-proposition-3{
+	font-size: 15px;
+}
+.what-you-need-to-know, .space-updates{
+	font-size: 23px;
+	padding-top: 10%;
+}
+.others-testimonials{
+	font-size:23px;
+}
+.faq{
+	font-size: 23px;
+}
+.testimonials{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.collapsible-container{
+	width: 90%;
+	position: relative;
+	left: 5%;
+	right: 5%;
+}
+p.e-services-dbox{
+	font-size: 15px;
+}
+.newsletters-h{
+	font-size: 20px;
+}
+.glower{
+	font-size: 20px;
+}
+.didcy-keys-dev{font-size: 15px;}
+.didcy-keys-dev-log-visibile{font-size: 15px;}
+.didcy-keys-dev-copy{font-size: 15px;}
+}
+@media screen and (max-width: 500px){
+   .write-content{
+	 height: 130px;
+   }
+.open-write-text{
+    font-size: 30px;
+	
+}
+.notice-2-ad-creators{
+	font-size: 15px;
+}
+p.ad-creator-txt{
+	font-size: 12px;
+}
+.didcy-black-box-headers, .didcy-didcy-work-keys-h{
+	font-size: 25px;
+}
+.fade-testimonials{
+	margin-bottom: 8%; 
+}
+.list-spaces-below{
+	font-size: 22px;
+}
+
+.what-you-need-to-know, .space-updates{
+	font-size: 18px;
+}
+.others-testimonials{
+	font-size:20px;
+}
+.def-way{
+	font-size: 23px;
+}
+p.def-way-p{
+	font-size: 16px;
+}
+p.def-way-p{
+	font-size: 16px;
+}
+#didcy-just-waiting{
+	font-size: 23px;
+}
+.let-get-ys-2{
+	font-size: 15px;
+}
+}
+@media screen and (max-width: 400px){
+	.we-def-spaces{
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 380px){
+.ad-img-reg{
+	height: 50px;
+}
+}
+@media screen and (max-width: 355px){
+  .welcome-to-platform-offer{
+	  font-size: 25px;
+  }
+}
+@media screen and (max-width: 328px){
+   .write-content{
+	 height: 120px;
+   }
+.open-write-text{
+    font-size: 23px;
+	
+}
+  .welcome-to-platform-offer{
+	  font-size: 20px;
+  }
+p.space-is-all-yours, p.no-1{
+    font-size: 12px;
+}
+}
+
+
+@media screen and (min-width: 1116px){	
+.col-box-t1{
+	margin-top: 0%;
+}
+/*.col-box-t1-50-marg{
+	margin-top: 8%;
+}*/
+.col-box-t1-ls{
+	margin-top: 8%;
+}
+}
+/*#signup, #signin{
+   z-index: 1;
+}
+.topNavg{
+	z-index: 2;
+}
+.modal{
+	z-index: 3;
+}*/
+
+.space-display-none{
+	display: none;
+}
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 600px;
+	
+}
+.kindly-subscribe-n{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+@media screen and (max-width: 1300px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 700px;
+	
+}
+}
+@media screen and (max-width: 1115px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 550px;
+	
+}
+}
+@media screen and (max-width: 1003px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 630px;
+	
+}
+}
+@media screen and (max-width: 824px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 650px;
+	
+}
+}
+@media screen and (max-width: 800px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 500px;
+	
+}
+}
+@media screen and (max-width: 700px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 540px;
+	
+}
+}
+@media screen and (max-width: 514px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 570px;
+	
+}
+}
+@media screen and (max-width: 500px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 650px;
+	
+}
+}
+@media screen and (max-width: 423px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 680px;
+	
+}
+}
+@media screen and (max-width: 395px){
+.didcy-definition-def{
+  margin-top: 24%;	
+}
+}
+@media screen and (max-width: 349px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 740px;
+	
+}
+.didcy-definition-def{
+  margin-top: 27%;	
+}
+}
+@media screen and (max-width: 328px){
+div.list-spaces-offered div.row div.col-new-height div.container-offers{
+	height: 830px;
+	
+}
+.didcy-definition-def{
+  margin-top: 37%;	
+}
+}
+@media screen and (max-width: 300px){
+.didcy-definition-def{
+  margin-top: 50%;	
+}
+}
+.no-html-found, .no-html-content-found{
+  display: none;
+}
+
+ </style>
+ <style type="text/css" id="in-css">
+ 
  </style>
 </head>
 <body id="body">
@@ -785,58 +1492,57 @@ a.linker-left-side{
 
 <main class="container1" id="container-c31">
 
-<img src="didcy.wall.jpg" class="logo" id="logo" value=""/><!--images.jpg-->
-
 <div class="topNavg w3-container" id="identity_main_ids">
 <div class="topnav" id="myTopnav">
-  <a href="https://www.didcy.com" id="didcy" class="didcy didcx">Didcy</a>
-  <a href="https://www.didcy.com" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="adv.icons/1946433.png"/></a>
+  <a href="http://www.localhost" id="didcy" class="didcy didcx" title="Welcome to Didcy">Didcy</a>
+  <a href="http://www.localhost" title="Home Sweet Home" id="home" class="home active"><img alt="Didcy Home" class="iconic" src="http://www.localhost/adv.icons/1946433.png"/></a>
   <div class="dropdown">
     <button title="hey you, this is what your competitors are upto" class="dropbtn drop">
-      <img class="iconic" src="adv.icons/3256216.png"/><!-- download(25).jpg -->
+      <img title="Didcy Compete" alt="Didcy Compete" class="iconic" src="http://www.localhost/adv.icons/3256216.png"/><!-- download(25).jpg -->
     </button>
     <div class="dropdown-content">
-	   <a title="hey, look your competitors are" id="impact" style="cursor: pointer" class="impact" title="Didcy Impact is where you must head to" alt="" target="_blank" ping=""><img  class="iconic" src="adv.icons/3273644.png"/></a><!-- download(32).jpg -->
+	   <a title="hey, look your competitors are" id="impact" style="cursor: pointer" class="impact" alt="Didcy Impact is where you must head to" target="_blank" ping="">
+	   <img alt="Didcy Impact" title="Didcy Impact" class="iconic" src="http://www.localhost/adv.icons/3273644.png"/></a><!-- download(32).jpg -->
     </div>
   </div> 
 <div class="dropdown">
     <button title="Yeah we found it. Just eavedrop &darr;" class="dropbtn drop">
-      <img class="iconic" src="adv.icons/3631153.png"/><!-- download(22).jpg -->
+      <img title="Didcy Core" alt="Didcy Core" class="iconic" src="http://www.localhost/adv.icons/3631153.png"/><!-- download(22).jpg -->
     </button>
     <div class="dropdown-content-s dropdown-content">
- 	  <a id="more" class="more" style="cursor: pointer"><img class="iconic" src="adv.icons/2377884.png"/><!-- <b class="menu-1">&#9776;</b> --></a>
+ 	  <a id="more" class="more" style="cursor: pointer" alt="The Core" title="The Core"><img  alt="The Core" title="The Core" class="iconic" src="http://www.localhost/adv.icons/2377884.png"/><!-- <b class="menu-1">&#9776;</b> --></a>
  
       <a id="audio_radio" title="needs help with audio/radio ads broadcast" class="audio_radio" style="cursor: pointer" onclick="ServicesNotAvailable('Audio/Radio Services', 
-	  'Audio/Radio Service report is at the back side. Please tab/put the mouse on this box to view the report.')"><img class="iconic" src="adv.icons/3167693.png"/></a><!-- download(29).jpg -->
+	  'Audio/Radio Service report is at the back side. Please tab/put the mouse on this box to view the report.')"><img class="iconic" title="Didcy Audio/Radio Services" alt="Didcy Audio/Radio Services" src="http://www.localhost/adv.icons/3167693.png"/></a><!-- download(29).jpg -->
 
- 	  <a id="contacts-links" onclick="document.getElementById('id012').style.display='block'" class="contacts" style="cursor: pointer"><img class="iconic" src="adv.icons/4213179.png"></a><!-- download(13).jpg -->
+ 	  <a id="contacts-links" title="24/7" onclick="document.getElementById('id012').style.display='block'" class="contacts" style="cursor: pointer"><img class="iconic" title="Didcy Contacts" alt="Didcy Contacts" src="http://www.localhost/adv.icons/4213179.png"></a><!-- download(13).jpg -->
  	  
-	  <a id="current" class="current notification" style="cursor: pointer"><!-- <i class="fa fa-caret-down"></i> --><span class="badge">0</span>
-	  <img class="iconic" id="notification" src="adv.icons/1156949.png"/><!-- images(4).jpg -->
+	  <a id="current" title="Get notified of the latest uploaded ads from CloudMyAdS" class="current notification" style="cursor: pointer"><!-- <i class="fa fa-caret-down"></i> --><span class="badge">0</span>
+	  <img class="iconic" alt="Get notified of the latest uploaded ads from CloudMyAdS" title="Get notified of the latest uploaded ads from CloudMyAdS" id="notification" src="http://www.localhost/adv.icons/1156949.png"/><!-- images(4).jpg -->
 	  </a>
  	  
-	  <a id="search" onclick="document.getElementById('mini-search').style.display='block'" class="search" style="cursor: pointer"><img class="iconic" src="adv.icons/3128287.png"/></a><!-- download(6).jpg -->
+	  <a title="Use DidcySearch to search anything on the platform" alt="Use DidcySearch to search anything on the platform" id="search" onclick="document.getElementById('mini-search').style.display='block'" class="search" style="cursor: pointer"><img title="Use DidcySearch to search anything on the platform" alt="Use DidcySearch to search anything on the platform" class="iconic" src="http://www.localhost/adv.icons/3128287.png"/></a><!-- download(6).jpg -->
     
 	</div>
   </div> 
-  <div class="dropdown">
+  <div class="dropdown" title="24/7">
     <button class="contacting dropbtn" id="contacts-links drop">
-      <img class="iconic" src="adv.icons/4213179.png"/><!-- download(13).jpg -->
+      <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/4213179.png"/><!-- download(13).jpg -->
     </button>
-    <div class="dropdown-content">
-	  <a id="24-7-contacts" class="24-7-contacts" style="cursor: pointer" onclick="document.getElementById('id012').style.display='block'">
-	  <img class="iconic" src="adv.icons/870175.png" title="24/7"/><!-- 24/7 --></a>
+    <div class="dropdown-content" title="24/7">
+	  <a title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" id="24-7-contacts" class="24-7-contacts" style="cursor: pointer" onclick="document.getElementById('id012').style.display='block'">
+	  <img alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png" title="24/7"/><!-- 24/7 --></a>
     </div>
   </div> 
-  <div class="dropdown"><!--  style="background-color: #555;border-radius: 2px" -->
+  <div class="dropdown" alt="Get notified of the latest uploaded ads from CloudMyAdS" title="Get notified of the latest uploaded ads from CloudMyAdS"><!--  style="background-color: #555;border-radius: 2px" -->
     <button id="notification" class="currenting dropbtn notification drop"><span class="badge">0</span>
-      <img class="iconic" src="adv.icons/1156949.png"/><!-- images(4).jpg -->
+      <img alt="Get notified of the latest uploaded ads from CloudMyAdS" title="Get notified of the latest uploaded ads from CloudMyAdS" class="iconic" src="http://www.localhost/adv.icons/1156949.png"/><!-- images(4).jpg -->
     </button>
   </div> 
   <div class="dropdown">
     <input type="search" name="" class="search-relocate search-engine dropbtn drop" style="cursor: inherit" id="search-engine" placeholder="Just guess anything ....">
 	<button onclick="document.getElementById('mini-search').style.display='block'" class="searching search-pop dropbtn" id="search-board" onclick="">
-	<img class="iconic" src="adv.icons/3128287.png"/><!-- download(6).jpg -->
+	<img title="Use DidcySearch to search anything on the platform" alt="Use DidcySearch to search anything on the platform" class="iconic" src="http://www.localhost/adv.icons/3128287.png"/><!-- download(6).jpg -->
 	</button>
   </div>
   <a href="#about" id="links" class="linker"> ? </a>
@@ -845,27 +1551,29 @@ a.linker-left-side{
 </div>
 
 <!---DIDCY--->
-<div class="side-nav-container" id="side-nav-container">
-  <div class="didcy-min-nav" id="didcy-min-nav" title="Get to work now. Figure out your wants and needs with Didcy Menu">
+
+ <div class="side-nav-container w3-card-4" id="side-nav-container">
+  <div class="didcy-min-nav" id="didcy-min-nav" title="Get to work now. Figure out your wants and needs with The Core">
    
-   <!--<img class="iconic" src="adv.icons/3631153.png-->
-   <a id="more-left-side" class="more-left-side" style="cursor: pointer">
-   <img class="iconic" src="adv.icons/2377884.png"/></a>
+   <!--<img class="iconic" src="http://www.localhost/adv.icons/3631153.png-->
+   <a title="Get to work now. Figure out your wants and needs with The Core" alt="Get to work now. Figure out your wants and needs with The Core" id="more-left-side" class="more-left-side" style="cursor: pointer">
+   <img title="Get to work now. Figure out your wants and needs with The Core" alt="Get to work now. Figure out your wants and needs with The Core" class="iconic" src="http://www.localhost/adv.icons/2377884.png"/></a>
   
   </div>
   
   <a href="#about" id="links-left-side" class="linker-left-side" title="We know you're curious to know what '?' is. Just tell us what you want to know about '?'"> ? </a>
   
   <div class="didcy-min-nav-contacts" id="didcy-min-nav-contacts" title="Tell us whether you sleep or not and we'll tell you if we do same. So let's get started NOW.">
-	  <a id="24-7-contacts-left-side" class="24-7-contacts-left-side" style="cursor: pointer" onclick="document.getElementById('id012').style.display='block'">
-	  <img class="iconic" src="adv.icons/870175.png"/><!-- 24/7 --></a>
+	  <a title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" id="24-7-contacts-left-side" class="24-7-contacts-left-side" style="cursor: pointer" onclick="document.getElementById('id012').style.display='block'">
+	  <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png"/><!-- 24/7 --></a>
   </div>
   
 
   <div class="didcy-mini-logo" id="didcy-mini-logo" title="We know you're curious about this. Just make it quick before they take it down.">
-	  <a id="" class="" style="cursor: pointer" onclick="document.getElementById('didcy-mini-big-logo').style.display='block'">
-	  <img class="iconic" src="didcy.png"/><!-- 24/7 --></a>  
+	  <a title="Didcy Logo" alt="Didcy Logo" id="mini-big-logo" class="mini-big-logo" style="cursor: pointer" onclick="document.getElementById('didcy-mini-big-logo').style.display='block'">
+	  <img title="Didcy Logo" alt="Didcy Logo" class="iconic" src="didcy.png"/><!-- 24/7 --></a>  
   </div>
+  
  </div>
 
   <div class="didcy-mini-big-logo" id="didcy-mini-big-logo">
@@ -873,7 +1581,7 @@ a.linker-left-side{
    <div class="modal-content-didcy-mini-big-logo" id="modal-content-didcy-mini-big-logo">
     <!--<h1 style="color: white" class="didcy-mini-big-logo-title" id="didcy-mini-big-logo-title">DIDCY LOGO</h1>
      iconic logo-big-->
-	<img class="logo-pos" src="didcy.png" width="100%" title="You're currently viewing our value and symbol (DIDCY LOGO)"/>
+	<img class="logo-pos" src="didcy.png" width="100%" alt="You're currently viewing our value and symbol (DIDCY LOGO)" title="You're currently viewing our value and symbol (DIDCY LOGO)"/>
    </div>
   </div>
 
@@ -908,11 +1616,25 @@ a.linker-left-side{
 
 <script type="text/javascript" src="adv-search-engine.js"></script>
 
-<button style="background: white" onclick="document.getElementById('id01').style.display='block'" id="signup" class="didcx-pimg w3-btn" name="signup"/>Sign up</button>
-<button style="background: white" onclick="document.getElementById('id022').style.display='block'" class="didcx-settings identity-settingsx w3-btn" name="signin" id="signin">
+<script type="text/javascript">
+ "use strict";
+ function SignUpPop(){
+	 document.getElementById('id01').style.display='block';
+	   setTimeout(() => {
+		   document.getElementById("didcy-ad-creators").style.display = "block";
+	   }, 1000);
+ }
+</script>
+
+<div class="bgimg">
+
+<button style="border-radius:8%;background: rgba(0, 0, 0, 1);color:white;/*rgba(50, 50, 50, 1);*/" onclick="SignUpPop()" id="signup" class="didcx-pimg w3-btn" name="signup">Sign up</button>
+<button style="border-radius: 8%;background: rgba(0, 0, 0, 1);color:white;/*rgba(50, 50, 50, 1);*/" onclick="document.getElementById('id022').style.display='block'" class="didcx-settings identity-settingsx w3-btn" name="signin" id="signin">
   Sign in
 </button>
-
+<div class="coming-soon">
+</div>
+</div>
 <!-- <div class="contacts-links-container" id="contacts-links-container">
   <span onclick="CloseContacts()" class="close-contacts-links-container" id="close-contacts-links-container">&times;</span>
   <h3>Social Media Handles :</h3>
@@ -936,8 +1658,8 @@ a.linker-left-side{
  <script type="text/javascript" script-id="00000000000000000" src="adv-offline-services.js"></script>
  -->
  
-   <div id="id012" class="w3-modal id012" style="background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.9)">
-    <div class="w3-modal-content w3-animate-top w3-card-4 id012-inner-box">
+   <div id="id012" class="w3-modal id012" style="background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.8)">
+    <div style="border-radius:8%;" class="w3-modal-content w3-animate-top w3-card-4 id012-inner-box">
       <header class="w3-container w3-black"> 
         <span onclick="document.getElementById('id012').style.display='none'" 
         class="w3-button w3-display-topright close-id02">&times;</span>
@@ -945,17 +1667,31 @@ a.linker-left-side{
       </header>
       <div class="w3-container contact-media">
 	    <h2>Media Handles :</h2>
-        <p style="color: black;">Facebook : Didcy</p>
-        <p style="color: black;">Instagram : Didcy</p>
+        <!-- <p style="color: black;">Facebook : Didcy</p> -->
+		<a href="https://web.facebook.com/Didcy-102782912411037" title="Facebook" alt="Facebook" target="_blank"><img title="Facebook" alt="Facebook" class="logo-media logo-fb" src="media.handles/3955011.png"/></a>
+		<a href="https://www.youtube.com/channel/UClTumF64pj2TxEAzMAVBVSQ" title="Youtube" alt="Youtube" target="_blank"><img title="Youtube" alt="Youtube" class="logo-media logo-ytb" src="media.handles/3670147.png"/></a>
+		<a href="https://www.instagram.com/didcy_company/" title="Instagram" alt="Instagram" target="_blank"><img title="Instagram" alt="Instagram" class="logo-media logo-ins" src="media.handles/3955024.png"/></a>
+		<a href="https://twitter.com/didcyc" title="Twitter" alt="Twitter" target="_blank"><img title="Twitter" alt="Twitter"  class="logo-media logo-tw" src="media.handles/1458121.png"/></a>
+		<a href="https://www.pinterest.com/didcycompany" title="Pinterest" alt="Pinterest" target="_blank"><img title="Pinterest" alt="Pinterest" class="logo-media logo-pin" src="media.handles/5060605.png"/></a>
+		<a href="https://www.linkedin.com/in/didcy-company-9073b1239/" title="LinkedIn" alt="LinkedIn" target="_blank"><img title="LinkedIn" alt="LinkedIn" class="logo-media logo-in" src="media.handles/5940405.png"/></a>
+<!--         <p style="color: black;">Instagram : Didcy</p>
         <p style="color: black;">Twitter : Didcy</p>
-        <p style="color: black;">Youtube : Didcy</p>
+        <p style="color: black;">Youtube : Didcy</p> -->
 		<h2>E-mail :</h2>
-        <p style="color: black;">info@didcy.com</p>
+        <!-- 542740<p style="color: black;">info@didcy.com</p> -->
+		<a alt="Email" title="Email" class="tooltip media-email" target="_blank" 
+		onclick="document.getElementsByClassName('tooltiptext')[0].style.visibility='visibile'">
+		<img class="logo-media" alt="Email" title="Email" src="http://www.localhost/adv.icons/542740.png"/>
+		<span class="tooltiptext">info@didcy.com</span></a>
 		<h2>Telephone :</h2>
-        <p style="color: black;">+233265873507</p>
-      </div>
+        <!--http://www.localhost/adv.icons/4213179.png <p style="color: black;">+233265873507</p> -->
+        <a title="Telephone" alt="Telephone" class="tooltip media-tel" target="_blank" 
+		onclick="document.getElementsByClassName('tooltiptext')[1].style.visibility='visibile'">
+		<img alt="Telephone" title="Telephone" style="margin-bottom: 12%" class="logo-media" src="http://www.localhost/adv.icons/4213179.png"/>
+		<span class="tooltiptext">+233265873507</span></a>
+	  </div>
       <footer class="w3-container w3-black id012-ft">
-        <p>Find out more about us here <a href="" alt="" target="" title="">https://www.didcy.com</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" alt="Find out more about Didcy 24/7" target="_blank" title="Find out more about Didcy 24/7">http://www.localhost/more</a></p>
 		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
       </footer>
     </div>
@@ -965,10 +1701,11 @@ a.linker-left-side{
 <!-- <div class="offline-service" id="offline-service">
   <p>Please this service is currently not available.</p>
 </div> -->
-  <div id="id02" class="w3-modal" style="z-index: 30;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.9);">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
+
+  <div id="id02" class="w3-modal" style="z-index: 30;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.7);">
+    <div id="modal-id02" class="modal-id02 w3-modal-content w3-animate-top w3-card-4">
       <header class="w3-container w3-black"> 
-        <span onclick="document.getElementById('id02').style.display='none'" 
+        <span onclick="CloseStatic()" 
         class="w3-button w3-display-topright close-id02">&times;</span>
         <h2 class="services" id="services">Audio/Radio Services</h2>
       </header>
@@ -987,7 +1724,7 @@ a.linker-left-side{
 		</div>
       </div>
       <footer class="w3-container w3-black">
-        <p>Find out more about us here <a href="https://www.didcy.com" alt="" target="_blank" title="Didcy Home">https://www.didcy.com</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" id="didcy-cms" alt="Find out more about Didcy Audio/Radio Services" target="_blank" title="Find out more about Didcy Audio/Radio Services">http://www.localhost/more</a></p>
       </footer>
     </div>
   </div>
@@ -1048,6 +1785,27 @@ function ShowPassword(passwordValidator = null) {
   <span class="close-alert-box" style="display: none" id="close-alert-box">&times;</span>  
   <p id="info-error" class="info-error"></p>
 </div> 
+
+<div id="myModal-alert-box" class="modal-alert-box">
+
+  <!-- Modal content -->
+  <div class="modal-content-alert-box">
+    <div class="modal-header-alert-box">
+      <h2 class="didcy-error" style="color: white" class="services">Didcy</h2>
+    </div>
+    <div class="modal-body-alert-box">
+      <p style="color: black;text-align:center;" id="error-line" class="error-line"></p>
+      <!--<p>Some other text...</p>-->
+    </div>
+    <div class="modal-footer-alert-box">
+      <h3 class="didcy-error didcy-err-0" style="color: white">Find out more about Didcy at 
+	  <a href="http://www.localhost" class="didcy-err" alt="Find out more about Didcy" target="_blank" 
+	  title="Find out more about Didcy ">
+	  http://www.localhost.</a></h3>
+    </div>
+  </div>
+
+</div>
  
 <div id="id01" class="modal-signup modal-signup-b">
   <span onclick="document.getElementById('id01').style.display='none'" class="close-signup" id="close-signup" title="Close Modal">&times;</span>
@@ -1088,7 +1846,7 @@ function ShowPassword(passwordValidator = null) {
 	  <span class="checkmark"></span>
 	</label>
 	
-	 <label for="advertizers" id="advertizers"><b>Are you are an advertising company or a solo advertizer? [Advertizers only]</b></label>
+	 <label for="advertizers" id="advertizers"><b>Are you an advertising company or a solo advertizer? [Advertizers only]</b></label>
 	 <label class="container-checkbox" id="advOnly">Yes
 	  <input type="checkbox" id="advertizersOnly">
 	  <span class="checkmark"></span>
@@ -1134,8 +1892,8 @@ function ShowPassword(passwordValidator = null) {
 	  </select> -->
      <br>
 
-      <label for="fee" id="fee-label"><b>Fee per second for an ad ($) [Advertizers &amp; Actors only]</b></label>
-      <input type="number" class="fee" id="fee" placeholder="Fee per second for an ad ($)" name="fee" required>
+      <label for="fee" id="fee-label" style="display:none"><b>Fee per second for an ad ($) [Advertizers only]</b></label><!-- &amp; Actors-->
+      <input type="number" class="fee" id="fee" style="display:none" placeholder="Fee per second for an ad ($)" name="fee" required>
 		       
       <label class="container-checkbox"> Remember me
         <input type="checkbox" id="remember" class="remember"> <!-- name="remember" style="margin-bottom:15px"> Remember me -->
@@ -1143,7 +1901,7 @@ function ShowPassword(passwordValidator = null) {
 	  </label>
 
       <p class="terms-conditions" id="terms-conditions" >By creating an account you agree to our 
-	  <a id="gaga-transparent-1" class="didcy-term-policy-sign" href="https://www.didcy.com/terms-n-privacy" style="color:dodgerblue">Terms & Privacy</a>.</p>
+	  <a id="gaga-transparent-1" class="didcy-term-policy-sign" href="http://www.localhost/terms-n-privacy" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
       <div class="clearfix">
         <button type="button" id="cancelbtn" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
@@ -1185,7 +1943,7 @@ function ShowPassword(passwordValidator = null) {
 	  </label>
 
       <p class="terms-conditions" id="terms-conditions" >By signing in to your account you agree to our 
-	  <a id="gaga-transparent-2" class="didcy-term-policy-sign-2" href="https://www.didcy.com/terms-n-privacy" style="color:dodgerblue">Terms & Privacy</a>.</p>
+	  <a id="gaga-transparent-2" class="didcy-term-policy-sign-2" href="http://www.localhost/terms-n-privacy" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
       <div class="clearfix">
         <button type="button" id="cancelbtn" onclick="document.getElementById('id022').style.display='none'" class="cancelbtn">Cancel</button>
@@ -1198,7 +1956,7 @@ function ShowPassword(passwordValidator = null) {
 <input type="hidden" value="" class="hidden" id="hidden">
 
  <div id="resx" style="z-index: 20">
-  <h2 style="font-weight: bolder;padding-left:10px;letter-spacing: 3px;" class="didcx-welcome" id="didcx-welcome">DIDCY - WE'VE GOT YOUR BACK</h2>
+  <h2 style="display:none;visibility:hidden;font-weight: bolder;padding-left:10px;letter-spacing: 3px;" class="didcx-welcome" id="didcx-welcome">DIDCY - WE'VE GOT YOUR BACK</h2>
 </div>
 
 <div id="adv-files" class="resx adv-files-1" style="display: none">
@@ -1216,7 +1974,7 @@ function ShowPassword(passwordValidator = null) {
 
 <!-- <div id="resx-1" class="resx-1500 resx-1390 resx">
 
-  <video src="../didcx.responsive.website/test/didcx.id.vids/dmv.8_edit.mkv" id="" class="" type="video/mkv" loop=true muted=true autoplay=true></video>
+  <video src="http://www.localhost/didcx.responsive.website/test/didcx.id.vids/dmv.8_edit.mkv" id="" class="" type="video/mkv" loop=true muted=true autoplay=true></video>
  
 </div> -->
 
@@ -1254,15 +2012,16 @@ function ShowPassword(passwordValidator = null) {
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <div class="modal-content" id="img01">
+    <h2 class="welcome-to-didcy-core" style="text-align:center">The Core</h2>
 	<div class="row">
 	  <div class="column-3">  
- 
+
 	  <button class="button" id="gaga-subscription">Didcy Include</button><!--Didcy Subscription-->
 	  <button class="button" id="gaga-ratings">Didcy Rate</button><!--Didcy Ratings-->
 	  <button class="button" id="howtogaga">Didcy Find</button><!--How to Didcy?-->
 	  <button class="button" onclick="document.getElementById('id012').style.display='block'">Didcy us?</button>
 	   <!--<button class="button" id="gaga-react" style="display: none">Didcy React</button>-->  
-	   <button class="button" id="gaga-apply" style="display: block">Didcy Apply</button>  
+	   <button class="button" id="gaga-apply" style="display: block">Didcy Dev</button>  
 	   <button class="button" id="didcy-sult" style="display: none">Didcy Sult</button><!--Didcy Consultancy: Paid including Paid Therapy sessions: upcoming global call(phone no.) for sucide-->
 	  </div>
 	  
@@ -1270,8 +2029,8 @@ function ShowPassword(passwordValidator = null) {
 
 	  <button class="button" id="tvList" style="display: none">Didcy List</button><!--Didcy TV List-->
 	  <button class="button" id="didcy-exhibition-platform">Didcy Exhibit</button><!--Didcy Ads Exhibition Platform-->
-      <button class="button" id="didcy-books" title="This button is disabled at the moment" style="display: block" disabled>Didcy Books</button><!--Didcy Ads Books-->
-      <button class="button" id="didcy-course"  onclick="Open()">Didcy Course</button><!--Didcy Ads Books-->
+      <button class="button" id="didcy-books" style="display: block">Didcy Books</button><!-- title="This button is disabled at the moment" disabled Didcy Ads Books-->
+      <button class="button" id="didcy-course"  onclick="Open('Didcy Course', 1)">Didcy Course</button><!--Didcy Ads Books-->
 	  <button class="button" id="gaga-share" style="display: none">Didcy Share</button>
 	  <button class="button" id="gaga-transparent">Didcy Transparent</button><!--Didcy Terms & Conditions-->      
       
@@ -1293,25 +2052,377 @@ function ShowPassword(passwordValidator = null) {
 </div>-->
 
    <div id="modal-other-e-services" class="w3-modal modal-other-e-services" style="background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.9)">
-    <div class="w3-modal-content w3-animate-left w3-card-4 id012-inner-box">
+    <div id="modal-content-other-e-services" class="modal-content-other-e-services w3-modal-content w3-animate-left w3-card-4 id012-inner-box">
       <header class="w3-container w3-black"> 
         <span onclick="document.getElementById('modal-other-e-services').style.display='none'" 
         id="close-other-e-services" class="w3-button w3-display-topright close-other-e-services">&times;</span>
-        <h2>Didcy E-Services</h2>
+        <h2 class="didcy-black-box-headers">Didcy E-Services</h2>
       </header>
       <div class="w3-container contact-media">
-	    <p style="color: black">Didcy also provides other non-related ad services or external services (E-Services)
-		 to all ad &amp; non-ad related users. Didcy E-Services can be found on our menu.
+	    <p class="e-services-dbox" style="color: black;">Didcy also provides E-Services
+		 to all users. Didcy E-Services can be found on our menu.
 		 Didcy Course is one example of our E-Services we give freely to you. Check them out <b><i>NOW</i></b> &amp; start <b><i>SHOPPING</i></b>.
         </p>
       </div>
       <footer class="w3-container w3-black id012-ft">
-        <p>Find out more about us here <a href="" alt="" target="" title="">https://www.didcy.com</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" alt="Find out more about Didcy E-Services" target="_blank" title="Find out more about Didcy E-Services">http://www.localhost/more</a></p>
 		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
       </footer>
     </div>
   </div>
 
+<div style="padding-top: 0;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.9)" class="w3-modal modal-newsletters" id="modal-newsletters">
+    	<div style="background-color: rgba(0, 0, 0, 0.0);border:none;" class="w3-modal-content w3-card-4 id012-inner-box w3-animate-right modal-content-newsletters" id="modal-content-newsletters">     
+	 <header class="w3-container w3-black"> 
+        <span 
+        class="w3-button w3-display-topright close-newsletters" id="close-newsletters">&times;</span>
+        <h2 style="text-align: center" class="didcy-newsletters-h">Didcy Newsletters</h2>
+      </header>
+	<div class="w3-container" style="background-color: rgba(0, 0, 0, 0)" id="modal-content-newsletters">
+	<form class="form-newsletter" action="" id="form-newsletter-2" method="post">
+	  <div class="container-newsletter">
+		<h2 class="glower">Subscribe to our Newsletters</h2>
+		<p>Subscribing to our newsletters makes it possible to be the first 
+		to get notified of all our latest products and services instantly. 
+		Make it a priority to subscribe, so you can have unlimited
+		updates. Your industry, Your Life. Thank you.</p>
+	  </div>
+
+	  <div class="container-newsletter">
+		<input type="text" placeholder="Name" name="name" class="name-newsletter" id="name-newsletter-2" required>
+		<input type="text" placeholder="Email address" name="mail" class="email-newsletter" id="email-newsletter-2" required>
+
+        <br/>
+		<label class="container-checkbox"> Daily Newsletter
+		  <input type="checkbox" checked="checked" name="subscribe" class="checkbox-newsletter" id="checkbox-newsletter-2">
+		  <span class="checkmark"></span>
+		</label> 		
+	  </div>
+
+	  <div class="container-newsletter">
+		<input type="submit" value="Subscribe" class="submit-newsletter" id="submit-newsletter-2">
+	  </div>
+	</form>
+	
+  </div>
+	
+	</div>
+</div>
+
+  <div id="abt-us" class="w3-modal" style="background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.9)">
+    <div class="w3-modal-content w3-animate-bottom w3-card-4">
+      <header class="w3-container w3-blue"> 
+        <span onclick="CloseAbtUS()" 
+        class="w3-button w3-display-topright close-abt-us">&times;</span>
+        <h2 style="text-align:center">About US</h2>
+      </header>
+      <div class="w3-container abt-us">
+     <p style="color:black;text-align: center"><b>Didcy, Your No. 1 Space Provider.</b></p>
+     <p style="color:black;text-align: justify">Didcy is a space provision platform where users can cloud, sell, build, host and do more.</p>
+	 
+	 <p style="color:black;text-align: justify">We offer our digital spaces for absolutely <b><i style="color:red">FREE</i></b> of Charge. <b>No fees, No Charges</b>. Just <b><i style="color:red">FREEEEEEE</i></b>.</p>
+	 
+	 <p style="color:black;text-align: justify">All you need is to <b><i>keep spacing more and we keep providing more</i></b>. That's why we say, <b><i>Space more, Free more.</i></b></p>
+	 
+	 <p style="color:black;text-align: justify">Didcy is also coming in with great products and services to it's platform, so watch 
+	 out for all your missen solutions and don't hesitate to subscribe to our newsletters to be the first to get notified.</p>
+	 
+	 <p style="color:black;text-align: justify">Our mission is to offer the best quality products and services to you.</p>
+
+	 <p style="color:black;text-align: justify">So make Didcy your number go to because we are the way forward. </p>
+
+	 <p style="color:black;text-align: justify">We are the best affordable market you can find out there.</p>
+
+	 <!--<p style="color:black;text-align: justify">What do you want to sell, buy, host, store, develop, grow, produce or get. We got you all covered. </p>-->
+
+	 <p style="color:black;text-align: justify">Just knock and we will widely open, search and we'll gladly help you find, and then ask and let's see what we can get you.</p>
+
+	 <p style="color:black;text-align: justify">Start with us <b><i>NOW</i></b> and keep more.</p>
+
+	  </div>
+      <footer class="w3-container w3-blue">
+        <p>Find out more about us here <a href="http://www.localhost/more.php" alt="Find out more about Didcy" target="_blank" title="Find out more about Didcy">http://www.localhost/more</a></p>
+		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
+      </footer>
+    </div>
+  </div>
+
+  <div id="keywords" class="w3-modal" style="z-index:55;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.9)">
+    <div class="w3-modal-content w3-animate-bottom w3-card-4">
+      <header class="w3-container w3-black"> 
+        <span onclick="document.getElementById('keywords').style.display='none'" 
+        class="w3-button w3-display-topright close-keywords">&times;</span>
+        <h2 class="didcy-black-box-headers" style="text-align:center">Didcy Keywords</h2>
+      </header>
+      <div class="w3-container keywords">
+	   <p style="color:black">To know more about Didcy hidden features, kindly 
+	   type in any of the following texts into the search engine. 
+	   </p>
+	   <p style="color:black"><b>--didcy--keywords-- or $#-didcy-keywords-@@$.</b></p>
+	   <p style="color:black">Thank you.</p>
+	  </div>
+      <footer class="w3-container w3-black">
+        <p>Find out more about us here <a href="http://www.localhost/more.php" alt="Find out more about Didcy Keywords" target="_blank" title="Find out more about Didcy Keywords">http://www.localhost/more</a></p>
+		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
+      </footer>
+    </div>
+  </div>
+
+
+  <div id="write" class="w3-modal" style="z-index:55;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.9);">
+    <div class="w3-modal-content w3-animate-bottom w3-card-4 write-content">
+	  <div class="w3-container write-r" id="write-r">
+	   <span class="close-write" onclick="document.getElementById('write').style.display='none'">&times;</span>
+	   <p class="open-write-text" id="open-write-text" style="padding: 10px;padding-left: 2px;padding-right:2px;color: red;text-align: center;font-weight:bolder"></p>
+	  </div>
+    </div>
+  </div>
+  
+
+<!--Didcy Work Key-->
+<div style="overflow-x: hidden;padding-top: 0;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.9)" class="w3-modal modal-didcy-work-keys" id="modal-didcy-work-keys">
+    <div class="w3-modal-content w3-card-4 id012-inner-box w3-animate-top modal-content-didcy-work-keys" id="modal-content-didcy-work-keys">     
+	 <header class="w3-container w3-black"> 
+        <span 
+        class="w3-button w3-display-topright close-didcy-work-keys" id="close-didcy-work-keys">&times;</span>
+        <h2 style="text-align: center;color:white" class="didcy-didcy-work-keys-h">Didcy Keys</h2>
+      </header>
+	 <div class="w3-container" id="modal-content-didcy-work-keys">
+	   <h3 class="didcy-keys-dev" style="color: black;font-weight: bolder">Didcy Keys helps all Didcy Developers have access to Didcy Developer Room.</h3>
+	   <h4 class="didcy-keys-dev-log-visibile" style="color: black">Please we presume that you already know what to do and how to operate these keys and get 
+	   the Login visible.</h4>
+	   <h4 class="didcy-keys-dev-copy" style="color: black">Please <b style="color: dodgerblue">COPY</b> the random string of 
+	   alphanumeric characters below and paste it into the proper channel accordingly. Thank you.</h4>
+      
+	  <!--<p style="color: white;text-align: center;color:black;font-weight: bolder" id="randomize"></p>-->
+	   <div style="background: white;text-align:justify;width:100%;" class="keys">
+	     <p style="text-align: justify;color:black;font-weight: bolder" id="randomize"></p>
+	   </div>
+		<!--search box in the navigation bar and click <b style="color: dodgerblue">
+	   ENTER.-->
+	 </div>
+      <footer class="w3-container w3-black id012-ft">
+        <p style="color: white">Find out more about us here <a href="http://www.localhost/more.php" alt="Find out more about Didcy Keys" target="_blank" title="Find out more about Didcy Keys">http://www.localhost/more</a></p>
+		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
+      </footer>
+	</div>
+</div>
+<!--Didcy Work Key-->
+
+<div class="modal-didcy-benefits overlay" id="modal-didcy-benefits" style="overflow-y:auto;text-align:justify">
+  <span class="close-didcy-benefits" id="close-didcy-benefits">
+   <a href="javascript:void(0)">&times;</a>
+  </span>
+	<div class="modal-content-didcy-benefits" id="modal-content-didcy-benefits">
+     <h1 class="welcome-didcy-benefits" style="text-align: center;color: white">Welcome to Didcy Benefits</h1>
+     <h2 class="using-didcy" style="color: white">Using Didcy </h2>
+	 <div class="didcy-benefits" id="didcy-benefits" style="text-align:justify">
+	  <ol type="1">
+		<li style="color:white">You can directly host multiple websites/services as Didcy feature(s) or plugin(s) without the need to buy 
+		any domain or pay for any hosting services.</li>
+		<br><li style="color:white">Allows developers to upload, test, run their programs and get used or deployed by their target users.</li>
+		<br><li style="color:white">Allows users(that is, companies and designers) to keep records or store all their ads at a single cloud location, where every single piece of asset get secured.</li>
+		<br><li style="color:white">Allows advertizers to advertize their products and services using our platform and it's features.</li>
+		<br><li style="color:white">Allows companies and advertizers to secure easy, quick and fast OSAED or advertizing deals without the need for each entity to be
+		physically present using Didcy Exhibit(find and offer deal services).</li>
+		<br><li style="color:white">Allows users to transact highly secured data files from one advertizer or company to another without any data breach.</li>
+		<br><li style="color:white">Allows users to directly create/develop/produce their own ads on the platform for free without the need to install any third-party 
+		application on your localhost or computer and then uploading to the platform's cloud storage system(if opted) or use any third-
+		party website for creating your ads and uploading them to our platform(if opted).</li>
+		<br><li style="color:white">Allows developers to periodically keep track of their uploaded programs running on the platform.</li>
+		<br><li style="color:white">Allows developers to directly create/develop/program/code programs on the platform by using our D-CAN online IDE with extremely 
+		incredible addon features or tools. Come and SEE for yourself.</li>
+		<br><li style="color:white">Allows users to make quick, fast and easy search.</li>
+		<br><li style="color:white">Allows users(esp. educators or students or even businesses) to get incredible intiutive education or knowledge that are only 
+		targeted to the current demand in the market and in the future through the use of Didcy Course(also known as Darcet).</li>
+		<br><li style="color:white">Allows users(esp. book traders) to trade(sell and buy) super powerful knowledgeable books or educational materials for their 
+		own unique purpose.</li>
+		<br><li style="color:white">Allows users(esp. bet enthusiast) to bet directly from the platform by using RipaBet or D-BET.</li>
+		<br><li style="color:white">Allows users(esp. bet enthusiast) to request for bet loans directly from the platform  by using RipaBank.</li>
+		<br><li style="color:white">Allows users to do safe e-banking directly from the platform by using DidcyBank.</li>
+		<br><li style="color:white">Allows users(that is, educators(esp. tertiary(universities) students and teachers)) to share anything from ideas to task,
+		hire project or assignment helpers to help them work on their project or assignments with or without payment inclusion and more.</li>
+		<br><li style="color:white">Allows users(esp. video and film producers) to directly create and produce <b>quality</b> video or film contents from the platform by using 
+		Pick.</li>
+		<br><li style="color:white">Allows users to download, stream, convert and do more media services by using Crym.</li>
+		<br><li style="color:white">Allows users to get newsletter or mailing services for free.</li>
+		<br><li style="color:white">Allows users to deploy(play with) or use any of the plugins available on the platform for their own gain.</li>
+		<br><li style="color:white">Allows users to directly subscribe to any of our incredible free to low-cost domain and hosting plans or services per the user's choice.</li>	  
+		<br><li style="color:white">Allows users to directly provide or get any consultancy services from/on this very platform.</li>	  
+	  </ol>
+      <p style="text-align:justify;padding-left:15px;padding-right:10px;">Our benefits are enormous to the extend that we usually loose track of some. 
+	  But with our state-of-the-art cutting edge technology, we're able to keep complete track of 
+	  every little detail and still maintain great momentum.
+	  <p style="text-align:justify;padding-left:15px;padding-right:10px;">What do you want to provide or get? We got you covered.</p>
+	  <p style="text-align:justify;padding-left:15px;padding-right:10px;">Just mention it and we'll make it work like magic.</p>
+	  <p style="text-align:justify;padding-left:15px;padding-right:10px;">Let us know what we missed and we'll get it covered in a few seconds.</p>
+	  <p style="text-align:justify;padding-left:15px;padding-right:10px;">Start with us <b>NOW</b> &amp; keep more.</p>
+	  <p style="text-align:justify;padding-left:15px;padding-right:10px;"><b><i>Didcy.</i></b></p>
+	 </div>
+</div>
+
+<div style="overflow-y:auto;text-align:justify" class="modal-didcy-keywords overlay" id="modal-didcy-keywords">
+  <span class="close-didcy-keywords" id="close-didcy-keywords">
+   <a href="javascript:void(0)">&times;</a>
+  </span>
+	<div class="modal-content-didcy-keywords" id="modal-content-didcy-keywords">
+     <h1 class="welcome-didcy-keywords" style="text-align: center;color: white">Welcome to Didcy Keywords</h1>
+     <h2 class="using-didcy" style="color: white">Using Didcy Keywords</h2>
+	 <div class="didcy-keywords" id="didcy-keywords" style="text-align:justify">
+        <p style="color:white">Didcy Keywords is a set of predefined keywords/words selected to be used in didcy search engines. These keywords cannot be used as file
+		names or anyother thing. </p>
+		<p style="color:white">If you are considering naming any of the files or assets you're about to upload as any of these keywords, then you'll find your 
+		search not returning any results only in relation to these predefined words. Any other custom filenames or words can be used above from these 
+		words. </p>
+		<p style="color:white">So please take note of these keywords. </p>
+
+		<p style="color:white">The following datalist provides info on the list of keywords used in Didcy Search Engines. Kindly invest a little of your time in knowing and understanding 
+		these keywords, their syntax and meanings.</p>
+
+	   <ol type="1">
+		<li style="color:white">@@#--left-left-position-display-block : displays or shows the vertical-side navigation bar at the left side of 
+		the page if not visible.</li>
+		<br><li style="color:white">@@#--left-left-position-display-none : renders the vertical-side navigation bar invisible.</li>
+		<br><li style="color:white">CLK, CLKS, CLEAR KEYS, Clear Keys, CLEAR Keys, clear Keys, 
+		clear keys, clk, clks : it renders the small grey button(namely 'Keys') that gets displayed at the right-side of the page 
+		invisible if made visible.</li>
+		<br><li style="color:white">keys, dkeys, didcy keys, DIDCY KEYS, DIDCY Keys, 
+		didcy Keys, didcy KEYS, DKEYS, dkys, DKYS, DidcyKeys, Didcykeys, didcykeys : 
+		it renders the small grey button(namely 'Keys') visible if made invisible.</li>
+		<br><li style="color:white">
+		 #ADC9C03-E9E9-W09E00TR-R998W122-303949KDD-49404838-390 : 
+		 it renders Smile modal box(this modal box is designed for only developers or creators) visible 
+		 above from the string of alphanumeric characters displayed in Didcy Keys modal box which also achieves
+		 the same rendering.</li>
+		<br><li style="color:white">--didcy--ben-- or $#-didcy-benefits-@@$ : 
+		it pops up or displays Didcy Benefits(the content displayed here, provides detailed info on the
+		benefits of using Didcy) dialog box or modal box.</li>
+		<br><li style="color:white">--didcy--guide-- or $#-didcy-guide-@@$ : 
+		it pops up or displays Didcy Life Guide(the content displayed here, provides incredible 
+		data on how to manage your life) dialog box or modal box.</li>
+		<br><li style="color:white">--didcy--keywords-- or $#-didcy-keywords-@@$ : 
+		it pops up or displays Didcy Keywords(the content provided here, gives in-depth understanding on 
+		didcy keywords, it's syntax and meaning) dialog box or modal box.</li>
+		<br><li style="color:white">--didcy--cmp-adv or $#-didcy-cmp-adv-@@$ :
+		it pops up or displays Didcy Competitive Advantage(the content provided here, shows the 
+		advantages Didcy has over it's competitors and why is vital to know and use Didcy for 
+		your works) dialog box or modal box.</li>
+		<br><li style="color:white">$%%--about-us--%%$ or --didcy--about--us-- or about--us or 
+		--didcy--about-us-- or $searchEngine or --about-us-- or  
+	    --didcy--abt-us-- or abt--us or --about--us-- or --abt--us-- or
+		--didcy--abtus-- or --didcy--aboutus-- or about us : these keywords are meant to 
+		display the <q>About US</q> dialog box that got displayed on page load right after
+		<q>Didcy Keys</q> dialog box.
+		</li>
+		<br><li style="color:white">didcy-platforms-offer or $@@--didcy-platforms-offer--@@$ : 
+		these keywords are used to display the modal box containing the words <q>Welcome to 
+		Didcy</q> in blue(header) and <q>The Space is all yours. Start exploring NOW with 
+		Your no.1 BEST SPACE PROVIDER</q> in black(body).</li>
+		<br><li style="color:white">didcy-ad-creators or didcy ad creators or #@-%didcy-ad-creators-000-sc : these keywords 
+		are used to display the modal box containing the words <q>Didcy Signup Reminder</q> in blue(header) and 
+		<q>Please all interested ad creator or designer persons or companies should kindly check here when signing up
+		</q> and <q> &darr; </q> and a <q>checkbox image</q> in black(body).</li>
+	  </ol>	
+	  <p style="color:white;padding-left: 10px;padding-right: 10px">
+		 For more enquiries, kindly contact us by looking up our contact 
+		 informations at either <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class='iconic' src='http://www.localhost/adv.icons/870175.png'/> in the top navigation bar of the 
+		 front page or at <q>Didcy Find</q> under <q>Menu or More Services or The Core</q>
+		 <img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class='iconic' src='http://www.localhost/adv.icons/2377884.png'/>. We will be availabile 
+		 24/7 just to listen to only and only you. Have a nice Didcy visit.
+		 <br><br>Thank you.
+		</p>
+	 </div>
+	 
+	</div>
+</div>
+
+<div style="overflow-y: auto" class="modal-didcy-guide overlay" id="modal-didcy-guide">
+  <span class="close-didcy-guide" id="close-didcy-guide">
+   <a href="javascript:void(0)">&times;</a>
+  </span>
+	<div class="modal-content-didcy-guide" id="modal-content-didcy-guide">
+     <h1 class="welcome-didcy-guide" style="text-align: center;color: white">Welcome to Didcy Guide</h1>
+     <h2 class="using-didcy" style="color: white">Using Didcy Guide</h2>
+	 <div class="didcy-guide" id="didcy-guide" style="text-align:justify">
+	  <ol type="1">
+		<li style="color:white">You can directly host multiple websites/services as a program plugin(s) or feature(s) or Didcy feature(s) or plugin(s) without the need to buy 
+		any domain or pay for any hosting.</li>
+		<br><li style="color:white">Allows developers upload, test, run their programs and get used or deployed by the target users.</li>
+		<br><li style="color:white">Allows users(that is, companies) to keep records or store all their ads at a single cloud location, where every single piece of asset get secured.</li>
+		<br><li style="color:white">Allows advertizers to advertize their products and services using our platform and it's features.</li>
+		<br><li style="color:white">Allows companies and advertizers to secure easy, quick and fast OSAED or advertizing deals without the need for each entity to be
+		physically present using Didcy Exhibit(find and offer deal services).</li>
+		<br><li style="color:white">Allows users to transact highly secured data files from on advertizer or company to another without any 99.99% data breach.</li>
+		<br><li style="color:white">Allows users to directly create/develop/produce their own ads on the platform for free without the need to install any third-party 
+		application on your localhost or computer and then uploading to the platform's cloud storage system(if opted) or use any third-
+		party website for creating your ads and uploading them to our platform(if opted).</li>
+		<br><li style="color:white">Allows users to developers to periodically keep track of their uploaded programs running on the platform.</li>
+		<br><li style="color:white">Allows developers to directly create/develop/program/code programs on the platform by using our D-CAN online IDE with extremely 
+		incredible addon features or tools. Come and SEE for yourself.</li>
+		<br><li style="color:white">Allows users to make quick, fast and easy search.</li>
+		<br><li style="color:white">Allows users(esp. educators or students or even businesses) to get incredible intiutive education or knowledge that are only 
+		targeted to the current demand in the market and in the future through the use of Didcy Course(also known as Putinsberg).</li>
+		<br><li style="color:white">Allows users(esp. book traders) to trade(sell and buy) super powerful knowledgeable books or educational materials for your 
+		own unique purpose.</li>
+		<br><li style="color:white">Allows users(esp. bet enthusiast) to bet directly from the platform by using RipaBet or D-BET.</li>
+		<br><li style="color:white">Allows users(esp. bet enthusiast) to request for bet loans directly from the platform  by using RipaBank.</li>
+		<br><li style="color:white">Allows users to do safe e-banking directly from the platform by using DidcyBank.</li>
+		<br><li style="color:white">Allows users(that is, educators(esp. tertiary(universities) students and teachers)) to share anything from ideas to task,
+		hire project or assignment helpers to help them work on their project or assignments with or without payment inclusion and more.</li>
+		<br><li style="color:white">Allows users(esp. video and film producers) to directly create and produce video or film contents from the platform by using 
+		Pick.</li>
+		<br><li style="color:white">Allows users to download, stream, convert and do more media services by using Crym.</li>
+		<br><li style="color:white">Allows users to get newsletter or mailing services for free.</li>
+		<br><li style="color:white">Allows users to deploy(play with) or use any of the plugins available on the platform for their own gain.</li>
+		<br><li style="color:white">Allows users to directly subscribe to any of our incredible free to low-cost domain and hosting plans or services per the user's choice.</li>	  
+	  </ol>
+	 </div>
+	</div>
+</div>
+
+<div style="overflow-y: auto" class="modal-didcy-competitive-advantage overlay" id="modal-didcy-competitive-advantage">
+  <span class="close-didcy-competitive-advantage" id="close-didcy-guide">
+   <a href="javascript:void(0)">&times;</a>
+  </span>
+	<div class="modal-content-didcy-competitive-advantage" id="modal-content-didcy-competitive-advantage">
+     <h1 class="welcome-didcy-cmp-adv" style="text-align: center;color: white">Welcome to Didcy Competitive Advantage</h1>
+     <h2 class="using-didcy" style="color: white">Competitive Insight</h2>
+	 <div class="didcy-competitive-advantage" id="didcy-competitive-advantage" style="text-align:justify">
+	  <ol type="1">
+		<li style="color:white">You can directly host multiple websites/services as a program plugin(s) or feature(s) or Didcy feature(s) or plugin(s) without the need to buy 
+		any domain or pay for any hosting.</li>
+		<br><li style="color:white">Allows developers upload, test, run their programs and get used or deployed by the target users.</li>
+		<br><li style="color:white">Allows users(that is, companies) to keep records or store all their ads at a single cloud location, where every single piece of asset get secured.</li>
+		<br><li style="color:white">Allows advertizers to advertize their products and services using our platform and it's features.</li>
+		<br><li style="color:white">Allows companies and advertizers to secure easy, quick and fast OSAED or advertizing deals without the need for each entity to be
+		physically present using Didcy Exhibit(find and offer deal services).</li>
+		<br><li style="color:white">Allows users to transact highly secured data files from on advertizer or company to another without any 99.99% data breach.</li>
+		<br><li style="color:white">Allows users to directly create/develop/produce their own ads on the platform for free without the need to install any third-party 
+		application on your localhost or computer and then uploading to the platform's cloud storage system(if opted) or use any third-
+		party website for creating your ads and uploading them to our platform(if opted).</li>
+		<br><li style="color:white">Allows users to developers to periodically keep track of their uploaded programs running on the platform.</li>
+		<br><li style="color:white">Allows developers to directly create/develop/program/code programs on the platform by using our D-CAN online IDE with extremely 
+		incredible addon features or tools. Come and SEE for yourself.</li>
+		<br><li style="color:white">Allows users to make quick, fast and easy search.</li>
+		<br><li style="color:white">Allows users(esp. educators or students or even businesses) to get incredible intiutive education or knowledge that are only 
+		targeted to the current demand in the market and in the future through the use of Didcy Course(also known as Putinsberg).</li>
+		<br><li style="color:white">Allows users(esp. book traders) to trade(sell and buy) super powerful knowledgeable books or educational materials for your 
+		own unique purpose.</li>
+		<br><li style="color:white">Allows users(esp. bet enthusiast) to bet directly from the platform by using RipaBet or D-BET.</li>
+		<br><li style="color:white">Allows users(esp. bet enthusiast) to request for bet loans directly from the platform  by using RipaBank.</li>
+		<br><li style="color:white">Allows users to do safe e-banking directly from the platform by using DidcyBank.</li>
+		<br><li style="color:white">Allows users(that is, educators(esp. tertiary(universities) students and teachers)) to share anything from ideas to task,
+		hire project or assignment helpers to help them work on their project or assignments with or without payment inclusion and more.</li>
+		<br><li style="color:white">Allows users(esp. video and film producers) to directly create and produce video or film contents from the platform by using 
+		Pick.</li>
+		<br><li style="color:white">Allows users to download, stream, convert and do more media services by using Crym.</li>
+		<br><li style="color:white">Allows users to get newsletter or mailing services for free.</li>
+		<br><li style="color:white">Allows users to deploy(play with) or use any of the plugins available on the platform for their own gain.</li>
+		<br><li style="color:white">Allows users to directly subscribe to any of our incredible free to low-cost domain and hosting plans or services per the user's choice.</li>	  
+	  </ol>
+	 </div>
+	</div>
+</div>
    
     <div class="modal-coursery-container modal-signup" style="padding: 0" id="modal-coursery-container">
 		 <span onclick="document.getElementById('modal-coursery-container').style.display='none'" 
@@ -1319,7 +2430,7 @@ function ShowPassword(passwordValidator = null) {
 		  <a href="javascript:void(0)">&times;</a>
 		 </span>
 	<div class="coursery" id="coursery">
-	 <a href="https://coursery.com" alt="" title="" target="_blank" ping="">Putinsberg</a>
+	 <a href="https://www.darcet.com" alt="Welcome to Darcet" title="Welcome to Darcet" target="_blank" ping="">Darcet</a>
 	</div>
 	
 	<div class="coursery-signs" id="courser-signs">
@@ -1794,7 +2905,7 @@ function ShowPassword(passwordValidator = null) {
 	</div>
 
 	<div class="coursery coursery-playground-header" id="coursery-playground-header">
-	 <a href="https://www.putinsberg.com" alt="" title="Welcome to Putinsberg" target="_blank" ping="">Putinsberg</a>
+	 <a href="https://www.darcet.com" alt="" title="Welcome to Darcet" target="_blank" ping="">Darcet</a>
 	 <button class="coursery-open-side-play w3-btn" onclick="OpenCourserySidePlay()">Play</button>
 	</div>
 
@@ -1899,7 +3010,7 @@ function ShowPassword(passwordValidator = null) {
  </div>
 	
 	<div class="coursery-foot" id="coursery-foot">
-	 <a href="https://coursery.com" alt="" title="" target="_blank" ping="">Visit us @ https://coursery.com. All &copy; rights
+	 <a href="https://www.darcet.com" alt="Welcome to Darcet" title="Welcome to Darcet" target="_blank" ping="">Visit us @ https://www.darcet.com. All &copy; rights
 	 reserved. Terms &amp; Conditions Apply.</a>
 	</div>
 	
@@ -1929,6 +3040,169 @@ function ShowPassword(passwordValidator = null) {
      document.getElementsByClassName("pwd")[0].value = "";
 	 document.getElementById('myModal-chat').style.display='none';
  }
+</script>
+
+<div class="modal-chat-4-didcy-works overlay" id="modal-chat-4-didcy-works" style="overflow-y: auto;overflow-x: hidden;color: white">
+ <span class="close-chat-4-didcy-works" id="close-chat-4-didcy-works" onclick="closeCBWorks()">
+ <a href="javascript:void(0)">&times;</a></span>
+<div class="container container-chat" style="padding-top: 50px;">	
+    <h2 style="text-align: center;color: white">Smile</h1>	
+	<div class="row">
+		<div class="col-sm-4">
+			<h4>Smile Login:</h4>		
+			<form method="post" class="chat-form">
+				<div class="form-group">
+					<div class="alert alert-warning" id="error-log" style="color: white"></div>
+				</div>
+				<div class="form-group">
+					<label for="username">User:</label>
+					<input type="username" class="chat-username username-didcywork form-control" name="username-didcywork" required>
+				</div>
+				<div class="form-group">
+					<label for="pwd">Password:</label>
+					<input type="password" class="chat-password pwd-didcywork form-control" name="pwd-didcywork" required>
+				</div>  
+				<button type="submit" name="login-didcywork" class="chat-login login-didcywork btn btn-info" style="color: black">Login</button>
+			</form>
+			<br>
+			<!--<p><b>User</b> : adam<br><b>Password</b> : 123</p>
+			<p><b>User</b> : rose<br><b>Password</b> : 123</p>
+			<p><b>User</b> : smith<br><b>Password</b>: 123</p>
+			<p><b>User</b> : merry<br><b>Password</b>: 123</p>-->
+		</div>
+		
+	</div>
+</div>	  
+</div>
+
+<div class="modal-work-board-4 overlay" id="myModal-work-board-4" style="overflow-x: hidden;overflow-y:auto">
+ 
+ <span class="close-work-board-4" id="close-work-board-4" style="z-index: 20" 
+ onclick="CloseWB4()">
+ <a href="javascript:void(0)">&times;</a></span>
+ 
+ <div class="modal-content-work-board-4" id="modal-content-work-board-4">
+ 
+  <!--w3-animate-bottom<h1 style="text-align: center;color: white">Welcome to Smile</h1>
+  <p style="text-align: center;color: white">Just Smile</p>-->
+  
+	<div style="background-color: rgba(0, 0, 0, 1)" class="welcome-didcy-work-container">
+		<h1 class="welcome-didcy-work welcome-didcy-developer-portal">Welcome to Smile</h1>
+		<p style="text-align: center;color: white" class="work-as-a-puzzle">Just Smile</p>
+		<span id="dump" style="text-align: center;color: white;" class="work-as-a-puzzle"></span>
+	</div>
+	
+	<div class="developer-files-container" id="developer-files-container">
+	 <form name="developer-files-container-form" id="developer-files-container-form" class="developer-files-container-form">
+	  <input type="file" id="program-files" class="custom-file-input-0" name="program-files[]" multiple enctype="multipart/form-data">
+	  
+	  <input type="file" id="css-files" style="display: none" class="custom-file-input-0" name="css-files[]" multiple enctype="multipart/form-data">
+	  
+	  <input type="button" name="exec" class="upload-developer-files" id="upload-developer-files" value="Execute">
+	  
+	  <input type="file" id="server-files" style="display: none" class="custom-file-input-0" name="server-files[]" multiple enctype="multipart/form-data">
+	  
+	  <input type="button" name="exec" style="display: none" class="upload-developer-files" id="upload-developer-server-files" value="Execute">
+	 </form>
+	</div>
+	<div class="developer-response" id="developer-response" style="overflow-y:auto">
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	 <p style="color:white" class="response-i"></p>
+	</div>
+ 
+ </div>
+</div>
+
+<script type="text/javascript">
+ "use strict";
+ 
+ function CloseWB4(){
+	document.getElementById("myModal-work-board-4").style.width = "0%";
+	document.getElementById("myModal-work-board-4").style.height = "0%";	 
+ }
+ 
+ var from_user_id_didcywork = 0, LoginerlnID = 0, usrDicyWork = 0;
+ var __$__49393_492_Page_acc_usr;
+ 
+ document.getElementsByClassName("login-didcywork")[0].onclick = function(){loginDidcyWork();}
+
+  function loginDidcyWork(){
+	 if(document.getElementsByClassName("username-didcywork")[0].value == ""){
+		//document.getElementById("error-log").style.display = "block";
+		//return document.getElementById("error-log").innerHTML = "Empty username";
+		return AlertBoxInModal("Empty username");
+	 }
+	 if(document.getElementsByClassName("pwd-didcywork")[0].value == ""){
+		//document.getElementById("error-log").style.display = "block";
+		//return document.getElementById("error-log").innerHTML = "Empty Password";
+		return AlertBoxInModal("Empty Password");
+	 }
+
+/* 	var message = $(".pwd").val();
+	$('.pwd').val('');
+	if($.trim(message) == '') {
+		return false;
+	} */
+
+
+	 var form = new FormData();
+	 form.append("username-didcywork", document.getElementsByClassName("username-didcywork")[0].value);
+	 form.append("pwd-didcywork", document.getElementsByClassName("pwd-didcywork")[0].value);
+	 form.append("drim", "");
+	 $.ajax({
+		type: "POST",
+		url: "_smile.php",
+		contentType: false,
+		cache: false,
+		processData: false,
+		data: form,
+		success: function(result){
+			//window.console.log(result);
+			var data_returned = JSON.parse(result);			
+			if(data_returned.state == 103){
+				
+			}
+			else if(data_returned.state == 200){
+			  from_user_id_didcywork = data_returned.from_user_id_didcywork;
+			  
+			  var DicyWorkBoard = data_returned.DicyWorkBoard;
+			  LoginerlnID = data_returned.lnID;
+			  __$__49393_492_Page_acc_usr = data_returned.__49393_492_Page_acc_usr;
+			  
+			  document.getElementById("dump").innerHTML = "DUMP ID : "+__$__49393_492_Page_acc_usr;
+
+		      //document.getElementById("modal-content-work-board-4").innerHTML = data_returned.DicyWorkBoard;
+
+			  //document.getElementById("myModal-work-board-4").style.display = "block";
+			  document.getElementById("myModal-work-board-4").style.width = "100%";
+			  document.getElementById("myModal-work-board-4").style.height = "100%";
+
+			  usrDicyWork = data_returned.didcyworkUserIDs.session_id_didcywork;
+			  
+			  
+			  document.getElementsByClassName("username-didcywork")[0].value = "";
+			  document.getElementsByClassName("pwd-didcywork")[0].value = "";
+			  
+			}else if(data_returned.state == 506){
+			  AlertBoxInModal(data_returned.session);
+			}else{
+			  //document.getElementById("error-log").innerHTML = data_returned.session;
+			}
+		},
+		error: function(){}
+	 });
+  }
 </script>
 
 <div class="modal-chat" id="myModal-chat" style="overflow-x: hidden;color: white">
@@ -1978,6 +3252,10 @@ function ShowPassword(passwordValidator = null) {
   var usr = "";
   document.getElementsByClassName("chat-form")[0].addEventListener("submit", 
   (event) => event.preventDefault());
+
+  document.getElementsByClassName("chat-form")[1].addEventListener("submit", 
+  (event) => event.preventDefault());  
+  
   
   var rerunid = 0, lnID = 0;
   
@@ -2176,12 +3454,12 @@ function ShowPassword(passwordValidator = null) {
 	 if(document.getElementsByClassName("username")[0].value == ""){
 		//document.getElementById("error-log").style.display = "block";
 		//return document.getElementById("error-log").innerHTML = "Empty username";
-		return alertBox("Empty username");
+		return AlertBoxInModal("Empty username");
 	 }
 	 if(document.getElementsByClassName("pwd")[0].value == ""){
 		//document.getElementById("error-log").style.display = "block";
 		//return document.getElementById("error-log").innerHTML = "Empty Password";
-		return alertBox("Empty Password");
+		return AlertBoxInModal("Empty Password");
 	 }
 
 /* 	var message = $(".pwd").val();
@@ -2246,7 +3524,7 @@ function ShowPassword(passwordValidator = null) {
 			  document.getElementsByClassName("username")[0].value = "";
 			  document.getElementsByClassName("pwd")[0].value = "";
 			}else if(data_returned.state == 506){
-			  alertBox(data_returned.session);
+			  AlertBoxInModal(data_returned.session);
 			}else{
 			  //document.getElementById("error-log").innerHTML = data_returned.session;
 			}
@@ -2294,7 +3572,7 @@ function ShowPassword(passwordValidator = null) {
 			  }
 			  
 			}else if(data_returned.state == 506){
-			  alertBox(data_returned.session);
+			  AlertBoxInModal(data_returned.session);
 			}else{
 			  //document.getElementById("error-log").innerHTML = data_returned.session;
 			}
@@ -2316,7 +3594,7 @@ function ShowPassword(passwordValidator = null) {
  </div>
 </div>
 
-<script src="chat2.js"></script>
+<script src="http://www.localhost/chat2.js"></script>
 
 <script>
 	function switcher(){
@@ -2372,7 +3650,7 @@ function ShowPassword(passwordValidator = null) {
   <p style="color: white" class="sub-header"><i class="sub-header">Use DidcyFix, Solve your Puzzles</i></p>
   
   <div class="modal-contain-didcy-fixes" id="modal-contain-didcy-fixes">
-    <div class="row">
+    <div class="row" id="didcy-fixes-row">
       <div class="column col-fixes">
 	   <button type="button" class="button" id="split">Split</button>
 	  </div>
@@ -2534,7 +3812,7 @@ function ShowPassword(passwordValidator = null) {
   <span class="close-work-apply" id="close-work-apply" title="Close Modal">&times;</span>
   <div class="modal-content-signup modal-content-work-apply" id="modal-content-work-apply">
 	<div class="welcome-didcy-work-container">
-		<h1 class="welcome-didcy-work">Welcome to Didcy Work</h1>
+		<h1 class="welcome-didcy-work welcome-didcy-developer-portal">Welcome to Developer Portal</h1>
 		<p class="work-as-a-puzzle">Where work is a puzzle</p>
 	</div>
 
@@ -2982,7 +4260,7 @@ function ShowPassword(passwordValidator = null) {
 			
 		  </div>
 		  <div class="col-75">
-			<input type="checkbox" id="applicant-not-now-pr"><span  style="padding-left: 5px;color: white;">Not Now</span>
+			<input type="checkbox" id="applicant-not-now-pr"><span  style="padding-left: 5px;color: black;">Not Now</span>
 		  </div>
 		</div>
 		<div class="row">
@@ -3006,7 +4284,7 @@ function ShowPassword(passwordValidator = null) {
 			
 		  </div>
 		  <div class="col-75">
-			<input type="checkbox" id="applicant-not-now-pu"><span  style="padding-left: 5px;color: white;">Not Now</span>
+			<input type="checkbox" id="applicant-not-now-pu"><span  style="padding-left: 5px;color: black;">Not Now</span>
 		  </div>
 		</div>
 		<div class="row">
@@ -3030,7 +4308,7 @@ function ShowPassword(passwordValidator = null) {
 			
 		  </div>
 		  <div class="col-75">
-			<input type="checkbox" id="applicant-not-now-pv"><span  style="padding-left: 5px;color: white;">Not Now</span>
+			<input type="checkbox" id="applicant-not-now-pv"><span  style="padding-left: 5px;color: black;">Not Now</span>
 		  </div>
 		</div>
 		<div class="row">
@@ -3067,6 +4345,14 @@ function ShowPassword(passwordValidator = null) {
 		</div>
 		<div class="row">
 		  <div class="col-25">
+			<label class="didcy-username" for="didcy-username">Username</label>
+		  </div>
+		  <div class="col-75">
+			<input type="text" name="didcy-username" id="didcy-username" class="didcy-text didcy-username" placeholder="Your Username...">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-25">
 			<label class="didcy-lab" for="camera">Please kindly take a live photo 
 			<b class="arrow-right" style="font-size: 20px;font-weight: bolder">&rarr;</b>
 			<b class="arrow-down" style="padding-left: 200px;font-size: 20px;font-weight: bolder">&darr;</b></label>
@@ -3075,7 +4361,7 @@ function ShowPassword(passwordValidator = null) {
 			<button type="button" id="applicant-take-a-photo" class="take-photo">Take a Photo</button>
 		  </div>
 		</div>    
-			<p style="text-align: center;color: black;">By creating an account you agree to our <a id="didcy-work-policy-from-form" style="cursor: pointer;color:dodgerblue">Terms & Privacy</a>.</p>
+			<p style="text-align: center;color:black">By creating an account you agree to our <a id="didcy-work-policy-from-form" style="cursor: pointer;color:dodgerblue">Developer Terms &amp; Privacy</a>.</p>
 		<div class="row">
 		  <input type="submit" id="didcy-work-form-submit" class="didcy-work-form-submit" value="Submit">
 		</div>
@@ -3185,7 +4471,8 @@ function ShowPassword(passwordValidator = null) {
     <a href="javascript:void(0)">&times;</a>
 	</span>
   <div class="modal-content-Terms">
-	  <div class="row-6">
+      <h2 class="welcome-to-didcy-policies" style="text-align:center">Welcome to Didcy Policies</h2>
+	  <div class="row-6" style="padding:0">
 		  <div class="column-plat column-" id="column"> 
 			  <button class="button" id="didcy-cookie">DidcyCook</button>
 			  <!--Cookie -->			  
@@ -3196,23 +4483,89 @@ function ShowPassword(passwordValidator = null) {
 			  <button class="button didcy-po" id="didcy-limit">DidcyLim</button><!-- Limit-->			  
 			  <button class="button didcy-po" id="didcy-profiles">DidcyProf</button>   <!-- Profiles-->
 			  <button class="button didcy-po" id="didcy-subscribe">DidcyCribe</button>   <!--Subscribe -->
-			  <button class="button didcy-po" id="didcy-work">DidcyWork</button>   <!--Subscribe -->
+			  <button class="button didcy-po" id="didcy-work">DidcyDev</button>   <!--Subscribe -->
+			  <button class="button" id="didcy-upload-system">DidcyUpload</button>   <!--Subscribe -->
 		  </div>
 	  </div>
   </div>
 </div>
+
+<div id="myModal-upload-system" class="w3-animate-right modal-upload-system overlay" style="text-align:justify;overflow-y: auto">
+  <span class="close-upload-system closebtn" id="close-upload-system" onclick="document.getElementById('myModal-upload-system').style.height='0%'">
+    <a href="javascript:void(0)">&times;</a>
+	</span>
+  <div class="modal-content-upload-system" style="text-align:justify;">
+   <h1 style="text-align:center"><b>Welcome to Upload Policy</b></h1>
+   <p style="color: white">Didcy upload policy helps it's users know and understand how to make the most out of 
+   it's upload services or features. The upload services or features are a collection of integrated 
+   upload tools employed to help users make fast, easier and smooth upload of all user assets unto Didcy cloud systems.</p>
+   <p style="color: white">To find out more about how and when to utilize these incredible features, kindly make it 
+   a must to patiently read or go through these very policy carefully with no interruptions or disturbance.</p>
+   <h2 style="text-align:center;color:white">How to utilize Didcy Uploads</h2>
+   <p style="color: white">The following data points below provides us insight on how to fully utilize Didcy Upload features to its maximum.</p>
+   <ol type="1">
+    <li style="color:white">Click on any of the file inputs that requires you to input &gt;= 1 file.</li>
+    <li style="color:white">Select 1 or more file(s) depending on the input's required number.</li>
+    <li style="color:white">After selection, hover or place(without clicking) the mouse cursor on 
+	the current operating file input and read the data it displays to you to see if the file(s) you've selected 
+	is/are the same as what is being displayed.</li>
+    <li style="color:white">Click on the upload button adjacent the current operating file input.</li>
+    <li style="color:white">If you clicked on the upload button without making any file(s) selection, then the upload 
+	error text will be presented to you.</li>
+    <li style="color:white">Depending on the current operating file upload, a text will either be displayed to indicate 
+	a success or an error in relation to the upload operation or a collection of video, static or audio ads would be 
+	displayed to you. For example, the upload feature you see displayed to the right side of the page immediately after a signin or up 
+	is initiated will display uploaded ads depending on the type of ad you uploaded and the inital characters of the ad name.</li>	
+    For example, a just-uploaded ad, let's say an Audio ad with the same inital character(s) or same name as an already uploaded video ad(s) 
+	will not display any ad or audio ad in relation to the just-uploaded ad file format but instead a selection for a particular ad format 
+	will be provided for you to choose from.
+	To make it more clearer, conventionally, when an ad is uploaded, the format of the ad file is used to display any ad in relation to that 
+	format from our database but when the ad(s) uploaded or to be  uploaded shares the same initial characters or name(s) as other formats(eg. video, audio, static/image) then a format selection 
+	is required for a display to take effect.
+	For example, in the database, there is a video ad with the name "Didcy_Cups" or initial Characters "Didcy_Cups"
+	and the name or initial characters of the ad(s) uploaded or to be uploaded are the same, then 
+	a format selection is presented instead of retrieving any ad(s) with the same uploaded format.
+	Same operation applies to ads with the same inital character.</li>
+   </ol>
+   <h2 style="text-align:center;color:white">When to utilize Didcy Uploads</h2>
+   <p style="color: white">The following data points below provides us insight on when to utilize Didcy Upload features.</p>
+   <p style="color: white">When uploading</p>
+   <ol style="list-style-type: circle"> 
+   <li style="color: white">a profile image</li>
+   <li style="color: white">your ads</li>
+   <li style="color: white">your program or plugin file(s).</li>
+   <li style="color: white">your interactive courses.</li>
+   <li style="color: white">your interesting books.</li>
+   <li style="color: white">your consumer products or service ads.</li>
+   <li style="color: white">your exhibited ad(s) infos.</li>
+   </ol>
+   <h2 style="text-align:center;color:white">The Ad Select &amp; Upload button</h2>
+   <p style="color: white">The ad select &amp; upload button is used to select and upload 
+   creator's assets(ads) unto our cloud MyAd systems for later retrieval. This cloud concept
+   is designed to help ad creators, designers and companies free up more space and also avoid any system 
+   crashes or failures during ads creation on your local workstation(s).
+   Our cloud MyAd systems are absolutely free of charge. You can cloud as much ads you want.</p>
+   <p style="color: white">All you need is to <b><i>keep clouding more and we keep providing more</i></b>. That's why we say, Cloud more, Free more.</p>
+   <p style="color: white"><b>No fees or charges applied.</b> Just <b><i>FREEEEEEEE</i></b>.</p>
+   </ol>
+   <p style="color: white">For more info on Didcy Uploads Policy, kindly reach out to or contact us by looking up our contact informations 
+	  at either <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="http://www.localhost/adv.icons/2377884.png"  title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/>. We will be availabile 24/7 just to listen to only you. <br><br>	
+      Thank you.	</p>
+  </div>
+</div><!--w3-animate-right -->
 
 <div id="myModal-work" class="modal-work overlay" style="overflow-y: auto">
   <span class="close-work closebtn" id="close-work">
     <a href="javascript:void(0)">&times;</a>
 	</span>
   <div class="modal-content-work">
-    <h1 class="didcy-work-policy" id="didcy-work-policy" style="color: white;text-align: center"><b class="didcy-work-policy">Didcy Work Policy</b></h1>
-	<h2 class="welcome-2-didcy-work-policy" id="welcome-2-didcy-work-policy" style="color: white;text-align: center"><b class="welcome-2-didcy-work-policy">Welcome to Didcy Work</b></h2>
+    <h1 class="didcy-work-policy" id="didcy-work-policy" style="color: white;text-align: center"><b class="didcy-work-policy">Welcome to Developer Policy</b></h1>
+	<!--<h2 class="welcome-2-didcy-work-policy" id="welcome-2-didcy-work-policy" style="color: white;text-align: center"><b class="welcome-2-didcy-work-policy">Welcome to Developer Policy</b></h2>
+	-->
 	<p>
-	 As humans or inhabitants of this planet, we all need something or depend on something inorder to 
+	 <!--As humans or inhabitants of this planet, we all need something or depend on something inorder to 
 	 survive one way or the other. You need something to keep running, We as a company also needs something as well for that.
-	 Infact we all need each other to make the days count. <q><b><mark>Interdependancy</mark></b></q> is the new normal whether you like it or not.
+	 Infact we all need each other to make the days count. <q><b>Interdependancy</b></q> is the new normal whether you like it or not.
 	 So take it or live it. <q>Globalization</q> is king to the world of internet and we need to embrass it one way or the other.
 	 Didcy Work is one powerful and engaging avenue Didcy has tested (and proven right : 100%) and found it much
 	 more intuitive to making people feel meaningfully useful in whatever work they engage in on Didcy and the world at
@@ -3222,8 +4575,8 @@ function ShowPassword(passwordValidator = null) {
 	 of tweak in the employment programs we can make a different.
 	 Didcy Work is simple, engaging and well organized comprehensive program or system of employment. It also
 	 comes with no strings or hidden purposes or agenda attached to it. We as a company make sure that 
-	 <q><b><mark>TRANSPARENCY</q></b></mark> is <q><b><mark>KING</mark></b></q> and <q><b><mark>CLARITY
-	 </q></b></mark> is <q><b><mark>QUEEN</q></b></mark> to our work and daily standards or ethics 
+	 <q><b>TRANSPARENCY</q></b> is <q><b>KING</b></q> and <q><b>CLARITY
+	 </q></b> is <q><b>QUEEN</q></b> to our work and daily standards or ethics 
 	 and values. As a result of what we believe in, we made it a must to name all our Policies under a single
 	 umberella <q><b><strong>Didcy Transparent</strong></b></q>. We may be a company who has pledged to always be transparent but 
 	 we should also bear in mind that those running the company (<q>DIDCY</q>) are also humans just the way <q>YOU ARE</q>.
@@ -3250,52 +4603,454 @@ function ShowPassword(passwordValidator = null) {
 	 world. It's free of charge. No Fees needed to engage in. Just Apply and see for yourself. Why? Because 
 	 experience is the best teacher. Some may criticize this gift of life, others may hail it but you decide
 	 whether to be just a listener or the doer or the involver. 
-	 For more info on choices, kindly visit  <a id="choices" class="choices cookie-full-mode-link" href= "https://www.didcy.com/choices" style="color: white" alt="" target="" title="" ping="">
-	 https://www.didcy.com/choices</a>.
+	 For more info on choices, kindly visit  <a id="choices" class="choices cookie-full-mode-link" href= "http://www.localhost/choices" style="color: white" alt="" target="" title="" ping="">
+	 http://www.localhost/choices</a>.
 	 Let us jump right into the necessary requirements or prerequisites needed for an applicant to register.
 	 <br><br>Once again, <br>
-     <h1>Welcome to Didcy Work Policy</h1>
-     The following policy gives a vivid insight on how to apply for Didcy Work from the <b>ages of 
-	 Creativeness</b> to the <b>ages of Fulfillment</b>. 
-	 <h2><b>Work with us on the basis of your own <em>TERMS</em></b></h2>
-	 <h3>You're Welcome to <q><b><strong>WORK ON OUR PLATFORM</strong></b></q></h3>
+     <h1>Welcome to Didcy Work Policy</h1>-->
+	 Developer Policy is a policy designed to guide developers develop great products and provide better
+	 services on our platform("Didcy"). Didcy Developer Room currently has no building tools to
+	 aid developers build directly from or on the platform. As a result of this, all developers are urged 
+	 to patiently or temporarily build directly from or on their localhost until the Room is set for direct deployment.
+	 Didcy Developer Room is a development environment where developers can build any product they wish to or 
+	 provide any services they want to. No tools currently available in the Room except the <b>file upload tools</b>.
+	 All developers or users will be notified or updated as soon as the room is set for development.
+	 We as a company/platform together with you, the developer, are going to build the Room as a 
+	 great team. Building can be done remotely without the need for you to be physically present in our company.
+	 <br>Didcy Developer Policy is a well-structured, comprehensive, easy to articulate, simple and corely designed 
+	 to be read or used by every user or individual of Didcy.
+	 <br>Our policies, most especially, the Developer Policy restricts no one from building on or using any of our 
+	 great products and services. 
+	 <br>Didcy policies are here to help you learn more, do more and grow more and not to deter you or anyone from deploying
+	 the platform.
+	 <br>
+	 <br>
+	 The information or guide provided below gives a detailed or comprehensive insight on how a developer can <b>join</b> 
+	 Didcy Developer Community, where to find your Developer Room, how to use the Room and what to do and what not to do
+	 (Dos &amp; Donts).
+	 <br>The guide is as follows : 
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">How to join Developer Community</h4>
+     <ol type="1" style="color: white">
+	  <li style="color: white">Click on the <b>Menu or More services or The Coredropdown button 
+	  <img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class='iconic' src='http://www.localhost/adv.icons/2377884.png'/></b> in the top navigation menu.</li>
+	  <br/><li style="color: white">After clicking on the Menu or More button, click on the Didcy Developer 
+	  button below the rest of the buttons located near Didcy React button.</li>
+	  <br/><li style="color: white">A Developer portal or form will be presented to you, the developer, to fill it out after you've 
+	  clicked on the Didcy Developer Button.</li>
+	  <br/><li style="color: white">After you're done filling out the Developer portal or form, kindly go through the completed form
+	  or portal again to see if any required field was left out or any mistake was incured during the process.</li>
+	  <br/><li style="color: white">Click on the submit button below to submit your completed form or portal for processing and verification.</li>
+	  <br/><li style="color: white">Once your informations has being verified and accepted, you'll be presented with a welcome display or portal telling you that
+	  you can now proceed on to building on or uploading your product files("program files") on to the platform.</li>
+	  <br/><li style="color: white">You can now close(<b>&times;</b>) the welcome display or portal to return back to the Menu or More Service Board.</li>
+	  <br/><li style="color: white">Please at the last session of the Developer form or portal, you were required to provide your username and password.
+	  <br/><br/>These identities(username &amp; password) will be required whenever you want to access your developer room.
+	  <br/><br/>Please note, your <b>USERNAME &amp; PASSWORD</b>.</li>
+	  <br/>Please to know more about where to locate or find your developer room, kindly read below to find out more. <br>Thank you.
+	 </ol>
+
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">Where to Find your Developer Room</h4>
 	 <ol type="1">
-	  <li style="color: white">All applicants will receive &dollar;1 - &dollar;2 every single working day with
+	  <li style="color: white">Load or reload the website.</li>
+	  <br><li style="color: white">Click on all close buttons that you see or encounter immediately you
+	  load or reload the site until you come across or see the Didcy Keys dialog box. 
+	  <br><br><li style="color: white">Once you have this dialog infront of you, kindly read the information printed on it.</li>
+	  <br><li style="color: white">Once that is done(that is, after reading),
+	  you will see the Developer Room presented or displayed to you.</li>
+	  <br>Please find out more about how to use your developer room below. <br>Thank you.
+	 </ol>
+	 
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">How to use your Developer Room</h4>
+     <p>Please note, before you proceed on to this part of the policy or guide, kindly make sure you've 
+	  read and understood the above information.</p>
+	 <ol type="1">
+	  <li style="color: white">After locating your developer room login board, kindly fill in the blanks or required fields 
+	  .</li>
+	  <br><li style="color: white">Kindly type in the <b>USERNAME &amp; PASSWORD</b> you provided during your developer registration.</li>
+	  <br><li style="color: white">Once that is done(that is, typing in your username &amp; password), click on the <b>LOGIN</b> button below
+	  and kindly wait for server response.</li>
+	  <br><li style="color: white">If response from server is positive, a developer dashboard will be displayed on the site. 
+	  <br>This developer dashboard is also referred to as <b>Developer Room</b>.</li>
+	  <br><li style="color: white">Once your room is opened successfully, you can now learn more, do more and grow more with whatever you find in your 
+	  <b>ROOM</b>.</li>
+	  <br><li style="color: white">Click the close(<b>&times;</b>) button once you're done with your room. The close button is also the <b>LOGOUT</b> button. 
+	  <br>It is a multi-functional button which is used for <b>logging out and closing the Room at the same time</b>.</li>
+	  <br><p style="color: white">For more info on how to use the features or tools in your Room, kindly visit 
+	  Didcy Find. <br>Thank you.</p>
+	 </ol>
+	 
+	 <br> 
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">Didcy ITRACK API</h4>
+	 <p>Didcy ITrack API is a tracking api designed to be integrated into all developer 
+	 products and services for successful tracking of their products and services on the
+	 platform. <br>ITrack API don't only perform or provide tracking services but also provides other internal 
+	 services. For example, the ITrack API is responsible for converting usage, click, advertising, 
+	 subscription and other useful data into realtime revenue data for the developer to cash out into 
+	 their money account(s). <br>The ITrack API is still being developed to provide more services than 
+	 it's current status. 
+	 <br><br>
+	 <b style="font-weight: bolder">The ITrack API code and parameters are provided below : 
+	 </b>
+	 <br><br>
+	 <b style="font-weight: bolder;color: dodgerblue">
+	 <p>ITrack(program_name, developer, program_creation_date, program_creation_time, 
+	 program_projected_revenue, program_projected_users, program_value, developer_email)
+	 </p>
+	 </b>
+	 <br><br><b style="font-weight: bolder;color: dodgerblue">For example, <br><br>
+	 <code>ITrack("Split", "Nelson Williams", 
+	 "2020-02-10", "03:05:20", 4003, 3042, "Help users split their working viewport on the page into multiple parts", 
+	 "nelson.williams@gmail.com");
+	 </code>
+	 <br><br>Sample program code &amp; style code(stylesheet) below : <br><br>
+	 
+	 <code>
+	 var logis = document.getElementById("logis");
+	 <br/>
+	 <br/>
+	 or 
+	 <br/>
+	 <br/>
+	 var logis = document.getElementById("logis");
+	 <br/>
+	 <br/>
+	 logis = document.getElementsByClassName("logis")[0];
+	 <br/>
+	 <br/>
+	 function Logis(){ //function can contain parameters.... 
+	 <br/>   
+	 <br/>   
+		//The ITrack API can be placed anywhere : top or center/middle or bottom of your code(s)....
+	 <br/>   
+	 <br/>		
+		ITrack("Split", "Nelson Williams", "2020-02-10", "03:05:20", 4003, 3042, 
+		"Help users split their working viewport on the page into multiple parts", 
+	    "nelson.williams@gmail.com");	     
+	 <br/>   
+	 <br/>		
+		 //---code here
+	 <br/>   
+	 <br/>		 
+	 }
+	 
+	 <br><br>or<br><br> 
+	 
+	 logis.onclick = function(){
+		 Logis();
+	 }
+	 <br/>   
+	 <br/>	 
+	 or 
+	 <br/>   
+	 <br/>	 
+	 logis.onclick = function(){
+	 <br/>   
+	 <br/>	    
+		//The ITrack API can be placed anywhere : 
+		top or center/middle or bottom of your function or onclick code(s)....
+	 <br/>   
+	 <br/>		
+		ITrack("Split", "Nelson Williams", "2020-02-10", "03:05:20", 4003, 3042, 
+		"Help users split their working viewport on the page into multiple parts", 
+	    "nelson.williams@gmail.com");	     
+	 <br/>   
+	 <br/>		
+		 //---code here
+	 <br/>   
+	 <br/>		 
+	 }	 
+	 <br/>   
+	 <br/>	 
+	 or 
+	 <br/>   
+	 <br/>	 
+	 logis.addEventListener("click",  function(){
+	 <br/>   
+	 <br/>	    
+		//The ITrack API can be placed anywhere : 
+		top or center/middle or bottom of your function or onclick code(s)....
+	 <br/>   
+	 <br/>		
+		ITrack("Split", "Nelson Williams", "2020-02-10", "03:05:20", 4003, 3042, 
+		"Help users split their working viewport on the page into multiple parts", 
+	    "nelson.williams@gmail.com");	     
+	 <br/>   
+	 <br/>		
+		 //---code here
+	 <br/>   
+	 <br/>		 
+	 });
+	 <br/>   
+	 <br/>	 
+	 //Please all ITrack API codes should be placed within the element's click function(s).
+	 <br/>   
+	 <br/>	 
+	 </code>
+	 
+	 <br>Now save your program file(s) as plain text file(s) with no extension.
+	 
+	 <br><br>Sample style code(stylesheet) : 
+	 <br><br>
+	 
+	 <code>
+	   //code more....
+	 <br/>   
+	 <br/>	   
+	  .logis{
+	 <br/>   
+	 <br/>
+		  background-color: rgba(0, 0, 0, 0.9);
+	 <br/>   
+	 <br/>
+	  }
+	 <br/>   
+	 <br/>	  
+	 </code>
+	 
+	 <br>Now save your style(stylesheet) file(s) as .css file(s) or extension.
+	 
+	 <br><br><p  style="text-align: center">
+	 Please note, both program_projected_revenue and program_projected_users can be set to 0 if not sure.
+	 </p><br><br></b>
+	 
+	 The following listed explanation gives a vivid insight on what each parameter represents : 
+	 <ol type="1">
+	  <li style="color: white">Program Name : tells the name of the program.</li>
+	  <br><li style="color: white">Developer : tells the name of the developer of that program and must be the same 
+	  name as the name used for Developer registration or your username. Note://this name should be passed
+	  to the ITrack API whenever you've new products or services to ship. </li>
+	  <br><li style="color: white">Program Creation Date : gives info about program creation date.</li>
+	  <br><li style="color: white">Program Creation Time : gives info about program creation time.</li>
+	  <br><li style="color: white">Program Projected Revenue :  provides info about developer projected revenue. That is, 
+	  how much revenue do you expect to take in every year.</li>
+	  <br><li style="color: white">Program Projected Users : tells the number of estimated or projected users you evidently
+	  think will use your product or service every year.</li>
+	  <br><li style="color: white">Program Value : gives info on the program value or purpose.</li>
+	  <br><li style="color: white">Developer Email : provides developer email(must be same email as registered).</li>
+	 </ol>
+
+     <h4 style="color: white;font-size:20px;font-weight: bolder">Please note, all developers 
+	 are required to integrate Didcy ITRACK API into their codes before shipping them. Thank you</h4>
+
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">How to integrate Didcy ITRACK API into your digital products and services</h4>
+	 <p>The following data gives clear insight on how to integrate Didcy ITrack API into your digital products and services in a simple,
+	 easy and smooth fashion. 
+	 <br><br>These includes : </p>
+     <ol type="1">
+	  <li style="color: white">Copy/Type ITrack API into your digital products and services and provide or insert the necessary
+	   ITrack arguments or data values.</li>
+	  <br><li style="color: white">Continue coding your digital products or services and save it as a plain text file 
+	  with no file extensions except when saving &amp; shipping your products and services' style files(that is, stylesheet files).
+	  <br>That is, only stylesheet files must contain the <b><q>.css</q></b> extension.
+	  <br><br>Please note, all program files must contain <b>Javascript</b> codes but should not be saved as a <b><q>.js</q></b>
+	  or any other extension. </li>
+	  <br><li style="color: white">Ship your products or services once completed.</li>
+	 </ol>
+	 
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">How to ship or upload your product or service files when completed</h4>
+	 <p>To ship or upload your products or services, kindly follow the guide below.</p>
+     <ol type="1">
+	  <li style="color: white">Login into your Didcy Developer Room.</li>
+	  <br/><li style="color: white">Find the appropriately named file upload input(s).</li>
+	  <br/><li style="color: white">Click on the select file upload input(s).</li>
+	  <br/><li style="color: white">Choose from your local folder(s) the product or service files you want to ship or upload.</li>
+	  <br/><li style="color: white">After selection, make show you're shipping or uploading the right file(s) so that we all don't find ourselves in buggy problems and 
+	  policy voilation.</li>
+	  <br/><li style="color: white">Once you're done with file(s) checking, you can now go ahead and click on the <b>EXECUTE</b> button below.</li>
+	  <br/><li style="color: white">After shipping or uploading, wait for some few seconds to see server response.</li>
+	  <br/><li style="color: white">If server response is positive, then if you're done using your ROOM, kindly close(<b>&times;</b>) your room and return back to the main page.</li>
+	  <p style="color: white">Please for more info on where to locate or find your uploaded or shipped products or services, kindly read below.
+	  <br>Thank you.</p>
+	 </ol>
+	 
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">Where to find or locate your uploaded or shipped products or services</h4>
+	 <p>The following guide helps you find or locate your digital products or services and deploy or test them on our page.</p>
+	 <p>Please note, once your digital products or services are uploaded or shipped, it becomes visible to all didcy users and yours.
+	 So please, bear in mind that once shipped or uploaded no changes or modifications can be done except when uploading the newest 
+	 version of that product or service. This way the older version gets replaced with the newer version.</p>
+     <ol type="1">
+	  <li style="color: white">Click on the <b>Menu or More services or The Coredropdown button 
+	  <img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class='iconic' src='http://www.localhost/adv.icons/2377884.png'/></b> in the top navigation menu.</li>
+	  <br/><li style="color: white">After clicking on the Menu or More button, click on the Didcy React button.</li>
+	  <br/><li style="color: white">Click on the <b>Plugins</b> button after clicking on the Didcy React button.</li>
+	  <br/><li style="color: white">After clicking on the <b>Plugins</b> button, a collection of programs will display or show up.</li>
+	  <br/><li style="color: white">Kindly search through these collections to find your program(s).</li>
+	  <br/><li style="color: white">If not found, kindly click on the <b>Update</b> button to update the collections.</li>
+	  <br/><li style="color: white">If still not found, kindly check your program file(s) on your localhost or computer to see if all codes are written
+	   correctly.</li>
+	  <br/><li style="color: white">If your local program file(s) contains no bugs, then re-upload or ship the program file(s) again.</li>
+	  <br/><li style="color: white">If still incuring the same problem, kindly click Ctrl + F12 to get the browser console poped up or displayed.</li>
+	  <br/><li style="color: white">Patiently and carefully read through the data or info in the
+	  console to find out if any bugs or problems are disclosed there.</li>
+	  <br/><li style="color: white">If nothing could be found there(in the browser console), kindly read through the <b>program violation policy</b> to see if 
+      any of your programs has voilated the program violation policy. This may be the cause of the program not showing up.
+	  <p style="color: white">For more info on program voilation policy, kindly check out <b>program voilation policy</b> @ Didcy Transparent.
+	  <br>Thank you.
+	 </ol>
+
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">Developer Directories</h4>
+	 <p>Didcy Developer Directories are set of directories defaultly created by Didcy for 
+	 developers and customizely or personally created by the developers themselves.</p>
+	 <p>That is, default directories are directories reserved by or  to Didcy's own 
+	 authority and it's created for all developers to start their development &amp; 
+	 production journey with whiles customized or personalized directories are created by 
+	 developers themselves.</p>
+     
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">Didcy Master Directory</h4>
+	 <h5 style="color: white;font-size:25px;font-weight: bolder">The Plugins Directory</h5>
+	 <p>Didcy Plugins Directory is the root directory for all developer sub-directories 
+	 including the default sub-directories didcy creates on-behalf of or for all 
+	 developers. It contains both the default &amp; customized directories for developers. 
+	 All develper directories begins in the Plugins Directory.
+	 Eg: plugins/dump_id/default_directory/ or plugins/dump_id/custom_directory/</p>
+	 
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">Didcy Dump Directory</h4>
+	 <h5 style="color: white;font-size:25px;font-weight: bolder">The Dump ID</h5>
+	 <p>Didcy Dump Directory is the first sub-directory created to contain all other 
+	 developer sub-directories. That is, both the default and customized directories.</p>
+	 <p>This directory(dump directory) is created using the Dump ID &amp; can be found 
+	 directly in the plugins directory. That is, the Dump directory is named after 
+	 the Dump ID. The Dump ID is the ID/numeric strings you see right after you've 
+	 logged into your Developer Room(that is, after Smile Login). 
+	 This ID(Dump ID) is placed at the top of the modal box right below the text "Just Smile".
+	 </p>
+	 <p>This directory(Dump directory) comes second in all file or sub-directory paths. 
+	 That is, plugins/dump_directory/.</p>
+	 <p>All other directories resides here, both default and customized. The dump id is a 
+	 unique id generated and assign to uniquely identify each developer in the directory path.
+	 It is generated on developer registration during form submission &amp; gets stored in the database.
+	 </p>
+	 <p>All developer file or directory paths should begin this way : </p>
+	 <p>plugins/dump_directory/default_directory/</p>
+	 <p>plugins/dump_directory/custom_directory/</p>
+	 
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">Default Directory List</h4>
+	 <p>Didcy default directory list is a list of developer directories created for all developers to help them start building. 
+	 </p>
+	 <p>The following default directory list includes : 
+	 <ol type="1">
+	  <li style="color: white">Program Directory : this directory contains the developer program files.</li>
+	  <br><li style="color: white">CSS Directory : this directory contains the developer css files.</li>
+	  <br><li style="color: white">Server Directory : contains the developer server files like .php.</li>
+	  <br><li style="color: white">Media Directory : also contains directories like mp4, mp3 and others for storing
+	  media files.</li>
+	  <br><li style="color: white">Data Directory : contains all kinds of data files.</li>
+	 </ol>
+	 
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">Custom Directories</h4>
+	 <p>These are directories created by the developers themselves in addition to the 
+	 default directories provided to them by Didcy. All custom directories can also be 
+	 named after the default directories but not in the same directory as the one 
+	 the default directories are located in.</p>
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">Dos &amp; Donts</h4>
+	 <h4 style="font-weight: bolder">Dos</h4>
+	 <p>Developers are required to deligently comply by this policy or guidelines by doing the following : </p>
+     <ol type="1">
+	  <br><li style="color: white">Developers are required to provide clean information during their registration process.</li>
+	  <br><li style="color: white">Developers are required to always login to their room with their provided username and password.</li>
+	  <br><li style="color: white">Developers are required to create or build great products and provide better services to their users.</li>
+	  <br><li style="color: white">All developer products and services <b>must</b> solve a problem for it's users.</li>
+	  <br><li style="color: white">All developer products and services must include the ITRACK API code to help Didcy track the progress of your products 
+	  and services better and most importantly help us convert usage, click, advertising and subscription data into realtime revenue for you as a creator or
+	  developer. Please note, we use all these data stream to help secure successful funds or revenue into your money account(s). 
+	  <br>So please help us, so we can help you, especially, financially.</li>
+	  <br><li style="color: white">All products or services must be shipped with product or service manual or datasheet which will guide your users on the use of your
+	  products or services.</li>
+	  <br><li style="color: white">All products or services must be well written or created, reviewed and analyze or tested before shipping it/them.</li>
+	  <br><li style="color: white">Kindly eliminate all disturbing bugs before shipping.</li>
+	  <br><li style="color: white">All developer products or services must comply with our Developer Products and Services Shipping Policy, 
+	  especially, malware, adware, spyware and harmful activities.</li>
+	  <br><li style="color: white">All developers are required to respect each other and comment accordingly if you have anything to comment on.</li>
+	  <br><li style="color: white">Developers are required to report any misunderstanding or missing info accordingly using our report system.
+	  <br>Didcy report system for now can be found on Didcy us? or Didcy Include by chatting Shyly.</li>
+	  <br>Kindly visit or contact or reach out to us by looking upour contact informations at either 
+	  <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png"/> in the top navigation bar 
+	  of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img  title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class="iconic" 
+	  src="http://www.localhost/adv.icons/2377884.png"/>. 
+	  <br>We will be availabile 24/7 just to listen to only you. <br>
+	  Thank you.<br>
+	 </ol>
+	 
+	 <h4 style="font-weight: bolder">Donts</h4>
+	 <p>Developers are required to deligently comply by this policy or guidelines by doing the following : </p>
+     <ol type="1">
+	  <li style="color: white">All developers are not permitted to pirate other developers builds without their consent.</li>
+	  <br><li style="color: white">All developers are not permitted to host third-party builds without their consent.</li>
+	  <br><li style="color: white">All developers are not allowed to omit the ITRACK API process from their builds for their own sake or interest.</li>
+	  <br><li style="color: white">All developers are not allowed to spy on their users using their builds.</li>
+	  <br><li style="color: white">All developers are not allowed to collect unauthorized user data without their consent.</li>
+	  <br><li style="color: white">All developers are not permitted to host builds that are malicious and vulnerable.</li>
+	  <br><li style="color: white">All developers are not allowed to mislead users with wrong informations when using their builds.</li>
+	  <br><li style="color: white">All developers are not allowed to promote or advertize any kind of fake news on the platform.</li>
+	  <br><li style="color: white">All developers are not allowed to promote or advertize ads that do not comply with our advertizing policy.</li>
+	  <br><li style="color: white">All developers are not permitted to set spy cookies on the platform unless authorized to do so. All rights reserved.</li>
+	  <br><li style="color: white">All developers are in no way allowed to scare of users with their builds either to other platforms or not.</li>
+	  <br><li style="color: white">All developers are in no way allowed to promote or advertize builds that infringes on users or other developers right.</li>
+	  <br><li style="color: white">All developers are not allowed to promote or advertize builds that harm children in any way.</li>
+	  <br>For more info on this and any other policy, kindly visit or contact or reach out to us by looking up our contact informations at either 
+	  <q>Contacts</q> <img class="iconic" src="http://www.localhost/adv.icons/870175.png" title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7"/> in the top navigation bar 
+	  of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img  title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class="iconic" 
+	  src="http://www.localhost/adv.icons/2377884.png"/>. 
+	  <br>We will be availabile 24/7 just to listen to only you. <br>
+	  Thank you.<br>
+	 </ol>
+	 
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">Developer expectations</h4>
+     The following policy gives a vivid insight on what a developer must do and what to expect in 
+	 return. 
+	 <h2><b>Build with us on the basis of your own <em>TERMS</em></b></h2>
+	 <h3>You're Welcome to <q><b><strong>BUILD ON OUR PLATFORM</strong></b></q></h3>
+	 <ol type="1">
+	  <!--<br><li style="color: white">All developers will receive &dollar;1 - &dollar;2 every single working day with
 	  or without working or being or not being present on any of the working days. NB:// We're currently 
 	  considering <q>WEEKENDS</q>. That is, this &dollar;1 - &dollar;2 daily packet is given out with or without working. That is, whether
 	  you work or not, being present or not.
-	  NB:// It starts right after the sixth month from application acceptance or work start or being a Didcer.</li>
-	  <li style="color: white">Anytime <b>we</b> (<q>Didcy</q>) brings an idea for the platform for either you to work
-	  on with us together or only you, you (the applicant) will receive 30-35% of the monthly profit whenever
-	  that particular product/service sells. <b><mark>NB:// ONLY WHEN THAT PARTICULAR PLUGIN(PRODUCT/SERVICE) SELLS
-	  .</mark></b></li>
-	  <li style="color: white">Anytime <b>you</b> (not from Didcy) bring an idea to the platform for you, us, or you & us
-	  to work on, we'll receive 39-45% of the monthly profit whenever that particular product/service sells.<b><mark>
-	  NB:// ONLY WHEN THAT PARTICULAR PLUGIN(PRODUCT/SERVICE) SELLS.</mark></b></li>
-	  <li style="color: white">You'll also receive 10% monthly profit from all sales of Didcy products &amp; services
+	  NB:// It starts right after the sixth month from application acceptance or development start or being a Didcer.</li>
+	  <br><li style="color: white">Anytime <b>we</b> (<q>Didcy</q>) bring an idea to the platform for either you to work
+	  on with us together or only you, you (the developer) will receive 30-35% of the monthly profit whenever
+	  that particular product/service sells. <b>NB:// ONLY WHEN THAT PARTICULAR PLUGIN(PRODUCT/SERVICE) SELLS
+	  .</b></li>
+	  <br><li style="color: white">Anytime <b>you</b> (not from Didcy) bring an idea to the platform for you, us, or you & us
+	  to work on, we'll receive 39-45% of the monthly profit whenever that particular product/service sells.<b>
+	  NB:// ONLY WHEN THAT PARTICULAR PLUGIN(PRODUCT/SERVICE) SELLS.</b></li>
+	  <br><li style="color: white">You'll also receive 10% monthly profit from all sales of Didcy products &amp; services
 	  whether you worked or not or brought an idea or not or you were present or not for that month.</li>
-	  <li style="color: white">All products <b>you</b> create or work on  will have a usage tracking program 
+	  <br><li style="color: white">All products <b>you</b> create or work on  will have a usage tracking program 
 	  embeded or integrated into it together with it's own <q><b>USAGE POLICY</b></q> to help know who used the product/service,
 	  time of usage, location of usage, how it was used and the usage cost(if is a subscription product) and more.
 	  That is, the cost of it's usage for the user of your created products/services.</li>
-	  <li style="color: white">You'll also get an upfront commission of &dollar;5 immediately you introduce a new applicant(a developer,
+	  <br><li style="color: white">You'll also get an upfront commission of &dollar;5 immediately you introduce a new applicant(a developer,
 	  thinker, idealist or builder) &amp; an upfront of &dollar;5 for any of your incoming ideas.</li>
+	 -->
+	  <br><li style="color: white">All products <b>you</b> create or work on must have a usage tracking program 
+	  embeded or integrated into it together with it's own <q><b>USAGE POLICY</b></q> to help know who used the product/service,
+	  time of usage, location of usage, how it was used and the usage cost(if it is a subscription product) and more.
+	  That is, the cost of it's usage for the user of your created products/services.</li>
+	  
+	  <br><li style="color: white">All developers must kindly and freely comply with the above dos and donts policy.</li>
+	  <br><li style="color: white">All developers can expect their goals being achieved only if they freely and willingly comply deligently 
+	  by all Didcy policies and their own ethical values or principles towards success.</li>
+	  <br><li style="color: white">All great developers should expect to gain free access to 99.9% of most of our paid developer and 
+	  non-developer products and services for a whole year. No fees, No Charges. Just <b><i>FREEEEEEE</i></b>.</li>
+	  
+	  <br><p style="color: white">Please bear in mind that, our main objective as a platform is to help you achieve all your developer goals. 
+	  So we urge you to help us achieve our objective for you. Thank you and have a nice Didcy Development.</p> 
 	 </ol>
-	 Didcy is making it much fun for all it's applicants to feel fullfilled, sure of themselves, willing and most of all
+	 Didcy is making it much fun for all it's developers to feel fullfilled, sure of themselves, willing and most of all
 	 feel at home and happy being a part of <q><b>DIDCY FAMILY</b></q>.
 	 Together we can change the future for the better. Together we can make a difference. Humanity needs us now, so we need
 	 to respond to their call. So join us <b><strong>NOW</strong></b> to make the world a better future(place).
-	 Didcy Work is what you need for the rest of your creative or developer life. Come and Experience Didcy 
-	 Work for yourself if not for anyone else. <b>SELF-CONFIDENCE</b> is when you do things with pride without the fear of 
-	 being criticize by others and fear of feeling inferior as an individual.
+	 Didcy Developer is what you need for the rest of your creative or developer life. Come and Experience Didcy 
+	 Developer for yourself if not for anyone else. <b>SELF-CONFIDENCE</b> is when you do things with pride without the fear of 
+	 being criticize by others and fear of not feeling inferior as an individual.
 	 Take the chance of being a great creator or developer for your own specie. 
-	 With the <b>MOTTO: <mark>OUR WORLD, OUR RESPONSIBILITY</mark></b>.
+	 With the <b>MOTTO: OUR WORLD, OUR RESPONSIBILITY</b>.
 	 Make a difference in your life now. <br><br><b><strong>
-	 Hurry up and join now, the current applications available 
-	 are limited to upto only 100 applicants for this year. So don't waste time on too much thinking.
+	 Hurry up and join now for there is no place better to be than with Didcy Developer.
+	 So don't waste time on too much thinking.
 	 Make a move now. </strong></b>
 	 <br>
-	 <br>We are looking forward to working with you soon <b title="CHAMPION">CHAMP</b>. We welcome you to Didcy as 
+	 <br>We are looking forward to developing with you soon <b title="CHAMPION">CHAMP</b>. We welcome you to Didcy as 
       part of us now, because we know you'll make the right choice of joining us for a better future. 
       We know you want a better future for you, your friends, children, wife(ves) and everyone both around you and 
       far, known and unknown.	  
@@ -3303,8 +5058,8 @@ function ShowPassword(passwordValidator = null) {
 	  <br><br>Have a careful reading and careful understanding with less to no problems. 
 	  Thank you.
 	  <br><br/>
-	  For more info on Didcy Work, kindly reach out to or contact us by looking up our contact informations 
-	  at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>	
+	  For more info on Didcy Developer, kindly reach out to or contact us by looking up our contact informations 
+	  at either <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="http://www.localhost/adv.icons/2377884.png"  title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/>. We will be availabile 24/7 just to listen to only you. <br><br>	
       Thanks <b title="CHAMPION">CHAMP</b>.	  
 	</p>
   </div>
@@ -3316,73 +5071,80 @@ function ShowPassword(passwordValidator = null) {
 	</span>
   <div class="modal-content-notification">
    <h1 style="background: white;color: #000;text-align: center">Notifications</h1>
-    <p>
-	 Please note, before we proceed to making any concrete sense out of this policy, we need to make some important definitions very much explicit or clear to the interested reader(s). Its' imperative to <strong>really <mark>understand</mark></strong> this very policy before we get trapped in any dispute net, because most of our informations will mostly revolve around these very definitive words or terms or keywords.
+    <p style="padding-left: 10px;padding-right: 10px">
+		<h2 class="notification-guide" style="text-align: center;color:dodgerblue">Welcome to Notification Guide</h2>
+        <p class="" style="color:white;padding-left: 10px;padding-right: 10px">
+		Notification is a means of getting individuals or users updated of the latest new or trendy things.
+		This guide focuses mainly on how all Didcy Notification systems or services work. 
 
-	 <br><br>Our dispute definitive words are as follows..
-	 <ol type="1">
-	  <li style="color: white"><u><em><b><mark>Dispute</mark></b></em></u> refers to a disagreement or argument in short. Eg. a territorial dispute between the two countries. OR bickering, brawl, conflict, controversy, debate, disagreement, discord, discussion, disturbance, feud, friction, misunderstanding, quarrel, row, squabble, strife, wrangle, challenge, contend, contest from <a href="https://www.dictionary.com/browse/dispute" alt="" title="" target="" id="dictionary" class="dictionary cookie-full-mode-link">	dictionary.com</a>. OR a dispute is a disagreement, argument, or controversy—often one that gives rise to a legal proceeding (such as arbitration, mediation, or a lawsuit) from <a href="https://www.law.cornell.edu/wex/dispute" alt="" title="" target="" id="law-cornell-edu" class="law-cornell-edu cookie-full-mode-link">	law cornell</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Resolution</mark></b></em></u> refers to solving of problem in tis contest or sorting out problems by talking to the other person. It can lead to a less stressful and more positive working relationship from <a href="https://www.tenancy.govt.nz/disputes/self-resolution/" alt="" title="" target="" id="tenancy" class="tenancy cookie-full-mode-link">	tenancy</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Policy</mark></b></em></u> refers to a course or principle of action adopted or proposed by an organization or individual. Eg. The government's controversial economic policies from <a href="https://languages.oup.com/google-dictionary-en" alt="" title="" target="" id="Oxford" class="Oxford cookie-full-mode-link">	Oxford Languages</a>. OR is a deliberate system of guidelines to guide decisions and achieve rational outcomes from <a href="https://en.wikipedia.org/wiki/Policy" alt="" title="" target="" id="wikipedia-Policy" class="wikipedia-Policy cookie-full-mode-link">	Wikipedia</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Dispute Resolution</mark></b></em></u> refers  to the process of resolving disputes between parties from <a href="https://en.wikipedia.org/wiki/Dispute_resolution#:~:text=Dispute%20resolution%20or%20dispute%20settlement,rooted%20and%20lengthy%20than%20disputes." alt="" title="" target="" id="Dispute_resolution" class="Dispute_resolution cookie-full-mode-link">	Wikipedia</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Dispute Resolution Policy</mark></b></em></u> refers to a deliberate system of guidelines to guide decisions and achieve dispute resolution.</li>
-	 </ol>
-	 
-	 <br>Please note, this policy is one of the most important policy Didcy has ever drafted. So please make sure you help us abide by it. Thank you.
+		Didcy comes bundled with at most two notification systems which helps all it's users stay afloat or in the loop.
+		All notification systems on our platform follows the same working guide 
+		and mission.
+		</p>
+		
+		<h2 class="notification-guide" style="text-align: center;color:dodgerblue">How to get notified using our Newsletter Subscription Form</h2>
+		<p class="" style="color:white;padding-left: 10px;padding-right: 10px">
+		The following data or guide gives vivid or deep insight on how to get notified for new products or services through 
+		our newsletter subscription.</p>
+		
+        <ol type="1">
+		<li style="color:white">Visit or load the site.</li>
+		<br>
+		<li style="color:white">Once loaded(the site), gentlely close the first popup or window that shows up or pops up.</li>
+		<br>
+		<li style="color:white">After this is done(that is, closing the first popup in step 2), you'll see our newsletter subscription form shown
+		to you on your screen. </li><br>
+		<li style="color:white">Fill out the form if you want to receive any updates for new products and services from us.</li>
+		<br>
+		<li style="color:white">Check your email inbox to get fully verified by clicking on the blue underlined link in the inbox in relation 
+		to our email.</li><br>
+		<li style="color:white">After clicking, your email then gets verified and you start to receive latest updates for newer products and services 
+		from Didcy. </li>
+		</ol>
+        <p class="" style="color:white;padding-left: 10px;padding-right: 10px">
+		NB://To locate or find our newsletter subscription form without reloading the page again, kindly navigate to our menu
+		or more services <img src=""/> board and find Didcy Include. Click on Didcy Include and there it is(our newsletter subscription form).
+		</p>
+		
+		<h2  class="notification-guide"style="text-align: center;color:dodgerblue">Didcy Ad Notification system</h2>
+		<p class="" style="color:white;padding-left: 10px;padding-right: 10px">
+		Didcy Internal Notification system is a system that notifies all Didcers of the latest ad(s) uploaded by a Didcer
+		onto the platform being it audio, static or video ad(s). <br><br>Our notification system don't show privatized 
+		ads to other Didcers or users except to it's owner. This means that ads that are made private by it's owners don't get
+		to be shown to other Didcers or users except to it's owner.
+		
+		<br><br>NB://Didcy Ad Notification system only gets triggered once an 
+		upload of an asset(s) or ad(s) is/are made.
 
-	<br><br>Once we've being able to get this definitions out of the way, we can now proceed unto reading or going through and <em>really <mark>understanding</mark></em> this policy.
-	 
-	<br>
-	<br>
-	 <h1 style="text-align: center;"><b class="">Welcome to Didcy Dispute Resolution Policy</b></h1> 
-     <br/>	 
-	 <p>
-	  Every now and then there are so many things happening on the web or internet both ethical and non-ethical ones. Our focus here now will be tackling the non-ethical or disputed or misunderstood ones and it's resulting actions and consequences that comes with it from all point of views but mostly between the service provider and it's users. Every day there are nefarious cybercrimes or attacks happening on the internet which most users will fall or are vulnerable to making it much difficult to trust any online platform these users visits. 
-	  <br><br>This lack of trust on the side of the users always almost results in disputes or misunderstandings and may even further itself to any <q>Federal Justice Department</q> referred to as <q>COURT</q>. 
-	  This we think is never a good trail for us as a company. We always want to position ourself in a place where our users trust us more than if possible themselves. Its' our company's mission to achieve such a higher level of respect and make it a must to protect our users most valuable assets, that is, <q>TRUST</q>. <br><br>We as a company know for sure that without trust from it's users nothing can be achieved leaving behind the only disappointing item <q>DISTRUST</q> which then may result in any kind of <q>DISPUTE</q> whether financial, privacy breach, and more. 
-	  <br><br>Didcy is not saying all its' users will be satisfied with how much effort it puts in it's platform but we believe most will according to how much value we provide. Because Didcy knows everything almost never goes well as it has being planned even though we're always or must always be optimistic, we've made it a must to draft out a whole different type of valuable policy to help handle or settle almost any kind of local disputes or misunderstandings that arises on its platform or anything related to it's products and services.
-	  
-	  <br><br>Our dispute resolution policy resolves around the following platform related misunderstandings or disputes that may take place : 
-	  
-	  <ol type="1">
-	   <li style="color: white"></li>
-	   <li style="color: white"></li>
-	  </ol>
-	  
-	  <br><br/>Check out the following dispute resolutions below in relation to the above instances or disputes on the platform.
-	  
-	  <br><br>Our dispute resolution policy resolves around the following platform related dispute resolutions that may exists to curb the above disputes or misunderstandings : 	  
+		<br><br>Even though private notifications maybe restricted from the public eye in the upcoming feature, it still remain 
+		insight to the originator or the uploader or owner.
+     </p>
 
-	  <ol type="1">
-	   <li style="color: white"></li>
-	   <li style="color: white"></li>
-	  </ol>
-	  
-      Kindly check out a list of what a user must promote inorder to avoid encountering any disputes or disagreements or misunderstandings on our platform or it's related products or services. Check it out now.
-      
-	  <br><br>As a company we bring you the best. We try to make sure all loopholes are kept unloose or locked. That's why we've taken upon ourself to highlight or elaborate on what is needed or required to prevent any disputes or misunderstandings on its platform or related to it's products and services. 
-	  
-	  <ol type="1">
-	   <li style="color: white"></li>
-	   <li style="color: white"></li>
-	  </ol>
-	  
-	  <br><br>Upon all the highlighted or elaborated bulletins, we still know that there are always going to be disputes or misunderstandings which may not be able to get resolved locally by the local dispute resolution policy unless on a federal scale. That's why we've made it a decision to draft a dispute resolution policy that will help resolve any disputes or misunderstandings on the federal scale.
-	  <br><br>We as a company is and will never wish to have the federal state get involved in any disputes or misunderstandings that arises on our platforms or with it's related products and services. 
-	  But what can we do, we need to be prepared in case of any of that happening. 
-	  <br>We hope none of them never happens, that is, whether local or federal. 
-	  <br><br>We kindly suggest you make it a must to read or go through this policy very carefully without skipping any piece in it. 
-	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
-	  Thank you.
-	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
-	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
-	 Thank you &amp; have a nice Didcy Subscription. <br>			  
-	  
-	 </p>
+		<h2 class="notification-guide" style="text-align: center;color:dodgerblue">
+		How to find Didcy Ad Notification System and get notified for newly uploaded ads</h2>
+		<p class="" style="color:white;padding-left: 10px;padding-right: 10px">
+		The following information provides detailed insight on how to find Didcy notification system and 
+		get notified for newly uploaded ads.</p>
+		
+        <ol type="1">
+		<li style="color:white">Look up to the top navigation bar and locate or find the bell <img src=""/> icon</li>
+		<li style="color:white">The bell icon may contain a counter on it, signaling the number of newly uploaded ads that needs your
+		attention.</li>
+		<li style="color:white">Click on the bell icon to see the ad notification board.</li>
+		<li style="color:white">Click on the close (&times;) button at the top right corner of 
+		this board(that is, the ad notification board) to get the board closed once your are done.
+		</li>
+        </ol>		
+	    
+		<p style="color:white;padding-left: 10px;padding-right: 10px">
+		 For more enquiries, kindly contact us by looking up our contact 
+		 informations at either <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class='iconic' src='http://www.localhost/adv.icons/870175.png'/> in the top navigation bar of the 
+		 front page or at <q>Didcy Find</q> under <q>Menu or More Services or The Core</q>
+		 <img class='iconic' title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" src='http://www.localhost/adv.icons/2377884.png'/>. We will be availabile 
+		 24/7 just to listen to only and only you. Have a nice Didcy visit.
+		 <br><br>Thank you.
+		</p>
+
 	</p>
 
   </div>
@@ -3411,14 +5173,14 @@ function ShowPassword(passwordValidator = null) {
 	  what that image represent and if understood carefully, you can kindly go ahead and click on it if that's what 
 	  you're looking for.
 	  Please note, each image here is like a button disguisely presented in an image format to depict what service it provides.
-	  For example, the image with the question mark <q><b><mark>?</mark></b></q> on top represents the <q><b>QUESTION
+	  For example, the image with the question mark <q><b>?</b></q> on top represents the <q><b>QUESTION
 	  AND ANSWER</b></q> region where all Didcers are satifisfied with their questions. Same format goes for 
 	  the rest of the mini-services and their images.
 	  </b><br><br>
 
 	  Please kindly be patient with some of our mini-services if you're having any difficulties using 
 	  these services. Patient in the sense that, you kindly make a quick call to us if having any difficulties 
-	  in using these services. For a quick call, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/1156949.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. 
+	  in using these services. For a quick call, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="http://www.localhost/adv.icons/1156949.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="http://www.localhost/adv.icons/2377884.png"  title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/>. 
 	  We will be availabile 24/7 just to listen to only you. <br><br>
 	  
 	  <b>Please kindly enjoy your visit here at Didcy. We always appreciate your visits. We are hoping you'll
@@ -3443,15 +5205,15 @@ function ShowPassword(passwordValidator = null) {
 <div class="w3-row-padding" style="margin:0 -16px">
 <!--  <span onclick="document.getElementById('w3-slider').style.display='none'" class="w3-mc w3-button w3-display-topright">&times;</span>
  -->  <div class="w3-col s4">
-    <img src="nicons/2194188.png" title="Get your questions answered by using DidcyQA" style="width:100%;cursor:pointer"
+    <img src="http://www.localhost.nicons/2194188.png" alt="Get your questions answered by using DidcyQA" title="Get your questions answered by using DidcyQA" style="width:100%;cursor:pointer"
     onclick="openModal();currentDiv(1)" class="images w3-hover-shadow">
   </div>
   <div class="w3-col s4">
-    <img src="nicons/745205.png" title="Explore Didcy Forum by using DidcyFrum" style="width:100%;cursor:pointer"
+    <img src="http://www.localhost.nicons/745205.png" alt="Explore Didcy Forum by using DidcyFrum" title="Explore Didcy Forum by using DidcyFrum" style="width:100%;cursor:pointer"
     onclick="openModal();currentDiv(2)" class="images w3-hover-shadow">
   </div>
   <div class="w3-col s4">
-    <img src="nicons/images.png" title="Join Didcy Community through DidcyCom" style="width:100%;cursor:pointer"
+    <img src="http://www.localhost.nicons/images.png" alt="Join Didcy Community through DidcyCom" title="Join Didcy Community through DidcyCom" style="width:100%;cursor:pointer"
     onclick="openModal();currentDiv(3)" class="images w3-hover-shadow">
   </div>
 </div>
@@ -3465,20 +5227,20 @@ function ShowPassword(passwordValidator = null) {
    <div class="mySlides">
    <h1 style="background: white;color: #000;text-align: center">Q&amp;A</h1>
     <p>
-	 Please note, before we proceed to making any concrete sense out of this policy, we need to make some important definitions very much explicit or clear to the interested reader(s). Its' imperative to <strong>really <mark>understand</mark></strong> this very policy before we get trapped in any dispute net, because most of our informations will mostly revolve around these very definitive words or terms or keywords.
+	 Please note, before we proceed to making any concrete sense out of this policy, we need to make some important definitions very much explicit or clear to the interested reader(s). Its' imperative to <strong>really understand</strong> this very policy before we get trapped in any dispute net, because most of our informations will mostly revolve around these very definitive words or terms or keywords.
 
 	 <br><br>Our dispute definitive words are as follows..
 	 <ol type="1">
-	  <li style="color: white"><u><em><b><mark>Dispute</mark></b></em></u> refers to a disagreement or argument in short. Eg. a territorial dispute between the two countries. OR bickering, brawl, conflict, controversy, debate, disagreement, discord, discussion, disturbance, feud, friction, misunderstanding, quarrel, row, squabble, strife, wrangle, challenge, contend, contest from <a href="https://www.dictionary.com/browse/dispute" alt="" title="" target="" id="dictionary" class="dictionary cookie-full-mode-link">	dictionary.com</a>. OR a dispute is a disagreement, argument, or controversy—often one that gives rise to a legal proceeding (such as arbitration, mediation, or a lawsuit) from <a href="https://www.law.cornell.edu/wex/dispute" alt="" title="" target="" id="law-cornell-edu" class="law-cornell-edu cookie-full-mode-link">	law cornell</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Resolution</mark></b></em></u> refers to solving of problem in tis contest or sorting out problems by talking to the other person. It can lead to a less stressful and more positive working relationship from <a href="https://www.tenancy.govt.nz/disputes/self-resolution/" alt="" title="" target="" id="tenancy" class="tenancy cookie-full-mode-link">	tenancy</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Policy</mark></b></em></u> refers to a course or principle of action adopted or proposed by an organization or individual. Eg. The government's controversial economic policies from <a href="https://languages.oup.com/google-dictionary-en" alt="" title="" target="" id="Oxford" class="Oxford cookie-full-mode-link">	Oxford Languages</a>. OR is a deliberate system of guidelines to guide decisions and achieve rational outcomes from <a href="https://en.wikipedia.org/wiki/Policy" alt="" title="" target="" id="wikipedia-Policy" class="wikipedia-Policy cookie-full-mode-link">	Wikipedia</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Dispute Resolution</mark></b></em></u> refers  to the process of resolving disputes between parties from <a href="https://en.wikipedia.org/wiki/Dispute_resolution#:~:text=Dispute%20resolution%20or%20dispute%20settlement,rooted%20and%20lengthy%20than%20disputes." alt="" title="" target="" id="Dispute_resolution" class="Dispute_resolution cookie-full-mode-link">	Wikipedia</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Dispute Resolution Policy</mark></b></em></u> refers to a deliberate system of guidelines to guide decisions and achieve dispute resolution.</li>
+	  <li style="color: white"><u><em><b>Dispute</b></em></u> refers to a disagreement or argument in short. Eg. a territorial dispute between the two countries. OR bickering, brawl, conflict, controversy, debate, disagreement, discord, discussion, disturbance, feud, friction, misunderstanding, quarrel, row, squabble, strife, wrangle, challenge, contend, contest from <a href="https://www.dictionary.com/browse/dispute" alt="" title="" target="" id="dictionary" class="dictionary cookie-full-mode-link">	dictionary.com</a>. OR a dispute is a disagreement, argument, or controversy—often one that gives rise to a legal proceeding (such as arbitration, mediation, or a lawsuit) from <a href="https://www.law.cornell.edu/wex/dispute" alt="" title="" target="" id="law-cornell-edu" class="law-cornell-edu cookie-full-mode-link">	law cornell</a>.</li>
+	  <li style="color: white"><u><em><b>Resolution</b></em></u> refers to solving of problem in tis contest or sorting out problems by talking to the other person. It can lead to a less stressful and more positive working relationship from <a href="https://www.tenancy.govt.nz/disputes/self-resolution/" alt="" title="" target="" id="tenancy" class="tenancy cookie-full-mode-link">	tenancy</a>.</li>
+	  <li style="color: white"><u><em><b>Policy</b></em></u> refers to a course or principle of action adopted or proposed by an organization or individual. Eg. The government's controversial economic policies from <a href="https://languages.oup.com/google-dictionary-en" alt="" title="" target="" id="Oxford" class="Oxford cookie-full-mode-link">	Oxford Languages</a>. OR is a deliberate system of guidelines to guide decisions and achieve rational outcomes from <a href="https://en.wikipedia.org/wiki/Policy" alt="" title="" target="" id="wikipedia-Policy" class="wikipedia-Policy cookie-full-mode-link">	Wikipedia</a>.</li>
+	  <li style="color: white"><u><em><b>Dispute Resolution</b></em></u> refers  to the process of resolving disputes between parties from <a href="https://en.wikipedia.org/wiki/Dispute_resolution#:~:text=Dispute%20resolution%20or%20dispute%20settlement,rooted%20and%20lengthy%20than%20disputes." alt="" title="" target="" id="Dispute_resolution" class="Dispute_resolution cookie-full-mode-link">	Wikipedia</a>.</li>
+	  <li style="color: white"><u><em><b>Dispute Resolution Policy</b></em></u> refers to a deliberate system of guidelines to guide decisions and achieve dispute resolution.</li>
 	 </ol>
 	 
 	 <br>Please note, this policy is one of the most important policy Didcy has ever drafted. So please make sure you help us abide by it. Thank you.
 
-	<br><br>Once we've being able to get this definitions out of the way, we can now proceed unto reading or going through and <em>really <mark>understanding</mark></em> this policy.
+	<br><br>Once we've being able to get this definitions out of the way, we can now proceed unto reading or going through and <em>really understanding</em> this policy.
 	 
 	<br>
 	<br>
@@ -3523,11 +5285,11 @@ function ShowPassword(passwordValidator = null) {
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class="iconic" src="http://www.localhost/adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -3537,20 +5299,20 @@ function ShowPassword(passwordValidator = null) {
    <div class="mySlides">
    <h1 style="background: white;color: #000;text-align: center">Forum</h1>
     <p>
-	 Please note, before we proceed to making any concrete sense out of this policy, we need to make some important definitions very much explicit or clear to the interested reader(s). Its' imperative to <strong>really <mark>understand</mark></strong> this very policy before we get trapped in any dispute net, because most of our informations will mostly revolve around these very definitive words or terms or keywords.
+	 Please note, before we proceed to making any concrete sense out of this policy, we need to make some important definitions very much explicit or clear to the interested reader(s). Its' imperative to <strong>really understand</strong> this very policy before we get trapped in any dispute net, because most of our informations will mostly revolve around these very definitive words or terms or keywords.
 
 	 <br><br>Our dispute definitive words are as follows..
 	 <ol type="1">
-	  <li style="color: white"><u><em><b><mark>Dispute</mark></b></em></u> refers to a disagreement or argument in short. Eg. a territorial dispute between the two countries. OR bickering, brawl, conflict, controversy, debate, disagreement, discord, discussion, disturbance, feud, friction, misunderstanding, quarrel, row, squabble, strife, wrangle, challenge, contend, contest from <a href="https://www.dictionary.com/browse/dispute" alt="" title="" target="" id="dictionary" class="dictionary cookie-full-mode-link">	dictionary.com</a>. OR a dispute is a disagreement, argument, or controversy—often one that gives rise to a legal proceeding (such as arbitration, mediation, or a lawsuit) from <a href="https://www.law.cornell.edu/wex/dispute" alt="" title="" target="" id="law-cornell-edu" class="law-cornell-edu cookie-full-mode-link">	law cornell</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Resolution</mark></b></em></u> refers to solving of problem in tis contest or sorting out problems by talking to the other person. It can lead to a less stressful and more positive working relationship from <a href="https://www.tenancy.govt.nz/disputes/self-resolution/" alt="" title="" target="" id="tenancy" class="tenancy cookie-full-mode-link">	tenancy</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Policy</mark></b></em></u> refers to a course or principle of action adopted or proposed by an organization or individual. Eg. The government's controversial economic policies from <a href="https://languages.oup.com/google-dictionary-en" alt="" title="" target="" id="Oxford" class="Oxford cookie-full-mode-link">	Oxford Languages</a>. OR is a deliberate system of guidelines to guide decisions and achieve rational outcomes from <a href="https://en.wikipedia.org/wiki/Policy" alt="" title="" target="" id="wikipedia-Policy" class="wikipedia-Policy cookie-full-mode-link">	Wikipedia</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Dispute Resolution</mark></b></em></u> refers  to the process of resolving disputes between parties from <a href="https://en.wikipedia.org/wiki/Dispute_resolution#:~:text=Dispute%20resolution%20or%20dispute%20settlement,rooted%20and%20lengthy%20than%20disputes." alt="" title="" target="" id="Dispute_resolution" class="Dispute_resolution cookie-full-mode-link">	Wikipedia</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Dispute Resolution Policy</mark></b></em></u> refers to a deliberate system of guidelines to guide decisions and achieve dispute resolution.</li>
+	  <li style="color: white"><u><em><b>Dispute</b></em></u> refers to a disagreement or argument in short. Eg. a territorial dispute between the two countries. OR bickering, brawl, conflict, controversy, debate, disagreement, discord, discussion, disturbance, feud, friction, misunderstanding, quarrel, row, squabble, strife, wrangle, challenge, contend, contest from <a href="https://www.dictionary.com/browse/dispute" alt="" title="" target="" id="dictionary" class="dictionary cookie-full-mode-link">	dictionary.com</a>. OR a dispute is a disagreement, argument, or controversy—often one that gives rise to a legal proceeding (such as arbitration, mediation, or a lawsuit) from <a href="https://www.law.cornell.edu/wex/dispute" alt="" title="" target="" id="law-cornell-edu" class="law-cornell-edu cookie-full-mode-link">	law cornell</a>.</li>
+	  <li style="color: white"><u><em><b>Resolution</b></em></u> refers to solving of problem in tis contest or sorting out problems by talking to the other person. It can lead to a less stressful and more positive working relationship from <a href="https://www.tenancy.govt.nz/disputes/self-resolution/" alt="" title="" target="" id="tenancy" class="tenancy cookie-full-mode-link">	tenancy</a>.</li>
+	  <li style="color: white"><u><em><b>Policy</b></em></u> refers to a course or principle of action adopted or proposed by an organization or individual. Eg. The government's controversial economic policies from <a href="https://languages.oup.com/google-dictionary-en" alt="" title="" target="" id="Oxford" class="Oxford cookie-full-mode-link">	Oxford Languages</a>. OR is a deliberate system of guidelines to guide decisions and achieve rational outcomes from <a href="https://en.wikipedia.org/wiki/Policy" alt="" title="" target="" id="wikipedia-Policy" class="wikipedia-Policy cookie-full-mode-link">	Wikipedia</a>.</li>
+	  <li style="color: white"><u><em><b>Dispute Resolution</b></em></u> refers  to the process of resolving disputes between parties from <a href="https://en.wikipedia.org/wiki/Dispute_resolution#:~:text=Dispute%20resolution%20or%20dispute%20settlement,rooted%20and%20lengthy%20than%20disputes." alt="" title="" target="" id="Dispute_resolution" class="Dispute_resolution cookie-full-mode-link">	Wikipedia</a>.</li>
+	  <li style="color: white"><u><em><b>Dispute Resolution Policy</b></em></u> refers to a deliberate system of guidelines to guide decisions and achieve dispute resolution.</li>
 	 </ol>
 	 
 	 <br>Please note, this policy is one of the most important policy Didcy has ever drafted. So please make sure you help us abide by it. Thank you.
 
-	<br><br>Once we've being able to get this definitions out of the way, we can now proceed unto reading or going through and <em>really <mark>understanding</mark></em> this policy.
+	<br><br>Once we've being able to get this definitions out of the way, we can now proceed unto reading or going through and <em>really understanding</em> this policy.
 	 
 	<br>
 	<br>
@@ -3595,11 +5357,11 @@ function ShowPassword(passwordValidator = null) {
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class="iconic" src="http://www.localhost/adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -3610,20 +5372,20 @@ function ShowPassword(passwordValidator = null) {
    <div class="mySlides">
    <h1 style="background: white;color: #000;text-align: center">Community</h1>
     <p>
-	 Please note, before we proceed to making any concrete sense out of this policy, we need to make some important definitions very much explicit or clear to the interested reader(s). Its' imperative to <strong>really <mark>understand</mark></strong> this very policy before we get trapped in any dispute net, because most of our informations will mostly revolve around these very definitive words or terms or keywords.
+	 Please note, before we proceed to making any concrete sense out of this policy, we need to make some important definitions very much explicit or clear to the interested reader(s). Its' imperative to <strong>really understand</strong> this very policy before we get trapped in any dispute net, because most of our informations will mostly revolve around these very definitive words or terms or keywords.
 
 	 <br><br>Our dispute definitive words are as follows..
 	 <ol type="1">
-	  <li style="color: white"><u><em><b><mark>Dispute</mark></b></em></u> refers to a disagreement or argument in short. Eg. a territorial dispute between the two countries. OR bickering, brawl, conflict, controversy, debate, disagreement, discord, discussion, disturbance, feud, friction, misunderstanding, quarrel, row, squabble, strife, wrangle, challenge, contend, contest from <a href="https://www.dictionary.com/browse/dispute" alt="" title="" target="" id="dictionary" class="dictionary cookie-full-mode-link">	dictionary.com</a>. OR a dispute is a disagreement, argument, or controversy—often one that gives rise to a legal proceeding (such as arbitration, mediation, or a lawsuit) from <a href="https://www.law.cornell.edu/wex/dispute" alt="" title="" target="" id="law-cornell-edu" class="law-cornell-edu cookie-full-mode-link">	law cornell</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Resolution</mark></b></em></u> refers to solving of problem in tis contest or sorting out problems by talking to the other person. It can lead to a less stressful and more positive working relationship from <a href="https://www.tenancy.govt.nz/disputes/self-resolution/" alt="" title="" target="" id="tenancy" class="tenancy cookie-full-mode-link">	tenancy</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Policy</mark></b></em></u> refers to a course or principle of action adopted or proposed by an organization or individual. Eg. The government's controversial economic policies from <a href="https://languages.oup.com/google-dictionary-en" alt="" title="" target="" id="Oxford" class="Oxford cookie-full-mode-link">	Oxford Languages</a>. OR is a deliberate system of guidelines to guide decisions and achieve rational outcomes from <a href="https://en.wikipedia.org/wiki/Policy" alt="" title="" target="" id="wikipedia-Policy" class="wikipedia-Policy cookie-full-mode-link">	Wikipedia</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Dispute Resolution</mark></b></em></u> refers  to the process of resolving disputes between parties from <a href="https://en.wikipedia.org/wiki/Dispute_resolution#:~:text=Dispute%20resolution%20or%20dispute%20settlement,rooted%20and%20lengthy%20than%20disputes." alt="" title="" target="" id="Dispute_resolution" class="Dispute_resolution cookie-full-mode-link">	Wikipedia</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Dispute Resolution Policy</mark></b></em></u> refers to a deliberate system of guidelines to guide decisions and achieve dispute resolution.</li>
+	  <li style="color: white"><u><em><b>Dispute</b></em></u> refers to a disagreement or argument in short. Eg. a territorial dispute between the two countries. OR bickering, brawl, conflict, controversy, debate, disagreement, discord, discussion, disturbance, feud, friction, misunderstanding, quarrel, row, squabble, strife, wrangle, challenge, contend, contest from <a href="https://www.dictionary.com/browse/dispute" alt="" title="" target="" id="dictionary" class="dictionary cookie-full-mode-link">	dictionary.com</a>. OR a dispute is a disagreement, argument, or controversy—often one that gives rise to a legal proceeding (such as arbitration, mediation, or a lawsuit) from <a href="https://www.law.cornell.edu/wex/dispute" alt="" title="" target="" id="law-cornell-edu" class="law-cornell-edu cookie-full-mode-link">	law cornell</a>.</li>
+	  <li style="color: white"><u><em><b>Resolution</b></em></u> refers to solving of problem in tis contest or sorting out problems by talking to the other person. It can lead to a less stressful and more positive working relationship from <a href="https://www.tenancy.govt.nz/disputes/self-resolution/" alt="" title="" target="" id="tenancy" class="tenancy cookie-full-mode-link">	tenancy</a>.</li>
+	  <li style="color: white"><u><em><b>Policy</b></em></u> refers to a course or principle of action adopted or proposed by an organization or individual. Eg. The government's controversial economic policies from <a href="https://languages.oup.com/google-dictionary-en" alt="" title="" target="" id="Oxford" class="Oxford cookie-full-mode-link">	Oxford Languages</a>. OR is a deliberate system of guidelines to guide decisions and achieve rational outcomes from <a href="https://en.wikipedia.org/wiki/Policy" alt="" title="" target="" id="wikipedia-Policy" class="wikipedia-Policy cookie-full-mode-link">	Wikipedia</a>.</li>
+	  <li style="color: white"><u><em><b>Dispute Resolution</b></em></u> refers  to the process of resolving disputes between parties from <a href="https://en.wikipedia.org/wiki/Dispute_resolution#:~:text=Dispute%20resolution%20or%20dispute%20settlement,rooted%20and%20lengthy%20than%20disputes." alt="" title="" target="" id="Dispute_resolution" class="Dispute_resolution cookie-full-mode-link">	Wikipedia</a>.</li>
+	  <li style="color: white"><u><em><b>Dispute Resolution Policy</b></em></u> refers to a deliberate system of guidelines to guide decisions and achieve dispute resolution.</li>
 	 </ol>
 	 
 	 <br>Please note, this policy is one of the most important policy Didcy has ever drafted. So please make sure you help us abide by it. Thank you.
 
-	<br><br>Once we've being able to get this definitions out of the way, we can now proceed unto reading or going through and <em>really <mark>understanding</mark></em> this policy.
+	<br><br>Once we've being able to get this definitions out of the way, we can now proceed unto reading or going through and <em>really understanding</em> this policy.
 	 
 	<br>
 	<br>
@@ -3668,11 +5430,11 @@ function ShowPassword(passwordValidator = null) {
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class="iconic" src="http://www.localhost/adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -3687,13 +5449,13 @@ function ShowPassword(passwordValidator = null) {
      <span class="w3-display-right w3-btn" onclick="plusDivs(1)">❯</span>
     </div>
     <div class="w3-col s4">
-     <img title="Get your questions answered by using DidcyQA" class="inner-images demo w3-opacity w3-hover-opacity-off" src="nicons/2194188.png" style="width:100%" onclick="currentDiv(1)" alt="Questions & Answers">
+     <img ="Get your questions answered by using DidcyQA" title="Get your questions answered by using DidcyQA" class="inner-images demo w3-opacity w3-hover-opacity-off" src="http://www.localhost.nicons/2194188.png" style="width:100%" onclick="currentDiv(1)" alt="Questions & Answers">
     </div>
     <div class="w3-col s4">
-     <img title="Explore Didcy Forum by using DidcyFrum" class="inner-images demo w3-opacity w3-hover-opacity-off" src="nicons/745205.png" style="width:100%" onclick="currentDiv(2)" alt="Forum">
+     <img alt="Explore Didcy Forum by using DidcyFrum" title="Explore Didcy Forum by using DidcyFrum" class="inner-images demo w3-opacity w3-hover-opacity-off" src="http://www.localhost.nicons/745205.png" style="width:100%" onclick="currentDiv(2)" alt="Forum">
     </div>
     <div class="w3-col s4">
-     <img title="Join Didcy Community through DidcyCom" class="inner-images demo w3-opacity w3-hover-opacity-off" src="nicons/images.png" style="width:100%" onclick="currentDiv(3)" alt="Community">
+     <img title="Join Didcy Community through DidcyCom" alt="Join Didcy Community through DidcyCom" class="inner-images demo w3-opacity w3-hover-opacity-off" src="http://www.localhost.nicons/images.png" style="width:100%" onclick="currentDiv(3)" alt="Community">
     </div>
    </div>
   </div>
@@ -3756,11 +5518,11 @@ function ShowPassword(passwordValidator = null) {
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class="iconic" src="http://www.localhost/adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -3814,11 +5576,11 @@ function ShowPassword(passwordValidator = null) {
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class="iconic" src="http://www.localhost/adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -3871,11 +5633,11 @@ function ShowPassword(passwordValidator = null) {
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7" class="iconic" src="http://www.localhost/adv.icons/870175.png" title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class="iconic" src="http://www.localhost/adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -3929,10 +5691,10 @@ function ShowPassword(passwordValidator = null) {
 	<p>Effective date: 2022-01-01</p>
 	<p><b>Welcome to Didcy</b>.</p> 
     <p>
-	 <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> in full is <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link"><q>LIMITATION</q></a> means having less access right. 
-	 Didcy limit is modelled to grant limited access to users mostly using our <q>DEFAULT</q> or <q>BASIC</q> services and very less limitations to users using the <q>PRO</q> services or versions. As for users subscribed to our <q>PREMIUM</q> packages are not in anyway limited to any access. They instead have unlimited access to all our products and services except may be some few systems. Didcy drafted <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> inorder for its user to understand what level of access they are subscribing to. 
-	 <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> is just a friend not a blockage. Knowing what you subscribed to is very much vital or important so that we don't have any misunderstanding in the future leading us to consult <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link"><q>DISPUTE</q></a> resolution which is not in our best interest.
-	 <br>Under <q>BASIC</q> and <q>PRO</q> packages, the user has limited access right regarding the following products and services enforced by the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">LIMIT Policy</a>. 
+	 <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> in full is <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMITATION</q></a> means having less access right. 
+	 Didcy limit is modelled to grant limited access to users mostly using our <q>DEFAULT</q> or <q>BASIC</q> services and very less limitations to users using the <q>PRO</q> services or versions. As for users subscribed to our <q>PREMIUM</q> packages are not in anyway limited to any access. They instead have unlimited access to all our products and services except may be some few systems. Didcy drafted <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> inorder for its user to understand what level of access they are subscribing to. 
+	 <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> is just a friend not a blockage. Knowing what you subscribed to is very much vital or important so that we don't have any misunderstanding in the future leading us to consult <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link"><q>DISPUTE</q></a> resolution which is not in our best interest.
+	 <br>Under <q>BASIC</q> and <q>PRO</q> packages, the user has limited access right regarding the following products and services enforced by the <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">LIMIT Policy</a>. 
 	 <br/>The following products and services with limited access under the BASIC Packages are as follows 
 	 <ol type="a">
 	  <li style="color: white"></li>
@@ -3954,11 +5716,11 @@ function ShowPassword(passwordValidator = null) {
 	 
 	 <br><br>All our users will be updated immediately a decision is made on this by our board.
 
-	 <br><br/>Limit also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>LIMIT</q> until a valid reason is provided or until further notice. Limit and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Limit also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>LIMIT</q> until a valid reason is provided or until further notice. Limit and other polices resolution arrangements can be found at <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-policies/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="http://www.localhost/adv.icons/870175.png" title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" class="iconic" src="http://www.localhost/adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>		 
 	 
 	</p>
@@ -3981,20 +5743,20 @@ function ShowPassword(passwordValidator = null) {
 	<p>Effective date: 2022-01-01</p>
 	<p><b>Welcome to Didcy</b>.</p> 
     <p>
-	 Please note, before we proceed to making any concrete sense out of this policy, we need to make some important definitions very much explicit or clear to the interested reader(s). Its' imperative to <strong>really <mark>understand</mark></strong> this very policy before we get trapped in any dispute net, because most of our informations will mostly revolve around these very definitive words or terms or keywords.
+	 Please note, before we proceed to making any concrete sense out of this policy, we need to make some important definitions very much explicit or clear to the interested reader(s). Its' imperative to <strong>really understand</strong> this very policy before we get trapped in any dispute net, because most of our informations will mostly revolve around these very definitive words or terms or keywords.
 
 	 <br><br>Our dispute definitive words are as follows..
 	 <ol type="1">
-	  <li style="color: white"><u><em><b><mark>Dispute</mark></b></em></u> refers to a disagreement or argument in short. Eg. a territorial dispute between the two countries. OR bickering, brawl, conflict, controversy, debate, disagreement, discord, discussion, disturbance, feud, friction, misunderstanding, quarrel, row, squabble, strife, wrangle, challenge, contend, contest from <a href="https://www.dictionary.com/browse/dispute" alt="" title="" target="" id="dictionary" class="dictionary cookie-full-mode-link">	dictionary.com</a>. OR a dispute is a disagreement, argument, or controversy—often one that gives rise to a legal proceeding (such as arbitration, mediation, or a lawsuit) from <a href="https://www.law.cornell.edu/wex/dispute" alt="" title="" target="" id="law-cornell-edu" class="law-cornell-edu cookie-full-mode-link">	law cornell</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Resolution</mark></b></em></u> refers to solving of problem in tis contest or sorting out problems by talking to the other person. It can lead to a less stressful and more positive working relationship from <a href="https://www.tenancy.govt.nz/disputes/self-resolution/" alt="" title="" target="" id="tenancy" class="tenancy cookie-full-mode-link">	tenancy</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Policy</mark></b></em></u> refers to a course or principle of action adopted or proposed by an organization or individual. Eg. The government's controversial economic policies from <a href="https://languages.oup.com/google-dictionary-en" alt="" title="" target="" id="Oxford" class="Oxford cookie-full-mode-link">	Oxford Languages</a>. OR is a deliberate system of guidelines to guide decisions and achieve rational outcomes from <a href="https://en.wikipedia.org/wiki/Policy" alt="" title="" target="" id="wikipedia-Policy" class="wikipedia-Policy cookie-full-mode-link">	Wikipedia</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Dispute Resolution</mark></b></em></u> refers  to the process of resolving disputes between parties from <a href="https://en.wikipedia.org/wiki/Dispute_resolution#:~:text=Dispute%20resolution%20or%20dispute%20settlement,rooted%20and%20lengthy%20than%20disputes." alt="" title="" target="" id="Dispute_resolution" class="Dispute_resolution cookie-full-mode-link">	Wikipedia</a>.</li>
-	  <li style="color: white"><u><em><b><mark>Dispute Resolution Policy</mark></b></em></u> refers to a deliberate system of guidelines to guide decisions and achieve dispute resolution.</li>
+	  <li style="color: white"><u><em><b>Dispute</b></em></u> refers to a disagreement or argument in short. Eg. a territorial dispute between the two countries. OR bickering, brawl, conflict, controversy, debate, disagreement, discord, discussion, disturbance, feud, friction, misunderstanding, quarrel, row, squabble, strife, wrangle, challenge, contend, contest from <a href="https://www.dictionary.com/browse/dispute" alt="" title="" target="" id="dictionary" class="dictionary cookie-full-mode-link">	dictionary.com</a>. OR a dispute is a disagreement, argument, or controversy—often one that gives rise to a legal proceeding (such as arbitration, mediation, or a lawsuit) from <a href="https://www.law.cornell.edu/wex/dispute" alt="" title="" target="" id="law-cornell-edu" class="law-cornell-edu cookie-full-mode-link">	law cornell</a>.</li>
+	  <li style="color: white"><u><em><b>Resolution</b></em></u> refers to solving of problem in tis contest or sorting out problems by talking to the other person. It can lead to a less stressful and more positive working relationship from <a href="https://www.tenancy.govt.nz/disputes/self-resolution/" alt="" title="" target="" id="tenancy" class="tenancy cookie-full-mode-link">	tenancy</a>.</li>
+	  <li style="color: white"><u><em><b>Policy</b></em></u> refers to a course or principle of action adopted or proposed by an organization or individual. Eg. The government's controversial economic policies from <a href="https://languages.oup.com/google-dictionary-en" alt="" title="" target="" id="Oxford" class="Oxford cookie-full-mode-link">	Oxford Languages</a>. OR is a deliberate system of guidelines to guide decisions and achieve rational outcomes from <a href="https://en.wikipedia.org/wiki/Policy" alt="" title="" target="" id="wikipedia-Policy" class="wikipedia-Policy cookie-full-mode-link">	Wikipedia</a>.</li>
+	  <li style="color: white"><u><em><b>Dispute Resolution</b></em></u> refers  to the process of resolving disputes between parties from <a href="https://en.wikipedia.org/wiki/Dispute_resolution#:~:text=Dispute%20resolution%20or%20dispute%20settlement,rooted%20and%20lengthy%20than%20disputes." alt="" title="" target="" id="Dispute_resolution" class="Dispute_resolution cookie-full-mode-link">	Wikipedia</a>.</li>
+	  <li style="color: white"><u><em><b>Dispute Resolution Policy</b></em></u> refers to a deliberate system of guidelines to guide decisions and achieve dispute resolution.</li>
 	 </ol>
 	 
 	 <br>Please note, this policy is one of the most important policy Didcy has ever drafted. So please make sure you help us abide by it. Thank you.
 
-	<br><br>Once we've being able to get this definitions out of the way, we can now proceed unto reading or going through and <em>really <mark>understanding</mark></em> this policy.
+	<br><br>Once we've being able to get this definitions out of the way, we can now proceed unto reading or going through and <em>really understanding</em> this policy.
 	 
 	<br>
 	<br>
@@ -4039,11 +5801,11 @@ function ShowPassword(passwordValidator = null) {
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/policy-error.htm" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="http://www.localhost/adv.icons/870175.png"  title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="http://www.localhost/adv.icons/2377884.png"  title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -4108,11 +5870,11 @@ community</li>
 	  <li style="color: white">Didcy Deals</li>
 	  <li style="color: white"></li>
 	 </ol>
-	 <br/>Stand also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>STAND</q> until a valid reason is provided or until further notice. Stand and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="" title="" target="" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br/>Stand also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>STAND</q> until a valid reason is provided or until further notice. Stand and other polices resolution arrangements can be found at <a href="http://www.localhost/policy-error.htm" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/policy-error.htm" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="http://www.localhost/adv.icons/870175.png"  title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="http://www.localhost/adv.icons/2377884.png"  title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>		 
 	</p>
 	</p>
@@ -4165,9 +5927,9 @@ community</li>
 	<p>
 	 <br>
 	 <strong><b>NB:// Didcy been so kind and so much into it's users/members and non-members/users shoes has opted to provide an installment package where both users/members and non-users/members will be allowed to pay for their purchased domains on installment depending on their strength of payment. Please note, buying too much domains which exceeds your budget is not a good idea. Buy what you can and have more as you progress in life. If you believe your domain is unique and may get stolen by another person, then don't worry Didcy also comes to your aid on that. Didcy also has an annual $1 Secure my domain plan package to help secure your future domains until you need them. 
-	 Kindly make a swift passive walk to <a id="secure-my-domains" class="cookie-full-mode-link" href="https://www.didcy.com/$1-secure-my-domains" style="color: white" alt="" target="" title="" ping="">Didcy Secure</a> to find out more about $1 Secure my domain plan package.</a></b></strong><br><br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-	 Find out more at <a id="domian-term-of-use" class="cookie-full-mode-link" href= "https://www.didcy.com/term-of-use" style="color: white" alt="" target="" title="" ping="">Didcy Term of Use</a> which gives you more insight on how to use our purchased or provided domains. <br><br>Also check out our <a id="term-of-sanction-2" class="term-of-sanction-2 cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 Kindly make a swift passive walk to <a id="secure-my-domains" class="cookie-full-mode-link" href="http://www.localhost/policy-error.htm" style="color: white" alt="Didcy Secure" target="_blank" title="Didcy Secure" ping="">Didcy Secure</a> to find out more about $1 Secure my domain plan package.</a></b></strong><br><br>
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="http://www.localhost/adv.icons/870175.png"  title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="http://www.localhost/adv.icons/2377884.png"  title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+	 Find out more at <a id="domian-term-of-use" class="cookie-full-mode-link" href="http://www.localhost/policy-error.htm" style="color: white" alt="Didcy Term of Use" target="_blank" title="Didcy Term of Use" ping="">Didcy Term of Use</a> which gives you more insight on how to use our purchased or provided domains. <br><br>Also check out our <a id="term-of-sanction-2" class="term-of-sanction-2 cookie-full-mode-link" href= "http://www.localhost/policy-error.htm" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>
 	 <br>	
 	</p>
@@ -4503,7 +6265,7 @@ for users to make changes to their previous site rating.</p>
 <p>In addition to cookies, we may use web beacons, pixel tags, and other tracking technologies on the Site to help customize the Site and improve your experience. A “web beacon” or “pixel tag” is tiny object or image embedded in a web page or email. They are used to track the number of users who have visited particular pages and viewed emails, and acquire other statistical data. They collect only a limited set of data, such as a cookie number, time and date of page or email view, and a description of the page or email on which they reside. Web beacons and pixel tags cannot be declined. However, you can limit their use by controlling the cookies that interact with them.</p>
 
 <h3 style="color: white" id="privacyPolicy" class="cookie-h3-headers">PRIVACY POLICY</h3>
-<p>For more information about how we use information collected by cookies and other tracking technologies, please refer to our Privacy Policy at <a class="cookie-full-mode-link" id="privacy-policy-link" href="https://www.didcy.com/privacy-policy" alt="" title="" target="">https://www.didcy.com/privacy-policy</a> or posted on the Site. This Cookie Policy is part of and is incorporated into our Privacy Policy. By using the Site, you agree to be bound by this Cookie Policy and our Privacy Policy.</p>
+<p>For more information about how we use information collected by cookies and other tracking technologies, please refer to our Privacy Policy at <a class="cookie-full-mode-link" id="privacy-policy-link" href="http://www.localhost/privacy-policy" alt="Privacy Policy" title="Privacy Policy" target="_blank">http://www.localhost/privacy-policy</a> or posted on the Site. This Cookie Policy is part of and is incorporated into our Privacy Policy. By using the Site, you agree to be bound by this Cookie Policy and our Privacy Policy.</p>
 
 <h3 style="color: white" id="contactUs" class="cookie-h3-headers">CONTACT US</h3>
 <p>If you have questions or comments about this Cookie Policy, please contact us at:</p>
@@ -4515,7 +6277,7 @@ for users to make changes to their previous site rating.</p>
  +233265873507<br/>
  Fax Number: N/A.<br/>
  contact@didcy.com<br/>
- https://www.didcy.com
+ http://www.localhost
 </address>  
 <br>
 <br/>
@@ -4880,52 +6642,49 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
   <span class="close-howToGaGa">&times;</span>
   <div class="modal-content-howToGaGa" id="img01-howToGaGa">
 	<div class="row" id="add-mre-rows">
-	  <div class="column-31 add-more-1" id="add-more-1" title="Click on the text to view it bigger">  
+	  <div style="overflow-x:hidden" class="column-31 add-more-1" id="add-more-1" title="Click on the text to view it bigger">  
         <h3 id="gaga-text-header" class="gaga-text-header">Text Tutorials</h3>
 		<h3 class="how-to-didcy"><u><b>How to Didcy</b></u></h3>
 		<p  id="gaga-text-tutorials" class="gaga-text-tutorials"><!--actors(that is, ad actors or actors involved in ad acting.), groups, -->
-         Welcome to  Didcy.com, the place where all educators, traders, creative developers &amp; designers, advertizers and marketers, companies and ads are closely monitored and 
-		 provided with the best of all our essential products and services. Didcy makes it much easier to learn and do business
-		 efficiently for the first time in the last few decades. 
+         Welcome to  Didcy.com, the place where <b><i>space</i></b> starts everything. 
 		 <br>Didcy has provided it's members with a much more simpler way of navigating through it's intiutive, unmatched
-		 and comprehensive ad platform. Didcy is basically an <q>ad platform with the core mission of servicing
-		 any entity related to ads. But also provides other non-advertising services like education and others.</q>
+		 and comprehensive platform. Didcy is basically a <q>space provider.</q><!-- related to ads. But also provides other non-advertising services like education and others-->
 		 With Didcy, a member needs only a computer, internet and a web browser with the appropriate directions to our platform.
-		 <q>Didcy is a web-based advertising platform.</q> <br/>Alert!!! Please always check the URL in your web browser to confirm if the URL matches
-		  <a class="cookie-full-mode-link" href="https://www.didcy.com" alt="" target="_blank" title="" ping="">https://www.didcy.com</a>. Thank you.
+		 <q>Didcy is a space provider designed to service all types of users and their needs.</q> <br/>Alert!!! Please always check the URL in your web browser to confirm if the URL matches
+		  <a class="cookie-full-mode-link" href="http://www.localhost" alt="Welcome to Didcy" target="_blank" title="Welcome to Didcy" ping="">http://www.localhost</a>. Thank you.
 		 <br>The following steps gives comprehensive details about how to use didcy.com. 
 		 <br/>Let's jump right into it. 
 		 <br><strong><u>Step 1:</u></strong> Get your computer, connect to the internet, open your web browser (eg. Google Chrome) and enter inside the URL : 
-		 <em><a href="https://www.didcy.com" alt="" title="" target="_blank">https://www.didcy.com.</a></em>
-		 <br><strong><u>Step 2:</u></strong> Didcy will kindly ask you to <q>Please select a page content</q>. This feature was introduce to make the user decide
+		 <em><a href="http://www.localhost" alt="Welcome to Didcy" title="Welcome to Didcy" target="_blank">http://www.localhost.</a></em>
+		 <!--<br><strong><u>Step 2:</u></strong> Didcy will kindly ask you to <q>Please select a page content</q>. This feature was introduce to make the user decide
 		 on whether or not to show any content on the page at all and also make the user choose what content on our platform he/she 
-		 would want to be shown.
-		 <br/><strong><u>Step 3:</u></strong> Explore the platform to see what suits your needs either as an educator, creative developer or designer, advertizer or marketer,  actor(ie. an ad actor) or a company.
-		 <br><strong><u>Step 4:</u></strong> <br><mark style="font-size: 20px">
-		 Exploration Agenda</mark><br><b style="font-size: 25px">Under Top Navigation Area</b>
-		 <br><br><b><i style="font-size: 20px">Industry <img  class='iconic' src='adv.icons/3256216.png'/>:</i></b><br>
-		 Didcy Industry categorizes all ad related products & services, actors & companies into distinct types of industries
+		 would want to be shown.-->
+		 <br/><strong><u>Step 2:</u></strong> Explore the platform to see what suits your needs either as an educator, creative developer or designer, advertizer or marketer,  web hoster, a company or whoever.
+		 <br><strong><u>Step 3:</u></strong> <br>
+		 <span style="font-size: 20px">Exploration Agenda</span><br><b style="font-size: 25px">Under Top Navigation Area</b>
+		 <br><br><b><i style="font-size: 20px">Industry <img alt="Use DidcyIndustry to display all ads on Didcy" title="Use DidcyIndustry to display all ads on Didcy"  class='iconic' src='http://www.localhost/adv.icons/3256216.png'/>:</i></b><br>
+		 Didcy Industry categorizes all ad videos, images, audios &amp; company profiles into distinct types of industries
 		so that navigation becomes much easier and specific. Didcy Industry is a long roll of table containing industrial names 
 		for user preferred selections. Egs: Mechanics, Electronics, All, etc.
-		<br><br/><b><i style="font-size: 20px">Services <img width="40px" src="adv.icons/3631153.png"/>: </i></b><br>
+		<br><br/><b><i style="font-size: 20px">Services <img title="Use DidcyServices to get more free services on Didcy" alt="Use DidcyServices to get more free services on Didcy" width="40px" src="http://www.localhost/adv.icons/3631153.png"/>: </i></b><br>
 		We all love services especially if there are always more to be served by just one platform.
 		<br>Here, Didcy makes it work like magic giving it's members the needed services of their daily hustle or dreams.
 		<br>Under Didcy Services navigation dropdown button, you can see two dropdowns,
-		<br>1. Audio/Radio Services <img src="adv.icons/3167693.png" width="40px" alt="" title="" target="" ping="" download=""/> & 
-		<br>2. More Services <img src="adv.icons/2377884.png" alt="" width="40px" title="" target="" ping="" download=""/>.
-		<br>These two buttons are at the heart of the platform esp. the <q>More Services</q>.
-		<br>Among the two buttons, one(Audio/Radio) is currently not available for functionality.
+		<br>1. Audio/Radio Services <img src="http://www.localhost/adv.icons/3167693.png" width="40px" alt="Use DidcyAR to host & exhibit your audio/radio ads" title="Use DidcyAR to host & exhibit your audio/radio ads" target="_blank" ping="" download=""/> & 
+		<br>2. More services or The Core<img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" src="http://www.localhost/adv.icons/2377884.png" alt="" width="40px" title="" target="" ping="" download=""/>.
+		<br>These two buttons are at the heart of the platform esp. the <q>More Services or The Core</q>.
+		<br>Among the two buttons, one(Audio/Radio) is currently not available for functioning.
 		<br>Hence nothing much can be said about it untill it's functionality is successfully available.
-		<br><mark>More Services</mark> on the otherhand, as the name goes, provides more services to its 
+		<br>More services or The Coreon the otherhand, as the name goes, provides more services to its 
 		users. It's a well constructed worth of packed tools for making our users industry more vibrant.
-        <br/><strong><mark>Services </mark></strong><img  width="40px" src="adv.icons/3631153.png"/>: <strong><mark><br>a: Audio/Radio </mark></strong><img src="adv.icons/3167693.png" width="40px" alt="" title="" target="" ping="" download=""/>: [N/A].
-        <br/>       <strong><mark>b: More </mark></strong><img src="adv.icons/2377884.png" alt="" width="40px" title="" target="" ping="" download=""/>: The 'More services' helps organize all Didcy
-         most essential tools. Under the 'More Services', you can find tools like Didcy React, Didcy Business and more.
+        <br/><strong>Services </strong><img title="Use DidcyServices to get more free services on Didcy" alt="Use DidcyServices to get more free services on Didcy" width="40px" src="http://www.localhost/adv.icons/3631153.png"/>: <strong><br>a: Audio/Radio </strong><img alt="Use DidcyAR to host & exhibit your audio/radio ads" title="Use DidcyAR to host & exhibit your audio/radio ads" src="http://www.localhost/adv.icons/3167693.png" width="40px" alt="" title="" target="" ping="" download=""/>: [N/A].
+        <br/>       <strong>b: More </strong><img title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" src="http://www.localhost/adv.icons/2377884.png" width="40px" target="_blank" ping="" download=""/>: The 'More services' helps organize all Didcy
+         most essential tools. Under the 'More Services or The Core', you can find tools like Didcy React, Didcy Business and more.
          <br>Our Terms & Conditions can also be found under the 'More services' together with 'How to Didcy'.
          <br>Normally, you'll find the Terms & Conditions at the bottom of a page with the exception of fewer platforms like
           social media platforms, here at Didcy, we use the same approach but instead it's located under 
-		 'More Services'.
-		 <br/>Tools provided under the 'More Services' agenda : 
+		 'More Services or The Core'.
+		 <br/>Tools provided under the 'More Services or The Core' agenda : 
 		 <ol>
          <li style="color: white">Didcy Loans</li>
          <li style="color: white">Didcy Include</li>
@@ -4949,14 +6708,14 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
          <li style="color: white">Didcy Shoot</li>
          <li style="color: white">Didcy Sales</li>
          <li style="color: white">Didcy Course</li>
-         <li style="color: white">Didcy Apply</li>
+         <li style="color: white">Didcy Dev</li>
          <li style="color: white">Didcy Transparent</li>	
 		</ol>
 		</p> 
 		
-		<b><i>Hence, the <q>More Services</q> is a toolkit or set or collection of Didcy defined tools for solving 99.99% of all advertising problems.</i></b>
+		<b><i>Hence, the <q>More Services or The Core</q> is a toolkit or set or collection of Didcy defined tools for solving 99.99% of all space problems.</i></b>
 	    
-		<h2 style="color: white"><b>The following data gives a detailed insight of each feature presented under the <q>More Services</q> toolset or collections.</b></h2>
+		<h2 style="color: white"><b>The following data gives a detailed insight of each feature presented under the <q>More Services or The Core</q> toolset or collections.</b></h2>
 		
 		<h3>Features as follows: </h3>
 		
@@ -4985,7 +6744,7 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 		   
 		   This and future upcoming tools make up the Didcy Include toolset.
 		   
-		   <h5>Please note, most of the above services(features) are still in developmental stage or are 
+		   <br><br>Please note, most of the above services(features) are still in developmental stage or are 
 		   currently being developed for your own great experience on our platform, so that's why what 
 		   you see displayed here are all not exposed under the <b>MENU</b> toolkit. 
 		   
@@ -4994,7 +6753,7 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 		   the unperfection.</b></em>
 		   
 		   We displayed the unfinished products and services here because we want to keep you always in the 
-		   loop or updated at all time. 
+		   loop or updated at all time.
 		   
 		   <br>
 		   <br>
@@ -5112,10 +6871,10 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 	        
 			<br>
 			<br>			
-			<b>Didcy Apply</b> : Apply is a piece of developer form designed to help all developers around the world build for and make money on our platform.
+			<b>Didcy Dev</b> : Dev is a piece of developer form designed to help all developers around the world build for and make money on our platform.
 			With this in motion, it has automatically make Didcy now an open-source platform where all(developers) can build or develop and make money on the 
-			open-source platform. It's not necessarily vital to have Didcy Apply but take this into consideration <q><b>HOW WOULD A DEVELOPER MAKE MONEY AFTER CREATION OR DEVELOPMENT 
-			 AND INTEGRATION INTO THE PLATFORM</b></q>. So as a company, we decided to design Didcy Apply which will make it much easier to get developers <b>Bank account numbers, 
+			open-source platform. It's not necessarily vital to have Didcy Dev but take this into consideration <q><b>HOW WOULD A DEVELOPER MAKE MONEY AFTER CREATION OR DEVELOPMENT 
+			 AND INTEGRATION INTO THE PLATFORM</b></q>. So as a company, we decided to design Didcy Dev which will make it much easier to get developers <b>Bank account numbers, 
 			 Card numbers and Wallet numbers(esp. Mobile Money Wallet) where they can receive any income they make from their products/services and not limited to only receiving payments
 			 but also usage or tracking and subscription data(if integrated) which will make the developer fully aware of how his/her product(s) or service(s) is/are being utilize.</q></b>
 			 We know developers are much more concerned with their security infos before anything else. So we as a company or platform, urges all developers to trust our 99.99% security protocol.
@@ -5153,9 +6912,9 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 		   
 		   <br>
 		   <br>For more enquiries, kindly contact us by looking up our contact informations at 
-		   either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top 
-		   navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services</q> 
-		   <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just 
+		   either <q>Contacts</q> <img class="iconic" src="http://www.localhost/adv.icons/870175.png"  title="Use DidcyContacts to contact us 24/7" alt="Use DidcyContacts to contact us 24/7"/> in the top 
+		   navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> 
+		   <img class="iconic" src="http://www.localhost/adv.icons/2377884.png"  title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/>. We will be availabile 24/7 just 
 		   to listen to only you. Have a nice Didcy visit. <br><br>Thank you.
 		 <!--</li>-->
 		 <!-- <li style="color: white"></li> -->
@@ -5165,35 +6924,37 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 	  
     <div class="column-31 add-more-2" title="Click on each image to view it bigger">
 	  <h3 class="image-tutorial-header">Image Tutorials</h3>
-      <img id="img-tutorial-1" src="adv.tutorials/images/capture.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-2" src="adv.tutorials/images/capture2.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-3" src="adv.tutorials/images/Capture3.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-4" src="adv.tutorials/images/Capture4.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-5" src="adv.tutorials/images/Capture5.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-6" src="adv.tutorials/images/Capture6.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-7" src="adv.tutorials/images/Capture7.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-8" src="adv.tutorials/images/Capture8.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-9" src="adv.tutorials/images/Capture9.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-10" src="adv.tutorials/images/Capture10.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-11" src="adv.tutorials/images/Capture11.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-12" src="adv.tutorials/images/Capture12.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-13" src="adv.tutorials/images/Capture13.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-14" src="adv.tutorials/images/Capture14.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-15" src="adv.tutorials/images/Capture15.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-16" src="adv.tutorials/images/Capture16.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-17" src="adv.tutorials/images/Capture17.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-18" src="adv.tutorials/images/Capture18.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-19" src="adv.tutorials/images/Capture19.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-20" src="adv.tutorials/images/Capture20.PNG" style="width: 100%;padding-bottom: 5px;"/>
+	  <img id="img-tutorial-0" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-0.PNG" style="width: 100%;padding-bottom: 5px;"/>
+	  <img id="img-tutorial-0a" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-0a.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-1" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-1.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-2" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-2.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-3" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-3.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-4" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-4.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-5" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-5.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-6" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-6.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-7" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-7.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-8" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-8.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-9" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-9.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-10" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-10.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-11" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-11.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-12" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-12.png" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-13" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-13.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-14" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/Capture14.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-15" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/Capture15.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-16" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/Capture16.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-17" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/Capture17.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-18" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/didcy-18.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-19" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/Capture19.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-20" title="Didcy Image under Image Tutorial" alt="Didcy Image under Image Tutorial" src="http://www.localhost/adv.tutorials/images/Capture20.PNG" style="width: 100%;padding-bottom: 5px;"/>
     </div>
 
     <div class="column-31 add-more-2" title="Click on each video to view it bigger">
 	  <h3 class="video-tutorial-header">Video Tutorials</h3>
-      <video controls=true id="video-tutorial-1" src="adv.tutorials/videos/1.mp4" style="width: 100%;padding-bottom: 5px;"></video>
-      <video controls=true id="video-tutorial-2"src="adv.tutorials/videos/2.mp4" style="width: 100%;padding-bottom: 5px;"></video>
-      <video controls=true id="video-tutorial-3"src="adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
-      <video controls=true id="video-tutorial-4"src="adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
-      <video controls=true id="video-tutorial-5"src="adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
+      <video controls=true id="video-tutorial-1" title="Didcy Video under Video Tutorial" alt="Didcy Video under Video Tutorial" src="http://www.localhost/adv.tutorials/videos/Didcy-0.mp4" style="width: 100%;padding-bottom: 5px;"></video>
+      <video controls=true id="video-tutorial-2" title="Didcy Video under Video Tutorial" alt="Didcy Video under Video Tutorial" src="http://www.localhost/adv.tutorials/videos/Didcy-1.mp4" style="width: 100%;padding-bottom: 5px;"></video>
+      <video controls=true id="video-tutorial-3" title="Didcy Video under Video Tutorial" alt="Didcy Video under Video Tutorial" src="http://www.localhost/adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
+      <video controls=true id="video-tutorial-4" title="Didcy Video under Video Tutorial" alt="Didcy Video under Video Tutorial" src="http://www.localhost/adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
+      <video controls=true id="video-tutorial-5" title="Didcy Video under Video Tutorial" alt="Didcy Video under Video Tutorial" src="http://www.localhost/adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
     </div>
 	
   </div>
@@ -5209,13 +6970,12 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 Why we do what we do:<br>		 
                  WE LOVE WHAT WE DO<br><br><!--company or an agency-->
 Who we are:<br>
-         Didcy is an advertizing platform that advertises, runs, stores, monitors ads and more.<br><br>
+         Didcy is a space provision platform where users can cloud, sell, build, host and do more.<br><br>
 What we do:<br>
-          Didcy advertises, runs, stores, produces and provides other unique ad services 
-          to it's users.<br><br>
+          Didcy helps you sell, buy, host, store, develop, grow, produce and get you whatever you desire.<br><br>
 
 Our Mission:<br>
-                   WE ARE HERE TO HELP YOU TAKE ADVERTISING TO THE NEXT LEVEL.<br>
+                   WE ARE HERE TO HELP TAKE YOUR AMBITION TO THE NEXT LEVEL.<br>
 		 
 		 
 	  </div>
@@ -5228,13 +6988,12 @@ Our Mission:<br>
 	  <!-- <h1 class="right1">us</h1> -->
 	  <div class="right2">
 		<h1 class="right1">us</h1><br>
-		
-          We understand that business advertising is complicated which includes individual or solo advertising.<br><br>
-          
-		  And so, our mission is to create a platform with all the necessary advertizing tools 
-		  for flawless &amp; effortless advertising.
-		  As a result, our users will have more business time for other 
-		  necessities. <b onclick="PopUpEServices()" style="cursor: pointer;">NOTICE.</b>
+		 Come to your Affordable Market & locate your dreams.<br><br>
+		 We are the best affordable market you can find out there.
+	     We aim to offer the best quality products and services to you.
+         Didcy is the way forward.</br>
+		 Start with us <b><i>NOW</i></b> and keep more.</br>
+         <b onclick="PopUpEServices()" style="cursor: pointer;">NOTICE.</b>
 		  <!-- onclick="PopUpAdTasks()"-->
 		         
           <br><br><br><button class="jhal" id="jhal">Just Have a Look</button>
@@ -5256,7 +7015,7 @@ Our Mission:<br>
 		  especially yours. We are always focused on the problems we've already solved, 
 		  the ones we're currently solving and the ones you would like us to work on in the 
 		  future all just for you and us. Our team is dedicated to providing the best of 
-		  values and as much value it can to it's members through it's innovative ad 
+		  values and as much value it can to it's members through it's innovative  
 		  platform. 
 		         
 		 
@@ -5278,7 +7037,7 @@ Our Mission:<br>
 	  <div class="right2-animate">
 	    <!-- <h1 class="right1">us</h1><br> -->
 		  <!-- <br> -->
-	      We believe in the process and we know you're the right person for our solutions to your ad problems.
+	      We believe in the process and we know you're the right person for our solutions to your searching problems.
 		  Here at Didcy, we've got your back as well as counting on us for anything. We know you can find it. Just focus.<br>
           
           <button class="jhal" id="jhal-team">Know your team</button>
@@ -5288,7 +7047,7 @@ Our Mission:<br>
 		  Our developers makes it a hobby to keep us in the loop without loosing balance or focus.
 		  <button class="jhal" id="jhal-developers">Hey, you! yes you, look &rarr;</button>
 		         
-<!--         <video src="adv.tutorials/videos/1.mp4" id="video-abt" class="video-abt" controls=true></video> -->
+<!--         <video src="http://www.localhost/adv.tutorials/videos/1.mp4" id="video-abt" class="video-abt" controls=true></video> -->
   
 	  </div> 
 
@@ -5303,33 +7062,33 @@ Our Mission:<br>
   <div class="row">
   <div class="column-developers">
     <div class="card-developers">
-      <img class="know-developers-img" src="developers/ceo.jpeg" alt="David Ansong" style="width:100%">
+      <img title="David Ansong" class="know-developers-img" src="developers/ceo.jpeg" alt="David Ansong" style="width:100%">
       <div class="container-developers">
         <h2>David Ansong</h2>
-        <p class="title-developers">CEO & Founder</p>
+        <p class="title-developers">CEO &amp; Founder</p>
         <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="email-developers">example@example.com</p>
+        <p style="display:none" class="email-developers">example@example.com</p>
         <p><button class="button-developers" onclick="Insight('developers/ceo.jpeg', 
 		'David Ansong', '+233265873507', 'davidansong213@gmail.com', 0)">Insight</button></p>
       </div>
     </div>
   </div>
 
-  <!--<div class="column-developers">
+  <div class="column-developers">
     <div class="card-developers">
-      <img class="know-developers-img" src="adv.actors.profiles/people2.jpg" alt="Mike" style="width:100%">
+      <img class="know-developers-img" src="developers/ta.jpg" title="Dieubeni Doubalet" alt="Dieubeni Doubalet" style="width:100%">
       <div class="container-developers">
         <h2>Dieubeni Doubalet</h2>
         <p class="title-developers">Team Advisor</p>
-        <p class="descriptive-developers">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="email-developers">example@example.com</p>
-        <p><button class="button-developers" onclick="Insight('adv.actors.profiles/people2.jpg', 
-		'Dieubeni Doubalet', '+23354500494910', 'doubalet@gmail.com', 'N/A')">Insight</button></p>
+        <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p style="display:none" class="email-developers">example@example.com</p>
+        <p><button class="button-developers" onclick="Insight('developers/ta.jpg', 
+		'Dieubeni Doubalet', '+233570665453', 'doubalet@gmail.com', 'N/A')">Insight</button></p>
       </div>
     </div>
   </div>
   
-  <div class="column-developers">
+  <!--<div class="column-developers">
     <div class="card-developers">
       <img class="know-developers-img" src="adv.actors.profiles/people2.jpg" alt="John" style="width:100%">
       <div class="container-developers">
@@ -5359,14 +7118,14 @@ Our Mission:<br>
   
   <div class="column-developers">
     <div class="card-developers">
-      <img class="know-developers-img" src="developers/ceo.jpeg" alt="Alex Sanchez" style="width:100%">
+      <img class="know-developers-img" src="developers/na.png" title="Alex Sanchez" alt="Alex Sanchez" style="width:100%">
       <div class="container-developers">
         <h2>Alex Sanchez</h2>
-        <p class="title-developers">Developer</p>
+        <p class="title-developers">Entreprenuer</p>
         <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="email-developers">example@example.com</p>
-        <p><button class="button-developers" onclick="Insight('developers/ceo.jpeg', 
-		'Alex Sanchez', '+233261308114', 'alexsanchez@gmail.com', 'N/A')">Insight</button></p>
+        <p style="display:none" class="email-developers">alexsanchez@gmail.com</p>
+        <p><button class="button-developers" onclick="Insight('developers/na.png', 
+		'Alex Sanchez', '+233261308114', 'alexsanchez@gmail.com', 'Alex')">Insight</button></p>
       </div>
     </div>
   </div>
@@ -5398,33 +7157,33 @@ Our Mission:<br>
   <div class="row">
   <div class="column-developers">
     <div class="card-developers">
-      <img class="know-developers-img" src="developers/ceo.jpeg" alt="David Ansong" style="width:100%">
+      <img class="know-developers-img" src="developers/ceo.jpeg" title="David Ansong" alt="David Ansong" style="width:100%">
       <div class="container-developers">
         <h2>David Ansong</h2>
-        <p class="title-developers">CEO & Founder</p>
+        <p class="title-developers">CEO &amp; Founder</p>
         <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="email-developers">example@example.com</p>
+        <p style="display:none" class="email-developers">example@example.com</p>
         <p><button class="button-developers" onclick="Insight('developers/ceo.jpeg', 
 		'David Ansong', '+233265873507', 'davidansong213@gmail.com', 0)">Insight</button></p>
       </div>
     </div>
   </div>
 
-<!--  <div class="column-developers">
+  <div class="column-developers">
     <div class="card-developers">
-      <img class="know-developers-img" src="adv.actors.profiles/people2.jpg" alt="Mike" style="width:100%">
+      <img class="know-developers-img" src="developers/ta.jpg" title="Mike" alt="Mike" style="width:100%">
       <div class="container-developers">
         <h2>Dieubeni Doubalet</h2>
         <p class="title-developers">Team Advisor</p>
-        <p class="descriptive-developers">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="email-developers">example@example.com</p>
-        <p><button class="button-developers" onclick="Insight('adv.actors.profiles/people2.jpg', 
-		'Dieubeni Doubalet', '+23354500494910', 'doubalet@gmail.com', 'N/A')">Insight</button></p>
+        <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p style="display:none" class="email-developers">example@example.com</p>
+        <p><button class="button-developers" onclick="Insight('developers/ta.jpg', 
+		'Dieubeni Doubalet', '+233570665453', 'doubalet@gmail.com', 'N/A')">Insight</button></p>
       </div>
     </div>
   </div>
   
-  <div class="column-developers">
+  <!--<div class="column-developers">
     <div class="card-developers">
       <img class="know-developers-img" src="adv.actors.profiles/people2.jpg" alt="John" style="width:100%">
       <div class="container-developers">
@@ -5454,14 +7213,14 @@ Our Mission:<br>
   
   <div class="column-developers">
     <div class="card-developers">
-      <img class="know-developers-img" src="developers/ceo.jpeg" alt="Alex Sanchez" style="width:100%">
+      <img class="know-developers-img" src="developers/na.png" title="Alex Sanchez" alt="Alex Sanchez" style="width:100%">
       <div class="container-developers">
         <h2>Alex Sanchez</h2>
-        <p class="title-developers">Developer</p>
+        <p class="title-developers">Entreprenuer</p>
         <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="email-developers">example@example.com</p>
-        <p><button class="button-developers" onclick="Insight('developers/ceo.jpeg', 
-		'Alex Sanchez', '+233261308114', 'alexsanchez@gmail.com', 'N/A')">Insight</button></p>
+        <p style="display:none" class="email-developers">alexsanchez@gmail.com</p>
+        <p><button class="button-developers" onclick="Insight('developers/na.png', 
+		'Alex Sanchez', '+233261308114', 'alexsanchez@gmail.com', 'Alex')">Insight</button></p>
       </div>
     </div>
   </div>
@@ -5530,6 +7289,282 @@ Our Mission:<br>
   </div>
 </div>  
 
+<div class="modal-log-books overlay" id="modal-log-books" style="overflow-y: auto;overflow-x: hidden;color: white">
+ <span class="close-log-books" id="close-log-books" onclick="CloseLogBooks()">
+ <a href="javascript:void(0)">&times;</a></span>
+<div class="container container-chat" style="padding-top: 50px;">	
+    <h2 style="text-align: center;color: white">What will it take to sell <b>YOUR</b> products?</h1>	
+    <h5 style="text-align: center;color: white">Let us <b>KNOW &amp; START SELLING NOW</b></h6>	
+	<div class="row">
+		<div class="col-sm-4">
+			<h4>Trades Login:</h4>		
+			<form method="post" class="chat-form">
+				<div class="form-group">
+					<div class="alert alert-warning" id="error-log" style="color: white"></div>
+				</div>
+				<div class="form-group">
+					<label for="username">User:</label>
+					<input type="username" class="chat-username username-log-books form-control" name="username-log-books" required>
+				</div>
+				<div class="form-group">
+					<label for="pwd">Password:</label>
+					<input type="password" class="chat-password pwd-log-books form-control" name="pwd-log-books" required>
+				</div>  
+				<button type="submit" name="login-log-books" class="chat-login login-log-books btn btn-info" style="color: black">Login</button>
+			</form>
+			<br>
+		    <button type="button" id="create-books-account" class="w3-button create-books-account" style="cursor:pointer;margin-top:2%;width:100%;">Create a Trade account</button>
+			
+			<p style="text-align:center"><a style="cursor:pointer;text-align:center;font-size:15px;color:dodgerblue">Terms & Conditions Applied</a></p>
+         
+		 </div>
+		 
+	</div>
+</div>	  
+</div>
+
+<div class="modal-create-books overlay" id="modal-create-books" style="overflow-y: auto;overflow-x: hidden;color: white">
+ <span class="close-create-books" id="close-create-books" onclick="CloseCreateBooks()">
+ <a href="javascript:void(0)">&times;</a></span>
+<div class="container container-chat" style="padding-top: 50px;">	
+    <h2 style="text-align: center;color: white">What will it take to sell <b>YOUR</b> products?</h1>	
+    <h5 style="text-align: center;color: white">Let us <b>KNOW &amp; START SELLING NOW</b></h6>	
+	<div class="row">
+		<div class="col-sm-4">
+			<h4>Trades Create:</h4>		
+			<form method="post" class="chat-form">
+				<div class="form-group">
+					<div class="alert alert-warning" id="error-log" style="color: white"></div>
+				</div>
+				<div class="form-group">
+					<label for="fsn">First Name:</label>
+					<input type="username" class="chat-username fsn-create-books form-control" name="fsn-create-books" required>
+				</div>
+				<div class="form-group">
+					<label for="lsn">Last Name:</label>
+					<input type="username" class="chat-username lsn-create-books form-control" name="lsn-create-books" required>
+				</div>
+				<div class="form-group">
+					<label for="username">Username:</label>
+					<input type="username" class="chat-username username-create-books form-control" name="username-create-books" required>
+				</div>
+				<div class="form-group">
+					<label for="email">E-mail:</label>
+					<input type="email" class="chat-username email-create-books form-control" name="email-create-books" required>
+				</div>  
+				<div class="form-group">
+					<label for="pwd">Password:</label>
+					<input type="password" class="chat-password pwd-create-books form-control" name="pwd-create-books" required>
+				</div>  
+				<div class="form-group">
+				    <label for="act-as-a">Act as a :</label>
+					<select style="cursor:pointer" class="chat-username act-as-a-create-books form-control" name="act-as-a-create-books" required>
+					 <option name="" id="">Nobody</option>
+					 <option name="" id="">Seller</option>
+					 <option name="" id="">Buyer</option>
+					</select>
+				</div>  
+				<button type="submit" name="create-books" class="chat-create create-books btn btn-info" style="cursor:pointer;color: black">Sign Up</button>
+			</form>
+			<br>
+			<p style="text-align:center"><a style="cursor:pointer;text-align:center;font-size:15px;color:dodgerblue">Terms & Conditions Applied</a></p>
+         
+		 </div>
+		 
+	</div>
+</div>	  
+</div>
+
+<div class="modal-seller-dash-board overlay" id="myModal-seller-dash-board" style="overflow-x: hidden;overflow-y:auto">
+ 
+ <span class="close-seller-dash-board" id="close-seller-dash-board" style="z-index: 56" 
+ onclick="ClosePointOfSale(0)">
+ <a href="javascript:void(0)">&times;</a></span>
+ 
+ <div class="modal-content-seller-dash-board" id="modal-content-seller-dash-board">
+ 
+  <h1 style="color:white">The Seller</h1>
+ 
+ </div>
+</div>
+
+<div class="modal-buyer-dash-board overlay" id="myModal-buyer-dash-board" style="overflow-x: hidden;overflow-y:auto">
+ 
+ <span class="close-buyer-dash-board" id="close-buyer-dash-board" style="z-index: 56" 
+ onclick="ClosePointOfSale(1)">
+ <a href="javascript:void(0)">&times;</a></span>
+ 
+ <div class="modal-content-buyer-dash-board" id="modal-content-buyer-dash-board">
+ 
+   <h1 style="color:white">The Buyer</h1>
+ 
+ </div>
+</div>
+
+<script type="text/javascript">
+ "use strict";
+ 
+  var modalSellerDashboard = document.getElementsByClassName("modal-seller-dash-board")[0];
+  var modalBuyer = document.getElementsByClassName("modal-buyer-dash-board")[0];
+  
+  
+  document.getElementsByClassName("chat-form")[2].addEventListener("submit", 
+  (event) => event.preventDefault());  
+  
+  document.getElementsByClassName("chat-form")[3].addEventListener("submit", 
+  (event) => event.preventDefault());
+ 
+ function CloseLogBooks(){
+	document.getElementById("modal-log-books").style.height = "0%";	 
+    document.getElementsByClassName("username-log-books")[0].value = "";
+    document.getElementsByClassName("pwd-log-books")[0].value = "";
+ }
+
+ function CloseCreateBooks(){
+	document.getElementById("modal-create-books").style.height = "0%";	 
+ } 
+ 
+ function ClosePointOfSale($sale_id = 0){
+	if($sale_id == 0){
+		modalSellerDashboard.style.width = "0%";
+		modalSellerDashboard.style.height = "0%";	 
+	}else{
+		modalBuyer.style.width = "0%";
+		modalBuyer.style.height = "0%"; 
+	}
+ }
+ 
+ function Seller(){
+	modalSellerDashboard.style.width = "100%";
+	modalSellerDashboard.style.height = "100%";
+	modalSellerDashboard.style.zIndex = "60";
+ }
+ 
+ function Buyer(){
+	modalBuyer.style.width = "100%";
+	modalBuyer.style.height = "100%"; 
+	modalBuyer.style.zIndex = "60";
+ }
+ 
+ function ActAsA($actAsA = 0){
+	switch($actAsA){
+	  case 0:
+	  case "0":
+	  case "buyer":
+	  case "Buyer":
+	  case "BUYER":
+	    Seller();
+	  break;
+	  case 1:
+	  case "1":
+	  case "seller":
+	  case "Seller":
+	  case "SELLER":
+	    Buyer();
+	  break;
+	  default: 
+	   return;
+	}
+ }
+
+ var from_user_id_didcybooks = 0, LoginerBookslnID = 0, usrBooks = 0;
+ var __$__49393_492_Page_acc_usrBooks;
+ 
+ document.getElementsByClassName("login-log-books")[0].onclick = function(){loginBooks(1);}
+ document.getElementsByClassName("create-books")[0].onclick = function(){loginBooks(0);}
+
+  function loginBooks($books_log = 0){
+	if($books_log == 1){
+	 if(document.getElementsByClassName("username-log-books")[0].value == ""){
+		return AlertBoxInModal("Empty username");
+	 }
+	 if(document.getElementsByClassName("pwd-log-books")[0].value == ""){
+		return AlertBoxInModal("Empty Password");
+	 }
+	}else{
+	 if(document.getElementsByClassName("fsn-create-books")[0].value == ""){
+		return AlertBoxInModal("Empty Firstname");
+	 }
+	 if(document.getElementsByClassName("lsn-create-books")[0].value == ""){
+		return AlertBoxInModal("Empty Lastname");
+	 }
+	 if(document.getElementsByClassName("username-create-books")[0].value == ""){
+		return AlertBoxInModal("Empty Username");
+	 }
+	 if(document.getElementsByClassName("email-create-books")[0].value == ""){
+		return AlertBoxInModal("Empty E-mail");
+	 }
+	 if(document.getElementsByClassName("pwd-create-books")[0].value == ""){
+		return AlertBoxInModal("Empty Password");
+	 }
+	 if(document.getElementsByClassName("act-as-a-create-books")[0].value == "Nobody"){
+		return AlertBoxInModal("Invalid Option");
+	 }		
+	 if(document.getElementsByClassName("act-as-a-create-books")[0].value == "Seller"){
+		return ActAsA(0);
+	 }else{
+		return ActAsA(1); 
+	 }
+	}
+
+	 var form = new FormData();
+	 if($books_log == 1){
+		 form.append("username-log-books", document.getElementsByClassName("username-log-books")[0].value);
+		 form.append("pwd-log-books", document.getElementsByClassName("pwd-log-books")[0].value);
+		 form.append("drim", "");
+	 }else{
+		 form.append("fsn-create-books", document.getElementsByClassName("fsn-create-books")[0].value);
+		 form.append("lsn-create-books", document.getElementsByClassName("lsn-create-books")[0].value);
+		 form.append("username-create-books", document.getElementsByClassName("username-create-books")[0].value);
+		 form.append("email-create-books", document.getElementsByClassName("email-create-books")[0].value);
+		 form.append("pwd-create-books", document.getElementsByClassName("pwd-log-books")[0].value);
+		 form.append("act-as-a-create-books", document.getElementsByClassName("act-as-a-create-books")[0].value);
+		 form.append("books-log", $books_log);
+		 form.append("drim", "");		 
+	 }
+	 $.ajax({
+		type: "POST",
+		url: "_books.php",
+		contentType: false,
+		cache: false,
+		processData: false,
+		data: form,
+		success: function(result){
+			var data_returned = JSON.parse(result);			
+			if(data_returned.state == 103){
+				
+			}
+			else if(data_returned.state == 200){
+			  from_user_id_didcybooks = data_returned.from_user_id_didcybooks;
+			  
+			  var DicyWorkBoard = data_returned.DicyLogbooks;
+			  LoginBookslnID = data_returned.BookslnID;
+			  __$__49393_492_Page_acc_usrBooks = data_returned.__49393_492_Page_acc_usrBooks;
+			  
+			  //document.getElementById("dump").innerHTML = "DUMP ID : "+__$__49393_492_Page_acc_usr;
+
+		      //document.getElementById("modal-content-work-board-4").innerHTML = data_returned.DicyWorkBoard;
+
+			  //document.getElementById("myModal-work-board-4").style.display = "block";
+			  document.getElementsByClassName("modal-ads-books")[0].style.height = "100%";
+			  document.getElementsByClassName("modal-ads-books")[0].style.zIndex = "12";
+
+			  usrDicyWork = data_returned.didcyworkUserIDs.session_id_didcywork;
+			  
+			  
+			  document.getElementsByClassName("username-log-books")[0].value = "";
+			  document.getElementsByClassName("pwd-log-books")[0].value = "";
+			  
+			}else if(data_returned.state == 506){
+			  AlertBoxInModal(data_returned.session);
+			}else{
+			  //document.getElementById("error-log").innerHTML = data_returned.session;
+			}
+		},
+		error: function(){}
+	 });
+  }
+</script>
 
 <div id="myModal-ads-books" class="modal-ads-books overlay">
   <span class="close-modal-ads-books closebtn" id="close-modal-ads-books">
@@ -5719,8 +7754,8 @@ Our Mission:<br>
 	 <li style="color: white;cursor: pointer" id="jsbrn" onclick="MoveAnimate('jsbrn')">Joshua Brown</li>
 	</ol>
 	<p>For more info on each of our Authors, kindly visit 
-	<a id="authors-know-more" href="https://www.didcy.com/authors/know-more" alt="" title="" target="">
-	https://www.didcy.com/authors/know-more</a></p>
+	<a id="authors-know-more" href="http://www.localhost/policy-error.htm" alt="Know more about our Authors" title="Know more about our Authors" target="_blank">
+	http://www.localhost/authors/know-more</a></p>
 	</p>
   </div>
 </div> 
@@ -5743,8 +7778,8 @@ Our Mission:<br>
 	 <li style="color: white;cursor: pointer" id="jsbrn" onclick="MoveAnimate('jsbrn')">Joshua Brown</li>
 	</ol>
 	<p>For more info on each of our Investors, kindly visit 
-	<a id="investors-know-more" href="https://www.didcy.com/investors/know-more" alt="" title="" target="">
-	https://www.didcy.com/authors/know-more</a></p>
+	<a id="investors-know-more" href="http://www.localhost/policy-error.htm" alt="Know more about our Investors" target="_blank">
+	http://www.localhost/authors/know-more</a></p>
 	</p>
 	<br>
 	<br>
@@ -5769,8 +7804,8 @@ Our Mission:<br>
 	 <li style="color: white;cursor: pointer" id="jsbrn" onclick="MoveAnimate('jsbrn')">Joshua Brown</li>
 	</ol>
 	<p>For more info on each of our Team, kindly visit 
-	<a id="team-know-more" href="https://www.didcy.com/team/know-more" alt="" title="" target="">
-	https://www.didcy.com/team/know-more</a></p>
+	<a id="team-know-more" href="http://www.localhost/adv-policies/policy-error.htm" alt="Know more about our Team" title="Know more about our Team"  target="_blank">
+	http://www.localhost/team/know-more</a></p>
 	</p>
 	<br>
 	<br>
@@ -5781,7 +7816,7 @@ Our Mission:<br>
 <div id="myModal-animated-image" class="modal-animated-image">
   <span class="close-animated-image" id="close-animated-image" onclick="ResizeAnimator()">&times;</span>
  <!-- <div class="modal-content-animated-image"> -->
-  <img src="" id="animated-image" class="animated-image" alt=""/>
+  <img src="" id="animated-image" class="animated-image" alt="Enlarge Update Images"/>
  <!-- </div> -->
 </div>
 
@@ -5795,12 +7830,12 @@ Our Mission:<br>
 	 <br>We at Didcy, provide you more but quality products and services inorder for you to do more and accomplish more in a short period of time 
 	 which would have taken you a month, year, decade or more.
 	 <br>The following showcases the quality features we bring to the 
-	 ad market.<br/><q>With the Motto : YOUR INDUSTRY, YOUR LIFE</q>
-     <h3 style="color:  white" class="wel-didcy-uup">Current Tools provided under the 'More Services' agenda : </h3>
+	 market.<br/><q>With the Motto : YOUR INDUSTRY, YOUR LIFE</q>
+     <h3 style="color:  white" class="wel-didcy-uup">Current Tools provided under the 'More Services or The Core' agenda : </h3>
      <ol>
          <li style="color: white">Didcy Include</li>
          <li style="color: white">Didcy Course</li>
-         <li style="color: white">Didcy Apply</li>
+         <li style="color: white">Didcy Dev</li>
          <li style="color: white">Didcy Rate</li>
          <li style="color: white">Didcy Find?</li>
          <li style="color: white">Didcy us?</li>
@@ -5811,7 +7846,7 @@ Our Mission:<br>
      </ol>		
      <br/>
 	 
-     <h3 style="color:  white" class="wel-didcy-uup">Upcoming Tools provided under the 'More Services' agenda : </h3>
+     <h3 style="color:  white" class="wel-didcy-uup">Upcoming Tools provided under the 'More Services or The Core' agenda : </h3>
      <ol>
 	     <li style="color: white">Didcy List</li>
 	     <li style="color: white">Didcy Share</li>
@@ -5830,7 +7865,7 @@ Our Mission:<br>
      </ol>		
      <br/>	
 	 
-     <h3 style="color:  white" class="wel-didcy-uup">Overall Tools provided under the 'More Services' agenda : </h3>
+     <h3 style="color:  white" class="wel-didcy-uup">Overall Tools provided under the 'More Services or The Core' agenda : </h3>
      <ol>
          <li style="color: white">Didcy Loans</li>
          <li style="color: white">Didcy Include</li>
@@ -5854,7 +7889,7 @@ Our Mission:<br>
          <li style="color: white">Didcy Shoot</li>
          <li style="color: white">Didcy Sales</li>
          <li style="color: white">Didcy Transparent</li>
-         <li style="color: white">Didcy Apply</li>
+         <li style="color: white">Didcy Dev</li>
          <li style="color: white">Didcy Course</li>
      </ol>		
      <br/>
@@ -5870,7 +7905,7 @@ Our Mission:<br>
      <br>	 
 	 
 	 <!-- onclick="MoveAnimate('-upcoming-updates')"-->
-	 <img id="upcoming-updates" class="upcoming-updates" src="adv.tutorials/images/Capture10.PNG" style="width: 100%;cursor: pointer"/>
+	 <img title="Current version of The Core" alt="Current version of The Core" id="upcoming-updates" class="upcoming-updates" src="http://www.localhost/adv.tutorials/images/didcy-3.png" style="width: 100%;cursor: pointer"/>
 	 
 	 <br/>
 	 <br/>
@@ -5879,11 +7914,11 @@ Our Mission:<br>
 	 <br>
 	 
 	 <!-- onclick="MoveAnimate('upcoming-updates')"-->
-	 <img id="upcoming-updates" class="upcoming-updates" src="adv.tutorials/images/Capture261.PNG" style="width: 100%;cursor: pointer"/>
+	 <img title="Upcoming version of The Core" alt="Upcoming version of The Core" id="upcoming-updates" class="upcoming-updates" src="http://www.localhost/adv.tutorials/images/Capture261.PNG" style="width: 100%;cursor: pointer"/>
 	 <br>
 	 <br>
 	 <p style="color: white">For more info on didcy design updates centre, please kindly visit 
-	 <a id="design-update-centre" class="cookie-full-mode-link" href="" alt="" title="" target="">https://www.didcy.com/didcy-design-updates-centre</a>. Thank you.</p> 
+	 <a id="design-update-centre" class="cookie-full-mode-link" href="http://www.localhost/didcy-design-updates-centre.php" alt="Didcy Updates" title="Didcy Updates" target="_blank">http://www.localhost/didcy-design-updates-centre</a>. Thank you.</p> 
 	 <br>
 	 <br>
    <!-- <img src="" id="upcoming-updates" class="upcoming-updates" alt=""/> -->
@@ -5913,8 +7948,8 @@ Our Mission:<br>
 	 <li style="color: white;cursor: pointer" id="enki" onclick="MoveAnimate('enki')">Ernest Kofi</li>
 	</ol>	 
 	<p>For more info on each of our Mentors, kindly visit 
-	<a id="mentors-know-more" href="https://www.didcy.com/mentors/know-more" alt="" title="" target="">
-	https://www.didcy.com/mentors/know-more</a></p>
+	<a id="mentors-know-more" href="http://www.localhost/policy-error.htm" alt="Know more about our Mentors" title="Know more about our Mentors" target="_blank">
+	http://www.localhost/mentors/know-more</a></p>
 	</p>
 	</p>
   </div>
@@ -6225,24 +8260,24 @@ Our Mission:<br>
   
   <div class="rater" id="rater">
 
-   <h5>A system without rating is <img src="download (11).jpg" class="emo-img" id="emo-img" alt=""/></h5>
+   <h5>A system without rating is <img src="download (11).jpg" class="emo-img" id="emo-img" title="Use DidcyRate to find out more about our value" alt="Use DidcyRate to find out more about our value"/></h5>
    
    
   <div class="emoji-container">
    <div class="emoji-content">
-    <img class="emoji fix" src="emojis/742752.png" title="Bad"/>
+    <img title="I feel bad about Didcy. So rate Bad" alt="I feel bad about Didcy. So rate Bad" class="emoji fix" src="emojis/742752.png" title="Bad"/>
    </div>
    <div class="emoji-content">
-    <img class="emoji fix" src="emojis/743287.png" title="Very Bad"/>
+    <img title="I feel very bad about Didcy. So rate Very Bad" alt="I feel very bad about Didcy. So rate Very Bad" class="emoji fix" src="emojis/743287.png" title="Very Bad"/>
    </div>
    <div class="emoji-content">
-    <img class="emoji" src="emojis/742751.png" title="Good"/>
+    <img class="emoji" title="I feel good about Didcy. So rate Good" alt="I feel good about Didcy. So rate Good" src="emojis/742751.png" title="Good"/>
    </div>
    <div class="emoji-content">
-    <img class="emoji" src="emojis/743267.png" title="Very Good"/>
+    <img class="emoji" title="I feel very good about Didcy. So rate Very Good" alt="I feel very good about Didcy. So rate Good" src="emojis/743267.png" title="Very Good"/>
    </div>
    <div class="emoji-content">
-    <img class="emoji fix" src="emojis/2584606.png" title="Excellent"/>
+    <img class="emoji fix" title="I feel great about Didcy. So rate Excellent" alt="I feel great about Didcy. So rate Excellent" src="emojis/2584606.png" title="Excellent"/>
    </div>
    <!-- <p>Class me</p> -->
   </div>
@@ -6266,20 +8301,18 @@ Our Mission:<br>
         <h3 id="gaga-text-header" class="gaga-text-header">Text Tutorials</h3>
 		<h3 class="how-to-didcy"><u><b>How to Subscribe</b></u></h3>
 		<p  id="didcy-how-to-subscribe-text-tutorials" class="didcy-how-to-subscribe-text-tutorials">
-         Welcome to  Didcy.com, the place  where all actors(esp. ad), groups, companies and ads are closely monitored and 
-		 provided with the best of all our essential products and services. Didcy makes it much easier to do business
-		 efficiently for the first time in the last decades. 
+         Welcome to  Didcy.com, the place  where <b><i>space</i></b> starts everything.
 		 <br>Didcy has provided it's members with a much more simpler way of navigating through it's intiutive, unmatched
 		 and comprehensive ad platform. Didcy is basically an <q>ad platform with the core mission of servicing
 		 any entity related to ads.</q>
 		 With Didcy, a member needs only a computer, internet and a web browser with the appropriate directions to our platform.
 		 <q>Didcy is a web-based platform.</q> <br/>Alert!!! Please always check the URL in your web browser to confirm if the URL matches
-		 <a href="https://www.didcy.com" alt="" title="" target="_blank">https://www.didcy.com.</a>. Thank you.
+		 <a href="http://www.localhost" alt="" title="" target="_blank">http://www.localhost.</a>. Thank you.
 		 <br>The following steps gives comprehensive details about how to subscribe to Didcy Web or Stand Package. 
 		 <br/>This is how to subsribe to Didcy.com if you have an account or you are new to our platform. <br>These are steps to show you how to subscribe: 
 		 <br/>Let's jump right into it. 
 		 <br><strong><u>Step 1:</u></strong> Get your computer, connect to the internet, open your web browser (eg. Google Chrome) and enter inside the URL : 
-		 <em><a href="https://www.didcy.com" alt="" title="" target="_blank">https://www.didcy.com.</a></em>
+		 <em><a href="http://www.localhost" alt="" title="" target="_blank">http://www.localhost.</a></em>
 		 <br><br><strong><u>Step 2:</u></strong> If you are new on our platform,to be able to subscribe you have to sign up for a Didcy account
 		 <br><br><strong><u>Step 3:</u></strong> To do that, press on the sign up or  sign in button at the top right corner of the sign up or in page.
 		 <br><br><strong><u>Step 4:</u></strong> Type in the information about yourself or the company.
@@ -6299,31 +8332,31 @@ Our Mission:<br>
 	  
     <div class="column-31 add-more-2 didcy-how-to-subscribe-2" title="Click on each image to view it bigger">
 	  <h3 class="image-tutorial-header">Image Tutorials</h3>
-      <img id="img-tutorial-1-subscribe" src="adv.tutorials/images/Capture.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-2-subscribe" src="adv.tutorials/images/Capture1.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-3-subscribe" src="adv.tutorials/images/Capture2.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-4-subscribe" src="adv.tutorials/images/Capture3.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-5-subscribe" src="adv.tutorials/images/Capture4.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-6-subscribe" src="adv.tutorials/images/Capture5.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-7-subscribe" src="adv.tutorials/images/Capture6.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-8-subscribe" src="adv.tutorials/images/Capture7.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-9-subscribe" src="adv.tutorials/images/Capture8.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-10-subscribe" src="adv.tutorials/images/Capture9.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-11-subscribe" src="adv.tutorials/images/Capture10.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-12-subscribe" src="adv.tutorials/images/Capture27.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-13-subscribe" src="adv.tutorials/images/Capture29.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-14-subscribe" src="adv.tutorials/images/Capture28.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-15-subscribe" src="adv.tutorials/images/Capture26.PNG" style="width: 100%;padding-bottom: 5px;"/>
-      <img id="img-tutorial-16-subscribe" src="adv.tutorials/images/Capture25.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-1-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-2-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" title="Didcy Image under Image Tutorial of Subscription" src="http://www.localhost/adv.tutorials/images/Capture1.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-3-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture2.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-4-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture3.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-5-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture4.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-6-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture5.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-7-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture6.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-8-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture7.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-9-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture8.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-10-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture9.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-11-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture10.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-12-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture27.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-13-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture29.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-14-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture28.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-15-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture26.PNG" style="width: 100%;padding-bottom: 5px;"/>
+      <img id="img-tutorial-16-subscribe" title="Didcy Image under Image Tutorial of Didcy Subscription" alt="Didcy Image under Image Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/images/Capture25.PNG" style="width: 100%;padding-bottom: 5px;"/>
     </div>
 
     <div class="column-31 add-more-2 didcy-how-to-subscribe-3" title="Click on each video to view it bigger">
 	  <h3 class="video-tutorial-header">Video Tutorials</h3>
-      <video controls=true id="video-tutorial-1-subscribe" src="adv.tutorials/videos/1.mp4" style="width: 100%;padding-bottom: 5px;"></video>
-      <video controls=true id="video-tutorial-2-subscribe"src="adv.tutorials/videos/2.mp4" style="width: 100%;padding-bottom: 5px;"></video>
-      <video controls=true id="video-tutorial-3-subscribe"src="adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
-      <video controls=true id="video-tutorial-4-subscribe"src="adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
-      <video controls=true id="video-tutorial-5-subscribe"src="adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
+      <video controls=true id="video-tutorial-1-subscribe" title="Didcy Video under Video Tutorial of Didcy Subscription" alt="Didcy Video under Video Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/videos/1.mp4" style="width: 100%;padding-bottom: 5px;"></video>
+      <video controls=true id="video-tutorial-2-subscribe" title="Didcy Video under Video Tutorial of Didcy Subscription" alt="Didcy Video under Video Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/videos/2.mp4" style="width: 100%;padding-bottom: 5px;"></video>
+      <video controls=true id="video-tutorial-3-subscribe" title="Didcy Video under Video Tutorial of Didcy Subscription" alt="Didcy Video under Video Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
+      <video controls=true id="video-tutorial-4-subscribe" title="Didcy Video under Video Tutorial of Didcy Subscription" alt="Didcy Video under Video Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
+      <video controls=true id="video-tutorial-5-subscribe" title="Didcy Video under Video Tutorial of Didcy Subscription" alt="Didcy Video under Video Tutorial of Didcy Subscription" src="http://www.localhost/adv.tutorials/videos/3.mp4" style="width: 100%;padding-bottom: 5px;"></video>
     </div>
 	
   </div>  
@@ -6334,7 +8367,7 @@ Our Mission:<br>
 
 <!--0000000000000000-->
 
-<div id="myModal-11" class="modal-11">
+<div id="myModal-11" class="modal-11" style="background-color: rgba(0, 0, 0, 0.5)">
   <span class="close-11" id="close-11">&times;</span>
   
 	<h2 class="gaga-relate">Didcy Newsletters</h2>
@@ -6343,7 +8376,8 @@ Our Mission:<br>
 	  <div class="container-newsletter">
 		<h2 class="glower">Subscribe to our Newsletters</h2>
 		<p>Subscribing to our newsletters makes it possible to be the first 
-		of all your competitors to see what's making the industry go crazy. Make it a priority to subscribe, so you can have unlimited
+		to get notified of all our latest products and services instantly. 
+		Make it a priority to subscribe, so you can have unlimited
 		updates. Your industry, Your Life. Thank you.</p>
 	  </div>
 
@@ -6443,6 +8477,8 @@ Our Mission:<br>
   </div>
   </div>
   
+  <p style="color: white;text-align: center"><b>
+  GD: Good; VG: Very Good; BD: Bad; VB: Very Bad; ET: Excellent</b></p>
   <h3 class="didcy-rate-n-a">Didcy Rate is <b>BEST</b></h3>
   <div id="caption-6" class="caption-6">Didcy Rate</div>
 </div>
@@ -6450,7 +8486,7 @@ Our Mission:<br>
 
 <div class="select-display-type-modal" id="select-display-type-modal">
   <span class="close-select-display-type-modal" id="close-select-display-type-modal">&times;</span>
-  <h2 style="color: white;text-align: center" class="page-content" id="page-content">Please select your page content</h2>
+  <h2 style="color: white;text-align: center" class="page-content" id="page-content">Please select AdCloud Type</h2>
   <div class="modal-content-select-display-type-modal">
   <div class="row">
   <div class="column-" id="column">  <!--& Groups -->
@@ -6475,10 +8511,679 @@ Our Mission:<br>
  
 </div> -->
 
- 
-<div id="adv-files-showcase" class="row">
+   <div id="id012-in-dbox" class="w3-modal id012 id012-in-dbox" style="z-index:1.2;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.8)">
+    <div style="border-radius:8%;" class="w3-modal-content w3-animate-top w3-card-4 id012-inner-box" id="contact-media-container-in-box">
+      <header class="w3-container w3-black">
+        <span onclick="document.getElementById('id012-in-dbox').style.display='none'" 
+        class="w3-button w3-display-topright close-id02">&times;</span>
+        <h2 style="text-align: center">See creatives &darr;</h2>
+      </header>
+      <div class="w3-container contact-media row" id="contact-media-in-dbox">
+
+	  </div>
+      <!--<footer class="w3-container w3-black id012-ft">
+        <p>Find out more about us here <a href="http://www.localhost/more.php" alt="Didcy More Info" target="_blank" title="">http://www.localhost/more</a></p>
+      </footer>-->
+    </div>
+  </div>
+
+   <div id="didcy-platforms-offer" class="w3-modal didcy-platforms-offer" style="background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.8)">
+    <div style="border-radius:8%;" class="w3-modal-content w3-animate-left w3-card-4 id012-inner-box" id="contact-media-container-in-box">
+      <header class="w3-container w3-blue">
+        <span class="w3-button w3-display-topright close-id02 close-didcy-platforms-offer" id="close-didcy-platforms-offer">&times;</span>
+        <h2 class="welcome-to-platform-offer" id="welcome-to-platform-offer" style="text-align: center">Welcome to Didcy</h2>
+      </header>
+      <div class="w3-container contact-media" id="">
+       <p style="color: black;font-size:17px;text-align:center;"><b><i>Hello...</i></b><img alt="Hello Didcer" style="padding-left: 10px" width="50px" title="Hello Didcer" download="" ping="" target="_blank" src="http://www.localhost/waving/download (1).png"/></p>
+	   <p class="space-is-all-yours" style="color: black;text-align:center;"><b><i>The Space is all yours. Start exploring</i></b> <b><i>NOW</i> with</b></p>
+	   <p class="no-1" style="color: black;text-align:center;"><b><i>Your no.1 BEST SPACE PROVIDER</i></b></p>
+	  </div>
+      <!--<footer class="w3-container w3-black id012-ft">
+        <p>Find out more about us here <a href="http://www.localhost/more.php" alt="Didcy More Info" target="_blank" title="">http://www.localhost/more</a></p>
+      </footer>-->
+    </div>
+  </div>
+  
+   <div id="didcy-ad-creators" class="w3-modal didcy-ad-creators" style="background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.8)">
+    <div style="border-radius:8%;" class="w3-modal-content w3-animate-top w3-card-4 id012-inner-box" id="contact-media-container-in-box">
+      <header class="w3-container w3-blue">
+        <span onclick="Reminder()" 
+        class="w3-button w3-display-topright close-id02">&times;</span>
+        <h2 class="notice-2-ad-creators" id="notice-2-ad-creators" style="text-align: center">Didcy Signup Reminder</h2>
+      </header>
+      <div class="w3-container contact-media" id="">
+       <p class="ad-creator-txt" style="color: black;text-align:center;"><b><i>Please all interested ad creator or designer persons or companies should kindly check here when signing up</i></b></p>
+       <p class="ad-creator-txt" style="color: black;text-align:center;line-height:1px;"><b><i>&darr;</i></b></p>
+       <p class="ad-creator-txt" style="color: black;text-align:center;line-height:1px;"><img class="ad-img-reg" src="ad.creator.signup.region.png" alt="Please all interested ad creator or designer persons or companies should kindly check here when signing up" title="Please all interested ad creator or designer persons or companies should kindly check here when signing up" download=""/></p>
+	  </div>
+      <!--<footer class="w3-container w3-black id012-ft">
+        <p>Find out more about us here <a href="http://www.localhost/more.php" alt="Didcy More Info" target="_blank" title="">http://www.localhost/more</a></p>
+      </footer>-->
+    </div>
+  </div>
+
+  <div class="network-detection w3-animate-left" id="network-detection">
+   <p style="color: white" id="netdetection">You're <span id="ndetect" style="font-weight:bold"></span><img id="network-emo" alt="Use DidcyNet to check your network status" title="Use DidcyNet to check your network status" src='' width='20px'/></p>
+  </div>
+  
+  <script>
+    var repeatDetection = 0;
+	function DetectNetworkConnection(){
+		var $networkID = "offline ";
+		let networkEmo = 'download (11).jpg';
+		if(window.navigator.onLine == false && repeatDetection == 0){
+		    document.getElementById("ndetect").innerHTML = $networkID;
+		    document.getElementById("network-emo").src = networkEmo;
+			document.getElementById("network-detection").style.display="block";
+			repeatDetection = 1;
+		}else if(window.navigator.onLine == false && repeatDetection == 1){
+			
+		}else if(window.navigator.onLine == true && repeatDetection == 0){
+			
+		}else if(window.navigator.onLine == true && repeatDetection == 1){
+			$networkID = "now connected. ";
+			networkEmo = 'emojis/743267.png';
+			document.getElementById("network-emo").src = networkEmo;
+			document.getElementById("ndetect").innerHTML = $networkID;
+			document.getElementById("network-detection").style.display="block";
+			document.getElementById("network-detection").style.width="300px";
+			setTimeout(function(){
+				document.getElementById("network-detection").style.display="none";
+				document.getElementById("network-detection").style.width="200px";
+			}, 5000);		
+            repeatDetection = 0;			
+		}
+        
+	}
+
+	setInterval(() => {DetectNetworkConnection();}, 1000);
+	
+  </script>
+  
+<div id="adv-files-showcase" class="row" style="z-index: -1">
+ <h3 class="everything-begins" style="padding-left: 20px;color: dodgerblue;text-align:center"><b><i>With Didcy, everything begins with a space</i></b></h3>
+ <div class="didcy-value-proposition w3-animate-right w3-card-4" id="didcy-value-proposition">
+  <i>It all begins with a space. Start with us <b>Now</b> and get <b style="color: red">free</b> digital spaces for all your products, 
+  files, web apps, websites, and many more. Didcy provides all kind of spaces for all types of digital 
+  activities. 
+  What do you want to cloud, sell, buy, host, develop, grow, produce or get. We got you all covered.  
+  All you need to do is <b><i>JUST DIDCY</i></b>.</i>
+ </div>
+ <div class="didcy-value-proposition-2">
+  <i>We offer our digital spaces(platforms) for absolutely <b>free of charge. No fees. No Charges.</b>
+   Just <b>FREEEEEEE</b>. Try Didcy <b><i>NOW and See where we go from here...</i></b>
+  </i>
+ </div>
+ <div class="didcy-value-proposition-3">
+  <i style="color: dodgerblue">It all begins with a <b>space</b>
+  </i>
+ </div>
+ <div class="didcy-definition-goal">
+   <p class="didcy-def-goal we-def-spaces" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">We define our spaces with your goals</p>
+   <p class="let-get-started-def-goal let-get-ys-2" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">Let's get you Started</p>
+ </div>
+ <div class="column-content column-content-1">
+	 <div class="vid-3939302 col-content" style="padding: 20px;text-align:justify">
+	  <h3 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">Create a space with your goal</h3>
+	  <h5 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">
+	   Creating a space with Didcy gives you more room to consume more with absolutely 
+	   <b><i style="color:red">free</i></b> of charge. No fees. No charges and no credit cards as well including 
+	   mobile money. 
+	   <br><b><i>It's just a space. Why pay for it if you can get it for <b><i style="color:red">free</i></b> from Didcy.</i></b>
+	   <br><b>It's 100% free. Just try it out yourself.</b>
+	  </h5>
+	  <!--<p style="color: black"></p> -->
+       <!--<img src="http://www.localhost/didcy.images/images (12).jfif" alt="" style="width: 100%;height: 300px;"/>	--> 
+       <video title="Create a space with Didcy & keep more" alt="Create a space with Didcy & keep more" src="http://www.localhost/didcy.walls/create-a-space.webm" style="width:100%;height:300px" loop=1 muted=true autoplay=1></video>	   
+ </div>
+ </div>
+ <div class="column-content column-content-2">
+	 <div class="vid-3939302 col-content" style="padding: 20px;text-align:justify">
+	  <h3 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">Fill your space with your creation</h3>
+	  <h5 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">
+       It's now time to start consuming more spaces by making them come to life with all that you've got. Start filling <b><i>NOW</i></b> and 
+	   consume more for <b><i style="color: red">free</i></b>. 
+	   <br>Put Didcy to work now by filling out your new spaces with your all.
+	   <br><b><i>Why create spaces if you won't use them?</i></b>
+	   <br><b><i>Bring them to life NOW</i></b>
+	  </h5>  
+	  <video title="Fill out your space with your creation and start selling them to your users" alt="Fill out your space with your creation and start selling them to your users" src="http://www.localhost/didcy.walls/fill-your-space.webm" style="width:100%;height:300px" loop=1 muted=true autoplay=1></video>
+	 </div>
+ </div>
+ <div class="column-content column-content-3 column-content-3m">
+	 <div class="vid-3939302 col-content" style="padding: 20px;text-align:justify">
+	  <h3 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">Make it yours</h3>
+	  <h5 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">
+       Start making each space on Didcy yours <b><i>NOW</i></b>. There is no time to waste. 
+	   <br><b>Make it yours <i>NOW</i> before someone does.</b>
+	   <br><b><i>Treat your spaces with pride</i></b>
+	  </h5>  
+	  <video title="Start making your target users know it's YOU." alt="Start making your target users know it's YOU." src="http://www.localhost/didcy.walls/make-it-yours.webm" style="width:100%;height:300px" loop=1 muted=true autoplay=1></video>
+  </div>
+ </div>
+  <div class="column-content column-content-3 column-content-3m shape-it-yw">
+	 <div class="vid-3939302 col-content" style="padding: 20px;text-align:justify">
+	  <h3 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">Shape it your way</h3>
+	  <h5 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">
+		It's just a space not a defined object with equal or no equal sizes. Didcy spaces are carefully crafted to meet your needs, so start 
+		making changes to each <b><i>NOW</i></b>.
+		<br><b><i>Shape it your way</i></b>
+		<br><b><i>Remember, it's just a SPACE</i></b>
+	  </h5>  
+	  <video title="Shape your story to fit your users needs" alt="Shape your story to fit your users needs" src="http://www.localhost/didcy.walls/shape-it-your-way.webm" style="width:100%;height:300px" loop=1 muted=true autoplay=1></video>
+ </div>
+ </div>
+<!-- <div class="column-content col-expand">
+	 <div class="vid-3939302 col-content" style="padding: 20px;text-align:justify">
+	  <p style="color: black">Our Privacy Policy governs your visit to <b>didcy.com</b>, and explains how we collect, safeguard and disclose information that results from your use of our Service.</p>  
+	  <p style="color: black">Our Privacy Policy governs your visit to <b>didcy.com</b>, and explains how we collect, safeguard and disclose information that results from your use of our Service.</p>  
+	  <p style="color: black">Our Privacy Policy governs your visit to <b>didcy.com</b>, and explains how we collect, safeguard and disclose information that results from your use of our Service.</p>  
+</div>
+ </div>-->
+  <div class="column-content column-content-6" style="width: 100%;">
+	 <div class="vid-3939302 col-content" style="box-shadow:0px 0px 0px 0px;text-align:justify">
+	  <h3 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">Make it look right</h3>
+	  <h5 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">
+		Create and make it look good to your users, clients, customers or consumers. It's all in the design.
+		<br>Just go into your toolbox and make it look like in your imagination.
+		<br><b><i>Just make it clear &amp; focus</i></b>
+	  </h5>  
+	  <video title="Know your users and make it right from there" alt="Know your users and make it right from there" src="http://www.localhost/didcy.walls/make-it-right.webm" style="width:100%;height:300px" loop=1 muted=true autoplay=1></video>
+	 </div>
+ </div>
+ <div class="column-content column-content-1">
+	 <div class="vid-3939302 col-content" style="padding: 20px;text-align:justify">
+	  <h3 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">It looks good to us</h3>
+	  <h3 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">Just make it look more unique</h3>
+	  <h5 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">
+        We care, we like and we know but do they care as much as <b>YOU</b> and us do. Your clients, users, customers or consumers.
+		<br>They only need you to be <b><i>100%</i></b> unique from your competitors, so give them what they want if you want to keep them forever.
+		<br>It all comes down to <b><i>YOUR UNIQUENESS</i></b>.
+		<br><b>Start making it your <i>no.1</i> priority.</b> 
+		<br><b><i>Start NOW &amp;</i></b> <b><i>make them feel it</i></b>.
+	  </h5>  
+	  <video title="Focus all your designs on uniqueness" alt="Focus all your designs on uniqueness" src="http://www.localhost/didcy.walls/just-unique.webm" style="width:100%;height:300px" loop=1 muted=true autoplay=1></video>
+ </div>
+ </div>
+  <div class="column-content column-content-5">
+	 <div class="vid-3939302 col-content" style="padding: 20px;text-align:justify">
+	  <h3 class="create-a-space" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">We'll take it from here...</h3>
+	   <!--<p style="color: black"></p> --> 
+       <img title="Just focus and do the above and we'll take from there" alt="Just focus and do the above and we'll take from there" src="http://www.localhost/didcy.images/images.jfif" alt="" style="width: 100%;height: 300px;"/>	   
+	 </div>
+ </div>
+ <div class="column-content column-content-3 column-content-3m">
+	 <div class="vid-3939302 col-content" style="padding: 20px;text-align:justify">
+	  <h3 style="color:red">Who we are? </h3>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   We are a whole new generation of space providers where we provide spaces to users so that they can cloud, host, build, exhibit and 
+	   do more. Our space provision is defined in the form of individual platforms with each 
+	   performing different digital tasks for it's users. We have so much to provide to you, so 
+	   make a quick visit to Didcy <b><i>NOW</i></b> and you will never regret making that visit.
+	  </p>
+	  <!--<p style="color: black"></p> -->
+ </div>
+ </div>
+ <div class="column-content column-content-3 column-content-3m">
+	 <div class="vid-3939302 col-content" style="padding: 20px;text-align:justify">
+	  <h3 style="color:red">What we are? </h3>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   We are a platform dedicated to making sure that every internet user is well received &amp; fed with enough space to do more digital activities 
+	   at absolutely no cost. We make sure our business stays with free spaces.
+	  </p>
+ </div>
+ </div>
+ <div class="column-content column-content-3 column-content-3m our-mission-col">
+	 <div class="vid-3939302 col-content" style="padding: 20px;text-align:justify">
+	  <h3 style="color:red">Our mission </h3>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>
+ </div>
+ </div>
+</div>
+
+<div class="list-spaces-offered" style="position:relative">
+ <h2 class="list-spaces-below" style="text-align:center;"><b><i style="color: red;">See our space offers below...</i></b></h2>
+ <div class="row">
+  <div class="column col-box col-box-t1 col-ft1 col-new-height" id="col-new-height">
+    <div class="container-offers">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">CloudMyAdS</i></b></h4>
+	  <p class="create-a-space" style="font-weight:bolder;text-align: justify;color:black">
+	   Use CloudMyAdS to 
+	  </p>   
+	   <ol type="1">
+	    <li style="color: black">Cloud(not advertize) your ad creatives safely until you need it/them for publishing or advertizing.</li>
+	    <br><li style="color: black">Keep backup of your ad creatives in case of any future system crashes or failures on your local workstation(s)/computer(s).</li>
+	    <br><li style="color: black">View your clouded ads and other users public ads</li>
+	    <br><li style="color: black">Download your clouded ads and other users public ads</li>
+	    <br><li style="color: black">Get notified of other users ad creatives and see how creative they are.</li>
+	    <br><li style="color: black">Notify others of your public ads and see how they react to your creatives.</li>
+	    <br><li style="color: black">Obtain static versions of your video creatives using ExtractAPI</li>
+	   </ol>
+	   <p class="kindly-subscribe-n" style="color: blue;text-align:justify">Kindly subscribe to our newsletters for more feature updates. 
+	   Try not to miss any of them. Thank you.</p>	  
+  </div>    
+  </div>    
+  <div class="column col-box col-box-t1 col-st1 col-new-height" id="col-new-height">
+   <div class="container-offers">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">WebSpace</i></b></h4>
+	   <p class="create-a-space" style="text-align: justify;color:black;font-weight:bolder">
+	   Start selling or exhibiting your WebApps for deployment on Didcy WebSpace.</p>
+	   <p class="create-a-space" style="text-align: justify;color:black;font-weight:bolder">
+	   Get users to start using your WebApps directly from Didcy through its easy to find WebSpace.</p>
+	   <p class="create-a-space" style="text-align: justify;color:black;font-weight:bolder">
+	   WebSpace features 
+	  </p>     
+	  <ol type="1">
+	   <li style="color: black">Developer Portal(Developer Registration Form)</li>
+	   <br><li style="color: black">Smile(Developer Room/Dashboard)</li>
+	   <br><li style="color: black">WebSpace Market(DidcyFix)</li>
+	  </ol>
+	  <p class="kindly-subscribe-n" style="color: blue;text-align:justify;">Kindly subscribe to our newsletters for more feature updates. 
+	  Try not to miss any of them. Thank you.</p>	  
+  </div>  
+  </div>  
+  <div class="column col-box col-box-t1 col-box-t1-50-marg col-new-height" id="col-new-height">
+   <div class="container-offers">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">BookSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black;font-weight:bolder">
+	   Use BookSpace to start selling your Books to target readers. 
+	  </p>     
+	  <p class="create-a-space" style="text-align: justify;color:black;font-weight:bolder">
+	   Make your time see value by using BookSpace. 
+	  </p>  
+	  <p class="create-a-space" style="text-align: justify;color:black;font-weight:bolder">
+	   It's 99.9% free to sell your Books on.
+	  </p>  
+	  <p class="create-a-space" style="text-align: justify;color:black;font-weight:bolder">
+	   BookSpace comes with the following features to make you see real value and ease of selling.
+	  </p> 
+	  <p class="create-a-space" style="text-align: justify;color:black;font-weight:bolder">
+	   BookSpace features 
+	  </p>	  
+	  <ol type="1">
+       <li style="color:black">BookSpace Registration or Login Account</li>
+	   <br><li style="color:black">BookSpace Seller &amp; Buyer Dashboard/Room</li>
+	   <br><li style="color:black">Seller-Buyer Singular attribute integration  for only seller account.(Only Seller can possess
+	   this attribute).</li>
+	  </ol>
+	  <p class="kindly-subscribe-n" style="color: blue;text-align:justify;">Kindly subscribe to our newsletters for more feature updates. 
+	  Try not to miss any of them. Thank you.</p>	  	  
+  </div>
+  </div>
+  <!--2 row-->
+  <div class="column col-box col-box-t1 col-box-t1-50-marg col-box-t1-ls space-display-none">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">RTCSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>     
+  </div>  
+  <div class="column col-box space-display-none">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">TradeSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>     
+  </div>  
+  <div class="column col-box space-display-none">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">CourseSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>     
+  </div>
+  <!--3 row-->
+  <div class="column col-box space-display-none">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">AdExSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>     
+  </div>  
+  <div class="column col-box space-display-none">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">CrymSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>     
+  </div>  
+  <div class="column col-box space-display-none">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">PickSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>     
+  </div>
+  <!--2 row-->
+  <div class="column col-box space-display-none">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">SoundSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>     
+  </div>  
+  <div class="column col-box space-display-none">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">BetSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>     
+  </div>  
+  <div class="column col-box space-display-none">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">NewsSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>     
+  </div>
+  <div class="column col-box space-display-none">
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">HostSpace</i></b></h4>
+	  <p class="create-a-space" style="text-align: justify;color:black">
+	   Our mission is to get everybody the required amount of digital space they need to execute their digital activities flawlessly at 
+	   absolutely no cost. No fees. No charges. Just <b><i style="color: red">FREEEEEEEEEE</i></b>
+	  </p>     
+  </div>
+ </div>
+ </div>
+</div>
+
+<div class="didcy-features">
+<h2 class="what-you-need-to-know" style="color: dodgerblue;text-align:center;margin-top: 2%;"><b>
+Didcy Spaces </b></h2>
+<p style="color: dodgerblue;text-align:center;font-weight:bolder;font-size:35px;">&darr;</p>
+</div>
+<div class="slide-containerf">
+<div class="slideshow-containerf">
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="Use CloudMyAds to store your ads for later advertizing" alt="Use CloudMyAds to store your ads for later advertizing" src="http://www.localhost/adv.tutorials/images/didcy-1a.PNG" style="width:100%">
+  <div class="textf">CloudMyAds</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="Use CloudMyAds to store your ads for later advertizing" alt="Use CloudMyAds to store your ads for later advertizing" src="http://www.localhost/adv.tutorials/images/didcy-1b.PNG" style="width:100%">
+  <div class="textf">CloudMyAds</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-20.PNG" style="width:100%">
+  <div class="textf">WebSpace</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-21.PNG" style="width:100%">
+  <div class="textf">WebSpace</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-26.PNG" style="width:100%">
+  <div class="textf">WebSpace</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-24.PNG" style="width:100%">
+  <div class="textf">WebSpace</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="The Global BookSpace is growing everyday & we can help you grow yours as well" alt="The Global BookSpace is growing everyday & we can help you grow yours as well" src="http://www.localhost/adv.tutorials/images/didcy-9.png" style="width:100%">
+  <div class="textf">BookSpace</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="The Global BookSpace is growing everyday & we can help you grow yours as well" alt="The Global BookSpace is growing everyday & we can help you grow yours as well" src="http://www.localhost/adv.tutorials/images/didcy-10.png" style="width:100%">
+  <div class="textf">BookSpace</div>
+</div>
+
+<a class="prevf" onclick="plusSlidesf(-1)">❮</a>
+<a class="nextf" onclick="plusSlidesf(1)">❯</a>
 
 </div>
+<br>
+
+<div style="text-align:center">
+  <span class="dotf" onclick="currentSlidef(1)"></span> 
+  <span class="dotf" onclick="currentSlidef(2)"></span> 
+  <span class="dotf" onclick="currentSlidef(3)"></span> 
+  <span class="dotf" onclick="currentSlidef(4)"></span> 
+  <span class="dotf" onclick="currentSlidef(5)"></span> 
+  <span class="dotf" onclick="currentSlidef(6)"></span> 
+  <span class="dotf" onclick="currentSlidef(7)"></span> 
+  <span class="dotf" onclick="currentSlidef(8)"></span> 
+</div>
+</div>
+
+<div class="didcy-features">
+<h2 class="what-you-need-to-know" style="color: dodgerblue;text-align:center;margin-top: 2%;"><b>
+Learn Didcy Spaces with ease </b></h2>
+<p style="color: dodgerblue;text-align:center;font-weight:bolder;font-size:35px;">&darr;</p></div>
+<div class="slide-containervf" style="background:white">
+<div class="slideshow-containervf">
+
+<div class="mySlidesvf fadevf">
+  <div class="numbertextvf"></div>
+  <video title="Use CloudMyAds to store your ads for later advertizing" alt="Use CloudMyAds to store your ads for later advertizing" src="http://www.localhost/adv-silent-wall/screen-capture (14).webm" style="width:100%"></video>
+  <div class="textvf">CloudMyAds</div>
+</div>
+
+<div class="mySlidesvf fadevf">
+  <div class="numbertextvf"></div>
+  <video title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv-silent-wall/screen-capture (13).webm" style="width:100%"></video>
+  <div class="textvf">WebSpace</div>
+</div>
+
+<!-- <div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-20.PNG" style="width:100%">
+  <div class="textf">WebSpace</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-21.PNG" style="width:100%">
+  <div class="textf">WebSpace</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-26.PNG" style="width:100%">
+  <div class="textf">WebSpace</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-24.PNG" style="width:100%">
+  <div class="textf">WebSpace</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="The Global BookSpace is growing everyday & we can help you grow yours as well" alt="The Global BookSpace is growing everyday & we can help you grow yours as well" src="http://www.localhost/adv.tutorials/images/didcy-9.png" style="width:100%">
+  <div class="textf">BookSpace</div>
+</div>
+
+<div class="mySlidesf fadef">
+  <div class="numbertextf"></div>
+  <img title="The Global BookSpace is growing everyday & we can help you grow yours as well" alt="The Global BookSpace is growing everyday & we can help you grow yours as well" src="http://www.localhost/adv.tutorials/images/didcy-10.png" style="width:100%">
+  <div class="textf">BookSpace</div>
+</div>
+ -->
+<a class="prevvf" onclick="plusSlidesvf(-1)">❮</a>
+<a class="nextvf" onclick="plusSlidesvf(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dotvf" onclick="currentSlidevf(1)"></span> 
+  <span class="dotvf" onclick="currentSlidevf(2)"></span> 
+<!--   <span class="dotf" onclick="currentSlidef(3)"></span> 
+  <span class="dotf" onclick="currentSlidef(4)"></span> 
+  <span class="dotf" onclick="currentSlidef(5)"></span> 
+  <span class="dotf" onclick="currentSlidef(6)"></span> 
+  <span class="dotf" onclick="currentSlidef(7)"></span> 
+  <span class="dotf" onclick="currentSlidef(8)"></span>  -->
+</div>
+</div> 
+
+<div class="space-updates"><!--Watch out for more addition-->
+  More Spaces coming your way...
+</div>
+
+<div class="didcy-brief-video">
+  <h2 class="what-you-need-to-know" style="color: red;text-align:center;margin-top: 2%;"><b><i>What you need to know to get started</i></b></h2>
+  <p style="color: red;text-align:center;font-weight:bolder;font-size:35px;">&darr;</p>
+  <!--<div class="didcy-brf-video">
+   <video src="https://www.youtube.com/watch?v=kFPjKiTC3Tg" alt="" title="" width="100%" class="didcy-brf-rvideo"></video>
+  </div>-->
+</div>
+
+<div class="responsiveRapper">
+	<iframe width="560" height="315"
+	src="https://www.youtube.com/embed/5H51CsRKjIo" frameborder="0" allowfullscreen>
+	</iframe>
+</div>
+
+<!-- Slideshow container -->
+<div class="slideshow-container-testimonials col-box-top">
+
+  <!-- Full-width images with number and caption text -->
+  <h3 class="others-testimonials" style="color: dodgerblue;font-style:italic;text-align:center">Read others testimonials...</h3>
+  <div class="mySlides-testimonials fade-testimonials">
+    <!-- <div class="numbertext">1 / 3</div> -->
+    <img title="David Ansong" alt="David Ansong" src="developers/ceo.jpeg" class="testimonials-photo">
+	<div class="testimonials" width="50%">
+	 <p class="testimonials" style="color: black;text-align:center;font-style:italic">
+	   I love Didcy, not because I am the CEO but because it's a great tool and most importantly free to use. 
+	   We taught it wouldn't be possible to make this incredible platform free to every user but because we do 
+	   care about our users we were able to deduce it to absolute freedom. Try it out yourself NOW
+	 </p>
+	</div>
+    <!-- <div class="text">Caption Text</div> -->
+  </div>
+
+  <div class="mySlides-testimonials fade-testimonials">
+    <!-- <div class="numbertext">2 / 3</div> -->
+    <img title="Dieubeni Doubalet" alt="Dieubeni Doubalet" src="http://www.localhost/developers/ta.jpg" class="testimonials-photo">
+	<div class="testimonials" width="50%">
+	 <p class="testimonials" style="color: black;text-align:center;font-style:italic">
+	   <b>I am Dieubeni Doubalet</b> and I encourage you to try Didcy out yourself because it provides real value. It's being 
+	   a great tool to me and to the people around me. It's helped me keep more of my time and money for other 
+	   necessities. I love Didcy because it's the way forward.
+	 </p>
+	</div>
+    <!-- <div class="text">Caption Two</div> -->
+  </div>
+
+  <div class="mySlides-testimonials fade-testimonials">
+    <!-- <div class="numbertext">3 / 3</div> -->
+    <img title="Alex Sanchez" alt="Alex Sanchez" src="http://www.localhost/developers/na.png" class="testimonials-photo">
+	<div class="testimonials" width="50%">
+	 <p class="testimonials" style="color: black;text-align:center;font-style:italic">
+	  <b>The name is Alex Sanchez</b> and this is the platform I recommend to everyone. I have being using 
+	  Didcy ever since it's first version came to light. It's being a great tool to solving most of my 
+	  digital problems. I encourage you to try it out because it provides great value.
+	 </p>
+	</div>
+    <!-- <div class="text">Caption Three</div> -->
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev-testimonials" onclick="plusSlidesTestimonials(-1)">&#10094;</a>
+  <a class="next-testimonials" onclick="plusSlidesTestimonials(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot-testimonials" onclick="currentSlideTestimonials(1)"></span>
+  <span class="dot-testimonials" onclick="currentSlideTestimonials(2)"></span>
+  <span class="dot-testimonials" onclick="currentSlideTestimonials(3)"></span>
+</div>
+
+ <div class="didcy-definition-def">
+   <p class="didcy-def-goal def-way" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">Define it your way</p>
+   <p class="let-get-started-def-goal def-way-p" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">It's all in your creation</p>
+   <p class="let-get-started-def-goal def-way-p" style="text-align:center;color:rgba(20, 20, 100, 1);font-weight:bold">Just bring it out</p>
+ </div>
+
+ <div class="didcy-definition-def" style="height: 100px">
+   <h2 class="didcy-def-goal" id="didcy-just-waiting" style="text-align:center;color:red;font-weight:bold">Just waiting...</h2>
+ </div>
+
+
+   <script type="text/javascript">
+     "use strict";
+	 var welcome = "Welcome to Didcy";
+	 var justwaiting = "Just waiting...";
+	 var wely = "";
+	 var wely2 = "";
+	 var iy = 0;
+	 var iy2 = 0;
+	 var ssleep = 1000;
+	 var ssleep2 = 1000;
+	 var reminderClick = 0;
+	async function sleepMode5(sleep_time = 300000, sleep_caller = null){
+			 while(false != true){ //181000 - 3mins 1s 301000 - 5mins 01s 61000 - 1mins 1s
+       
+				 await sleep(200);
+				 if(wely.length == welcome.length){ //121000; 300000 - 5mins 60000 - 1mins 180000 - 3mins
+				    document.getElementById("open-write-text").innerHTML = "";
+				    iy = 0;
+					wely = "";
+				    return sleepMode5();
+				 }else{
+			 		 wely += welcome[iy];
+					 iy++;
+					 document.getElementById("open-write-text").innerHTML = wely;
+					 window.ssleep = window.ssleep + 1000;
+				 }
+			 }
+	}
+
+	async function sleepMode51(sleep_time = 300000, sleep_caller = null){
+			 while(false != true){ //181000 - 3mins 1s 301000 - 5mins 01s 61000 - 1mins 1s
+       
+				 await sleep(200);
+				 if(wely2.length == justwaiting.length){ //121000; 300000 - 5mins 60000 - 1mins 180000 - 3mins
+				    document.getElementById("didcy-just-waiting").innerHTML = "";
+				    iy2 = 0;
+					wely2 = "";
+				    return sleepMode51();
+				 }else{
+			 		 wely2 += justwaiting[iy2];
+					 iy2++;
+					 document.getElementById("didcy-just-waiting").innerHTML = wely2;
+					 window.ssleep2 = window.ssleep2 + 1000;
+				 }
+			 }
+	}
+
+
+   sleepMode51();
+	function Reminder(){
+		document.getElementById('didcy-ad-creators').style.display='none';
+		if(reminderClick == 0){
+			setTimeout(function(){
+			   document.getElementById('write').style.display='block';
+			   sleepMode5();
+			   reminderClick = 1;
+			}, 1000);
+		}
+	}
+
+   </script>
 
 <!-- <div id="adv-files-showcase-video-ads" class="row">
 
@@ -6507,33 +9212,33 @@ Our Mission:<br>
 
 <div class="topNavg w3-container ads-nav" id="identity_main_ids" style="background-color: rgba(0, 0, 0, 0.9);z-index: 0;">
 <div class="topnav" id="myTopnav">
-  <!--<a href="https://www.didcy.com" id="didcy" class="didcy didcx">Didcy</a>
-  <a href="https://www.didcy.com" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="adv.icons/1946433.png"/></a>
+  <!--<a href="http://www.localhost" id="didcy" class="didcy didcx">Didcy</a>
+  <a href="http://www.localhost" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="http://www.localhost/adv.icons/1946433.png"/></a>
   -->
   <div class="dropdown">
     <button title="hey you, this is what your competitors are upto" class="drop-down-ads dropbtn drop">
-      <img class="iconic" src="adv.icons/3256216.png"/><!-- download(25).jpg -->
+      <img alt="hey you, this is what your competitors are upto" title="hey you, this is what your competitors are upto" class="iconic" src="http://www.localhost/adv.icons/3256216.png"/><!-- download(25).jpg -->
     </button>
   </div> 
 <div class="dropdown">
     <button title="Yeah we found it. Just eavedrop &darr;" class="drop-down-ads dropbtn drop">
-      <img class="iconic" src="adv.icons/3631153.png"/><!-- download(22).jpg -->
+      <img alt="Yeah we found it. Just eavedrop &darr;" title="Yeah we found it. Just eavedrop &darr;" class="iconic" src="http://www.localhost/adv.icons/3631153.png"/><!-- download(22).jpg -->
     </button>
   </div> 
   <div class="dropdown">
     <button class="contacting dropbtn" id="drop-down-ads contacts-links-create drop">
-      <img class="iconic" src="adv.icons/4213179.png"/><!-- download(13).jpg -->
+      <img title="Contact Didcy with DidcyContacts and get full 24/7 support" alt="Contact Didcy with DidcyContacts and get full 24/7 support" class="iconic" src="http://www.localhost/adv.icons/4213179.png"/><!-- download(13).jpg -->
     </button>
   </div> 
   <div class="dropdown"><!--  style="background-color: #555;border-radius: 2px" -->
     <button id="notification-create" class="drop-down-ads currenting dropbtn notification drop"><span class="badge">0</span>
-      <img class="iconic" src="adv.icons/1156949.png"/><!-- images(4).jpg -->
+      <img title="Get notified for more Didcy products & services" alt="Get notified for more Didcy products & services" class="iconic" src="http://www.localhost/adv.icons/1156949.png"/><!-- images(4).jpg -->
     </button>
   </div> 
   <div class="dropdown">
     <input type="search" name="" class="drop-down-ads search-relocate search-engine dropbtn drop" style="cursor: inherit" id="search-engine-create" placeholder="Just guess anything ....">
 	<button onclick="document.getElementById('mini-search').style.display='block'" class="drop-down-ads searching search-pop dropbtn" id="search-board-create" onclick="">
-	<img class="iconic" src="adv.icons/3128287.png"/><!-- download(6).jpg -->
+	<img title="Search for anything on Didcy" alt="Search for anything on Didcy" class="iconic" src="http://www.localhost/adv.icons/3128287.png"/><!-- download(6).jpg -->
 	</button>
   </div>
     <!--<a href="#about" id="links-create" class="linker"> ? </a>-->
@@ -6562,33 +9267,33 @@ Our Mission:<br>
 
 <div class="topNavg w3-container low-level-nav ads-nav" id="identity_main_ids" style="background-color: rgba(0, 0, 0, 0.9);z-index: 0;">
 <div class="topnav" id="myTopnav">
-  <!--<a href="https://www.didcy.com" id="didcy" class="didcy didcx">Didcy</a>
-  <a href="https://www.didcy.com" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="adv.icons/1946433.png"/></a>
+  <!--<a href="http://www.localhost" id="didcy" class="didcy didcx">Didcy</a>
+  <a href="http://www.localhost" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="http://www.localhost/adv.icons/1946433.png"/></a>
   -->
   <div class="dropdown">
     <button title="hey you, this is what your competitors are upto" class="drop-down-ads dropbtn drop">
-      <img class="iconic" src="adv.icons/3256216.png"/><!-- download(25).jpg -->
+      <img class="iconic" src="http://www.localhost/adv.icons/3256216.png"/><!-- download(25).jpg -->
     </button>
   </div> 
   <div class="dropdown">
     <button title="Yeah we found it. Just eavedrop &darr;" class="drop-down-ads dropbtn drop">
-      <img class="iconic" src="adv.icons/3631153.png"/><!-- download(22).jpg -->
+      <img class="iconic" src="http://www.localhost/adv.icons/3631153.png"/><!-- download(22).jpg -->
     </button>
   </div> 
   <div class="dropdown">
     <button class="contacting dropbtn" id="drop-down-ads contacts-links-create drop">
-      <img class="iconic" src="adv.icons/4213179.png"/><!-- download(13).jpg -->
+      <img class="iconic" src="http://www.localhost/adv.icons/4213179.png"/><!-- download(13).jpg -->
     </button>
   </div> 
   <div class="dropdown"><!--  style="background-color: #555;border-radius: 2px" -->
     <button id="notification-create" class="drop-down-ads currenting dropbtn notification drop"><span class="badge">0</span>
-      <img class="iconic" src="adv.icons/1156949.png"/><!-- images(4).jpg -->
+      <img class="iconic" src="http://www.localhost/adv.icons/1156949.png"/><!-- images(4).jpg -->
     </button>
   </div> 
   <div class="dropdown">
     <input type="search" name="" class="drop-down-ads search-relocate search-engine dropbtn drop" style="cursor: inherit" id="search-engine-create" placeholder="Just guess anything ....">
 	<button onclick="document.getElementById('mini-search').style.display='block'" class="drop-down-ads searching search-pop dropbtn" id="search-board-create" onclick="">
-	<img class="iconic" src="adv.icons/3128287.png"/><!-- download(6).jpg -->
+	<img class="iconic" src="http://www.localhost/adv.icons/3128287.png"/><!-- download(6).jpg -->
 	</button>
   </div>
     <!--<a href="#about" id="links-create" class="linker"> ? </a>-->
@@ -6601,26 +9306,26 @@ Our Mission:<br>
 <div class="bottom-level-nav ads-nav" id="bottom-level-nav">
   <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
   <div class="bottom-level-navheader" id="bottom-level-navheader">
-    <img class="iconic" src="adv.icons/3256216.png"/><!-- download(25).jpg -->
+    <img class="iconic" src="http://www.localhost/adv.icons/3256216.png"/><!-- download(25).jpg -->
   </div>
   <div class="dropdown bottom-level-nav-down">
     <button title="Yeah we found it. Just eavedrop &darr;" class="dropbtn drop">
-      <img class="iconic" src="adv.icons/3631153.png"/><!-- download(22).jpg -->
+      <img class="iconic" src="http://www.localhost/adv.icons/3631153.png"/><!-- download(22).jpg -->
     </button>
   </div> 
   <div class="dropdown bottom-level-nav-down">
     <button class="contacting dropbtn" id="contacts-links-create drop">
-      <img class="iconic" src="adv.icons/4213179.png"/><!-- download(13).jpg -->
+      <img class="iconic" src="http://www.localhost/adv.icons/4213179.png"/><!-- download(13).jpg -->
     </button>
   </div> 
   <div class="dropdown bottom-level-nav-down"><!--  style="background-color: #555;border-radius: 2px" -->
     <button id="notification-create" class="currenting dropbtn notification drop"><span class="badge">0</span>
-      <img class="iconic" src="adv.icons/1156949.png"/><!-- images(4).jpg -->
+      <img class="iconic" src="http://www.localhost/adv.icons/1156949.png"/><!-- images(4).jpg -->
     </button>
   </div> 
   <div class="dropdown bottom-level-nav-down">
 	<button onclick="document.getElementById('mini-search').style.display='block'" class="searching-app search-pop-app dropbtn" id="search-board-create-app" onclick="">
-	<img class="iconic" src="adv.icons/3128287.png"/><!-- download(6).jpg -->
+	<img class="iconic" src="http://www.localhost/adv.icons/3128287.png"/><!-- download(6).jpg -->
 	</button>
   </div>
 </div>		
@@ -7654,6 +10359,11 @@ Our Mission:<br>
   </form>
 </div>
 
+<div class="video-content" id="video-content">
+  
+	
+</div>
+
 <script type="text/javascript">
   
   //exhibitEvents(2, null);
@@ -7692,6 +10402,9 @@ Our Mission:<br>
 </div> -->
 
 </div>
+
+<!--<span class="tooltiptext" id="devTooltip">Copy to clipboard</span>-->
+<button class="didcy-keys-btn w3-btn" id="didcy-keys-btn" title="">Keys</button>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
@@ -7738,7 +10451,7 @@ function myFunction() {
 <div class="cookie-accept-use" id="cookie-accept-use">Didcy use cookies to make your experience of our websites better. By using and further navigating this website you accept this. More 
 information about the use of cookies on this website is available by clicking on more information.</div>  
 
-<button type="button" onclick="document.getElementById('cookie-accept').style.display='none'" class="cookie-accept-btn" id="cookie-accept-btn">Accept</button>
+<button type="button" onclick="acceptCookies(1)" class="cookie-accept-btn" id="cookie-accept-btn">Accept</button>
 </div>
 
 <!-- <div class="footer">
@@ -7851,9 +10564,9 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 </script>
  
- <script type="text/javascript" src="adv-chat.js"></script>
- <script type="text/javascript" src="howtogaga.js"></script>
- <script type="text/javascript" src="adv-more.js"></script>
+ <script type="text/javascript" src="http://www.localhost/adv-chat.js"></script>
+ <script type="text/javascript" src="http://www.localhost/howtogaga.js"></script>
+ <script type="text/javascript" src="http://www.localhost/adv-more.js"></script>
  
  <script>
  
@@ -7878,9 +10591,9 @@ for (i = 0; i < toggler.length; i++) {
 }
 </script>
  
- <script type="text/javascript" src="hash.js"></script>
- <script type="text/javascript" script-id="00000000000000000" src="adv-sign-server.js"></script>
- <script type="text/javascript" script-id="000000000000000003" src="adv-it.js"></script>
+ <script type="text/javascript" src="http://www.localhost/hash.js"></script>
+ <script type="text/javascript" script-id="00000000000000000" src="http://www.localhost/adv-sign-server.js"></script>
+ <script type="text/javascript" script-id="000000000000000003" src="http://www.localhost/adv-it.js"></script>
  
 <!-- <script type="text/javascript">
 let drim2 = window.location.href;
@@ -7891,17 +10604,17 @@ getImageFileName(document.getElementById('profile'), drim2.slice(51));//getCooki
 "use strict";
 $(document).ready(function(){
 var didcyLinks = {
-	secure_my_domains: {"id": "secure-my-domains", "link": "https://www.didcy.com/$1_secure_my_domains?rc_id=029910827171820&policy-id=0&&data_id=0&service=0&&drim="},
-	domian_term_of_use: {"id": "domian-term-of-use", "link": "https://www.didcy.com/term_of_use?rc_id=129910827171821&policy-id=0&&data_id=1&service=0&&drim="},
-	term_of_sanction: {"id": "term-of-sanction", "link": "https://www.didcy.com/term_of_sanction?rc_id=229910827171822&policy-id=0&&data_id=2&service=0&&drim="},
+	secure_my_domains: {"id": "secure-my-domains", "link": "http://www.localhost/$1_secure_my_domains?rc_id=029910827171820&policy-id=0&&data_id=0&service=0&&drim="},
+	domian_term_of_use: {"id": "domian-term-of-use", "link": "http://www.localhost/term_of_use?rc_id=129910827171821&policy-id=0&&data_id=1&service=0&&drim="},
+	term_of_sanction: {"id": "term-of-sanction", "link": "http://www.localhost/term_of_sanction?rc_id=229910827171822&policy-id=0&&data_id=2&service=0&&drim="},
 	non_disclosure_agreement: {"id": "non-disclosure-agreement", "link": "https://policymaker.io/non_disclosure_agreement?rc_id=329910827171823&policy-id=0&&data_id=3&service=0&&drim="},
 	privacy_policy : {"id": "privacy-policy", "link": "https://policymaker.io/privacy_policy?rc_id=429910827171824&policy-id=0&&data_id=4&service=0&&drim="},
 	privacy_policy_link: {"id": "privacy-policy-link", "link": "https://policymaker.io/privacy_policy?rc_id=529910827171825&policy-id=0&&data_id=5&service=0&&drim="},
-	authors_know_more : {"id": "authors-know-more", "link": "https://www.didcy.com/authors/know_more?rc_id=629910827171826&policy-id=0&&data_id=6&service=0&&drim="},
-	investors_know_more: {"id": "investors-know-more", "link": "https://www.didcy.com/investors/know_more?rc_id=729910827171827&policy-id=0&&data_id=7&service=0&&drim="},
-	team_know_more: {"id": "team-know-more", "link": "https://www.didcy.com/team/know_more?rc_id=829910827171828&policy-id=0&&data_id=8&service=0&&drim="},
-	design_update_centre: {"id": "design-update-centre", "link": "https://www.didcy.com/didcy_design_updates_centre?rc_id=929910827171829&policy-id=0&&data_id=9&service=0&&drim="},
-	mentors_know_more: {"id": "mentors-know-more", "link": "https://www.didcy.com/mentors/know_more?rc_id=10299108271718210&policy-id=0&&data_id=10&service=0&&drim="}	
+	authors_know_more : {"id": "authors-know-more", "link": "http://www.localhost/authors/know_more?rc_id=629910827171826&policy-id=0&&data_id=6&service=0&&drim="},
+	investors_know_more: {"id": "investors-know-more", "link": "http://www.localhost/investors/know_more?rc_id=729910827171827&policy-id=0&&data_id=7&service=0&&drim="},
+	team_know_more: {"id": "team-know-more", "link": "http://www.localhost/team/know_more?rc_id=829910827171828&policy-id=0&&data_id=8&service=0&&drim="},
+	design_update_centre: {"id": "design-update-centre", "link": "http://www.localhost/didcy_design_updates_centre?rc_id=929910827171829&policy-id=0&&data_id=9&service=0&&drim="},
+	mentors_know_more: {"id": "mentors-know-more", "link": "http://www.localhost/mentors/know_more?rc_id=10299108271718210&policy-id=0&&data_id=10&service=0&&drim="}	
 };
 
 function SetDidcyLinks(){
@@ -7934,32 +10647,157 @@ function SetDidcyLinks(){
 SetDidcyLinks();//, 3000);
 });
 </script> -->
-<script type="text/javascript" src="adv-notification.js"></script>
-<script type="text/javascript" src="adv-about-profiles.js"></script>
-<script type="text/javascript" src="adv-reach-show.js"></script>
-<script type="text/javascript" src="adv-subscription-tutorials.js"></script>
-<script type="text/javascript" src="adv-paid-servies.payment.platform.sign.js"></script>
-<script type="text/javascript" src="adv-animated-image.js"></script>
-<script type="text/javascript" src="adv-about.bt.js"></script>
-<script type="text/javascript" src="adv-books.js"></script>
-<script type="text/javascript" src="adv-impact.js"></script>
-<script type="text/javascript" src="adv-about.js"></script>
-<script type="text/javascript" src="adv-subscription.newsletter.js"></script>
-<script src="build/js/intlTelInput.js"></script>
-<script type="text/javascript" src="adv-exhibiton-platforms.js"></script>
-<script type="text/javascript" src="work.js"></script>
+
+ <div class="collapsible-container" style="margin-bottom: 20px">
+    <h2 class="faq" style="color: rgba(200, 0, 0, 1)">Frequestly Asked Questions</h2>
+	<button class="collapsible-qa">What is Didcy?</button>
+	<div class="content-qa">
+	  <p>Didcy is a space provider. Is a platform that provides spaces in the form of individual platforms for almost all kinds of 
+	  digital activities to take place. Didcy provides spaces(platforms) for digital activities such as selling &amp; buying, 
+	  clouding/storing files, exhibiting webapps for users to use and many more.</p>
+	</div>
+	<button class="collapsible-qa">Why use Didcy?</button>
+	<div class="content-qa">
+	  <p>Because we got everything under one roof. We got the platform(spaces), team, tools, network/market and <b><i>YOU</i></b>. All you need to do is to <b><i>JUST START DIDCYING WITH US</i></b>. </p>
+	  <p><b><i>JUST FOCUS. AND REMEMBER, IT'S ALL <span style="color:red">FREEEEEEEE.</span> No fees. No Charges. Just FREEEEEEE.</i></b>. </p>
+	</div>
+	<button class="collapsible-qa">How do I get started?</button>
+	<div class="content-qa">
+	  <p>Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" alt="Services" title="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/> <b>&rarr;</b> <b>Didcy Transparent</b> 
+	  <b>&rarr;</b> <b>Didcy Find</b> to find out more.</p>	</div>
+	<button class="collapsible-qa">What can I do with Didcy?</button>
+	<div class="content-qa">
+	  <p>A lot. Just Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" alt="Services" title="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy" <b>&rarr;</b> <b>Didcy Transparent</b> 
+	  <b>&rarr;</b> <b>Didcy Find</b> to find out more.</p>
+	</div>
+	<button class="collapsible-qa">Can I sell on Didcy?</button>
+	<div class="content-qa">
+	  <p>Yes, <b>CHAMP</b> but currently unavailabile. Only Books selling will be made available soon. 
+	  Selling of other products and services will also be made availabile soon but may take a while.</p>
+	</div>
+	<button class="collapsible-qa">Where can I start selling?</button>
+	<div class="content-qa">
+	  <p>Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" alt="Services" title="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/> <b>&rarr;</b> <b>Didcy Transparent</b> 
+	  <b>&rarr;</b> <b>Didcy Trade</b> and following the process but currently unavailabile. Only Books selling will be made available soon. 
+	  Selling of other products and services will also be made availabile soon but may take a while.</p>
+	</div>
+	<button class="collapsible-qa">Can I buy on Didcy?</button>
+	<div class="content-qa">
+	  <p>Yes, <b>CHAMP</b> but currently unavailabile. Only Books buying will be made available soon. 
+	  Buying of other products and services will also be made availabile soon but may take a while.</p>
+	</div>
+	<button class="collapsible-qa">Where can I start buying?</button>
+	<div class="content-qa">
+	  <p>Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" alt="Services" title="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/> <b>&rarr;</b> <b>Didcy Transparent</b> 
+	  <b>&rarr;</b> <b>Didcy Trade</b> and following the process but currently unavailabile. Only Books selling will be made available soon. 
+	  Selling of other products and services will also be made availabile soon but may take a while.</p>
+	</div>
+	<button class="collapsible-qa">Can I sell my books?</button>
+	<div class="content-qa">
+	  <p>Selling of Books is currently unavailabile but will be made availabile very much sooner.</p>
+	</div>
+	<button class="collapsible-qa">Where can I start selling my books?</button>
+	<div class="content-qa">
+	  <p>Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" title="Services" alt="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/> <b>&rarr;</b> <b>Didcy Books</b>. Currently unavailabile but will be made availabile very much sooner.</p>
+	</div>
+	<button class="collapsible-qa">Can I buy books?</button>
+	<div class="content-qa">
+	  <p>Yes, <b>CHAMP</b> but currently unavailabile. Will be made available soon.</p>
+	</div>
+	<button class="collapsible-qa">Where can I start buying books?</button>
+	<div class="content-qa">
+	  <p>Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" title="Services" alt="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/> <b>&rarr;</b> <b>Didcy Books</b>. Currently unavailabile but will be made availabile very much sooner.</p>
+	</div>
+	<button class="collapsible-qa">How much does it cost to use Didcy?</button>
+	<div class="content-qa">
+	  <p>$0.</p>
+	</div>
+	<button class="collapsible-qa">Is it true that Didcy is free to use? No fees. No Charges. Just Freeeeee.</button>
+	<div class="content-qa">
+	  <p>Yes.</p>
+	</div>
+	<button class="collapsible-qa">When can I start using Didcy?</button>
+	<div class="content-qa">
+	  <p>Right now.</p>
+	</div>
+	<button class="collapsible-qa">Where can I start from?</button>
+	<div class="content-qa">
+	  <p>Start from Didcy Find(Tutorials). Choose format type : video, audio, text or image. <br>
+	  Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" title="Services" alt="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/> <b>&rarr;</b> <b>Didcy Find</b> or watch Didcy Tutorial down the page by scrolling. </p>
+	</div>
+	<button class="collapsible-qa">Who is the CEO of Didcy?</button>
+	<div class="content-qa">
+	  <p>David Ansong</p>
+	</div>
+	<button class="collapsible-qa">Who is the Founder of Didcy?</button>
+	<div class="content-qa">
+	  <p>David Ansong</p>
+	</div>
+	<button class="collapsible-qa">When will Didcy open it's unavailable features?</button>
+	<div class="content-qa">
+	  <p>Very soon.</p>
+	</div>
+	<button class="collapsible-qa">I am an Ad creator or designer and wants to keep my creatives safe on your Cloud MyAds system to prevent future failures or power outages on my workstation? How can I upload/cloud my assets(ads)?</button>
+	<div class="content-qa">
+	  <p>Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" alt="Services" title="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/> <b>&rarr;</b> <b>Didcy Transparent</b> 
+	  <b>&rarr;</b> <b>Didcy Upload</b> to find out more.</p>
+	</div>
+	<button class="collapsible-qa">We are a company and we wants to keep our company's creatives safe on your Cloud MyAds system to prevent future failures or power outages on our workstations? How can we upload/cloud our assets(ads)?</button>
+	<div class="content-qa">
+	  <p>Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" alt="Services" title="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/> <b>&rarr;</b> <b>Didcy Transparent</b> 
+	  <b>&rarr;</b> <b>Didcy Upload</b> to find out more</p>	</div>
+	<button class="collapsible-qa">How can I pull back my assets(ads) from your Cloud MyAds System when needed?</button>
+	<div class="content-qa">
+	  <p>Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" alt="Services" title="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/> <b>&rarr;</b> <b>Didcy Transparent</b> 
+	  <b>&rarr;</b> <b>Didcy Upload</b> to find out more</p>	</div>
+	<button class="collapsible-qa">How can we pull back our assets(ads) from your Cloud MyAds System when needed?</button>
+	<div class="content-qa">
+	  <p>Go to the Top Navigation bar <b>&rarr;</b> <img src="http://www.localhost/adv.icons/3631153.png" width="50px" alt="Services" title="Services"/> <b>&rarr;</b> <img width="50px" src="http://www.localhost/adv.icons/2377884.png" title="Use The Core to get more done on Didcy" alt="Use The Core to get more done on Didcy"/> <b>&rarr;</b> <b>Didcy Transparent</b> 
+	  <b>&rarr;</b> <b>Didcy Upload</b> to find out more</p>	</div>
+  </div>  
 
 
-<script type="text/javascript" src="upload.multiple.ads.js"></script>
+<div class="in-div" id="in-div"></div>
+
+
+<div id="adv-ft" class="adv-ft">
+  Visit us @ <a href="http://www.localhost" style="text-decoration:none" alt="" title="" target="_self" ping="">http://www.localhost</a>. All Copy&copy; rights reserved. Terms &amp; Conditions Applied.
+</div>
+
+<script type="text/javascript" src="http://www.localhost/adv-notification.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-about-profiles.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-reach-show.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-subscription-tutorials.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-paid-servies.payment.platform.sign.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-animated-image.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-about.bt.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-books.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-impact.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-about.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-subscription.newsletter.js"></script>
+<script src="http://www.localhost/build/js/intlTelInput.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-exhibiton-platforms.js"></script>
+<script type="text/javascript" src="http://www.localhost/work.js"></script>
+
+
+<script type="text/javascript" src="http://www.localhost/upload.multiple.ads.js"></script>
 <!--<script type="text/javascript" src="adv-scale-split-create-ads.js"></script>-->
 <!--<script type="text/javascript" src="create.js"></script>-->
 <!--<script type="text/javascript" src="adv-scale-split-create-ads-real-2.js"></script>-->
-<script type="text/javascript" src="adv-alert-boxes.js"></script>
-<script type="text/javascript" src="adv-retrieve.js"></script>
-<script type="text/javascript" src="adv-rater.js"></script>
-<script type="text/javascript" src="adv-create-ads.js"></script>
-<script type="text/javascript" src="adv-draggable.js"></script>
-<script type="text/javascript" src="adv-coursery-playground.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-alert-boxes.js"></script>
+<!--<script type="text/javascript" src="http://www.localhost/adv-retrieve.js"></script>-->
+<script type="text/javascript" src="http://www.localhost/adv-rater.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-create-ads.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-draggable.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-coursery-playground.js"></script>
+<script type="text/javascript" src="http://www.localhost/plug.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-custom-video-controls.js"></script>
+<script type="text/javascript" src="http://www.localhost/audio.js"></script>
+<script type="text/javascript" src="http://www.localhost/audiplay.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-collapsible.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-testimonials.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-features.js"></script>
+<script type="text/javascript" src="http://www.localhost/adv-video-features.js"></script>
 
 <script type="text/javascript">
  "use strict";
