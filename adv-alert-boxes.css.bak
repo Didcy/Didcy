@@ -8,12 +8,13 @@
   text-align: center;
   position: fixed;
   top: 30%;
-  left: 25%;
-  right: 25%;
+  left: 30%;
+  right: 30%;
   z-index: 30;
   background-color: rgba(0,0,0, 0.9);
   display: none;
   font-size: 20px;
+  border-radius: 5%;
   
 }
 .alert p, .alert strong{padding:  8px;padding-top:  20px;}

@@ -39,7 +39,8 @@
 		 "<br>Love you all. <br>Thank you."; 
 	  }
 	  document.getElementById("more-insight").innerHTML = 
-	  "Tel: "+tel+"<br>Email: "+email+"<br>Description: "+description;
+	  //"Tel: "+tel+"<br>//"Email: "+email+"<br>
+	  "Description: "+description;
 	  document.getElementById("myModal-profile-insight").style.display = "block";
  } 
  var spanProfileInsight = document.getElementById("close-profile-insight");

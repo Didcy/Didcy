@@ -10,10 +10,11 @@
   top: 30%;
   left: 30%;
   right: 30%;
-  z-index: 30;
+  z-index: 103;
   background-color: rgba(0,0,0, 0.9);
   display: none;
   font-size: 20px;
+  border-radius: 5%;
   
 }
 .alert p, .alert strong{padding:  8px;padding-top:  20px;}
@@ -40,10 +41,74 @@
   color: black;
 } */
 
+
+/* The Modal (background) */
+.modal-alert-box {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  z-index: 103;
+}
+
+/* Modal Content */
+.modal-content-alert-box {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop-alert-box;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop-alert-box;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop-alert-box {
+  from {top:-300px; opacity:0;} 
+  to {top:0; opacity:1;}
+}
+
+@keyframes animatetop-alert-box {
+  from {top:-300px; opacity:0;}
+  to {top:0; opacity:1;}
+}
+
+
+.modal-header-alert-box {
+  padding: 2px 16px;
+  background-color: rgba(10, 13, 20, 1);/*#5cb85c;*/
+  color: white;
+}
+
+.modal-body-alert-box {padding: 2px 16px;}
+
+.modal-footer-alert-box {
+  padding: 2px 16px;
+  background-color: rgba(10, 13, 20, 1);/*#5cb85c;*/
+  color: white;
+}
+
+.didcy-error{
+  font-size: 20px;
+}
+
 @media screen and (max-width: 960px){
   .alert{
     left: 10%;
     right: 10%;	  
+  }
+  .didcy-err-0, .didcy-err{
+	  font-size: 15px;
   }
 }
 

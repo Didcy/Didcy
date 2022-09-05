@@ -106,25 +106,25 @@ function UpdateUploadz(firstname, middlename, lastname, profession, privateTelOp
   actorStory, countryOfBirth, done){
 	  
 /* 	  if(firstname.trim() == ""){
-		 return AlertBoxInModal("Firstname field is empty"); 
+		 return alertBox("Firstname field is empty"); 
 	  }
 
 	  if(middlename.trim() == ""){
-		 return AlertBoxInModal("Middlename field is empty"); ){
+		 return alertBox("Middlename field is empty"); ){
 		  
 	  }
 	  
 	  if(lastname.trim() == ""){
-		 return AlertBoxInModal("Lastname field is empty"); 
+		 return alertBox("Lastname field is empty"); 
 	  }
 
 	  if(profession.trim() == ""){
-		 return AlertBoxInModal("Profession field is empty");
+		 return alertBox("Profession field is empty");
 		  
 	  } */
 
 	  if(countryOfBirth == "Select a country"){
-		  return AlertBoxInModal("Please select a country");
+		  return alertBox("Please select a country");
 	  }
 	  
 	  var drim = window.location.href;
@@ -146,7 +146,7 @@ function UpdateUploadz(firstname, middlename, lastname, profession, privateTelOp
 	  form.append("actorStory", actorStory);
 	  form.append("countryOfBirth", countryOfBirth);
 	  form.append("done", done);
-	  form.append("imageId", drim.slice(39));
+	  form.append("imageId", drim.slice(53));
 	  form.append("fetch", 20);
 
 	  $.ajax({
@@ -160,26 +160,26 @@ function UpdateUploadz(firstname, middlename, lastname, profession, privateTelOp
 			//window.console.log(result);
 			var data_returned = JSON.parse(result);
 			if(data_returned.state == 0){
-				return AlertBoxInModal("Connection to Server Error!!!.");
+				return alertBox("Connection to Server Error!!!.");
 			}
 			else if(data_returned.state == 1){
-				return AlertBoxInModal("Connection to Database Error!!!.");
+				return alertBox("Connection to Database Error!!!.");
 			}
 			else if(data_returned.state == 2){
-				return AlertBoxInModal("User already exists!!!.");
+				return alertBox("User already exists!!!.");
 			}	
 			else if(data_returned.state == 3){
-				return AlertBoxInModal("Profile Error!!!.");
+				return alertBox("Profile Error!!!.");
 			}
 			else if(data_returned.state == 4){
 				closeForm_entirely();
-                return AlertBoxInModal("Profile Update was successful");
+                return alertBox("Profile Update was successful");
 			}
 			else if(data_returned.state == 200){
-				 return AlertBoxInModal("Please insert your first name!!!.");
+				 return alertBox("Please insert your first name!!!.");
 			}
 			else if(data_returned.state == 202){
-				 return AlertBoxInModal("Please insert your last name!!!.");
+				 return alertBox("Please insert your last name!!!.");
 			}
 			else{
 				
@@ -207,11 +207,11 @@ function UpdateUploadzCompany(institutionName, ein, tin, activity,
 	  if(activity != "Select Your Company's Activity :"){
 	    form.append("activity", activity);
 	  }else{
-		return AlertBoxInModal("Please select your company's activity");
+		return alertBox("Please select your company's activity");
 	  }
 
 	  if(countryOfRegistration == "Select a country"){
-		  return AlertBoxInModal("Please select a country");
+		  return alertBox("Please select a country");
 	  }	  
 	  
 	  form.append("privateTelOptional", privateTelOptional);
@@ -229,7 +229,7 @@ function UpdateUploadzCompany(institutionName, ein, tin, activity,
 	  form.append("countryOfRegistration", countryOfRegistration);
 	  form.append("companyRegistrationDate", companyRegistrationDate);
 	  form.append("done", done);
-	  form.append("imageId", drim.slice(39));
+	  form.append("imageId", drim.slice(53));
 	  form.append("fetch", 21);
 
 	  $.ajax({
@@ -243,51 +243,51 @@ function UpdateUploadzCompany(institutionName, ein, tin, activity,
 			//window.console.log(result);
 			var data_returned = JSON.parse(result);
 			if(data_returned.state == 0){
-				return AlertBoxInModal("Connection to Server Error!!!.");
+				return alertBox("Connection to Server Error!!!.");
 			}
 			else if(data_returned.state == 1){
-				return AlertBoxInModal("Connection to Database Error!!!.");
+				return alertBox("Connection to Database Error!!!.");
 			}
 			else if(data_returned.state == 2){
-				return AlertBoxInModal("User already exists!!!.");
+				return alertBox("User already exists!!!.");
 			}	
 			else if(data_returned.state == 3){
-				return AlertBoxInModal("Profile Error!!!.");
+				return alertBox("Profile Error!!!.");
 			}
 			else if(data_returned.state == 4){
 				document.getElementById("update-company-registration").style.display = "none";
 				closeForm_company_registration_entirely();
-                return AlertBoxInModal("Profile Update was successful");
+                return alertBox("Profile Update was successful");
 			}
 			else if(data_returned.state == 2000){
-				 return AlertBoxInModal("Please insert your institution Name!!!.");
+				 return alertBox("Please insert your institution Name!!!.");
 			}
 			else if(data_returned.state == 2001){
-				 return AlertBoxInModal("Please insert your ein!!!.");
+				 return alertBox("Please insert your ein!!!.");
 			}
 			else if(data_returned.state == 2002){
-				 return AlertBoxInModal("Please insert your tin!!!.");
+				 return alertBox("Please insert your tin!!!.");
 			}
 			else if(data_returned.state == 2003){
-				 return AlertBoxInModal("Please insert your company's activity!!!.");
+				 return alertBox("Please insert your company's activity!!!.");
 			}
 			else if(data_returned.state == 2004){
-				 return AlertBoxInModal("Please insert your company's public telephone number!!!.");
+				 return alertBox("Please insert your company's public telephone number!!!.");
 			}
 			else if(data_returned.state == 2005){
-				 return AlertBoxInModal("Please insert your company's story !!!.");
+				 return alertBox("Please insert your company's story !!!.");
 			}
 			else if(data_returned.state == 2006){
-				 return AlertBoxInModal("Please insert your physical location in the country!!!.");
+				 return alertBox("Please insert your physical location in the country!!!.");
 			}
 			else if(data_returned.state == 2007){
-				 return AlertBoxInModal("Please insert your country of registration!!!.");
+				 return alertBox("Please insert your country of registration!!!.");
 			}
 			else if(data_returned.state == 2008){
-				 return AlertBoxInModal("Please insert your company's registration date!!!.");
+				 return alertBox("Please insert your company's registration date!!!.");
 			}
 			else if(data_returned.state == 2009){
-				 return AlertBoxInModal("Please insert your company's business email!!!.");
+				 return alertBox("Please insert your company's business email!!!.");
 			}
 			else{
 				

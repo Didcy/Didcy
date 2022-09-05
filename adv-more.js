@@ -9,7 +9,13 @@ document.getElementById("more-left-side").addEventListener("click", (event) => {
 
 
 // Get the modal
+var newsletterDifference = 0;
 var modal = document.getElementById("myModal");
+var modalChat4DidcyWorks = document.getElementById("modal-chat-4-didcy-works");
+var modalDidcyBenefits = document.getElementById("modal-didcy-benefits");
+var modalDidcyKeywords = document.getElementById("modal-didcy-keywords");
+var modalDidcyGuide = document.getElementById("modal-didcy-guide");
+var modalDidcyCmpAdv = document.getElementById("modal-didcy-competitive-advantage");
 var modalWork = document.getElementById("myModal-work");
 var modalNotification = document.getElementById("myModal-notification");
 var modalReach = document.getElementById("myModal-reach");
@@ -17,10 +23,13 @@ var modalPayments = document.getElementById("myModal-payments");
 var modalRefundRequest = document.getElementById("myModal-refund-request");
 var modalSRecords = document.getElementById("myModal-s-records");
 var modalPricingTable = document.getElementsByClassName("modal-pricing-table")[0];
+var modalUploadSystem = document.getElementsByClassName("modal-upload-system")[0];
 //var modalPricingTable = document.getElementsByClassName("modal-stand")[0];
 var modal10 = document.getElementById("myModal-10");
 var modalCompaniesOnly = document.getElementById("myModal-companies-only");
 var modalPluginsBoard = document.getElementById("modal-plugins-board");
+var modalRipaBoard = document.getElementById("modal-ripa-board");
+var modalRipaBank = document.getElementById("modal-ripa-bank");
 var modalActorsGroupsOnly = document.getElementById("myModal-actors-groups-only");
 var modalSiteMap = document.getElementById("myModal-sitemap");
 var modalStand = document.getElementById("myModal-stand");
@@ -96,6 +105,8 @@ imgLeftSide.onclick = function(){
 // Get the <span> element that closes the modal
 var spanCompaniesOnly = document.getElementsByClassName("close-companies-only")[0];
 var spanPluginsBoard = document.getElementsByClassName("close-plugins-board")[0];
+var spanRipaBoard = document.getElementsByClassName("close-ripa-board")[0];
+var spanRipaBank = document.getElementsByClassName("close-ripa-bank")[0];
 var spanActorsGroupsOnly = document.getElementsByClassName("close-actors-groups-only")[0];
 var span = document.getElementsByClassName("close")[0];
 var spanWork = document.getElementsByClassName("close-work")[0];
@@ -129,17 +140,76 @@ var spanSubscribeWebPolicy  = document.getElementsByClassName("close-subscribe-w
 var spanCookieFullMode = document.getElementsByClassName("close-cookie-full-mode")[0];
 var spanTeam = document.getElementsByClassName("close-team")[0];
 var spanKnowDevelopers = document.getElementsByClassName("close-know-developers")[0];
+var spanChat4DidcyWorks = document.getElementsByClassName("close-chat-4-didcy-works")[0];
+var spanDidcyBenefits = document.getElementsByClassName("close-didcy-benefits")[0];
+var spanDidcyKeywords = document.getElementsByClassName("close-didcy-keywords")[0];
+var spanDidcyGuide = document.getElementsByClassName("close-didcy-guide")[0];
+var spanDidcyCmpAdv = document.getElementsByClassName("close-didcy-competitive-advantage")[0];
+var spanDidcyPlatformsOffer = document.getElementsByClassName("close-didcy-platforms-offer")[0];
 
 // When the user clicks on <span> (x), close the modal
+
 
 spanSubscribe.onclick = function() { 
    modalSubscribe.style.display = "none";
 }
 
+spanDidcyBenefits.onclick = function() { 
+   modalDidcyBenefits.style.height = "0%";
+}
+
+spanDidcyKeywords.onclick = function() { 
+   modalDidcyKeywords.style.height = "0%";
+}
+
+spanDidcyGuide.onclick = function() { 
+   modalDidcyGuide.style.height = "0%";
+}
+
+spanDidcyCmpAdv.onclick = function() { 
+   modalDidcyCmpAdv.style.height = "0%";
+}
+
+spanChat4DidcyWorks.onclick = function() { 
+   document.getElementsByClassName("username-didcywork")[0].value = "";
+   document.getElementsByClassName("pwd-didcywork")[0].value = "";
+   modalChat4DidcyWorks.style.height = "0%";
+}
+
+function ClosePluginsBoardInDiv(){
+	var __plugins = document.getElementsByClassName("didcy-plugins-id");
+	for(var plugins_ = 0;plugins_ < __plugins.length;plugins_++){
+	  __plugins[plugins_].style.display = "none";
+	}
+}
+
+function RecreatePluginsBoardInDiv(){
+   {
+	   var __plugins = document.getElementById("in-div");
+	   var __advFt = document.getElementById("adv-ft");
+	   document.body.removeChild(__plugins);
+	   __plugins = document.createElement("div");
+	   __plugins.setAttribute("class", "in-div");
+	   __plugins.setAttribute("id", "in-div");
+	   document.body.insertBefore(__plugins, __advFt);
+   }
+}
+
 spanPluginsBoard.onclick = function() { 
    it.didcyFixes.mainSplit.style.height = "0%";
    it.didcyFixes.mainQuak.style.height = "0%";
+   modalRipaBank.style.height = "0%";
    modalPluginsBoard.style.height = "0%";
+   ClosePluginsBoardInDiv();
+}
+
+spanRipaBoard.onclick = function() { 
+   //CloseExtrasFrom16();
+   modalRipaBoard.style.height = "0%";
+}
+
+spanRipaBank.onclick = function() { 
+   modalRipaBank.style.height = "0%";
 }
 
 spanSiteMap.onclick = function() { 
@@ -299,15 +369,28 @@ function CloseCookie(){
 }
 
 spanCookie.onclick = function(){
+	document.getElementById('myModal-upload-system').style.height='0%';
 	CloseCookie();
 }
 
 spanTerms.onclick = function() {
 	CloseCookie();
+	document.getElementById('myModal-upload-system').style.height='0%';
 	modalTerms.style.height = "0%";
 	modalTerms.style.width = "0%";
 }
+ 
+function CloseBooksLogs(){
+		modalSellerDashboard.style.width = "0%";
+		modalSellerDashboard.style.height = "0%";	
+		modalBuyer.style.width = "0%";
+		modalBuyer.style.height = "0%"; 
+}
+
 span.onclick = function() { 
+  CloseBooksLogs();
+  CloseLogBooks();
+  CloseCreateBooks();
   modal.style.display = "none";
 }
 // Get the <span> element that closes the modal
@@ -333,14 +416,25 @@ var myModal_9 = document.getElementById("myModal-9");
 var caption9 = document.getElementById("caption-9");
 var modal9 = document.getElementById("myModal-9");
 
+function CloseExtrasFrom16(){
+	  modalRipaBank.style.height = "0%";
+	  modalRipaBoard.style.height = "0%";
+	  img01_1.value = '5';
+	  reactContainerDelID = 0;
+	  var gagaExtrasContainer2 = document.getElementById("gaga-extras-container");
+	  modal2.removeChild(gagaExtrasContainer2);
+	  RecreateReact();
+}
+
 span2.onclick = function() { 
   modal2.style.display = "none";
   img01_1.style.display = "block";
-  modal2.style.zIndex = "1";
+  modal2.style.zIndex = "1.5";
   if(img01_1.value == '1'){
 	  let textTutorials = document.getElementById("text-tutorial");
 	  modal2.removeChild(textTutorials);
 	  img01_1.value = '0';
+	  modal2.style.paddingTop = "100px";
   }
   else if(img01_1.value == '2'){
       img01_1.src = "";
@@ -357,6 +451,7 @@ span2.onclick = function() {
 	  img01_1.value = '0';
 	  var captionChild = document.getElementById("gaga-relate-2");
 	  caption1.removeChild(captionChild);
+	  myModal_1.style.paddingTop = "100px";
 	  //caption1.classList.remove("gaga-relate-2");
   }  
   else if(img01_1.value == '5'){
@@ -399,7 +494,10 @@ span2.onclick = function() {
       img01_1.value = '0';	  
   }
   else if(img01_1.value == '10'){
-      const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", "gaga-share-gaga", "gaga-share-pinterest"];
+      //const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", "gaga-share-gaga", "gaga-share-pinterest"];
+	  const GaGaShareID = ["gaga-share", "gaga-decide", "gaga-definition", 
+	  "gaga-approved-by", "gaga-date-time", "jurisdiction", "gaga-download"];
+
 	  var gagaCount = 0;
 	  for(;gagaCount < GaGaShareID.length;gagaCount++){
 		  var gagaShareWith = document.getElementById("button-1");
@@ -422,11 +520,7 @@ span2.onclick = function() {
 	  //caption1.classList.remove("gaga-relate-2");
   }
   else if(img01_1.value == '16'){
-	  img01_1.value = '5';
-	  reactContainerDelID = 0;
-	  var gagaExtrasContainer2 = document.getElementById("gaga-extras-container");
-	  modal2.removeChild(gagaExtrasContainer2);
-	  RecreateReact();
+       CloseExtrasFrom16();
 	  //caption1.classList.remove("gaga-relate-2");
   }
   else if(img01_1.value == '17'){
@@ -441,6 +535,16 @@ span2.onclick = function() {
       modal2.removeChild(videoEl);
       videoEl = null;
 	  videoElem = 0;
+	  modal2.style.paddingTop = "100px";
+  }
+  else if(img01_1.value == '200'){
+	  img01_1.value = '0';
+      modal2.removeChild(videoEl);
+      modal2.removeChild(document.getElementById("ap_container"));
+      videoEl = null;
+	  videoElem = 0;
+	  modal2.style.paddingTop = "100px";
+	  
   }
   else if(img01_1.value == '21'){
       const GaGaShareID = ["gaga-share-fb", "gaga-share-tw", "gaga-share-ins", "gaga-share-ybe", "gaga-share-gaga", "gaga-share-pinterest"];
@@ -460,6 +564,7 @@ span2.onclick = function() {
   it.didcyFixes.mainSplit.style.height = "0%";
   it.didcyFixes.mainQuak.style.height = "0%";
   modalPluginsBoard.style.height = "0%";
+  ClosePluginsBoardInDiv();
  
 /*   var img01_1 = document.getElementById("img01-1");
   
@@ -1162,11 +1267,11 @@ function uploadzCompany(institutionName, ein, tin, activity,
       //window.console.log(document.forms['adv-files-20']);
 
 	  if($fileSet == 0){
-		 return alertBox("Please select a profile image!!!");
+		 return AlertBoxInModal("Please select a profile image!!!");
 	  }
 	  
 	  if(document.forms['adv-files-20']['uploadz'].files.length == 0){
-		 return alertBox("Please select a company profile image/logo!!!");
+		 return AlertBoxInModal("Please select a company profile image/logo!!!");
 	  }
 	  
 	  var drim = window.location.href;
@@ -1179,7 +1284,7 @@ function uploadzCompany(institutionName, ein, tin, activity,
 	  if(activity != "Select Your Company's Activity :"){
 	    form.append("activity", activity);
 	  }else{
-		return alertBox("Please select your company's activity");
+		return AlertBoxInModal("Please select your company's activity");
 	  }
 	  form.append("privateTelOptional", privateTelOptional);
 	  form.append("publicTelOptional", publicTelOptional);
@@ -1196,7 +1301,7 @@ function uploadzCompany(institutionName, ein, tin, activity,
 	  form.append("countryOfRegistration", countryOfRegistration);
 	  form.append("companyRegistrationDate", companyRegistrationDate);
 	  form.append("done", done);
-	  form.append("imageId", drim.slice(39));
+	  form.append("imageId", drim.slice(36));
 	  form.append("fetch", 11);
 
 	  $.ajax({
@@ -1207,19 +1312,19 @@ function uploadzCompany(institutionName, ein, tin, activity,
 		 cache : false,
 		 processData: false,
 		 success: function(result){
-			window.console.log(result);
+			//window.console.log(result);
 			var data_returned = JSON.parse(result);
 			if(data_returned.state == 0){
-				return alertBox("Connection to Server Error!!!.");
+				return AlertBoxInModal("Connection to Server Error!!!.");
 			}
 			else if(data_returned.state == 1){
-				return alertBox("Connection to Database Error!!!.");
+				return AlertBoxInModal("Connection to Database Error!!!.");
 			}
 			else if(data_returned.state == 2){
-				return alertBox("User already exists!!!.");
+				return AlertBoxInModal("User already exists!!!.");
 			}	
 			else if(data_returned.state == 3){
-				return alertBox("Profile Error!!!.");
+				return AlertBoxInModal("Profile Error!!!.");
 			}
 			else if(data_returned.state == 4){
 				 var image = document.getElementById('profile');
@@ -1242,37 +1347,37 @@ function uploadzCompany(institutionName, ein, tin, activity,
 				 image.style.display = "block";
 				 document.getElementById("uploads-2").value = "";
 				 $fileSet = 0;
-				 return alertBox("File upload was successful.");
+				 return AlertBoxInModal("File upload was successful.");
 			}
 			else if(data_returned.state == 2000){
-				 return alertBox("Please insert your institution Name!!!.");
+				 return AlertBoxInModal("Please insert your institution Name!!!.");
 			}
 			else if(data_returned.state == 2001){
-				 return alertBox("Please insert your ein!!!.");
+				 return AlertBoxInModal("Please insert your ein!!!.");
 			}
 			else if(data_returned.state == 2002){
-				 return alertBox("Please insert your tin!!!.");
+				 return AlertBoxInModal("Please insert your tin!!!.");
 			}
 			else if(data_returned.state == 2003){
-				 return alertBox("Please insert your company's activity!!!.");
+				 return AlertBoxInModal("Please insert your company's activity!!!.");
 			}
 			else if(data_returned.state == 2004){
-				 return alertBox("Please insert your company's public telephone number!!!.");
+				 return AlertBoxInModal("Please insert your company's public telephone number!!!.");
 			}
 			else if(data_returned.state == 2005){
-				 return alertBox("Please insert your company's story !!!.");
+				 return AlertBoxInModal("Please insert your company's story !!!.");
 			}
 			else if(data_returned.state == 2006){
-				 return alertBox("Please insert your physical location in the country!!!.");
+				 return AlertBoxInModal("Please insert your physical location in the country!!!.");
 			}
 			else if(data_returned.state == 2007){
-				 return alertBox("Please insert your country of registration!!!.");
+				 return AlertBoxInModal("Please insert your country of registration!!!.");
 			}
 			else if(data_returned.state == 2008){
-				 return alertBox("Please insert your company's registration date!!!.");
+				 return AlertBoxInModal("Please insert your company's registration date!!!.");
 			}
 			else if(data_returned.state == 2009){
-				 return alertBox("Please insert your company's business email!!!.");
+				 return AlertBoxInModal("Please insert your company's business email!!!.");
 			}
 			else{
 				
@@ -1288,10 +1393,10 @@ function uploadz(firstname, middlename, lastname, profession, privateTelOptional
   actorStory, countryOfBirth, done){
       
 	  if($fileSet == 0){
-		 return alertBox("Please select a profile image!!!");
+		 return AlertBoxInModal("Please select a profile image!!!");
 	  }else{
 		  if(document.forms['adv-files-20']['uploadz'].files.length == 0){
-			 return alertBox("Please select a profile image!!!");
+			 return AlertBoxInModal("Please select a profile image!!!");
 		  }
 	  }
 	  
@@ -1316,7 +1421,7 @@ function uploadz(firstname, middlename, lastname, profession, privateTelOptional
 	  form.append("actorStory", actorStory);
 	  form.append("countryOfBirth", countryOfBirth);
 	  form.append("done", done);
-	  form.append("imageId", drim.slice(39));
+	  form.append("imageId", drim.slice(36));
 	  form.append("fetch", 5);
 
 	  $.ajax({
@@ -1330,16 +1435,16 @@ function uploadz(firstname, middlename, lastname, profession, privateTelOptional
 			window.console.log(result);
 			var data_returned = JSON.parse(result);
 			if(data_returned.state == 0){
-				return alertBox("Connection to Server Error!!!.");
+				return AlertBoxInModal("Connection to Server Error!!!.");
 			}
 			else if(data_returned.state == 1){
-				return alertBox("Connection to Database Error!!!.");
+				return AlertBoxInModal("Connection to Database Error!!!.");
 			}
 			else if(data_returned.state == 2){
-				return alertBox("User already exists!!!.");
+				return AlertBoxInModal("User already exists!!!.");
 			}	
 			else if(data_returned.state == 3){
-				return alertBox("Profile Error!!!.");
+				return AlertBoxInModal("Profile Error!!!.");
 			}
 			else if(data_returned.state == 4){
 				 var image = document.getElementById('profile');
@@ -1363,13 +1468,13 @@ function uploadz(firstname, middlename, lastname, profession, privateTelOptional
 				 image.style.display = "block";
 				 document.getElementById("uploads-2").value = "";
 				 $fileSet = 0;
-				 return alertBox("File upload was successful.");
+				 return AlertBoxInModal("File upload was successful.");
 			}
 			else if(data_returned.state == 200){
-				 return alertBox("Please insert your first name!!!.");
+				 return AlertBoxInModal("Please insert your first name!!!.");
 			}
 			else if(data_returned.state == 202){
-				 return alertBox("Please insert your last name!!!.");
+				 return AlertBoxInModal("Please insert your last name!!!.");
 			}
 			else{
 				
@@ -1381,6 +1486,7 @@ function uploadz(firstname, middlename, lastname, profession, privateTelOptional
   
 gagaSubscription.onclick = function() { 
   modal2.style.display = "block";
+  modal2.style.zIndex = "1";
  
   //modalImg.src = "adv.actors.profiles/people2.jpg";
   //document.getElementById("img01-1").src = "adv.actors.profiles/people2.jpg";
@@ -1401,9 +1507,11 @@ gagaSubscription.onclick = function() {
   //myModal_1.insertBefore(tvListContainer2, caption1);
   
   const gagaSubscriptionPlatforms = ["Shyly", "Pricing", "Newsletter", "Notifications", 
-  "Reach", "Payments", "Refund Request", "S-Records", "How to Subscribe", "Mini"];
+  "Reach", "Payments", "Refund Request", "S-Records", "How to Subscribe", "Mini", 
+  "Reset Background", "Blur Background"];
   const gagaSubscriptionID = ["gaga-chat", "gaga-pricing", "gaga-newsletter", "gaga-notification", "gaga-reach", "gaga-payments", "gaga-refund-request", 
-  "gaga-s-records", "gaga-how-to-subscribe", "gaga-web-services"];
+  "gaga-s-records", "gaga-how-to-subscribe", "gaga-web-services", "gaga-reset-bg", 
+  "gaga-blur-bg"];
   
   for(var gagaCount = 0;gagaCount < gagaSubscriptionPlatforms.length;gagaCount++){
 	  var gagaSubscriptionDoc = document.createElement("a");
@@ -1433,21 +1541,35 @@ gagaSubscription.onclick = function() {
   var gagaSRecords = document.getElementById("gaga-s-records");
   var gagaChat = document.getElementById("gaga-chat");
   var gagaWebServices = document.getElementById("gaga-web-services");
+  var gagaResetBG = document.getElementById("gaga-reset-bg");
+  var gagaBlurBG = document.getElementById("gaga-blur-bg");
   
 
   gagaPricing.style.display = "none";
   gagaHowToSubscribe.style.display = "none";
-  gagaHowToNotification.style.display = "none";
+  gagaHowToNotification.style.display = "block";
   gagaReach.style.display = "none";
   gagaPayments.style.display = "none";
   gagaRefundRequest.style.display = "none";
   gagaSRecords.style.display = "none";
-  gagaChat.style.display = "block";
+  gagaChat.style.display = "block"; //
   gagaWebServices.style.display = "none";
+  
+  
+  gagaResetBG.style.display = "none";
+  gagaBlurBG.style.display = "none";
   
   gagaChat.onclick = function(){
 	  //ChatBoard();
 	  document.getElementById('myModal-chat').style.display='block';
+  }
+
+  gagaResetBG.onclick = function(){
+	  document.getElementById('logo').src = 'didcy.wall.jpg';
+  }
+  
+  gagaBlurBG.onclick = function(){
+	  document.getElementById('logo').src = 'didcy2.png';
   }
   
   gagaWebServices.onclick = function(){
@@ -1493,6 +1615,7 @@ gagaSubscription.onclick = function() {
   
   gagaHowToNotification.onclick = function() { 
       modalNotification.style.height = "100%";
+      modalNotification.style.zIndex = '73';
 	  subContainers = 3;
 	  return;
       ServicesNotAvailable('Notification Services', 
@@ -1571,7 +1694,9 @@ var modal8 = document.getElementById("myModal-8");
 var captionText8 = document.getElementById("caption-8");
 var uploadProfileContainer = document.getElementById("upload-profile");
 var gagaReactUpload, gagaPlugins, upload = null, gagaSiteContent, gagaMyStory, gagaAdImageRecords, gagaUpcomingUpdates, gagaMedia, gagaVideoFilmPrd,
-gagaExtras, gagaRateUs, gagaCompaniesOnly, gagaActorsGroupsOnly, gagaSiteMap, gagaAdvertisementChannels, gagaSEOAdvertisements, gagaContentIntegration, myStoryId = 0, selectCloseCheck = 0;
+gagaExtras, gagaRateUs, gagaCompaniesOnly, gagaActorsGroupsOnly, gagaSiteMap, 
+gagaAdvertisementChannels, gagaSEOAdvertisements, gagaContentIntegration, 
+gagaUplay, gagaRipaBet, gagaRipaBank, gagaRipa, myStoryId = 0, selectCloseCheck = 0;
 var formPopup2 = document.getElementsByClassName("form-popup-2")[0];
 var formPopup2_company_registration = document.getElementsByClassName("form-company-registration-popup-2")[0];
 var formPopup21 = document.getElementsByClassName("form-popup-21")[0];
@@ -1611,14 +1736,16 @@ function RecreateReact2(){
   
   const gagaExtrasPlatforms = ["Advertisement Channels", "SEO Advertisements", 
   "Content Integration", "Companies Only", "SiteMap", "Actors & Groups only", 
-  "Upcoming Updates", "Rate Us"];//
+  "Ripa", "Upcoming Updates", "Rate Us"];//
+  //"UPlay", "RipaBet", "RipaBank", 
   //"Upload a profile image999", "Create with us", "Video & Film Productions", 
   //"Media", "My Story", "Site Content", "Extras", "Ad Image Records"];//, 
   //"Advertisement Channels", "SEO Advertisements", "Content Integration"];
   //const gagaExtrasID = ["gaga-upload", "gaga-create-ads", "gaga-video-fm-product", "gaga-media", "gaga-my-story", "gaga-site-content", "gaga-extras", "gaga-upload-static-ads",
   const gagaExtrasID = ["gaga-advert-channels", "gaga-seo-advert", "gaga-content-integration", 
   "gaga-companies-only", "gaga-site-map", "gaga-actors-groups-only", 
-  "gaga-upcoming-updates", "gaga-rate-us"];
+  "gaga-ripa", "gaga-upcoming-updates", "gaga-rate-us"];
+  //"gaga-uplay", "gaga-RipaBet", "gaga-RipaBank", 
   
   for(var gagaCount = 0;gagaCount < gagaExtrasPlatforms.length;gagaCount++){
 	  var gagaExtrasDoc = document.createElement("a");
@@ -1643,16 +1770,53 @@ gagaSiteMap = document.getElementById("gaga-site-map");
 gagaAdvertisementChannels = document.getElementById("gaga-advert-channels");
 gagaSEOAdvertisements = document.getElementById("gaga-seo-advert");
 gagaContentIntegration = document.getElementById("gaga-content-integration");
+gagaUplay = document.getElementById("gaga-uplay");
+gagaRipaBet = document.getElementById("gaga-ripabet");
+gagaRipaBank = document.getElementById("gaga-ripabank");
+gagaRipa = document.getElementById("gaga-ripa");
 
 gagaSiteMap.style.display = "none";
 gagaAdvertisementChannels.style.display = "none";
 gagaSEOAdvertisements.style.display = "none";
 gagaContentIntegration.style.display = "none";
+gagaUplay.style.display = "block";
+gagaRipaBet.style.display = "block"; //BitBet
+gagaRipaBank.style.display = "block"; //BitBet
+gagaRipa.style.display = "none"; //BitBet
 
 
 gagaSiteMap.onclick = function() { 
       modalSiteMap.style.height = "100%";
       //modalSiteMap.style.zIndex = "10";
+}
+
+function Ripa(){
+  modalRipaBoard.style.height = "100%";
+  AlertBoxInModal("Find out more about DidcyBank at DidcyFind");
+}
+
+gagaRipa.onclick = function() { 
+  return Ripa();
+  return ServicesNotAvailable('Ripa', 
+  'Ripa report is at the back side. Please tab/put the mouse on this box to view the report.', -4);
+}
+
+gagaUplay.onclick = function() { 
+  return ServicesNotAvailable('UPlay', 
+  'UPlay report is at the back side. Please tab/put the mouse on this box to view the report.', -4);
+}
+
+gagaRipaBet.onclick = function() { 
+  return ServicesNotAvailable('RipaBet', 
+  'RipaBet report is at the back side. Please tab/put the mouse on this box to view the report.', -4);
+}
+
+gagaRipaBank.onclick = function() { 
+  modalRipaBank.style.zIndex = "35";
+  modalRipaBank.style.height = "100%";
+  return;
+  return ServicesNotAvailable('RipaBank', 
+  'RipaBank report is at the back side. Please tab/put the mouse on this box to view the report.', -4);
 }
 
 gagaAdvertisementChannels.onclick = function() { 
@@ -1767,7 +1931,7 @@ function RecreateReact(){
   //var tvListContainer2 = document.getElementById("tv-list-container");
   //myModal_1.insertBefore(tvListContainer2, caption1);
   //Create with us
-  const gagaReactPlatforms = ["Upload a profile image", "Studio", "Plugins", "Video & Film Productions", "Media", "My Story", "Site Content", "Extras", "Upload your Static ads"];//"Ad Image Records"];//, "Advertisement Channels", "SEO Advertisements", "Content Integration"];
+  const gagaReactPlatforms = ["Upload a profile image", "Studio", "Plugins", "Pick", "Crym", "My Story", "View AdCloud", "Extras", "Upload your Static ads"];//"Ad Image Records"];//, "Advertisement Channels", "SEO Advertisements", "Content Integration"];
   const gagaReactID = ["gaga-upload", "gaga-create-ads", "gaga-plugins", "gaga-video-fm-product", "gaga-media", "gaga-my-story", "gaga-site-content", "gaga-extras", "gaga-upload-static-ads"];//"gaga-upload-static-ads"];
   
   for(var gagaCount = 0;gagaCount < 9;gagaCount++){
@@ -1827,7 +1991,7 @@ gagaExtras.onclick = function(){
 
 function Plugins(){
   modalPluginsBoard.style.height = "100%";
-  alertBox("Find out more about DidcyFix at DidcyFind");
+  AlertBoxInModal("Find out more about DidcyFix at DidcyFind");
 }
 
 gagaPlugins.onclick = function(){
@@ -1839,11 +2003,15 @@ function digestImageAdRecords($_files, drim, fetchID){
 }
 gagaVideoFilmPrd.style.display = "block";
 gagaVideoFilmPrd.onclick = function(){
+	  	 document.getElementById("didcy-cms").alt="Find out more about Didcy Pick";
+		 document.getElementById("didcy-cms").title="Find out more about Didcy Pick";
 		 return ServicesNotAvailable('Video & Film Production', 
 		  'Video & Film Production report is at the back side. Please tab/put the mouse on this box to view the report.');	
 }
 gagaMedia.style.display = "block";
 gagaMedia.onclick = function(){
+	  	 document.getElementById("didcy-cms").alt="Find out more about Didcy Crym";
+		 document.getElementById("didcy-cms").title="Find out more about Didcy Crym";
 		 return ServicesNotAvailable('Media Services', 
 		  'Media Service report is at the back side. Please tab/put the mouse on this box to view the report.', -2);	
 }
@@ -1877,7 +2045,7 @@ gagaAdImageRecords.onclick = function(){
 	 fileUpload.setAttribute("title", "");
 	 /* fileUpload.setAttribute("", ""); */
 
-	 if(window.location.href.slice(39) == ""){
+	 if(window.location.href.slice(36) == ""){
 		 filehandle.setAttribute("disabled", "true");
 		 fileUpload.setAttribute("disabled", "true");
 	 }
@@ -1896,8 +2064,8 @@ gagaAdImageRecords.onclick = function(){
 	 /* captionText8.innerHTML = "GaGa Uploads"; */
 	 upload = 1;
 	 
-	 if(window.location.href.slice(39) == ""){
-		 alertBox("Please can't upload on Home Page.");
+	 if(window.location.href.slice(36) == ""){
+		 AlertBoxInModal("Please can't upload on Home Page.");
 	 }
 	 
 	 formhandle.addEventListener("submit", (event) => event.preventDefault());
@@ -1931,33 +2099,35 @@ gagaAdImageRecords.onclick = function(){
 	 });
 	 fileUpload.addEventListener("click", function(){
 		 if($fileSet == 0){
-			return alertBox("Please select a product/service image");
+			return AlertBoxInModal("Please select a product/service image");
 		 }
 		 var drim = window.location.href;
-		 digestImageAdRecords(document.forms['adv-files-21'], drim.slice(39), 9); //34
+		 digestImageAdRecords(document.forms['adv-files-21'], drim.slice(36), 9); //34
 	 });	
 }
 gagaMyStory.onclick = function(){
 	var drim = window.location.href;
-	if(drim.slice(39) == ""){
+	if(drim.slice(36) == ""){
+	  	 document.getElementById("didcy-cms").alt="Find out more about StoryTime";
+		 document.getElementById("didcy-cms").title="Find out more about StoryTime";
 		 return ServicesNotAvailable('Story Time', 
 		  'Story Time report is at the back side. Please tab/put the mouse on this box to view the report.', -1);
           		  
 	}
 
-	if(getCookieValue("GAGA_CMPO") == 0 && getCookieValue("GAGA_RESPONSE") == drim.slice(39)){
+	if(getCookieValue("GAGA_CMPO") == 0 && getCookieValue("GAGA_RESPONSE") == drim.slice(36)){
 		MyStoryAsAdActor();
 		document.getElementById("gaga-react-container").append(formPopup2);	
 		myStoryId = 1;
 		document.getElementById("update-ad-actor-infos").style.display = "block";
 		//window.alert("po");
-	}else if(getCookieValue("GAGA_CMPO") == 1 && getCookieValue("GAGA_RESPONSE") == drim.slice(39)){
+	}else if(getCookieValue("GAGA_CMPO") == 1 && getCookieValue("GAGA_RESPONSE") == drim.slice(36)){
 		MyStoryAsAdCompany();
 		document.getElementById("gaga-react-container").append(formPopup2_company_registration);	
 		myStoryId = 1;
 		document.getElementById("update-company-registration").style.display = "block";
 		
-	}else if(getCookieValue("GAGA_CMPO") == 2 && getCookieValue("GAGA_RESPONSE") == drim.slice(39)){
+	}else if(getCookieValue("GAGA_CMPO") == 2 && getCookieValue("GAGA_RESPONSE") == drim.slice(36)){
 		MyStoryAsAdCompany();
 		document.getElementById("gaga-react-container").append(formPopup2_company_registration);	
 		myStoryId = 1;
@@ -1970,6 +2140,8 @@ gagaMyStory.onclick = function(){
 gagaSiteContent.onclick = function(){
 	document.getElementById("select-display-type-modal").setAttribute("class", "select-display-type-modal site-content");
 	document.getElementById("select-display-type-modal").style.display = "block";
+	document.getElementById("select-display-type-modal").style.zIndex = "100";
+	document.getElementById("select-display-type-modal").style.backgroundColor = "rgba(0, 0, 0, 1)";
 	gagaSiteContentFromMore = 1;
 	popupAdTaskBeforeLoad = 1;
 }
@@ -2000,7 +2172,7 @@ gagaReactUpload.onclick = function(){
 	 fileUpload.setAttribute("title", "");
 	 /* fileUpload.setAttribute("", ""); */
 
-	 if(window.location.href.slice(39) == ""){
+	 if(window.location.href.slice(36) == ""){
 		 filehandle.setAttribute("disabled", "true");
 		 fileUpload.setAttribute("disabled", "true");
 	 }
@@ -2019,8 +2191,8 @@ gagaReactUpload.onclick = function(){
 	 /* captionText8.innerHTML = "GaGa Uploads"; */
 	 upload = 1;
 
-	 if(window.location.href.slice(39) == ""){
-		 alertBox("Please can't upload on Home Page.");
+	 if(window.location.href.slice(36) == ""){
+		 AlertBoxInModal("Please can't upload on Home Page.");
 	 }
  
 	 formhandle.addEventListener("submit", (event) => event.preventDefault());
@@ -2109,7 +2281,7 @@ gagaCreateAds.onclick = function(){
 }
 gagaReact.onclick = function() { 
 RecreateReact();
-  
+AlertBoxInModal("Find out more about DidcyReact at DidcyFind");
 }
 
 var howToGaGa = document.getElementById("howtogaga");
@@ -2125,6 +2297,8 @@ var gagaTERMS = document.getElementById("gaga-transparent");
 /* var gagaTERMS = document.getElementById("gaga-transparent"); */
 
 var gagaTC = document.getElementById("didcy-terms");
+var gagaTC1 = document.getElementById("gaga-transparent-1");
+var gagaTC2 = document.getElementById("gaga-transparent-2");
 
 var gagaCookie = document.getElementById("didcy-cookie");
 var gagaSecurity = document.getElementById("didcy-security");
@@ -2144,6 +2318,8 @@ var gagaSubscribeWebPolicy = document.getElementById("didcy-web-policy");
 var gagaDispute = document.getElementById("didcy-dispute");
 var gagaHost = document.getElementById("didcy-host-policy");
 var gagaWork = document.getElementById("didcy-work");
+var gagaUploadSystem = document.getElementById("didcy-upload-system");
+var gagaWorkPolicyFromForm = document.getElementById("didcy-work-policy-from-form");
 
 var modal5 = document.getElementById("myModal-howToGaGa");
 var captionText5 = document.getElementById("caption-howToGaGa");
@@ -2153,7 +2329,16 @@ gagaTERMS.onclick = function(){
 	        modalTerms.style.height = "50%";
 	        modalTerms.style.width = "100%";
 	        modalTerms.style.height = "100%";
+			AlertBoxInModal("Find out more about DidcyTransparent at DidcyFind");
 	        //modalTerms.style.zIndex = "9";
+}
+
+gagaUploadSystem.onclick = function(){
+	       //modalUploadSystem.style.display = "block";
+		   //modalUploadSystem.style.height = "50%";
+		   //setTimeout(() => {
+	         modalUploadSystem.style.height = "100%";
+		   //}, 2000);
 }
 
 gagaSubscribePolicy.onclick = function(){
@@ -2162,6 +2347,11 @@ gagaSubscribePolicy.onclick = function(){
 	        modalSubscribePolicy.style.width = "100%";
 	        modalSubscribePolicy.style.height = "100%";
 	        //modalTerms.style.zIndex = "9";
+}
+
+gagaWorkPolicyFromForm.onclick = function() { 
+      modalWork.style.height = "100%";
+      //modalSiteMap.style.zIndex = "10";    
 }
 
 gagaWork.onclick = function() { 
@@ -2334,7 +2524,7 @@ gagaCookie.onclick = function(){
 			//}, 1000);
 }
 
-gagaTC.onclick = function(){			
+function TermsConditions(){
 			var textTutorialContainer = document.createElement("div");
 			let textTutorialH3 = document.createElement("h3");
 			const textTutorialH3Text = document.createTextNode("Didcy Transparent");
@@ -2416,7 +2606,6 @@ gagaTC.onclick = function(){
 			textTutorialH3.setAttribute("id", "gaga-text-header-2");
 			textTutorialH3.setAttribute("style", "color: red");
 			//textTutorialH3.setAttribute("style", "font-famil: Arial, Helvetica, sans-serif");
-			textTutorialP.setAttribute("color", "white");
 			textTutorialP.setAttribute("class", "gaga-text-tutorials-2");
 			textTutorialP.setAttribute("id", "gaga-text-tutorials-2");
 			textTutorialP.setAttribute("style", "color: white;font-family: Garamond, Helvetica, serif;");
@@ -2433,11 +2622,13 @@ gagaTC.onclick = function(){
 			//textTutorialContainer.append(treeContainer["Overview"][0][0]); //--overview of TS(TERM OF SERVICE)
 			textTutorialContainer.append(textTutorialP);
 
-            textTutorialP.innerHTML = "TERMS OF SERVICE<br/>"+
+            myModal_1.style.paddingTop = "2px";
+            textTutorialP.innerHTML = "<b class='tos'>TERMS OF SERVICE</b><br/>"+
 
 
-"Welcome to Didcy!!! (The place where all actors,groups,companies and ads are closely monitored). Thanks for viewing our site."+
-" Before you create your  page , please be sure you have read and understood our Terms and Conditions. Members who do not comply with our rules and regulations may find their ad account suspended or deleted, possibly without prior notice."+
+"Welcome to Didcy.com, the place where <b><i>space</i></b> starts everything."+
+" Thanks for viewing our site."+
+" Before you create your account , please be sure you have read and understood our Terms and Conditions. Members who do not comply with our rules and regulations may find their didcy account suspended or deleted, possibly without prior notice."+
 " With Didcy, businesses are done much efficiently and easier. We provide the best of all product and services for our customers to make them feel more reliable on our services."+
 " Our terms and conditions are allowed to be viewed at any time on our platforms with absolute discretion."+
 "<br/>ALERT!!! Our product and services are not for scamming,frauding and fraudualent ads,hacking,breaching of bounderies such as other didcy user's passwords and privacy protection or any illegal activities that is not accepted by the ads industry,the government, the users and our platform."+
@@ -2446,31 +2637,31 @@ gagaTC.onclick = function(){
 "<br/>2. You are not allowed to copy or reproduce any page, image or other content related to our platforms or services or products without the express prior consent of the original copyright owner of that content or ads."+
 "<br/>3. All rights reserve from our services to delete,suspend,terminating any acccount at any time  for any reason or no reason at all. Disabled or suspended accounts can be enabled or reclaimed ONLY all debt are paid or misconducts has being resolved."+
 "<br/>4. Adult materials without exceptions are forbidden or disapproved! This will lead to your account being terminated instantly or shutdown."+ 
-"<br/>5. Do not run unapproved or unlinced ads on our platform or anything related or connnected to our platform. As soon as we discover any  misconduct in your ad account, you'll be locked out from your account immediately and your inappropriate activity would be reported to the proper authorities."+
+"<br/>5. Do not run unapproved or unlinced ads on our platform or anything related or connnected to our platform. As soon as we discover any  misconduct in your didcy account, you'll be locked out from your account immediately and your inappropriate activity would be reported to the proper authorities."+
 "<br/>6. You may not use your ADS to provide materials or links to materials that are grossly offensive to the Web society and the industry."+ 
 "<br/>7. Immoral acts such as hatred, defamatory, anti-racial, terrorism, drugs, and other immoral related sites or any similar contents would not be allowed."+
-"<br/>8. You are not allowed to ABUSE or use ABUSIVE ADS whether you are a corperate entity,government body,small business,individual or any other type of business."+
+"<br/>8. You are not allowed to ABUSE or use ABUSIVE ADS whether you are a corporate entity, government body, small business, individual or any other type of business."+
 "<br/>9. We do not condor ads which are hazardious to the community such as COCAINE, TRAMADOL, WEE, POISONOUS ADS and any other type of harmful ads to the communuty."+
 "<br/>10. YOU are not to upload copyrighted ads on DIDCY except when all legal procedures have being taken into consideration. All ads should be made public except when still not decided whether or not to make public or still working on the creation of the ad(s)."+
 "<br/>11. We are not responsible if you mistakenly lose something due to server crash or by our negligence."+
 
 "<br/>ALLERT!!! Failure to comply with the above terms and conditions will face the following consequences such as;"+
-"<br/>1. Terminating or suspension of your account and pages without caring whether you are groups,private company,gorvernment body,small business or an individual etc."+
+"<br/>1. Terminating or suspension of your account and pages without caring whether you are groups, private company, gorvernment body, small business or an individual etc."+
 "<br/>2. Will pay a fine for agreeing and accepting our terms and policies while not complying with it."+
-"<br/>3. will pay a fine for breaching other didcy users account passwords and privacy protections. This wiill also lead to deleting your account."+
+"<br/>3. Will pay a fine for breaching other didcy users account passwords and privacy protections. This wiill also lead to deleting your account."+
 "<br/>4. Will be reported to the appropriate or the right authorities"+
 "<br/>5. Will be suspended from your account for producing an unlicensed ads and will pay a fine for $700/month."+
-"<br/>We reserve the right to suspend or delete any site due to inappropriate behavior at our sole discretion. Accounts deleted or suspended for terms infringement can be restored from backups (if they are still available) for a fee, with the write promise that you won't abuse again.<br/>"+
+"<br/>We reserve the right to suspend or delete any didcy account due to inappropriate behavior at our sole discretion. Accounts deleted or suspended for terms infringement can be restored from backups (if they are still available) for a fee, with the write promise that you won't abuse again.<br/>"+
  
 "<br/>DIDCY FURTHER RESERVES THE RIGHT TO TAKE LEGAL ACTION AGAINST ANY MEMBER IN BREACH OF THESE RULES AND TO PROVIDE INFORMATION TO LAW ENFORCEMENT AUTHORITIES AND OTHER INTERESTED PARTIES REGARDING THESE MEMBERS.<br/>"+
  
 "<br/>LEGAL TERMS<br/>"+
-"<br/>Didcy is not responsible for the content of any personal misconduct. The contents of user-generated web pages are not reviewed or censored in any way before they appear on the internet.<br/>"+
-"<br/>You, as the account holder, take full responsibility for all contents posted on your account page and our main page. As the account holder, you state that your account page contain nothing illegal, obscene, degrading or abusive to another person, including ads that promote hate group propaganda and child pornography. As the account holder, you also state that nothing on your page is copyrighted material and that any links to other servers have been approved by that organization. As the acccount holder, you also state that nothing on your page infringes on the intellectual property rights of any third party. You agree that Didcy has the right to remove any post or page or accounts it determines, in its sole discretion, has violated these rules to cancel your membership and take against you whatever measures will be deemed appropriate, including legal action and disclosing information about you to law enforcement authorities and other interested third parties. Members who are in breach of these rules agree to indemnify and hold harmless Didcy for any loss, claim, damage and expenses (including reasonable attorneys' fees) arising from or in connection with the contents of any post or page or of any chat or messages on a bulletin board found to be infringing or illegal. By submitting this agreement, you agree to all the above terms.<br/>"+
+"<br/>Didcy is not responsible for the content of any personal misconduct. The contents of user-generated products/services or ads are not reviewed or censored in any way before they appear on the internet.<br/>"+
+"<br/>You, as the account holder, take full responsibility for all contents posted on your account page and our main page. As the account holder, you state that your account page contain nothing illegal, obscene, degrading or abusive to another person, including products/services or ads that promote hate group propaganda and child pornography. As the account holder, you also state that nothing on your page is copyrighted material and that any links to other platforms/servers have been approved by that organization. As the acccount holder, you also state that nothing on your page infringes on the intellectual property rights of any third party. You agree that Didcy has the right to remove any post or page or accounts it determines, in its sole discretion, has violated these rules to cancel your membership and take against you whatever measures will be deemed appropriate, including legal action and disclosing information about you to law enforcement authorities and other interested third parties. Members who are in breach of these rules agree to indemnify and hold harmless Didcy for any loss, claim, damage and expenses (including reasonable attorneys' fees) arising from or in connection with the contents of any post or page or of any chat or messages on a bulletin board found to be infringing or illegal. By submitting this agreement, you agree to all the above terms.<br/>"+
 "<br/>Didcy makes no guarantee as to availability of service. To the fullest extent permissible by law, Didcy excludes all liability with respect to accuracy, content or availability of information on its web site. The materials in this site are provided 'as is' and without warranties of any kind, either express or implied. Didcy does not warrant that the function contained in the materials available on this web site will be uninterrupted or error free, that defects will be corrected, or that this site or the servers that make them available are free of viruses or other harmful components. Any merchandise products or services available to users or members from links from this web site are provided by third parties who are not necessarily affiliated or connected with Didcy. To the fullest extent permissible by law, Didcy excludes all liability under any circumstances (including negligence) for any special or consequential damages that result from the use of, or the inability to use, the materials on this site. Applicable laws may not apply to all those who access the platform.<br/>"+
 
 
-"<br/>By becoming a MEMBER you agree to all the above terms!"; 
+"<br/>By becoming a MEMBER you agree to all the above terms!. Kindly have a nice visit on our platform. <br>Thank you."; 
 			
 			caption1.innerHTML = "";
 			var myModal = document.getElementById("myModal-1");
@@ -2509,6 +2700,18 @@ gagaTC.onclick = function(){
 			  }); */
 			}
 
+}
+
+gagaTC1.onclick = function(){			
+    TermsConditions();
+}
+
+gagaTC2.onclick = function(){			
+    TermsConditions();
+}
+
+gagaTC.onclick = function(){			
+    TermsConditions();
 }
 
 var modal6 = document.getElementById("myModal-6");
@@ -2769,10 +2972,10 @@ function CheckMediaInfo(mediaEnvironmentID = null, mediaID = null, mediaAccount 
 function SendMediaInfo($Greed = "", $email = "", $password = "", mediaTransport = "", drim = null){
 	var form = new FormData();
 	if($email == ""){
-		return alertBox("Please enter your email");
+		return AlertBoxInModal("Please enter your email");
 	}
 	if($password == ""){
-		return alertBox("Please enter your password");
+		return AlertBoxInModal("Please enter your password");
 	}
 	form.append("email", $email);
 	form.append("password", $password);
@@ -2871,15 +3074,15 @@ span8.onclick = function() {
   var openButton = document.getElementsByClassName("open-button")[0];
   
 	if(selectCloseCheck == 1){
-		return alertBox("Please exit the Forms first!!!");
+		return AlertBoxInModal("Please exit the Forms first!!!");
 		document.getElementById("myModal-8").removeChild(formPopup2);
 		selectCloseCheck = 0;
 	}else if(selectCloseCheck == 2){
-		return alertBox("Please exit the Forms first!!!");
+		return AlertBoxInModal("Please exit the Forms first!!!");
 		document.getElementById("myModal-8").removeChild(openButton2);
 		selectCloseCheck = 0;				
 	}else if(selectCloseCheck == 3){
-		return alertBox("Please exit the Forms first!!!");
+		return AlertBoxInModal("Please exit the Forms first!!!");
 		document.getElementById("myModal-8").removeChild(openButton2);
 		document.getElementById("myModal-8").removeChild(formPopup2);
 		selectCloseCheck = 0;				
@@ -3003,17 +3206,151 @@ function PopUpAdTasks(){
 	  }
 }
 
+var clearFirstNewsletter = 0, clearFirstRandomizer = 0, abtUS = 0;
+var about_set = 0;
+
+function CloseAbtUS(){
+  document.getElementById('abt-us').style.display="none";
+  if(drim_2.slice(36) == ""){
+	//exhibitEvents(2, null, 'av');
+  }else{
+	//exhibitEvents(3, drim.slice(36))  
+  }
+  if(about_set == 0){
+	  setTimeout(() => {
+		 document.getElementById('keywords').style.display='block';
+		 about_set = 1;
+	  }, 10000);
+	   setTimeout(() => {
+		   document.getElementById("didcy-platforms-offer").style.display="block";
+	   }, 1000);
+  }
+}
+
+function CloseDidcyPlatformsOffer(){
+	   document.getElementById("didcy-platforms-offer").style.display="none";
+	   setTimeout(() => {
+		   document.getElementById("didcy-ad-creators").style.display = "block";
+	   }, 1000);	
+}
+
+spanDidcyPlatformsOffer.onclick = function(){
+	CloseDidcyPlatformsOffer();
+}
+
+function AbtUS(){
+   if(abtUS == 1){
+	document.getElementById('abt-us').style.display="block";
+	abtUS = 0;
+   }
+}
+
+function PopUpRandomizer(){
+ 	  var taskClearID = null;
+	  document.getElementById("modal-didcy-work-keys").style.display = "block";
+
+	  document.getElementById("randomize").innerHTML = $randomize;
+
+	  document.getElementById("close-didcy-work-keys").onclick = function(){
+		 if(taskClearID != null){
+		   clearTimeout(taskClearID);
+		 }
+		 taskClearID = null;
+		 document.getElementById("modal-didcy-work-keys").style.display = "none";
+	     abtUS = 1;
+		 if(about_set == 0){
+		   AbtUS();
+		 }
+	  }	
+	  clearFirstRandomizer = 1;	
+}
+
+function PopNewsletterSubscription(){
+ 	  var taskClearID = null;
+	  document.getElementById("modal-newsletters").style.display = "block";
+	  /*taskClearID = setTimeout(() => {
+		document.getElementById("modal-newsletters").style.display = "none"; 
+        //setTimeout(() => PopNewsletterSubscription, 2000);		
+	  }, 20000);*/  
+
+	  document.getElementById("close-newsletters").onclick = function(){
+		 if(taskClearID != null){
+		   clearTimeout(taskClearID);
+		 }
+		 taskClearID = null;
+		 document.getElementById("modal-newsletters").style.display = "none";   
+		 PopUpRandomizer();
+		 newsletterDifference = 2;
+	  }	
+	  clearFirstNewsletter = 1;
+}
+
+function copyDevStrings() {
+  var copyText = document.getElementById("randomize");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("devTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("devTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+
+//document.getElementById("didcy-keys-btn").addEventListener("mouseout", () => outFunc());
+document.getElementById("didcy-keys-btn").addEventListener("click", 
+() => {
+ $randomize = randomizChars();
+ PopUpRandomizer();
+ //setTimeout(function(){copyDevStrings();}, 2000);
+});
+
+function PopUpEServices(){
+	  var taskClearID = null;
+	  document.getElementById("modal-other-e-services").style.display = "block";
+	  taskClearID = setTimeout(() => {
+		document.getElementById("modal-other-e-services").style.display = "none"; 
+		if(clearFirstNewsletter == 0){
+		  newsletterDifference = 1;
+          PopNewsletterSubscription();	
+		}		
+	  }, 20000);
+	  
+	  document.getElementById("close-other-e-services").onclick = function(){
+		 if(taskClearID != null){
+		   clearTimeout(taskClearID);
+		 }
+		 taskClearID = null;
+		 document.getElementById("modal-other-e-services").style.display = "none"; 
+		if(clearFirstNewsletter == 0){
+          PopNewsletterSubscription();	
+		}		 
+	  }	
+}
+
+PopUpEServices();
+
 spanSelectDisplayTypes.onclick = function() { 
     document.getElementsByClassName("select-display-type-modal")[0].style.display = "none";
     if(window.location.href.slice(35) == ""){
 		//ShortNote(0);
 	   //DidcyDefaultPageContentOnClose(null);
 	}else{
-	   //DidcyDefaultPageContentOnClose(window.location.href.slice(39));
+	   //DidcyDefaultPageContentOnClose(window.location.href.slice(36));
 	}
 	
 	if(popupAdTaskBeforeLoad == 0){
-	   PopUpAdTasks();
+	   //PopUpAdTasks();
+	   PopUpEServices();
+	}else{
+	  if(drim_2.slice(36) == ""){
+		//exhibitEvents(2, null, 'av');
+	  }else{
+		//exhibitEvents(3, drim.slice(36))  
+	  }
 	}
 }
 
@@ -3123,7 +3460,7 @@ function DidcyDefaultPageContentOnClose(drim = null){
 	   form.append("fetch", "15");
 	 }else{
 	   form.append("fetch", "16");
-	   form.append("drim", window.location.href.slice(39));
+	   form.append("drim", window.location.href.slice(36));
 	 }
 	 $.ajax({
 		 type: "POST",

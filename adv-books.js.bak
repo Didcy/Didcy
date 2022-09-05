@@ -9,9 +9,9 @@ var esta = null;
 var freezeMode = null;
 
 var openBooks = () => {
-    Open('Didcy Books', 0);
+    //Open('Didcy Books', 0);
 	//return;
-	//document.getElementById("modal-log-books").style.height = "100%";
+	document.getElementById("modal-log-books").style.height = "100%";
 	return;
 	document.getElementById('myModal-books').style.display='block';
 	document.getElementById('count-down').style.display='block';

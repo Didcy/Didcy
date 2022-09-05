@@ -29,25 +29,25 @@
 				  // window.console.log(result);
 				   var data_returned = JSON.parse(result);
 				   if(data_returned.state == 0){
-				        alertBox(data_returned.error); 
+				        AlertBoxInModal(data_returned.error); 
 				   }
 				   else if(data_returned.state == 1){
-				        alertBox(data_returned.error);
+				        AlertBoxInModal(data_returned.error);
 				   }
 				   else if(data_returned.state == 2){
-				        alertBox(data_returned.error);
+				        AlertBoxInModal(data_returned.error);
 				   }
 				   else if(data_returned.state == 3){
-				       alertBox(data_returned.error);
+				       AlertBoxInModal(data_returned.error);
 				   }
 				   else if(data_returned.state == 4){
-				       alertBox(data_returned.error);
+				       AlertBoxInModal(data_returned.error);
 				   }
 				   else if(data_returned.state == 5){
-				       alertBox(data_returned.error);
+				       AlertBoxInModal(data_returned.error);
 				   }
 				   else if(data_returned.state == 6){
-				       alertBox(data_returned.congrate);
+				       AlertBoxInModal(data_returned.congrate);
 				   }
 				   else{}
 					   click = 0;		   
@@ -58,10 +58,10 @@
 				error: function(){}
 			  });
 		   }else{
-			   alertBox("Please not allowed on Home Page");
+			   AlertBoxInModal("Please not allowed on Home Page");
 		   }
 		}else{
-		   alertBox("Please select an emo");
+		   AlertBoxInModal("Please select an emo");
 		}  
 	   }else{
 		   var form = new FormData();
@@ -77,22 +77,22 @@
 				   //window.console.log(result);
 				   var data_returned = JSON.parse(result);
 				   if(data_returned.state == 0){
-				        alertBox(data_returned.error); 
+				        AlertBoxInModal(data_returned.error); 
 				   }
 				   else if(data_returned.state == 1){
-				        alertBox(data_returned.error);
+				        AlertBoxInModal(data_returned.error);
 				   }
 				   else if(data_returned.state == 2){
-				        alertBox(data_returned.error);
+				        AlertBoxInModal(data_returned.error);
 				   }
 				   else if(data_returned.state == 3){
-				       alertBox(data_returned.error);
+				       AlertBoxInModal(data_returned.error);
 				   }
 				   else if(data_returned.state == 4){
-				       alertBox(data_returned.error);
+				       AlertBoxInModal(data_returned.error);
 				   }
 				   else if(data_returned.state == 5){
-				       alertBox(data_returned.error);
+				       AlertBoxInModal(data_returned.error);
 				   }
 				   else if(data_returned.state == 55){
 					   //window.console.log(data_returned);

@@ -50,13 +50,31 @@ for (coursery_playground_i = 0; coursery_playground_i < coursery_playground_drop
 
    //ServicesNotAvailable('Didcy Course', 
 	  // 'Didcy Course report is at the back side. Please tab/put the mouse on this box to view the report.', -4)
- function Open($serviceType = ""){
+ function Open($serviceType = "", $menu_btn_id = 0){
 	var $frontReport = $serviceType+' report is at the back side. Please tab/put the mouse on this box to view the report.';
+	if($menu_btn_id == 0){
+	   //document.getElementById('modal-coursery-container').style.display='block';
+	}else{
+	   //document.getElementById('modal-coursery-container').style.display='block';
+	}
+	if($serviceType == 'Didcy Books'){
+		document.getElementById("didcy-cms").alt="Find out more about Didcy Books";
+		document.getElementById("didcy-cms").title="Find out more about Didcy Books";
+	}else if($serviceType == 'Didcy Course'){
+		document.getElementById("didcy-cms").alt="Find out more about Didcy Course";
+		document.getElementById("didcy-cms").title="Find out more about Didcy Course";
+	}
+	//return document.getElementById('modal-coursery-container').style.display='block';
     return ServicesNotAvailable($serviceType, 
-	$frontReport, -4)
-	//document.getElementById('modal-coursery-container').style.display='block';
+	$frontReport, -4);
 	//document.getElementById('coursery-service-btn').style.display='none';
 }
+
+    function CloseStatic(){
+		document.getElementById('id02').style.display='none';
+		document.getElementById("didcy-cms").alt="Find out more about Didcy Audio/Radio Services";
+		document.getElementById("didcy-cms").title="Find out more about Didcy Audio/Radio Services";
+	}
 
 
 document.getElementsByClassName("didcy-term-policy-sign")[0].addEventListener("click", 

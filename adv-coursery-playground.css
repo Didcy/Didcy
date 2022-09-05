@@ -157,6 +157,11 @@
   
 }
 
+.developer-response{
+  background-color: #000;
+  overflow-y: auto;
+}
+
 /* Links inside the dropdown */
 .profile-drop a {
   color: black;
@@ -164,6 +169,11 @@
   text-decoration: none;
   display: block;
   cursor: pointer;
+}
+
+/* Links inside the dropdown */
+.profile-drop a.front-line {
+  font-size: 15px;
 }
 
 .logo-pos{
@@ -175,6 +185,9 @@
 
 /* Change color of dropdown links on hover */
 .profile-drop a:hover {background-color: #ddd;}
+
+/* Change color of dropdown links on hover */
+.profile-drop a:hover {color: black;}
 
 /* Show the dropdown menu on hover */
 .profile-dropdown:hover .profile-drop {display: block;}

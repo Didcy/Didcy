@@ -34,3 +34,10 @@ spanCurtainAnimate.onclick = function(){
     document.getElementsByClassName("curtain")[1].style.width = "0%";  
  }
  
+ document.getElementById("body").addEventListener("DOMContentLoaded", 
+ function(){
+   setTimeout(
+   function(){
+	   document.getElementById("didcy-value-proposition").style.display = "block";
+   }, 5000);
+ });

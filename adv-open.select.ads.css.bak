@@ -415,8 +415,7 @@
   font-size: 20px;
   height: 65px;
 }
-.form-container .pscountry, .form-container .pscountry-21, .form-container .ps-privacy
-, .form-container .ps-privacy-21{
+.form-container .pscountry, .form-container .pscountry-21, .form-container .ps-privacy{
   font-size: 25px;
 }
 .form-container textarea {

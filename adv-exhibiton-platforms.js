@@ -42,12 +42,16 @@ function ShowExhibitionPlatform(popId = null){
 }
 
 OFFER_DIDCY_OSAED_DEAL_TABLE.onclick = function(){
+	  document.getElementById("didcy-cms").alt="Find out more about Offer Deals";
+	  document.getElementById("didcy-cms").title="Find out more about Offer Deals";
       return ServicesNotAvailable('Offer Deals', 
 	  'Offer Deals report is at the back side. Please tab/put the mouse on this box to view the report.');
 	ShowExhibitionPlatform(1);
 }
 
 FIND_DIDCY_OSAED_DEAL_TABLE.onclick = function(){
+	  document.getElementById("didcy-cms").alt="Find out more about Find Deals";
+	  document.getElementById("didcy-cms").title="Find out more about Find Deals";
       return ServicesNotAvailable('Find Deals', 
 	  'Find Deals report is at the back side. Please tab/put the mouse on this box to view the report.');	  
     ShowExhibitionPlatform(0);

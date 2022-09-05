@@ -2,8 +2,10 @@
  
  declare(strict_types=1);
  
+ include_once("connect_server.php");
+ 
  function SignUpMediaAccounts4Share() : void{
-		  $connect = ConnectServer(0);
+		  $connect = ConnectServer(1);
 
 			 if($connect["state"] != 500006){
 				echo json_encode($connect);

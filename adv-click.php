@@ -5,7 +5,7 @@
   function badgeClick(){
 	switch($_POST["click-state"]){
 	 case 0:
-	 $connect = ConnectServer(0);
+	 $connect = connectserver(0);
 
 	 if($connect["state"] != 500006){
 		echo json_encode($connect);
@@ -40,7 +40,7 @@
 	 return;
 	break;
 	case 1: 
-	 $connect = ConnectServer(0);
+	 $connect = connectserver(0);
 
 	 if($connect["state"] != 500006){
 		echo json_encode($connect);

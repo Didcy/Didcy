@@ -150,7 +150,7 @@
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */	
 }
 
-.select-display-type-modal{display: none;z-index: 12;}
+.select-display-type-modal{display: block;z-index: 12;}
 
 /* Modal Content (image) */
 .modal-content, .modal-content-1, .modal-content-subscribe, .modal-plugins-board,
@@ -425,8 +425,7 @@
 .close-didcy-mini-big-logo, .close-mini-web-buy-app, .close-mini-text-tutorials, 
 .close-modal-payment-providers, .close-connections, .close-coursery-signup, 
 .close-coursery-container, .close-coursery-playground, .close-didcy-guide
-, .close-didcy-keywords, .close-didcy-competitive-advantage, .close-create-books, 
-.close-smart-ads-container
+, .close-didcy-keywords, .close-didcy-competitive-advantage, .close-create-books
  {
   position: absolute;
   top: 15px;
@@ -469,8 +468,7 @@
    text-decoration: none;
 }
 
-.close:hover, 
-.close-smart-ads-container:hover, .close-log-books:hover, .close-didcy-competitive-advantage:hover, .close-didcy-keywords:hover, .close-didcy-guide:hover, .close-didcy-benefits:hover, .close-work-board-4:hover, .close-seller-dash-board:hover, .close-buyer-dash-board:hover, .close-chat-4-didcy-works:hover, .close-didcy-ripa-bank:hover, .close-coursery-playground :hover, .close-coursery-container:hover, .close-coursery-signup:hover, .close-didcy-fixes:hover, 
+.close:hover, .close-log-books:hover, .close-didcy-competitive-advantage:hover, .close-didcy-keywords:hover, .close-didcy-guide:hover, .close-didcy-benefits:hover, .close-work-board-4:hover, .close-seller-dash-board:hover, .close-buyer-dash-board:hover, .close-chat-4-didcy-works:hover, .close-didcy-ripa-bank:hover, .close-coursery-playground :hover, .close-coursery-container:hover, .close-coursery-signup:hover, .close-didcy-fixes:hover, 
 .close-ripa-board:hover, .close-plugins-board:hover, .close-connections:hover, .close-work-applicant-camera-board:hover, .close-caller:hover, .close-modal-payment-providers:hover, .close-1:hover, .close-mini-text-tutorials:hover, .close-didcy-min-contacts:hover, .close-s-records:hover, .close-mini-audio-ads:hover, .close-notificator:hover, .close-profile-insight:hover, .close-refund-request:hover, .close-notification:hover, .close-companies-only:hover, .close-actors-groups-only:hover, .close-sitemap:hover,
  .close-host-policy:hover, .close-limit-policy:hover, .close-subscribe:hover, .close-2:hover, .close-howToGaGa:hover, .close-7:hover, .close-10:hover, .close-11:hover, .close-12:hover, .close-subscribe-3:hover, .close-subscribe-policy:hover,
 .close-upcoming-updates:hover, .close-create-books:hover, .close-subscribe-2:hover, .close-investors:hover, .close-know-team:hover, .close-know-developers:hover, .close-advertisement-channels:hover, .close-seo-advertisement:hover, .close-content-integration:hover,
@@ -487,8 +485,7 @@
 .close-Terms:hover, .close-upload-system:hover, .close-security:hover, .close-profiles:hover, 
 .close-cookie-full-mode:hover, .close-animated-image:hover, .close-relief:hover
 , .close-ceo:hover, .close-authors:hover, .close-ad-tasks:hover, .close-mentors:hover, .close-team:hover, .close-know-team:focus, .close-know-developers:focus, .close-advertisement-channels:hover, .close-seo-advertisement:hover, .close-content-integration:hover,
-.close:focus, .close-upload-system:focus, 
-.close-smart-ads-container:focus, .close-didcy-competitive-advantage:focus, .close-didcy-guide:focus, .close-didcy-keywords:focus, .close-work-board-4:hover, .close-seller-dash-board:focus, .close-buyer-dash-board:focus, .close-ripa-board:focus, .close-coursery-playground:focus, .close-coursery-container:focus, .close-coursery-signup:focus, .close-plugins-board:focus, .close-connections:focus, .close-work-applicant-camera-board:focus, .close-caller:focus, .close-modal-payment-providers:focus, .close-1:focus, .close-s-records:focus, .close-sitemap:focus, .close-mini-web-serve:focus, .close-refund-request:focus, .close-authors:focus, .close-2:focus, .close-howToGaGa:focus, .close-7:focus, .close-10:focus, .close-11:focus, .close-12:focus, .close-upcoming-updates:focus, .close-limit-policy:focus, .close-subscribe:focus , .close-host-policy:focus,
+.close:focus, .close-upload-system:focus, .close-didcy-competitive-advantage:focus, .close-didcy-guide:focus, .close-didcy-keywords:focus, .close-work-board-4:hover, .close-seller-dash-board:focus, .close-buyer-dash-board:focus, .close-ripa-board:focus, .close-coursery-playground:focus, .close-coursery-container:focus, .close-coursery-signup:focus, .close-plugins-board:focus, .close-connections:focus, .close-work-applicant-camera-board:focus, .close-caller:focus, .close-modal-payment-providers:focus, .close-1:focus, .close-s-records:focus, .close-sitemap:focus, .close-mini-web-serve:focus, .close-refund-request:focus, .close-authors:focus, .close-2:focus, .close-howToGaGa:focus, .close-7:focus, .close-10:focus, .close-11:focus, .close-12:focus, .close-upcoming-updates:focus, .close-limit-policy:focus, .close-subscribe:focus , .close-host-policy:focus,
 .close-select-display-type-modal:focus, .close-didcy-mini-contacts:focus, .close-profile-insight:focus, .close-mini-audio-ads:focus, .close-15:focus, .close-chat:focus, .close-profiles:focus,
 .close-ads-books-countdown:focus, .close-Terms:focus, .close-didcy-mini-big-logo:focus, .close-notificator:focus, .close-security:focus, .close-payment-services:focus, .close-subscribe-3:focus, .close-companies-only:focus, .close-actors-groups-only:focus,
 .close-pricing-table:focus, .close-didcy-ripa-bank:focus, .close-stand:focus, .close-13:focus, .close-mini-text-tutorials:focus, .close-special:focus, .close-investors:focus, .close-dispute-policy:focus, .close-team:focus

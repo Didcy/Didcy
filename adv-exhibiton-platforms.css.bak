@@ -11,7 +11,7 @@
 .modal-limit-policy, .modal-host-policy, .modal-sitemap, 
 .modal-advertisement-channels, .modal-companies-only, 
 .modal-actors-groups-only, .modal-work, .modal-plugins-board, .modal-ripa-board, 
-.modal-didcy-fixes, .modal-chat-4-didcy-works, .modal-work-board-4{
+.modal-didcy-fixes, .modal-chat-4-didcy-works, .modal-work-board-4, .modal-seller-dash-board{
   font-family: Arial;
   margin: auto;  
   width: 100%; 
@@ -29,7 +29,7 @@
 .modal-investors, .modal-team, .modal-sitemap, .modal-content-integration,
 .modal-advertisement-channels, .modal-actors-groups-only, 
 .modal-dispute-policy, .modal-work, .modal-plugins-board, .modal-didcy-fixes, 
-.modal-chat-4-didcy-works, .modal-work-board-4 {
+.modal-chat-4-didcy-works, .modal-work-board-4, .modal-seller-dash-board {
   height: 100%;
   width: 0;
   position: fixed;
@@ -73,11 +73,11 @@
    z-index: 22;
 }
 
-.modal-didcy-fixes, .modal-work-board-4{
+.modal-didcy-fixes, .modal-work-board-4, .modal-seller-dash-board{
   z-index: 31;	
 }
 
-.modal-work-board-4{
+.modal-work-board-4, .modal-seller-dash-board{
   z-index: 3;	
 }
 
@@ -90,7 +90,7 @@
 
 }
 .modal-security, .modal-subscribe-web-policy, .modal-know-team, 
-.modal-seo-advertisement, .modal-companies-only, .modal-work-board-4 {
+.modal-seo-advertisement, .modal-companies-only, .modal-work-board-4, .modal-seller-dash-board {
 	width: 0%;
 	height: 0%;	
 }
@@ -114,7 +114,7 @@
 }
 
 .modal-cookie, .modal-cookie-full-mode{
-	background-color: rgba(5, 5, 5, 0.95);	
+	background-color: rgba(5, 5, 5, 0.5);	
 }
 
 .adv-exhibition-platform-header, .adv-exhibition-platform-header-1, 

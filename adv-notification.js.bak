@@ -9,8 +9,8 @@ var mediaSet = 0;
 
 function badgeClick(){
 		var form = new FormData();
-		if(window.location.href.slice(36) != ""){
-		   form.append("drim", window.location.href.slice(36));
+		if(window.location.href.slice(39) != ""){
+		   form.append("drim", window.location.href.slice(39));
 		   form.append("click-state", 0);
 		}else{
 		   form.append("click-state", 1);
@@ -173,15 +173,15 @@ function FetchNotifications(){
        var reloaderID = window.location.href;
 
     var form = new FormData();
-	if(reloaderID.slice(36) != ""){
+	if(reloaderID.slice(39) != ""){
 		form.append("notification", 0);
-		form.append("drim", reloaderID.slice(36));
+		form.append("drim", reloaderID.slice(39));
 	}else{
 		form.append("notification", 2);
 	}
 		$.ajax({
 			type: "POST",
-			url: "adv-notification.php",
+			url: "http://www.didcy.com/adv-notification.php",
 			contentType: false,
 			data: form,
 			processData: false,
@@ -189,7 +189,7 @@ function FetchNotifications(){
 			success: function(result){
 				//window.console.log(result);
 				var $senderIndex = 0;
-				//window.console.log(reloaderID.slice(36));
+				//window.console.log(reloaderID.slice(39));
 				var data_returned = JSON.parse(result);
 				//window.console.log(data_returned.sender);
 				if(data_returned.state == 0){
@@ -315,9 +315,9 @@ function FetchNotifications(){
 							function notificator(notificationLinks, filename, fileId, fileType, audioAdImage){
 								notificationLinks.onclick = function(){
                                    var form = new FormData();
-								   if(reloaderID.slice(36) != ""){
+								   if(reloaderID.slice(39) != ""){
 								     form.append("notification", "1");
-								     form.append("drim", reloaderID.slice(36));
+								     form.append("drim", reloaderID.slice(39));
 								   }else{
 									 form.append("notification", "3");
 								   }
@@ -497,9 +497,9 @@ function FetchNotifications(){
 							function notificator(notificationLinks, filename, fileId, fileType, audioAdImage){
 								notificationLinks.onclick = function(){
                                    var form = new FormData();
-								   if(reloaderID.slice(36) != ""){
+								   if(reloaderID.slice(39) != ""){
 								     form.append("notification", "1");
-								     form.append("drim", reloaderID.slice(36));
+								     form.append("drim", reloaderID.slice(39));
 								   }else{
 									 form.append("notification", "3");
 								   }

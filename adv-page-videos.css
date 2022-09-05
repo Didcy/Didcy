@@ -1,0 +1,22 @@
+.didcy-brief-video{
+   position: relative;
+}
+
+.didcy-brf-video{
+  width: 50%;
+  height: 300px;
+  position: relative;
+  left: 25%;
+}
+
+.didcy-brf-rvideo{
+  height: 100%;
+}
+
+.didcy-custom-playpause{
+	border-radius: 50%;
+	width: 30%;
+	font-size: 25px;
+	font-weight: bold;
+	
+}

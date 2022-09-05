@@ -4,7 +4,7 @@ declare(strict_types=1);
 include("connect_server.php");
 
 function DescribeProductService() : void{
-		  $connect = ConnectServer(0);
+		  $connect = connectserver(0);
 
 			 if($connect["state"] != 500006){
 				echo json_encode($connect);

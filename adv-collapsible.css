@@ -1,0 +1,46 @@
+.collapsible-qa {
+  background-color: rgba(10, 10, 10, 1);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active-qa, .collapsible-qa:hover {
+  background-color: #555;
+}
+
+.collapsible-qa:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active-qa:after {
+  content: "\2212";
+}
+
+.content-qa {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.content-qa p{
+  color: black;
+}
+
+.collapsible-container{
+	width: 80%;
+	position: relative;
+	left: 10%;
+	right: 10%;
+}

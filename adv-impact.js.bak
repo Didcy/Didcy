@@ -163,8 +163,8 @@ function Impact2(impact = [], impactIDs = []){
 		}
 		
 		if(getCookieValue("GAGA_ADI") == ""){
-			AlertBoxInModal("Invalid Request Access");	
-            return window.location.replace("http://www.didcy.com");			
+			alertBox("Invalid Request Access");	
+            return window.location.replace("http://www.localhost");			
 		}		
 	   }
 	   
@@ -396,8 +396,8 @@ function Impact(impact = [], impactIDs = []){
 		}
 		
 		if(getCookieValue("GAGA_ADI") == ""){
-			AlertBoxInModal("Invalid Request Access");	
-            return window.location.replace("http://www.didcy.com");			
+			alertBox("Invalid Request Access");	
+            return window.location.replace("http://www.localhost");			
 		}		
 	   }
 	   

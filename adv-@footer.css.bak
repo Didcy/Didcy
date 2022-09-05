@@ -1,0 +1,66 @@
+.adv-ft{
+  position:relative;
+  width: 100%;
+  padding: 20px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.didcy-value-proposition, .didcy-value-proposition-2, .didcy-value-proposition-3{
+  width: 80%;
+  padding: 20px;
+  font-size: 20px;
+  text-align: justify;
+  color: f030dd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  left: 10%;
+  right: 10%;
+}
+
+.didcy-value-proposition-2{
+  width: 50%;
+  position: relative;
+  left: 25%;
+  right: 25%;	
+}
+
+.didcy-value-proposition-3{
+  width: 30%;
+  position: relative;
+  left: 35%;
+  right: 35%;	
+  text-align: center;
+}
+
+@media screen and (max-width: 800px){
+	.didcy-value-proposition{
+	  width: 96%;
+	  left: 2%;
+	  right: 2%;
+	}	
+	
+	.didcy-value-proposition-2{
+	  width: 80%;
+	  left: 10%;
+	  right: 10%;
+	}
+	.didcy-value-proposition-3{
+	  width: 70%;
+	  left: 15%;
+	  right: 15%;
+	}
+}
+
+@media screen and (max-width: 380px){
+	.didcy-value-proposition-2{
+	  width: 86%;
+	  left: 7%;
+	}
+	.didcy-value-proposition-3{
+	  width: 70%;
+	  left: 15%;
+	  right: 15%;
+	}
+}

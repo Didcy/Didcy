@@ -8,7 +8,7 @@
 	  $avg = 3.3/2.0; 
 	  switch($_POST["RT"]){
 	   case 0:
-		  $connect = connectserver(0);
+		  $connect = connectserver(1);
 
 			 if($connect["state"] != 500006){
 				echo json_encode($connect);
@@ -87,7 +87,7 @@
 	  return;
 	 break;
 	 case 1: 
-		  $connect = connectserver(0);
+		  $connect = connectserver(1);
 
 			 if($connect["state"] != 500006){
 				echo json_encode($connect);

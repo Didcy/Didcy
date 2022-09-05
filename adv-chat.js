@@ -29,13 +29,13 @@ function closeChatBoarder(){
 	 var form = new FormData();
 	 form.append("userid", usr);
 	 
-	 var drim = window.location.href.slice(39);
+	 var drim = window.location.href.slice(36);
 	 
      if(drim == ""){
 		drim = "";
 	 }	 
 	 else{
-	    drim = window.location.href.slice(39);
+	    drim = window.location.href.slice(36);
 	 }
 	 
 	 form.append("drim", drim); 

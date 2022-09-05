@@ -19,7 +19,10 @@ h1.notice-link-header{font-size: 20px;}
   right: 5px;
 }
 a.notification-links{
-	font-size: 12px;
+	opacity: 0.4;
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
 }
 }
 
