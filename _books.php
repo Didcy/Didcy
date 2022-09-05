@@ -4,17 +4,17 @@ include("smile.php");
 
 function ValidateLogsDidcyWork(){
  $loginError = '';
- $_SESSION['username_didcywork'] = "";
- $_SESSION['userid_didcywork'] = "";
- $didcyworkTable = "";
+ $_SESSION['username_didcybooks'] = "";
+ $_SESSION['userid_didcybooks'] = "";
+ $didcybooksTable = "";
  $index = 0;
  
- $table = "didcywork";
+ $table = "didcybooks";
  $query = "SHOW TABLES LIKE '".$table."'";
  if(count(fetchAll($query)) == 0){
     $loginError = "User not exists";
 	$didcyworkBoarder = "";
-	echo json_encode(array("session"=>$loginError, "state"=>506, "didcyworkBoard"=>$didcyworkBoarder));
+	echo json_encode(array("session"=>$loginError, "state"=>506, "didcybooksBoard"=>$didcyworkBoarder));
     return;     
  }  
   
