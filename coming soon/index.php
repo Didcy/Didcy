@@ -1,0 +1,204 @@
+<!--comment: HTML5, CSS3, JS6(ECMASCRIPT/ES6), PHP8, SASS, AJAX, XML, JSON, ASP, NODEJS -->
+<!doctype html>
+<html lang="en-us" default-lang="english" def_country="usa">
+<head class="" id="didcy-A1">
+ <title class="" id="">Didcy - Selling made simple</title>
+ <meta charset="utf-8">
+ <meta http-equiv="refresh" content="36000000000000000">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="keyword" content="di,d,dc,dd,didcx,dicx,dcx,dx,ddx,ddc,ddcx,ddxc,dcd,dxd,dcxd,dxcd,did,dic,dici,dicy,dc,dy,dyc,didc,didcy,didci,dici,dci,dci,digi,digital,dig,diw,diq,dip,dil,del,didcx">
+ <meta name="description" content="Ad-based web platform with level grade services">
+ <meta name="author" content="david ansong,alex akoto,bismark,joshua brown,david quartey,godbless,christian opare">
+ <meta name="country" content="Ghana">
+ <meta name="domain" content="https://www.didcy.com">
+ <link rel="icon" href="../didcy.png" media="" media-type="" type="text/png" min="0em" max="0vw">
+ <link rel="stylesheet" href="../w3.css" media="" media-type="" type="text/css" min="0em" max="0vw">
+ <link rel="stylesheet" href="coming_soon.css" media="" media-type="" type="text/css" min="0em" max="0vw">
+ <script type="text/javascript" src="../jquery.js" script-id="00000000000000"></script>
+ <style type="text/css">
+ 
+
+ </style>
+</head>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <p><img src="../didcy.png" width="50px"/></p>
+  </div>
+  <div class="coming-soon">
+
+  </div>
+</div>
+
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="demo" style="color:rgba(100,100,100,0.8)"></p>
+  </div>
+  <!--<div class="bottomleft">
+    <p style="text-align:center"><i><b>Use it, Deal it</b></i></p>
+  </div>-->
+
+   <div id="id012" class="w3-modal id012" style="background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.8)">
+    <div style="border-radius:8%;" class="w3-modal-content w3-animate-top w3-card-4 id012-inner-box">
+      <header class="w3-container w3-black"> 
+        <span onclick="CloseContacts()" 
+        class="w3-button w3-display-topright close-id02">&times;</span>
+        <h2>24/7</h2>
+      </header>
+      <div class="w3-container contact-media">
+	    <h2>Media Handles :</h2>
+        <!-- <p style="color: black;">Facebook : Didcy</p> -->
+		<a href="https://web.facebook.com/Didcy-102782912411037" title="Facebook" target="_blank"><img class="logo-media logo-fb" src="../media.handles/3955011.png"/></a>
+		<a href="https://www.youtube.com/channel/UClTumF64pj2TxEAzMAVBVSQ" title="Youtube" target="_blank"><img class="logo-media logo-ytb" src="../media.handles/3670147.png"/></a>
+		<a href="https://www.instagram.com/didcy_company/" title="Instagram" target="_blank"><img class="logo-media logo-ins" src="../media.handles/3955024.png"/></a>
+		<a href="https://twitter.com/DidcyC" title="Twitter" target="_blank"><img class="logo-media logo-tw" src="../media.handles/1458121.png"/></a>
+		<a href="https://www.pinterest.com/didcycompany" title="Pinterest" target="_blank"><img class="logo-media logo-pin" src="../media.handles/5060605.png"/></a>
+		<a href="https://www.linkedin.com/in/didcy-company-9073b1239/" title="LinkedIn" target="_blank"><img class="logo-media logo-in" src="../media.handles/5940405.png"/></a>
+<!--         <p style="color: black;">Instagram : Didcy</p>
+        <p style="color: black;">Twitter : Didcy</p>
+        <p style="color: black;">Youtube : Didcy</p> -->
+		<h2>E-mail :</h2>
+        <!-- 542740<p style="color: black;">info@didcy.com</p> -->
+		<a class="cursor tooltip media-email" target="_blank" 
+		onclick="document.getElementsByClassName('tooltiptext')[0].style.visibility='visibile'">
+		<img class="logo-media" title="Email" src="../adv.icons/542740.png"/>
+		<span class="tooltiptext">info@didcy.com</span></a>
+		<h2>Telephone :</h2>
+        <!--adv.icons/4213179.png <p style="color: black;">+233265873507</p> -->
+        <a class="cursor tooltip media-tel" target="_blank" 
+		onclick="document.getElementsByClassName('tooltiptext')[1].style.visibility='visibile'">
+		<img title="Telephone" style="margin-bottom: 12%" class="logo-media" src="../adv.icons/4213179.png"/>
+		<span class="tooltiptext">+233265873507</span></a>
+	  </div>
+      <footer class="w3-container w3-black id012-ft">
+        <p>Find out more about us here <a href="" alt="" target="" title="">https://www.didcy.com</a></p>
+		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
+      </footer>
+    </div>
+  </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2 style="text-align:center">About US</h2>
+    </div>
+    <div class="modal-body">
+     <p style="color:black;text-align: justify">Have you ever wondered how a mega platform would look like.</p>
+     <p style="color:black;text-align: justify">Do you even think such a platform exist or would ever exist?</p>
+     <p style="color:black;text-align: justify">If you're 100% curious enough then continue to find out more about this affordable mysterious platform by reading more below.</p>
+	 <p style="color:black;text-align: justify"><b>Welcome to Didcy!.</b></p>
+
+	 <p style="color:black;text-align: justify">Do you really know who, what we're and how we operate?</p>
+
+	 <p style="color:black;text-align: justify"><b>Let's get you started.</b></p>
+
+	 <p style="color:black;text-align: justify">Didcy is a mega platform designed to careter for all your needs and wants.</p> 
+
+	 <p style="color:black;text-align: justify">Didcy is basically what you are missing in life.</p>
+
+	 <p style="color:black;text-align: justify">Come to your Affordable Market & locate your dreams. </p>
+
+	 <p style="color:black;text-align: justify">We are the best affordable market you can find out there.</p>
+
+	 <p style="color:black;text-align: justify">What do you want to sell, buy, host, store, develop, grow, produce or get. We got you all covered. </p>
+
+	 <p style="color:black;text-align: justify">Just knock and we will widely open, search and we'll gladly help you find,  and then ask and let's see what we can get you.</p>
+
+	 <p style="color:black;text-align: justify">We'll provide you with everything and anything in only one platform.</p>
+
+	 <p style="color:black;text-align: justify">We aim to offer the best quality products and services to you.</p>
+
+	 <p style="color:black;text-align: justify">Didcy is the way forward. </p>
+
+	 <p style="color:black;text-align: justify">Just come like a baby and go like an adult.</p>
+
+	 <p style="color:black;text-align: justify">Start with us <b>NOW</b> and keep more.</p>
+
+    </div>
+    <div class="modal-footer">
+      <p>Find out more about us here <a href="https://www.didcy.com" alt="" target="_blank" title="Didcy Home">https://www.didcy.com</a></p>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="content w3-card-4 w3-animate-bottom">
+<span class="close-content closebtn" id="close-content">
+&times;</span>
+<form id="newsletter-options-f">
+  <div class="container">
+    <h2>Subscribe to our Newsletter</h2>
+	<p>Be the first to gain access to the platform as soon as it's ready for deployment.</p>
+	<p>Don't waste time manually checking on the site through search engines.</p>
+	<p>Just subscribe <b><i>NOW</i></b> &amp; know when to start visiting instantly <b>&darr;</b>.</p>
+	<p>Thank you.</p>
+  </div>
+
+  <div class="container" style="background-color:white">
+    <input type="text" class="newsletter-options-name" placeholder="Name" name="name" required>
+    <select class="newsletter-options" name="" required>
+	 <option name="">Email</option>
+	 <option name="">SMS</option>
+	 <option name="">Call</option>
+	 <option name="">All</option>
+	 <option name="" selected>None</option>
+	</select>
+    <input type="email" class="email" id="email" placeholder="Email address" name="mail">
+    <input type="tel" class="sms" id="sms" placeholder="SMS" name="sms">
+    <input type="tel" class="call" id="call" placeholder="Telephone to receive incoming call" name="call">
+    <label style="cursor:pointer">
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+  </div>
+  
+  <div class="container">
+    <input type="submit" class="submit-newsletter-options" value="Subscribe">
+  </div>
+</form>
+</div>
+
+<button title="Subscribe to our newsletters" class="open-newsletter w3-btn" id="open-newsletter" onclick="OpenNewsletter()">Subscribe</button>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 31, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+<script type="text/javascript" src="coming_soon.js" script-id="00000000000000"></script>
+
+</body>
+</html>
