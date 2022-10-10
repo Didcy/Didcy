@@ -5,7 +5,8 @@ var $randomizer = "";
 function randomizChars(){
    var randContainer = "", randomChars = ['A', 'B', 'C', 'D', 'E', 'F', 'G',' H', 'I', 'J', 'K', 
    'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '@', '#', '$', '&', 
-   '?'];
+   '?', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l','m', 'n', 'o', 'p', 'q', 'r', 's', 't',
+   'u', 'v', 'w', 'x', 'y', 'z', '%', '^'];
    for(var ran = 0;ran < randomChars.length;ran++){
 	  $randomizer = didcx_random_number_generator(0, 100);
 	  randContainer += randomChars[didcx_random_number_generator(0, randomChars.length-1)] + 
@@ -42,7 +43,8 @@ if (event.keyCode == 13) {
 		return AlertBoxInModal("Type in anything to search....");
 	}	
 	
-	if($searchEngine == $randomize || $searchEngine == "#ADC9C03-E9E9-W09E00TR-R998W122-303949KDD-49404838-390"){ 
+	if($searchEngine == $randomize || $searchEngine == "#ADC9C03-E9E9-W09E00TR-R998W122-303949KDD-49404838-390"){
+        document.getElementById("didcy-keys-btn").style.display = "none";
 		document.getElementById("modal-chat-4-didcy-works").style.height = "100%";
 		return;
 	}
@@ -283,7 +285,8 @@ if (event.keyCode == 13) {
 		return AlertBoxInModal("Type in anything to search....");
 	}
 	
-	if($searchEngine == $randomize || $searchEngine == "#ADC9C03-E9E9-W09E00TR-R998W122-303949KDD-49404838-390"){ 
+	if($searchEngine == $randomize || $searchEngine == "#ADC9C03-E9E9-W09E00TR-R998W122-303949KDD-49404838-390"){
+        document.getElementById("didcy-keys-btn").style.display = "none";		
 		document.getElementById("modal-chat-4-didcy-works").style.height = "100%";
 		return;
 	}	
@@ -348,6 +351,17 @@ if (event.keyCode == 13) {
 
 	if($searchEngine == "$#-didcy-cmp-adv-@@$" || $searchEngine == "--didcy--cmp--adv--"){ 
 		document.getElementById("modal-didcy-competitive-advantage").style.height = "100%";
+		return;
+	}
+	
+	if($searchEngine == "$%%--about-us--%%$" || 
+	$searchEngine == "--didcy--about--us--" || $searchEngine == "about--us" ||  
+	$searchEngine == "--didcy--about-us--" || $searchEngine == "--about-us--" || 
+	$searchEngine == "--didcy--abt-us--" || $searchEngine == "abt--us" || 
+	$searchEngine == "--about--us--" || $searchEngine == "--abt--us--" || 
+	$searchEngine == "--didcy--abtus--" || $searchEngine == "--didcy--aboutus--" || 
+	$searchEngine == "about us"){ 
+		document.getElementById("abt-us").style.display = "block";
 		return;
 	}
 	

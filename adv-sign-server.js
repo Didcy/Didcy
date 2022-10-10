@@ -63,7 +63,7 @@ formSubmitId2.addEventListener("click", function(){
 			 GagaResponseFormApi(null, this.gagaSignIn.email.value.toString().trim(), 
 			 this.gagaSignIn.password.value.toString().trim(), 
 			 this.gagaSignIn.repeatPassword.value.toString().trim(), "", "", "", "",
-			 this.gagaSignIn.remember.value.toString().trim(), this.gagaSignIn.signinID);
+			 this.gagaSignIn.remember, this.gagaSignIn.signinID);
 		}
 	};	
 	gagaForm.gagaSignAPI();
@@ -114,7 +114,7 @@ formSubmitId.addEventListener("click", function(){
 			 this.gagaSignUp.selectedCompanyCountryRegistration.value.toString().trim(), 
 			 this.gagaSignUp.adFee.value.toString().trim(), 
 			 this.gagaSignUp.companiesOnly, 
-			 this.gagaSignUp.remember.value.toString().trim(), 
+			 this.gagaSignUp.remember, 
 			 this.gagaSignUp.signupID);
 		}
 	};
@@ -139,10 +139,28 @@ function GagaResponseFormApi(user_name, email, password, repeatPassword,
 selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, remember, signID, image = null, imageId = ""){
 	var form = new FormData();
 	form.append("email", email);
-	form.append("password", password);
-	form.append("repeatPassword", repeatPassword); 
+	var pswd, rpswd = "";
+	pswd = Salt(password);
+	rpswd = Salt(repeatPassword);
+	
+	if(remember.checked == true){
+		remember = "1";
+	}
+	else{
+		remember = "0";
+	}
 	form.append("remember", remember);
+	form.append("pswd", JSON.stringify(pswd));
+	form.append("rpswd", JSON.stringify(rpswd));
+	form.append("password", transportThis(pswd[0]));
+	form.append("repeatPassword", transportThis(rpswd[0])); 
 	form.append("signID", signID);
+	
+/* 	window.console.log(pswd);
+	window.console.log(rpswd);
+	window.console.log(transportThis(pswd[0]));
+	window.console.log(transportThis(rpswd[0]));
+	return; */
 	
 	if(signID == 0){
 		if(user_name == ""){
@@ -302,6 +320,7 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 				document.cookie = "GAGA_RESPONSE="+data_returned.cookie_id+";path=/";
 				document.cookie = "GAGA_CMPO="+data_returned.companiesOnly+";path=/";
 				document.cookie = "GAGA_ADI="+data_returned.adInterest+";path=/";
+				document.cookie = "GAGA_RM="+data_returned.rememberMe+";path=/";
                  window.location.href = "adv-main.php?drim="+data_returned.cookie_id+
 				 "";
 			}
@@ -322,6 +341,7 @@ selectedAdIndustry, selectedCompanyCountryRegistration, adFee, companiesOnly, re
 				 document.cookie = "GAGA_RESPONSE="+data_returned.cookie_id+";";
 				 document.cookie = "GAGA_CMPO="+data_returned.companiesOnly+";path=/";
 				 document.cookie = "GAGA_ADI="+data_returned.adInterest+";path=/";
+				 document.cookie = "GAGA_RM="+data_returned.rememberMe+";path=/";
                  window.location.href = "adv-main.php?drim="+data_returned.cookie_id+
 				 "";//"&companiesOnly="+data_returned.companiesOnly+"&&_rid=39393938228282"+"&39300293939000";
 	            //}

@@ -43,13 +43,30 @@ function FormNewLetters(formNewsletterID = 0){
 			  //AlertBoxInModal(data_returned.message_data);
 			  AlertBoxInModal("Thanks for subscribing to Didcy Newsletters.");
 			  document.getElementById("modal-newsletters").style.display = "none";
-              if(newsletterDifference == 1){			  
-			     PopUpRandomizer();
-			     clearFirstNewsletter = 1;
-			  }
-			  newsletterDifference = 2;
+			  setTimeout(() => {
+				  if(newsletterDifference == 1){			  
+					 PopUpRandomizer();
+					 clearFirstNewsletter = 1;
+				  }
+				  newsletterDifference = 2;
+			  }, 1000);
 		   }
 		   else if(data_returned.state == 2){
+			  AlertBoxInModal(data_returned.message_data);
+		   }		   
+		   else if(data_returned.state == 2000){
+			  AlertBoxInModal(data_returned.message_data);
+		   }		   
+		   else if(data_returned.state == 2001){
+			  AlertBoxInModal(data_returned.message_data);
+		   }		   
+		   else if(data_returned.state == 2002){
+			  AlertBoxInModal(data_returned.message_data);
+		   }		   
+		   else if(data_returned.state == 2003){
+			  AlertBoxInModal(data_returned.message_data);
+		   }
+		   else if(data_returned.state == 2004){
 			  AlertBoxInModal(data_returned.message_data);
 		   }
 		   else{

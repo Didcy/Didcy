@@ -2626,23 +2626,23 @@ function TermsConditions(){
             textTutorialP.innerHTML = "<b class='tos'>TERMS OF SERVICE</b><br/>"+
 
 
-"Welcome to Didcy.com, the place where <b><i>space</i></b> starts everything."+
+"Welcome to Didcy.com, the place where <b><i>space</i></b> begins everything."+
 " Thanks for viewing our site."+
 " Before you create your account , please be sure you have read and understood our Terms and Conditions. Members who do not comply with our rules and regulations may find their didcy account suspended or deleted, possibly without prior notice."+
-" With Didcy, businesses are done much efficiently and easier. We provide the best of all product and services for our customers to make them feel more reliable on our services."+
+" With Didcy, businesses are done much efficiently and easier. We provide the best of all products and services to our customers to make them feel more reliable on our services."+
 " Our terms and conditions are allowed to be viewed at any time on our platforms with absolute discretion."+
-"<br/>ALERT!!! Our product and services are not for scamming,frauding and fraudualent ads,hacking,breaching of bounderies such as other didcy user's passwords and privacy protection or any illegal activities that is not accepted by the ads industry,the government, the users and our platform."+
+"<br/>ALERT!!! Our product and services are not for scamming,frauding and fraudualent activities,hacking,breaching of bounderies such as other didcy user's passwords and privacy protection or any illegal activities that is not accepted by the tech industry,the government, the users and our platform."+
 "<br/>ATTENTION!!!. For agreeing to our terms and conditions, you  have to comply to the following;"+
-"<br/>1. No illegal materials or anything which leads to illegal activities such as fraud or fraudulent ads or any other type of harmful content will not be accepted or allowed."+
-"<br/>2. You are not allowed to copy or reproduce any page, image or other content related to our platforms or services or products without the express prior consent of the original copyright owner of that content or ads."+
+"<br/>1. No illegal materials or anything which leads to illegal activities such as fraud or fraudulent activities or any other type of harmful content will not be accepted or allowed."+
+"<br/>2. You are not allowed to copy or reproduce any page, image or other content related to our platforms or services or products without the express prior consent of the original copyright owner of that content or product."+
 "<br/>3. All rights reserve from our services to delete,suspend,terminating any acccount at any time  for any reason or no reason at all. Disabled or suspended accounts can be enabled or reclaimed ONLY all debt are paid or misconducts has being resolved."+
 "<br/>4. Adult materials without exceptions are forbidden or disapproved! This will lead to your account being terminated instantly or shutdown."+ 
 "<br/>5. Do not run unapproved or unlinced ads on our platform or anything related or connnected to our platform. As soon as we discover any  misconduct in your didcy account, you'll be locked out from your account immediately and your inappropriate activity would be reported to the proper authorities."+
 "<br/>6. You may not use your ADS to provide materials or links to materials that are grossly offensive to the Web society and the industry."+ 
 "<br/>7. Immoral acts such as hatred, defamatory, anti-racial, terrorism, drugs, and other immoral related sites or any similar contents would not be allowed."+
-"<br/>8. You are not allowed to ABUSE or use ABUSIVE ADS whether you are a corporate entity, government body, small business, individual or any other type of business."+
-"<br/>9. We do not condor ads which are hazardious to the community such as COCAINE, TRAMADOL, WEE, POISONOUS ADS and any other type of harmful ads to the communuty."+
-"<br/>10. YOU are not to upload copyrighted ads on DIDCY except when all legal procedures have being taken into consideration. All ads should be made public except when still not decided whether or not to make public or still working on the creation of the ad(s)."+
+"<br/>8. You are not allowed to ABUSE or use ABUSIVE CONTENTS or ADS whether you are a corporate entity, government body, small business, individual or any other type of business."+
+"<br/>9. We do not condor contents or ads which are hazardious to the community such as COCAINE, TRAMADOL, WEE, POISONOUS ADS and any other type of harmful contents or ads to the communuty."+
+"<br/>10. YOU are not to upload copyrighted contents or ads on DIDCY except when all legal procedures have being taken into consideration. All contents or ads should be made public except when still not decided whether or not to make public or still working on the creation of the content(s) or ad(s)."+
 "<br/>11. We are not responsible if you mistakenly lose something due to server crash or by our negligence."+
 
 "<br/>ALLERT!!! Failure to comply with the above terms and conditions will face the following consequences such as;"+
@@ -2650,7 +2650,7 @@ function TermsConditions(){
 "<br/>2. Will pay a fine for agreeing and accepting our terms and policies while not complying with it."+
 "<br/>3. Will pay a fine for breaching other didcy users account passwords and privacy protections. This wiill also lead to deleting your account."+
 "<br/>4. Will be reported to the appropriate or the right authorities"+
-"<br/>5. Will be suspended from your account for producing an unlicensed ads and will pay a fine for $700/month."+
+"<br/>5. Will be suspended from your account for producing an unlicensed content or ads and will pay a fine for $700/month."+
 "<br/>We reserve the right to suspend or delete any didcy account due to inappropriate behavior at our sole discretion. Accounts deleted or suspended for terms infringement can be restored from backups (if they are still available) for a fee, with the write promise that you won't abuse again.<br/>"+
  
 "<br/>DIDCY FURTHER RESERVES THE RIGHT TO TAKE LEGAL ACTION AGAINST ANY MEMBER IN BREACH OF THESE RULES AND TO PROVIDE INFORMATION TO LAW ENFORCEMENT AUTHORITIES AND OTHER INTERESTED PARTIES REGARDING THESE MEMBERS.<br/>"+

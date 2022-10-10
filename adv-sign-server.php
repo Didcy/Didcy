@@ -7,6 +7,7 @@
   
   require_once("connect_server.php");
   require_once("functions.php");
+  require_once("encrypt.php");
   require_once(UID_HASH);
   
   function InitializeChat($username, $password, $connect, $id){
@@ -254,6 +255,7 @@
 	 //$connect->close();
 	 return 4;
   }
+
   
   function GetGaGaUserCredentials($SERVER_REQ_TYPE = array("GET", "POST", "HEAD", "FILES", "ENV", "DELETE", "PUT", "OPTION")){
 		 switch($SERVER_REQ_TYPE){
@@ -299,6 +301,8 @@
 							echo json_encode(array("state"=>23));
 							return;							
 						}
+						
+						
 /* 			$localhost = "localhost";
 			$dbuser = "333811";
 			$dbpass = "davidansong12345";
@@ -395,10 +399,18 @@
 					  return;
 					}
 
+						$pswd = json_decode($_POST["pswd"]);
+						$rpswd = json_decode($_POST["rpswd"]);
+						
+						$pswd = extractUserPassword(decipher(null, $pswd[0], $pswd[1]));
+						$rpswd = extractUserPassword(decipher(null, $rpswd[0], $rpswd[1]));
+						
 						$user_name = $_POST["username"];
 						$email = $_POST["email"];
-						$password = $_POST["password"];
-						$repeatPassword = $_POST["repeatPassword"];
+						//$password = $_POST["password"];
+						$password = $pswd;
+						//$repeatPassword = $_POST["repeatPassword"];
+						$repeatPassword = $rpswd;
                                                 $adFee = $_POST["adFee"];
 						$selectedAdIndustry = $_POST["selectedAdIndustry"];
 						$companiesOnly = $_POST["companiesOnly"];// != "")?"1":"0";
@@ -492,7 +504,7 @@
 						}
 						
 					    echo json_encode(array("cookie_id"=>$id, "companiesOnly"=>$companiesOnly,
-						"state"=>4, "adInterest"=>$selectedAdIndustry));
+						"state"=>4, "adInterest"=>$selectedAdIndustry, "rememberMe"=>$_POST["remember"]));
 						$connect->close();
 						//$connect->close();
 						return;
@@ -545,6 +557,14 @@
 							echo json_encode(array("state"=>22));
 							return;							
 						}
+
+						$pswd = json_decode($_POST["pswd"]);
+						$rpswd = json_decode($_POST["rpswd"]);
+						
+						$pswd = extractUserPassword(decipher(null, $pswd[0], $pswd[1]));
+						$rpswd = extractUserPassword(decipher(null, $rpswd[0], $rpswd[1]));
+						
+						
 /* 			$localhost = "localhost";
 			$dbuser = "333811";
 			$dbpass = "davidansong12345";
@@ -573,8 +593,11 @@
 
 
 						$email = $_POST["email"];
-						$password = $_POST["password"];
-						$repeatPassword = $_POST["repeatPassword"];
+						//$password = $_POST["password"];
+						//$repeatPassword = $_POST["repeatPassword"];						
+						
+						$password = $pswd;
+						$repeatPassword = $rpswd;
 						
 						$server_target_db = "select * from gaga where email='".$email."' and password='".
 						md5(trim($password))."' and repeatPassword='".md5(trim($repeatPassword))."';";
@@ -596,7 +619,7 @@
 					    }
 						if($id != ""){	
 					      echo json_encode(array("cookie_id"=>$id, "companiesOnly"=>$companiesOnly,
-						  "state"=>8, "adInterest"=>$adInterest));
+						  "state"=>8, "adInterest"=>$adInterest, "rememberMe"=>$_POST["remember"]));
 						}else{
 						  echo json_encode(array("state"=>11));
 						}

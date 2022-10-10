@@ -34,7 +34,7 @@
  Didcy has 6 team members and 4 employees. Languages written in: HTML, CSS, JS, PHP, AJAX, MYSQL.">
  <meta name="author" content="David Ansong">
  <meta name="country" content="Ghana">
- <meta name="domain" content="https://www.didcy.com">
+ <meta name="domain" content="http://www.localhost">
  <link rel="stylesheet" href="build/css/intlTelInput.css">
 <link href="style.css" rel="stylesheet" id="bootstrap-css">
 <script type="text/javascript" src="jquery.js"></script>
@@ -100,11 +100,12 @@
  <link rel="stylesheet" href="adv-page-videos.css" type="text/css" media="" media-type="" min="0em" max="0vw">
  <link rel="stylesheet" href="chat-login.css" type="text/css" media="" media-type="" min="0em" max="0vw">
  <link rel="stylesheet" href="adv-youtube.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="https://www.didcy.com/adv-features.css" type="text/css" media="" media-type="" min="0em" max="0vw">
- <link rel="stylesheet" href="https://www.didcy.com/adv-tooltips.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-features.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/adv-tooltips.css" type="text/css" media="" media-type="" min="0em" max="0vw">
+ <link rel="stylesheet" href="http://www.localhost/smile.css" type="text/css" media="" media-type="" min="0em" max="0vw">
 
  
- <link id="icon" rel="icon" href="https://www.didcy.com/didcy.png" type="image/ico">
+ <link id="icon" rel="icon" href="http://www.localhost/didcy.png" type="image/ico">
  <script type="text/javascript" src="adv-global.js"></script>
  <script type="text/javascript" src="jquery.js"></script>
  <script type="text/javascript" src="w3.js"></script>
@@ -124,13 +125,14 @@
  <script type="text/javascript" src="adv-services-not-available.js"></script>
  <script type="text/javascript" src="it.js"></script>
  <script type="text/javascript" src="adv-cookie-accept.js"></script>
+ <script type="text/javascript" src="encrypt.js"></script>
  
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
  <!-- <script type="text/javascript" src="adv-impact.js"></script> -->
 <!--  <script type="text/javascript">
-  if(getCookieValue("GAGA_RESPONSE") != window.location.href.slice(40)){
-      document.cookie = "GAGA_RESPONSE="+window.location.href.slice(40)+";";
+  if(getCookieValue("GAGA_RESPONSE") != window.location.href.slice(39)){
+      document.cookie = "GAGA_RESPONSE="+window.location.href.slice(39)+";";
   }
  </script> -->
  <style type="text/css">
@@ -374,6 +376,9 @@ p.policy-attribution{font-size: 0.7em;}
 .col-fixes, .col-ripa{
   height: 0;	
 }
+
+/*.col-fixes{border-radius: 50%;}*/
+/*.col-fixes .button{border-radius: 50%;}*/
 
 .didcy-min-nav, .didcy-min-nav-contacts, .linker-left-side, .didcy-mini-logo{
   position: fixed;
@@ -1453,6 +1458,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 .no-html-found, .no-html-content-found{
   display: none;
 }
+.more-link{text-decoration: none;}
  </style>
  <style type="text/css" id="in-css"></style>
 </head>
@@ -1464,8 +1470,8 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 
 <div class="topNavg w3-container" id="identity_main_ids">
 <div class="topnav" id="myTopnav">
-  <a href="https://www.didcy.com" id="didcy" class="didcy didcx" title="Welcome to Didcy" target="_self" alt="Welcome to Didcy" ping="">Didcy</a>
-  <a href="https://www.didcy.com" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="adv.icons/1946433.png"/></a>
+  <a href="http://www.localhost" id="didcy" class="didcy didcx" title="Welcome to Didcy" target="_self" alt="Welcome to Didcy" ping="">Didcy</a>
+  <a href="http://www.localhost" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="adv.icons/1946433.png"/></a>
   <div class="dropdown" style="z-index:3">
     <button title="hey you, this is what your competitors are upto" class="dropbtn drop">
       <img class="iconic" src="adv.icons/3256216.png"/><!-- download(25).jpg -->
@@ -1486,7 +1492,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 
  	  <a id="contacts-links" alt="24/7 contact" onclick="document.getElementById('id012').style.display='block'" class="contacts" style="cursor: pointer"><img class="iconic" src="adv.icons/4213179.png"></a><!-- download(13).jpg -->
  	  
-	  <a id="current" alt="Didcy CloudMyAdS notification" class="current notification" style="cursor: pointer"><!-- <i class="fa fa-caret-down"></i> --><span class="badge">0</span>
+	  <a id="current" alt="Didcy CloudAds notification" class="current notification" style="cursor: pointer"><!-- <i class="fa fa-caret-down"></i> --><span class="badge">0</span>
 	  <img class="iconic" src="adv.icons/1156949.png"/><!-- images(4).jpg -->
 	  </a>
  	  
@@ -1503,7 +1509,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <img class="iconic" src="adv.icons/870175.png" title="24/7"/><!-- 24/7 --></a>
     </div>
   </div> 
-  <div class="dropdown" title="Get notified of the latest uploaded ads from CloudMyAdS"><!--  style="background-color: #555;border-radius: 2px"  onclick="ServicesNotAvailable('Notification Services', 
+  <div class="dropdown" title="Get notified of the latest uploaded ads from CloudAds"><!--  style="background-color: #555;border-radius: 2px"  onclick="ServicesNotAvailable('Notification Services', 
 	  'Notification Services report is at the back side. Please tab/put the mouse on this box to view the report.')" -->
     <button id="current" class="currenting dropbtn notification drop"><span class="badge">0</span>
       <img class="iconic" src="adv.icons/1156949.png"/><!-- images(4).jpg -->
@@ -1587,8 +1593,8 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	document.cookie="GAGA_CMPO=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
 	document.cookie="GAGA_ADI=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
 	//window.location.replace('http://www.didcy.ueuo.com/?id=1');
-	window.location.replace('https://didcy.com/?id=1');
-	//window.location.replace('https://www.didcy.com/?id=1');
+	window.location.replace('http://www.localhost/?id=1');
+	//window.location.replace('http://www.localhost/?id=1');
 	//window.location.replace('https://www.dbacarcollections.ueuo.com/?id=1');// = 21 
 
 	/*document.cookie="GAGA_RELATIONS=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";	      
@@ -1657,7 +1663,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 		<span class="tooltiptext">+233265873507</span></a>
 	  </div>
       <footer class="w3-container w3-black">
-        <p>Find out more about us here <a href="https://www.didcy.com/more.php" alt="Find out more about Didcy 24/7" target="_blank" title="Find out more about Didcy 24/7">https://www.didcy.com/more</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" class="more-link" alt="Find out more about Didcy 24/7" target="_blank" title="Find out more about Didcy 24/7">http://www.localhost/more</a></p>
 		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
       </footer>
     </div>
@@ -1689,7 +1695,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 		</div>
       </div>
       <footer class="w3-container w3-black">
-        <p>Find out more about us here <a href="https://www.didcy.com/more.php" alt="Find out more about Didcy Audio/Radio" id="didcy-cms" target="_blank" title="Find out more about Didcy Audio/Radio">https://www.didcy.com/more</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" class="more-link" alt="Find out more about Didcy Audio/Radio" id="didcy-cms" target="_blank" title="Find out more about Didcy Audio/Radio">http://www.localhost/more</a></p>
       </footer>
     </div>
   </div>
@@ -1756,9 +1762,9 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
     </div>
     <div class="modal-footer-alert-box">
       <h3 class="didcy-error didcy-err-0" style="color: white">Find out more about Didcy at 
-	  <a href="https://www.didcy.com" class="didcy-err" alt="Find out more about Didcy" target="_blank" 
+	  <a href="http://www.localhost/more.php" class="more-link didcy-err" alt="Find out more about Didcy" target="_blank" 
 	  title="Find out more about Didcy ">
-	  https://www.didcy.com.</a></h3>
+	  http://www.localhost/more.</a></h3>
     </div>
   </div>
 
@@ -1990,7 +1996,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
         </p>
       </div>
       <footer class="w3-container w3-black id012-ft">
-        <p>Find out more about us here <a href="https://www.didcy.com/more.php" alt="Find out more about Didcy E-Services" target="_blank" title="Find out more about Didcy E-Services">https://www.didcy.com/more</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" class="more-link" alt="Find out more about Didcy E-Services" target="_blank" title="Find out more about Didcy E-Services">http://www.localhost/more</a></p>
 		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
       </footer>
     </div>
@@ -2008,7 +2014,8 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <div class="container-newsletter">
 		<h2 class="glower">Subscribe to our Newsletters</h2>
 		<p>Subscribing to our newsletters makes it possible to be the first 
-		of all your competitors to see what's making the industry go crazy. Make it a priority to subscribe, so you can have unlimited
+		to get notified of all our latest products and services instantly. 
+		Make it a priority to subscribe, so you can have unlimited
 		updates. Your industry, Your Life. Thank you.</p>
 	  </div>
 
@@ -2063,7 +2070,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	   </div>
 	 </div>
       <footer class="w3-container w3-black id012-ft">
-        <p style="color: white">Find out more about us here <a href="https://www.didcy.com/more.php" alt="Find out more about Didcy Keys" target="_blank" title="Find out more about Didcy Keys">https://www.didcy.com/more</a></p>
+        <p style="color: white">Find out more about us here <a href="http://www.localhost/more.php" class="more-link" alt="Find out more about Didcy Keys" target="_blank" title="Find out more about Didcy Keys">http://www.localhost/more</a></p>
 		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
       </footer>
 	</div>
@@ -2101,7 +2108,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 
 	  </div>
       <footer class="w3-container w3-blue">
-        <p>Find out more about us here <a href="https://www.didcy.com/more.php" alt="Find out more about Didcy" target="_blank" title="Find out more about Didcy">https://www.didcy.com/more</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" class="more-link" alt="Find out more about Didcy" target="_blank" title="Find out more about Didcy">http://www.localhost/more</a></p>
 		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
       </footer>
     </div>
@@ -2122,7 +2129,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	   <p style="color:black">Thank you.</p>
 	  </div>
       <footer class="w3-container w3-black">
-        <p>Find out more about us here <a href="https://www.didcy.com/more.php" alt="Find out more about Didcy Keywords" target="_blank" title="Find out more about Didcy Keywords">https://www.didcy.com/more</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" class="more-link" alt="Find out more about Didcy Keywords" target="_blank" title="Find out more about Didcy Keywords">http://www.localhost/more</a></p>
 		<!-- <p style="position: absolute;top: 75%;right: 2%">We are here to serve you and no one else</p> -->
       </footer>
     </div>
@@ -2247,7 +2254,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <p style="color:white;padding-left: 10px;padding-right: 10px">
 		 For more enquiries, kindly contact us by looking up our contact 
 		 informations at either <q>Contacts</q> <img class='iconic' src='adv.icons/870175.png'/> in the top navigation bar of the 
-		 front page or at <q>Didcy Find</q> under <q>Menu or More Services or The Core</q>
+		 front page or at <q>Didcy Find</q> under <q>Menu or The Core</q>
 		 <img class='iconic' src='adv.icons/2377884.png'/>. We will be availabile 
 		 24/7 just to listen to only and only you. Have a nice Didcy visit.
 		 <br><br>Thank you.
@@ -3014,33 +3021,91 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 		<span id="dump" style="text-align: center;color: white" class="work-as-a-puzzle"></span>
 	</div>
 	
-	<div class="developer-files-container" id="developer-files-container">
-	 <form name="developer-files-container-form" id="developer-files-container-form" class="developer-files-container-form">
-	  <input type="file" id="program-files" class="custom-file-input-0" name="program-files[]" multiple enctype="multipart/form-data">
-	  
-	  <input type="file" id="css-files" style="display: none" class="custom-file-input-0" name="css-files[]" multiple enctype="multipart/form-data">
-	  
-	  <input type="button" name="exec" class="upload-developer-files" id="upload-developer-files" value="Execute">
-	  
-	  <input type="file" id="server-files" style="display: none" class="custom-file-input-0" name="server-files[]" multiple enctype="multipart/form-data">
-	  
-	  <input type="button" name="exec" style="display: none" class="upload-developer-files" id="upload-developer-server-files" value="Execute">
-	 </form>
+	<div class="row-webspace">
+	  <div class="column-webspace" style="background-color:#aaa;">
+		<button type="button" class="button" id="rollout">Rollout</button>
+	  </div>
+	  <div class="column-webspace" style="background-color:#bbb;">
+		<button type="button" class="button">Dim</button>
+	  </div>
+	  <div class="column-webspace" style="background-color:#ccc;">
+		<button type="button" class="button">Drag</button>
+	  </div>
+	  <div class="column-webspace" style="background-color:#ddd;">
+		<button type="button" class="button">Help</button>
+	  </div>
+	  <div class="column-webspace" style="background-color:#ddd;">
+		<button type="button" class="button">Locate</button>
+	  </div>
+	  <div class="column-webspace" style="background-color:#ddd;">
+		<button type="button" class="button">GPS</button>
+	  </div>	  
+	  <div class="column-webspace" style="background-color:#ddd;">
+		<button type="button" class="button">List</button>
+	  </div>	 
+	  <div class="column-webspace" style="background-color:#ddd;">
+		<button type="button" class="button">OS</button>
+	  </div>	 
+	  <div class="column-webspace" style="background-color:#ddd;">
+		<button type="button" class="button">Simple</button>
+	  </div>	  
+	  <div class="column-webspace" style="background-color:#ddd;">
+		<button type="button" class="button">Updates</button>
+	  </div>
+	  <div class="column-webspace" style="background-color:#ddd;">
+		<button type="button" class="button">Lock</button>
+	  </div>	  
+	  <div class="column-webspace" style="background-color:#ddd;">
+		<button type="button" class="button">Settings</button>
+	  </div>
 	</div>
+	
+	<div class="dev-rollout" id="dev-rollout">
+	   <span class="close-rollout" id="close-rollout">&times;</span>
+	   <button class="upload-programs">Programs</button>
+	   <button class="upload-links">Links</button>
+	</div>
+	
+	<div class="dev-files-container" id="dev-files-container">
+	     <span class="close-dev-files-container" id="close-dev-files-container">&times;</span>
+		<div class="developer-files-container" id="developer-files-container">
+		 <form name="developer-files-container-form" id="developer-files-container-form" class="developer-program-files-container-form">
+		  <input type="file" id="program-files" class="custom-file-input-0" name="program-files[]" multiple enctype="multipart/form-data">
 
-	<div class="developer-response" id="developer-response" style="overflow-y:auto">
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
-	 <p style="color:white" class="response-i"></p>
+		  <input type="file" id="css-files" style="display: none" class="custom-file-input-0" name="css-files[]" multiple enctype="multipart/form-data">
+		  
+		  <input type="button" name="exec" class="upload-developer-files" id="upload-developer-files" value="Execute"><!--1-->
+			  
+		  <input type="file" id="server-files" style="display: none" class="custom-file-input-0" name="server-files[]" multiple enctype="multipart/form-data">
+		  
+		  <input type="button" name="exec" style="display: none" class="upload-developer-files" id="upload-developer-server-files" value="Execute">
+		 </form>
+		 
+		 <form name="developer-link-files-container-form" id="developer-link-files-container-form" class="developer-link-files-container-form developer-files-container-form">
+		  <input type="text" name="dir" class="dir" id="dir" placeholder="Create or Use exisiting directory" spellcheck=true>
+		  <input type="file" id="linking-files" class="custom-file-input-0 linking-files" name="linking-files[]" multiple enctype="multipart/form-data">	  
+		  
+		  <input type="button" name="exec" class="upload-developer-files" id="upload-developer-linking-files" value="Execute"><!--2-->
+		 </form>
+		</div>
+		<div class="developer-response" id="developer-response" style="overflow-y:auto">
+		 <span class="close-developer-response" id="close-developer-response">&times;</span>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		 <p style="color:white" class="response-i"></p>
+		</div>
 	</div>
  
  </div>
@@ -3235,7 +3300,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 								var form = new FormData();
 								form.append('sessionid', from_user_id);
 								form.append('userid', to_user_id);
-								form.append('drim', window.location.href.slice(40));
+								form.append('drim', window.location.href.slice(39));
 								$.ajax({
 									type: 'POST',
 									url: urls[2],
@@ -4462,11 +4527,25 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
    <p style="color: white">All you need is to <b><i>keep clouding more and we keep providing more</i></b>. That's why we say, Cloud more, Free more.</p>
    <p style="color: white"><b>No fees or charges applied.</b> Just <b><i>FREEEEEEEE</i></b>.</p>
    </ol>
+   <h2 style="text-align:center;color:white">How to Download Ads from CloudAds</h2>
+   <p style="color: white">The following info will guide you on how to download ads from CloudAds to your computer</p>
+   <ol style="list-style-type: circle"> 
+   <li style="color:white">Search for the ad using it's file name in the search engine or select 
+   an ad format type from Didcy Industry @ <img src="http://www.localhost/adv.icons/3256216.png"
+   class="iconic"/> &rarr; <img src="http://www.localhost/adv.icons/3273644.png" class="iconic"/>
+   or from CloudAds @ <img src="http://www.localhost/adv.icons/3631153.png" class="iconic"/> &rarr; 
+   <img src="http://www.localhost/adv.icons/2377884.png" class="iconic"/> &rarr; 
+   Didcy React &rarr; CloudAds(View AdCloud) from your main account.</li>
+   <li style="color:white">Click on an ad format type under CloudAds(View AdCloud).</li>
+   <li style="color:white">Click the "Act" button of the ad you want to download.</li>
+   <li style="color:white">After clicking the <q>Act</q> button, go ahead and click on the <q>Download</q> button.</li>
+   <li style="color:white">Click on the <q>Pull it back</q> link to download or pull back the ad to your computer.</li>
+   </ol>   
    <p style="color: white">For more info on Didcy Uploads Policy, kindly reach out to or contact us by looking up our contact informations 
-	  at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>	
+	  at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>	
       Thank you.	</p>
    <p style="color: white">For more info on Didcy Uploads Policy, kindly reach out to or contact us by looking up our contact informations 
-	  at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>	
+	  at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>	
       Thank you.	</p>
   </div>
 </div><!--w3-animate-right -->
@@ -4520,8 +4599,8 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	 world. It's free of charge. No Fees needed to engage in. Just Apply and see for yourself. Why? Because 
 	 experience is the best teacher. Some may criticize this gift of life, others may hail it but you decide
 	 whether to be just a listener or the doer or the involver. 
-	 For more info on choices, kindly visit  <a id="choices" class="choices cookie-full-mode-link" href= "https://www.didcy.com/choices" style="color: white" alt="" target="" title="" ping="">
-	 https://www.didcy.com/choices</a>.
+	 For more info on choices, kindly visit  <a id="choices" class="choices cookie-full-mode-link" href= "http://www.localhost/choices" style="color: white" alt="" target="" title="" ping="">
+	 http://www.localhost/choices</a>.
 	 Let us jump right into the necessary requirements or prerequisites needed for an applicant to register.
 	 <br><br>Once again, <br>
      <h1>Welcome to Didcy Work Policy</h1>-->
@@ -4548,7 +4627,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	 <br>The guide is as follows : 
 	 <h4 style="color: white;font-size:30px;font-weight: bolder">How to join Developer Community</h4>
      <ol type="1" style="color: white">
-	  <li style="color: white">Click on the <b>Menu or More services or The Coredropdown button 
+	  <li style="color: white">Click on the <b>Menu or The Coredropdown button 
 	  <img class='iconic' src='adv.icons/2377884.png'/></b> in the top navigation menu.</li>
 	  <br/><li style="color: white">After clicking on the Menu or More button, click on the Didcy Developer 
 	  button below the rest of the buttons located near Didcy React button.</li>
@@ -4749,6 +4828,21 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
      <h4 style="color: white;font-size:20px;font-weight: bolder">Please note, all developers 
 	 are required to integrate Didcy ITRACK API into their codes before shipping them. Thank you</h4>
 
+
+	 <h4 style="color: white;font-size:30px;font-weight: bolder">To Developers writing HTML Codes(files):</h4> 
+	 <p>We kindly suggest you take the following DIDCY HTML CODE WRITE  GUIDELINES very seriously.</p>
+	 <p><br>These includes : </p>
+     <ol type="1">
+	  <li style="color: white">All HTML codes shouldn't contain the !doctype html tag.</li>
+	  <li style="color: white">All stylesheet codes or tags should be defined or placed at the top in your HTML codes or files 
+	  to speed up code execution.</li>
+	  <li style="color: white">All HTML codes should be placed in a modal or dialog or popup container with or without the stylesheet codes or tags in order to 
+	  prevent platform distruption or malfunctioning.</li>
+	  <li style="color: white">All Developers are required to test all codes(HTML, CSS, JS, PHP, etc) 
+	  before smiling or uploading them to Smile.</li>
+	  <li style="color: white">And lastly, Smile as you Smile(upload your codes/files).</li>
+     </ol>
+
 	 <h4 style="color: white;font-size:30px;font-weight: bolder">How to integrate Didcy ITRACK API into your digital products and services</h4>
 	 <p>The following data gives clear insight on how to integrate Didcy ITrack API into your digital products and services in a simple,
 	 easy and smooth fashion. 
@@ -4786,7 +4880,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	 So please, bear in mind that once shipped or uploaded no changes or modifications can be done except when uploading the newest 
 	 version of that product or service. This way the older version gets replaced with the newer version.</p>
      <ol type="1">
-	  <li style="color: white">Click on the <b>Menu or More services or The Coredropdown button 
+	  <li style="color: white">Click on the <b>Menu or The Coredropdown button 
 	  <img class='iconic' src='adv.icons/2377884.png'/></b> in the top navigation menu.</li>
 	  <br/><li style="color: white">After clicking on the Menu or More button, click on the Didcy React button.</li>
 	  <br/><li style="color: white">Click on the <b>Plugins</b> button after clicking on the Didcy React button.</li>
@@ -4882,7 +4976,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <br>Didcy report system for now can be found on Didcy us? or Didcy Include by chatting Shyly.</li>
 	  <br>Kindly visit or contact or reach out to us by looking up our contact informations at either 
 	  <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar 
-	  of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" 
+	  of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" 
 	  src="adv.icons/2377884.png"/>. 
 	  <br>We will be availabile 24/7 just to listen to only you. <br>
 	  Thank you.<br>
@@ -4906,7 +5000,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <br><li style="color: white">All developers are not allowed to promote or advertize builds that harm children in any way.</li>
 	  <br>For more info on this and any other policy, kindly visit or contact or reach out to us by looking up our contact informations at either 
 	  <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar 
-	  of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" 
+	  of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" 
 	  src="adv.icons/2377884.png"/>. 
 	  <br>We will be availabile 24/7 just to listen to only you. <br>
 	  Thank you.<br>
@@ -4976,7 +5070,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  Thank you.
 	  <br><br/>
 	  For more info on Didcy Developer, kindly reach out to or contact us by looking up our contact informations 
-	  at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>	
+	  at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>	
       Thanks <b title="CHAMPION">CHAMP</b>.	  
 	</p>
   </div>
@@ -5056,7 +5150,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 		<p style="color:white;padding-left: 10px;padding-right: 10px">
 		 For more enquiries, kindly contact us by looking up our contact 
 		 informations at either <q>Contacts</q> <img class='iconic' src='adv.icons/870175.png'/> in the top navigation bar of the 
-		 front page or at <q>Didcy Find</q> under <q>Menu or More Services or The Core</q>
+		 front page or at <q>Didcy Find</q> under <q>Menu or The Core</q>
 		 <img class='iconic' src='adv.icons/2377884.png'/>. We will be availabile 
 		 24/7 just to listen to only and only you. Have a nice Didcy visit.
 		 <br><br>Thank you.
@@ -5133,11 +5227,11 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -5176,7 +5270,7 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 
 	  Please kindly be patient with some of our mini-services if you're having any difficulties using 
 	  these services. Patient in the sense that, you kindly make a quick call to us if having any difficulties 
-	  in using these services. For a quick call, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. 
+	  in using these services. For a quick call, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. 
 	  We will be availabile 24/7 just to listen to only you. <br><br>
 
 	  <b>Please kindly enjoy your visit here at Didcy. We always appreciate your visits. We are hoping you'll
@@ -5281,11 +5375,11 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -5353,11 +5447,11 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -5426,11 +5520,11 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only you. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -5515,11 +5609,11 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -5573,11 +5667,11 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -5630,11 +5724,11 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href="https://www.didcy.com/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href="http://www.localhost/term-of-sanction" style="color: white" alt="" target="" title="" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -5689,10 +5783,10 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	<p>Effective date: 2022-01-01</p>
 	<p><b>Welcome to Didcy</b>.</p> 
     <p>
-	 <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> in full is <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMITATION</q></a> means having less access right. 
-	 Didcy limit is modelled to grant limited access to users mostly using our <q>DEFAULT</q> or <q>BASIC</q> services and very less limitations to users using the <q>PRO</q> services or versions. As for users subscribed to our <q>PREMIUM</q> packages are not in anyway limited to any access. They instead have unlimited access to all our products and services except may be some few systems. Didcy drafted <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> inorder for its user to understand what level of access they are subscribing to. 
-	 <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> is just a friend not a blockage. Knowing what you subscribed to is very much vital or important so that we don't have any misunderstanding in the future leading us to consult <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link"><q>DISPUTE</q></a> resolution which is not in our best interest.
-	 <br>Under <q>BASIC</q> and <q>PRO</q> packages, the user has limited access right regarding the following products and services enforced by the <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">LIMIT Policy</a>. 
+	 <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> in full is <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMITATION</q></a> means having less access right. 
+	 Didcy limit is modelled to grant limited access to users mostly using our <q>DEFAULT</q> or <q>BASIC</q> services and very less limitations to users using the <q>PRO</q> services or versions. As for users subscribed to our <q>PREMIUM</q> packages are not in anyway limited to any access. They instead have unlimited access to all our products and services except may be some few systems. Didcy drafted <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> inorder for its user to understand what level of access they are subscribing to. 
+	 <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link"><q>LIMIT</q></a> is just a friend not a blockage. Knowing what you subscribed to is very much vital or important so that we don't have any misunderstanding in the future leading us to consult <a href="http://www.localhost/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link"><q>DISPUTE</q></a> resolution which is not in our best interest.
+	 <br>Under <q>BASIC</q> and <q>PRO</q> packages, the user has limited access right regarding the following products and services enforced by the <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">LIMIT Policy</a>. 
 	 <br/>The following products and services with limited access under the BASIC Packages are as follows 
 	 <ol type="a">
 	  <li style="color: white"></li>
@@ -5714,11 +5808,11 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	 
 	 <br><br>All our users will be updated immediately a decision is made on this by our board.
 
-	 <br><br/>Limit also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>LIMIT</q> until a valid reason is provided or until further notice. Limit and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Limit also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>LIMIT</q> until a valid reason is provided or until further notice. Limit and other polices resolution arrangements can be found at <a href="http://www.localhost/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>		 
 	 
 	</p>
@@ -5799,11 +5893,11 @@ div.list-spaces-offered div.row div.col-new-height div.container-offers{
 	  <br><br>Have a careful reading and careful understanding with less to no disputes. 
 	  Thank you.
 	  
-	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/limit" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br><br/>Dispute also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>DISPUTE</q> until a valid reason is provided or until further notice. Dispute and other polices resolution arrangements can be found at <a href="http://www.localhost/dispute" alt="Dispute Policy" title="Dispute" target="_blank" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/limit" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you to a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
-    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
+    Check out our <a id="term-of-sanction" class="term-of-sanction cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>			  
 	  
 	 </p>
@@ -5867,11 +5961,11 @@ community</li>
 	  <li style="color: white">Didcy Deals</li>
 	  <li style="color: white"></li>
 	 </ol>
-	 <br/>Stand also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>STAND</q> until a valid reason is provided or until further notice. Stand and other polices resolution arrangements can be found at <a href="https://www.didcy.com/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
-	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="https://www.didcy.com/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you too a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
+	 <br/>Stand also helps resolve any misunderstanding or dispute mostly related to the areas it controls, that is, it's subscription services between the company and the eligible user of the platform. Didcy reserves the right to make changes to <q>STAND</q> until a valid reason is provided or until further notice. Stand and other polices resolution arrangements can be found at <a href="http://www.localhost/dispute" alt="" title="" target="" id="dispute" class="dispute cookie-full-mode-link">Dispute</a>. As the name goes, <q>Dispute</q> meaning misunderstanding or disagreement. Hence, disagreement policy (<q>DISPUTE POLICY</q>). Also check out our <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> for more insight about your extend of the platform access. That is, platform  accessibility or right limitations on your side.
+	 <br>Please once again, kindly make it a priority to abide by our rules with no force, so that we all can live very much peacefully and in harmony with each other. Please kindly also make it a habit to always go or read through our policies, most especially, the <a href="http://www.localhost/adv-retrieve.php?rc_id=11299108271718211&policy-id=0&&data_id=11&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Limit Policy" title="Limit Policy" target="_blank" id="limit" class="limit cookie-full-mode-link">Limit Policy</a> to help you understand our <q><b>dos</b></q> and <q><b>don'ts</b></q> or accessibility rights extensions and also help you find out whether any changes has being made so far to any of our policies or has being updated. Please kindly read through our policies thoroughly before trying to ask any questions on your mind because it might be that your questions has already being answered in any of the (<q>our</q>) policies otherwise we might transfer you too a section in our policies which you either did not read carefully or skipped entirely to find your answers there. So please try. Still counting on you. Thank you.
 	 <br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
-    Check out our <a id="term-of-sanction-2" class="term-of-sanction-2 cookie-full-mode-link" href= "https://www.didcy.com/adv-retrieve.php?rc_id=229910827171822&policy-id=0&&data_id=2&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
+    Check out our <a id="term-of-sanction-2" class="term-of-sanction-2 cookie-full-mode-link" href= "http://www.localhost/adv-retrieve.php?rc_id=229910827171822&policy-id=0&&data_id=2&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" style="color: white" alt="Didcy Term of Sanction" target="_blank" title="Didcy Term of Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>		 
 	</p>
 	</p>
@@ -5925,9 +6019,9 @@ community</li>
 	<p>
 	 <br>
 	 <strong><b>NB:// Didcy been so kind and so much into it's users/members and non-members/users shoes has opted to provide an installment package where both users/members and non-users/members will be allowed to pay for their purchased domains on installment depending on their strength of payment. Please note, buying too much domains which exceeds your budget is not a good idea. Buy what you can and have more as you progress in life. If you believe your domain is unique and may get stolen by another person, then don't worry Didcy also comes to your aid on that. Didcy also has an annual $1 Secure my domain plan package to help secure your future domains until you need them. 
-	 Kindly make a swift passive walk to <a class="cookie-full-mode-link" href="https://www.didcy.com/adv-retrieve.php?rc_id=029910827171820&policy-id=0&&data_id=0&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" id="secure-my-domains" style="color: white" alt="Didcy Secure" target="_blank" title="Didcy Secure" ping="">Didcy Secure</a> to find out more about $1 Secure my domain plan package.</a></b></strong><br><br>
-	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
-	 Find out more at <a id="domian-term-of-use" class="cookie-full-mode-link" href= "https://www.didcy.com/adv-retrieve.php?rc_id=129910827171821&policy-id=0&&data_id=1&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" style="color: white" alt="Didcy Term of Use" target="_blank" title="Didcy Term of Use" ping="">Didcy Term of Use</a> which gives you more insight on how to use our purchased or provided domains. <br><br>Also check out our <a id="term-of-sanction-2" class="term-of-sanction-2 cookie-full-mode-link" href= "https://www.didcy.com/term-of-sanction" style="color: white" alt="Didcy Sanction" target="_blank" title="Didcy Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
+	 Kindly make a swift passive walk to <a class="cookie-full-mode-link" href="http://www.localhost/adv-retrieve.php?rc_id=029910827171820&policy-id=0&&data_id=0&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" id="secure-my-domains" style="color: white" alt="Didcy Secure" target="_blank" title="Didcy Secure" ping="">Didcy Secure</a> to find out more about $1 Secure my domain plan package.</a></b></strong><br><br>
+	 For more info on Didcy Domain Subscription Policy, kindly contact us by looking up our contact informations at either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to listen to only and only you and no one else. <br><br>
+	 Find out more at <a id="domian-term-of-use" class="cookie-full-mode-link" href= "http://www.localhost/adv-retrieve.php?rc_id=129910827171821&policy-id=0&&data_id=1&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" style="color: white" alt="Didcy Term of Use" target="_blank" title="Didcy Term of Use" ping="">Didcy Term of Use</a> which gives you more insight on how to use our purchased or provided domains. <br><br>Also check out our <a id="term-of-sanction-2" class="term-of-sanction-2 cookie-full-mode-link" href= "http://www.localhost/term-of-sanction" style="color: white" alt="Didcy Sanction" target="_blank" title="Didcy Sanction" ping="">Didcy Term of Sanction</a> which gives you more insight on what necessary actions we take to eliminate or disable a notorious user or member from Didcy platform and it's products and services. 
 	 Thank you &amp; have a nice Didcy Subscription. <br>
 	 <br>	
 	</p>
@@ -6263,7 +6357,7 @@ for users to make changes to their previous site rating.</p>
 <p>In addition to cookies, we may use web beacons, pixel tags, and other tracking technologies on the Site to help customize the Site and improve your experience. A “web beacon” or “pixel tag” is tiny object or image embedded in a web page or email. They are used to track the number of users who have visited particular pages and viewed emails, and acquire other statistical data. They collect only a limited set of data, such as a cookie number, time and date of page or email view, and a description of the page or email on which they reside. Web beacons and pixel tags cannot be declined. However, you can limit their use by controlling the cookies that interact with them.</p>
 
 <h3 style="color: white" id="privacyPolicy" class="cookie-h3-headers">DIDCY PRIVACY POLICY</h3>
-<p>For more information about how we use information collected by cookies and other tracking technologies, please refer to our Privacy Policy at <a class="cookie-full-mode-link" id="privacy-policy-link" href="https://www.didcy.com/privacy-policy" alt="Privacy Policy" title="Privacy Policy" target="_blank">https://www.didcy.com/privacy-policy</a> or posted on the Site. This Cookie Policy is part of and is incorporated into our Privacy Policy. By using the Site, you agree to be bound by this Cookie Policy and our Privacy Policy.</p>
+<p>For more information about how we use information collected by cookies and other tracking technologies, please refer to our Privacy Policy at <a class="cookie-full-mode-link" id="privacy-policy-link" href="http://www.localhost/privacy-policy" alt="Privacy Policy" title="Privacy Policy" target="_blank">http://www.localhost/privacy-policy</a> or posted on the Site. This Cookie Policy is part of and is incorporated into our Privacy Policy. By using the Site, you agree to be bound by this Cookie Policy and our Privacy Policy.</p>
 
 <h3 style="color: white" id="contactUs" class="cookie-h3-headers">CONTACT US</h3>
 <p>If you have questions or comments about this Cookie Policy, please contact us at:</p>
@@ -6275,7 +6369,7 @@ for users to make changes to their previous site rating.</p>
  +233265873507<br/>
  Fax Number: N/A.<br/>
  contact@didcy.com<br/>
- https://www.didcy.com
+ http://www.localhost
 </address>  
 <br>
 <br/>
@@ -6642,20 +6736,20 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
         <h3 id="gaga-text-header" class="gaga-text-header">Text Tutorials</h3>
 		<h3 class="how-to-didcy"><u><b>How to Didcy</b></u></h3>
 		<p  id="gaga-text-tutorials" class="gaga-text-tutorials"><!--actors(that is, ad actors or actors involved in ad acting.), groups, -->
-         Welcome to  Didcy.com, the place where <b><i>space</i></b> starts everything. 
-		 <br>Didcy has provided it's members with a much more simpler way of navigating through it's intiutive, unmatched
+         Welcome to  Didcy.com, the place where <b><i>space</i></b> begins everything. 
+		 <br>Didcy has provided you with a much more simpler way of navigating through it's intiutive, unmatched
 		 and comprehensive platform. Didcy is basically a <q>space provider.</q><!-- related to ads. But also provides other non-advertising services like education and others-->
-		 With Didcy, a member needs only a computer, internet and a web browser with the appropriate directions to our platform.
+		 With Didcy, you only need a computer, internet and a web browser with the appropriate directions/URL to our platform.
 		 <q>Didcy is a space provider designed to service all types of users and their needs.</q> <br/>Alert!!! Please always check the URL in your web browser to confirm if the URL matches
-		  <a class="cookie-full-mode-link" href="https://www.didcy.com" alt="Didcy" target="_blank" title="Didcy" ping="">https://www.didcy.com</a>. Thank you.
-		 <br>The following steps gives comprehensive details about how to use didcy.com. 
+		  <a class="cookie-full-mode-link" href="http://www.localhost" alt="Didcy" target="_blank" title="Didcy" ping="">http://www.localhost</a>. Thank you.
+		 <br>The following steps gives comprehensive details about how to use Didcy. 
 		 <br/>Let's jump right into it. 
 		 <br><strong><u>Step 1:</u></strong> Get your computer, connect to the internet, open your web browser (eg. Google Chrome) and enter inside the URL : 
-		 <em><a href="https://www.didcy.com" alt="Didcy" title="Didcy" target="_blank">https://www.didcy.com.</a></em>
+		 <em><a href="http://www.localhost" alt="Didcy" title="Didcy" target="_blank">http://www.localhost.</a></em>
 		 <!--<br><strong><u>Step 2:</u></strong> Didcy will kindly ask you to <q>Please select AdCloud Type</q>. This feature was introduce to make the user decide
 		 on whether or not to show any content on the page at all and also make the user choose what content on our platform he/she 
 		 would want to be shown.-->
-		 <br/><strong><u>Step 2:</u></strong> Explore the platform to see what suits your needs either as an educator, creative developer or designer, advertizer or marketer,  actor(ie. an ad actor) or a company.
+		 <br/><strong><u>Step 2:</u></strong> Explore the platform to see what suits your needs either as an educator, creative developer or designer, advertizer or marketer, web hoster, a company or whoever you may be.
 		 <br><strong><u>Step 3:</u></strong> <br><mark style="font-size: 20px">
 		 Exploration Agenda</mark><br><b style="font-size: 25px">Under Top Navigation Area</b>
 		 <br><br><b><i style="font-size: 20px">Industry <img  class='iconic' src='adv.icons/3256216.png'/>:</i></b><br>
@@ -6664,23 +6758,23 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 		for user preferred selections. Egs: Mechanics, Electronics, All, etc.
 		<br><br/><b><i style="font-size: 20px">Services <img width="39px" src="adv.icons/3631153.png"/>: </i></b><br>
 		We all love services especially if there are always more to be served by just one platform.
-		<br>Here, Didcy makes it work like magic giving it's members the needed services of their daily hustle or dreams.
+		<br>Here, Didcy makes it work like magic giving you the needed services for the job at hand.
 		<br>Under Didcy Services navigation dropdown button, you can see two dropdowns,
 		<br>1. Audio/Radio Services <img src="adv.icons/3167693.png" width="39px" alt="" title="" target="" ping="" download=""/> & 
-		<br>2. More services or The Core<img src="adv.icons/2377884.png" alt="" width="39px" title="" target="" ping="" download=""/>.
-		<br>These two buttons are at the heart of the platform esp. the <q>More Services or The Core</q>.
-		<br>Among the two buttons, one(Audio/Radio) is currently not available for functioning.
+		<br>2. The Core<img src="adv.icons/2377884.png" alt="" width="39px" title="" target="" ping="" download=""/>.
+		<br>These two buttons are at the heart of the platform esp. the <q>The Core</q>.
+		<br>Among the two buttons, one(Audio/Radio) is currently not available for use.
 		<br>Hence nothing much can be said about it untill it's functionality is successfully available.
-		<br><mark>More Services or The Core</mark> on the otherhand, as the name goes, provides more services to its 
-		users. It's a well constructed worth of packed tools for making our users industry more vibrant.
+		<br><mark>The Core</mark> on the otherhand, as the name goes, provides more services to its 
+		users. It's a well constructed worth of packed tools to help speed up your job.
         <br/><strong><mark>Services </mark></strong><img  width="39px" src="adv.icons/3631153.png"/>: <strong><mark><br>a: Audio/Radio </mark></strong><img src="adv.icons/3167693.png" width="39px" alt="" title="" target="" ping="" download=""/>: [N/A].
-        <br/>       <strong><mark>b: More </mark></strong><img src="adv.icons/2377884.png" alt="" width="39px" title="" target="" ping="" download=""/>: The 'More services' helps organize all Didcy
-         most essential tools. Under the 'More Services or The Core', you can find tools like Didcy React, Didcy Business and more.
-         <br>Our Terms & Conditions can also be found under the 'More services' together with 'How to Didcy'.
-         <br>Normally, you'll find the Terms & Conditions at the bottom of a page with the exception of fewer platforms like
+        <br/>       <strong><mark>The Core </mark></strong><img src="adv.icons/2377884.png" alt="" width="39px" title="" target="" ping="" download=""/>: The 'The Core' helps organize all Didcy
+         most essential tools. Under the 'The Core', you can find tools like Didcy React, Didcy Business and more.
+         <br>Our Terms & Conditions can also be found under the 'The Core' together with 'How to Didcy'.
+         <br>Conventionally, you'll find the Terms & Conditions at the bottom of a page with the exception of fewer platforms like
           social media platforms, here at Didcy, we use the same approach but instead it's located under 
-		 'More Services or The Core'.
-		 <br/>Tools provided under the 'More Services or The Core' agenda : 
+		 'The Core'.
+		 <br/>Tools provided under the 'The Core' agenda : 
 		 <ol>
          <li style="color: white">Didcy Loans</li>
          <li style="color: white">Didcy Include</li>
@@ -6709,9 +6803,9 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 		</ol>
 		</p> 
 		
-		<b><i>Hence, the <q>More Services or The Core</q> is a toolkit or set or collection of Didcy defined tools for solving 99.99% of all advertising problems.</i></b>
+		<b><i>Hence, the <q>The Core</q> is a toolkit or set or collection of Didcy defined tools for solving 99.99% of all advertising problems.</i></b>
 	    
-		<h2 style="color: white"><b>The following data gives a detailed insight of each feature presented under the <q>More Services or The Core</q> toolset or collections.</b></h2>
+		<h2 style="color: white"><b>The following data gives a detailed insight of each feature presented under the <q>The Core</q> toolset or collections.</b></h2>
 		
 		<h3>Features as follows: </h3>
 		
@@ -6726,8 +6820,6 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 		   Didcy Include features includes
 		   <ol type="1">
 		    <li style="color: white">Shyly</li>
-		    <li style="color: white">Reset Background</li>
-		    <li style="color: white">Blur Background</li>
 		    <li style="color: white">Pricing</li>
 		    <li style="color: white">Newletters</li>
 		    <li style="color: white">Notification</li>
@@ -6742,7 +6834,7 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 		   
 		   <br><br>Please note, most of the above services(features) are still in developmental stage or are 
 		   currently being developed for your own great experience on our platform, so that's why what 
-		   you see displayed here are all not exposed under the <b>MENU</b> toolkit. 
+		   you see displayed here are all not exposed under <b>The Core</b> toolkit. 
 		   
 		   Some are ready for shippment or deployment but we think you deserve more than our current builds.
 		   So we're currently perfecting all finished products just for you. <em><b>Because we look to perfect 
@@ -6819,7 +6911,7 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 			
 			<br>
 			<br>
-            <b>Didcy Rate</b> : Rate helps us know how you think and feel about our products and services.
+            <b>Didcy Rate</b> : Rate helps us or others know how you think and feel about our products and services.
             <b><i>SO RATE NOW TO SEE THE MAGIC IN DIDCY</i></b>.	
 
 		    <br>
@@ -6867,7 +6959,14 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 	  
 			<br>
 			<br>			
-			<b>Didcy Dev</b> : Dev is a piece of developer form designed to help all developers around the world build for and make money on our platform.
+			<b>Didcy Dev</b> : Dev is a developer WebSpace basically designed to help developers create developer 
+			accounts, build, save/upload, sell and buy WebApps or codes. WebSpace is designed for and by developers across the globe.
+			WebSpace is where you need to start, advance and make money.
+			<br>
+			 We as a company or platform, urges all developers to trust our WebSpace security protocol.
+			 We're doing everything necessary in our undying power to safeguard your personal data, so rest assure <b>DIDCY FAMILY</b>. At Didcy we're a one BIG FAMILY, and all what a <b><q>GOOD</q></b>
+			 family does is to protect each other. So we pledge to secure your WebApps and it's data as one BIG FAMILY ("DIDCY FAMILY").
+			<!--piece of developer form designed to help all developers around the world build for and make money on our platform.
 			With this in motion, it has automatically make Didcy now an open-source platform where all(developers) can build or develop and make money on the 
 			open-source platform. It's not necessarily vital to have Didcy Dev but take this into consideration <q><b>HOW WOULD A DEVELOPER MAKE MONEY AFTER CREATION OR DEVELOPMENT 
 			 AND INTEGRATION INTO THE PLATFORM</b></q>. So as a company, we decided to design Didcy Apply which will make it much easier to get developers <b>Bank account numbers, 
@@ -6876,7 +6975,7 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 			 We know developers are much more concerned with their security infos before anything else. So we as a company or platform, urges all developers to trust our 99.99% security protocol.
 			 We'll and we're doing anything necessary in our undying power to safeguard your personal data, so rest assure <b>DIDCY FAMILY</b>. At Didcy we're one BIG FAMILY, and all what a <b><q>GOOD</q></b>
 			 family does is to protect each other. So we pledge to protect your all as one BIG FAMILY ("DIDCY FAMILY").
-      
+            -->
 			<br>
 			<br>
 			<b>Didcy React</b> : React is powerful. Why? Because we all need something to react to. 
@@ -6887,7 +6986,7 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 			<br>
 			<br>
 			<b>Didcy Transparent</b> : Transperent means clear and clean. Didcy Transparent is a collection of 
-			transparent policies designed to help our users find what they need.
+			transparent policies(Didcy Policies) designed to help our users find what they need.
 			
 			<br>
 			<br>
@@ -6908,7 +7007,7 @@ for(let queryLinks = 0; queryLinks < queryLength; queryLinks++){
 		   <br>
 		   <br>For more enquiries, kindly contact us by looking up our contact informations at 
 		   either <q>Contacts</q> <img class="iconic" src="adv.icons/870175.png"/> in the top 
-		   navigation bar of the front page or at <q>Didcy Find</q> under <q>More Services or The Core</q> 
+		   navigation bar of the front page or at <q>Didcy Find</q> under <q>The Core</q> 
 		   <img class="iconic" src="adv.icons/2377884.png"/>. We will be availabile 24/7 just to \
 		   listen to only you. Have a nice Didcy visit. <br><br>Thank you.
 		 <!--</li>-->
@@ -7055,7 +7154,7 @@ Our Mission:<br>
         <p class="title-developers">CEO &amp; Founder</p>
         <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
         <p class="email-developers" style="display:none">example@example.com</p>
-        <p><button class="button-developers" onclick="Insight('developers/ceo.jpeg', 
+        <p style="display:none"><button class="button-developers" onclick="Insight('developers/ceo.jpeg', 
 		'David Ansong', '+233265873507', 'davidansong213@gmail.com', 0)">Insight</button></p>
       </div>
     </div>
@@ -7069,7 +7168,7 @@ Our Mission:<br>
         <p class="title-developers">Team Advisor</p>
         <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
         <p class="email-developers" style="display:none">example@example.com</p>
-        <p><button class="button-developers" onclick="Insight('developers/ta.jpg', 
+        <p style="display:none"><button class="button-developers" onclick="Insight('developers/ta.jpg', 
 		'Dieubeni Doubalet', '+233570665453', 'doubalet@gmail.com', 'Godbless')">Insight</button></p>
       </div>
     </div>
@@ -7088,20 +7187,21 @@ Our Mission:<br>
       </div>
     </div>
   </div>
-
+  -->
+  
   <div class="column-developers">
     <div class="card-developers">
-      <img class="know-developers-img" src="adv.actors.profiles/people2.jpg" alt="John" style="width:100%">
+      <img class="know-developers-img" src="developers/joshua.jpg" alt="John" style="width:100%">
       <div class="container-developers">
         <h2>Joshua Brown</h2>
         <p class="title-developers">Procurement</p>
-        <p class="descriptive-developers">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="email-developers">example@example.com</p>
-        <p><button class="button-developers" onclick="Insight('adv.actors.profiles/people2.jpg', 
-		'Joshua Brown', '+23354500493915', 'joshuabrown@gmail.com', 'N/A')">Insight</button></p>
+        <p style="display:none" class="descriptive-developers">Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p style="display:none" class="email-developers">example@example.com</p>
+        <p style="display:none"><button class="button-developers" onclick="Insight('developers/joshua.jpg', 
+		'Joshua Brown', '+233556114572', 'joshuabrown@gmail.com', 'N/A')">Insight</button></p>
       </div>
     </div>
-  </div>-->
+  </div>
   
   <div class="column-developers">
     <div class="card-developers">
@@ -7111,7 +7211,7 @@ Our Mission:<br>
         <p class="title-developers">Entreprenuer</p>
         <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
         <p class="email-developers" style="display:none">alexsanchez@gmail.com</p>
-        <p><button class="button-developers" onclick="Insight('developers/na.png', 
+        <p style="display:none"><button class="button-developers" onclick="Insight('developers/na.png', 
 		'Alex Sanchez', '+233261308114', 'alexsanchez@gmail.com', 'Alex')">Insight</button></p>
       </div>
     </div>
@@ -7150,7 +7250,7 @@ Our Mission:<br>
         <p class="title-developers">CEO &amp; Founder</p>
         <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
         <p class="email-developers" style="display:none">example@example.com</p>
-        <p><button class="button-developers" onclick="Insight('developers/ceo.jpeg', 
+        <p style="display:none"><button class="button-developers" onclick="Insight('developers/ceo.jpeg', 
 		'David Ansong', '+233265873507', 'davidansong213@gmail.com', 0)">Insight</button></p>
       </div>
     </div>
@@ -7164,7 +7264,7 @@ Our Mission:<br>
         <p class="title-developers">Team Advisor</p>
         <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
         <p class="email-developers" style="display:none">example@example.com</p>
-        <p><button class="button-developers" onclick="Insight('developers/ta.jpg', 
+        <p style="display:none"><button class="button-developers" onclick="Insight('developers/ta.jpg', 
 		'Dieubeni Doubalet', '+233570665453', 'doubalet@gmail.com', 'Godbless')">Insight</button></p>
       </div>
     </div>
@@ -7183,20 +7283,20 @@ Our Mission:<br>
       </div>
     </div>
   </div>
-
+ -->
   <div class="column-developers">
     <div class="card-developers">
-      <img class="know-developers-img" src="adv.actors.profiles/people2.jpg" alt="John" style="width:100%">
+      <img class="know-developers-img" src="developers/joshua.jpg" alt="John" style="width:100%">
       <div class="container-developers">
         <h2>Joshua Brown</h2>
         <p class="title-developers">Procurement</p>
-        <p class="descriptive-developers">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="email-developers">example@example.com</p>
-        <p><button class="button-developers" onclick="Insight('adv.actors.profiles/people2.jpg', 
-		'Joshua Brown', '+23354500493915', 'joshuabrown@gmail.com', 'N/A')">Insight</button></p>
+        <p style="display:none" class="descriptive-developers">Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p style="display:none" class="email-developers">example@example.com</p>
+        <p style="display:none"><button class="button-developers" onclick="Insight('developers/joshua.jpg', 
+		'Joshua Brown', '+233556114572', 'joshuabrown@gmail.com', 'N/A')">Insight</button></p>
       </div>
     </div>
-  </div>-->
+  </div>
   
   <div class="column-developers">
     <div class="card-developers">
@@ -7206,7 +7306,7 @@ Our Mission:<br>
         <p class="title-developers">Entreprenuer</p>
         <p class="descriptive-developers" style="display: none">Some text that describes me lorem ipsum ipsum lorem.</p>
         <p class="email-developers" style="display:none">alexsanchez@gmail.com</p>
-        <p><button class="button-developers" onclick="Insight('developers/na.png', 
+        <p style="display:none"><button class="button-developers" onclick="Insight('developers/na.png', 
 		'Alex Sanchez', '+233261308114', 'alexsanchez@gmail.com', 'Alex')">Insight</button></p>
       </div>
     </div>
@@ -7687,18 +7787,18 @@ Our Mission:<br>
         <h3 id="gaga-text-header" class="gaga-text-header">Text Tutorials</h3>
 		<h3 class="how-to-didcy"><u><b>How to Subscribe</b></u></h3>
 		<p  id="didcy-how-to-subscribe-text-tutorials" class="didcy-how-to-subscribe-text-tutorials">
-         Welcome to  Didcy.com, the place  where <b><i>space</i></b> starts everything.
-		 <br>Didcy has provided it's members with a much more simpler way of navigating through it's intiutive, unmatched
+         Welcome to  Didcy.com, the place  where <b><i>space</i></b> begins everything.
+		 <br>Didcy has provided you with a much more simpler way of navigating through it's intiutive, unmatched
 		 and comprehensive ad platform. Didcy is basically an <q>ad platform with the core mission of servicing
 		 any entity related to ads.</q>
-		 With Didcy, a member needs only a computer, internet and a web browser with the appropriate directions to our platform.
+		 With Didcy, you only need a computer, internet and a web browser with the appropriate directions/URL to our platform.
 		 <q>Didcy is a web-based platform.</q> <br/>Alert!!! Please always check the URL in your web browser to confirm if the URL matches
-		 <a class="cookie-full-mode-link" href="https://www.didcy.com" alt="Didcy" target="_blank" title="Didcy" ping="">https://www.didcy.com</a>. Thank you.
+		 <a class="cookie-full-mode-link" href="http://www.localhost" alt="Didcy" target="_blank" title="Didcy" ping="">http://www.localhost</a>. Thank you.
 		 <br>The following steps gives comprehensive details about how to subscribe to Didcy Web or Stand Package. 
 		 <br/>This is how to subsribe to Didcy.com if you have an account or you are new to our platform. <br>These are steps to show you how to subscribe: 
 		 <br/>Let's jump right into it. 
 		 <br><strong><u>Step 1:</u></strong> Get your computer, connect to the internet, open your web browser (eg. Google Chrome) and enter inside the URL : 
-		 <em><a href="https://www.didcy.com" alt="Didcy" title="Didcy" target="_blank">https://www.didcy.com.</a></em>
+		 <em><a href="http://www.localhost" alt="Didcy" title="Didcy" target="_blank">http://www.localhost.</a></em>
 		 <br><br><strong><u>Step 2:</u></strong> If you are new on our platform,to be able to subscribe you have to sign up for a Didcy account
 		 <br><br><strong><u>Step 3:</u></strong> To do that, press on the sign up or  sign in button at the top right corner of the sign up or in page.
 		 <br><br><strong><u>Step 4:</u></strong> Type in the information about yourself or the company.
@@ -7871,8 +7971,8 @@ Our Mission:<br>
 	 <li style="color: white;cursor: pointer" id="jsbrn" onclick="MoveAnimate('jsbrn')">Joshua Brown</li>
 	</ol>
 	<p>For more info on each of our Authors, kindly visit 
-	<a id="authors-know-more" href="https://www.didcy.com/adv-retrieve.php?rc_id=629910827171826&policy-id=0&&data_id=6&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Know more about our Authors" title="Know more about our Authors" target="_blank">
-	https://www.didcy.com/authors/know-more</a></p>
+	<a id="authors-know-more" href="http://www.localhost/adv-retrieve.php?rc_id=629910827171826&policy-id=0&&data_id=6&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Know more about our Authors" title="Know more about our Authors" target="_blank">
+	http://www.localhost/authors/know-more</a></p>
 	</p>
 	<br>
 	<br>
@@ -7897,8 +7997,8 @@ Our Mission:<br>
 	 <li style="color: white;cursor: pointer" id="jsbrn" onclick="MoveAnimate('jsbrn')">Joshua Brown</li>
 	</ol>
 	<p>For more info on each of our Investors, kindly visit 
-	<a id="investors-know-more" href="https://www.didcy.com/adv-retrieve.php?rc_id=729910827171827&policy-id=0&&data_id=7&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Know more about our Investors" target="_blank">
-	https://www.didcy.com/authors/know-more</a></p>
+	<a id="investors-know-more" href="http://www.localhost/adv-retrieve.php?rc_id=729910827171827&policy-id=0&&data_id=7&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Know more about our Investors" target="_blank">
+	http://www.localhost/authors/know-more</a></p>
 	</p>
 	<br>
 	<br>
@@ -7923,8 +8023,8 @@ Our Mission:<br>
 	 <li style="color: white;cursor: pointer" id="jsbrn" onclick="MoveAnimate('jsbrn')">Joshua Brown</li>
 	</ol>
 	<p>For more info on each of our Team, kindly visit 
-	<a id="team-know-more" href="https://www.didcy.com/adv-retrieve.php?rc_id=829910827171828&policy-id=0&&data_id=8&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Know more about our Team" title="Know more about our Team"  target="_blank">
-	https://www.didcy.com/team/know-more</a></p>
+	<a id="team-know-more" href="http://www.localhost/adv-retrieve.php?rc_id=829910827171828&policy-id=0&&data_id=8&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Know more about our Team" title="Know more about our Team"  target="_blank">
+	http://www.localhost/team/know-more</a></p>
 	</p>
 	<br>
 	<br>
@@ -7951,7 +8051,7 @@ Our Mission:<br>
 	 which would have taken you a month, year, decade or more.
 	 <br>The following showcases the quality features we bring to the 
 	 market.<br/><q>With the Motto : YOUR INDUSTRY, YOUR LIFE</q></p>
-     <h3 style="color:  white" class="wel-didcy-uup">Current Tools provided under the 'More Services or The Core' agenda : </h3>
+     <h3 style="color:  white" class="wel-didcy-uup">Current Tools provided under the 'The Core' agenda : </h3>
      <ol>
          <li style="color: white">Didcy Include</li>
          <li style="color: white">Didcy Course</li>
@@ -7966,7 +8066,7 @@ Our Mission:<br>
      </ol>		
      <br/>
 	 
-     <h3 style="color:  white" class="wel-didcy-uup">Upcoming Tools provided under the 'More Services or The Core' agenda : </h3>
+     <h3 style="color:  white" class="wel-didcy-uup">Upcoming Tools provided under the 'The Core' agenda : </h3>
      <ol>
 	     <li style="color: white">Didcy List</li>
 	     <li style="color: white">Didcy Share</li>
@@ -7985,7 +8085,7 @@ Our Mission:<br>
      </ol>
      <br/>	
 	 
-     <h3 style="color:  white" class="wel-didcy-uup">Overall Tools provided under the 'More Services or The Core' agenda : </h3>
+     <h3 style="color:  white" class="wel-didcy-uup">Overall Tools provided under the 'The Core' agenda : </h3>
      <ol>
          <li style="color: white">Didcy Loans</li>
          <li style="color: white">Didcy Include</li>
@@ -8039,7 +8139,7 @@ Our Mission:<br>
 	 <br>
 	 <br>
 	 <p style="color: white">For more info on didcy design updates centre, please kindly visit 
-	 <a id="design-update-centre" class="cookie-full-mode-link" href="https://www.didcy.com/didcy-design-updates-centre.php" alt="Didcy Updates" title="Didcy Updates" target="_blank">https://www.didcy.com/didcy-design-updates-centre</a>. Thank you.</p>
+	 <a id="design-update-centre" class="cookie-full-mode-link" href="http://www.localhost/didcy-design-updates-centre.php" alt="Didcy Updates" title="Didcy Updates" target="_blank">http://www.localhost/didcy-design-updates-centre</a>. Thank you.</p>
 	 <br>
 	 <br>	 
    <!-- <img src="" id="upcoming-updates" class="upcoming-updates" alt=""/> -->
@@ -8068,8 +8168,8 @@ Our Mission:<br>
 	 <li style="color: white;cursor: pointer" id="enki" onclick="MoveAnimate('enki')">Ernest Kofi</li>
 	</ol>	 
 	<p>For more info on each of our Mentors, kindly visit 
-	<a id="mentors-know-more" href="https://www.didcy.com/adv-retrieve.php?rc_id=10299108271718210&policy-id=0&&data_id=10&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Know more about our Mentors" title="Know more about our Mentors" target="_blank">
-	https://www.didcy.com/mentors/know-more</a></p>
+	<a id="mentors-know-more" href="http://www.localhost/adv-retrieve.php?rc_id=10299108271718210&policy-id=0&&data_id=10&service=0&&drim=19200112993801028822991919-929lkkwowiiw00-lwwlw19991lmmcxcjwei9_292011" alt="Know more about our Mentors" title="Know more about our Mentors" target="_blank">
+	http://www.localhost/mentors/know-more</a></p>
 	</p>
 	<br>
 	<br>
@@ -8529,7 +8629,7 @@ Our Mission:<br>
 
 	  </div>
       <!--<footer class="w3-container w3-black id012-ft">
-        <p>Find out more about us here <a href="https://www.didcy.com/more.php" alt="Didcy More Info" target="_blank" title="">https://www.didcy.com/more</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" class="more-link" alt="Didcy More Info" target="_blank" title="">http://www.localhost/more</a></p>
       </footer>-->
     </div>
   </div>
@@ -8546,7 +8646,7 @@ Our Mission:<br>
 	   <p class="no-1" style="color: black;text-align:center;"><b><i>Your no.1 BEST SPACE PROVIDER</i></b></p>
 	  </div>
       <!--<footer class="w3-container w3-black id012-ft">
-        <p>Find out more about us here <a href="https://www.didcy.com/more.php" alt="Didcy More Info" target="_blank" title="">https://www.didcy.com/more</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" class="more-link" alt="Didcy More Info" target="_blank" title="">http://www.localhost/more</a></p>
       </footer>-->
     </div>
   </div>
@@ -8564,7 +8664,7 @@ Our Mission:<br>
        <p style="color: black;font-size:17px;text-align:center;line-height:1px;"><img class="ad-img-reg" src="ad.creator.signup.region.png" alt="" title="" download=""/></p>
 	  </div>
       <!--<footer class="w3-container w3-black id012-ft">
-        <p>Find out more about us here <a href="https://www.didcy.com/more.php" alt="Didcy More Info" target="_blank" title="">https://www.didcy.com/more</a></p>
+        <p>Find out more about us here <a href="http://www.localhost/more.php" class="more-link" alt="Didcy More Info" target="_blank" title="">http://www.localhost/more</a></p>
       </footer>-->
     </div>
   </div>
@@ -8756,9 +8856,9 @@ Our Mission:<br>
  <div class="row">
   <div class="column col-box col-box-t1 col-ft1 col-new-height" id="col-new-height">
     <div class="container-offers">
-      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">CloudMyAdS</i></b></h4>
+      <h4 class="this-entails" style="text-align:center"><b><i style="color: blue;text-align:center">CloudAds</i></b></h4>
 	  <p class="create-a-space" style="font-weight:bolder;text-align: justify;color:black">
-	   Use CloudMyAdS to 
+	   Use CloudAds to 
 	  </p>   
 	   <ol type="1">
 	    <li style="color: black">Cloud(not advertize) your ad creatives safely until you need it/them for publishing or advertizing.</li>
@@ -8907,49 +9007,49 @@ Didcy Spaces </b></h2>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img src="https://www.didcy.com/adv.tutorials/images/didcy-1a.PNG" style="width:100%">
+  <img src="http://www.localhost/adv.tutorials/images/didcy-1a.PNG" style="width:100%">
   <div class="textf">CloudMyAds</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img src="https://www.didcy.com/adv.tutorials/images/didcy-1b.PNG" style="width:100%">
+  <img src="http://www.localhost/adv.tutorials/images/didcy-1b.PNG" style="width:100%">
   <div class="textf">CloudMyAds</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img src="https://www.didcy.com/adv.tutorials/images/didcy-20.PNG" style="width:100%">
+  <img src="http://www.localhost/adv.tutorials/images/didcy-20.PNG" style="width:100%">
   <div class="textf">WebSpace</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img src="https://www.didcy.com/adv.tutorials/images/didcy-21.PNG" style="width:100%">
+  <img src="http://www.localhost/adv.tutorials/images/didcy-21.PNG" style="width:100%">
   <div class="textf">WebSpace</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img src="https://www.didcy.com/adv.tutorials/images/didcy-26.PNG" style="width:100%">
+  <img src="http://www.localhost/adv.tutorials/images/didcy-26.PNG" style="width:100%">
   <div class="textf">WebSpace</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img src="https://www.didcy.com/adv.tutorials/images/didcy-24.PNG" style="width:100%">
+  <img src="http://www.localhost/adv.tutorials/images/didcy-24.PNG" style="width:100%">
   <div class="textf">WebSpace</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img src="https://www.didcy.com/adv.tutorials/images/didcy-9.png" style="width:100%">
+  <img src="http://www.localhost/adv.tutorials/images/didcy-9.png" style="width:100%">
   <div class="textf">BookSpace</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img src="https://www.didcy.com/adv.tutorials/images/didcy-10.png" style="width:100%">
+  <img src="http://www.localhost/adv.tutorials/images/didcy-10.png" style="width:100%">
   <div class="textf">BookSpace</div>
 </div>
 
@@ -8980,49 +9080,49 @@ Learn Didcy Spaces with ease </b></h2>
 
 <div class="mySlidesvf fadevf">
   <div class="numbertextvf"></div>
-  <video title="Use CloudMyAds to store your ads for later advertizing" alt="Use CloudMyAds to store your ads for later advertizing" src="https://www.didcy.com/adv-silent-wall/screen-capture (14).webm" style="width:100%"></video>
+  <video title="Use CloudMyAds to store your ads for later advertizing" alt="Use CloudMyAds to store your ads for later advertizing" src="http://www.localhost/adv-silent-wall/screen-capture (14).webm" style="width:100%"></video>
   <div class="textvf">CloudMyAds</div>
 </div>
 
 <div class="mySlidesvf fadevf">
   <div class="numbertextvf"></div>
-  <video title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="https://www.didcy.com/adv-silent-wall/screen-capture (13).webm" style="width:100%"></video>
+  <video title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv-silent-wall/screen-capture (13).webm" style="width:100%"></video>
   <div class="textvf">WebSpace</div>
 </div>
 
 <!-- <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="https://www.didcy.com/adv.tutorials/images/didcy-20.PNG" style="width:100%">
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-20.PNG" style="width:100%">
   <div class="textf">WebSpace</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="https://www.didcy.com/adv.tutorials/images/didcy-21.PNG" style="width:100%">
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-21.PNG" style="width:100%">
   <div class="textf">WebSpace</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="https://www.didcy.com/adv.tutorials/images/didcy-26.PNG" style="width:100%">
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-26.PNG" style="width:100%">
   <div class="textf">WebSpace</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="https://www.didcy.com/adv.tutorials/images/didcy-24.PNG" style="width:100%">
+  <img title="Let WebSpace take care of your WebApp development, exhibition and trading" alt="Let WebSpace take care of your WebApp development, exhibition and trading" src="http://www.localhost/adv.tutorials/images/didcy-24.PNG" style="width:100%">
   <div class="textf">WebSpace</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img title="The Global BookSpace is growing everyday & we can help you grow yours as well" alt="The Global BookSpace is growing everyday & we can help you grow yours as well" src="https://www.didcy.com/adv.tutorials/images/didcy-9.png" style="width:100%">
+  <img title="The Global BookSpace is growing everyday & we can help you grow yours as well" alt="The Global BookSpace is growing everyday & we can help you grow yours as well" src="http://www.localhost/adv.tutorials/images/didcy-9.png" style="width:100%">
   <div class="textf">BookSpace</div>
 </div>
 
 <div class="mySlidesf fadef">
   <div class="numbertextf"></div>
-  <img title="The Global BookSpace is growing everyday & we can help you grow yours as well" alt="The Global BookSpace is growing everyday & we can help you grow yours as well" src="https://www.didcy.com/adv.tutorials/images/didcy-10.png" style="width:100%">
+  <img title="The Global BookSpace is growing everyday & we can help you grow yours as well" alt="The Global BookSpace is growing everyday & we can help you grow yours as well" src="http://www.localhost/adv.tutorials/images/didcy-10.png" style="width:100%">
   <div class="textf">BookSpace</div>
 </div>
  -->
@@ -9221,8 +9321,8 @@ Learn Didcy Spaces with ease </b></h2>
 
 <div class="topNavg w3-container ads-nav" id="identity_main_ids" style="background-color: rgba(0, 0, 0, 0.9);z-index: 0;">
 <div class="topnav" id="myTopnav">
-  <!--<a href="https://www.didcy.com" id="didcy" class="didcy didcx">Didcy</a>
-  <a href="https://www.didcy.com" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="adv.icons/1946433.png"/></a>
+  <!--<a href="http://www.localhost" id="didcy" class="didcy didcx">Didcy</a>
+  <a href="http://www.localhost" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="adv.icons/1946433.png"/></a>
   -->
   <div class="dropdown">
     <button title="hey you, this is what your competitors are upto" class="drop-down-ads dropbtn drop">
@@ -9276,8 +9376,8 @@ Learn Didcy Spaces with ease </b></h2>
 
 <div class="topNavg w3-container low-level-nav ads-nav" id="identity_main_ids" style="background-color: rgba(0, 0, 0, 0.9);z-index: 0;">
 <div class="topnav" id="myTopnav">
-  <!--<a href="https://www.didcy.com" id="didcy" class="didcy didcx">Didcy</a>
-  <a href="https://www.didcy.com" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="adv.icons/1946433.png"/></a>
+  <!--<a href="http://www.localhost" id="didcy" class="didcy didcx">Didcy</a>
+  <a href="http://www.localhost" title="Home Sweet Home" id="home" class="home active"><img class="iconic" src="adv.icons/1946433.png"/></a>
   -->
   <div class="dropdown">
     <button title="hey you, this is what your competitors are upto" class="drop-down-ads dropbtn drop">
@@ -10655,13 +10755,13 @@ Learn Didcy Spaces with ease </b></h2>
   
   let drim = window.location.href;  
   
-  document.getElementById("video-ads").addEventListener("click", () => exhibitEvents(3, drim.slice(40)));
-  document.getElementById("static-ads").addEventListener("click", () => exhibitEvents(5, drim.slice(40)));
-  document.getElementById("audio-ads").addEventListener("click", () => exhibitEvents(14, drim.slice(40)));
+  document.getElementById("video-ads").addEventListener("click", () => exhibitEvents(3, drim.slice(39)));
+  document.getElementById("static-ads").addEventListener("click", () => exhibitEvents(5, drim.slice(39)));
+  document.getElementById("audio-ads").addEventListener("click", () => exhibitEvents(14, drim.slice(39)));
   //exhibitEvents(3, drim.slice(34));
  
   document.getElementById("adv-files").addEventListener("submit", (event) => {event.preventDefault();});
-  document.getElementById("upload").addEventListener("click", () => uploads(document.forms['adv-files'], drim.slice(40), 1));
+  document.getElementById("upload").addEventListener("click", () => uploads(document.forms['adv-files'], drim.slice(39), 1));
   document.getElementById("uploads").addEventListener("change", () => {ads_count = 0; adsFilesLength =0;adForms = 0;selectAds(0);});
   //document.getElementById("").addEventListener("change", selectProfileImage);
   
@@ -10907,7 +11007,7 @@ for (i = 0; i < toggler.length; i++) {
  
 <script type="text/javascript">
 let drim2 = window.location.href;
-getImageFileName(document.getElementById('profile'), drim2.slice(40));//getCookieValue('GAGA_RESPONSE')); 34
+getImageFileName(document.getElementById('profile'), drim2.slice(39));//getCookieValue('GAGA_RESPONSE')); 34
 </script> 
 
  <div class="collapsible-container" style="margin-bottom: 20px">
@@ -11021,7 +11121,7 @@ getImageFileName(document.getElementById('profile'), drim2.slice(40));//getCooki
 <div class="in-div" id="in-div"></div>
 
 <div id="adv-ft" class="adv-ft">
-  Visit us @ <a href="https://www.didcy.com" style="text-decoration:none" alt="Didcy Visit" title="Didcy Visit" target="_self" ping="">https://www.didcy.com</a>. All Copy&copy; rights reserved. Terms &amp; Conditions Applied.
+  Visit us @ <a href="http://www.localhost" style="text-decoration:none" alt="Didcy Visit" title="Didcy Visit" target="_self" ping="">http://www.localhost</a>. All Copy&copy; rights reserved. Terms &amp; Conditions Applied.
 </div>
 
 <!-- Disabling this feature for future build. Thank you. -->
@@ -11057,6 +11157,7 @@ getImageFileName(document.getElementById('profile'), drim2.slice(40));//getCooki
 <script type="text/javascript" src="adv-testimonials.js"></script>
 <script type="text/javascript" src="adv-features.js"></script>
 <script type="text/javascript" src="adv-video-features.js"></script>
+<script type="text/javascript" src="smile.js"></script>
 
 </body>
 </html>
