@@ -9,6 +9,7 @@
 	$usr_plugins_dir_css = $plugDir."/".$upd."/css";
 	$usr_plugins_dir_server = $plugDir."/".$upd."/server";
 	$usr_plugins_dir_html = $plugDir."/".$upd."/html";
+	$usr_plugins_dir_images = $plugDir."/".$upd."/images";
 	$usr_plugins_dir_media = $plugDir."/".$upd."/media";
 	$usr_plugins_dir_media_mp3 = $plugDir."/".$upd."/media/"."mp3";
 	$usr_plugins_dir_media_mp4 = $plugDir."/".$upd."/media/"."mp4";
@@ -38,6 +39,10 @@
 	if(!is_dir($usr_plugins_dir_html)){
 	   mkdir($usr_plugins_dir_html, 0777, true);
 	}
+
+	if(!is_dir($usr_plugins_dir_images)){
+	   mkdir($usr_plugins_dir_images, 0777, true);
+	}
 	
 	if(!is_dir($usr_plugins_dir_media)){
 	   mkdir($usr_plugins_dir_media, 0777, true);
@@ -58,6 +63,7 @@
 		"plugins_dir_css"=>$usr_plugins_dir_css,
 		"plugins_dir_server"=>$usr_plugins_dir_server,
 		"plugins_dir_html"=>$usr_plugins_dir_html,
+		"plugins_dir_images"=>$usr_plugins_dir_images,
 		"plugins_dir_media"=>$usr_plugins_dir_media,
 		"plugins_dir_media_mp3" => $usr_plugins_dir_media_mp3,
 	    "plugins_dir_media_mp4" => $usr_plugins_dir_media_mp4
@@ -91,6 +97,11 @@
 	  $fileContent = "";
 	  $pluginsNFLDS = $pluginsNumbericFLDs;
 	  $file_read = 0;
+	  if(file_exists($filename2)){
+		  $HTMLCONENT = IterateHTMLFiles($filename2);
+		  $fileContent .= $HTMLCONENT;
+		  //return $HTMLCONENT;
+	  }
 		if(is_dir($pluginsNFLDS)){
 			$HTMLFLD = $pluginsNFLDS."/html";
 			$file_handle = opendir($HTMLFLD);
@@ -516,6 +527,7 @@
 		$plugsCSSDir = array();
 		$plugsServerDir = array();
 		$plugsHtmlDir = array();
+		$plugsImagesDir = array();
 		$plugsMediaDir = array();
 		
 		if(!is_dir($pldir)){
@@ -569,6 +581,7 @@
 		   $plugsDir[$go] = $plugDir."/program/".$pluginsContainer[$plug];
 		   $plugsCSSDir[$go] = $plugDir."/css/".$pluginsContainer[$plug];
 		   $plugsHtmlDir[$go] = $plugDir."/html/".$pluginsContainer[$plug];
+		   $plugsImagesDir[$go] = $plugDir."/images/".$pluginsContainer[$plug];
 		   $plugContent[$go] = $plugDir;
 		   $go++;
 		}
@@ -586,6 +599,7 @@
 		$htmlCat = "";
 		$HTML_IR = "";
 		$CSS_IR = "";
+		$ICONIC = 0;
 		
 		for($plug0 = 0;$plug0 < count($plugs);$plug0++){
 		  for($plug1 = 0;$plug1 < 4;$plug1++){
@@ -650,6 +664,55 @@
 				}
 				$modal_error += 1;
 			}
+
+		$plug1 += 1;
+		
+		if(file_exists($plugsImagesDir[$get_name].".png") == TRUE){
+			 if($ICONIC != 1){
+				 if(filesize($plugsImagesDir[$get_name].".png") > 0){
+					 $plugins_update = @fopen("plugins.update.images", "a");
+					 fwrite($plugins_update, $plugs[$get_name].".png\n\r", strlen($plugsCSSDir[$get_name].".png"));
+					 fclose($plugins_update);
+					$stream_plugs[$plug0][$plug1] = $plugsImagesDir[$get_name].".png";
+					$ICONIC++;
+				 }else{
+					    $ICONIC++;
+						$stream_plugs[$plug0][$plug1] = "NO_ICON_SIZE";	
+				 }
+			 }			
+		}
+		else if(file_exists($plugsImagesDir[$get_name].".jpg") == TRUE){
+			 if($ICONIC != 1){
+				 if(filesize($plugsImagesDir[$get_name].".jpg") > 0){
+					 $plugins_update = @fopen("plugins.update.images", "a");
+					 fwrite($plugins_update, $plugs[$get_name].".jpg\n\r", strlen($plugsCSSDir[$get_name].".jpg"));
+					 fclose($plugins_update);
+					$stream_plugs[$plug0][$plug1] = $plugsImagesDir[$get_name].".jpg";
+					$ICONIC++;
+				 }else{
+					    $ICONIC++;
+						$stream_plugs[$plug0][$plug1] = "NO_ICON_SIZE";	
+				 }
+			 }			
+		}		
+		else if(file_exists($plugsImagesDir[$get_name].".ico") == TRUE){
+			 if($ICONIC != 1){
+				 if(filesize($plugsImagesDir[$get_name].".ico") > 0){
+					 $plugins_update = @fopen("plugins.update.images", "a");
+					 fwrite($plugins_update, $plugs[$get_name].".ico\n\r", strlen($plugsCSSDir[$get_name].".ico"));
+					 fclose($plugins_update);
+					$stream_plugs[$plug0][$plug1] = $plugsImagesDir[$get_name].".ico";
+					$ICONIC++;
+				 }else{
+					    $ICONIC++;
+						$stream_plugs[$plug0][$plug1] = "NO_ICON_SIZE";	
+				 }
+			 }			
+		}else{
+			    $ICONIC++;
+			    $stream_plugs[$plug0][$plug1] = "NO_ICON";	
+		}
+		
 						
 			 $plug1 += 1;
 			
@@ -702,7 +765,7 @@
 		  }	
 		  $get_name += 1; 
 		}	
-		
+	
 		echo json_encode(array("pluginsContainer"=>$stream_plugs, "htmlCat"=>$htmlCat, "state"=>200));		
 		
 	  }
@@ -722,10 +785,11 @@
 	  $_files_uploaded_if_not_css_type = 0;
 	  $_files_uploaded_if_type_not_php = 0;
 	  $_files_uploaded_if_type_not_html = 0;
+	  $_files_uploaded_if_type_not_images = 0;
 	  $_files_uploaded_if_not_required_type = 0;	
 	  
-	  $fileTypes = array("css"=>0, "php"=>0, "program"=>0, "mp3"=>0, "mp4"=>0, "html"=>0, 
-	  "no_req"=>0);
+	  $fileTypes = array("css"=>0, "php"=>0, "program"=>0, "mp3"=>0, "mp4"=>0, "html"=>0, "images"=>0,
+	  "no_req"=>0, "data"=>0);
 	 
 		foreach($_FILES["program-files"]["name"] as $devFiles){
 			
@@ -775,6 +839,13 @@
 			$fileTypes["html"]++;
 			$required_type = 1;
 			$pluginTarget = $upd["plugins_dir_html"]."/".basename($devFiles);
+		  }
+		  else if($imgType == "png" || $imgType == "jpg" || $imgType == "ico"){
+			$pluginsOnFileTypes[$classLop] = basename($devFiles);
+			$_files_uploaded_if_type++;
+			$fileTypes["images"]++;
+			$required_type = 1;
+			$pluginTarget = $upd["plugins_dir_images"]."/".basename($devFiles);
 		  }	
 		  else{
             $fileTypes["no_req"]++;
@@ -816,9 +887,37 @@
 		  "files_uploaded_if_not_css_type"=>$_files_uploaded_if_not_css_type, 
 		  "files_uploaded_if_type_not_php"=>$_files_uploaded_if_type_not_php,
 		  "files_uploaded_if_type_not_html"=>$_files_uploaded_if_type_not_html,
+		  "files_uploaded_if_type_not_html"=>$_files_uploaded_if_type_not_images,
 		  "file_count_success"=>$file_count_success, 
 		  "file_count_error"=>$file_count_error, "pluginsOnFiles"=>$pluginsOnFiles,
 		  "state"=>200));
+   }
+   break;
+   case 5:
+   {
+	   $linkMainDir = "plugins/".$_POST["upd"]."/__didcer_link";
+	   if(!is_dir($linkMainDir)){
+		   mkdir($linkMainDir);
+	   }
+	   $_link_count = 0;
+	   $_link_error = 0;
+	   $linkLoop = 0;
+	   foreach($_FILES["linking-files"]["name"] as $devLinkFiles){
+		   $linkFile = $linkMainDir."/".basename($devLinkFiles);
+		   if(move_uploaded_file($_FILES["linking-files"]["tmp_name"][$linkLoop], $linkFile)){
+			   $_link_count++;
+		   }else{
+			   $_link_error++;
+		   }
+		   $linkLoop++;
+	   }
+	   if($_POST["devLinkFilesLength"] == $_link_count){
+		   echo json_encode(array("state"=>1, "link_count"=>$_link_count, "link_error"=>$_link_error));
+		   return;		   
+	   }else{
+		   print(json_encode(array("state"=>0, "link_count"=>$_link_count, "link_error"=>$_link_error)));
+		   return;
+	   }
    }
    break;
    default: 

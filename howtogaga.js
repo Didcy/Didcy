@@ -45,21 +45,21 @@ textTutorials.onclick = function(){
 			textTutorialContainer.append(textTutorialHeader3);
 			textTutorialContainer.append(textTutorialP);
 			
-			textTutorialP.innerHTML = "Welcome to Didcy.com, the place  where  <b><i>space</i></b> starts everything."+ 
-		 "<br> Didcy has provided it's members with a much more simpler way of navigating through it's intiutive, unmatched"+ 
+			textTutorialP.innerHTML = "Welcome to Didcy.com, the place  where  <b><i>space</i></b> begins everything."+ 
+		 "<br> Didcy has provided you with a much more simpler way of navigating through it's intiutive, unmatched"+ 
 		 " and comprehensive platform. Didcy is basically a <q>space provider.</q>"+ 
 		 " <!-- related to ads. But also provides other non-advertising services like education and others-->"+ 
-		 "With Didcy, a member needs only a laptop, internet access and a web browser with the appropriate directions/URL to our platform."+ 
+		 "With Didcy, you only need a computer, internet access and a web browser with the appropriate directions/URL to our platform."+ 
 		 " <q>Didcy is a space provider designed to service all types of users and their needs.</q> <br/>Alert!!! Please always check the URL in your web browser to confirm if the URL matches"+ 
 		 " https://www.didcy.com. Thank you."+ 
-		 "<br>The following steps gives comprehensive details about how to use didcy.com."+  
+		 "<br>The following steps gives comprehensive details about how to use Didcy."+  
 		 "<br/>Let's jump right into it. "+ 
 		 "<br><br><strong><u class='insiders'>Step 1:</u></strong> Get your computer(laptop, desktop, tablet or a mobile device), connect it to the internet, open your web browser (eg. Google Chrome) and enter inside the URL : "+ 
 		 "<em><a href='https://www.didcy.com' alt='' title='Didcy Home' target='_blank' ping=''>https://www.didcy.com.</a></em>"+ 
 		 "<!--<br><br><strong><u class='insiders'>Step 2:</u></strong> Didcy will kindly ask you to <q>Please select a page content</q>. This feature was introduce to make our user decide "+ 
 		 "on whether or not to show any content on the page at all and also make the user choose what content on our platform he/she "+  
 		 "would want to be shown.-->"+ 
-		 "<br/><br/><strong><u class='insiders'>Step 2:</u></strong> Explore the platform to see what suits your needs either as an educator, creative developer or designer, advertizer or marketer,  actor(ie. an ad actor) or a company."+ 
+		 "<br/><br/><strong><u class='insiders'>Step 2:</u></strong> Explore the platform to see what suits your needs either as an educator, creative developer or designer, advertizer or marketer, web hoster, a company or whoever you may be."+ 
 		 "<br><br><strong><u class='insiders'>Step 3:</u></strong> <br><b style='font-family: sans-serif, arial, verdana' class='insiders'>"+ 
 		 "Exploration Agenda</b><br><b style='font-family: sans-serif, arial, verdana' class='insiders'>Under Top Navigation Area(The long horizontal rectangular box with a black background"+
 		 " in  the middle and red colors at the tips)</b>"+ 
@@ -69,22 +69,22 @@ textTutorials.onclick = function(){
 		"for user preferred selections. Egs: Mechanics, Electronics, All, etc."+ 
 		"<br><br/><b><i style='font-family: sans-serif, arial, verdana' class='insiders'>Services <img src='adv.icons/3631153.png' width='40px'/>: </i></b><br>"+ 
 		"We all love services especially if there are always more to be served by just one platform."+ 
-		"<br>Here, Didcy makes it work like magic giving it's members the needed services of their daily hustle or dreams."+ 
+		"<br>Here, Didcy makes it work like magic giving you the needed services for the job at hand."+ 
 		"<br>Under Didcy Services navigation dropdown button, you can see two dropdowns,"+ 
 		"<br>1. Audio/Radio Services <img width='40px' src='adv.icons/3167693.png'/>& "+ 
-		"<br>2. More Services or The Core. <img width='40px' src='adv.icons/2377884.png'/>"+ 
-		"<br>These two buttons are at the heart of the platform esp. the <q>More Services or The Core</q>."+ 
-		"<br>Among the two buttons, one(Audio/Radio) is currently not available for functioning."+ 
+		"<br>2. The Core. <img width='40px' src='adv.icons/2377884.png'/>"+ 
+		"<br>These two buttons are at the heart of the platform esp. the <q>The Core</q>."+ 
+		"<br>Among the two buttons, one(Audio/Radio) is currently not available for use."+ 
 		"<br>Hence nothing much can be said about it untill it's functionality is successfully available."+ 
-		"<br><b>More Services or The Core</b> on the otherhand, as the name goes, provides more services to its "+ 
-		"users. It's a well constructed worth of packed tools for making our users' industry more vibrant."+
-        "<br/><b>Services: </b><img src='adv.icons/3631153.png' width='40px'/> <br><b>a: Audio/Radio</b><img src='adv.icons/3167693.png' width='40px'/>: [N/A].<br/> <b> b: More</b><img src='adv.icons/2377884.png' width='40px'/>: The 'More services' helps organize all Didcy "+
-        "most essential tools. Under the 'More Services or The Core', you can find tools like Didcy React, Didcy Business and more."+
-         "<br>Our Terms & Conditions can also be found under the 'More services' together with 'How to Didcy'."+
-         "<br>Normally, you'll find the Terms & Conditions at the bottom of a page with the exception of fewer platforms like"+
+		"<br><b>The Core</b> on the otherhand, as the name goes, provides more services to its "+ 
+		"users. It's a well constructed worth of packed tools to help speed up your job."+
+        "<br/><b>Services: </b><img src='adv.icons/3631153.png' width='40px'/> <br><b>a: Audio/Radio</b><img src='adv.icons/3167693.png' width='40px'/>: [N/A].<br/> <b> The Core</b><img src='adv.icons/2377884.png' width='40px'/>: The 'The Core' helps organize all Didcy "+
+        "most essential tools. Under the 'The Core', you can find tools like Didcy React, Didcy Business and more."+
+         "<br>Our Terms & Conditions can also be found under the 'The Core' together with 'How to Didcy'."+
+         "<br>Conventionally, you'll find the Terms & Conditions at the bottom of a page with the exception of fewer platforms like"+
          " social media platforms, here at Didcy, we use the same approach but instead it's located under "+
-		 "'More Services or The Core'."+
-		 "<br/>Tools provided under the 'More Services or The Core' agenda : "+
+		 "'The Core'."+
+		 "<br/>Tools provided under the 'The Core' agenda : "+
 		 "<ol>"+
          "<li style='color: white'>Didcy Loans</li>"+
          "<li style='color: white'>Didcy Include</li>"+
@@ -111,9 +111,9 @@ textTutorials.onclick = function(){
          "<li style='color: white'>Didcy Apply</li>"+
          "<li style='color: white'>Didcy Transparent</li>"+
 		 "</ol>"+
-		 "		<b><i>Hence, the <q>More Services or The Core</q> is a toolkit or set or "+"collection of Didcy defined tools for solving 99.99% of all "+
+		 "		<b><i>Hence, the <q>The Core</q> is a toolkit or set or "+"collection of Didcy defined tools for solving 99.99% of all "+
 		 "space problems.</i></b>"+ 
-		"<h2 style='color: white'><b>The following data gives a detailed insight "+ "of each feature presented under the <q>More Services or The Core</q> toolset or "+"collections.</b></h2>"+
+		"<h2 style='color: white'><b>The following data gives a detailed insight "+ "of each feature presented under the <q>The Core</q> toolset or "+"collections.</b></h2>"+
 		"<h3>Features as follows: </h3>"+		
 		"<ol type='a'>"+
 		 "<li style='color: white'>"+
@@ -126,8 +126,6 @@ textTutorials.onclick = function(){
 		   " Didcy Include features includes"+
 		   "<ol type='1'>"+
 		    "<li style='color: white'>Shyly</li>"+
-		    "<li style='color: white'>Reset Background</li>"+
-		    "<li style='color: white'>Blur Background</li>"+
 		    "<li style='color: white'>Pricing</li>"+
 		    "<li style='color: white'>Newletters</li>"+
 		    "<li style='color: white'>Notification</li>"+
@@ -140,7 +138,7 @@ textTutorials.onclick = function(){
 		   "This and future upcoming tools make up the Didcy Include toolset."+
 		   "		   <br><br>Please note, most of the above services(features) are still in developmental stage or are"+ 
 		   " currently being developed for your own great experience on our platform, so that's why what "+
-		   " you see displayed here are all not exposed under the <b>MENU</b> toolkit.    "+
+		   " you see displayed here are all not exposed under <b>The Core</b> toolkit.    "+
 		   " Some are ready for shippment or deployment but we think you deserve more than our current builds."+
 		   " So we're currently perfecting all finished products just for you. <em><b>Because we look to perfect "+
 		   " the unperfection.</b></em> "+
@@ -196,7 +194,7 @@ textTutorials.onclick = function(){
 			" <b><strong>EXPLORE IS THE KEY TO ENJOY. USE IT, DEAL IT.</strong></b>"+
 			" <br>"+
 			" <br>"+
-            " <b>Didcy Rate</b> : Rate helps us know how you think and feel about our products and services."+
+            " <b>Didcy Rate</b> : Rate helps us or others know how you think and feel about our products and services."+
             " <b><i>SO RATE NOW TO SEE THE MAGIC IN DIDCY</i></b>.	"+
 		    " <br>"+
 		    " <br>"+
@@ -230,15 +228,13 @@ textTutorials.onclick = function(){
 			" <b><i>LEARN WITH FIND, BECAUSE WHAT IS BETTER THAN FIND. IF NOT FIND.</i></b>"+
 			"<br>"+
 			"<br>	"+		
-			"<b>Didcy Apply</b> : Apply is a piece of developer form designed to help all developers around the world build for and make money on our platform."+
-			"With this in motion, it has automatically make Didcy now an open-source platform where all(developers) can build or develop and make money on the "+
-			"open-source platform. It's not necessarily vital to have Didcy Apply but take this into consideration <q><b>HOW WOULD A DEVELOPER MAKE MONEY AFTER CREATION OR DEVELOPMENT "+
-			" AND INTEGRATION INTO THE PLATFORM</b></q>. So as a company, we decided to design Didcy Apply which will make it much easier to get developers <b>Bank account numbers, "+
-			 "Card numbers and Wallet numbers(esp. Mobile Money Wallet) where they can receive any income they make from their products/services and not limited to only receiving payments"+
-			 "but also usage or tracking and subscription data(if integrated) which will make the developer fully aware of how his/her product(s) or service(s) is/are being utilize.</q></b>"+
-			" We know developers are much more concerned with their security infos before anything else. So we as a company or platform, urges all developers to trust our 99.99% security protocol."+
-			" We'll and we're doing anything necessary in our undying power to safeguard your personal data, so rest assure <b>DIDCY FAMILY</b>. At Didcy we're one BIG FAMILY, and all what a <b><q>GOOD</q></b>"+
-			" family does is to protect each other. So we pledge to protect your all as one BIG FAMILY (</q>DIDCY FAMILY</q>).			"+
+			"<b>Didcy Dev</b> : Dev is a developer WebSpace basically designed to help developers create developer "+
+			"accounts, build, save/upload, sell and buy WebApps or codes. WebSpace is designed for and by developers across the globe."+
+			"WebSpace is where you need to start, advance and make money."+
+			"<br>"+
+			 "We as a company or platform, urges all developers to trust our WebSpace security protocol."+
+			 "We're doing everything necessary in our undying power to safeguard your personal data, so rest assure <b>DIDCY FAMILY</b>. At Didcy we're a one BIG FAMILY, and all what a <b><q>GOOD</q></b>"+
+			 "family does is to protect each other. So we pledge to secure your WebApps and it's data as one BIG FAMILY (<q>DIDCY FAMILY</q>)."+
 			" <br>"+
 			" <br>"+
 			" <b>Didcy React</b> : React is powerful. Why? Because we all need something to react to."+ 
@@ -248,7 +244,7 @@ textTutorials.onclick = function(){
 			" <br>"+
 			" <br>"+
 			" <b>Didcy Transparent</b> : Transperent means clear and clean. Didcy Transparent is a collection of "+
-			" transparent policies designed to help our users find what they need."+
+			" transparent policies(Didcy Policies) designed to help our users find what they need."+
 			" <br>"+
 			" <br>"+
 			" <b>Didcy Us</b> : Why us? Because we care. Didcy Us is great news. Why? Because it tells you something or where something is right? Yes, of course."+
@@ -260,7 +256,7 @@ textTutorials.onclick = function(){
 		  " <br><br>For more enquiries, kindly contact us by looking up our"+
 		  " contact informations at either <q>Contacts</q><img class='iconic' src='adv.icons/870175.png'/> in the top"+
 		  " navigation bar of the front page or at <q>Didcy Find</q>"+
-		  " under <q>More Services or The Core</q><img class='iconic' src='adv.icons/2377884.png'/>. We will be availabile 24/7"+
+		  " under <q>The Core</q><img class='iconic' src='adv.icons/2377884.png'/>. We will be availabile 24/7"+
 		  " just to listen to only and only you. Have a nice Didcy visit."+
 		  " <br><br>Thank you."+
 		 "</li>"+

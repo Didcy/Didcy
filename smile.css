@@ -1,0 +1,112 @@
+/* Create four equal columns that floats next to each other */
+.column-webspace {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  background-color: black;
+}
+
+/* Clear floats after the columns */
+.row-webspace:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.modal-content-work-board-4{
+  background: rgba(0, 0, 0, 1);
+}
+
+.dev-files-container, .developer-response{
+  
+  background-color: rgba(200, 200, 200, 1);
+  transition: transform .30s; /* Animation */
+  height: 0px;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 50;
+  border-radius: 5px;
+}
+
+/*.dev-rollout{
+   width: 100%;
+   left: 0%;
+   right: 0%;
+   top: 0%;
+}*/
+
+.dev-rollout{
+   padding-top: 5px;
+}
+
+table.dirs-tb {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  color: black;
+}
+
+th.filename, th.filesize, th.fs, td.td-f {
+  text-align: left;
+  padding: 16px;
+  color: black;
+}
+
+/* td.images, td#images {
+  padding: 16px;
+} */
+
+td.td-f{
+   border-radius: 2px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dir-color{background: yellow;border: 1px solid black;}
+.dirs{}
+
+.dev-files-container{
+  z-index: 51;
+}
+.developer-response{
+  z-index: 52;
+  width: 80%;
+  left: 10%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 20px;
+}
+.developer-response p{
+	font-size: 20px;
+	display: block;
+}
+
+input.dir{
+	width: 100%;
+	font-size: 15px;
+	padding-left: 2px;
+}
+
+.row-webspace .column-webspace .button{
+	border-radius: 5px;
+}
+
+button.upload-programs, button.upload-links{display:none;border-radius: 5px;}
+.developer-program-files-container-form, 
+.developer-link-files-container-form{display:none;}
+.close-rollout, .close-dev-files-container{display:none;color: black;}
+.close-dev-files-container{
+	right: 10px;
+	top: -3%;	
+	display:none;color: black;}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column-webspace {
+    width: 100%;
+  }
+}

@@ -10,8 +10,59 @@ UploadDeveloperFiles);
 document.getElementById("upload-developer-files").addEventListener("click", 
 UploadDevFiles);
 
+document.getElementById("upload-developer-linking-files").addEventListener("click", 
+UploadDevLinkingFiles);
+
 document.getElementById("upload-developer-server-files").addEventListener("click", 
 UploadDeveloperServerFiles);
+
+function UploadDevLinkingFiles(){
+	var devLinkFiles = document.getElementById("linking-files");
+    var files = [];
+   
+    files = document.forms['developer-link-files-container-form'];
+    var form = new FormData(files);
+
+    if(devLinkFiles.files.length <= 0){
+      return AlertBoxInModal("Please select at least a file");
+    }
+
+	form.append("devLinkFilesLength", devLinkFiles.files.length);
+	form.append("plug-id", 5);
+	form.append("class-id", 0);
+	form.append("upd", __$__49393_492_Page_acc_usr);	
+	$.ajax({
+		type: "POST",
+		url: "plug.php",
+		cache: false, 
+		contentType: false, 
+		processData: false,
+		data: form, 
+		success: function(result){
+			//window.console.log(result);
+			var data_returned = JSON.parse(result);
+			let $file_report = "";
+			if(data_returned.state == 0){
+				AlertBoxInModal("Upload Error");
+				return;
+			}else{
+				if(data_returned.link_count == 1 && data_returned.link_error == 0){
+					$file_report = data_returned.link_count.toString() + " link uploaded successfully";
+				    AlertBoxInModal($file_report);
+				}
+				else if(data_returned.link_count > 1 && data_returned.link_error == 0){
+					$file_report = data_returned.link_count.toString() + " links uploaded successfully";
+				    AlertBoxInModal($file_report);
+				}
+				devLinkFiles.value = "";
+				return;
+			}
+		},
+		error: function(){
+			
+		}
+	});
+}
 
 function UploadDeveloperServerFiles(){
    var serverFiles = document.getElementById("server-files");
@@ -42,6 +93,7 @@ function UploadDeveloperServerFiles(){
 		var numberOfServerFiles = 0;
 		
 		var data_returned = JSON.parse(result);
+		
 		if(data_returned.state == 200){
 		   if(serverFiles.files.length > 1){
 			  numberOfServerFiles = (serverFiles.files.length-data_returned.files_uploaded_if_no_type);
@@ -116,6 +168,8 @@ function UploadDevFiles(){
 		var data_returned = JSON.parse(result);
 		var reporter = null;
 		
+		DeveloperResponse();
+		
 		if(data_returned.state == 200){
 		  if(data_returned.file_types.no_req > 0){	
 			if(data_returned.file_types.no_req == 1){
@@ -163,40 +217,44 @@ function UploadDevFiles(){
 		  data_returned.file_types.html;		  
 		  
 		  document.getElementsByClassName("response-i")[4].innerHTML = 
+		  "No. of HTML(.png/ico/jpg) files uploaded - "+
+		  data_returned.file_types.html;		  
+		  
+		  document.getElementsByClassName("response-i")[5].innerHTML = 
 		  "No. of MP4(.mp4) files uploaded - "+
 		  data_returned.file_types.mp4;		  
 		  
-		  document.getElementsByClassName("response-i")[5].innerHTML = 
+		  document.getElementsByClassName("response-i")[6].innerHTML = 
 		  "No. of MP3(.mp3) files uploaded - "+
 		  data_returned.file_types.mp3;		  
 		  
-		  document.getElementsByClassName("response-i")[6].innerHTML = 
+		  document.getElementsByClassName("response-i")[7].innerHTML = 
 		  "No. of Media(like .ogg, .wav, etc) files uploaded - "+
 		  data_returned.file_types.data;
 
-		  document.getElementsByClassName("response-i")[6].style.display = "none";
+		  document.getElementsByClassName("response-i")[8].style.display = "none";
 		  
-		  document.getElementsByClassName("response-i")[7].innerHTML = 
+		  document.getElementsByClassName("response-i")[9].innerHTML = 
 		  "No. of NOT_ALLOWED files uploaded - "+
 		  data_returned.file_types.no_req;	
 		  
-		  document.getElementsByClassName("response-i")[8].innerHTML = 
+		  document.getElementsByClassName("response-i")[10].innerHTML = 
 		  "Transmission State - "+
 		  data_returned.state + " (OK)";	
 		  
-		  document.getElementsByClassName("response-i")[9].innerHTML = 
+		  document.getElementsByClassName("response-i")[11].innerHTML = 
 		  "No. of upload errors/unsuccessful - "+
 		  data_returned.fileErrors.length;	
 		  
-		  document.getElementsByClassName("response-i")[10].innerHTML = 
+		  document.getElementsByClassName("response-i")[12].innerHTML = 
 		  "Transmission Class ID  - "+
 		  data_returned["class-id"];	
 		  
-		  document.getElementsByClassName("response-i")[11].innerHTML = 
+		  document.getElementsByClassName("response-i")[13].innerHTML = 
 		  "No. of files successful - "+
 		  data_returned.file_count_success;
 		  
-		  document.getElementsByClassName("response-i")[12].innerHTML = 
+		  document.getElementsByClassName("response-i")[14].innerHTML = 
 		  "No. of files unsuccessful - "+
 		  data_returned.file_count_error;
 		  
@@ -524,12 +582,16 @@ function StreamPlugs(stream_response_data, htmlCat){
 	  let css = document.createElement("link");
 	  
 	  buttonContainer.setAttribute("class", "column col-fixes inner-button-container");
+	  buttonContainer.setAttribute("title", stream_response_data[stream_i][stream_i2]);
 	  
 	  var buttonName = document.createTextNode(stream_response_data[stream_i][stream_i2]);	  
 	  button.append(buttonName);
 	  
+	  var $ICON_NAME = stream_response_data[stream_i][stream_i2];
+	  
 	  button.setAttribute("class", "button inner-button");
 	  button.setAttribute("id", stream_response_data[stream_i][stream_i2]);
+	  button.setAttribute("title", stream_response_data[stream_i][stream_i2]);
 	  
 	  const link = stream_response_data[stream_i][stream_i2]+".css";
 	  
@@ -548,6 +610,13 @@ function StreamPlugs(stream_response_data, htmlCat){
 	  stream_i2++;
 	  
 	  var in_css_text = document.createTextNode(stream_response_data[stream_i][stream_i2]);
+
+	  stream_i2++;
+	  
+	  if(stream_response_data[stream_i][stream_i2] != "NO_ICON" && 
+	  stream_response_data[stream_i][stream_i2] != "NO_ICON_SIZE"){
+	      button.innerHTML = "<img style='width:20px;height:20px;border-radius:50%' class='iconic-logo' src='"+stream_response_data[stream_i][stream_i2]+"' alt='"+$ICON_NAME+"' title='"+$ICON_NAME+"' ping=''/>";
+	  }
 	  
 	  stream_i2++;
 	  

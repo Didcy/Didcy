@@ -3,12 +3,13 @@
   declare(strict_types=1);
   
   include("functions.php");
+  include("encrypt.php");
   
   
   function CreateApplicant(){
 	
 	//$query = "use `1125815`";
-	$query = "use gaga";
+	$query = "use epiz_32024228_XXX";
 	$performQueryerProfile = performQueryer($query);
 	if($performQueryerProfile["state"] != true){
 	   return array("state"=>102, "error"=>$performQueryerProfile["error"]);
@@ -47,9 +48,13 @@
 	}
 	
 	$partnerSet = json_decode($_POST["partner-set"]);
+
+    $pswd = $partnerSet[14];
+						
+    $pswd = extractUserPassword(decipher(null, $pswd[0], $pswd[1]));
 	
 	$query = "insert into DidcyWorkState(username, password, avatar, current_session, 
-	online) values('".$partnerSet[15]."', '".md5(trim($partnerSet[14]))."', 
+	online) values('".$partnerSet[15]."', '".md5(trim($pswd))."', 
 	'', 1, 1);";
 	
 	$performQueryerProfile = performQueryer($query);
@@ -116,7 +121,7 @@
 	'".$partnerSet[4]."', '".$partnerSet[5]."', '".$partnerSet[6]."', '".
 	 $partnerSet[7]."', '".$partnerSet[8]."', '".$partnerSet[9]."', 
 	 '".$programValues."', '".$profile."', '".$partnerSet[12]."', '".$partnerSet[13]."', 
-	  '".md5(trim($partnerSet[14]))."', '".$partnerSet[15]."'
+	  '".md5(trim($pswd))."', '".$partnerSet[15]."'
 	  , '".$_POST["file-id"]."', '".$_POST["file-id"]."', '".$_POST["file-id"]."');";
 	 
 	$performQueryerProfile = performQueryer($query);

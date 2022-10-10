@@ -181,6 +181,7 @@ function ExecuteCrypto($ttip){
 						 $server_username = "root";
 						 $server_password = "";
 						 $server_dbname = "gaga";
+						 
 						 //$server_port = 3306;
 						
 						 $connect = new mysqli($server_name, $server_username, $server_password, $server_dbname);//, $server_port);
@@ -280,9 +281,8 @@ function ExecuteCrypto($ttip){
       session_destroy();
 	  echo "Cookie not enabled";
   }else{ 
-
-      if(empty($_COOKIE) != TRUE && count($_COOKIE) > 5){
-		  if(empty($_COOKIE["GAGA_RESPONSE"]) != true || $_COOKIE["GAGA_RESPONSE"] != ""){
+      if(empty($_COOKIE) != TRUE && count($_COOKIE) > 6){
+		  if(empty($_COOKIE["GAGA_RESPONSE"]) != true && $_COOKIE["GAGA_RM"] == "1"){
 	         $cookie_id = $_COOKIE["GAGA_RESPONSE"];
 	         $link = "adv-main.php?drim=".$cookie_id;
 			 echo "<script type='text/javascript'>
@@ -297,8 +297,7 @@ function ExecuteCrypto($ttip){
           }
       }else{
 		  session_start();
-		  $ip_address = $_SERVER['REMOTE_ADDR'];
-		  
+		  $ip_address = $_SERVER['REMOTE_ADDR'];	  
 		  $ipaddress = "";
 		  $timeId = 0;
 		  $timeIP = 0;

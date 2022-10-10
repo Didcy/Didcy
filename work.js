@@ -325,6 +325,9 @@ spanConnections.onclick = function(){
 		   return AlertBoxInModal("Please take a Photo");
 	   }
 	   
+	   var pswd = "";
+	   pswd = Salt(this.password.value.toString().trim());
+	   
 	   var applicantContainer = [
 	      this.firstname.value.toString().trim(),
 	      this.lastname.value.toString().trim(),
@@ -340,11 +343,12 @@ spanConnections.onclick = function(){
 	      this.profile.value.toString().trim(),
 		  this.email.value.toString().trim(),
 		  this.githubName.value.toString().trim(),
-		  this.password.value.toString().trim(),
+		  pswd,
 		  this.username.value.toString().trim()
 	   ];
 	   
 				 var formData = new FormData();
+				 //formData.append("password", transportThis(pswd[0]));
 				 formData.append("partner-set", JSON.stringify(applicantContainer));
 				 formData.append('partner', applicantBlob, "partner-image");
 				 formData.append('partner-id', this.selectIdCard.files[0]);

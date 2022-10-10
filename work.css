@@ -150,6 +150,9 @@ value.custom-file-input-developer-css, value.custom-file-input-developer-server 
 .custom-file-input-developer::before, #program-files::before{
   content: 'Select your program files';
 }
+#linking-files::before{
+  content: 'Select your linking files';
+}
 .custom-file-input-developer-css::before, #css-files::before{
   content: 'Select your css files here';
 }
